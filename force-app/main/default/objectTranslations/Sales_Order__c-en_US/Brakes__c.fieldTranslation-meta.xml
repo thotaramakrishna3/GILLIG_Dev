@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Brakes --></label>
+    <name>Brakes__c</name>
+    <picklistValues>
+        <masterLabel>Disc</masterLabel>
+        <translation><!-- Disc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Drum</masterLabel>
+        <translation><!-- Drum --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

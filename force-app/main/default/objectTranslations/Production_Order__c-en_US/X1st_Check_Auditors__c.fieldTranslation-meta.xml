@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- 1st Check Auditors --></label>
+    <name>X1st_Check_Auditors__c</name>
+    <picklistValues>
+        <masterLabel>Aaron DeGarcia</masterLabel>
+        <translation><!-- Aaron DeGarcia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Curtis Silvia</masterLabel>
+        <translation><!-- Curtis Silvia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Daniel Garcia</masterLabel>
+        <translation><!-- Daniel Garcia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fabian Alarcon</masterLabel>
+        <translation><!-- Fabian Alarcon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jesus Ruiz</masterLabel>
+        <translation><!-- Jesus Ruiz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jose Ocampo</masterLabel>
+        <translation><!-- Jose Ocampo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keith Lynch</masterLabel>
+        <translation><!-- Keith Lynch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michael Rands</masterLabel>
+        <translation><!-- Michael Rands --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tyler Talavera</masterLabel>
+        <translation><!-- Tyler Talavera --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

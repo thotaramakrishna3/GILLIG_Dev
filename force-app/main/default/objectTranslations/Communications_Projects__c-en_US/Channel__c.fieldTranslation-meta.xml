@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Channel --></label>
+    <name>Channel__c</name>
+    <picklistValues>
+        <masterLabel>Digital Displays</masterLabel>
+        <translation><!-- Digital Displays --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facility</masterLabel>
+        <translation><!-- Facility --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intranet</masterLabel>
+        <translation><!-- Intranet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meeting</masterLabel>
+        <translation><!-- Meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Print (PDF)</masterLabel>
+        <translation><!-- Print (PDF) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Social Media</masterLabel>
+        <translation><!-- Social Media --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website</masterLabel>
+        <translation><!-- Website --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

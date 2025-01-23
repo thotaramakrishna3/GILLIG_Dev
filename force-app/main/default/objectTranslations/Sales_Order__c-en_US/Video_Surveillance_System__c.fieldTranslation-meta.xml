@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Video Surveillance System --></label>
+    <name>Video_Surveillance_System__c</name>
+    <picklistValues>
+        <masterLabel>247 Security Inc.</masterLabel>
+        <translation><!-- 247 Security Inc. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Angeltrax</masterLabel>
+        <translation><!-- Angeltrax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CWI Digital Systems</masterLabel>
+        <translation><!-- CWI Digital Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dedicated Micros</masterLabel>
+        <translation><!-- Dedicated Micros --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loronix</masterLabel>
+        <translation><!-- Loronix --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Luminator Technology Group</masterLabel>
+        <translation><!-- Luminator Technology Group --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>March Networks</masterLabel>
+        <translation><!-- March Networks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Modern Railway Systems</masterLabel>
+        <translation><!-- Modern Railway Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Required</masterLabel>
+        <translation><!-- Not Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preferred Technology</masterLabel>
+        <translation><!-- Preferred Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REI Buswatch</masterLabel>
+        <translation><!-- REI Buswatch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Safety Vision</masterLabel>
+        <translation><!-- Safety Vision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seon</masterLabel>
+        <translation><!-- Seon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transit Solutions (TSI)</masterLabel>
+        <translation><!-- Transit Solutions (TSI) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UTC Mobileview</masterLabel>
+        <translation><!-- UTC Mobileview --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

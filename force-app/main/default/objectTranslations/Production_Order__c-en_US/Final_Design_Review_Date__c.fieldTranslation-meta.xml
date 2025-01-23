@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Final Design Review Date --></label>
+    <name>Final_Design_Review_Date__c</name>
+</CustomFieldTranslation>

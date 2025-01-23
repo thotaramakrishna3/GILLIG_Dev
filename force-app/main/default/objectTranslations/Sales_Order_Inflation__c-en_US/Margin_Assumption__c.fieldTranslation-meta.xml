@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Margin Assumption --></label>
+    <name>Margin_Assumption__c</name>
+    <relationshipLabel><!-- Sales Order Inflation Rates --></relationshipLabel>
+</CustomFieldTranslation>

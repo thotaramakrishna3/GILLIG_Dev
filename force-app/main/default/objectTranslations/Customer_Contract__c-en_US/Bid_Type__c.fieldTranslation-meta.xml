@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bid Type --></label>
+    <name>Bid_Type__c</name>
+    <picklistValues>
+        <masterLabel>Evaluated/Negotiated</masterLabel>
+        <translation><!-- Evaluated/Negotiated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Bid</masterLabel>
+        <translation><!-- Low Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>State Contract</masterLabel>
+        <translation><!-- State Contract --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

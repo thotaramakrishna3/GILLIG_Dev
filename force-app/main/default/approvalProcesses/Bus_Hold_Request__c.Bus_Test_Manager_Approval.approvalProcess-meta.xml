@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>creator</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Executive_Vice_President_Operations</submitter>
+        <type>roleSubordinates</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <submitter>Vice_President_Engineering</submitter>
+        <type>roleSubordinates</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Requestor__c</field>
+        <field>Request_Date__c</field>
+        <field>Purpose_of_Test__c</field>
+        <field>Testing_Description__c</field>
+        <field>Duration_of_Test__c</field>
+        <field>Bus_Required__c</field>
+        <field>Configuration_s_Required__c</field>
+        <field>Other_Specific_Requirements__c</field>
+        <field>Bus_Requested__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <type>adhoc</type>
+            </approver>
+        </assignedApprover>
+        <description>Approval by a member of Engineering Management</description>
+        <label>Engineering Review</label>
+        <name>Engineering_Review</name>
+    </approvalStep>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>ben.grunat@gillig.com</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Bus Test - Bus Assignment</label>
+        <name>Bus_Test_Bus_Assignment</name>
+        <rejectBehavior>
+            <type>BackToPrevious</type>
+        </rejectBehavior>
+    </approvalStep>
+    <emailTemplate>Other_Sales_Processes/Bus_Test_Request_Approval</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Bus Test - Manager Approval</label>
+    <processOrder>0</processOrder>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

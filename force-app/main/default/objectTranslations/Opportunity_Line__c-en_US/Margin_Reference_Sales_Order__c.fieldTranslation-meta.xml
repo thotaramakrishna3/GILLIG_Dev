@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Margin Reference Sales Order --></label>
+    <name>Margin_Reference_Sales_Order__c</name>
+    <relationshipLabel><!-- Opportunity Lines (Margin Reference Sales Order) --></relationshipLabel>
+</CustomFieldTranslation>

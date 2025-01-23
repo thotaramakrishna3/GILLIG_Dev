@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason --></label>
+    <name>Reason__c</name>
+    <picklistValues>
+        <masterLabel>Engineering - BOM</masterLabel>
+        <translation><!-- Engineering - BOM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engineering - Design</masterLabel>
+        <translation><!-- Engineering - Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engineering - Late Release</masterLabel>
+        <translation><!-- Engineering - Late Release --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error</masterLabel>
+        <translation><!-- Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freight - Damaged</masterLabel>
+        <translation><!-- Freight - Damaged --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freight - Delayed/Lost</masterLabel>
+        <translation><!-- Freight - Delayed/Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Stock</masterLabel>
+        <translation><!-- In Stock --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect Count / Materials</masterLabel>
+        <translation><!-- Incorrect Count / Materials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manufacturing - Damaged</masterLabel>
+        <translation><!-- Manufacturing - Damaged --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manufacturing - Install Issue</masterLabel>
+        <translation><!-- Manufacturing - Install Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manufacturing - Lost</masterLabel>
+        <translation><!-- Manufacturing - Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onhand Balance</masterLabel>
+        <translation><!-- Onhand Balance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Physical Inventory</masterLabel>
+        <translation><!-- Physical Inventory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchasing - Lead Time</masterLabel>
+        <translation><!-- Purchasing - Lead Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchasing - PO Issue</masterLabel>
+        <translation><!-- Purchasing - PO Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Customer Change</masterLabel>
+        <translation><!-- Sales - Customer Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales - Late PCO</masterLabel>
+        <translation><!-- Sales - Late PCO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor - Bad Info</masterLabel>
+        <translation><!-- Vendor - Bad Info --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor - Late</masterLabel>
+        <translation><!-- Vendor - Late --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor - Rejected</masterLabel>
+        <translation><!-- Vendor - Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warehouse - Damaged</masterLabel>
+        <translation><!-- Warehouse - Damaged --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warehouse - Lost/Late</masterLabel>
+        <translation><!-- Warehouse - Lost/Late --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

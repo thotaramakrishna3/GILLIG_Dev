@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Stage --></label>
+    <name>Stage__c</name>
+    <picklistValues>
+        <masterLabel>Approved</masterLabel>
+        <translation><!-- Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Case Evaluation</masterLabel>
+        <translation><!-- Business Case Evaluation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Case Phase</masterLabel>
+        <translation><!-- Business Case Phase --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Denied</masterLabel>
+        <translation><!-- Denied --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Hold</masterLabel>
+        <translation><!-- On Hold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Approval</masterLabel>
+        <translation><!-- Pending Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-project Collection</masterLabel>
+        <translation><!-- Pre-project Collection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preliminary Investigation</masterLabel>
+        <translation><!-- Preliminary Investigation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Selection</masterLabel>
+        <translation><!-- Project Selection --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

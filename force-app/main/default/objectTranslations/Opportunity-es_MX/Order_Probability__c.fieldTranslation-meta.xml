@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Order Probability --></label>
+    <name>Order_Probability__c</name>
+    <picklistValues>
+        <masterLabel>1. High Probability</masterLabel>
+        <translation><!-- 1. High Probability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2. Medium Probability</masterLabel>
+        <translation><!-- 2. Medium Probability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3. Low Probability</masterLabel>
+        <translation><!-- 3. Low Probability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4. Unlikely</masterLabel>
+        <translation><!-- 4. Unlikely --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

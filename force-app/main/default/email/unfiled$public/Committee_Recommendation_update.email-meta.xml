@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>The committee recommendation update to a project</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Committee Recommendation update</name>
+    <style>none</style>
+    <subject>Committee recommendation for  Project {!Project_Tracker__c.Project_Name__c} is {!Project_Tracker__c.Committee_Recommendation__c}</subject>
+    <textOnly>&lt;BR&gt;&lt;BR&gt;The Project {!Project_Tracker__c.Project_Name__c }, committee recommendations is {!Project_Tracker__c.Committee_Recommendation__c}
+&lt;BR&gt;&lt;BR&gt;
+The link to the project details :{!Project_Tracker__c.Link}   
+&lt;BR&gt;Thanks, &lt;BR&gt;
+{!Project_Tracker__c.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

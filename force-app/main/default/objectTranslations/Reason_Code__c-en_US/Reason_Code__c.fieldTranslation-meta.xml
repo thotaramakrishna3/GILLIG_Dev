@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason Code --></label>
+    <name>Reason_Code__c</name>
+    <picklistValues>
+        <masterLabel>Damaged</masterLabel>
+        <translation><!-- Damaged --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leakage</masterLabel>
+        <translation><!-- Leakage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mismatch Alignment</masterLabel>
+        <translation><!-- Mismatch Alignment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misplacement</masterLabel>
+        <translation><!-- Misplacement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not fitting</masterLabel>
+        <translation><!-- Not fitting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknow</masterLabel>
+        <translation><!-- Unknow --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

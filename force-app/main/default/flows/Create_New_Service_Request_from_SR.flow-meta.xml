@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <assignments>
+        <name>Assign_ServiceRequest</name>
+        <label>Assign ServiceRequest</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>recordId.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Service_Request</targetReference>
+        </connector>
+    </assignments>
+    <dynamicChoiceSets>
+        <name>WorktypePicklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Work_Plan_type__c</picklistField>
+        <picklistObject>Bus_Work_Order__c</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Create New Service Request from WOLI {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Create New Service Request from SR</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>FieldServiceMobile</processType>
+    <recordCreates>
+        <name>new_Ser_request</name>
+        <label>new Service request</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Open</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Order__c</field>
+            <value>
+                <elementReference>recordId.Work_Order__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Work_Plan_type__c</field>
+            <value>
+                <elementReference>Choose_from_the_Picklist</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Bus_Work_Order__c</object>
+    </recordCreates>
+    <recordLookups>
+        <name>get_Service_Request</name>
+        <label>get Service Request</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_ServiceRequest</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Id</elementReference>
+            </value>
+        </filters>
+        <object>Bus_Work_Order__c</object>
+        <outputReference>recordId</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Work_Order__c</queriedFields>
+    </recordLookups>
+    <screens>
+        <name>New_Service_Request</name>
+        <label>New Service Request</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>new_Ser_request</targetReference>
+        </connector>
+        <fields>
+            <name>Choose_from_the_Picklist</name>
+            <choiceReferences>WorktypePicklist</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Choose from the Picklist</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Create New</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>get_Service_Request</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>Id</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Bus_Work_Order__c</objectType>
+    </variables>
+</Flow>

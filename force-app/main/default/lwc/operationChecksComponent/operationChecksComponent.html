@@ -1,0 +1,260 @@
+<template>
+	<div if:true={showSpinner}>
+        <div class="slds-spinner_container slds-is-fixed">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+	<section class="actionhead">
+        <div class="slds-grid slds-grid_align-spread slds-m-top_small slds-m-bottom_small">
+            <div class="slds-col">
+                <div class="slds-float_none slds-p-around_x-small">
+                    <!--span class="slds-text-heading_small headstyle">All Department - Operation Checks</span-->
+                    <!-- newly added -->
+                    <!-- <div class="slds-grid slds-gutters slds-grid_align-spread slds-m-top_x-small">
+                     <div class="slds-col slds-size_1-of-2">
+                         <lightning-combobox name="jobtype" value={latestBuyerValue} data-id="job_type"
+                             placeholder="Standard and Customer Job" options={jobtypelist}>
+                         </lightning-combobox>
+                     </div>
+                     <div class="slds-col slds-size_1-of-2"> -->
+                         <span class="slds-text-heading_small headstyle">{department} - {jobTitle} </span>
+                     <!-- </div>
+                 </div> -->
+                    <!-- End -->
+                   <!-- <span class="slds-text-heading_small headstyle">{department} - Jobs</span> -->
+                    <template if:true={filterapplied}>
+                     <lightning-pill label={filterlabellocal} onremove={clearfilter} class="slds-m-left_small filterstyle">
+                       <!--<lightning-icon icon-name="utility:filter" variant="circle"  alternative-text="filter"></lightning-icon>-->
+                   </lightning-pill>
+                   </template>
+                </div>
+            </div>
+            <div class="slds-col"></div>
+            <div if:true={buttonenabled}>
+                <div class="slds-col alignbutton">
+                    <lightning-button disabled={disablenewattchmentitem} label={buttonLabel} variant="brand-outline" title="New List Item" onclick={addnewlistitem} class="slds-m-right_xxx-small"></lightning-button> 
+                </div>
+            </div>
+            <!-- <div class="slds-col alignbutton"> -->
+               <!--c-new-discrepancy-component buttonlabel="Add Discrepancy" modalheading="New Discrepancy" type="buildstation" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} permissionset={permissionset}></c-new-discrepancy-component-->           
+               <!-- <c-new-discrepancy-component if:true={addrepetitionbtn} buttonlabel="Add Repetitive Item" modalheading="New Repetitive Item" type="department" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="false" department-id-map={departmentIdMap} permissionset={permissionset}></c-new-discrepancy-component>
+               <c-qc-check-list departmentoptions={departmentoptions} ecardid={ecardid} departmentid={selecteddepartmentId}></c-qc-check-list>
+               <c-meeting-note-component departmentoptions={departmentoptions} ecardid={ecardid} departmentid={selecteddepartmentId}></c-meeting-note-component>
+               <c-help-component departmentoptions={departmentoptions} ecardid={ecardid} departmentid={selecteddepartmentId}></c-help-component>
+            </div> -->
+            <div class="slds-grid slds-wrap alignbutton">
+               <div class="slds-col" style="margin-right: 3px; width: 250px;">
+               <div>
+                  <lightning-combobox name="jobtype" value={latestJobTypeValue} data-id="job_type"
+                  placeholder= "Selected Job Types" options={jobtypelist} onchange={handleJobTypeChange} disabled={isDisabled}>
+              </lightning-combobox></div>
+              <div class="slds-p-around_xx-small">
+                  <template for:each={allJobTypeValues} for:item="item">
+                    
+                        <lightning-pill key={item} label={item} name={item} onremove={handleJobTypeRemove} disabled={isDisabled}></lightning-pill>
+
+                     </template>
+                  
+              </div>
+               </div>
+               <div class="slds-col">
+                   <c-new-discrepancy-component if:true={addrepetitionbtn} buttonlabel="Add Repetitive Item" modalheading="New Repetitive Item" type="department" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="false" department-id-map={departmentIdMap} permissionset={permissionset}></c-new-discrepancy-component>
+               </div>
+               <div class="slds-col">
+                   <c-qc-check-list departmentoptions={departmentoptions} ecardid={ecardid} departmentid={selecteddepartmentId}></c-qc-check-list>
+               </div>
+               <div class="slds-col">
+                   <c-meeting-note-component departmentoptions={departmentoptions} ecardid={ecardid} departmentid={selecteddepartmentId}></c-meeting-note-component>
+               </div>
+               <div class="slds-col">
+                   <c-help-component departmentoptions={departmentoptions} ecardid={ecardid} departmentid={selecteddepartmentId}></c-help-component>
+               </div>
+           </div>
+        </div>
+    </section>
+    <section>
+        <div class="slds-card pageheader">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+               <thead>
+                  <tr class="slds-text-title_caps tblheader">   
+                   <th if:true={alldepts} class="tblheaderth tableheader" scope="col">
+                      <div class="slds-truncate" title="DEPARTMENT">DEPT.CODE</div>
+                   </th>
+                   <!-- <th class="tblheaderth tableheader" scope="col">
+                     <div class="slds-truncate" title="JOB TYPE">JOB TYPE</div>
+                  </th> -->
+                     <th class="tblheaderth tableheader" scope="col">
+                        <div class="slds-truncate" title="JOB DESCRIPTION">JOB DESCRIPTION</div>
+                     </th>
+                     <th class="tblheaderth tableheader" scope="col">
+                        <div class="slds-truncate" title="BUILD STATION">BUILD STATION</div>
+                     </th>
+                     <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+                        <div class="slds-truncate" title="VALUE">VALUE</div>
+                     </th>
+                     <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+                        <div class="slds-truncate" title="OWNER">OWNER</div>
+                     </th>
+                     <th class="tblheaderth setapplicablewidth tableheader" scope="col">
+                        <div class="slds-truncate" title="REQUIRED">REQUIRED</div>
+                     </th>
+            
+                     <th class="tblheaderth setactionbtnewidth tableheader" scope="col">
+                        <div class="slds-truncate" title="ACTION">ACTION</div>
+                     </th>
+                     <th class="tblheaderth tableheader" scope="col">
+                        <div class="slds-truncate" title="ISSUE">ISSUE</div>
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <template if:true={isopckpresent}>                 
+                  <template for:each={opckdetails} for:item='dept'>   
+                     <template for:each={dept.op_check} for:item='opck'>
+                         <tr key={opck.operation_check_id}>
+                        <td if:true={alldepts}>
+                           <div class="">{dept.department_code}</div>
+                        </td>
+
+<!-- <td>
+                        <template if:true={opck.stanjob}>
+                              <div class="green-dot"></div>
+                        </template>
+                        <template if:true={opck.custjob}>
+                           <div class="blue-dot"></div>
+                     </template>
+                     <template if:true={opck.qacheckjob}>
+                        <div class="yellow-dot"></div>
+                  </template>
+               </td> -->
+
+                           <template if:true={opck.is_required}>
+                              <!-- <td>
+                                 <div class="setdescriptionwidth">{opck.operation_check_description}</div>
+                              </td> -->
+
+                              <!-- <td>
+                                 <div class="slds-truncate setdescriptionwidth">
+                                     <lightning-formatted-rich-text value={opck.operation_check_description}>
+                                     </lightning-formatted-rich-text>
+                                     </div>
+                             </td> -->
+                             <td>
+                              <div style="display: inline-block; vertical-align: middle;">
+                                  <template if:true={opck.stanjob}><div class="blue-dot" style="vertical-align: middle;"></div></template>
+                                  <template if:true={opck.custjob}><div class="green-dot" style="vertical-align: middle;"></div></template>
+                                  <template if:true={opck.qacheckjob}><div class="orange-dot" style="vertical-align: middle;"></div></template>
+                                  <div class="slds-truncate setdescriptionwidth" style="display: inline-block; vertical-align: middle;">
+                                      <lightning-formatted-rich-text value={opck.operation_check_description}></lightning-formatted-rich-text>
+                                      <template for:each={opck.workinstructions} for:item="instruction">
+                                       <div key={instruction.name}>
+                                          <span class="icon">
+                                             <lightning-icon
+                                               icon-name={instruction.icon}
+                                               size="small">
+                                             </lightning-icon>
+                                           </span>
+                                           <a href={instruction.work_instruction_url} target="_blank">
+                                               {instruction.work_instruction_title}
+                                           </a>
+                                       </div>
+                                   </template>
+                                    </div>
+                              </div>
+                          </td>
+
+                              <td>
+                                 <div class="">{opck.buildstation_code}</div>
+                              </td>
+                              <td>
+                                 <div if:false={opck.value_required} class="">
+                                    <lightning-input max-length="30" variant="label-hidden" type="text" title={opck.operation_check_id} name="op_check_value" placeholder="Value Not Required" readonly="true"></lightning-input>
+                                 </div>
+                                 <div if:true={opck.value_required} class="">
+                                    <template if:false={disablerequired}><lightning-input disabled={opck.op_check_status} max-length="30" onfocus={checkvalueonfocus}
+                                        onblur={updateopckitem} variant="label-hidden" type="text" 
+                                       title={opck.operation_check_id} name="op_check_value" value={opck.op_check_value} placeholder=""></lightning-input>
+                                    </template><!--onfocus={checkvalueonfocus}-->
+                                    <template if:true={disablerequired}><lightning-input disabled max-length="30" variant="label-hidden" type="text" title={opck.operation_check_id} name="op_check_value" value={opck.op_check_value} placeholder=""></lightning-input></template>
+                                 </div>
+                              </td>
+                           </template>
+                           <template if:false={opck.is_required}>
+                              <td>
+                                 <div style="display: inline-block; vertical-align: middle;">
+                                     <template if:true={opck.stanjob}><div class="blue-dot" style="vertical-align: middle;"></div></template>
+                                     <template if:true={opck.custjob}><div class="green-dot" style="vertical-align: middle;"></div></template>
+                                     <template if:true={opck.qacheckjob}><div class="orange-dot" style="vertical-align: middle;"></div></template>
+                                     <div class="slds-truncate setdescriptionwidth greytitle" style="display: inline-block; vertical-align: middle;">
+                                         <lightning-formatted-rich-text value={opck.operation_check_description}></lightning-formatted-rich-text>
+                                     </div>
+                                 </div>
+                             </td>
+                              <!-- <td>
+                                 <div class="slds-truncate setdescriptionwidth greytitle">
+                                    <lightning-formatted-rich-text value={opck.operation_check_description}>
+                                    </lightning-formatted-rich-text>
+                                 </div>
+                              </td> -->
+                              <td>
+                                 <div class="greytitle">{opck.buildstation_code}</div>
+                              </td>
+                              <td>
+                                 <div class="greytitle">
+                                    <lightning-input max-length="30" variant="label-hidden" type="text" title={opck.operation_check_id}
+                                       name="op_check_value" placeholder="Value Not Required" readonly="true"></lightning-input>
+                                 </div>
+                              </td>
+                           </template>
+                           <template if:true={opck.verifiedby_id}>
+                              <template if:true={opck.op_check_status}>
+                                <td>
+                                  <div class="avatar-container">
+                                    <div class="avatar-initials">{opck.initials}</div>
+                                    <div>{opck.verifiedby_id.first_name} {opck.verifiedby_id.last_name} ({opck.verifiedby_id.appuser_name})</div>
+                                  </div>
+                                </td>
+                              </template>
+                              <template if:false={opck.op_check_status}>
+                                <td>
+                                  <div class="avatar-container">
+                                    <div class="avatar-initials">{opck.initials}</div>
+                                    <div>{opck.verifiedby_id.first_name} {opck.verifiedby_id.last_name} ({opck.verifiedby_id.appuser_name})</div>
+                                  </div>
+                                </td>
+                              </template>
+                            </template>
+                            <template if:false={opck.verifiedby_id}>
+                              <td>
+                                <div></div>
+                              </td>
+                            </template>  
+
+
+                           <td>
+                              <lightning-input disabled={disablerequired} name="applicable" class="slds-p-left_x-large zoomcheckbox" type="checkbox" data-id={opck.operation_check_id} checked={opck.is_required} onchange={existingrowstatuschange}></lightning-input>
+                              </td>
+                           <td>
+                              <div class="">
+                                 <c-atp-actions-for-opcks disabled={opck.is_required} onstatuschange={existingrowstatuschange}
+                                 permitteduser={permissionset.operation_check.write} disableuser={disableuserinput} uniqueid={opck.operation_check_id} isok={opck.op_check_status}></c-atp-actions-for-opcks> 
+                              </div>
+                           </td>
+                           <td>
+                              <!--lightning-button  data-id={opck.operation_check_id} name={opck.operation_check_description} value={opck.operation_check_description} onclick={creatediscrepancy} variant="border-filled" label="Add Discrepancy" title={opck.operation_check_id}  class="slds-m-left_xx-small"></lightning-button-->
+                              <!--c-new-discrepancy-component buttonlabel="Add Discrepancy" modalheading="New Discrepancy" type="buildstation" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} buildstationid={opck.buildstation_id} permissionset={permissionset}></c-new-discrepancy-component-->
+                              <c-new-discrepancy-component buttonlabel="Report Issue" modalheading="New Issue" type="buildstation" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={dept.department_name} departmentid={dept.department_id} buildstationrequired="true" department-id-map={departmentIdMap} buildstationid={opck.buildstation_id} permissionset={permissionset}></c-new-discrepancy-component>                              
+                          </td>
+                        </tr>
+                     </template>
+                  </template>
+                </template>
+               </tbody>
+            </table>
+         </div>
+    </section>
+</template>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Charger Interface(s) --></label>
+    <name>Charger_Interface_s__c</name>
+    <picklistValues>
+        <masterLabel>(1) J1772 CCS-1 Connection</masterLabel>
+        <translation><!-- (1) J1772 CCS-1 Connection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(1) J1772 CCS-1 Connection and Bus-Up Pantograph</masterLabel>
+        <translation><!-- (1) J1772 CCS-1 Connection and Bus-Up Pantograph --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(1) J1772 CCS-1 Connection and Momentum Dynamics Inductive Charging</masterLabel>
+        <translation><!-- (1) J1772 CCS-1 Connection and Momentum Dynamics Inductive Charging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(1) J1772 CCS-1 Connection and Overhead Charge Rails</masterLabel>
+        <translation><!-- (1) J1772 CCS-1 Connection and Overhead Charge Rails --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(1) J1772 CCS-1 Connection and WAVE Inductive Charging</masterLabel>
+        <translation><!-- (1) J1772 CCS-1 Connection and WAVE Inductive Charging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(2) J1772 CCS-1 Connections</masterLabel>
+        <translation><!-- (2) J1772 CCS-1 Connections --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(2) J1772 CCS-1 Connections and Overhead Charge Rails</masterLabel>
+        <translation><!-- (2) J1772 CCS-1 Connections and Overhead Charge Rails --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

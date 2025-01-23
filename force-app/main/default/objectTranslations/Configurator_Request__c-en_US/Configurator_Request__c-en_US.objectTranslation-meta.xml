@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Configurator Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Configurator Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>Configurator Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Request Information --></label>
+            <section>Request Information</section>
+        </sections>
+        <sections>
+            <label><!-- Requestor Information --></label>
+            <section>Requestor Information</section>
+        </sections>
+        <sections>
+            <label><!-- Status Information --></label>
+            <section>Status Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Enter the &quot;Assigned To&quot; prior to changing status. --></errorMessage>
+        <name>Assigned_To_Required_For_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the time spent to address this ticket. --></errorMessage>
+        <name>Must_have_Time_Spent_to_Close</name>
+    </validationRules>
+</CustomObjectTranslation>

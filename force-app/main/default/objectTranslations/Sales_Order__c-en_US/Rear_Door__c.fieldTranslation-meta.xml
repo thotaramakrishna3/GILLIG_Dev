@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rear Door --></label>
+    <name>Rear_Door__c</name>
+    <picklistValues>
+        <masterLabel>34&quot;</masterLabel>
+        <translation><!-- 34&quot; --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>48&quot;</masterLabel>
+        <translation><!-- 48&quot; --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>56&quot;</masterLabel>
+        <translation><!-- 56&quot; --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

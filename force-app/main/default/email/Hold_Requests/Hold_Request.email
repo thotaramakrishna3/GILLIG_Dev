@@ -1,0 +1,89 @@
+<p><strong>{!Bus_Hold_Request__c.Internal_Name__c} {!Bus_Hold_Request__c.Bus_Assigned__c} </strong>is being held at the request of {!Bus_Hold_Request__c.Requestor__c}. See below for details.</p>
+<p>&nbsp;</p>
+<p><u>Ready Row: </u></p>
+<p>This bus is scheduled to be completed on <strong>{!Bus_Hold_Request__c.Scheduled_Completion_Date__c}</strong>&nbsp;</p>
+<table style="height: 207px;" width="712">
+<tbody>
+<tr>
+<td style="width: 368.796875px;">
+<p>Purpose of test</p>
+<p><strong>{!Bus_Hold_Request__c.Purpose_of_Test__c}</strong></p>
+</td>
+<td style="width: 373.25px;">
+<p>Duration of test</p>
+<p><strong>{!Bus_Hold_Request__c.Duration_of_Test__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 748.046875px;" colspan="2">
+<p>Testing Description</p>
+<p><strong>{!Bus_Hold_Request__c.Testing_Description__c}</strong></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="height: 255px;" width="756">
+<tbody>
+<tr>
+<td style="width: 364.9375px;">
+<p>Serial Number</p>
+<p><strong>{!Bus_Hold_Request__c.Bus_Assigned__c}</strong></p>
+</td>
+<td style="width: 375.078125px;">
+<p>Customer</p>
+<p><strong>{!Bus_Hold_Request__c.Internal_Name__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 364.9375px;">
+<p>Length</p>
+<p><strong>{!Bus_Hold_Request__c.Length__c}</strong></p>
+</td>
+<td style="width: 375.078125px;">
+<p>Mode</p>
+<p><strong>{!Bus_Hold_Request__c.Mode__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 364.9375px;">
+<p>Start Date</p>
+<p><strong>{!Bus_Hold_Request__c.Start_Date__c}</strong></p>
+</td>
+<td style="width: 375.078125px;">
+<p>Style</p>
+<p><strong>{!Bus_Hold_Request__c.Style__c}</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="height: 321px;" width="754">
+<tbody>
+<tr>
+<td style="width: 744px;">
+<p>Notes for Supply Chain</p>
+<p><strong>{!Bus_Hold_Request__c.Notes_for_Supply_Chain__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 744px;">
+<p>Notes for Production<br /> <strong>{!Bus_Hold_Request__c.Notes_for_Production__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 744px;">
+<p>Notes for Field Service</p>
+<p><strong>{!Bus_Hold_Request__c.Notes_for_Field_Service__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td style="width: 744px;">
+<p>Notes for Publications</p>
+<p><strong>{!Bus_Hold_Request__c.Notes_for_Publications__c}</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>

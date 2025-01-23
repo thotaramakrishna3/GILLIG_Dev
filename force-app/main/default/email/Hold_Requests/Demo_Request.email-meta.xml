@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Demo Request</name>
+    <style>none</style>
+    <subject>{!Bus_Hold_Request__c.Internal_Name__c} {!Bus_Hold_Request__c.Bus_Assigned__c} will be used for a demo</subject>
+    <textOnly>{!Bus_Hold_Request__c.Internal_Name__c} {!Bus_Hold_Request__c.Bus_Assigned__c} will be used for a demo. See below for details.
+
+
+Ready Row:
+
+This bus is scheduled to be completed on {!Bus_Hold_Request__c.Scheduled_Completion_Date__c}
+
+The bus must be ready to leave GILLIG by {!Bus_Hold_Request__c.Date_Bus_Must_Leave__c} in order to meet the scheduled Demo date.
+
+
+Demo Date
+
+{!Bus_Hold_Request__c.Demo_Date_Time__c}
+
+Customer
+
+{!Bus_Hold_Request__c.Demo_Customer__c}
+
+Address
+
+{!Bus_Hold_Request__c.Address_for_Demo__c}
+
+Contact
+
+{!Bus_Hold_Request__c.Demo_Contact__c}
+
+Length of Demo
+
+{!Bus_Hold_Request__c.Duration_of_Test__c}
+
+Contact Phone
+
+{!Bus_Hold_Request__c.Demo_Contact_Phone__c}
+
+
+Serial Number
+
+{!Bus_Hold_Request__c.Bus_Assigned__c}
+
+Customer
+
+{!Bus_Hold_Request__c.Internal_Name__c}
+
+Length
+
+{!Bus_Hold_Request__c.Length__c}
+
+Mode
+
+{!Bus_Hold_Request__c.Mode__c}
+
+Start Date
+
+{!Bus_Hold_Request__c.Start_Date__c}
+
+Style
+
+{!Bus_Hold_Request__c.Style__c}
+
+
+Notes for Supply Chain
+
+{!Bus_Hold_Request__c.Notes_for_Supply_Chain__c}
+
+Notes for Production
+{!Bus_Hold_Request__c.Notes_for_Production__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

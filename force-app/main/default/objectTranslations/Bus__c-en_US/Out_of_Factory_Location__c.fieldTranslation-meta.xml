@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Out of Factory Location --></label>
+    <name>Out_of_Factory_Location__c</name>
+    <picklistValues>
+        <masterLabel>BS RR</masterLabel>
+        <translation><!-- BS RR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dirt Lot</masterLabel>
+        <translation><!-- Dirt Lot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fence</masterLabel>
+        <translation><!-- Fence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lane 3</masterLabel>
+        <translation><!-- Lane 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Off Property</masterLabel>
+        <translation><!-- Off Property --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Picture Land</masterLabel>
+        <translation><!-- Picture Land --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RR WIP</masterLabel>
+        <translation><!-- RR WIP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

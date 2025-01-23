@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>Bus Hold Request {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Bus Holds</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Busses that meet your selected attributes</description>
+        <name>Busses_Available</name>
+        <label>Busses Available</label>
+        <locationX>382</locationX>
+        <locationY>312</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Busses_found</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Start_Date__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>From_Date</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Start_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>To_Date</elementReference>
+            </value>
+        </filters>
+        <object>Bus__c</object>
+        <outputReference>BussesAvailable</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <screens>
+        <name>Bus_Hold_Search</name>
+        <label>Bus Hold Search</label>
+        <locationX>206</locationX>
+        <locationY>143</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Busses_Available</targetReference>
+        </connector>
+        <fields>
+            <name>From_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>From Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>To_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>To Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Busses_found</name>
+        <label>Busses Available</label>
+        <locationX>686</locationX>
+        <locationY>377</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Busses</name>
+            <fieldText>{!BussesAvailable}</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Bus_Hold_Search</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <name>BussesAvailable</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Bus__c</objectType>
+    </variables>
+</Flow>

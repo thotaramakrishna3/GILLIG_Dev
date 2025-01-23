@@ -1,0 +1,136 @@
+<!--***********************************************************************************************************************************
+     Developer :Suyati
+     Name      : ContactVisitedComponent
+     Usage     : To Display,create and update contact visted in tripreport detail page
+     Apex Controller:ContactVisitedComponentController
+     Date      : October 2019   
+************************************************************************************************************************************-->
+  <aura:component controller="ContactVisitedComponentController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!--Attributes-->
+    <aura:attribute name="recordId" type="string" />
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="selectedRows" type="List"/>
+    <aura:attribute name="selectedContactRows" type="List"/> 
+    <aura:attribute name="count" type="integer"/>
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name="AccountVisited" type="String"/>
+    <aura:attribute name="recordTypeId" type="String"/>
+    <!--Handler-->
+    <aura:handler   name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:card iconName="custom:custom20" title="{!'Contacts Visited (' + v.count + ')'}"   >
+        <div style="float: right;margin-top: -40px; margin-right: 25px;" >
+            <lightning:button variant="brand" label="New" onclick="{!c.createRecord}" />
+            <aura:if isTrue="{!v.isModalOpen}">
+                <!-- Modal/Popup Box starts here-->
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <!-- Modal/Popup Box Header Starts here-->
+                        <header class="slds-modal__header">
+                            <lightning:buttonIcon iconName="utility:close"
+                                                  onclick="{! c.closeModel }"
+                                                  alternativeText="close"
+                                                  variant="bare-inverse"
+                                                  class="slds-modal__close"/>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add New Contact</h2>
+                        </header>
+                        <!--Modal/Popup Box Body Starts here-->
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <lightning:notificationsLibrary aura:id="notifLib"/>
+                            <lightning:recordEditForm
+                                                      aura:id="recordEditForm"
+                                                      objectApiName="Contact"
+                                                      recordTypeId="{!v.recordTypeId}"
+                                                      onload="{!c.handleLoad}"
+                                                      onsuccess="{!c.handleSuccess}">
+                                
+                                <lightning:messages />
+                                <div class="slds-grid slds-wrap">	
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Name"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:outputField fieldName="OwnerId"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField aura:id="PopulateAccount" fieldName="AccountId" />
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="ReportsToId"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Title"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Department"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Email"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Fax"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Phone"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Birthdate"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="MobilePhone"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Left_Company__c"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="Spouse__c"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-2">
+                                        <lightning:inputField fieldName="RecordTypeId" disabled="true"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1">
+                                        <lightning:inputField fieldName="Contact_Lists__c"/>
+                                    </div>
+                                    <div class="slds-col slds-size_1-of-1">
+                                        <lightning:inputField fieldName="MailingAddress"/>
+                                    </div>
+                                </div>
+                                <!-- <lightning:button class="slds-m-top_small" type="submit" label="Create new" />-->
+                            </lightning:recordEditForm>
+                        </div>
+                        <!--Modal/Popup Box Footer Starts here-->
+                        <footer class="slds-modal__footer">
+                            <lightning:button variant="neutral"
+                                              label="Cancel"
+                                              title="Cancel"
+                                              onclick="{! c.closeModel }"/>
+                            <lightning:button variant="brand"
+                                              label="Submit"
+                                              title="Submit"
+                                              onclick="{!c.submitDetails}"/>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+                <!--Modal/Popup Box ends here-->
+            </aura:if>
+        </div>
+        <aura:if isTrue="{!(v.count > 0)}">
+            <lightning:datatable  aura:id="contactsDataTable"
+                                 columns="{! v.columns }"
+                                 data="{! v.data }"
+                                 keyField="contactId"
+                                 selectedRows="{!v.selectedRows}"
+                                 onrowselection="{!c.updateSelectedText }"
+                                 onrowaction="{!c.deleteRecord}"
+                                 />
+        </aura:if>
+        <div style="margin-top: 8px;margin-left:10px;">
+            <lightning:button  aura:id="SaveButton" variant="brand" label="Save" class="btnCls" onclick="{!c.SaveRecord}" disabled="true" />
+        </div> 
+    </lightning:card>
+</aura:component>

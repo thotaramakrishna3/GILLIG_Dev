@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mode --></label>
+    <name>Mode__c</name>
+    <picklistValues>
+        <masterLabel>CNG</masterLabel>
+        <translation><!-- CNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DIESEL</masterLabel>
+        <translation><!-- DIESEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRIC</masterLabel>
+        <translation><!-- ELECTRIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYBRID ALLISON</masterLabel>
+        <translation><!-- HYBRID ALLISON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYBRID BAE</masterLabel>
+        <translation><!-- HYBRID BAE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

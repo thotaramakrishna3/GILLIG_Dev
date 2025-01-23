@@ -1,0 +1,12 @@
+<BR>
+
+Hello  {!Break_Down_Report__c.contact_Name__c},
+<BR>
+ <BR>{!Bus__c.Current_Owner__c} Bus # {!Break_Down_Report__c.Bus__c} is currently awaiting repairs prior to delivery.  <BR>
+For more information regarding this breakdown,
+Please contact Technical Service Advisor Bo Vongamath at  bo.vongamath@gillig.com
+
+
+<BR><BR>
+Thanks, <BR>
+{!Break_Down_Report__c.CreatedBy}

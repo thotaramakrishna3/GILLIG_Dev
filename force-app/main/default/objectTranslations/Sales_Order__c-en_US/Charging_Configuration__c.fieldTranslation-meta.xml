@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Charging Configuration --></label>
+    <name>Charging_Configuration__c</name>
+    <picklistValues>
+        <masterLabel>(1) Plug-in</masterLabel>
+        <translation><!-- (1) Plug-in --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(1) Plug-in w/ InductEV</masterLabel>
+        <translation><!-- (1) Plug-in w/ InductEV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(1) Plug-in w/ Opp Charge</masterLabel>
+        <translation><!-- (1) Plug-in w/ Opp Charge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(2) Plug-in</masterLabel>
+        <translation><!-- (2) Plug-in --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(2) Plug-in w/ InductEV</masterLabel>
+        <translation><!-- (2) Plug-in w/ InductEV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(2) Plug-in w/ Opp Charge</masterLabel>
+        <translation><!-- (2) Plug-in w/ Opp Charge --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

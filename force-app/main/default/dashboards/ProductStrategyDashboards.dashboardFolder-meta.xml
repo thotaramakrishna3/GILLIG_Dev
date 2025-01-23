@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>ben.grunat@gillig.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>EditAllContents</accessLevel>
+        <sharedTo>richard.bissell@gillig.com</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <name>Product Strategy Dashboards</name>
+</DashboardFolder>

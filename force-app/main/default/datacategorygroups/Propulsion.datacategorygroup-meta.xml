@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Diesel</label>
+            <name>Diesel</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Battery Electric Bus</label>
+            <name>Battery_Electric_Bus</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Hybrid</label>
+            <name>Hybrid</name>
+        </dataCategory>
+        <dataCategory>
+            <label>CNG</label>
+            <name>CNG</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Propulsion</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

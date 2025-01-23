@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Technical Risk Index --></label>
+    <name>Technical_Risk_Index__c</name>
+    <picklistValues>
+        <masterLabel>TR0</masterLabel>
+        <translation><!-- TR0 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TR1</masterLabel>
+        <translation><!-- TR1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TR2</masterLabel>
+        <translation><!-- TR2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TR3</masterLabel>
+        <translation><!-- TR3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TR4</masterLabel>
+        <translation><!-- TR4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TR5</masterLabel>
+        <translation><!-- TR5 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

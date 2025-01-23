@@ -1,0 +1,87 @@
+<template>
+    <!-- Button to show the modal -->
+    <lightning-button disabled={btndisabled} label={buttonlabel} variant="brand-outline" title="Add Reject" onclick={showReportRejectAdd} class="slds-m-right_xxx-small"></lightning-button>
+
+    <!-- Modal section -->
+    <template if:true={partshortageaddmodalreject}>
+        <section role="dialog" tabindex="-1"
+                 aria-labelledby="modal-heading-04"
+                 aria-modal="true"
+                 aria-describedby="modal-content-id-4"
+                 class="slds-modal slds-fade-in-open slds-modal_medium vsmodal">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideReportRejectAdd}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small"></lightning-icon>
+                    </button>
+                    <h2 id="modal-heading-04" class="slds-text-heading_medium slds-hyphenate">New Reject</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-size_1-of-1" if:false={rejectdb}>
+                            <lightning-input type="text" name="selectedrejectbus" label="Selected Bus" value={newreject.selectedrejectbus} disabled></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1" if:true={rejectdb}>
+                            <c-custom-search-component isrequired="true" showicon="true" showlabel="true" placeholdertext="Search for Chassis Number"
+                                                       icon-name="custom:custom98" listto-search={ecardnamechasislistreject} label="Select a Bus" onselect={onbusselectionreject}
+                                                       onclear={onclearbusreject}></c-custom-search-component>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox disabled={ecardnotselectedreject} required class="partshortagevalidationreject" name="department_id" label="Department"
+                                                onchange={updatenewreject} value={newreject.department_id} placeholder="Select Department"
+                                                options={departmentoptionsreject}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox disabled={deptnotselectedreject} required name="buildstation_id" class="partshortagevalidationreject"
+                                                label="Build Station (BS)" onchange={updatenewreject} value={newreject.buildstation_id}
+                                                placeholder="Select BuildStation Code" options={buildstationoptionsreject}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-input if:false={buildstationselectedpartreject} disabled required class="partshortagevalidationreject" type="text" name="dummy" label="Part Number" placeholder="Please select a Build Station"></lightning-input>
+                            <c-custom-search-component selectedcustomer={newreject.buspart_no} data-id="partmnumbersearchreject" if:true={buildstationselectedpartreject} isrequired={returntruereject} showicon={returntruereject} showlabel={returntruereject} placeholdertext="Search Part Number" icon-name="custom:custom19" listto-search={partnumberlistreject} label="Part Number" onselect={onpartnumberselectionreject} onclear={onpartnumberclearreject}></c-custom-search-component>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-textarea required class="partshortagevalidationreject" field-level-help="Please fill part number to auto fill the description.To edit the description select 'Part No. Not Found' option." disabled={enableeditonpartnamereject} onchange={updatenewreject} name="buspart_name" value={newreject.buspart_name} label="Description" placeholder="Please select a Part Number to fill."></lightning-textarea>
+                        </div>
+                        <div class="slds-size_1-of-2 slds-grid">
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input required class="partshortagevalidationreject" type="number" name="quantity_rejected"
+                                                 onchange={updatenewreject} label="Quantity Rejected" value={newreject.quantity} min="0.00001"
+                                                 step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input type="text" name="date" label="Created Date" value={newreject.date} disabled></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox name="reason_code" required class="partshortagevalidationreject" label="Reason Code" onchange={updatenewreject} value={newreject.reason_code} placeholder="Select Reason code" options={rejectreasoncode}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input type="text" name="Rejected By" label="Rejected By" value={fullName} disabled></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox name="location__c" required={isLocationRequired} class="partshortagevalidationreject" label="Choose a Location" onchange={updatenewreject} value={newreject.location__c} placeholder="Select Location" options={locationcode}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input type="checkbox" name="partremove" label="Remove Part From Bus" checked={newreject.partremove} onchange={updatenewreject}></lightning-input>
+                        </div>
+                        <!-- <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox name="supply_chain" required class="partshortagevalidationreject" label="Supply Chain" onchange={updatenewreject} value={newreject.supply_chain} placeholder="Select Supply Chain" options={rejectreasoncode}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox name="status" required class="partshortagevalidationreject" label="Status" onchange={updatenewreject} value={newreject.status} placeholder="Select Status" options={picklistOptions}></lightning-combobox>
+                        </div> -->
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-textarea name="remarks" field-level-help="" value={newreject.remarks} label="Remark" onchange={updatenewreject}></lightning-textarea>
+                        </div>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Cancel" title="Cancel" onclick={hideReportRejectAdd} class="slds-m-right_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Add" onclick={addnewreject} title="Add" icon-position="right" icon-name="utility:add"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open bg-blur"></div>
+    </template>
+</template>

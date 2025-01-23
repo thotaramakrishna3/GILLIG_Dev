@@ -1,0 +1,6 @@
+A new Sales Work Order has been released to the MTG NOTES & SALES ORDER PRELIM folders.
+
+{!User.FirstName} {!User.LastName}
+Project Sales Manager
+{!User.Email}
+{!User.Phone}

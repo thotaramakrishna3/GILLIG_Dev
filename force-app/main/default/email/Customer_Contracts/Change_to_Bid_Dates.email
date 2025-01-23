@@ -1,0 +1,6 @@
+The dates for the {!Customer_Contract__c.Name} have changed.  The following are the current dates:
+
+Pre-Bid: {!Customer_Contract__c.Pre_Bid_Meeting__c}
+Approved Equals: {!Customer_Contract__c.Approved_Equal_Due_Date__c}
+Bid Date: {!Customer_Contract__c.Bid_Date__c}
+BAFO Date: {!Customer_Contract__c.BAFO_Date__c}

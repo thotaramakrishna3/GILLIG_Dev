@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Video Surveillance System Type --></label>
+    <name>Video_Surveillance_System_Type__c</name>
+    <picklistValues>
+        <masterLabel>Full System</masterLabel>
+        <translation><!-- Full System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partial</masterLabel>
+        <translation><!-- Partial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-wire</masterLabel>
+        <translation><!-- Pre-wire --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

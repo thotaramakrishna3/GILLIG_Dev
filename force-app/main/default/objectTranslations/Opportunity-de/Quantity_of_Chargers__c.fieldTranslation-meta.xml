@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Quantity of Chargers --></label>
+    <name>Quantity_of_Chargers__c</name>
+</CustomFieldTranslation>

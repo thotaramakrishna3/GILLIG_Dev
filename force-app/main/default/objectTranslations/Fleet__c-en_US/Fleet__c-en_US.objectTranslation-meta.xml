@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fleet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fleet</value>
+    </caseValues>
+    <layouts>
+        <layout>Admin Fleet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Competitor</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fleet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Fleet information for Competitor Fleets --></description>
+        <label><!-- Competitor --></label>
+        <name>Competitor</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Gillig Fleet Data --></description>
+        <label><!-- GILLIG --></label>
+        <name>GILLIG</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Fleets that are only visible to System admin and IT --></description>
+        <label><!-- Merged --></label>
+        <name>Merged</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Fleet that has not had a bus delivered --></description>
+        <label><!-- Planned Build --></label>
+        <name>Planned_Build</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

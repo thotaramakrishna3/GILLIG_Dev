@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>An email template for closed cases</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>{!Case.RecordType} Case Closed</name>
+    <style>none</style>
+    <subject>Your {!Case.RecordType} case has been closed.</subject>
+    <textOnly>Hello {!Case.CreatedBy},
+
+Your {!Case.RecordType} case has been closed.
+
+Account name :  {!Case.Account}
+Contact name :  {!Case.Contact}
+case description :  {!Case.Description}
+Case number :   {!Case.CaseNumber}
+
+Case record link {!Case.Link}
+
+
+Thanks,</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

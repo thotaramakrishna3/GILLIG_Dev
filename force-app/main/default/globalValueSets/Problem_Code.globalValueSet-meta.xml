@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>01 Engine</fullName>
+        <default>false</default>
+        <label>01 Engine</label>
+    </customValue>
+    <customValue>
+        <fullName>02 Transmission</fullName>
+        <default>false</default>
+        <label>02 Transmission</label>
+    </customValue>
+    <customValue>
+        <fullName>03 Driveline</fullName>
+        <default>false</default>
+        <label>03 Driveline</label>
+    </customValue>
+    <customValue>
+        <fullName>04 Piping</fullName>
+        <default>false</default>
+        <label>04 Piping</label>
+    </customValue>
+    <customValue>
+        <fullName>05 Steering</fullName>
+        <default>false</default>
+        <label>05 Steering</label>
+    </customValue>
+    <customValue>
+        <fullName>06 Chassis</fullName>
+        <default>false</default>
+        <label>06 Chassis</label>
+    </customValue>
+    <customValue>
+        <fullName>07 Front Axle</fullName>
+        <default>false</default>
+        <label>07 Front Axle</label>
+    </customValue>
+    <customValue>
+        <fullName>08 Front Suspension</fullName>
+        <default>false</default>
+        <label>08 Front Suspension</label>
+    </customValue>
+    <customValue>
+        <fullName>10 Rear Axle</fullName>
+        <default>false</default>
+        <label>10 Rear Axle</label>
+    </customValue>
+    <customValue>
+        <fullName>11 Rear Suspension</fullName>
+        <default>false</default>
+        <label>11 Rear Suspension</label>
+    </customValue>
+    <customValue>
+        <fullName>12 Wheel</fullName>
+        <default>false</default>
+        <label>12 Wheel</label>
+    </customValue>
+    <customValue>
+        <fullName>13 Electrical</fullName>
+        <default>false</default>
+        <label>13 Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>14 Body</fullName>
+        <default>false</default>
+        <label>14 Body</label>
+    </customValue>
+    <customValue>
+        <fullName>15 Interior Trim</fullName>
+        <default>false</default>
+        <label>15 Interior Trim</label>
+    </customValue>
+    <customValue>
+        <fullName>16 Destination Sign</fullName>
+        <default>false</default>
+        <label>16 Destination Sign</label>
+    </customValue>
+    <customValue>
+        <fullName>17 Passenger Lift</fullName>
+        <default>false</default>
+        <label>17 Passenger Lift</label>
+    </customValue>
+    <customValue>
+        <fullName>18 Exterior Trim</fullName>
+        <default>false</default>
+        <label>18 Exterior Trim</label>
+    </customValue>
+    <customValue>
+        <fullName>19 Heater</fullName>
+        <default>false</default>
+        <label>19 Heater</label>
+    </customValue>
+    <customValue>
+        <fullName>20 Air Conditioning</fullName>
+        <default>false</default>
+        <label>20 Air Conditioning</label>
+    </customValue>
+    <customValue>
+        <fullName>21 Windows</fullName>
+        <default>false</default>
+        <label>21 Windows</label>
+    </customValue>
+    <customValue>
+        <fullName>22 Ad Frames</fullName>
+        <default>false</default>
+        <label>22 Ad Frames</label>
+    </customValue>
+    <customValue>
+        <fullName>23 Safety &amp; Road Equipment</fullName>
+        <default>false</default>
+        <label>23 Safety &amp; Road Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>24 Dash Panels &amp; Gauges</fullName>
+        <default>false</default>
+        <label>24 Dash Panels &amp; Gauges</label>
+    </customValue>
+    <customValue>
+        <fullName>25 Decals</fullName>
+        <default>false</default>
+        <label>25 Decals</label>
+    </customValue>
+    <customValue>
+        <fullName>26 Fuel Tank</fullName>
+        <default>false</default>
+        <label>26 Fuel Tank</label>
+    </customValue>
+    <customValue>
+        <fullName>96 Fire</fullName>
+        <default>false</default>
+        <label>96 Fire</label>
+    </customValue>
+    <masterLabel>Problem Code</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

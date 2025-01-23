@@ -1,0 +1,55 @@
+<template>
+    <lightning-card icon-name="action:download" title="Inspection Record" class="slds-card_boundary">
+        <template if:true={showdetails}>
+            <template if:true={error}>
+                <div class="slds-col slds-p-top_medium">
+                    <p class="errormsg slds-m-left_medium slds-m-bottom_medium">Error while connecting to the service.
+                    </p>
+                </div>
+            </template>
+            <template if:false={error}>
+                <template if:true={linkavailable}>
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <div class="slds-col slds-size_1-of-2">
+                                <div class="slds-file slds-file_card slds-has-title">
+                                    <figure>
+                                        <a onclick={downloadecard} name="Inspection Record" class="slds-file__crop">
+                                            <span class="slds-assistive-text">Preview:</span>
+                                            <span class="slds-file__icon slds-icon_container" title="pdf">
+                                                <lightning-icon icon-name="doctype:pdf" size="large"
+                                                    alternative-text="PDF file" title="PDF">
+                                                </lightning-icon>
+                                            </span>
+                                        </a>
+                                        <figcaption class="slds-file__title slds-file__title_card">
+                                            <div class="slds-media slds-media_small slds-media_center">
+                                                <div class="slds-media__figure slds-line-height_reset">
+                                                    <span class="slds-icon_container" title="pdf">
+                                                        <lightning-icon icon-name="doctype:pdf" size="x-small"
+                                                            alternative-text="PDF file" title="PDF">
+                                                        </lightning-icon>
+                                                        <span class="slds-assistive-text">pdf</span>
+                                                    </span>
+                                                </div>
+                                                <div class="slds-media__body">
+                                                    <span class="slds-file__text slds-truncate"
+                                                        title="Inspection Record">ecard_B{busdata.Name}.pdf</span>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <template if:false={linkavailable}>
+                    <div class="slds-col slds-p-top_medium">
+                        <p class="slds-m-left_medium slds-m-bottom_medium">Green Sheet not available.</p>
+                    </div>
+                </template>
+            </template>
+        </template>
+    </lightning-card>
+</template>

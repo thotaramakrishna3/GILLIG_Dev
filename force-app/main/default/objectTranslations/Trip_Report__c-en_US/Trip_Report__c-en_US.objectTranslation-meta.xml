@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trip Report</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trip Reports</value>
+    </caseValues>
+    <layouts>
+        <layout>Trip Report Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Main Info --></label>
+            <section>Main Info</section>
+        </sections>
+        <sections>
+            <label><!-- Parts Sales --></label>
+            <section>Parts Sales</section>
+        </sections>
+        <sections>
+            <label><!-- Retrofits --></label>
+            <section>Retrofits</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create Case --></label>
+        <name>Create_Case</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

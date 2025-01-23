@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Negotiated at time of order placement</fullName>
+        <default>false</default>
+        <label>Negotiated at time of order placement</label>
+    </customValue>
+    <customValue>
+        <fullName>365 Days + End of Calendar Quarter</fullName>
+        <default>false</default>
+        <label>365 Days + End of Calendar Quarter</label>
+    </customValue>
+    <customValue>
+        <fullName>X Months After Receipt of Order</fullName>
+        <default>false</default>
+        <label>X Months After Receipt of Order</label>
+    </customValue>
+    <customValue>
+        <fullName>X Weeks After Receipt of Order</fullName>
+        <default>false</default>
+        <label>X Weeks After Receipt of Order</label>
+    </customValue>
+    <customValue>
+        <fullName>X Days After Receipt of Order</fullName>
+        <default>false</default>
+        <label>X Days After Receipt of Order</label>
+    </customValue>
+    <customValue>
+        <fullName>Per schedule included in contract</fullName>
+        <default>false</default>
+        <label>Per schedule included in contract</label>
+    </customValue>
+    <customValue>
+        <fullName>By specific date</fullName>
+        <default>false</default>
+        <label>By specific date</label>
+    </customValue>
+    <masterLabel>Delivery Quotes</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

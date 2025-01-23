@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Department --></label>
+    <name>Department__c</name>
+    <picklistValues>
+        <masterLabel>Accounting</masterLabel>
+        <translation><!-- Accounting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate</masterLabel>
+        <translation><!-- Corporate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Engineering</masterLabel>
+        <translation><!-- Engineering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field Service</masterLabel>
+        <translation><!-- Field Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Human Resources</masterLabel>
+        <translation><!-- Human Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Information Technology</masterLabel>
+        <translation><!-- Information Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maude Group</masterLabel>
+        <translation><!-- Maude Group --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parts</masterLabel>
+        <translation><!-- Parts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Production</masterLabel>
+        <translation><!-- Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Publications</masterLabel>
+        <translation><!-- Publications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supply Chain</masterLabel>
+        <translation><!-- Supply Chain --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

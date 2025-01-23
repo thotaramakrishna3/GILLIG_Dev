@@ -1,0 +1,7 @@
+Hello,
+
+You've been assigned a new bid for {!Customer_Contract__c.Lead_Agency__c}.  
+
+{!Customer_Contract__c.Name} is currently due on {!Customer_Contract__c.Bid_Date__c}.  Please review the details and discuss with Arminder if you have any concerns with the schedule.
+
+Thank you.

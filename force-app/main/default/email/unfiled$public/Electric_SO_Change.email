@@ -1,0 +1,3 @@
+Dear {!User.Name}
+
+Electric bus Sales order {!Sales_Order__c.Name} changed

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Serialized bill(s) without good donors</fullName>
+        <default>false</default>
+        <label>Serialized bill(s)</label>
+    </customValue>
+    <customValue>
+        <fullName>New product or configuration</fullName>
+        <default>false</default>
+        <label>New product/feature/configuration</label>
+    </customValue>
+    <customValue>
+        <fullName>Complex drawings (multiple to integrate, or routing like piping, cables)</fullName>
+        <default>false</default>
+        <label>Drawings were time-consuming</label>
+    </customValue>
+    <customValue>
+        <fullName>Rework due to Eng error/change</fullName>
+        <default>false</default>
+        <label>Eng error/change</label>
+    </customValue>
+    <customValue>
+        <fullName>BOM error/change</fullName>
+        <default>false</default>
+        <label>BOM error/change</label>
+    </customValue>
+    <customValue>
+        <fullName>Rework due to OEM error/change</fullName>
+        <default>false</default>
+        <label>OEM error/change</label>
+    </customValue>
+    <customValue>
+        <fullName>Rework due to Pubs error</fullName>
+        <default>false</default>
+        <label>Pubs error</label>
+    </customValue>
+    <customValue>
+        <fullName>Required customer interaction or review</fullName>
+        <default>false</default>
+        <label>Cust special handling or review</label>
+    </customValue>
+    <customValue>
+        <fullName>Combined manual</fullName>
+        <default>false</default>
+        <label>Combined manual</label>
+    </customValue>
+    <customValue>
+        <fullName>Has MFD</fullName>
+        <default>false</default>
+        <label>Has MFD</label>
+    </customValue>
+    <customValue>
+        <fullName>Major assy not done</fullName>
+        <default>false</default>
+        <label>Major assy not done</label>
+    </customValue>
+    <customValue>
+        <fullName>Photos not available</fullName>
+        <default>false</default>
+        <label>Photos not available</label>
+    </customValue>
+    <customValue>
+        <fullName>No good donors</fullName>
+        <default>false</default>
+        <label>No good donors</label>
+    </customValue>
+    <customValue>
+        <fullName>Major assembly not done ahead (HVAC, baseplate, mirror)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Major assembly not done ahead (HVAC, baseplate, mirror)</label>
+    </customValue>
+    <masterLabel>Pubs Reason Codes</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

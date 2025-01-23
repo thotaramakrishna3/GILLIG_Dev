@@ -1,0 +1,319 @@
+<template>
+  {count}
+  <!-- <div class="opcontentbody slds-m-top_x-small" style="overflow-x: auto">
+    <table
+      class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered tableouterborder"
+    >
+      <thead>
+        <tr class="slds-line-height_reset slds-text-title_caps">
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="chassis_no"
+              label="Customer Name"
+              title="Customer Name"
+              icon-position="right"
+              onclick={sortdiscrepancytable}
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="raised_date"
+              label="Chassis No"
+              title="Chassis No"
+              icon-position="right"
+              onclick={sortdiscrepancytable}
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="department_name"
+              label="Coach Number"
+              title="Coach Number"
+              icon-position="right"
+              onclick={sortdiscrepancytable}
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="createdby"
+              label="Alignment OP CK"
+              title="Alignment OP CK"
+              icon-position="right"
+              class="slds-truncate"
+              onclick={sortdiscrepancytable}
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="defect_type"
+              label="Dyno OP CK"
+              title="Dyno OP CK"
+              icon-position="right"
+              onclick={sortdiscrepancytable}
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="defect_code"
+              label="Water OP CK"
+              title="Water OP CK"
+              icon-position="right"
+              onclick={sortdiscrepancytable}
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="ecard_discrepancy_log_id"
+              label="Open Discrepancy"
+              title="Open Discrepancy"
+              icon-position="right"
+              onclick={sortdiscrepancytable}
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="ecard_discrepancy_log_id"
+              label="List Of Shortages Not Received"
+              title="List Of Shortages Not Received"
+              icon-position="right"
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="ecard_discrepancy_log_id"
+              label="ETA"
+              title="ETA"
+              icon-position="right"
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="ecard_discrepancy_log_id"
+              label="Out Of Factory Comment"
+              title="Out Of Factory Comment"
+              icon-position="right"
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+          <th class="fixedheader" scope="col">
+            <lightning-button
+              variant="base"
+              data-id="ecard_discrepancy_log_id"
+              label="Out Of Factory Location"
+              title="Out Of Factory Location"
+              icon-position="right"
+              class="slds-truncate"
+            ></lightning-button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <template for:each={modedshortagegdata} for:item="disc">
+          <tr key={disc.index} class={disc.css}>
+            <th>{disc.customer_name}</th>
+            <th>{disc.chassis_number}</th>
+            <th>{disc.coach_number}</th>
+            <th>{disc.alignment_OP_CK}</th>
+            <th>{disc.dyno_OP_CK}</th>
+            <th>{disc.water_OP_CK}</th>
+            <th>{disc.disc_count}</th>
+            <th>{disc.Shortage_name}</th>
+            <th>{disc.ETA}</th>
+            <th>{disc.comments}</th>
+            <th>{disc.location}</th>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+
+    <template if:true={disclistempty}>
+      <div class="slds-align_absolute-center">
+        <div class="empty-state-container slds-text-align_center">
+          <div class="emptymessage">
+            No data matching the applied filters to display.
+          </div>
+        </div>
+      </div>
+    </template>
+  </div> -->
+
+  <div class="opcontentbody slds-m-top_x-small" style="overflow-x: auto">
+    <div style="min-width: 1890px">
+      <table
+        class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered tableouterborder tablelayout"
+      >
+        <thead>
+          <tr class="slds-line-height_reset slds-text-title_caps">
+            <th class="fixedheader" scope="col" style="width : 9%">
+              <lightning-button
+                variant="base"
+                data-id="chassis_no"
+                label="Customer Name"
+                title="Customer Name"
+                icon-position="right"
+                onclick={sortdiscrepancytable}
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 9%">
+              <lightning-button
+                variant="base"
+                data-id="raised_date"
+                label="Chassis No"
+                title="Chassis No"
+                icon-position="right"
+                onclick={sortdiscrepancytable}
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 9%">
+              <lightning-button
+                variant="base"
+                data-id="department_name"
+                label="Coach Number"
+                title="Coach Number"
+                icon-position="right"
+                onclick={sortdiscrepancytable}
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 7%">
+              <lightning-button
+                variant="base"
+                data-id="createdby"
+                label="Alignment OP CK"
+                title="Alignment OP CK"
+                icon-position="right"
+                class="slds-truncate"
+                onclick={sortdiscrepancytable}
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 7%">
+              <lightning-button
+                variant="base"
+                data-id="defect_type"
+                label="Dyno OP CK"
+                title="Dyno OP CK"
+                icon-position="right"
+                onclick={sortdiscrepancytable}
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 7%">
+              <lightning-button
+                variant="base"
+                data-id="defect_code"
+                label="Water OP CK"
+                title="Water OP CK"
+                icon-position="right"
+                onclick={sortdiscrepancytable}
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 7%">
+              <lightning-button
+                variant="base"
+                data-id="ecard_discrepancy_log_id"
+                label="Open Discrepancy"
+                title="Open Discrepancy"
+                icon-position="right"
+                onclick={sortdiscrepancytable}
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 15%">
+              <lightning-button
+                variant="base"
+                data-id="ecard_discrepancy_log_id"
+                label="List Of Shortages Not Received"
+                title="List Of Shortages Not Received"
+                icon-position="right"
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 9%">
+              <lightning-button
+                variant="base"
+                data-id="ecard_discrepancy_log_id"
+                label="ETA"
+                title="ETA"
+                icon-position="right"
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 12%">
+              <lightning-button
+                variant="base"
+                data-id="ecard_discrepancy_log_id"
+                label="Out Of Factory Comment"
+                title="Out Of Factory Comment"
+                icon-position="right"
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+            <th class="fixedheader" scope="col" style="width : 7%">
+              <lightning-button
+                variant="base"
+                data-id="ecard_discrepancy_log_id"
+                label="Out Of Factory Location"
+                title="Out Of Factory Location"
+                icon-position="right"
+                class="slds-truncate"
+              ></lightning-button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+            <template for:each={modedshortagegdata} for:item="disc">
+              <tr key={disc.ecard_discrepancy_log_id} class={disc.css}>
+                <!--class={disc.css}  cellfontstyle-->
+                <th class={disc.css}>{disc.customer_name}</th>
+                <th class={disc.css}>{disc.chassis_number}</th>
+                <th class={disc.css}>{disc.coach_number}</th>
+                <th class={disc.css}>{disc.alignment_OP_CK}</th>
+                <th class={disc.css}>{disc.dyno_OP_CK}</th>
+                <th class={disc.css}>{disc.water_OP_CK}</th>
+                <th class={disc.css}>{disc.disc_count}</th>
+                <th class="verticlebold horizontalbold">{disc.Shortage_name}</th>
+                <th class="verticlebold horizontalbold">
+                  
+                  <lightning-formatted-date-time value={disc.ETA}>
+                  </lightning-formatted-date-time>
+                </th>
+                <th class="verticlebold horizontalbold">{disc.comments}</th>
+                <th class={disc.css}>{disc.location}</th>
+              </tr>
+            </template>
+        </tbody>
+      </table>
+
+      <template if:true={disclistempty}>
+        <div class="slds-align_absolute-center">
+          <div class="empty-state-container slds-text-align_center">
+            <div class="emptymessage">
+              No data matching the applied filters to display.
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+</template>

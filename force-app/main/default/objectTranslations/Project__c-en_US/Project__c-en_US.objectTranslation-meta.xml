@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project (Legacy)</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Projects (Legacy)</value>
+    </caseValues>
+    <layouts>
+        <layout>Process Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Project Status --></label>
+            <section>Project Status</section>
+        </sections>
+        <sections>
+            <label><!-- Project Team --></label>
+            <section>Project Team</section>
+        </sections>
+        <sections>
+            <label><!-- Status Updates --></label>
+            <section>Status Updates</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Product Layout</layout>
+        <sections>
+            <label><!-- Approvals --></label>
+            <section>Approvals</section>
+        </sections>
+        <sections>
+            <label><!-- Cost Impact --></label>
+            <section>Cost Impact</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management --></label>
+            <section>Project Management</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management Links --></label>
+            <section>Project Management Links</section>
+        </sections>
+        <sections>
+            <label><!-- Project Team --></label>
+            <section>Project Team</section>
+        </sections>
+        <sections>
+            <label><!-- Scope --></label>
+            <section>Scope</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Project Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Project Status --></label>
+            <section>Project Status</section>
+        </sections>
+        <sections>
+            <label><!-- Project Team --></label>
+            <section>Project Team</section>
+        </sections>
+        <sections>
+            <label><!-- Status Updates --></label>
+            <section>Status Updates</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Project to implement a process improvement (such as a new system implementation). --></description>
+        <label><!-- Process --></label>
+        <name>Process</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Project to design/develop/release a product improvement, new product or cost savings opportunity. --></description>
+        <label><!-- Product --></label>
+        <name>Product</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

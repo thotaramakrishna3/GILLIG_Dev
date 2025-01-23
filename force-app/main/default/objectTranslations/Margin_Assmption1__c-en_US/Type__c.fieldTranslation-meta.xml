@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Delivery Incidentals</masterLabel>
+        <translation><!-- Delivery Incidentals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery Rate/Mile</masterLabel>
+        <translation><!-- Delivery Rate/Mile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Labor Hours</masterLabel>
+        <translation><!-- Labor Hours --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Labor Rate</masterLabel>
+        <translation><!-- Labor Rate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Options Margin</masterLabel>
+        <translation><!-- Options Margin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other COS Allocation</masterLabel>
+        <translation><!-- Other COS Allocation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outside Processes</masterLabel>
+        <translation><!-- Outside Processes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overhead</masterLabel>
+        <translation><!-- Overhead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty</masterLabel>
+        <translation><!-- Warranty --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

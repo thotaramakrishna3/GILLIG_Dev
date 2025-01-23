@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contract Administrator --></label>
+    <name>Contract_Administrator__c</name>
+    <relationshipLabel><!-- Customer Contracts (Contract Administrator) --></relationshipLabel>
+</CustomFieldTranslation>

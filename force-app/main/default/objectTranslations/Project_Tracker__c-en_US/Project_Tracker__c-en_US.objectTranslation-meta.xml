@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Evaluation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Project Evaluations</value>
+    </caseValues>
+    <layouts>
+        <layout>Project Tracker Layout</layout>
+        <sections>
+            <label><!-- Approval Phase --></label>
+            <section>Approval Phase</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Evaluation --></label>
+            <section>Business Case Evaluation</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Phase --></label>
+            <section>Business Case Phase</section>
+        </sections>
+        <sections>
+            <label><!-- Complete --></label>
+            <section>Complete</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- LEGACY FIELDS ( READ ONLY) --></label>
+            <section>LEGACY FIELDS ( READ ONLY)</section>
+        </sections>
+        <sections>
+            <label><!-- Pre-Project Collection --></label>
+            <section>Pre-Project Collection</section>
+        </sections>
+        <sections>
+            <label><!-- Preliminary Investigation --></label>
+            <section>Preliminary Investigation</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management - READ ONLY --></label>
+            <section>Project Management - READ ONLY</section>
+        </sections>
+        <sections>
+            <label><!-- Project Management Links --></label>
+            <section>Project Management Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>new product layout</layout>
+        <sections>
+            <label><!-- Approval Phase --></label>
+            <section>Approval Phase</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Evaluation (Benefits) --></label>
+            <section>Business Case Evaluation (Benefits)</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Evaluation(Investments) --></label>
+            <section>Business Case Evaluation(Investments)</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Phase --></label>
+            <section>Business Case Phase</section>
+        </sections>
+        <sections>
+            <label><!-- Complete --></label>
+            <section>Complete</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pre-Project Collection --></label>
+            <section>Pre-Project Collection</section>
+        </sections>
+        <sections>
+            <label><!-- Preliminary Investigation --></label>
+            <section>Preliminary Investigation</section>
+        </sections>
+        <sections>
+            <label><!-- Project Plan Phase --></label>
+            <section>Project Plan Phase</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>new product platform layout</layout>
+        <sections>
+            <label><!-- Approval Phase --></label>
+            <section>Approval Phase</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Evaluation (Benefits) --></label>
+            <section>Business Case Evaluation (Benefits)</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Evaluation(Investments) --></label>
+            <section>Business Case Evaluation(Investments)</section>
+        </sections>
+        <sections>
+            <label><!-- Business Case Phase --></label>
+            <section>Business Case Phase</section>
+        </sections>
+        <sections>
+            <label><!-- Complete --></label>
+            <section>Complete</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pre-Project Collection --></label>
+            <section>Pre-Project Collection</section>
+        </sections>
+        <sections>
+            <label><!-- Preliminary Investigation --></label>
+            <section>Preliminary Investigation</section>
+        </sections>
+        <sections>
+            <label><!-- Project Plan Phase --></label>
+            <section>Project Plan Phase</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Next Stage --></label>
+        <name>Next_Stage</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- Product Test --></label>
+        <name>Product_Test</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

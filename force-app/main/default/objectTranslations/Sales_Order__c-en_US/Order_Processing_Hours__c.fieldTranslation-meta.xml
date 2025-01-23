@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The order processing hours to be entered by the Sales department. --></help>
+    <label><!-- Order Processing Hours --></label>
+    <name>Order_Processing_Hours__c</name>
+</CustomFieldTranslation>

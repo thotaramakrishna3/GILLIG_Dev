@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bus Required --></label>
+    <name>Bus_Required__c</name>
+    <picklistValues>
+        <masterLabel>Any Bus</masterLabel>
+        <translation><!-- Any Bus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specific Bus/Customer</masterLabel>
+        <translation><!-- Specific Bus/Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specific Configuration</masterLabel>
+        <translation><!-- Specific Configuration --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

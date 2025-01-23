@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Usable Energy --></label>
+    <name>Usable_Energy__c</name>
+    <picklistValues>
+        <masterLabel>80%</masterLabel>
+        <translation><!-- 80% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90%</masterLabel>
+        <translation><!-- 90% --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

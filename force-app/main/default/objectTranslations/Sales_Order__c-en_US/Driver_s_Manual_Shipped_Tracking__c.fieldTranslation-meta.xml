@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Driver&apos;s Manual Shipped Tracking --></label>
+    <name>Driver_s_Manual_Shipped_Tracking__c</name>
+</CustomFieldTranslation>

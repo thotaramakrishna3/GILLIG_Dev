@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity Sales Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity Sales Orders</value>
+    </caseValues>
+    <layouts>
+        <layout>Opportunity Sales Order Layout</layout>
+        <sections>
+            <label><!-- Booking Details --></label>
+            <section>Booking Details</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Information --></label>
+            <section>Contract Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PO Information --></label>
+            <section>PO Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Do not cancel and order by setting to 0, clone this Opportunity Sales Order then set to a negative value for cancelling --></errorMessage>
+        <name>Cancel_Order</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please include Date Cancelled --></errorMessage>
+        <name>Cancel_date</name>
+    </validationRules>
+</CustomObjectTranslation>

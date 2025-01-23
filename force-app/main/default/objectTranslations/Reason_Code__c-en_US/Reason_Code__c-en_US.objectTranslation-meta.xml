@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Reason Code</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Reason Codes</value>
+    </caseValues>
+    <layouts>
+        <layout>Reject Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Rework Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Reject --></label>
+        <name>Reject</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Rework --></label>
+        <name>Rework</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

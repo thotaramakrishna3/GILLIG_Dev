@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Training Classes --></label>
+    <name>Training_Classes__c</name>
+    <picklistValues>
+        <masterLabel>Air Systems and Brake</masterLabel>
+        <translation><!-- Air Systems and Brake --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison Hybrid</masterLabel>
+        <translation><!-- Allison Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison Hybrid Familiarization</masterLabel>
+        <translation><!-- Allison Hybrid Familiarization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison Transmisions</masterLabel>
+        <translation><!-- Allison Transmisions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAE hybrid Familiarization</masterLabel>
+        <translation><!-- BAE hybrid Familiarization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basic Bus Electrical System</masterLabel>
+        <translation><!-- Basic Bus Electrical System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CNG System</masterLabel>
+        <translation><!-- CNG System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cummins</masterLabel>
+        <translation><!-- Cummins --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EFAN System</masterLabel>
+        <translation><!-- EFAN System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Entrance/Exit Door Systems</masterLabel>
+        <translation><!-- Entrance/Exit Door Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gillig Battery Electric Bus Operator Training</masterLabel>
+        <translation><!-- Gillig Battery Electric Bus Operator Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gillig Battery Electric Bus Service Personnel Training</masterLabel>
+        <translation><!-- Gillig Battery Electric Bus Service Personnel Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gillig Battery Electric Bus Technician Training</masterLabel>
+        <translation><!-- Gillig Battery Electric Bus Technician Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gillig Emissions</masterLabel>
+        <translation><!-- Gillig Emissions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hydraulic System</masterLabel>
+        <translation><!-- Hydraulic System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lift-U</masterLabel>
+        <translation><!-- Lift-U --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maintenance Department General Vehicle Orientation</masterLabel>
+        <translation><!-- Maintenance Department General Vehicle Orientation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Meritor Axle / Wheel End</masterLabel>
+        <translation><!-- Meritor Axle / Wheel End --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiplex Electrical System</masterLabel>
+        <translation><!-- Multiplex Electrical System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Operator Instruction</masterLabel>
+        <translation><!-- Operator Instruction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ricon - Wheel Chair</masterLabel>
+        <translation><!-- Ricon - Wheel Chair --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thermo King</masterLabel>
+        <translation><!-- Thermo King --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vapor</masterLabel>
+        <translation><!-- Vapor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voith</masterLabel>
+        <translation><!-- Voith --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZF</masterLabel>
+        <translation><!-- ZF --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

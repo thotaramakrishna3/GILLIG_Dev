@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Default Slots Per Day</masterLabel>
+        <translation><!-- Default Slots Per Day --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Holiday</masterLabel>
+        <translation><!-- Holiday --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scheduled Week</masterLabel>
+        <translation><!-- Scheduled Week --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slots Per Week Constant</masterLabel>
+        <translation><!-- Slots Per Week Constant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Working Day</masterLabel>
+        <translation><!-- Working Day --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

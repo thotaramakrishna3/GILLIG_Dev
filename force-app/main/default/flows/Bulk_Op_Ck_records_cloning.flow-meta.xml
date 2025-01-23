@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>assign_Accounts_to_Lst</name>
+        <label>assign Accounts to Lst</label>
+        <locationX>182</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>accList</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Accounts</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Search_for_an_account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_the_selected_Account_Id</name>
+        <label>Assign the selected Account Id</label>
+        <locationX>270</locationX>
+        <locationY>782</locationY>
+        <assignmentItems>
+            <assignToReference>Iterate_Op_ck_records.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Account_Name.selectedChoiceValues</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>finalListtoClone</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_Op_ck_records</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_Op_ck_records</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Accounts_Available_or_Not</name>
+        <label>Check Accounts Available or Not</label>
+        <locationX>380</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Acc_availability_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Accounts Not Available</defaultConnectorLabel>
+        <rules>
+            <name>Accounts_Available</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Accounts</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assign_Accounts_to_Lst</targetReference>
+            </connector>
+            <label>Accounts Available</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>check_Final_List_Not_Empty</name>
+        <label>check Final List Not Empty</label>
+        <locationX>182</locationX>
+        <locationY>974</locationY>
+        <defaultConnectorLabel>Empty</defaultConnectorLabel>
+        <rules>
+            <name>Not_Empty</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>finalListtoClone</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clone_Op_Ck_records</targetReference>
+            </connector>
+            <label>Not Empty</label>
+        </rules>
+    </decisions>
+    <description>Easy to clone account related Op Ck data with another Account.</description>
+    <dynamicChoiceSets>
+        <name>accountsRecordsChoiceset</name>
+        <collectionReference>accList</collectionReference>
+        <dataType>String</dataType>
+        <displayField>Internal_Name__c</displayField>
+        <object>Account</object>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Bulk Op Ck records cloning {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Clone the Operation Check Master Data Records</label>
+    <loops>
+        <name>Iterate_Op_ck_records</name>
+        <label>Iterate Op ck records</label>
+        <locationX>182</locationX>
+        <locationY>674</locationY>
+        <collectionReference>Get_Operation_Check_Master_Data</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_the_selected_Account_Id</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>check_Final_List_Not_Empty</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Clone_Op_Ck_records</name>
+        <label>Clone Op Ck records</label>
+        <locationX>50</locationX>
+        <locationY>1082</locationY>
+        <connector>
+            <targetReference>Success_Screen</targetReference>
+        </connector>
+        <inputReference>finalListtoClone</inputReference>
+    </recordCreates>
+    <recordLookups>
+        <description>Get All the Account records.</description>
+        <name>Get_Accounts</name>
+        <label>Get Accounts</label>
+        <locationX>380</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Accounts_Available_or_Not</targetReference>
+        </connector>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Account related Operation Check Master Data records.</description>
+        <name>Get_Operation_Check_Master_Data</name>
+        <label>Get Operation Check Master Data</label>
+        <locationX>380</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Accounts</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Operation_Check_Master_Data__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Acc_availability_Screen</name>
+        <label>Acc availability Screen</label>
+        <locationX>578</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Acc_availability</name>
+            <fieldText>&lt;p&gt;No account records avilable to select&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Search_for_an_account</name>
+        <label>Search for an account</label>
+        <locationX>182</locationX>
+        <locationY>566</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Iterate_Op_ck_records</targetReference>
+        </connector>
+        <fields>
+            <name>Account_Name</name>
+            <choiceReferences>accountsRecordsChoiceset</choiceReferences>
+            <extensionName>flowruntime:choiceLookup</extensionName>
+            <fieldText>Account Name</fieldText>
+            <fieldType>ComponentChoice</fieldType>
+            <inputParameters>
+                <name>placeholder</name>
+                <value>
+                    <stringValue>Search for an account</stringValue>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Success_Screen</name>
+        <label>Success Screen</label>
+        <locationX>50</locationX>
+        <locationY>1190</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>cloned_successfully</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(51, 189, 36);&quot;&gt;Records are cloned successfully!!&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Operation_Check_Master_Data</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>accList</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>finalListtoClone</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Operation_Check_Master_Data__c</objectType>
+    </variables>
+    <variables>
+        <description>Getting triggering account record ID</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

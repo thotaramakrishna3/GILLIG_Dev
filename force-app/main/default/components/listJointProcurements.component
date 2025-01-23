@@ -1,0 +1,13 @@
+<apex:component controller="listJointProcurements" access="global">
+    <apex:attribute name="acctId" description="..." type="ID" assignTo="{!objId}"/>
+    
+    <apex:dataTable id="JointP" value="{!listJointProcurements}" var="proc" cellpadding="2" border="2" rendered="{!listJointProcurements.size>0}">
+        <apex:column headerValue="Customer Contract Reference">
+            <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))+proc.ID}">{!proc.ReferenceContract__c}</apex:outputLink>
+        </apex:column>
+        <apex:column headerValue="Initial Qty" value="{!proc.Initial_Qty__c}" />
+        <apex:column headerValue="Optional Qty" value="{!proc.Optional_Qty__c}" />
+        <apex:column headerValue="Expiration" value="{!proc.Expiration__c}" />
+        <apex:column headerValue="Term" value="{!proc.Term__c}" />
+    </apex:dataTable>
+</apex:component>

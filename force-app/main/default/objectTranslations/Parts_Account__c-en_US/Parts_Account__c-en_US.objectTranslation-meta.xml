@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Parts Account</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Parts Accounts</value>
+    </caseValues>
+    <layouts>
+        <layout>Parts Account Layout</layout>
+        <sections>
+            <label><!-- 2016 --></label>
+            <section>2016</section>
+        </sections>
+        <sections>
+            <label><!-- 2017 --></label>
+            <section>2017</section>
+        </sections>
+        <sections>
+            <label><!-- 2018 --></label>
+            <section>2018</section>
+        </sections>
+        <sections>
+            <label><!-- 2019 --></label>
+            <section>2019</section>
+        </sections>
+        <sections>
+            <label><!-- 2020 --></label>
+            <section>2020</section>
+        </sections>
+        <sections>
+            <label><!-- 2021 --></label>
+            <section>2021</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

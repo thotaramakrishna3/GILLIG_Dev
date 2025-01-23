@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time spent helping primary manual creator. --></help>
+    <label><!-- SVC Days Other --></label>
+    <name>SVC_Days_Other__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Margin Ref SO Standard Materials --></label>
+    <name>Margin_Ref_SO_Standard_Materials__c</name>
+</CustomFieldTranslation>

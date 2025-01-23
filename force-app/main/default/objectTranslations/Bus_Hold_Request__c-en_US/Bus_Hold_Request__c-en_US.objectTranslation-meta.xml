@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bus Hold Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bus Hold Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>Bus Hold Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Demo Request</layout>
+        <sections>
+            <label><!-- Bus Assigned --></label>
+            <section>Bus Assigned</section>
+        </sections>
+        <sections>
+            <label><!-- Bus Request Details --></label>
+            <section>Bus Request Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Demo Details --></label>
+            <section>Demo Details</section>
+        </sections>
+        <sections>
+            <label><!-- Details for Impacted Departments --></label>
+            <section>Details for Impacted Departments</section>
+        </sections>
+        <sections>
+            <label><!-- Driver Details --></label>
+            <section>Driver Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Test Request</layout>
+        <sections>
+            <label><!-- Bus Assigned --></label>
+            <section>Bus Assigned</section>
+        </sections>
+        <sections>
+            <label><!-- Bus Request Details --></label>
+            <section>Bus Request Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details for Impacted Departments --></label>
+            <section>Details for Impacted Departments</section>
+        </sections>
+        <sections>
+            <label><!-- Test Details --></label>
+            <section>Test Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Request for a Bus Demo --></description>
+        <label><!-- Demo Request --></label>
+        <name>Demo_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Testing Requested by Engineering --></description>
+        <label><!-- Engineering Test --></label>
+        <name>Engineering_Test</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

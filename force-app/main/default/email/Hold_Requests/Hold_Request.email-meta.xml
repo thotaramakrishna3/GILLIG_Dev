@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Hold Request</name>
+    <style>none</style>
+    <subject>Bus {!Bus_Hold_Request__c.Bus_Assigned__c} is being held for testing.</subject>
+    <textOnly>{!Bus_Hold_Request__c.Internal_Name__c} {!Bus_Hold_Request__c.Bus_Assigned__c} is being held at the request of {!Bus_Hold_Request__c.Requestor__c}. See below for details.
+
+
+Ready Row:
+
+This bus is scheduled to be completed on {!Bus_Hold_Request__c.Scheduled_Completion_Date__c}
+
+Purpose of test
+
+{!Bus_Hold_Request__c.Purpose_of_Test__c}
+
+Duration of test
+
+{!Bus_Hold_Request__c.Duration_of_Test__c}
+
+Testing Description
+
+{!Bus_Hold_Request__c.Testing_Description__c}
+
+
+
+Serial Number
+
+{!Bus_Hold_Request__c.Bus_Assigned__c}
+
+Customer
+
+{!Bus_Hold_Request__c.Internal_Name__c}
+
+Length
+
+{!Bus_Hold_Request__c.Length__c}
+
+Mode
+
+{!Bus_Hold_Request__c.Mode__c}
+
+Start Date
+
+{!Bus_Hold_Request__c.Start_Date__c}
+
+Style
+
+{!Bus_Hold_Request__c.Style__c}
+
+
+Notes for Supply Chain
+
+{!Bus_Hold_Request__c.Notes_for_Supply_Chain__c}
+
+Notes for Production
+{!Bus_Hold_Request__c.Notes_for_Production__c}
+
+Notes for Field Service
+
+{!Bus_Hold_Request__c.Notes_for_Field_Service__c}
+
+Notes for Publications
+
+{!Bus_Hold_Request__c.Notes_for_Publications__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

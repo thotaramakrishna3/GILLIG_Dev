@@ -1,0 +1,88 @@
+<template>
+    <!-- Button to show the modal -->
+    <lightning-button disabled={btndisabled} label={buttonlabel} variant="brand-outline" title="Add Rework" onclick={showReworkAddModal} class="slds-m-right_xxx-small"></lightning-button>
+
+    <!-- Modal section -->
+    <template if:true={addreworkmodal}>
+        <section role="dialog" tabindex="-1"
+                 aria-labelledby="modal-heading-04"
+                 aria-modal="true"
+                 aria-describedby="modal-content-id-4"
+                 class="slds-modal slds-fade-in-open slds-modal_medium vsmodal">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideReworkAddModal}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small"></lightning-icon>
+                    </button>
+                    <h2 id="modal-heading-04" class="slds-text-heading_medium slds-hyphenate">New Rework</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+                    <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-size_1-of-1" if:false={reworkdb}>
+                            <lightning-input type="text" name="selectedrejectbus" label="Selected Bus" value={newrework.selectedrejectbus} disabled ></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1" if:true={reworkdb}>
+                            <c-custom-search-component isrequired="true" showicon="true" showlabel="true" placeholdertext="Search for Chassis Number"
+                                                       icon-name="custom:custom98" listto-search={ecardnamechasislistrework} label="Select a Bus" onselect={onbusselectionrework}
+                                                       onclear={onclearbusrework}></c-custom-search-component>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox  disabled={ecardnotselectedrework} name="department_id" label="Department" class="reworkvalidation"
+                                                onchange={updatenewrework} value={newrework.department_id} placeholder="Select Department"
+                                                options={departmentoptionsrework} required></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox disabled={deptnotselectedrework} required name="buildstation_id" class="reworkvalidation"
+                                                label="Build Station (BS)" onchange={updatenewrework} value={newrework.buildstation_id}
+                                                placeholder="Select BuildStation Code" options={buildstationoptionsrework}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-input if:false={buildstationselectedpartrework} disabled required class="reworkvalidation" type="text" name="dummy" label="Part Number" placeholder="Please select a Build Station"></lightning-input>
+                            <c-custom-search-component selectedcustomer={newrework.buspart_no} data-id="partmnumbersearchrework" if:true={buildstationselectedpartrework}  isrequired={returntruerework}  showicon={returntruerework} showlabel={returntruerework}  placeholdertext="Search Part Number" icon-name="custom:custom19" listto-search={partnumberlistrework} label="Part Number" onselect={onpartnumberselectionrework} onclear={onpartnumberclearrework}></c-custom-search-component>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-input value={newrework.reworkbuspart_no} required class="reworkvalidation" onchange={updatenewrework} type="text" name="reworkbuspart_no" label="Reworked to Part Number"></lightning-input>
+                        </div>
+                       
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-textarea required class="reworkvalidation" field-level-help="Please fill part number to auto fill the description.To edit the description select 'Part No. Not Found' option." disabled={enableeditonpartnamerework} onchange={updatenewrework} name="buspart_name" value={newrework.buspart_name} label="Description" placeholder="Please select a Part Number to fill."></lightning-textarea>
+                        </div>
+                        <div class="slds-size_1-of-2 slds-grid">
+                            <div class="slds-col slds-size_1-of-2">
+                                <lightning-input required class="reworkvalidation" type="number" name="quantity_rejected"
+                                                 onchange={updatenewrework} label="Quantity Reworked" value={newrework.quantity} min="0.00001"
+                                                 step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input type="text" name="date" label="Created Date" value={newrework.date} disabled></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox name="reason_code" required class="reworkvalidation" label="Reason Code" onchange={updatenewrework} value={newrework.reason_code} placeholder="Select Reason code" options={reworkreasoncode}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input type="text" name="Rejected By" label="Reworked By" value={fullName} disabled></lightning-input>
+                        </div>
+                        <!-- <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox name="supply_chain" required class="reworkvalidation" label="Supply Chain" onchange={updatenewrework} value={newrework.supply_chain} placeholder="Select Supply Chain" options={reworkreasoncode}></lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox name="status" required class="reworkvalidation" label="Status" onchange={updatenewrework} value={newrework.status} placeholder="Select Status" options={picklistOptions}></lightning-combobox>
+                        </div> -->
+                        <div class="slds-col slds-size_1-of-1">
+                            <lightning-textarea name="remarks"  field-level-help="" value={newrework.remarks} label="Remark" onchange={updatenewrework}></lightning-textarea>
+                        </div>
+                        <!-- <div class="slds-col slds-size_1-of-1">
+                            <lightning-textarea name="remarks" field-level-help="" value={newreject.remarks} label="Remark" onchange={updatenewreject}></lightning-textarea>
+                        </div> -->
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning-button label="Cancel" title="Cancel" onclick={hideReworkAddModal} class="slds-m-right_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Add" onclick={addnewrework} title="Add" icon-position="right" icon-name="utility:add"></lightning-button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open bg-blur"></div>
+    </template>
+</template>

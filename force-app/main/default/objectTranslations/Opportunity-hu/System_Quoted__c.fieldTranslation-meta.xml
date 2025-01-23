@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- System Quoted --></label>
+    <name>System_Quoted__c</name>
+    <picklistValues>
+        <masterLabel>CPE250</masterLabel>
+        <translation><!-- CPE250 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom/Mixed</masterLabel>
+        <translation><!-- Custom/Mixed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Express Plus 150-160kW</masterLabel>
+        <translation><!-- Express Plus 150-160kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Express Plus 200kW</masterLabel>
+        <translation><!-- Express Plus 200kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flex 180kW</masterLabel>
+        <translation><!-- Flex 180kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HVC-100</masterLabel>
+        <translation><!-- HVC-100 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HVC-150</masterLabel>
+        <translation><!-- HVC-150 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HVC-150PD</masterLabel>
+        <translation><!-- HVC-150PD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HVC-300PD</masterLabel>
+        <translation><!-- HVC-300PD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HVC-450PD</masterLabel>
+        <translation><!-- HVC-450PD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MD 150kW</masterLabel>
+        <translation><!-- MD 150kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MD 300kW</masterLabel>
+        <translation><!-- MD 300kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MD 75kW</masterLabel>
+        <translation><!-- MD 75kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile 25kW</masterLabel>
+        <translation><!-- Mobile 25kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile 50kW</masterLabel>
+        <translation><!-- Mobile 50kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SiCharge UC200</masterLabel>
+        <translation><!-- SiCharge UC200 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SiCharge UC600</masterLabel>
+        <translation><!-- SiCharge UC600 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terra 54HV</masterLabel>
+        <translation><!-- Terra 54HV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ultra Fast 450kW</masterLabel>
+        <translation><!-- Ultra Fast 450kW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WAVE 250kW</masterLabel>
+        <translation><!-- WAVE 250kW --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

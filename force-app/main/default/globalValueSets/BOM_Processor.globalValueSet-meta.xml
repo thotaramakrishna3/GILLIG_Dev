@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>John Edmondson</fullName>
+        <default>false</default>
+        <label>John Edmondson</label>
+    </customValue>
+    <customValue>
+        <fullName>EJ Mariscal</fullName>
+        <default>false</default>
+        <label>EJ Mariscal</label>
+    </customValue>
+    <customValue>
+        <fullName>Cesar Gonzalez</fullName>
+        <default>false</default>
+        <label>Cesar Gonzalez</label>
+    </customValue>
+    <customValue>
+        <fullName>Michael Rands</fullName>
+        <default>false</default>
+        <label>Michael Rands</label>
+    </customValue>
+    <customValue>
+        <fullName>Aaron DeGarcia</fullName>
+        <default>false</default>
+        <label>Aaron DeGarcia</label>
+    </customValue>
+    <customValue>
+        <fullName>Keith Lynch</fullName>
+        <default>false</default>
+        <label>Keith Lynch</label>
+    </customValue>
+    <description>To be deleted. Not used.</description>
+    <masterLabel>DELETE_BOM Processor</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

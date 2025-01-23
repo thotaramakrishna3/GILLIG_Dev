@@ -1,0 +1,8 @@
+<!--***********************************************************************************************************************************
+     Developer :Suyati
+     Name      : CaseRelatedListRefreshEvent
+     Usage     : Refresh the CaseRelatedListComponent     
+     Date      : October 2019   
+************************************************************************************************************************************-->
+<aura:event type="APPLICATION" description="Event template">
+</aura:event>

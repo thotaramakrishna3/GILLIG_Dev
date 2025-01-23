@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Gillig Parts</label>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Trip_Report__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-CollaborationGroup</tabs>
+    <tabs>standard-Chatter</tabs>
+    <tabs>ConcurConnect__My_Concur</tabs>
+    <tabs>Parts_Account__c</tabs>
+    <tabs>Spare__c</tabs>
+    <tabs>Reason_Code__c</tabs>
+    <tabs>Reject__c</tabs>
+    <tabs>Rework__c</tabs>
+</CustomApplication>

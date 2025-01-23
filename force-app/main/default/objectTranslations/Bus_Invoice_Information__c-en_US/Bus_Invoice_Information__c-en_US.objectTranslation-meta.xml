@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bus Invoice Information</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bus Invoice Information</value>
+    </caseValues>
+    <layouts>
+        <layout>Invoice Information Layout</layout>
+        <sections>
+            <label><!-- Additional Invoice Information --></label>
+            <section>Additional Invoice Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Invoice Addresses --></label>
+            <section>Invoice Addresses</section>
+        </sections>
+        <sections>
+            <label><!-- Lien &amp; Lease Information --></label>
+            <section>Lien &amp; Lease Information</section>
+        </sections>
+        <sections>
+            <label><!-- MSO Information --></label>
+            <section>MSO Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the Customer for who the Demo is being performed. If a conference, list in the address details. --></help>
+    <label><!-- Demo Customer --></label>
+    <name>Demo_Customer__c</name>
+    <relationshipLabel><!-- Demos --></relationshipLabel>
+</CustomFieldTranslation>

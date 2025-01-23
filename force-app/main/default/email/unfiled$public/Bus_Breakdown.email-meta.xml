@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notifying the PSM , FSR and Account Owner regarding the bus break down</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Bus Breakdown</name>
+    <style>none</style>
+    <subject>{!Bus__c.Current_Owner__c}, Bus Number  {!Bus__c.Name} Breakdown Notification</subject>
+    <textOnly>Hello ,
+
+The bus breakdown information;
+Bus Serial Number  : {!Bus__c.Name}
+Bus lnformation : {!Bus__c.Link}
+Bus breakdown information:  {!Break_Down_Report__c.Link}
+Issue: {!Break_Down_Report__c.Description_of_Issue__c}
+
+Thanks,
+{!Break_Down_Report__c.CreatedBy}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

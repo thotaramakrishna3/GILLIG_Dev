@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Charger Opportunity</layout>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- GILLIG Quote --></label>
+            <section>GILLIG Quote</section>
+        </sections>
+        <sections>
+            <label><!-- Order Processing Details --></label>
+            <section>Order Processing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Supplier Quote --></label>
+            <section>Supplier Quote</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Opportunity Line --></label>
+        <name>New_Opportunity_Line</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Details --></label>
+        <name>Update_Details</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Electric Bus Charger Opportunities --></description>
+        <label><!-- Charger --></label>
+        <name>Charger</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Competitor business we will not bid on --></description>
+        <label><!-- Competitor --></label>
+        <name>Competitor</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Direct purchases which do not require contract options or formal bid documents --></description>
+        <label><!-- Direct --></label>
+        <name>Direct</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- First order off a new bid (IFB) --></description>
+        <label><!-- IFB --></label>
+        <name>IFB</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Option orders on existing contracts for named properties --></description>
+        <label><!-- Option --></label>
+        <name>Option</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Purchases made using another customer&apos;s contract options --></description>
+        <label><!-- Piggyback --></label>
+        <name>Piggyback</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- The initial purchase off a new bid (RFP) --></description>
+        <label><!-- RFP --></label>
+        <name>RFP</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- To be determined --></description>
+        <label><!-- TBD --></label>
+        <name>TBD</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please select a value for loss reason --></errorMessage>
+        <name>Loss_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Competitor --></errorMessage>
+        <name>Lost_Competitor_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please update Quote Due date before pricing is requested --></errorMessage>
+        <name>Quote_Due_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please Select a Type.  New Business = Customer&apos;s Last Order was not GILLIG. Existing Business = Customer&apos;s Last Order was GILLIG. --></errorMessage>
+        <name>Type_is_Blank</name>
+    </validationRules>
+</CustomObjectTranslation>

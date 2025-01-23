@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Buy Design Request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>GILLIG</letterhead>
+    <name>New Configurator Request</name>
+    <style>freeForm</style>
+    <subject>A New Buy Design Request Ticket for {!Configurator_Request__c.OwnerFullName} has been created</subject>
+    <textOnly>Configurator Request #: {!Configurator_Request__c.Name}
+Buy Design Section: {!Configurator_Request__c.Buy_Design_Section__c}
+
+Problem Description:
+{!Configurator_Request__c.Problem_Description__c}
+
+{!Configurator_Request__c.Attachments__c}
+
+
+{!Configurator_Request__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

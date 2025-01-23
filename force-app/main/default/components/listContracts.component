@@ -1,0 +1,13 @@
+<apex:component controller="listContracts" access="global">
+    <apex:attribute name="acctId" description="..." type="ID" assignTo="{!objId}"/>
+    
+    <apex:dataTable id="Contracts" value="{!listContracts}" var="cont" cellpadding="2" border="2" rendered="{!listContracts.size>0}">
+        <apex:column headerValue="Contract">
+            <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))+cont.ID}">{!cont.Name}</apex:outputLink>
+    	</apex:column>
+        <apex:column headerValue="Initial Qty" value="{!cont.Initial_Quantity__c}" />
+        <apex:column headerValue="Optional Qty" value="{!cont.Optional_Quantities__c}" />
+        <apex:column headerValue="Expiration" value="{!cont.Expiration__c}" />
+        <apex:column headerValue="Term" value="{!cont.Term_Years__c}" />
+    </apex:dataTable>
+</apex:component>

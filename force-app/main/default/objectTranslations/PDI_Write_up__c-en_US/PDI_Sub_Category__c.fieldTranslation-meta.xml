@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub Category --></label>
+    <name>PDI_Sub_Category__c</name>
+    <picklistValues>
+        <masterLabel>2-WAY RADIO MTG BRKT</masterLabel>
+        <translation><!-- 2-WAY RADIO MTG BRKT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABS EFFECTS</masterLabel>
+        <translation><!-- ABS EFFECTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ABS SENSOR</masterLabel>
+        <translation><!-- ABS SENSOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ACCUMULATOR</masterLabel>
+        <translation><!-- ACCUMULATOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AD FRAMES EXTERIOR</masterLabel>
+        <translation><!-- AD FRAMES EXTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AD FRAMES INTERIOR</masterLabel>
+        <translation><!-- AD FRAMES INTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR APPL. GA (OBS)</masterLabel>
+        <translation><!-- AIR APPL. GA (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR BAGS</masterLabel>
+        <translation><!-- AIR BAGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR CLEANER</masterLabel>
+        <translation><!-- AIR CLEANER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR COMPRESSOR</masterLabel>
+        <translation><!-- AIR COMPRESSOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR COND PIPING/DRAIN</masterLabel>
+        <translation><!-- AIR COND PIPING/DRAIN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR COND. EVAP COOLER</masterLabel>
+        <translation><!-- AIR COND. EVAP COOLER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR CONDITION EVAP MOTOR</masterLabel>
+        <translation><!-- AIR CONDITION EVAP MOTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR CONDITIONING COND. MOTOR</masterLabel>
+        <translation><!-- AIR CONDITIONING COND. MOTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR CONDITIONING CONDENSER</masterLabel>
+        <translation><!-- AIR CONDITIONING CONDENSER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR DRYER/MTG</masterLabel>
+        <translation><!-- AIR DRYER/MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR HORN (OBS)</masterLabel>
+        <translation><!-- AIR HORN (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR INTAKE PIPING</masterLabel>
+        <translation><!-- AIR INTAKE PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR PRESS. GA</masterLabel>
+        <translation><!-- AIR PRESS. GA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR STARTER</masterLabel>
+        <translation><!-- AIR STARTER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR STARTER MTG</masterLabel>
+        <translation><!-- AIR STARTER MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR STARTER TANK CHRGNG LINE</masterLabel>
+        <translation><!-- AIR STARTER TANK CHRGNG LINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR TANK DRAIN</masterLabel>
+        <translation><!-- AIR TANK DRAIN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AIR TANK MTG</masterLabel>
+        <translation><!-- AIR TANK MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AISLE LIGHTING, SEAT RISER</masterLabel>
+        <translation><!-- AISLE LIGHTING, SEAT RISER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALTERNATOR</masterLabel>
+        <translation><!-- ALTERNATOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALTERNATOR MTG</masterLabel>
+        <translation><!-- ALTERNATOR MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALTERNATOR PULLEY</masterLabel>
+        <translation><!-- ALTERNATOR PULLEY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALTERNATOR/REG DUAL WIRING</masterLabel>
+        <translation><!-- ALTERNATOR/REG DUAL WIRING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AMP METER GA. (OBS)</masterLabel>
+        <translation><!-- AMP METER GA. (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ANTENNA CONDUIT</masterLabel>
+        <translation><!-- ANTENNA CONDUIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ANTENNA OR RADIO MTG.</masterLabel>
+        <translation><!-- ANTENNA OR RADIO MTG. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ANTERNATOR BELT</masterLabel>
+        <translation><!-- ANTERNATOR BELT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUX ELECT. CONTROL PANEL</masterLabel>
+        <translation><!-- AUX ELECT. CONTROL PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AUXILIARY WATER HEATER</masterLabel>
+        <translation><!-- AUXILIARY WATER HEATER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AXLE D/L YOKE</masterLabel>
+        <translation><!-- AXLE D/L YOKE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AXLE LUBE FITTINGS</masterLabel>
+        <translation><!-- AXLE LUBE FITTINGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BACK-UP LIGHT</masterLabel>
+        <translation><!-- BACK-UP LIGHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BATT OR DIGITAL RECORDER BOX</masterLabel>
+        <translation><!-- BATT OR DIGITAL RECORDER BOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BATT/CABLES</masterLabel>
+        <translation><!-- BATT/CABLES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BATTERY BOX</masterLabel>
+        <translation><!-- BATTERY BOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BEARINGS</masterLabel>
+        <translation><!-- BEARINGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BIKE RACK</masterLabel>
+        <translation><!-- BIKE RACK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BLOCK HEATER</masterLabel>
+        <translation><!-- BLOCK HEATER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BOOM MIC / HANDHELD MIC</masterLabel>
+        <translation><!-- BOOM MIC / HANDHELD MIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRAKE FOUNDATION / LINING</masterLabel>
+        <translation><!-- BRAKE FOUNDATION / LINING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRAKE INTERLOCK</masterLabel>
+        <translation><!-- BRAKE INTERLOCK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRAKE LIGHT SWITCH</masterLabel>
+        <translation><!-- BRAKE LIGHT SWITCH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BRAKE VALVE</masterLabel>
+        <translation><!-- BRAKE VALVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BUMPERS</masterLabel>
+        <translation><!-- BUMPERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CEILING PANELS</masterLabel>
+        <translation><!-- CEILING PANELS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CENTER MTD / ADTL. STOP LIGHTS</masterLabel>
+        <translation><!-- CENTER MTD / ADTL. STOP LIGHTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CENTER REAR SPLASH SHIELDS</masterLabel>
+        <translation><!-- CENTER REAR SPLASH SHIELDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHARGE AIR COOLING/PIPING</masterLabel>
+        <translation><!-- CHARGE AIR COOLING/PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHARGING SYSTEM WARNING</masterLabel>
+        <translation><!-- CHARGING SYSTEM WARNING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHASSIS AIR PIPING</masterLabel>
+        <translation><!-- CHASSIS AIR PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHASSIS COMPONENTS</masterLabel>
+        <translation><!-- CHASSIS COMPONENTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHASSIS FUEL PIPING</masterLabel>
+        <translation><!-- CHASSIS FUEL PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHASSIS HARNESS</masterLabel>
+        <translation><!-- CHASSIS HARNESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CONSTANT TENSION HOSE CLAMP</masterLabel>
+        <translation><!-- CONSTANT TENSION HOSE CLAMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COOLANT SENSOR</masterLabel>
+        <translation><!-- COOLANT SENSOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COOLING SYSTEM</masterLabel>
+        <translation><!-- COOLING SYSTEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRIME ALARM</masterLabel>
+        <translation><!-- CRIME ALARM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CRUISE CONTROL (OBS)</masterLabel>
+        <translation><!-- CRUISE CONTROL (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DASH/CONSOLE/HARNESS</masterLabel>
+        <translation><!-- DASH/CONSOLE/HARNESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DECALS</masterLabel>
+        <translation><!-- DECALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DECELERATION LIGHTS</masterLabel>
+        <translation><!-- DECELERATION LIGHTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DEFROSTER DUCTS</masterLabel>
+        <translation><!-- DEFROSTER DUCTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DEFROSTER FAN&apos;S</masterLabel>
+        <translation><!-- DEFROSTER FAN&apos;S --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DESTINATION GLAZING</masterLabel>
+        <translation><!-- DESTINATION GLAZING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DESTINATION SIGN</masterLabel>
+        <translation><!-- DESTINATION SIGN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DESTINATION SIGN BAY DOOR</masterLabel>
+        <translation><!-- DESTINATION SIGN BAY DOOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DESTINATION SIGN CLOSEOUT</masterLabel>
+        <translation><!-- DESTINATION SIGN CLOSEOUT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DINEX</masterLabel>
+        <translation><!-- DINEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DIPSTICK</masterLabel>
+        <translation><!-- DIPSTICK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOOR ALARMS</masterLabel>
+        <translation><!-- DOOR ALARMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOOR CONTROL, FRONT SB</masterLabel>
+        <translation><!-- DOOR CONTROL, FRONT SB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOOR MOTOR</masterLabel>
+        <translation><!-- DOOR MOTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DOOR SEALS</masterLabel>
+        <translation><!-- DOOR SEALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRAG LINK</masterLabel>
+        <translation><!-- DRAG LINK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVELINE</masterLabel>
+        <translation><!-- DRIVELINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER HEATER CORE</masterLabel>
+        <translation><!-- DRIVER HEATER CORE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER HEATER MOTOR</masterLabel>
+        <translation><!-- DRIVER HEATER MOTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER PLATFORM TB</masterLabel>
+        <translation><!-- DRIVER PLATFORM TB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER SEAT</masterLabel>
+        <translation><!-- DRIVER SEAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER&apos;S AREA BOOSTER FAN</masterLabel>
+        <translation><!-- DRIVER&apos;S AREA BOOSTER FAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER&apos;S CONSOLE</masterLabel>
+        <translation><!-- DRIVER&apos;S CONSOLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER&apos;S CURTAIN</masterLabel>
+        <translation><!-- DRIVER&apos;S CURTAIN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER&apos;S FANS</masterLabel>
+        <translation><!-- DRIVER&apos;S FANS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER&apos;S HEATER PIPING</masterLabel>
+        <translation><!-- DRIVER&apos;S HEATER PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVER&apos;S WINDOW</masterLabel>
+        <translation><!-- DRIVER&apos;S WINDOW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVERS BARRIER</masterLabel>
+        <translation><!-- DRIVERS BARRIER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVERS HEATERS/CONTROLS</masterLabel>
+        <translation><!-- DRIVERS HEATERS/CONTROLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRUMS</masterLabel>
+        <translation><!-- DRUMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECT CONT PANEL OR BOX</masterLabel>
+        <translation><!-- ELECT CONT PANEL OR BOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECT ENG &amp; TRANS CONTROL PANEL</masterLabel>
+        <translation><!-- ELECT ENG &amp; TRANS CONTROL PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECT POWER SUPPLY/CABLES</masterLabel>
+        <translation><!-- ELECT POWER SUPPLY/CABLES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRIC HORNS, DUAL</masterLabel>
+        <translation><!-- ELECTRIC HORNS, DUAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRICAL TOWING PLUG</masterLabel>
+        <translation><!-- ELECTRICAL TOWING PLUG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRONIC ENGINE CONTROLS</masterLabel>
+        <translation><!-- ELECTRONIC ENGINE CONTROLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMERGENCY DOOR RELEASE</masterLabel>
+        <translation><!-- EMERGENCY DOOR RELEASE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENG COOLANT TEMP GA</masterLabel>
+        <translation><!-- ENG COOLANT TEMP GA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENG HOUR METER GA. (OBS)</masterLabel>
+        <translation><!-- ENG HOUR METER GA. (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENG OIL PRESS GA</masterLabel>
+        <translation><!-- ENG OIL PRESS GA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENG/STARTER/INTERMED HARN.</masterLabel>
+        <translation><!-- ENG/STARTER/INTERMED HARN. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENG/TRANS PAN PROTECTOR</masterLabel>
+        <translation><!-- ENG/TRANS PAN PROTECTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE</masterLabel>
+        <translation><!-- ENGINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE ANALYSIS (OBS)</masterLabel>
+        <translation><!-- ENGINE ANALYSIS (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE BELT</masterLabel>
+        <translation><!-- ENGINE BELT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE BELT GUARD</masterLabel>
+        <translation><!-- ENGINE BELT GUARD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE FUEL PIPING</masterLabel>
+        <translation><!-- ENGINE FUEL PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE FUEL PRIMER PUMP</masterLabel>
+        <translation><!-- ENGINE FUEL PRIMER PUMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE MOUNTING</masterLabel>
+        <translation><!-- ENGINE MOUNTING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE OIL COOLERS</masterLabel>
+        <translation><!-- ENGINE OIL COOLERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE OIL FILL</masterLabel>
+        <translation><!-- ENGINE OIL FILL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE PROTECTION (OBS)</masterLabel>
+        <translation><!-- ENGINE PROTECTION (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE PULLEY</masterLabel>
+        <translation><!-- ENGINE PULLEY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENTRANCE DOOR WIRING</masterLabel>
+        <translation><!-- ENTRANCE DOOR WIRING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXHAUST BRAKES (OBS)</masterLabel>
+        <translation><!-- EXHAUST BRAKES (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXHAUST PYROMETER GA (OBS)</masterLabel>
+        <translation><!-- EXHAUST PYROMETER GA (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXHAUST SYS. INSULATION</masterLabel>
+        <translation><!-- EXHAUST SYS. INSULATION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXHAUST SYSTEM CLAMPS</masterLabel>
+        <translation><!-- EXHAUST SYSTEM CLAMPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXHAUST SYSTEM REAR ENGINE</masterLabel>
+        <translation><!-- EXHAUST SYSTEM REAR ENGINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXIT DOOR WIRING</masterLabel>
+        <translation><!-- EXIT DOOR WIRING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXIT DOORS</masterLabel>
+        <translation><!-- EXIT DOORS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXTERIOR</masterLabel>
+        <translation><!-- EXTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAIRINGS ALLISON</masterLabel>
+        <translation><!-- FAIRINGS ALLISON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAIRINGS BAE</masterLabel>
+        <translation><!-- FAIRINGS BAE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAIRINGS CNG</masterLabel>
+        <translation><!-- FAIRINGS CNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAN CONTROL</masterLabel>
+        <translation><!-- FAN CONTROL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAREBOX</masterLabel>
+        <translation><!-- FAREBOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAREBOX LIGHT SWITCH</masterLabel>
+        <translation><!-- FAREBOX LIGHT SWITCH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FENDER FLARES</masterLabel>
+        <translation><!-- FENDER FLARES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FILTER ACCESS DOOR</masterLabel>
+        <translation><!-- FILTER ACCESS DOOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIRE</masterLabel>
+        <translation><!-- FIRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIRE ALARM &amp; OR SUPPRESSION</masterLabel>
+        <translation><!-- FIRE ALARM &amp; OR SUPPRESSION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIRE EXTINGUISHER</masterLabel>
+        <translation><!-- FIRE EXTINGUISHER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIRE SUPPRESSION COMPONENTS</masterLabel>
+        <translation><!-- FIRE SUPPRESSION COMPONENTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIRST AID COMPT (OBS)</masterLabel>
+        <translation><!-- FIRST AID COMPT (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIRST AID KIT</masterLabel>
+        <translation><!-- FIRST AID KIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLASHING LIGHTS</masterLabel>
+        <translation><!-- FLASHING LIGHTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLOOR ACCESS PANELS</masterLabel>
+        <translation><!-- FLOOR ACCESS PANELS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLOORING COMPOSITE</masterLabel>
+        <translation><!-- FLOORING COMPOSITE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLOORING PLYWOOD</masterLabel>
+        <translation><!-- FLOORING PLYWOOD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLOORING REINFORCEMENT</masterLabel>
+        <translation><!-- FLOORING REINFORCEMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLOORING STRUCTURE</masterLabel>
+        <translation><!-- FLOORING STRUCTURE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLUORESCENT TUBE COVERS</masterLabel>
+        <translation><!-- FLUORESCENT TUBE COVERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FOG OR DRIVING LIGHT</masterLabel>
+        <translation><!-- FOG OR DRIVING LIGHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRAME RAILS</masterLabel>
+        <translation><!-- FRAME RAILS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FREON COMPRESSOR</masterLabel>
+        <translation><!-- FREON COMPRESSOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FREON COMPRESSOR BELT</masterLabel>
+        <translation><!-- FREON COMPRESSOR BELT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FREON COMPRESSOR IDLER PULLEY</masterLabel>
+        <translation><!-- FREON COMPRESSOR IDLER PULLEY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FREON COMPRESSOR PULLEY</masterLabel>
+        <translation><!-- FREON COMPRESSOR PULLEY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT ACCESS DOORS</masterLabel>
+        <translation><!-- FRONT ACCESS DOORS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT AXLE</masterLabel>
+        <translation><!-- FRONT AXLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT AXLE OIL SEALS</masterLabel>
+        <translation><!-- FRONT AXLE OIL SEALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT BODY FRAMING</masterLabel>
+        <translation><!-- FRONT BODY FRAMING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT BRAKE CHAMBER HOSES</masterLabel>
+        <translation><!-- FRONT BRAKE CHAMBER HOSES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT BRAKE CHAMBERS</masterLabel>
+        <translation><!-- FRONT BRAKE CHAMBERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT BUMPER/MTG</masterLabel>
+        <translation><!-- FRONT BUMPER/MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT CAP</masterLabel>
+        <translation><!-- FRONT CAP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT DESTINATION GLAZING</masterLabel>
+        <translation><!-- FRONT DESTINATION GLAZING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT DOOR</masterLabel>
+        <translation><!-- FRONT DOOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT DOOR MODESTY PANEL</masterLabel>
+        <translation><!-- FRONT DOOR MODESTY PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT FOLDING STEP (OBS)</masterLabel>
+        <translation><!-- FRONT FOLDING STEP (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT HALDEX AUTO SLACKS</masterLabel>
+        <translation><!-- FRONT HALDEX AUTO SLACKS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT MANUAL SLACKS (OBS)</masterLabel>
+        <translation><!-- FRONT MANUAL SLACKS (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT POWER STEERING HOSES</masterLabel>
+        <translation><!-- FRONT POWER STEERING HOSES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT RUN NO. SIGN</masterLabel>
+        <translation><!-- FRONT RUN NO. SIGN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT SHOCKS</masterLabel>
+        <translation><!-- FRONT SHOCKS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT STEPWELL</masterLabel>
+        <translation><!-- FRONT STEPWELL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT STEPWELL HEATER</masterLabel>
+        <translation><!-- FRONT STEPWELL HEATER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT STEPWELL TRIM</masterLabel>
+        <translation><!-- FRONT STEPWELL TRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT SUSP LEVELING VALVE</masterLabel>
+        <translation><!-- FRONT SUSP LEVELING VALVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT SUSPENSION</masterLabel>
+        <translation><!-- FRONT SUSPENSION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT TURN SIGNALS &amp; WIRING</masterLabel>
+        <translation><!-- FRONT TURN SIGNALS &amp; WIRING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT WHEELWELL</masterLabel>
+        <translation><!-- FRONT WHEELWELL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUEL FILTER</masterLabel>
+        <translation><!-- FUEL FILTER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUEL LEVEL GA</masterLabel>
+        <translation><!-- FUEL LEVEL GA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUEL TANK</masterLabel>
+        <translation><!-- FUEL TANK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUEL TANK PIPING</masterLabel>
+        <translation><!-- FUEL TANK PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FULL SLIDING PASS. WINDOW</masterLabel>
+        <translation><!-- FULL SLIDING PASS. WINDOW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FWD/RR DOOR MODESTY PANEL</masterLabel>
+        <translation><!-- FWD/RR DOOR MODESTY PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GAS SHOCKS</masterLabel>
+        <translation><!-- GAS SHOCKS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GOVERNOR</masterLabel>
+        <translation><!-- GOVERNOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GPS</masterLabel>
+        <translation><!-- GPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GRABRAILS/STANCHIONS</masterLabel>
+        <translation><!-- GRABRAILS/STANCHIONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEADLIGHT MONITOR (OBS)</masterLabel>
+        <translation><!-- HEADLIGHT MONITOR (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEADLIGHTS / HARNESS</masterLabel>
+        <translation><!-- HEADLIGHTS / HARNESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEATER &amp; A/C PLATFORM/MTG</masterLabel>
+        <translation><!-- HEATER &amp; A/C PLATFORM/MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEATER BOOSTER PUMP</masterLabel>
+        <translation><!-- HEATER BOOSTER PUMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEATER OR A/C CONTROLS</masterLabel>
+        <translation><!-- HEATER OR A/C CONTROLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEATER VALVE</masterLabel>
+        <translation><!-- HEATER VALVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEATER/AIR COND MTG/SEALING</masterLabel>
+        <translation><!-- HEATER/AIR COND MTG/SEALING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HILL HOLDER</masterLabel>
+        <translation><!-- HILL HOLDER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HOSES</masterLabel>
+        <translation><!-- HOSES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HUB COVERS / 10 STUD</masterLabel>
+        <translation><!-- HUB COVERS / 10 STUD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HUB ODOMETER</masterLabel>
+        <translation><!-- HUB ODOMETER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HVAC CONTROLS</masterLabel>
+        <translation><!-- HVAC CONTROLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYD FAN MOTOR</masterLabel>
+        <translation><!-- HYD FAN MOTOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYD FAN MOTOR PIPING</masterLabel>
+        <translation><!-- HYD FAN MOTOR PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYD OIL COOLER</masterLabel>
+        <translation><!-- HYD OIL COOLER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYD PUMP PIPING (ALSO IN 05)</masterLabel>
+        <translation><!-- HYD PUMP PIPING (ALSO IN 05) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYDRUALIC PUMP (ALSO IN 05)</masterLabel>
+        <translation><!-- HYDRUALIC PUMP (ALSO IN 05) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IGNITION SW CONTROL</masterLabel>
+        <translation><!-- IGNITION SW CONTROL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INSIDE SPEAKERS</masterLabel>
+        <translation><!-- INSIDE SPEAKERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INSTA CHAINS</masterLabel>
+        <translation><!-- INSTA CHAINS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INTERIOR</masterLabel>
+        <translation><!-- INTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INTERIOR DUCTING &amp; LIGHT PANELS</masterLabel>
+        <translation><!-- INTERIOR DUCTING &amp; LIGHT PANELS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INTERMITTENT W/S WIPER SWITCH</masterLabel>
+        <translation><!-- INTERMITTENT W/S WIPER SWITCH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JUMP START CONNECTION</masterLabel>
+        <translation><!-- JUMP START CONNECTION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KIM HOTSTART</masterLabel>
+        <translation><!-- KIM HOTSTART --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KNEELING ELECTRICAL</masterLabel>
+        <translation><!-- KNEELING ELECTRICAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KNEELING OR DUMP VALVE SYST.</masterLabel>
+        <translation><!-- KNEELING OR DUMP VALVE SYST. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LICENSE PLATE FRAME/HOLDER</masterLabel>
+        <translation><!-- LICENSE PLATE FRAME/HOLDER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LICENSE PLATE LIGHT</masterLabel>
+        <translation><!-- LICENSE PLATE LIGHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIFT CONT. BOX HTR DUCT (OBS)</masterLabel>
+        <translation><!-- LIFT CONT. BOX HTR DUCT (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIGHTING EXTERIOR</masterLabel>
+        <translation><!-- LIGHTING EXTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIGHTING INTERIOR</masterLabel>
+        <translation><!-- LIGHTING INTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOAD LEVELING BRACKETS (OBS)</masterLabel>
+        <translation><!-- LOAD LEVELING BRACKETS (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOW FLUID PROBE</masterLabel>
+        <translation><!-- LOW FLUID PROBE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOWERED A/C DUCTING</masterLabel>
+        <translation><!-- LOWERED A/C DUCTING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LUGGAGE RACK</masterLabel>
+        <translation><!-- LUGGAGE RACK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MAP LIGHTS</masterLabel>
+        <translation><!-- MAP LIGHTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MARKER LIGHTS</masterLabel>
+        <translation><!-- MARKER LIGHTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MECH. GAUGES</masterLabel>
+        <translation><!-- MECH. GAUGES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MFD</masterLabel>
+        <translation><!-- MFD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MIRRORS EXTERIOR</masterLabel>
+        <translation><!-- MIRRORS EXTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MIRRORS INTERIOR</masterLabel>
+        <translation><!-- MIRRORS INTERIOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MISC</masterLabel>
+        <translation><!-- MISC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MISC ACCESS DOORS</masterLabel>
+        <translation><!-- MISC ACCESS DOORS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MISC ENGINE PARTS</masterLabel>
+        <translation><!-- MISC ENGINE PARTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MUD FLAPS</masterLabel>
+        <translation><!-- MUD FLAPS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MUFFLER/MTG</masterLabel>
+        <translation><!-- MUFFLER/MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OIL FILL &amp; DRAIN PLUGS</masterLabel>
+        <translation><!-- OIL FILL &amp; DRAIN PLUGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OIL FILTER</masterLabel>
+        <translation><!-- OIL FILTER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OUTSIDE AIR DUCT</masterLabel>
+        <translation><!-- OUTSIDE AIR DUCT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OUTSIDE SPEAKERS</masterLabel>
+        <translation><!-- OUTSIDE SPEAKERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>P.A. SYSTEM</masterLabel>
+        <translation><!-- P.A. SYSTEM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PANEL #1</masterLabel>
+        <translation><!-- PANEL #1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PANEL #2</masterLabel>
+        <translation><!-- PANEL #2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PANEL #3</masterLabel>
+        <translation><!-- PANEL #3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PANEL #4</masterLabel>
+        <translation><!-- PANEL #4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PANEL #5</masterLabel>
+        <translation><!-- PANEL #5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PANEL #9, INDICATOR LAMP BAR</masterLabel>
+        <translation><!-- PANEL #9, INDICATOR LAMP BAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PARKING BRAKE, AIR</masterLabel>
+        <translation><!-- PARKING BRAKE, AIR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PARTICULATE TRAP</masterLabel>
+        <translation><!-- PARTICULATE TRAP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASS AREA GAS DET. SYSTEM (OBS)</masterLabel>
+        <translation><!-- PASS AREA GAS DET. SYSTEM (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASS HEATER PIPING/DRAINS</masterLabel>
+        <translation><!-- PASS HEATER PIPING/DRAINS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASS HEATER/UNDER SEAT</masterLabel>
+        <translation><!-- PASS HEATER/UNDER SEAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASSENGER CHIME</masterLabel>
+        <translation><!-- PASSENGER CHIME --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASSENGER CORD SWITCH</masterLabel>
+        <translation><!-- PASSENGER CORD SWITCH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASSENGER COUNTER</masterLabel>
+        <translation><!-- PASSENGER COUNTER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASSENGER HEATER</masterLabel>
+        <translation><!-- PASSENGER HEATER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASSENGER SEATS</masterLabel>
+        <translation><!-- PASSENGER SEATS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASSENGER SIGNAL PULL CORD</masterLabel>
+        <translation><!-- PASSENGER SIGNAL PULL CORD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PASSENGER SIGNAL TOUCH TAPE</masterLabel>
+        <translation><!-- PASSENGER SIGNAL TOUCH TAPE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRESSURE SENDER (OBS)</masterLabel>
+        <translation><!-- PRESSURE SENDER (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PUMP/PIPING</masterLabel>
+        <translation><!-- PUMP/PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QUICK START /ETHER</masterLabel>
+        <translation><!-- QUICK START /ETHER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RADIATOR</masterLabel>
+        <translation><!-- RADIATOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RADIATOR ACCESS DOOR</masterLabel>
+        <translation><!-- RADIATOR ACCESS DOOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RADIO BOX</masterLabel>
+        <translation><!-- RADIO BOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RADIO/FAREBOX POWER SUPPLY</masterLabel>
+        <translation><!-- RADIO/FAREBOX POWER SUPPLY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RADIO/SPEAKERS</masterLabel>
+        <translation><!-- RADIO/SPEAKERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAIN GUTTERS</masterLabel>
+        <translation><!-- RAIN GUTTERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAMP ALARM (FLOYD BELL)</masterLabel>
+        <translation><!-- RAMP ALARM (FLOYD BELL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAMP CONT/POWER PACK</masterLabel>
+        <translation><!-- RAMP CONT/POWER PACK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAMP ELECTRICAL EFFECTS</masterLabel>
+        <translation><!-- RAMP ELECTRICAL EFFECTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAMP MECHANICALS</masterLabel>
+        <translation><!-- RAMP MECHANICALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RCA FLOORING/TRIM</masterLabel>
+        <translation><!-- RCA FLOORING/TRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>READING LIGHTS</masterLabel>
+        <translation><!-- READING LIGHTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR AXLE</masterLabel>
+        <translation><!-- REAR AXLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR AXLE OIL SEALS</masterLabel>
+        <translation><!-- REAR AXLE OIL SEALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR AXLE SUSP. MODIFICATIONS</masterLabel>
+        <translation><!-- REAR AXLE SUSP. MODIFICATIONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR BRAKE CHAMBER HOSES</masterLabel>
+        <translation><!-- REAR BRAKE CHAMBER HOSES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR BRAKE CHAMBERS</masterLabel>
+        <translation><!-- REAR BRAKE CHAMBERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR BUMPER MTG.</masterLabel>
+        <translation><!-- REAR BUMPER MTG. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR CAP/GRILLE</masterLabel>
+        <translation><!-- REAR CAP/GRILLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR CORNER PANELS</masterLabel>
+        <translation><!-- REAR CORNER PANELS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR DOOR</masterLabel>
+        <translation><!-- REAR DOOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR DOOR MODESTY PANEL</masterLabel>
+        <translation><!-- REAR DOOR MODESTY PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR EMERGENCY DOOR (OBS)</masterLabel>
+        <translation><!-- REAR EMERGENCY DOOR (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR ENGINE DOOR</masterLabel>
+        <translation><!-- REAR ENGINE DOOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR HOURMETER</masterLabel>
+        <translation><!-- REAR HOURMETER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR MTD AIR PRESS GA (OBS)</masterLabel>
+        <translation><!-- REAR MTD AIR PRESS GA (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR MTD ENG PRESS GUAGE</masterLabel>
+        <translation><!-- REAR MTD ENG PRESS GUAGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR MTD ENG TEMP GUAGE</masterLabel>
+        <translation><!-- REAR MTD ENG TEMP GUAGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR POWER STEERING HOSES</masterLabel>
+        <translation><!-- REAR POWER STEERING HOSES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR RUN BOX VOLTMETER</masterLabel>
+        <translation><!-- REAR RUN BOX VOLTMETER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR RUN PANEL OR BOX</masterLabel>
+        <translation><!-- REAR RUN PANEL OR BOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR RUN SIGN</masterLabel>
+        <translation><!-- REAR RUN SIGN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR SHELF &amp; SETTEE TRIM</masterLabel>
+        <translation><!-- REAR SHELF &amp; SETTEE TRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR SHOCK ABSORBERS</masterLabel>
+        <translation><!-- REAR SHOCK ABSORBERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR SIDE TURN SIGNALS</masterLabel>
+        <translation><!-- REAR SIDE TURN SIGNALS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR STEPWELL</masterLabel>
+        <translation><!-- REAR STEPWELL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR STEPWELL HEATER</masterLabel>
+        <translation><!-- REAR STEPWELL HEATER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR STEPWELL TRIM</masterLabel>
+        <translation><!-- REAR STEPWELL TRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR SUSP LEVELING VALVE</masterLabel>
+        <translation><!-- REAR SUSP LEVELING VALVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR SUSPENSION</masterLabel>
+        <translation><!-- REAR SUSPENSION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR SUSPENSION SWAY BAR (OBS)</masterLabel>
+        <translation><!-- REAR SUSPENSION SWAY BAR (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR TRANS TEMP GA</masterLabel>
+        <translation><!-- REAR TRANS TEMP GA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR WHEELWELL</masterLabel>
+        <translation><!-- REAR WHEELWELL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR WINDOW</masterLabel>
+        <translation><!-- REAR WINDOW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RECORDING SPEEDOMETER (OBS)</masterLabel>
+        <translation><!-- RECORDING SPEEDOMETER (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REFLECTORS</masterLabel>
+        <translation><!-- REFLECTORS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RESERVOR</masterLabel>
+        <translation><!-- RESERVOR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RETARDER CONTROLS</masterLabel>
+        <translation><!-- RETARDER CONTROLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RETURN AIR GRILLE</masterLabel>
+        <translation><!-- RETURN AIR GRILLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RH FWD FULL SLIDING</masterLabel>
+        <translation><!-- RH FWD FULL SLIDING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RIGHT VISIBILITY WINDOW</masterLabel>
+        <translation><!-- RIGHT VISIBILITY WINDOW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROAD FLARES/FLAGS</masterLabel>
+        <translation><!-- ROAD FLARES/FLAGS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROAD SANDERS (OBS)</masterLabel>
+        <translation><!-- ROAD SANDERS (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROOF FRAMING</masterLabel>
+        <translation><!-- ROOF FRAMING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROOF HARNESS/TB</masterLabel>
+        <translation><!-- ROOF HARNESS/TB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROOF PANELS</masterLabel>
+        <translation><!-- ROOF PANELS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROOF SKINS</masterLabel>
+        <translation><!-- ROOF SKINS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROOF VENTS</masterLabel>
+        <translation><!-- ROOF VENTS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RR BACK UP ALARM (FLOYD BELL)</masterLabel>
+        <translation><!-- RR BACK UP ALARM (FLOYD BELL) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RUB RAILS</masterLabel>
+        <translation><!-- RUB RAILS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFETY TRIANGLES</masterLabel>
+        <translation><!-- SAFETY TRIANGLES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEAT BELT ALARM</masterLabel>
+        <translation><!-- SEAT BELT ALARM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEAT BELTS, Driver&apos;s or passenger</masterLabel>
+        <translation><!-- SEAT BELTS, Driver&apos;s or passenger --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEAT RISERS</masterLabel>
+        <translation><!-- SEAT RISERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SENDER, TEMPERATURE (OBS)</masterLabel>
+        <translation><!-- SENDER, TEMPERATURE (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SETTEE &amp; BULKHEAD</masterLabel>
+        <translation><!-- SETTEE &amp; BULKHEAD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHIFT CONTROL ELECTRONIC</masterLabel>
+        <translation><!-- SHIFT CONTROL ELECTRONIC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHIFT LINKAGE (OBS)</masterLabel>
+        <translation><!-- SHIFT LINKAGE (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SHOP AIR FILL</masterLabel>
+        <translation><!-- SHOP AIR FILL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIDE DEST. SIGN</masterLabel>
+        <translation><!-- SIDE DEST. SIGN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIDEWALL FRAMING LEFT</masterLabel>
+        <translation><!-- SIDEWALL FRAMING LEFT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIDEWALL FRAMING RIGHT</masterLabel>
+        <translation><!-- SIDEWALL FRAMING RIGHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIDEWALL PANELS LEFT</masterLabel>
+        <translation><!-- SIDEWALL PANELS LEFT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIDEWALL PANELS RIGHT</masterLabel>
+        <translation><!-- SIDEWALL PANELS RIGHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKI RACK</masterLabel>
+        <translation><!-- SKI RACK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKIRT PANELS LEFT</masterLabel>
+        <translation><!-- SKIRT PANELS LEFT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKIRT PANELS RIGHT</masterLabel>
+        <translation><!-- SKIRT PANELS RIGHT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SLACK ADJUSTERS</masterLabel>
+        <translation><!-- SLACK ADJUSTERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPARE WHEEL</masterLabel>
+        <translation><!-- SPARE WHEEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPEEDO DRIVE (OBS)</masterLabel>
+        <translation><!-- SPEEDO DRIVE (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPEEDOMETER</masterLabel>
+        <translation><!-- SPEEDOMETER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SSTL INTERIOR TRIM</masterLabel>
+        <translation><!-- SSTL INTERIOR TRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STANCHIONS, VERTICAL</masterLabel>
+        <translation><!-- STANCHIONS, VERTICAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STARTER</masterLabel>
+        <translation><!-- STARTER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STARTER CABLES</masterLabel>
+        <translation><!-- STARTER CABLES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STARTER DISENGAGEMENT (OBS)</masterLabel>
+        <translation><!-- STARTER DISENGAGEMENT (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STEERING COLUMN TILT</masterLabel>
+        <translation><!-- STEERING COLUMN TILT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STEERING GEAR</masterLabel>
+        <translation><!-- STEERING GEAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STEERING PARTS, MISC</masterLabel>
+        <translation><!-- STEERING PARTS, MISC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STEERING WHEEL</masterLabel>
+        <translation><!-- STEERING WHEEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STEP NOSING</masterLabel>
+        <translation><!-- STEP NOSING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STOP REQUESTED SIGN</masterLabel>
+        <translation><!-- STOP REQUESTED SIGN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STOP/TAIL/TURN LIGHTS/HARN.</masterLabel>
+        <translation><!-- STOP/TAIL/TURN LIGHTS/HARN. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STORAGE BOX</masterLabel>
+        <translation><!-- STORAGE BOX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUN VISOR OR SUNSCREEN</masterLabel>
+        <translation><!-- SUN VISOR OR SUNSCREEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SURGE TANK</masterLabel>
+        <translation><!-- SURGE TANK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SWAY BAR (OBS)</masterLabel>
+        <translation><!-- SWAY BAR (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SWITCHES/SENDERS</masterLabel>
+        <translation><!-- SWITCHES/SENDERS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signage</masterLabel>
+        <translation><!-- Signage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TACHOMETER</masterLabel>
+        <translation><!-- TACHOMETER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAIL PIPE/MTG</masterLabel>
+        <translation><!-- TAIL PIPE/MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>THROTTLE CONTROL</masterLabel>
+        <translation><!-- THROTTLE CONTROL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TIE RODS</masterLabel>
+        <translation><!-- TIE RODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TIRE PRESSURE EQUALIZER</masterLabel>
+        <translation><!-- TIRE PRESSURE EQUALIZER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TIRES</masterLabel>
+        <translation><!-- TIRES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TORQUE RODS</masterLabel>
+        <translation><!-- TORQUE RODS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOW EYES, FRONT</masterLabel>
+        <translation><!-- TOW EYES, FRONT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOW EYES, REAR</masterLabel>
+        <translation><!-- TOW EYES, REAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOWING CONNECTION</masterLabel>
+        <translation><!-- TOWING CONNECTION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANS OIL TEMP GA</masterLabel>
+        <translation><!-- TRANS OIL TEMP GA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANS. TAIL SUPPORT/MTG</masterLabel>
+        <translation><!-- TRANS. TAIL SUPPORT/MTG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSFER MACHINE</masterLabel>
+        <translation><!-- TRANSFER MACHINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSMISSION</masterLabel>
+        <translation><!-- TRANSMISSION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSMISSION CONTROLS</masterLabel>
+        <translation><!-- TRANSMISSION CONTROLS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSMISSION COOLER</masterLabel>
+        <translation><!-- TRANSMISSION COOLER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSMISSION DIPSTICK</masterLabel>
+        <translation><!-- TRANSMISSION DIPSTICK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSMISSION POWER TAKE OFF</masterLabel>
+        <translation><!-- TRANSMISSION POWER TAKE OFF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSMISSION YOKE</masterLabel>
+        <translation><!-- TRANSMISSION YOKE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSOM PASSENGER WINDOWS</masterLabel>
+        <translation><!-- TRANSOM PASSENGER WINDOWS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TREADLE VALVE</masterLabel>
+        <translation><!-- TREADLE VALVE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TURBO</masterLabel>
+        <translation><!-- TURBO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TURN HORN</masterLabel>
+        <translation><!-- TURN HORN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UPPER DASH/MTG,HARNESS</masterLabel>
+        <translation><!-- UPPER DASH/MTG,HARNESS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UPPER DRIVERS PANEL</masterLabel>
+        <translation><!-- UPPER DRIVERS PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UPPER ENTRANCE DOOR PANEL</masterLabel>
+        <translation><!-- UPPER ENTRANCE DOOR PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UPPER EXIT DOOR PANEL</masterLabel>
+        <translation><!-- UPPER EXIT DOOR PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VANNER EQUILIZER</masterLabel>
+        <translation><!-- VANNER EQUILIZER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIDEO SYSTEMS/CAMERAS</masterLabel>
+        <translation><!-- VIDEO SYSTEMS/CAMERAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VOICE ENUNCIATOR SYS</masterLabel>
+        <translation><!-- VOICE ENUNCIATOR SYS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VOLTMETER GA</masterLabel>
+        <translation><!-- VOLTMETER GA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>W/C BARRIER MODESTY PANEL</masterLabel>
+        <translation><!-- W/C BARRIER MODESTY PANEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WATER BARRIER, DRIVER&apos;S AREA</masterLabel>
+        <translation><!-- WATER BARRIER, DRIVER&apos;S AREA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WATER FILTER</masterLabel>
+        <translation><!-- WATER FILTER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WATTS VALVE (OBS)</masterLabel>
+        <translation><!-- WATTS VALVE (OBS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WHEEL MTG HARDWARE--C/F TIRES</masterLabel>
+        <translation><!-- WHEEL MTG HARDWARE- - C/F TIRES --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WHEEL STL/HARDWARE</masterLabel>
+        <translation><!-- WHEEL STL/HARDWARE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WHEELCHAIR TIE DOWNS</masterLabel>
+        <translation><!-- WHEELCHAIR TIE DOWNS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WINDSHIELD GLAZING</masterLabel>
+        <translation><!-- WINDSHIELD GLAZING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WINDSHIELD WASHER/WIPER</masterLabel>
+        <translation><!-- WINDSHIELD WASHER/WIPER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WIRING FOR TRANSFER MACHINE</masterLabel>
+        <translation><!-- WIRING FOR TRANSFER MACHINE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

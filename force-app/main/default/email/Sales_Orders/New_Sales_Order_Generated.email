@@ -1,0 +1,8 @@
+A new sales order for {!Sales_Order__c.Internal_Name__c} has been created and is currently assigned to you.
+
+{!Sales_Order__c.Name}
+Start Date: {!Sales_Order__c.Start_Date__c}
+
+{!Sales_Order__c.Length__c} {!Sales_Order__c.Mode__c} {!Sales_Order__c.Style__c}
+
+{!Sales_Order__c.Link}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate numeric priority order + brief status notes like &quot;on hold for xx&quot; or &quot;ECD xx&quot; --></help>
+    <label><!-- SVC Status --></label>
+    <name>SVC_Status__c</name>
+</CustomFieldTranslation>

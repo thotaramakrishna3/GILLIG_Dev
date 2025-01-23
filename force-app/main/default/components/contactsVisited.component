@@ -1,0 +1,17 @@
+<apex:component controller="listContVisited" access="global" >
+
+    <apex:attribute name="tripID" description="..." type="ID" assignTo="{!objId}"/>
+  
+    <apex:dataTable id="CVisited" value="{!listContVisited}" var="cnt" cellpadding="2" border="2" rendered="{!listContVisited.size>0}">
+        <apex:column headerValue="Visited?" value="{!cnt.Visited_Y_N__c}"/>
+        <apex:column headerValue="Name">    
+            <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))+cnt.TripContact__c}"
+                             target="_parent">{!cnt.ContactName__c}</apex:outputLink>
+        </apex:column>
+        <apex:column headerValue="Title" value="{!cnt.Title__c}" />
+        <apex:column headerValue="Phone" value="{!cnt.Phone__c}" />
+        <apex:column headerValue="Mobile" value="{!cnt.Mobile__c}" />
+        <apex:column headerValue="Email" value="{!cnt.Email__c}" />
+    </apex:dataTable> 
+
+</apex:component>

@@ -1,0 +1,16 @@
+.bg-blur {
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+}
+.slds-tabs_default__item.slds-is-active[data-id="shortage"] {
+    background-color: #96bbdc; /* default color for Add Shortage */
+  }
+  
+  .slds-tabs_default__item.slds-is-active[data-id="reject"] {
+    background-color: rgb(169, 224, 169); /* green color for Add Reject */
+  }
+  
+  .slds-tabs_default__item.slds-is-active[data-id="rework"] {
+    background-color: rgb(218, 220, 156); /* red color for Add Rework */
+  }

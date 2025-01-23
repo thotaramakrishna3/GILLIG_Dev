@@ -1,0 +1,3 @@
+The Start Date for {!Sales_Order__c.Name} has changed from {!Sales_Order__c.Prior_Start_Date__c}.  The new Start Date is {!Sales_Order__c.Start_Date__c}.
+
+The order is now at {!Sales_Order__c.Weeks_from_Start_Date__c} weeks

@@ -1,0 +1,6 @@
+There has been a field entry update in the project {!Project_Tracker__c.Project_Name__c}
+<BR><BR>
+Project Name : {!Project_Tracker__c.Project_Name__c} <BR>
+Created By : {!Project_Tracker__c.OwnerFullName}<BR><BR><BR>
+
+The project link details  {!Project_Tracker__c.Link}.

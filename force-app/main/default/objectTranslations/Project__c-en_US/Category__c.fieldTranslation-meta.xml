@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Category --></label>
+    <name>Category__c</name>
+    <picklistValues>
+        <masterLabel>Aftermarket Parts</masterLabel>
+        <translation><!-- Aftermarket Parts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Continuous Product Improvement</masterLabel>
+        <translation><!-- Continuous Product Improvement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cost Savings</masterLabel>
+        <translation><!-- Cost Savings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Product Introduction</masterLabel>
+        <translation><!-- New Product Introduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sustainability Initiative</masterLabel>
+        <translation><!-- Sustainability Initiative --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

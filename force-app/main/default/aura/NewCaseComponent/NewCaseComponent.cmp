@@ -1,0 +1,94 @@
+<!--***********************************************************************************************************************************
+     Developer : Suyati
+     Name      : NewCaseComponent
+     Usage     : Lightning Component to create a new case
+     Apex Controller:NewCaseComponentController
+     Date      : October 2019   
+************************************************************************************************************************************-->
+<aura:component  controller="NewCaseController" description="New Case creation" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:lightningQuickAction"  access="global">  
+    <!--case Record Id-->
+    <aura:attribute name="CaseRecordId" type="string" /> 
+    <aura:attribute name="contentDocumentId" type="string" /> 
+    <aura:attribute name="accept" type="List" default="['.jpg', '.jpeg','.pdf','.csv','.xlsx']"/>  
+    <aura:attribute name="multiple" type="Boolean" default="true"/>
+    <aura:attribute name="currentStep" type="String" default="1"/>
+    <!--TripReportId-->
+     <aura:attribute name="caseRecordTypeId" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="openModal" type="boolean" default="true"/>
+    <aura:attribute name="AccountVisited" type="String"/>
+    <aura:attribute name="showModal" type="Boolean" />
+    <aura:registerEvent name="refreshParentComponent" type="c:CaseRelatedListRefreshEvent"/>
+    <aura:handler   name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds-p-around_small">
+        <lightning:progressIndicator currentStep="{!v.currentStep}" type="path" >
+            <lightning:progressStep label="Create  case" value="1" onclick="{!c.selectFromHeaderStep1}"/>
+            <lightning:progressStep label="Upload documents" value="2" onclick="{!c.selectFromHeaderStep2}"/>
+        </lightning:progressIndicator>
+    </div>
+    <!--Modal content starts here-->
+    <div class="slds-modal__content slds-p-around_medium"  aura:id="caseModal" id="modal-content-id-1">
+        <div class="{!v.currentStep== '1' ? 'slds-show' : 'slds-hide'}">
+            <div class="slds-grid slds-grid_vertical">
+                <lightning:notificationsLibrary aura:id="notifLib"/>
+                <!---Creating a new case-->
+                <lightning:recordEditForm
+                                          aura:id="recordEditForm"
+                                          objectApiName="Case"
+                                          recordTypeId="{!v.caseRecordTypeId}"
+                                          onload="{!c.handleLoad}"
+                                          onsuccess="{!c.handleSuccess}">
+                    <lightning:messages />
+                    <h3 class="slds-section__title slds-theme_shade slds-p-horizontal_small">Case Information</h3>
+                    <div class="slds-p-around_small">
+                       <lightning:inputField fieldName="RecordTypeId"  disabled="true"/> 
+                        <lightning:inputField fieldName="Origin" value="Customer" disabled="true"/> 
+                        <lightning:inputField fieldName="Subject"/> 
+                    </div>
+                    <h3 class="slds-section__title slds-theme_shade slds-p-horizontal_small">Additional Information</h3>
+                    <div class="slds-p-around_small">                  
+                        <lightning:inputField fieldName="Trip_Report__c" value="{!v.recordId}"/>
+                    </div>
+                    <h3 class="slds-section__title slds-theme_shade slds-p-horizontal_small">Description Information</h3>
+                    <div class="slds-p-around_small">
+                        <lightning:inputField fieldName="Description"/>
+                    </div>  
+                    <h3 class="slds-section__title slds-theme_shade slds-p-horizontal_small">Account Information</h3>
+                    <div class="slds-p-around_small">
+                        <lightning:inputField aura:id="PopulateAccount" fieldName="AccountId"  value="{!v.AccountVisited}"/>
+                    </div>
+                </lightning:recordEditForm>
+            </div>
+            <div class="slds-grid slds-wrap slds-float_right">	
+                <lightning:button variant="brand"
+                                  label="Next"
+                                  title="Next"
+                                  onclick="{!c.handleSubmit}"/>
+            </div>
+        </div>
+    </div>
+    <!---Uploading the supporting documents for  the case created-->
+    <div class="{! v.currentStep == '2' ? 'slds-show' : 'slds-hide'}">
+        <div id="photoUpload"> 
+            <div class="slds-grid slds-wrap  slds-grid_align-center">
+                <div class="slds-col slds-size_1-of-1 slds-m-vertical_small slds-p-around_small"> 
+                    <lightning:fileUpload label="Upload Supporting Documents"  name="fileUploader" multiple="true" accept=".pdf, .png, .jpg , .jpeg" recordId="{!v.CaseRecordId}" onuploadfinished="{!c.handleUploadFinished}" />
+                </div>           
+                <div class="slds-col slds-size_2-of-3 slds-medium-size_7-of-12 slds-m-vertical_small">                       
+                    <lightning:fileCard  aura:id="fileCard" fileId="{!v.contentDocumentId}" />
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-m-vertical_small slds-p-around_small">
+                    <lightning:textarea name="Comments" label="Comments" aura:id="commentupload" value=""/>
+                </div> 
+                <div class="slds-p-around_small">   
+                    <lightning:button variant="brand"
+                                      aura:id="Submitbutton"
+                                      label="Submit"
+                                      title="Submit"
+                                      onclick="{!c.saveAndCloseModel}"
+                                      />
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

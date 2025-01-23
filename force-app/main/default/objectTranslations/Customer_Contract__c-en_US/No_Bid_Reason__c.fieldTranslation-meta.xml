@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- No-Bid Reason --></label>
+    <name>No_Bid_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Customer Risk Profile</masterLabel>
+        <translation><!-- Customer Risk Profile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delivery</masterLabel>
+        <translation><!-- Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electric – Range Constraint</masterLabel>
+        <translation><!-- Electric – Range Constraint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schedule - Customer Bid Timing Constraint</masterLabel>
+        <translation><!-- Schedule - Customer Bid Timing Constraint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schedule - Insufficient Bid Resources</masterLabel>
+        <translation><!-- Schedule - Insufficient Bid Resources --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specification - Medium Duty</masterLabel>
+        <translation><!-- Specification - Medium Duty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specification - Overly Onerous</masterLabel>
+        <translation><!-- Specification - Overly Onerous --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specification - Product (i.e Artic, Coach)</masterLabel>
+        <translation><!-- Specification - Product (i.e Artic, Coach) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

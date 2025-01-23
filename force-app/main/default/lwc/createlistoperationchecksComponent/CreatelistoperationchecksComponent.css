@@ -1,0 +1,41 @@
+.fixedheader {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom: solid 0.5px rgb(221, 219, 218);
+    border-top: solid 0.5px rgb(221, 219, 218);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .opcontentbody {
+    max-height: 600px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  
+  }
+
+  .tablelayout {
+    table-layout: fixed;
+  }
+  
+  .tablelayout th,
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    font-size: 12px;
+    white-space: normal;
+  }
+
+  .tableouterborder {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 219, 218);
+  }
+
+  .emptymessage {
+    margin: -55px 0px 55px 0px;
+}
+
+.zoomcheckbox{
+    zoom: 170%;
+  }

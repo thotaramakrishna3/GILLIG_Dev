@@ -1,0 +1,7 @@
+The product recommendation for {!Project_Tracker__c.Project_Name__c}  is  {!Project_Tracker__c.Product_Manager_Recommendation__c} <BR><BR>
+
+The link to the project : <BR>
+{!Project_Tracker__c.Link} <BR>
+<BR>
+Thanks,<BR>
+{!Project_Tracker__c.OwnerFullName}

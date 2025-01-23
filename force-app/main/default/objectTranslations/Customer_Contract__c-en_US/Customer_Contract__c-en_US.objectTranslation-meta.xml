@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Contract</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Contracts</value>
+    </caseValues>
+    <layouts>
+        <layout>Bid In Process</layout>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dates --></label>
+            <section>Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery --></label>
+            <section>Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Options --></label>
+            <section>Options</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Competitor Contract</layout>
+        <sections>
+            <label><!-- Administrative --></label>
+            <section>Administrative</section>
+        </sections>
+        <sections>
+            <label><!-- Bid Dates --></label>
+            <section>Bid Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Options --></label>
+            <section>Options</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Expired</layout>
+        <sections>
+            <label><!-- Administrative --></label>
+            <section>Administrative</section>
+        </sections>
+        <sections>
+            <label><!-- Bid Dates --></label>
+            <section>Bid Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Options --></label>
+            <section>Options</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Forecasted RFP</layout>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dates --></label>
+            <section>Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery --></label>
+            <section>Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Options --></label>
+            <section>Options</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>GILLIG Contract</layout>
+        <sections>
+            <label><!-- Administrative --></label>
+            <section>Administrative</section>
+        </sections>
+        <sections>
+            <label><!-- Bid Dates --></label>
+            <section>Bid Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery --></label>
+            <section>Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Options --></label>
+            <section>Options</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Cancelled --></description>
+        <label><!-- Cancelled --></label>
+        <name>Cancelled</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Competitor Contract --></description>
+        <label><!-- Competitor --></label>
+        <name>Competitor</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Expired Contracts --></description>
+        <label><!-- Expired --></label>
+        <name>Expired</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- RFP&apos;s that may come on to the market --></description>
+        <label><!-- Forecasted RFP --></label>
+        <name>Forecasted_RFP</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- GILLIG Contract --></description>
+        <label><!-- GILLIG --></label>
+        <name>GILLIG</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- In Process Contract --></description>
+        <label><!-- In Process --></label>
+        <name>In_Process</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- When the RFI has been submitted and no longer requires work. --></description>
+        <label><!-- RFI Submitted --></label>
+        <name>RFI_Submitted</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Multiple Awards on a State Contract --></description>
+        <label><!-- State Contract --></label>
+        <name>State_Contract</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

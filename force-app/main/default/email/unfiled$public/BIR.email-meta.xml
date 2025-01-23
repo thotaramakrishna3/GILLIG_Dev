@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Bid Information Reqeust</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>BIR</name>
+    <style>none</style>
+    <subject>Bid Information Request</subject>
+    <textOnly>{!Bid_Information_Request__c.Assigned_To__c},  
+
+Bid Information Request {!Bid_Information_Request__c.Link} has been assigned to you.  
+
+Please reply by {!Bid_Information_Request__c.Response_Date__c} and provide the information for the question:  
+
+{!Bid_Information_Request__c.Question__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

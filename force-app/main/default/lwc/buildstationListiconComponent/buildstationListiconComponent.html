@@ -1,0 +1,29 @@
+<template>
+    <template if:true={hasbuildstation}>
+        <template if:true={listcountgreater}>
+            <lightning-button variant="brand-outline" class="bsbuttonstyle" label={singlebs}></lightning-button>
+            <lightning-button variant="brand" class="bsbuttonstyle" onmouseover={showbslist} onmouseout={hidebslist} label={additionalbs}></lightning-button>
+            <!-- <span class="slds-avatar slds-avatar_circle" onmouseover={showbslist} onmouseout={hidebslist}>
+                <abbr class="slds-avatar__initials slds-icon-standard-user" title={count}> + {count}</abbr>
+            </span> -->
+            <!-- <span class="bsbadge" onmouseover={showbslist} onmouseout={hidebslist}>
+                <abbr class="" title={count}> + {count}</abbr>
+            </span> -->
+            <div class="slds-is-absolute">
+                <section if:true={showlist} class="slds-popover slds-popover_small slds-nubbin_top-left" role="dialog">
+                    <div class="slds-popover__body">
+                        <template for:each={bslist} for:item='bs'>
+                            <li key={bs}>{bs}</li>
+                        </template>
+                    </div>
+                </section>
+            </div>
+        </template>
+        <template if:false={listcountgreater}>
+            <lightning-button variant="brand-outline" label={singlebs} class="bsbuttonstyle"></lightning-button>
+        </template>
+    </template>
+    <!-- <template if:false={hasbuildstation}>
+        <lightning-button class="nobsbuttonstyle" label="no bs"></lightning-button>
+    </template> -->
+</template>

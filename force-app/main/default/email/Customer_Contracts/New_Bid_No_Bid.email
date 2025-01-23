@@ -1,0 +1,3 @@
+A new bid has been received for {!Customer_Contract__c.Lead_Agency__c} and we have decided not to bid the contract.  The No-Bid Reason has been listed as "{!Customer_Contract__c.No_Bid_Reason__c}"
+
+Refer to the details at: {!Customer_Contract__c.Link}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bid Submission Type --></label>
+    <name>Bid_Submission_Type__c</name>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mail In</masterLabel>
+        <translation><!-- Mail In --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mail In &amp; Online</masterLabel>
+        <translation><!-- Mail In &amp; Online --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mail In &amp; USB</masterLabel>
+        <translation><!-- Mail In &amp; USB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online</masterLabel>
+        <translation><!-- Online --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

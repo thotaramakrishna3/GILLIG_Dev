@@ -1,0 +1,8 @@
+<BR>
+The Committee recommendation for  Project {!Project_Tracker__c.Project_Name__c } is {!Project_Tracker__c.Committee_Recommendation__c}
+<BR><BR>The link to the project details : <BR>
+{!Project_Tracker__c.Link}
+ <BR>
+
+
+Thanks,<BR>{!Project_Tracker__c.OwnerFullName}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Shortage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Shortages</value>
+    </caseValues>
+    <layouts>
+        <layout>Shortage Layout</layout>
+        <sections>
+            <label><!-- Bus Details --></label>
+            <section>Bus Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Part Details --></label>
+            <section>Part Details</section>
+        </sections>
+        <sections>
+            <label><!-- Purchasing --></label>
+            <section>Purchasing</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

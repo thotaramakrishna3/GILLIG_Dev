@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Optimizer</label>
+    <navType>Console</navType>
+    <tabs>standard-OrgMetric</tabs>
+    <tabs>Spare__c</tabs>
+    <tabs>Reason_Code__c</tabs>
+    <tabs>Reject__c</tabs>
+    <tabs>Rework__c</tabs>
+    <uiType>Lightning</uiType>
+    <workspaceConfig>
+        <mappings>
+            <tab>Reason_Code__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Reject__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Rework__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Spare__c</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-OrgMetric</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

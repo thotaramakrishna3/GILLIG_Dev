@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Service Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Service Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>Bus Work Order Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PDI BEB --></label>
+            <section>PDI BEB</section>
+        </sections>
+        <sections>
+            <label><!-- PDI Diesel/ Hybrid / CNG --></label>
+            <section>PDI Diesel/ Hybrid / CNG</section>
+        </sections>
+        <sections>
+            <label><!-- PDI Diesel/ Hybrid / CNG/ BEB --></label>
+            <section>PDI Diesel/ Hybrid / CNG/ BEB</section>
+        </sections>
+        <sections>
+            <label><!-- PDI Issues/OnSite --></label>
+            <section>PDI Issues/OnSite</section>
+        </sections>
+        <sections>
+            <label><!-- PDI/ PDI Issues/OnSite --></label>
+            <section>PDI/ PDI Issues/OnSite</section>
+        </sections>
+        <sections>
+            <label><!-- Training --></label>
+            <section>Training</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Service Request --></label>
+        <name>New_Service_Request</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Upload File --></label>
+        <name>Upload_File</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When this field is completed, the bus is added to the production backlog and the Sales Order is Generated. --></help>
+    <label><!-- Date Booked --></label>
+    <name>Date_Booked__c</name>
+</CustomFieldTranslation>

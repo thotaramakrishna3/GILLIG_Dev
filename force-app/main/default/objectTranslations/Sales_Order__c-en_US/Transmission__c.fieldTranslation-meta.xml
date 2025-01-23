@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Transmission --></label>
+    <name>Transmission__c</name>
+    <picklistValues>
+        <masterLabel>Allison B3400R xFE</masterLabel>
+        <translation><!-- Allison B3400R xFE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison B400R-6</masterLabel>
+        <translation><!-- Allison B400R-6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison B500R-6</masterLabel>
+        <translation><!-- Allison B500R-6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison H40EP</masterLabel>
+        <translation><!-- Allison H40EP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison H50EP</masterLabel>
+        <translation><!-- Allison H50EP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Allison eGen Flex Max</masterLabel>
+        <translation><!-- Allison eGen Flex Max --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAE HDS200</masterLabel>
+        <translation><!-- BAE HDS200 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voith D864.6</masterLabel>
+        <translation><!-- Voith D864.6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voith D867.8</masterLabel>
+        <translation><!-- Voith D867.8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZF 6AP1400B</masterLabel>
+        <translation><!-- ZF 6AP1400B --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZF 6AP1420B</masterLabel>
+        <translation><!-- ZF 6AP1420B --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZF 6AP1420P</masterLabel>
+        <translation><!-- ZF 6AP1420P --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

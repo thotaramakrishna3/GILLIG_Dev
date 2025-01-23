@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>The Product manager Recommendation have been updated for a project</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Product Manager Recommendation changes - Project Tracker</name>
+    <style>none</style>
+    <subject>Product Manager Recommendation for Project {!Project_Tracker__c.Project_Name__c} is {!Project_Tracker__c.Product_Manager_Recommendation__c}</subject>
+    <textOnly>&lt;BR&gt;
+&lt;BR&gt;
+The Project   {!NullValue(Project_Tracker__c.Project_Name__c, &quot;product manager recommendations is {!Project_Tracker__c.Product_Manager_Recommendation__c&quot;)}
+ &lt;BR&gt;The link to the project details  :{!Project_Tracker__c.Link}  
+
+
+Thanks,&lt;BR&gt;{!Project_Tracker__c.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

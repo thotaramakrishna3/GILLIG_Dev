@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Breakdown Report</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Breakdown Reports</value>
+    </caseValues>
+    <layouts>
+        <layout>Breakdown Report Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Driver Information --></label>
+            <section>Driver Information</section>
+        </sections>
+        <sections>
+            <label><!-- Repair --></label>
+            <section>Repair</section>
+        </sections>
+        <sections>
+            <label><!-- Resolution --></label>
+            <section>Resolution</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Breakdown report cannot be created if Shipped Date is null. --></errorMessage>
+        <name>Shipped_Date_Not_Null</name>
+    </validationRules>
+</CustomObjectTranslation>

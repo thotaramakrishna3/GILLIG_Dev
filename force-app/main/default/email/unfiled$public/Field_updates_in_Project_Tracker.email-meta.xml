@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Field changes in Business or Evaluation Phases in the Project Tracker</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Field updates in Project Tracker</name>
+    <style>none</style>
+    <subject>Field Change in project {!Project_Tracker__c.Project_Name__c}</subject>
+    <textOnly>There has been a field enrty update in the project {!Project_Tracker__c.Name} by {!Project_Tracker__c.LastModifiedById}.  
+
+&lt;BR&gt;The project link {!Project_Tracker__c.Link}.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

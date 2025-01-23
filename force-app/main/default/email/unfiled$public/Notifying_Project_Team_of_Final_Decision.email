@@ -1,0 +1,9 @@
+The Project  {!Project_Tracker__c.Project_Name__c} decision details is <BR>
+
+{!Project_Tracker__c.Final_Project_Decision__c}
+<BR><BR>
+The project Link : {!Project_Tracker__c.Link} 
+
+<BR><BR>
+
+Thanks, <BR>

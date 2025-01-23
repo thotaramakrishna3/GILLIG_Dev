@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Perform Walk Around Inspection for damage during transport or loading / unloading --></help>
+    <label><!-- Perform Walk Around Inspection --></label>
+    <name>Perform_Walk_Around_Inspection__c</name>
+</CustomFieldTranslation>

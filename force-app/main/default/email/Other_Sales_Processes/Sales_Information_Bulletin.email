@@ -1,0 +1,6 @@
+A new Sales Information bulletin has been created regarding {!Sales_Information_Bulletin__c.Name}.  Please reference {!Sales_Information_Bulletin__c.Link}
+
+Please let me know if you have any questions.
+
+{!User.FirstName} {!User.LastName}
+{!User.Email}

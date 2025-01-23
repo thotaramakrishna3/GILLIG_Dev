@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Carrie Osborn-Houchin</fullName>
+        <default>false</default>
+        <label>Carrie Osborn-Houchin</label>
+    </customValue>
+    <customValue>
+        <fullName>Darija Desancic</fullName>
+        <default>false</default>
+        <label>Darija Desancic</label>
+    </customValue>
+    <customValue>
+        <fullName>Ed Montano</fullName>
+        <default>false</default>
+        <label>Ed Montano</label>
+    </customValue>
+    <customValue>
+        <fullName>Eliaser Fuentes</fullName>
+        <default>false</default>
+        <label>Eliaser Fuentes</label>
+    </customValue>
+    <customValue>
+        <fullName>Juliana Moore</fullName>
+        <default>false</default>
+        <label>Juliana Moore</label>
+    </customValue>
+    <customValue>
+        <fullName>Julio Ruiz</fullName>
+        <default>false</default>
+        <label>Julio Ruiz</label>
+    </customValue>
+    <customValue>
+        <fullName>Michael McClure</fullName>
+        <default>false</default>
+        <label>Michael McClure</label>
+    </customValue>
+    <customValue>
+        <fullName>Mike Roe</fullName>
+        <default>false</default>
+        <label>Mike Roe</label>
+    </customValue>
+    <customValue>
+        <fullName>Raspreet Nagra</fullName>
+        <default>false</default>
+        <label>Raspreet Nagra</label>
+    </customValue>
+    <customValue>
+        <fullName>Sergio Romo</fullName>
+        <default>false</default>
+        <label>Sergio Romo</label>
+    </customValue>
+    <customValue>
+        <fullName>Unassigned</fullName>
+        <default>false</default>
+        <label>Unassigned</label>
+    </customValue>
+    <customValue>
+        <fullName>Nathan Fisher</fullName>
+        <default>false</default>
+        <label>Nathan Fisher</label>
+    </customValue>
+    <customValue>
+        <fullName>Ryan Marquez</fullName>
+        <default>false</default>
+        <label>Ryan Marquez</label>
+    </customValue>
+    <customValue>
+        <fullName>Jay Headley</fullName>
+        <default>false</default>
+        <label>Jay Headley</label>
+    </customValue>
+    <customValue>
+        <fullName>Vivian Hoang</fullName>
+        <default>false</default>
+        <label>Vivian Hoang</label>
+    </customValue>
+    <customValue>
+        <fullName>Heather Baron</fullName>
+        <default>false</default>
+        <label>Heather Baron</label>
+    </customValue>
+    <customValue>
+        <fullName>Arminder Dhillon</fullName>
+        <default>false</default>
+        <label>Arminder Dhillon</label>
+    </customValue>
+    <customValue>
+        <fullName>Dave Bonini</fullName>
+        <default>false</default>
+        <label>Dave Bonini</label>
+    </customValue>
+    <customValue>
+        <fullName>Susan Otterson</fullName>
+        <default>false</default>
+        <label>Susan Otterson</label>
+    </customValue>
+    <customValue>
+        <fullName>Avinash Singh</fullName>
+        <default>false</default>
+        <label>Avinash Singh</label>
+    </customValue>
+    <customValue>
+        <fullName>Shafaque Firoz</fullName>
+        <default>false</default>
+        <label>Shafaque Firoz</label>
+    </customValue>
+    <customValue>
+        <fullName>Rahul Baisane</fullName>
+        <default>false</default>
+        <label>Rahul Baisane</label>
+    </customValue>
+    <customValue>
+        <fullName>Prasad Sutar</fullName>
+        <default>false</default>
+        <label>Prasad Sutar</label>
+    </customValue>
+    <customValue>
+        <fullName>Kim Korsak</fullName>
+        <default>false</default>
+        <label>Kim Korsak</label>
+    </customValue>
+    <customValue>
+        <fullName>Mahesh Dani</fullName>
+        <default>false</default>
+        <label>Mahesh Dani</label>
+    </customValue>
+    <customValue>
+        <fullName>Becky Ortega</fullName>
+        <default>false</default>
+        <label>Becky Ortega</label>
+    </customValue>
+    <customValue>
+        <fullName>Steve Lum</fullName>
+        <default>false</default>
+        <label>Steve Lum</label>
+    </customValue>
+    <customValue>
+        <fullName>Tony Gonzalez</fullName>
+        <default>false</default>
+        <label>Tony Gonzalez</label>
+    </customValue>
+    <customValue>
+        <fullName>Nigel Hill</fullName>
+        <default>false</default>
+        <label>Nigel Hill</label>
+    </customValue>
+    <customValue>
+        <fullName>Other/Legacy</fullName>
+        <default>false</default>
+        <label>Other/Legacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Balkrushna More</fullName>
+        <default>false</default>
+        <label>Balkrushna More</label>
+    </customValue>
+    <customValue>
+        <fullName>Shivkumar Kanthikar</fullName>
+        <default>false</default>
+        <label>Shivkumar Kanthikar</label>
+    </customValue>
+    <masterLabel>Publications - Order Processors</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bus</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Buses</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Board Search Filters --></label>
+        <name>Board_Search_Filters</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Hover Dialog Fields --></label>
+        <name>Hover_Dialog_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>Bus Layout</layout>
+        <sections>
+            <label><!-- Configuration Details --></label>
+            <section>Configuration Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Date Information --></label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery Information --></label>
+            <section>Delivery Information</section>
+        </sections>
+        <sections>
+            <label><!-- Gross Margin Information --></label>
+            <section>Gross Margin Information</section>
+        </sections>
+        <sections>
+            <label><!-- PDI Details --></label>
+            <section>PDI Details</section>
+        </sections>
+        <sections>
+            <label><!-- Production Board Details --></label>
+            <section>Production Board Details</section>
+        </sections>
+        <sections>
+            <label><!-- Production Order --></label>
+            <section>Production Order</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Order --></label>
+            <section>Sales Order</section>
+        </sections>
+        <sections>
+            <label><!-- Serial Numbers --></label>
+            <section>Serial Numbers</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Competitor Bus</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Care</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Production Layout</layout>
+        <sections>
+            <label><!-- Configuration Details --></label>
+            <section>Configuration Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Information --></label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Date Information --></label>
+            <section>Date Information</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery Information --></label>
+            <section>Delivery Information</section>
+        </sections>
+        <sections>
+            <label><!-- Production Order --></label>
+            <section>Production Order</section>
+        </sections>
+        <sections>
+            <label><!-- Ready Row --></label>
+            <section>Ready Row</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Order --></label>
+            <section>Sales Order</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Engineering Hold --></label>
+        <name>Engineering_Hold</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Competitor Bus --></description>
+        <label><!-- Competitor --></label>
+        <name>Competitor</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Bus has a delivered date --></description>
+        <label><!-- Delivered --></label>
+        <name>Delivered</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sales order had been created --></description>
+        <label><!-- Firm --></label>
+        <name>Firm</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Busses that are forecasted to be sold --></description>
+        <label><!-- Forecasted --></label>
+        <name>Forecasted</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Bus has an in-service date --></description>
+        <label><!-- In Service --></label>
+        <name>In_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunity Line has a start date --></description>
+        <label><!-- Reserved --></label>
+        <name>Reserved</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Bus has been retired from the fleet --></description>
+        <label><!-- Retired --></label>
+        <name>Retired</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Opportunity line has serial number and start date --></description>
+        <label><!-- Scheduled --></label>
+        <name>Scheduled</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Bus with Serial Number but no start date --></description>
+        <label><!-- To Be Scheduled --></label>
+        <name>To_Be_Scheduled</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

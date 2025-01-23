@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_Page_Default4</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>GILLIG Sales Lightning</label>
+    <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Page1</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Customer</recordType>
+        <type>Flexipage</type>
+        <profile>Regional Sales Manager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Javier_Page_Default41</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Sales Director</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>Sales_Admin_Home</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Sales Admin</profile>
+    </profileActionOverrides>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>Customer_Contract__c</tabs>
+    <tabs>Sales_Order__c</tabs>
+    <tabs>Bus_Invoice_Information__c</tabs>
+    <tabs>Bus_Hold_Request__c</tabs>
+    <tabs>Break_Down_Report__c</tabs>
+    <tabs>Sales_Information_Bulletin__c</tabs>
+    <tabs>Parts_Account__c</tabs>
+    <tabs>Trip_Report__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Feed</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>standard-CollaborationGroup</tabs>
+    <tabs>Option_Approval_Request__c</tabs>
+    <tabs>Configurator_Request__c</tabs>
+    <tabs>Supplier_Quote__c</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>Warranty_Agreement__c</tabs>
+    <tabs>Price_Data__c</tabs>
+    <tabs>Bid_Information_Request__c</tabs>
+    <tabs>Customer_Activity__c</tabs>
+    <tabs>Spare__c</tabs>
+    <tabs>Project_Tracker__c</tabs>
+    <tabs>Reason_Code__c</tabs>
+    <tabs>Reject__c</tabs>
+    <tabs>Rework__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

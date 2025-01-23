@@ -1,0 +1,68 @@
+<template>
+    <div if:false={disabled}>
+        <div if:false={permitteduser}>
+            <div if:false={isoklocal}>
+              <div if:false={disableuser}>
+              <lightning-button-group>
+                <lightning-button icon-name="utility:dislike" disabled={disableuser} icon-position="right" variant={notOkButtonVariant} label="NOT OK"
+                  onclick={actiontriggered}
+                ></lightning-button>
+              </lightning-button-group>
+             </div>
+              <div if:true={disableuser}>
+                <lightning-button-group>
+                  <lightning-button icon-name="utility:like" disabled={disableuser} icon-position="right" name="ok" variant={okButtonVariant} label="OK" onclick={actiontriggered}
+                  ></lightning-button>
+                  <lightning-button icon-name="utility:dislike" disabled={disableuser} icon-position="right" name="notok" variant={notOkButtonVariant} onclick={actiontriggered} label="NOT OK"
+                  ></lightning-button>
+                  </lightning-button-group>
+                </div>
+              
+            </div>
+            <div if:true={isoklocal}>
+              <div if:false={disableuser}>
+              <lightning-button-group>
+                <lightning-button icon-name="utility:like" disabled={disableuser} icon-position="right" variant={okButtonVariant} label="OK" onclick={actiontriggered}></lightning-button>
+              </lightning-button-group>
+             </div>
+              <div if:true={disableuser}>
+                <lightning-button-group>
+                  <lightning-button icon-name="utility:like" disabled={disableuser} icon-position="right" name="ok" variant={okButtonVariant} label="OK" onclick={actiontriggered}
+                  ></lightning-button>
+                  <lightning-button icon-name="utility:dislike" disabled={disableuser} icon-position="right" name="notok" variant={notOkButtonVariant} onclick={actiontriggered} label="NOT OK"
+                  ></lightning-button>
+                  </lightning-button-group>
+                </div>
+            </div>
+          </div>
+        
+          <div if:true={permitteduser}>
+            <div if:false={isoklocal}>
+              <lightning-button-group>
+                <lightning-button icon-name="utility:like" disabled={disableuser} icon-position="right" name="ok" variant={okButtonVariant} label="OK" onclick={actiontriggered}
+                ></lightning-button>
+                <lightning-button icon-name="utility:dislike" disabled={disableuser} icon-position="right" name="notok" variant={notOkButtonVariant} onclick={actiontriggered} label="NOT OK"
+                ></lightning-button>
+                <lightning-button-icon if:true={cancelButton} disabled={disableuser} icon-name="utility:close" title="Cancel" name="cancel" variant="border-filled" alternative-text="Cancel" onclick={actiontriggered}
+                ></lightning-button-icon> <!-- Sathish-->
+              </lightning-button-group>
+            </div>
+            <div if:true={isoklocal}>
+              <lightning-button-group>
+                <lightning-button icon-name="utility:like" disabled={disableuser} icon-position="right" name="ok" variant={okButtonVariant} label="OK" onclick={actiontriggered}
+                ></lightning-button>
+                <lightning-button icon-name="utility:dislike" disabled={disableuser} icon-position="right" name="notok" variant={notOkButtonVariant} label="NOT OK" onclick={actiontriggered}
+                ></lightning-button>
+                <lightning-button-icon if:true={cancelButton} disabled={disableuser} icon-name="utility:close" title="Cancel" variant="border-filled" alternative-text="Cancel" name="cancel" onclick={actiontriggered}
+                ></lightning-button-icon> <!-- Sathish-->
+              </lightning-button-group>
+            </div>
+          </div>
+      </div>
+    <div if:true={disabled}>
+      <lightning-button-group>
+        <lightning-button disabled icon-position="right" variant="destructive" label="Not Required"
+        ></lightning-button>
+      </lightning-button-group>
+    </div>
+  </template>

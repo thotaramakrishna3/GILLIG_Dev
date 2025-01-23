@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Audience --></label>
+    <name>Audience__c</name>
+    <picklistValues>
+        <masterLabel>Board of Directors</masterLabel>
+        <translation><!-- Board of Directors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Candidates</masterLabel>
+        <translation><!-- Candidates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company-wide</masterLabel>
+        <translation><!-- Company-wide --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporate</masterLabel>
+        <translation><!-- Corporate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation><!-- Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executives</masterLabel>
+        <translation><!-- Executives --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hayward</masterLabel>
+        <translation><!-- Hayward --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Livermore</masterLabel>
+        <translation><!-- Livermore --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Off-Site</masterLabel>
+        <translation><!-- Off-Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public</masterLabel>
+        <translation><!-- Public --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Union</masterLabel>
+        <translation><!-- Union --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

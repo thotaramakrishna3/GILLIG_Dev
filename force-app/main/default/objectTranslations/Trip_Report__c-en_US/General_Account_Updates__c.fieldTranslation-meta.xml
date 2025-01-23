@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ridership, Funding, Growth Plans, etc. --></help>
+    <label><!-- General Account Updates --></label>
+    <name>General_Account_Updates__c</name>
+</CustomFieldTranslation>

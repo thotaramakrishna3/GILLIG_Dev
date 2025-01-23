@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[A new Production Issue Case has been created.<div><br></div><div>Reported by:&nbsp;{!Case.Reported_By_Supervisor__c}</div><div><span style="font-size: 12pt;">Assigned to:&nbsp;{!Case.OwnerFullName}</span></div><div>Customer:&nbsp;{!Case.Internal_Name__c}</div><div>Bus/Sales Order:&nbsp;{!Case.Bus_Number__c}&nbsp;{!Case.Sales_Order__c}</div><div><br></div><div>Subject:&nbsp;{!Case.Subject}</div><div>Description:&nbsp;{!Case.Description}</div><div><br></div><div>Created Date/Time:&nbsp;{!Case.CreatedDate}</div>]]></td>
+</tr>
+</table>

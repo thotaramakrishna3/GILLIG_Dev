@@ -1,0 +1,8 @@
+Hello ,
+
+{!Option_Approval_Request__c.Name} is now in the Status " {!Option_Approval_Request__c.OAR_Status__c} ".
+
+Please refer to {!Option_Approval_Request__c.Link} for more details.
+
+Thanks,
+{!User.Name}

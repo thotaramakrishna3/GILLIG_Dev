@@ -1,0 +1,15 @@
+<apex:component controller="listOppDiscussed" access="global" >
+    
+    <apex:attribute name="tripID" description="..." type="ID" assignTo="{!objId}"/>
+    
+    <apex:dataTable id="OppD" value="{!listOppDiscussed}" var="oprd" cellpadding="2" border="2" rendered="{!listOppDiscussed.size>0}">
+        <apex:column headerValue="Opportunity">
+            <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))+oprd.opp.ID}" target="_parent">{!oprd.opp.Name}</apex:outputLink>
+        </apex:column>
+        <apex:column headerValue="Stage" value="{!oprd.opp.StageName}" />
+        <apex:column headerValue="Close Date" value="{!oprd.opp.CloseDate}" />
+        <apex:column headerValue="Quantity" value="{!oprd.opp.Total_Qty__c}" />
+        <apex:column headerValue="Update" value="{!oprd.oppD.Comments__c}" />
+    </apex:dataTable>
+    
+</apex:component>

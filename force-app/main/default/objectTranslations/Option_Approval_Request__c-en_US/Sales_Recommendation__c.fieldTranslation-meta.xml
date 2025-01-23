@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sales Recommendation --></label>
+    <name>Sales_Recommendation__c</name>
+    <picklistValues>
+        <masterLabel>Approve</masterLabel>
+        <translation><!-- Approve --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disapprove</masterLabel>
+        <translation><!-- Disapprove --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review</masterLabel>
+        <translation><!-- Review --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

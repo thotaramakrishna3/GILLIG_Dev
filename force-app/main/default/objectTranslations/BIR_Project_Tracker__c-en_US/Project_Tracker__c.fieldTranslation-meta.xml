@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Project Tracker --></label>
+    <name>Project_Tracker__c</name>
+    <relationshipLabel><!-- BIR-Project Trackers --></relationshipLabel>
+</CustomFieldTranslation>

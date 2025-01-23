@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://gillig.sharepoint.com/sites/pricesummaries/_layouts/15/OauthAuthorize.aspx</authorizeUrl>
+    <consumerKey>76bae836-b148-49b6-b956-cd848a320409</consumerKey>
+    <consumerSecret>Placeholder_Value</consumerSecret>
+    <friendlyName>Sharepoint - Price Summaries</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>MicrosoftACS</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://accounts.accesscontrol.windows.net/gillig.onmicrosoft.com/tokens/OAuth/2?resource=00000003-0000-0ff1-ce00-000000000000/gillig.sharepoint.com@gillig.onmicrosoft.com</tokenUrl>
+</AuthProvider>

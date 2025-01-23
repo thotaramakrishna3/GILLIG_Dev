@@ -1,0 +1,35 @@
+.tblheaderth{
+    color: #005fb2 !important;
+}
+.pageheader{
+  max-height:500px;
+  overflow-y:auto;
+  scroll-behavior: smooth;
+}
+.tableheader{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: solid 0.5px rgb(221, 219, 218);/**/
+  border-top: solid 0.5px rgb(221, 219, 218);/**/
+}
+  .headstyle{
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+  .tblheader{
+    height:3rem;
+  }
+  
+    .tabledata{
+      height: 3rem;
+    }
+    .centertext{
+      text-align: center;
+
+    }
+  .filterstyle{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+  }

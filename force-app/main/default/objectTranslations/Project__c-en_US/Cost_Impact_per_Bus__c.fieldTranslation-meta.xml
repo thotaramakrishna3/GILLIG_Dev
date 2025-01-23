@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter a negative number for cost savings and a positive number for a cost increase --></help>
+    <label><!-- Cost Impact per Bus --></label>
+    <name>Cost_Impact_per_Bus__c</name>
+</CustomFieldTranslation>

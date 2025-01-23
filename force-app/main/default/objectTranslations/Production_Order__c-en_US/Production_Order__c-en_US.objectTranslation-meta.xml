@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Production Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Production Orders</value>
+    </caseValues>
+    <layouts>
+        <layout>Production Order Layout</layout>
+        <sections>
+            <label><!-- 1st and 2nd Audit Checks --></label>
+            <section>1st and 2nd Audit Checks</section>
+        </sections>
+        <sections>
+            <label><!-- BOM Processing Details --></label>
+            <section>BOM Processing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Buy Design --></label>
+            <section>Buy Design</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Miscellaneous Fields --></label>
+            <section>Miscellaneous Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Order Process --></label>
+            <section>Order Process</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Production Order Split --></label>
+        <name>Production_Order_Split</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- The production orders that were split prior to Sales order splits and do not have any buses --></description>
+        <label><!-- Archived Split Production Orders --></label>
+        <name>Archived_Split_Production_Orders</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- All the new production Orders will be created and stored here --></description>
+        <label><!-- Default Production Orders --></label>
+        <name>DefaultProductionOrders</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Split --></label>
+        <name>Split</name>
+    </webLinks>
+</CustomObjectTranslation>

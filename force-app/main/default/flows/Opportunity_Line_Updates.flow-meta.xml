@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <description>Update related Margin Assumption</description>
+        <name>Set_Margin_Assumption</name>
+        <label>Set Margin Assumption</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Margin_Assumption__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Margin_Assumption.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunity_Line_Inflation</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Changes to Year of Start Dare</description>
+        <name>Build_Year</name>
+        <label>Build Year</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Opportunity_Line_Inflation</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Build_Year_is_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Build_Year__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Margin_Assumption</targetReference>
+            </connector>
+            <label>Build Year is Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Add Inflation years for Opportunity Line</description>
+        <name>Opportunity_Line_Inflation</name>
+        <label>Opportunity Line Inflation</label>
+        <locationX>182</locationX>
+        <locationY>791</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Margin_Assumption_or_Ref_So_is_Changed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Margin_Assumption__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Margin_Reference_Sales_Order__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Opportunity_Line_Records</targetReference>
+            </connector>
+            <label>Margin Assumption or Ref So is Changed</label>
+        </rules>
+    </decisions>
+    <description>Any Changes due to an Updated Opportunity Line</description>
+    <interviewLabel>Opportunity Line Updates {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Line Updates</label>
+    <loops>
+        <description>Add years of Inflation</description>
+        <name>Create_Inflation</name>
+        <label>Create Inflation</label>
+        <locationX>50</locationX>
+        <locationY>1487</locationY>
+        <collectionReference>Margin_Inflation</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Inflation_Year</targetReference>
+        </nextValueConnector>
+    </loops>
+    <loops>
+        <description>Remove any Inflation records</description>
+        <name>Remove_Inflation</name>
+        <label>Remove Inflation</label>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
+        <collectionReference>Opportunity_Line_Records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Delete_Opportunity_Inflation</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Margin_Inflation</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Add this Year of Inflation</description>
+        <name>Inflation_Year</name>
+        <label>Inflation Year</label>
+        <locationX>138</locationX>
+        <locationY>1607</locationY>
+        <connector>
+            <targetReference>Create_Inflation</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Build_Year_Inflation__c</field>
+            <value>
+                <elementReference>Create_Inflation.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CNG_Inflation__c</field>
+            <value>
+                <elementReference>Create_Inflation.CNG_Inflation__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Diesel_Inflation__c</field>
+            <value>
+                <elementReference>Create_Inflation.Diesel_Inflation__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Electric_inflation__c</field>
+            <value>
+                <elementReference>Create_Inflation.Electric_Inflation__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Hybrid_Inflation__c</field>
+            <value>
+                <elementReference>Create_Inflation.Hybrid_Inflation__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Create_Inflation.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity_Line__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity_Inflation__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordDeletes>
+        <description>Delete Inflation records</description>
+        <name>Delete_Opportunity_Inflation</name>
+        <label>Delete Opportunity Inflation</label>
+        <locationX>138</locationX>
+        <locationY>1151</locationY>
+        <connector>
+            <targetReference>Remove_Inflation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Remove_Inflation.Id</elementReference>
+            </value>
+        </filters>
+        <object>Opportunity_Inflation__c</object>
+    </recordDeletes>
+    <recordLookups>
+        <description>Get Margin Assumption for Build Year</description>
+        <name>Margin_Assumption</name>
+        <label>Margin Assumption</label>
+        <locationX>50</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Margin_Assumption</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Build_Year_Value__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Build_Year__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Margin_Assumption__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get Years of Inflation</description>
+        <name>Margin_Inflation</name>
+        <label>Margin Inflation</label>
+        <locationX>50</locationX>
+        <locationY>1367</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Create_Inflation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Build_Year_Value__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.Margin_Sold_Year__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Build_Year_Value__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>$Record.Margin_Build_Year__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Margin_Assumption__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get any Inflation records associated with this Opportunity Line</description>
+        <name>Opportunity_Line_Records</name>
+        <label>Opportunity Line Records</label>
+        <locationX>50</locationX>
+        <locationY>911</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Remove_Inflation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_Line__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity_Inflation__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Build_Year</targetReference>
+        </connector>
+        <object>Opportunity_Line__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

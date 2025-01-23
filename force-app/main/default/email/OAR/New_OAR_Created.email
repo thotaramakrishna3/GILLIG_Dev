@@ -1,0 +1,8 @@
+A new Option Approval Request Has been created by {!Option_Approval_Request__c.OwnerFullName}.
+
+Request Description: {!Option_Approval_Request__c.Option_Request_Description__c}
+
+Request Details: {!Option_Approval_Request__c.Request_Details__c}
+
+
+Please refer to {!Option_Approval_Request__c.Link} for details.

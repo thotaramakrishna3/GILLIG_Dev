@@ -1,0 +1,7 @@
+Bus # {!Bus__c.Name} departed GILLIG on {!Bus__c.Shipped_Date__c} and is en route to your location.  The driver has been provided the delivery time and location that was provided to us during the preproduction meeting.  The actual bus delivery date will depend upon the distance, road conditions and your specific delivery window.
+
+GILLIG Field Service will be contacting you to schedule the Post Delivery Inspection for this bus shortly.  If you have any questions regarding your delivery, please do not hesitate to contact me or your Project Sales Manager.
+
+Thank you for your continued support!
+
+{!User.FirstName} {!User.LastName}

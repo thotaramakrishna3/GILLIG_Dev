@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- HVAC System --></label>
+    <name>HVAC_System__c</name>
+    <picklistValues>
+        <masterLabel>Moblie Climate Control</masterLabel>
+        <translation><!-- Moblie Climate Control --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sutrak</masterLabel>
+        <translation><!-- Sutrak --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thermo King</masterLabel>
+        <translation><!-- Thermo King --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

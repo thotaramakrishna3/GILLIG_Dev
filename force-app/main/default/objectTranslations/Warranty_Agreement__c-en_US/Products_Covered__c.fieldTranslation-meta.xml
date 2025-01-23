@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What are the products covered by the warranty parchment you are attaching. --></help>
+    <label><!-- Products Covered --></label>
+    <name>Products_Covered__c</name>
+</CustomFieldTranslation>

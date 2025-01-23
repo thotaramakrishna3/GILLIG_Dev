@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tag Request --></label>
+    <name>Tag_Request__c</name>
+    <picklistValues>
+        <masterLabel>Contract Option Delivery</masterLabel>
+        <translation><!-- Contract Option Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Firm</masterLabel>
+        <translation><!-- Firm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Letter of Intent</masterLabel>
+        <translation><!-- Letter of Intent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order Received</masterLabel>
+        <translation><!-- Order Received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Promised Delivery</masterLabel>
+        <translation><!-- Other Promised Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reserve for Bid</masterLabel>
+        <translation><!-- Reserve for Bid --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

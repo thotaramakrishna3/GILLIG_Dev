@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pubs Target</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pubs Targets</value>
+    </caseValues>
+    <recordTypes>
+        <description><!-- Targets for Parts Manuals --></description>
+        <label><!-- Parts --></label>
+        <name>Parts</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Targets for Schematics Manuals --></description>
+        <label><!-- Schematics --></label>
+        <name>Schematics</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bid Status --></label>
+    <name>Bid_Status__c</name>
+    <picklistValues>
+        <masterLabel>Bid</masterLabel>
+        <translation><!-- Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forecast</masterLabel>
+        <translation><!-- Forecast --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No-Bid</masterLabel>
+        <translation><!-- No-Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reviewing</masterLabel>
+        <translation><!-- Reviewing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

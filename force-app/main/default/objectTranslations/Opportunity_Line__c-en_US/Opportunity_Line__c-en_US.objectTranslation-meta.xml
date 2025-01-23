@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity Line</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity Lines</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Board Search Filters --></label>
+        <name>Board_Search_Filters</name>
+    </fieldSets>
+    <layouts>
+        <layout>Finance Opportunity Line Layout</layout>
+        <sections>
+            <label><!-- Contract --></label>
+            <section>Contract</section>
+        </sections>
+        <sections>
+            <label><!-- Cost --></label>
+            <section>Cost</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Electric Bus Details --></label>
+            <section>Electric Bus Details</section>
+        </sections>
+        <sections>
+            <label><!-- Gross Margin --></label>
+            <section>Gross Margin</section>
+        </sections>
+        <sections>
+            <label><!-- Margin Assumption and Reference --></label>
+            <section>Margin Assumption and Reference</section>
+        </sections>
+        <sections>
+            <label><!-- PO --></label>
+            <section>PO</section>
+        </sections>
+        <sections>
+            <label><!-- Purchase Price Index --></label>
+            <section>Purchase Price Index</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Details --></label>
+            <section>Quote Details</section>
+        </sections>
+        <sections>
+            <label><!-- Revenue --></label>
+            <section>Revenue</section>
+        </sections>
+        <sections>
+            <label><!-- Serial Number Information --></label>
+            <section>Serial Number Information</section>
+        </sections>
+        <sections>
+            <label><!-- Total Cost --></label>
+            <section>Total Cost</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Line Layout</layout>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery Commitments --></label>
+            <section>Delivery Commitments</section>
+        </sections>
+        <sections>
+            <label><!-- Electric Bus Details --></label>
+            <section>Electric Bus Details</section>
+        </sections>
+        <sections>
+            <label><!-- PO --></label>
+            <section>PO</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- Serial Number Information --></label>
+            <section>Serial Number Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Serialized</layout>
+        <sections>
+            <label><!-- Contract --></label>
+            <section>Contract</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Electric Bus Details --></label>
+            <section>Electric Bus Details</section>
+        </sections>
+        <sections>
+            <label><!-- PO --></label>
+            <section>PO</section>
+        </sections>
+        <sections>
+            <label><!-- Quote Information --></label>
+            <section>Quote Information</section>
+        </sections>
+        <sections>
+            <label><!-- Serial Number Information --></label>
+            <section>Serial Number Information</section>
+        </sections>
+        <sections>
+            <label><!-- System --></label>
+            <section>System</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Booked --></label>
+        <name>Booked</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Active Opportunity --></description>
+        <label><!-- Forecasted --></label>
+        <name>Forecasted</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Serial Number assigned --></description>
+        <label><!-- Serialized --></label>
+        <name>Serialized</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Must have a Serial number when booking an order --></errorMessage>
+        <name>CheckSerial</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Assign a Project Sales Manager to this Account before setting Serial Number or Start Date --></errorMessage>
+        <name>Check_PSM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Length --></errorMessage>
+        <name>Length_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Mode --></errorMessage>
+        <name>Mode_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please set an Internal Name on the Account before booking --></errorMessage>
+        <name>Must_have_Internal_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a PO Amount --></errorMessage>
+        <name>PO_Amount_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a PO Date --></errorMessage>
+        <name>PO_Date_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a PO Reference --></errorMessage>
+        <name>PO_Ref_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Quantity --></errorMessage>
+        <name>Qty_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Quoted Price --></errorMessage>
+        <name>Quoted_Price_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Start Date --></errorMessage>
+        <name>Start_Date_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Style --></errorMessage>
+        <name>Style_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid number great than zero and less than 999,999 --></errorMessage>
+        <name>numerSerial</name>
+    </validationRules>
+</CustomObjectTranslation>

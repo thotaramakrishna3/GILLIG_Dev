@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>An email template for new cases</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>A new {!Case.RecordType} Case created</name>
+    <style>none</style>
+    <subject>A new {!Case.RecordType} case has been opened.</subject>
+    <textOnly>Hello ,
+
+A new warranty case record has been created and assigned to you
+
+Account name :  {!Case.Account}
+Contact name :  {!Case.Contact}
+case description :  {!Case.Description}
+Case number :   {!Case.CaseNumber}
+
+Case record link {!Case.Link}
+
+
+Thanks,</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

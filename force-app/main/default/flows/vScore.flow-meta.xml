@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <formulas>
+        <name>TotalPointsEarned</name>
+        <dataType>Number</dataType>
+        <expression>{!Q1_Representative_is_responsive_i_e_Returns_calls_emails_expediting_hot_parts}+{!Q2_Purchase_orders_are_entered_accurately}+{!Q3_Purchase_orders_are_acknolwedged_confirmed_and_buyer_is_notified}+{!Q4_Buyer_is_notified_of_late_or_incomplete_shipments_before_it_occurs}+{!Q5_Representative_is_thoroughly_familiar_with_their_products}+{!Q6_Quality_issues_are_addressed_in_a_timely_manner}+{!Q7_Appropriate_inventory_levels_are_held_for_standard_parts}+{!Q8_Issues_are_not_reoccurring}+{!Q9_Vendor_ships_via_specified_carriers_with_the_correct_service_level}+{!Q10_Freight_charges_are_billed_according_to_procedures_laid_out_by_the_buyer}+{!Q11_Lable_and_bar_coding_guidelines_are_followed_Packing_slips_sent_in}+{!Q12_Parts_are_packaged_properly_to_allow_for_easy_material_handling_and}+{!Q13_Engineering}+{!Q14_Accounting_Buy_America}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>vScore {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>vScore</label>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Fields</name>
+        <label>Update Fields</label>
+        <locationX>479</locationX>
+        <locationY>634</locationY>
+        <inputAssignments>
+            <field>Q1_Representative_is_responsive__c</field>
+            <value>
+                <elementReference>Q1_Representative_is_responsive_i_e_Returns_calls_emails_expediting_hot_parts</elementReference>
+            </value>
+        </inputAssignments>
+        <object>vScore__c</object>
+    </recordUpdates>
+    <screens>
+        <name>Customer_Service_1_5_Scale</name>
+        <label>Customer Service (1-5 Scale)</label>
+        <locationX>476</locationX>
+        <locationY>96</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Quality_1_5_Scale</targetReference>
+        </connector>
+        <fields>
+            <name>Q1_Representative_is_responsive_i_e_Returns_calls_emails_expediting_hot_parts</name>
+            <dataType>Number</dataType>
+            <fieldText>Q1. Representative is responsive (i.e. Returns calls/emails, expediting hot parts)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q2_Purchase_orders_are_entered_accurately</name>
+            <dataType>Number</dataType>
+            <fieldText>Q2. Purchase orders are entered accurately</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q3_Purchase_orders_are_acknolwedged_confirmed_and_buyer_is_notified</name>
+            <dataType>Number</dataType>
+            <fieldText>Q3. Purchase orders are acknolwedged/confirmed and buyer is notified of any exceptions</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q4_Buyer_is_notified_of_late_or_incomplete_shipments_before_it_occurs</name>
+            <dataType>Number</dataType>
+            <fieldText>Q4. Buyer is notified of late or incomplete shipments before it occurs</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q5_Representative_is_thoroughly_familiar_with_their_products</name>
+            <dataType>Number</dataType>
+            <fieldText>Q5. Representative is thoroughly familiar with their products</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Overall_Department_Ratings</name>
+        <label>Overall Department Ratings (1-5 Scale)</label>
+        <locationX>473</locationX>
+        <locationY>410</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Total_Points_Questionaire</targetReference>
+        </connector>
+        <fields>
+            <name>Q13_Engineering</name>
+            <dataType>Number</dataType>
+            <fieldText>Q13. Engineering</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q14_Accounting_Buy_America</name>
+            <dataType>Number</dataType>
+            <fieldText>Q14. Accounting/Buy America</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Quality_1_5_Scale</name>
+        <label>Quality (1-5 Scale)</label>
+        <locationX>473</locationX>
+        <locationY>199</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Shipping_1_5_Scale</targetReference>
+        </connector>
+        <fields>
+            <name>Q6_Quality_issues_are_addressed_in_a_timely_manner</name>
+            <dataType>Number</dataType>
+            <fieldText>Q6. Quality issues are addressed in a timely manner</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q7_Appropriate_inventory_levels_are_held_for_standard_parts</name>
+            <dataType>Number</dataType>
+            <fieldText>Q7. Appropriate inventory levels are held for standard parts</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q8_Issues_are_not_reoccurring</name>
+            <dataType>Number</dataType>
+            <fieldText>Q8. Issues are not reoccurring</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Shipping_1_5_Scale</name>
+        <label>Shipping (1-5 Scale)</label>
+        <locationX>473</locationX>
+        <locationY>298</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Overall_Department_Ratings</targetReference>
+        </connector>
+        <fields>
+            <name>Q9_Vendor_ships_via_specified_carriers_with_the_correct_service_level</name>
+            <dataType>Number</dataType>
+            <fieldText>Q9. Vendor ships via specified carriers with the correct service level</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q10_Freight_charges_are_billed_according_to_procedures_laid_out_by_the_buyer</name>
+            <dataType>Number</dataType>
+            <fieldText>Q10. Freight charges are billed according to procedures laid out by the buyer</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q11_Lable_and_bar_coding_guidelines_are_followed_Packing_slips_sent_in</name>
+            <dataType>Number</dataType>
+            <fieldText>Q11. Lable and bar coding guidelines are followed/Packing slips sent in</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <fields>
+            <name>Q12_Parts_are_packaged_properly_to_allow_for_easy_material_handling_and</name>
+            <dataType>Number</dataType>
+            <fieldText>Q12. Parts are packaged properly to allow for easy material handling and damage free delivery</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Total_Points_Questionaire</name>
+        <label>Total Points (Questionaire)</label>
+        <locationX>462</locationX>
+        <locationY>521</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Total_Points_Earned_Out_of_70</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <elementReference>TotalPointsEarned</elementReference>
+            </defaultValue>
+            <fieldText>Total Points Earned (Out of 70)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Customer_Service_1_5_Scale</startElementReference>
+    <status>Draft</status>
+</Flow>

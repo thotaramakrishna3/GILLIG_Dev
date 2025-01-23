@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification that an e-bus has a new start date.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>New E-Bus Start Date</name>
+    <style>none</style>
+    <subject>The {!Bus__c.Internal_Name__c} Electric Bus ({!Bus__c.Name}) has a new start date</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

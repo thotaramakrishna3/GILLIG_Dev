@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>0. Header</fullName>
+        <default>false</default>
+        <label>0. Header</label>
+    </customValue>
+    <customValue>
+        <fullName>1. Engine</fullName>
+        <default>false</default>
+        <label>1. Engine/Motor</label>
+    </customValue>
+    <customValue>
+        <fullName>2. Transmission Selections</fullName>
+        <default>false</default>
+        <label>2. Transmission Selections</label>
+    </customValue>
+    <customValue>
+        <fullName>3. Driveline</fullName>
+        <default>false</default>
+        <label>3. Driveline</label>
+    </customValue>
+    <customValue>
+        <fullName>4-5 Front &amp; Rear Axle</fullName>
+        <default>false</default>
+        <label>4-5 Front &amp; Rear Axle</label>
+    </customValue>
+    <customValue>
+        <fullName>6. Wheels &amp; Tires</fullName>
+        <default>false</default>
+        <label>6. Wheels &amp; Tires</label>
+    </customValue>
+    <customValue>
+        <fullName>7. Steering</fullName>
+        <default>false</default>
+        <label>7. Steering</label>
+    </customValue>
+    <customValue>
+        <fullName>8. Hydraulics</fullName>
+        <default>false</default>
+        <label>8. Hydraulics</label>
+    </customValue>
+    <customValue>
+        <fullName>9. Fuel System</fullName>
+        <default>false</default>
+        <label>9. Fuel System</label>
+    </customValue>
+    <customValue>
+        <fullName>10. Rear Run Box &amp; Controls</fullName>
+        <default>false</default>
+        <label>10. Rear Run Box &amp; Controls</label>
+    </customValue>
+    <customValue>
+        <fullName>11. Air System</fullName>
+        <default>false</default>
+        <label>11. Air System</label>
+    </customValue>
+    <customValue>
+        <fullName>12. Frame</fullName>
+        <default>false</default>
+        <label>12. Frame</label>
+    </customValue>
+    <customValue>
+        <fullName>13. Capacitor, Batteries, Shore Power, Vehicle Voltage Inverter</fullName>
+        <default>false</default>
+        <label>13. Capacitor, Batteries, Shore Power, Vehicle Voltage Inverter</label>
+    </customValue>
+    <customValue>
+        <fullName>14. Locks &amp; Latches</fullName>
+        <default>false</default>
+        <label>14. Locks &amp; Latches</label>
+    </customValue>
+    <customValue>
+        <fullName>15. Body Section</fullName>
+        <default>false</default>
+        <label>15. Body Section</label>
+    </customValue>
+    <customValue>
+        <fullName>16. Wheelchair Ramp</fullName>
+        <default>false</default>
+        <label>16. Wheelchair Ramp</label>
+    </customValue>
+    <customValue>
+        <fullName>17. HVAC Main Unit</fullName>
+        <default>false</default>
+        <label>17. HVAC Main Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>18. Drivers Heater</fullName>
+        <default>false</default>
+        <label>18. Drivers Heater</label>
+    </customValue>
+    <customValue>
+        <fullName>19. Auxiliary Coolant Heater</fullName>
+        <default>false</default>
+        <label>19. Auxiliary Coolant Heater</label>
+    </customValue>
+    <customValue>
+        <fullName>20. Door Threshold, Underseat Heaters</fullName>
+        <default>false</default>
+        <label>20. Door Threshold, Underseat Heaters</label>
+    </customValue>
+    <customValue>
+        <fullName>21. Dash Fans</fullName>
+        <default>false</default>
+        <label>21. Dash Fans</label>
+    </customValue>
+    <customValue>
+        <fullName>22-23. Front &amp; Rear Doors</fullName>
+        <default>false</default>
+        <label>22-23. Front &amp; Rear Doors</label>
+    </customValue>
+    <customValue>
+        <fullName>24. Wheelwell Mounted Storage Box(s)</fullName>
+        <default>false</default>
+        <label>24. Wheelwell Mounted Storage Box(s)</label>
+    </customValue>
+    <customValue>
+        <fullName>25. Rear Engine Door</fullName>
+        <default>false</default>
+        <label>25. Rear Engine Door</label>
+    </customValue>
+    <customValue>
+        <fullName>26. Ad Frames</fullName>
+        <default>false</default>
+        <label>26. Ad Frames</label>
+    </customValue>
+    <customValue>
+        <fullName>28. Passenger Seats</fullName>
+        <default>false</default>
+        <label>28. Passenger Seats</label>
+    </customValue>
+    <customValue>
+        <fullName>28a. Driver’s Seat</fullName>
+        <default>false</default>
+        <label>28a. Driver’s Seat</label>
+    </customValue>
+    <customValue>
+        <fullName>29. Passenger Signals</fullName>
+        <default>false</default>
+        <label>29. Passenger Signals</label>
+    </customValue>
+    <customValue>
+        <fullName>30. Drivers Barrier</fullName>
+        <default>false</default>
+        <label>30. Drivers Barrier</label>
+    </customValue>
+    <customValue>
+        <fullName>31. Front Wheelwells &amp; Front Door Modesty Panel</fullName>
+        <default>false</default>
+        <label>31. Front Wheelwells &amp; Front Door Modesty Panel</label>
+    </customValue>
+    <customValue>
+        <fullName>32. Rear Door and, or 3rd Step Modesty Panels &amp; Stanchions</fullName>
+        <default>false</default>
+        <label>32. Rear Door and, or 3rd Step Modesty Panels &amp; Stanchions</label>
+    </customValue>
+    <customValue>
+        <fullName>33. Drivers Coat Hook</fullName>
+        <default>false</default>
+        <label>33. Drivers Coat Hook</label>
+    </customValue>
+    <customValue>
+        <fullName>34. Display, Schedule, Registration, Card Holder</fullName>
+        <default>false</default>
+        <label>34. Display, Schedule, Registration, Card Holder</label>
+    </customValue>
+    <customValue>
+        <fullName>35. Interior Passenger Assists</fullName>
+        <default>false</default>
+        <label>35. Interior Passenger Assists</label>
+    </customValue>
+    <customValue>
+        <fullName>36. Windshield</fullName>
+        <default>false</default>
+        <label>36. Windshield</label>
+    </customValue>
+    <customValue>
+        <fullName>37. Windows &amp; Door Glazing</fullName>
+        <default>false</default>
+        <label>37. Windows &amp; Door Glazing</label>
+    </customValue>
+    <customValue>
+        <fullName>38. Fog Lamp, Driving Lamp, Headlamp</fullName>
+        <default>false</default>
+        <label>38. Fog Lamp, Driving Lamp, Headlamp</label>
+    </customValue>
+    <customValue>
+        <fullName>39. Exterior Lamps</fullName>
+        <default>false</default>
+        <label>39. Exterior Lamps</label>
+    </customValue>
+    <customValue>
+        <fullName>40. Interior Lamps</fullName>
+        <default>false</default>
+        <label>40. Interior Lamps</label>
+    </customValue>
+    <customValue>
+        <fullName>41. Pleasure &amp; Voice (2-Way) Radio</fullName>
+        <default>false</default>
+        <label>41. Pleasure &amp; Voice (2-Way) Radio</label>
+    </customValue>
+    <customValue>
+        <fullName>42. PA (Public Address, Voice Annunciator</fullName>
+        <default>false</default>
+        <label>42. PA (Public Address, Voice Annunciator)</label>
+    </customValue>
+    <customValue>
+        <fullName>43. Destination, Backlighted Signs</fullName>
+        <default>false</default>
+        <label>43. Destination, Backlighted Signs</label>
+    </customValue>
+    <customValue>
+        <fullName>44. Farebox, Drivers Step</fullName>
+        <default>false</default>
+        <label>44. Farebox, Drivers Step</label>
+    </customValue>
+    <customValue>
+        <fullName>45. Transfer Cutter</fullName>
+        <default>false</default>
+        <label>45. Transfer Cutter</label>
+    </customValue>
+    <customValue>
+        <fullName>46. Manual Passenger Counter</fullName>
+        <default>false</default>
+        <label>46. Manual Passenger Counter</label>
+    </customValue>
+    <customValue>
+        <fullName>47. Dash Bracket</fullName>
+        <default>false</default>
+        <label>47. Dash Bracket</label>
+    </customValue>
+    <customValue>
+        <fullName>48. Floor Panels</fullName>
+        <default>false</default>
+        <label>48. Floor Panels</label>
+    </customValue>
+    <customValue>
+        <fullName>49. Floor Covering &amp; Trim</fullName>
+        <default>false</default>
+        <label>49. Floor Covering &amp; Trim</label>
+    </customValue>
+    <customValue>
+        <fullName>50. Interior Panels</fullName>
+        <default>false</default>
+        <label>50. Interior Panels</label>
+    </customValue>
+    <customValue>
+        <fullName>51. Roof Hatch</fullName>
+        <default>false</default>
+        <label>51. Roof Hatch</label>
+    </customValue>
+    <customValue>
+        <fullName>52. Front Wheelwell Handrails, Package Racks &amp; Other Trim Items</fullName>
+        <default>false</default>
+        <label>52. Front Wheelwell Handrails, Package Racks &amp; Other Trim Items</label>
+    </customValue>
+    <customValue>
+        <fullName>53-54. Street Side &amp; Curb Side Exterior Mirror(s)</fullName>
+        <default>false</default>
+        <label>53-54. Street Side &amp; Curb Side Exterior Mirror(s)</label>
+    </customValue>
+    <customValue>
+        <fullName>55. Interior Mirrors</fullName>
+        <default>false</default>
+        <label>55. Interior Mirrors</label>
+    </customValue>
+    <customValue>
+        <fullName>56. Stanchion Details</fullName>
+        <default>false</default>
+        <label>56. Stanchion Details</label>
+    </customValue>
+    <customValue>
+        <fullName>57. Multiplexing Control Section &amp; Misc. Electrical</fullName>
+        <default>false</default>
+        <label>57. Multiplexing Control Section &amp; Misc. Electrical</label>
+    </customValue>
+    <customValue>
+        <fullName>58. Sun Shade</fullName>
+        <default>false</default>
+        <label>58. Sun Shade</label>
+    </customValue>
+    <customValue>
+        <fullName>59. Fire Alarm, Detection &amp; Suppression System</fullName>
+        <default>false</default>
+        <label>59. Fire Alarm, Detection &amp; Suppression System</label>
+    </customValue>
+    <customValue>
+        <fullName>60. Traffic Light Preemption System</fullName>
+        <default>false</default>
+        <label>60. Traffic Light Preemption System</label>
+    </customValue>
+    <customValue>
+        <fullName>61. Video Surveillance System</fullName>
+        <default>false</default>
+        <label>61. Video Surveillance System</label>
+    </customValue>
+    <customValue>
+        <fullName>62. Independent Back-up Camera, Monitor System</fullName>
+        <default>false</default>
+        <label>62. Independent Back-up Camera, Monitor System</label>
+    </customValue>
+    <customValue>
+        <fullName>63. Passenger Information Video Monitor Display System</fullName>
+        <default>false</default>
+        <label>63. Passenger Information Video Monitor Display System</label>
+    </customValue>
+    <customValue>
+        <fullName>64. Exterior Trim</fullName>
+        <default>false</default>
+        <label>64. Exterior Trim</label>
+    </customValue>
+    <customValue>
+        <fullName>65. Bike Rack</fullName>
+        <default>false</default>
+        <label>65. Bike Rack</label>
+    </customValue>
+    <customValue>
+        <fullName>66. Safety Equipment</fullName>
+        <default>false</default>
+        <label>66. Safety Equipment</label>
+    </customValue>
+    <customValue>
+        <fullName>67. Dash Applications Not Previously Selected</fullName>
+        <default>false</default>
+        <label>67. Dash Applications Not Previously Selected</label>
+    </customValue>
+    <customValue>
+        <fullName>68. Drivers Area Instrumentation</fullName>
+        <default>false</default>
+        <label>68. Drivers Area Instrumentation</label>
+    </customValue>
+    <customValue>
+        <fullName>69. Optional Components Mounted at Dash Area</fullName>
+        <default>false</default>
+        <label>69. Optional Components Mounted at Dash Area</label>
+    </customValue>
+    <customValue>
+        <fullName>69a. APC, ITS</fullName>
+        <default>false</default>
+        <label>69a. APC, ITS</label>
+    </customValue>
+    <customValue>
+        <fullName>69b. Pre-Trip Inspection Systems</fullName>
+        <default>false</default>
+        <label>69b. Pre-Trip Inspection Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>69c. Advanced Driver Assistance Systems (ADAS)</fullName>
+        <default>false</default>
+        <label>69c. Advanced Driver Assistance Systems (ADAS)</label>
+    </customValue>
+    <customValue>
+        <fullName>69d. Tap-Card Reader/Wireless Payment Systems</fullName>
+        <default>false</default>
+        <label>69d. Tap-Card Reader/Wireless Payment Systems</label>
+    </customValue>
+    <customValue>
+        <fullName>70. Decal Section</fullName>
+        <default>false</default>
+        <label>70. Decal Section</label>
+    </customValue>
+    <customValue>
+        <fullName>71. Paint &amp; Graphic Details</fullName>
+        <default>false</default>
+        <label>71. Paint &amp; Graphic Details</label>
+    </customValue>
+    <customValue>
+        <fullName>72. Ship Loose Items</fullName>
+        <default>false</default>
+        <label>72. Ship Loose Items</label>
+    </customValue>
+    <customValue>
+        <fullName>72a. Misc Requirements</fullName>
+        <default>false</default>
+        <label>72a. Misc Requirements</label>
+    </customValue>
+    <customValue>
+        <fullName>72b. Trolley Order Options</fullName>
+        <default>false</default>
+        <label>72b. Trolley Order Options</label>
+    </customValue>
+    <customValue>
+        <fullName>72c .Delivery Details</fullName>
+        <default>false</default>
+        <label>72c .Delivery Details</label>
+    </customValue>
+    <customValue>
+        <fullName>72d. Bus Acceptance</fullName>
+        <default>false</default>
+        <label>72d. Bus Acceptance</label>
+    </customValue>
+    <customValue>
+        <fullName>72e. Vendor Certification</fullName>
+        <default>false</default>
+        <label>72e. Vendor Certification</label>
+    </customValue>
+    <customValue>
+        <fullName>73. Manual Requirements</fullName>
+        <default>false</default>
+        <label>73. Manual Requirements</label>
+    </customValue>
+    <customValue>
+        <fullName>74. Warranty Requirements</fullName>
+        <default>false</default>
+        <label>74. Warranty Requirements</label>
+    </customValue>
+    <customValue>
+        <fullName>75. Training</fullName>
+        <default>false</default>
+        <label>75. Training</label>
+    </customValue>
+    <customValue>
+        <fullName>76. Spare Information</fullName>
+        <default>false</default>
+        <label>76. Spare Information</label>
+    </customValue>
+    <customValue>
+        <fullName>78. Hybrid Tools</fullName>
+        <default>false</default>
+        <label>78. Hybrid Tools</label>
+    </customValue>
+    <masterLabel>Buy Design Section</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

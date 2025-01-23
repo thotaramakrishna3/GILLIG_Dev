@@ -1,0 +1,13 @@
+<apex:component controller="listFleet" access="global">
+  <apex:attribute name="acctId" description="..." type="ID" assignTo="{!objId}"/>
+    <apex:dataTable id="Fleet" value="{!fleetList}" var="fleet" cellpadding="2" border="2" rendered="{!fleetList.size>0}">
+            <apex:column headerValue="Fleet">
+                <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))+fleet.ID}" target="_parent">{!fleet.Name}</apex:outputLink>
+            </apex:column> 
+            <apex:column headerValue="Start Date" value="{!fleet.Start_Date__c}"/>
+            <apex:column headerValue="Mode" value="{!fleet.Mode__c}"/>
+            <apex:column headerValue="Style" value="{!fleet.Style__c}"/>
+            <apex:column headerValue="Length" value="{!fleet.Length__c}"/>
+            <apex:column headerValue="Quantity" value="{!fleet.Quantity__c}"/>
+    </apex:dataTable>  
+</apex:component>

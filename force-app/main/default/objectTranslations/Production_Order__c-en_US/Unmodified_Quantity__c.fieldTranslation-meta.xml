@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Then Quantity of Buses in this Production Order after it has Split and will be same as the Production Order quantity of the existing Production Order --></help>
+    <label><!-- Quantity --></label>
+    <name>Unmodified_Quantity__c</name>
+</CustomFieldTranslation>

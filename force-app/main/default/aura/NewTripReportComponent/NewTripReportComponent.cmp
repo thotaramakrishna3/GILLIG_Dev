@@ -1,0 +1,407 @@
+<!--***********************************************************************************************************************************
+     Developer :Suyati
+     Name      : NewTripReportComponent
+     Usage     : Lightning Component for creating new trip Report
+     Apex Controller:NewTripReportController
+     Date      : October 2019   
+************************************************************************************************************************************--> 
+<aura:component controller="NewTripReportController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:actionOverride" access="global" >
+    <!-- Attributes that can be set while component calling-->
+    <aura:attribute name="objectName" 	type="string" default="Account" required="true" />
+    <aura:attribute name="fieldName" type="String[]" default="['Name','Internal_Name__c']" required="true" />
+    <aura:attribute name="value" 		type="String" default="" description="To pre-populate a value" />
+    <aura:attribute name="recordCount" 	type="string" default="5" description="Records visible at once"/>
+    <aura:attribute name="iconName" 	type="string" default="standard:account" description="complete icon name eg. standard:account" />
+    <aura:attribute name="label" 		type="string" default="Account Visited" description="Label will be displayed above input Box" />
+    <aura:attribute name="placeholder" 	type="string" default="Search..." description="placeholder for input Box" />
+    <aura:attribute name="displayDetails" type="boolean" default="false"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="selectedRows" type="List"/>
+    <aura:attribute name="selectedContactRows" type="List"/> 
+    <aura:attribute name="newAccountId" type="string"/>
+    <aura:attribute name="isModalOpen" type="boolean" default="false"/>
+    <aura:attribute name="recordLoadError" type="String"/>
+    <aura:attribute name="editDetails" type="boolean" default="false"/>
+    <aura:attribute name="enableEditing" type="boolean" default="false"/>
+    <aura:attribute name="activeSections" type="List" default="['A','B','C','D','E']" />
+    <aura:attribute name="tripReport" type="Trip_Report__c" default="{'sobjectType': 'Trip_Report__c',
+                                                                     'Account_Visited__c': '',
+                                                                     'Date_of_Visit__c': '',
+                                                                     'Artic_Bus_Plans__c': '',
+                                                                     'Electric_Bus_Plans__c': '',
+                                                                     'Fleet_Performance__c': '', 
+                                                                     'Fleet_Replacement_Plans__c': '',
+                                                                     'Key_Contact_Updates__c':'',
+                                                                     'General_Account_Updates__c':'',
+                                                                     'Ridership__c':'',
+                                                                     'Part_Sales_YTD__c':'',
+                                                                     'Part_Sales_Prior_Year__c':'',
+                                                                     'Parts_Sales_2_Years_Prior__c':'',
+                                                                     'Retrofits__c':'',
+                                                                     'Part_Sales_Updates__c':'',
+                                                                     'Field_Service_Items__c':'',
+                                                                     'Publications_Info__c':'',
+                                                                     'Customer_Experience__c':'',
+                                                                     'Fuel_Cell_Bus_Plans__c':''
+                                                                     }" access="GLOBAL"/>
+    
+    <!-- Internal Use Attributes -->
+    <aura:attribute name="searchString"   type="string" access="private" default="" description="String to search"/>
+    <aura:attribute name="selectedRecord" type="Object" access="private" default="" description="selected Record Details" />
+    <aura:attribute name="recordsList" 	  type="List"   access="private" description="List of Records having data" />
+    <aura:attribute name="message" 		  type="String" access="private" default="" />
+      <aura:attribute name="recordTypeId" type="string" default="" description="RecordType Id"/>
+    <!--Handler-->
+       <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- header -->
+    <div class="modal-header slds-docked-form-header slds-modal__header ">
+        <b><h4 class="title slds-text-heading--medium" >Add New Trip Report</h4></b>
+    </div>
+    <!-- Component Markup -->
+    <div class="slds-form-element" style="width:75%;margin-left: 20px">
+        <div>
+            <aura:if isTrue="{!!empty(v.label)}">
+                <label class="slds-form-element__label">{!v.label}</label>
+            </aura:if>
+            <div class="slds-combobox_container">
+                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open" aura:id="resultsDiv" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <div aura:id="lookup-pill" class="{! 'slds-pill-container ' + if(v.selectedRecord == '','slds-hide','') }">
+                            <!-- Selected Value Pill --> 
+                                <lightning:pill class="fullWidth" label="{!v.selectedRecord.label}" name="{!v.selectedRecord.value}" onremove="{! c.removeItem }">
+                                		<aura:set attribute="media">
+                                    		<lightning:icon iconName="{!v.iconName}" size="x-small" alternativeText="icon"/>
+                                		</aura:set>
+                           			 </lightning:pill>
+                        </div>
+                        <div aura:id="lookupField" class="{! if(v.selectedRecord == '','slds-show','slds-hide') }">
+                            <!-- Icon, Search Bar, Search Icon -->
+                            <lightning:icon class="slds-combobox__input-entity-icon" iconName="{!v.iconName}" size="large" alternativeText="icon"/>
+                            <lightning:input aura:id="inputLookup" class="inputBox" placeholder="{!v.placeholder}" onblur="{!c.blurEvent}" onkeyup="{! c.searchRecords}" value="{!v.searchString}" autoComplete="off" variant="label-hidden" id="combobox-id-1"  onclick="{! c.showRecords}" />
+                            <lightning:icon class="slds-input__icon" iconName="utility:search" size="x-small" alternativeText="search"/>
+                            <lightning:spinner class="slds-hide" aura:id="Spinner" alternativeText="Loading" size="small" variant="brand"/>
+                        </div>
+                    </div>
+                    <!-- Dropdown List -->
+                    <div id="listbox-id-1" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid" style="{! 'max-height:' + (8 + (v.recordCount * 40)) + 'px' }">
+                        <ul class="slds-listbox slds-listbox_vertical recordListBox" role="presentation">
+                            <aura:if isTrue="{!empty(v.message)}" >
+                                <!-- To display Drop down List -->
+                                <aura:iteration items="{!v.recordsList}" var="rec" >
+                                    <li id="{!rec.value}" class="slds-listbox__item eachItem" onmousedown="{!c.selectItem}">
+                                        <div class="slds-media slds-listbox__option_entity">
+                                            <lightning:icon iconName="{!v.iconName}" size="medium" alternativeText="icon" />
+                                            <span class="verticalAlign slds-truncate">{!rec.label}
+                                            </span>
+                                           
+                                        </div>
+                                        
+                                      <!--  <div class="slds-media slds-listbox__option_entity">
+                                            <lightning:icon iconName="{!v.iconName}" size="medium" alternativeText="icon" />
+                                          
+                                            <span class="verticalAlign slds-truncate">{!rec.fieldLabel}</span>
+                                        </div>-->
+                                         
+                                    </li>
+                                </aura:iteration>
+                                <!-- To display Error Message -->
+                                <aura:set attribute="else">
+                                    <li class="slds-listbox__item">
+                                        <span class="slds-media slds-listbox__option_entity">{!v.message}</span>
+                                    </li>
+                                </aura:set>
+                            </aura:if>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- Displays rest of the details once the account is selected-->
+        <aura:if isTrue="{!v.editDetails}">
+            <lightning:accordion  allowMultipleSectionsOpen="true" activeSectionName="{!v.activeSections }">
+                <lightning:accordionSection name="A" label="Main Info">
+                      <lightning:input type="date" required="true"  aura:id="expdate" label="Date of Visit" class="field" value="{!v.tripReport.Date_of_Visit__c}" displayDatePicker="true" />  
+                    <!--Key Contact Updates-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="KeyContactAccountUpdates" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="KeyContactAccountUpdatesButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01">Key Contact Updates</label>
+                            <lightning:formattedRichText aura:id="outputKeyContactAccountUpdates"  class="slds-input" value="{!v.tripReport.Key_Contact_Updates__c}"/> 
+                        </div>
+                        <lightning:buttonicon aura:id="KeyContactAccountUpdatesButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputKeyContactAccountUpdates">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Key_Contact_Updates__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--General Account Updates-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="GeneralAccountUpdates" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="GeneralAccountUpdatesButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01">General Account Updates</label>
+                            <lightning:formattedRichText aura:id="outputGeneralAccountUpdates"  class="slds-input" value="{!v.tripReport.General_Account_Updates__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="GeneralAccountUpdatesButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputGeneralAccountUpdates">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.General_Account_Updates__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--Electric Bus Plan Input-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="Electricbusplan" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="ElectricbusplanButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Electric Bus Plans</label>
+                            <lightning:formattedRichText aura:id="outputElectricbusplan"  class="slds-input" value="{!v.tripReport.Electric_Bus_Plans__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="ElectricbusplanButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputElectricbusplan">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Electric_Bus_Plans__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--Fuel Cell Bus Plan Input-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="Fuelcellbusplan" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="FuelcellbusplanButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Fuel Cell Bus Plans</label>
+                            <lightning:formattedRichText aura:id="outputFuelcellbusplan"  class="slds-input" value="{!v.tripReport.Fuel_Cell_Bus_Plans__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="FuelcellbusplanButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputFuelcellbusplan">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Fuel_Cell_Bus_Plans__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--Arctic Bus Plans-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="Arcticbusplan" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="ArcticbusplanButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Artic Bus Plans</label>
+                            <lightning:formattedRichText aura:id="outputArcticbusplan"  class="slds-input" value="{!v.tripReport.Artic_Bus_Plans__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="ArcticbusplanButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputArcticbusplan">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Artic_Bus_Plans__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--Fleet Performance Updates-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="FleetPerformance" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="FleetPerformanceButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Fleet Performance Updates</label>
+                            <lightning:formattedRichText aura:id="outputFleetPerformance"  class="slds-input" value="{!v.tripReport.Fleet_Performance__c}" /> 
+                        </div>
+                        
+                        <lightning:buttonicon aura:id="FleetPerformanceButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputFleetPerformance">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Fleet_Performance__c}"/><br/>                            
+                        </div>             
+                    </div>
+                    <!--Fleet Replacement Plans-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="FleetReplacement" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="FleetReplacementButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Fleet Replacement Plans</label>
+                            <lightning:formattedRichText aura:id="outputFleetReplacement"  class="slds-input" value="{!v.tripReport.Fleet_Replacement_Plans__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="FleetReplacementButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputFleetReplacement">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Fleet_Replacement_Plans__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--Ridership-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="Ridership" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="RidershipButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Ridership</label>
+                            <lightning:formattedRichText aura:id="outputRidership"  class="slds-input" value="{!v.tripReport.Ridership__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="RidershipButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputRidership">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Ridership__c}"/><br/>
+                        </div>
+                    </div>
+                </lightning:accordionSection>
+                <lightning:accordionSection name="C" label="Retrofits">
+                    <!--Retrofits-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="Retrofits" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="RetrofitsButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Retrofits</label>
+                            <lightning:formattedRichText aura:id="outputRetrofits"  class="slds-input" value="{!v.tripReport.Retrofits__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="RetrofitsButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputRetrofits">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Retrofits__c}"/><br/>
+                        </div>
+                    </div>
+                </lightning:accordionSection>
+                <lightning:accordionSection name="D" label="Additional Information">
+                    <!--Parts-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="Parts" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="PartsButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01">Parts </label>
+                            <lightning:formattedRichText aura:id="outputParts"  class="slds-input" value="{!v.tripReport.Part_Sales_Updates__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="PartsButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputParts">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Part_Sales_Updates__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--Field Service:-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="FieldService" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="FieldServiceButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01">Field Service: </label>
+                            <lightning:formattedRichText aura:id="outputFieldService"  class="slds-input" value="{!v.tripReport.Field_Service_Items__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="FieldServiceButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputFieldService">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Field_Service_Items__c}"/><br/>
+                        </div>
+                    </div>
+                    <!--Publications Info:-->
+                    
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="PublicationInfo" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="PublicationInfoButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01">Publications Info: </label>
+                            <lightning:formattedRichText aura:id="outputPublicationInfo"  class="slds-input" value="{!v.tripReport.Publications_Info__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="PublicationInfoButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputPublicationInfo">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Publications_Info__c}"/><br/>
+                        </div>
+                    </div>
+                    <!-- Customer Experience:-->
+                    <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right  ">
+                        <div id="CustomerExperience" onclick="{!c.onClickToggleDiv}">
+                            <lightning:buttonicon aura:id="CustomerExperienceButton" class="slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_Icon" iconName="utility:edit" size="small" onclick="{!c.onClickToggleButton}"/>
+                            <label class="slds-form-element__label" for="textarea-id-01"> Customer Experience: </label>
+                            <lightning:formattedRichText aura:id="outputCustomerExperience"  class="slds-input" value="{!v.tripReport.Customer_Experience__c}" /> 
+                        </div>
+                        <lightning:buttonicon aura:id="CustomerExperienceButton" class="slds-hide slds-icon slds-input__icon slds-input__icon_left  slds-icon-text-default set_closeIcon" iconName="utility:close" size="small" onclick="{!c.onClickToggleButton}"/>
+                        <div class='slds-hide' aura:id="inputCustomerExperience">
+                            <lightning:inputRichText   class="slds-input"  value="{!v.tripReport.Customer_Experience__c}"/><br/>
+                        </div>
+                    </div>
+                </lightning:accordionSection>
+                <!--Contacts Visited-->
+                <lightning:accordionSection name="E" label="Contact Visited">
+                    <lightning:button variant="brand" label="New" onclick="{!c.createRecord}" />
+                    <!--Creation of new contact starts here-->
+                    <aura:if isTrue="{!v.isModalOpen}">
+                        <!-- Modal/Popup Box starts here-->
+                        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                            <div class="slds-modal__container">
+                                <!-- Modal/Popup Box Header Starts here-->
+                                <header class="slds-modal__header">
+                                    <lightning:buttonIcon iconName="utility:close"
+                                                          onclick="{! c.closeModel }"
+                                                          alternativeText="close"
+                                                          variant="bare-inverse"
+                                                          class="slds-modal__close"/>
+                                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add New Contact</h2>
+                                </header>
+                                <!--Modal/Popup Box Body Starts here-->
+                                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                    <lightning:notificationsLibrary aura:id="notifLib"/>
+                                  <lightning:recordEditForm
+                                                              aura:id="recordEditForm"
+                                                              objectApiName="Contact"
+                                                              recordTypeId="{!v.recordTypeId}"
+                                         					  onsuccess="{!c.handleSuccess}">				  
+                                        <lightning:messages />
+                                        <div class="slds-grid slds-wrap">	
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Name"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                 <lightning:outputField fieldName="OwnerId"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2"> 
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField aura:id="PopulateAccount" fieldName="AccountId" value="{!v.tripReport.Account_Visited__c}"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="ReportsToId"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Title"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Department"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Email"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Fax"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Phone"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Birthdate"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="MobilePhone"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Left_Company__c"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:inputField fieldName="Spouse__c"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <lightning:outputField fieldName="RecordTypeId"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1">
+                                                <lightning:inputField fieldName="Contact_Lists__c"/>
+                                            </div>
+                                            <div class="slds-col slds-size_1-of-1">
+                                                <lightning:inputField fieldName="MailingAddress"/>
+                                            </div> 
+                                        </div>
+                                    </lightning:recordEditForm>
+                                </div>
+                                <!--Modal/Popup Box Footer Starts here-->
+                                <footer class="slds-modal__footer">
+                                    <lightning:button variant="neutral"
+                                                      label="Cancel"
+                                                      title="Cancel"
+                                                      onclick="{! c.closeModel }"/>
+                                    <lightning:button variant="brand"
+                                                      label="Submit"
+                                                          title="Submit"
+                                                          onclick="{!c.submitDetails}"/>
+                                    </footer>
+                                </div>
+                            </section>
+                            <div class="slds-backdrop slds-backdrop_open"></div>
+                        </aura:if>
+                        <!--Creation of new contact stops here-->
+                        <lightning:datatable
+                                             columns="{! v.columns }"
+                                             data="{! v.data }"
+                                             keyField="Id"
+                                             onrowselection="{!c.updateSelectedText }"
+                                             selectedRows="{!v.selectedRows}"/>
+                    </lightning:accordionSection>
+                    <!--Footer-->
+                    <div class="slds-m-top_medium">
+                        <div class="slds-modal__footer" style="height:55px;">
+                            <div style="float:right;">
+                                <lightning:button label="Cancel"  onclick="{!c.redirect}" />
+                                <lightning:button variant="brand" label="Save" onclick="{!c.saveRecord}" />
+                            </div> 
+                        </div>          
+                    </div>
+                </lightning:accordion>
+                <!--Footer--> 
+            </aura:if>
+        </div>
+    </aura:component>

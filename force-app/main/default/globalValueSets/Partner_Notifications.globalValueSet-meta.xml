@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Thermo King</fullName>
+        <default>false</default>
+        <label>Thermo King</label>
+    </customValue>
+    <customValue>
+        <fullName>ZF Steering</fullName>
+        <default>false</default>
+        <label>ZF Steering</label>
+    </customValue>
+    <customValue>
+        <fullName>Cummins OEM Portal</fullName>
+        <default>false</default>
+        <label>Cummins OEM Portal</label>
+    </customValue>
+    <customValue>
+        <fullName>GILLIG</fullName>
+        <default>false</default>
+        <label>GILLIG</label>
+    </customValue>
+    <customValue>
+        <fullName>FSI Tracker</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>FSI Tracker</label>
+    </customValue>
+    <customValue>
+        <fullName>Vendor Escalation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Vendor Escalation</label>
+    </customValue>
+    <customValue>
+        <fullName>Tread</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tread</label>
+    </customValue>
+    <masterLabel>Partner Notifications</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

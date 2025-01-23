@@ -1,0 +1,13 @@
+Hello {!Case.CreatedBy}, <br> 
+
+<br> Your {!Case.RecordType} case has been closed.<br> 
+
+<br> Account name : {!Case.Account}
+<br> Contact name :  {!Case.Contact}
+<br> case description :  {!Case.Description}
+<br> Case number :  {!Case.CaseNumber} <br>
+
+<br> Case record link {!Case.Link}<br>
+
+
+Thanks,

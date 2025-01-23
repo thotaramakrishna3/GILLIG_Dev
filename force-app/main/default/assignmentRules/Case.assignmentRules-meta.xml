@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Assignment %231</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Field Support</value>
+            </criteriaItems>
+            <team>Field Service</team>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Include_on_Issues_Log__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <team>Quality Issues Meeting</team>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Collections</value>
+            </criteriaItems>
+            <team>Accounts Receivable</team>
+            <team>Sales Leadership</team>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Case Record Assignment</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Warranty_Support_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Warranty</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Customer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>High</value>
+            </criteriaItems>
+            <template>unfiled$public/A_new_Case_created</template>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Technical_Support_Queue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Technical Support</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Customer</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Priority</field>
+                <operation>equals</operation>
+                <value>High</value>
+            </criteriaItems>
+            <template>unfiled$public/A_new_Case_created</template>
+        </ruleEntry>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>RCAR</fullName>
+        <active>false</active>
+    </assignmentRule>
+    <assignmentRule>
+        <fullName>Test</fullName>
+        <active>false</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Include_on_Issues_Log__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </criteriaItems>
+            <team>Quality Issues Meeting</team>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Production Support</value>
+            </criteriaItems>
+            <team>Production Support</team>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

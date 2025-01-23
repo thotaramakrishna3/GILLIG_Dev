@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Department --></label>
+    <name>Department__c</name>
+    <picklistValues>
+        <masterLabel>03 - Electrical</masterLabel>
+        <translation><!-- 03 - Electrical --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>04 - Chassis</masterLabel>
+        <translation><!-- 04 - Chassis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>05a - Roof</masterLabel>
+        <translation><!-- 05a - Roof --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>05b - Unibody</masterLabel>
+        <translation><!-- 05b - Unibody --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>06 - Body</masterLabel>
+        <translation><!-- 06 - Body --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>07 - Paint</masterLabel>
+        <translation><!-- 07 - Paint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08a - Trim</masterLabel>
+        <translation><!-- 08a - Trim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>08b - Trim</masterLabel>
+        <translation><!-- 08b - Trim --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>09 - Rack</masterLabel>
+        <translation><!-- 09 - Rack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>11 - Final</masterLabel>
+        <translation><!-- 11 - Final --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RR - Ready Row</masterLabel>
+        <translation><!-- RR - Ready Row --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

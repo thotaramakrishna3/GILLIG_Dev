@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Activity</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Activities</value>
+    </caseValues>
+    <layouts>
+        <layout>CNG Demo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Activity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Diesel Demo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>EBUS Demo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Hybrid Demo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Non-Gillig Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Trade Show Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Virtual Meeting Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- CNG Demo --></label>
+        <name>CNG_Demo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Diesel Demo --></label>
+        <name>Diesel_Demo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EBUS Demo --></label>
+        <name>EBUS_Demo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Hybrid Demo --></label>
+        <name>Hybrid_Demo</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Non-Gillig --></label>
+        <name>Non_Gillig</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Trade Show --></label>
+        <name>Trade_Show</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Virtual Meeting --></label>
+        <name>Virtual_Meeting</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

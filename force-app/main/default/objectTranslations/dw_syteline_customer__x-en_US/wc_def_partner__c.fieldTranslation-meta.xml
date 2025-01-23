@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- wc_def_partner --></label>
+    <name>wc_def_partner__c</name>
+</CustomFieldTranslation>

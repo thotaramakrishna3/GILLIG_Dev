@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rear Suspension --></label>
+    <name>Rear_Suspension__c</name>
+    <picklistValues>
+        <masterLabel>H2</masterLabel>
+        <translation><!-- H2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>H4</masterLabel>
+        <translation><!-- H4 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

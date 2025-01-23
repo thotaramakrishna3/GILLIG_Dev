@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>01 Engine</label>
+            <name>X01_Engine</name>
+        </dataCategory>
+        <dataCategory>
+            <label>02 Transmission</label>
+            <name>X02_Transmission</name>
+        </dataCategory>
+        <dataCategory>
+            <label>03 Driveline</label>
+            <name>X03_Driveline</name>
+        </dataCategory>
+        <dataCategory>
+            <label>04 Piping</label>
+            <name>X04_Piping</name>
+        </dataCategory>
+        <dataCategory>
+            <label>05 Steering</label>
+            <name>X05_Steering</name>
+        </dataCategory>
+        <dataCategory>
+            <label>06 Chassis</label>
+            <name>X06_Chassis</name>
+        </dataCategory>
+        <dataCategory>
+            <label>07 Front Axle</label>
+            <name>X07_Front_Axle</name>
+        </dataCategory>
+        <dataCategory>
+            <label>08 Front Suspension</label>
+            <name>X08_Front_Suspension</name>
+        </dataCategory>
+        <dataCategory>
+            <label>10 Rear Axle</label>
+            <name>X10_Rear_Axle</name>
+        </dataCategory>
+        <dataCategory>
+            <label>11 Rear Suspension</label>
+            <name>X11_Rear_Suspension</name>
+        </dataCategory>
+        <dataCategory>
+            <label>12 Wheel</label>
+            <name>X12_Wheel</name>
+        </dataCategory>
+        <dataCategory>
+            <label>13 Electrical</label>
+            <name>X13_Electrical</name>
+        </dataCategory>
+        <dataCategory>
+            <label>14 Body</label>
+            <name>X14_Body</name>
+        </dataCategory>
+        <dataCategory>
+            <label>15 Interior Trim</label>
+            <name>X15_Interior_Trim</name>
+        </dataCategory>
+        <dataCategory>
+            <label>16 Destination Sign</label>
+            <name>X16_Destination_Sign</name>
+        </dataCategory>
+        <dataCategory>
+            <label>17 Passenger Lift</label>
+            <name>X17_Passenger_Lift</name>
+        </dataCategory>
+        <dataCategory>
+            <label>18 Exterior Trim</label>
+            <name>X18_Exterior_Trim</name>
+        </dataCategory>
+        <dataCategory>
+            <label>19 Heater</label>
+            <name>X19_Heater</name>
+        </dataCategory>
+        <dataCategory>
+            <label>20 Air Conditioning</label>
+            <name>X20_Air_Conditioning</name>
+        </dataCategory>
+        <dataCategory>
+            <label>21 Windows</label>
+            <name>X21_Windows</name>
+        </dataCategory>
+        <dataCategory>
+            <label>22 Ad Frames</label>
+            <name>X22_Ad_Frames</name>
+        </dataCategory>
+        <dataCategory>
+            <label>23 Safety &amp; Road Equipment</label>
+            <name>X23_Safety_Road_Equipment</name>
+        </dataCategory>
+        <dataCategory>
+            <label>24 Dash Panels &amp; Gauges</label>
+            <name>X24_Dash_Panels_Gauges</name>
+        </dataCategory>
+        <dataCategory>
+            <label>25 Decals</label>
+            <name>X25_Decals</name>
+        </dataCategory>
+        <dataCategory>
+            <label>26 Fuel Tank</label>
+            <name>X26_Fuel_Tank</name>
+        </dataCategory>
+        <dataCategory>
+            <label>96 Fire</label>
+            <name>X96_Fire</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Problem Codes</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

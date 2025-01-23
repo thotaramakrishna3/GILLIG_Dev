@@ -1,0 +1,11 @@
+{!Bid_Information_Request__c.OwnerFirstName}, <BR> <BR>
+
+Bid Information Request {!Bid_Information_Request__c.Link} has been completed. <BR><BR>
+
+Your question of: <BR>
+
+{!Bid_Information_Request__c.Question__c} <BR><BR>
+
+Has been answered by {!Bid_Information_Request__c.Assigned_To__c}: <BR><BR>
+
+{!Bid_Information_Request__c.Response__c}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bus Photos Processor --></label>
+    <name>Bus_Photos_Processor__c</name>
+    <relationshipLabel><!-- Sales Orders (Bus Photos Processor) --></relationshipLabel>
+</CustomFieldTranslation>

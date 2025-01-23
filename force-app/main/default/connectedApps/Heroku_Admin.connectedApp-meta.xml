@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>greg.villa@gillig.com</contactEmail>
+    <contactPhone>5102643838</contactPhone>
+    <description>Heroku Administration web interface</description>
+    <label>Heroku Admin</label>
+    <samlConfig>
+        <acsUrl>https://sso.heroku.com/saml/gillig/finalize</acsUrl>
+        <encryptionType>AES_128</encryptionType>
+        <entityUrl>https://sso.heroku.com/saml/gillig</entityUrl>
+        <issuer>https://gillig.my.salesforce.com</issuer>
+        <samlNameIdFormat>Unspecified</samlNameIdFormat>
+        <samlSigningAlgoType>SHA1</samlSigningAlgoType>
+        <samlSubjectType>Username</samlSubjectType>
+    </samlConfig>
+    <startUrl>https://sso.heroku.com/saml/gillig/init</startUrl>
+</ConnectedApp>

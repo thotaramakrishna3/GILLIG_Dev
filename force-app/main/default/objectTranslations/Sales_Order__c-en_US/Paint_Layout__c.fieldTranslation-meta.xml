@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Paint Layout --></label>
+    <name>Paint_Layout__c</name>
+    <picklistValues>
+        <masterLabel>Corporate Identity Processing</masterLabel>
+        <translation><!-- Corporate Identity Processing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Reviewing</masterLabel>
+        <translation><!-- Customer Reviewing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paint Package Released</masterLabel>
+        <translation><!-- Paint Package Released --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Released</masterLabel>
+        <translation><!-- Released --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

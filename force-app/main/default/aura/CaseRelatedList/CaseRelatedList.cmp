@@ -1,0 +1,128 @@
+<!--***********************************************************************************************************************************
+     Developer : Suyati
+     Name      : CaseRelatedListComponent
+     Usage     : Lightning Component to create related list of case
+     Apex Controller:CaseRelatedListController
+     Date      : October 2019   
+************************************************************************************************************************************-->
+<aura:component controller="CaseRelatedListController" implements="flexipage:availableForAllPageTypes,force:hasRecordId"  access="global">
+    <aura:attribute name="AccountVisited" type="String"/>
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="fileData" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="newButtonClick" type="boolean" default="false"/>
+    <aura:attribute name="fileButtonClick" type="boolean" default="false"/>
+    <aura:attribute name="createNewCaseButton" type="boolean" default="false"/>
+    <aura:attribute name="count" type="integer"/>
+    <aura:attribute name="FileAndCommentList" type="list"/>
+    <aura:attribute name="contentDocumentId" type="string" /> 
+    <aura:attribute name="currentStep" type="String" default="1"/>
+    <aura:attribute name="selectedDocumentId" type="String"/>
+    <aura:attribute name="CaseRecordId" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:CaseRelatedListRefreshEvent" action="{!c.refreshChild}" />
+    <!-- To show the related cases-->
+    <lightning:card iconName="standard:case" title="{!'Cases(' + v.count + ')'}">
+        <div style="float: right;margin-top: -40px; margin-right: 25px;" >
+            <lightning:button variant="brand" label="New" onclick="{!c.createNew}" />
+        </div>
+		<aura:if isTrue="{!(v.count > 0)}">
+            <lightning:datatable
+                                 columns="{! v.columns }"
+                                 data="{! v.data }"
+                                 keyField="Id"
+                                 hideCheckboxColumn="true"
+                                 onrowaction="{!c.viewFileDetails}"
+                                 />
+        </aura:if>
+    </lightning:card>  
+    <!--To display a list of both files and comments uploaded for the case selected-->
+    <aura:if isTrue="{!v.fileButtonClick}">
+       <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeFileModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Files</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <div style="float: right;margin-top: -10px; margin-right: 25px;" >
+                        <lightning:button variant="brand"
+                                          label="New"
+                                          title="New"
+                                          aura:id="uploadNewFileButton"
+                                          onclick="{!c.handleNew}"/>
+                    </div>
+                     <!--Uploading more files for the case-->
+                        <aura:if isTrue="{!v.newButtonClick}">
+                            <div aura:id="photoUpload" style="padding-bottom: 25px;"> 
+                                <lightning:fileUpload label="Upload Supporting Documents"  name="fileUploader" multiple="true" accept=".pdf, .png, .jpg , .jpeg" recordId="{!v.CaseRecordId}" onuploadfinished="{!c.handleUploadFinished}" />
+                                <lightning:fileCard  aura:id="fileCard" fileId="{!v.contentDocumentId}" />
+                                <lightning:textarea name="Comments" label="Comments" aura:id="commentUpload" value=""/>
+                                <lightning:button variant="brand"
+                                                  aura:id="Submitbutton"
+                                                  label="Submit"
+                                                  title="Submit"
+                                                  onclick="{!c.saveAndCloseModel}"
+                                                  disabled="true"/>
+                            </div>
+                        </aura:if> 
+                    <br/>
+                    <br/>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered  " >
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-truncate" title="FileCard">Document Uploaded</div>
+                                    </th>
+                                    <th class="slds-text-title_caps" scope="col">
+                                        <div class="slds-truncate" title="Supporting Comment">Comments</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.FileAndCommentList}" var="file"  >
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="slds-truncate" title="{!file.Title}">
+                                                <a onclick="{!c.getSelected}" data-Id="{!file.ContentDocumentId}">{!file.Title}</a>
+                                            </div>
+                                        </th>
+                                        <th scope="row">
+                                            <div class="slds-truncate" title="Comments">{!file.Comments__c}</div>
+                                        </th>
+                                    </tr>  
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <!--Creation of new case-->
+    <aura:if isTrue="{!v.createNewCaseButton}">
+        <div class="slds-p-around_medium">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container" >
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeCreateModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Create Case</h2>
+                </header>
+              <!--   <div class="slds-modal__content slds-p-around_medium">-->
+               <div class="slds-modal__content" >
+                    <c:NewCaseComponent aura:id="childNewCase" recordId="{!v.recordId}" showModal="{!v.createNewCaseButton}"/>
+                </div>
+              </div>
+        </section>
+            </div>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

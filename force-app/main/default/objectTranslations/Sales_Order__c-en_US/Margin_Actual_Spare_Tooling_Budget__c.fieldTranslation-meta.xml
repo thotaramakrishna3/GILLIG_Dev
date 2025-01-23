@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Margin Actual Spare Tooling Budget --></label>
+    <name>Margin_Actual_Spare_Tooling_Budget__c</name>
+</CustomFieldTranslation>

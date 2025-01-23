@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Update the service appointment record with the latest service resource</description>
+    <environments>Default</environments>
+    <interviewLabel>check service resource {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>check service resource</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the related appointment</description>
+        <name>Get_Service_Appointment</name>
+        <label>Get Service Appointment</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Service_appointment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ServiceAppointment.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ServiceAppointment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Service_appointment</name>
+        <label>Update Service appointment</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ServiceAppointment.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>The_Service_Resource_from_the_Assigned_R__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.ServiceResource.RelatedRecord.Name</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>ASR_Email__c</field>
+            <value>
+                <elementReference>$Record.ServiceResource.RelatedRecord.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>The_Service_Resource_from_the_Assigned_R__c</field>
+            <value>
+                <elementReference>$Record.ServiceResource.RelatedRecord.Name</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ServiceAppointment</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Service_Appointment</targetReference>
+        </connector>
+        <filterFormula>ISNEW() || ISCHANGED({!$Record.ServiceResource.RelatedRecord.Id})</filterFormula>
+        <object>AssignedResource</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

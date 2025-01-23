@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When a bus is not Delivered calculate today minus the date of breakdown --></help>
+    <label><!-- Days Down --></label>
+    <name>Days_Down__c</name>
+</CustomFieldTranslation>

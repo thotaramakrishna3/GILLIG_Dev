@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChannelLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesExcludeFieldLabels>false</doesExcludeFieldLabels>
+    <doesExcludeFiles>false</doesExcludeFiles>
+    <enabledChannels>Email</enabledChannels>
+    <enabledChannels>Social</enabledChannels>
+    <enabledChannels>Chat</enabledChannels>
+    <enabledChannels>Messaging</enabledChannels>
+    <label>Attach DRP Article with Email</label>
+    <layoutItems>
+        <field>Title</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Summary</field>
+    </layoutItems>
+    <layoutItems>
+        <field>ArticleNumber</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Issue_Description_del__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Symptoms_del__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Tools_Required_del__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Repair_Steps__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Labor_Information__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Warranty_Claims__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Parts_Return_Disposition__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Parts_Required__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>TSB_Number__c</field>
+    </layoutItems>
+    <layoutItems>
+        <field>Vendor_Article__c</field>
+    </layoutItems>
+    <recordType>Diagnostic and Repair Plan</recordType>
+</ChannelLayout>

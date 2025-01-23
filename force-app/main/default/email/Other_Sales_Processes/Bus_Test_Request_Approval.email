@@ -1,0 +1,3 @@
+A new Bus Test Request has been entered.  Please review {!Bus_Hold_Request__c.Name}. 
+
+{!Bus_Hold_Request__c.Link}

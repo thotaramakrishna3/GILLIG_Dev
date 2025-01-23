@@ -1,0 +1,3 @@
+The Production Schedule for the week starting {!Exception_Day__c.Exception_Date__c} has been reviewed and approved by Sales, Purchasing and Production.  
+
+You can now run reports on the production schedule through the end of the week starting {!Exception_Day__c.Exception_Date__c}.

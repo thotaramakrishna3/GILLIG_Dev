@@ -1,0 +1,8 @@
+<BR>
+Hi {!Project_Tracker__c.ProjectOwner__c}, <BR><BR>
+The Project {!Project_Tracker__c.Project_Name__c} is in stage  {!Project_Tracker__c.Status__c} <BR>
+<BR>Please fill in Expected start date
+
+<BR>
+Thanks,<BR>
+{!Project_Tracker__c.Product_Manager__c}

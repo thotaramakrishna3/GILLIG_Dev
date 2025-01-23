@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Buy Design Auditors --></label>
+    <name>Buy_Design_Auditors__c</name>
+    <picklistValues>
+        <masterLabel>Fred Cruz</masterLabel>
+        <translation><!-- Fred Cruz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Greg Roderick</masterLabel>
+        <translation><!-- Greg Roderick --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jeff Ralleta</masterLabel>
+        <translation><!-- Jeff Ralleta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Joan Seei</masterLabel>
+        <translation><!-- Joan Seei --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kevin Fernandez</masterLabel>
+        <translation><!-- Kevin Fernandez --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ron Quebbemanman</masterLabel>
+        <translation><!-- Ron Quebbemanman --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

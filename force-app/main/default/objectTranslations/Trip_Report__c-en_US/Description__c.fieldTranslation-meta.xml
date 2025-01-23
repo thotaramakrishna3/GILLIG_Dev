@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Description --></label>
+    <name>Description__c</name>
+    <picklistValues>
+        <masterLabel>Customer Visit</masterLabel>
+        <translation><!-- Customer Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demo</masterLabel>
+        <translation><!-- Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non- Gillig Customer</masterLabel>
+        <translation><!-- Non- Gillig Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trade Show</masterLabel>
+        <translation><!-- Trade Show --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Virtual Meeting</masterLabel>
+        <translation><!-- Virtual Meeting --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

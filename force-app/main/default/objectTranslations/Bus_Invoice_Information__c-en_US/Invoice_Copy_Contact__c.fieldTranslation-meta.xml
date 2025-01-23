@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Invoice Copy Contact --></label>
+    <name>Invoice_Copy_Contact__c</name>
+    <relationshipLabel><!-- Bus Invoice Information (Invoice Copy Contact) --></relationshipLabel>
+</CustomFieldTranslation>

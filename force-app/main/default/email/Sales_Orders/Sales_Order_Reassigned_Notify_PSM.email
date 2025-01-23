@@ -1,0 +1,3 @@
+Sales Order {!Sales_Order__c.Name} is no longer assigned to you. Click on the link below to view the record.
+
+{!Sales_Order__c.Link}

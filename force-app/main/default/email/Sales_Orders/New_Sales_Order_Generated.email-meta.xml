@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notification to PSM that new Sales Order has been Created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>New Sales Order Generated</name>
+    <style>none</style>
+    <subject>New {!Sales_Order__c.Internal_Name__c} Sales Order ({!Sales_Order__c.Name}) has Been Created</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

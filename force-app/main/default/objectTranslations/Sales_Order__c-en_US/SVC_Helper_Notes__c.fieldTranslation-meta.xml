@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Brief description of task, i.e., &quot;file selection&quot; or &quot;condensing/PDFing&quot;. --></help>
+    <label><!-- SVC Helper Notes --></label>
+    <name>SVC_Helper_Notes__c</name>
+</CustomFieldTranslation>

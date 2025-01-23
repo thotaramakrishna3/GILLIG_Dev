@@ -1,0 +1,5 @@
+A new project {!Project_Tracker__c.Project_Name__c} is created {!Project_Tracker__c.Link} and assigned to you.
+
+
+Thanks
+{!Project_Tracker__c.OwnerFirstName}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Altoona</masterLabel>
+        <translation><!-- Altoona --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Service</masterLabel>
+        <translation><!-- In Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Delivery</masterLabel>
+        <translation><!-- On Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out Of Factory</masterLabel>
+        <translation><!-- Out Of Factory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out for Test</masterLabel>
+        <translation><!-- Out for Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PDI</masterLabel>
+        <translation><!-- PDI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready Row</masterLabel>
+        <translation><!-- Ready Row --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Repair Shop</masterLabel>
+        <translation><!-- Repair Shop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Road Test</masterLabel>
+        <translation><!-- Road Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sold</masterLabel>
+        <translation><!-- Sold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Staging</masterLabel>
+        <translation><!-- Staging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WIP</masterLabel>
+        <translation><!-- WIP --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

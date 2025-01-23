@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Mechanical Engineering Reviewer --></label>
+    <name>Mechanical_Engineering_Reviewer__c</name>
+    <relationshipLabel><!-- Option Approval Requests (Mechanical Engineering Reviewer) --></relationshipLabel>
+</CustomFieldTranslation>

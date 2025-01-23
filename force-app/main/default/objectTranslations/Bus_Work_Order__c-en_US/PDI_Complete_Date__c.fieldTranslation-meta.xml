@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When the Status is updated to &quot;Closed&quot;. --></help>
+    <label><!-- Closed Date --></label>
+    <name>PDI_Complete_Date__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Main Category --></label>
+    <name>PDI_Main_Category__c</name>
+    <picklistValues>
+        <masterLabel>AIR CONDITIONING</masterLabel>
+        <translation><!-- AIR CONDITIONING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BODY</masterLabel>
+        <translation><!-- BODY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHASSIS</masterLabel>
+        <translation><!-- CHASSIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DASH PANEL &amp; GUAGE</masterLabel>
+        <translation><!-- DASH PANEL &amp; GUAGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DESTINATION SIGN</masterLabel>
+        <translation><!-- DESTINATION SIGN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DRIVELINE</masterLabel>
+        <translation><!-- DRIVELINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ELECTRICAL</masterLabel>
+        <translation><!-- ELECTRICAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENGINE</masterLabel>
+        <translation><!-- ENGINE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXTERIOR TRIM</masterLabel>
+        <translation><!-- EXTERIOR TRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIRE</masterLabel>
+        <translation><!-- FIRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT AXLE</masterLabel>
+        <translation><!-- FRONT AXLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FRONT SUSPENSION</masterLabel>
+        <translation><!-- FRONT SUSPENSION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUEL</masterLabel>
+        <translation><!-- FUEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HEATER</masterLabel>
+        <translation><!-- HEATER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INTERIOR TRIM</masterLabel>
+        <translation><!-- INTERIOR TRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PAINT &amp; DECAL</masterLabel>
+        <translation><!-- PAINT &amp; DECAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIPING</masterLabel>
+        <translation><!-- PIPING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RAMP</masterLabel>
+        <translation><!-- RAMP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR AXLE</masterLabel>
+        <translation><!-- REAR AXLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>REAR SUSPENSION</masterLabel>
+        <translation><!-- REAR SUSPENSION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAFETY &amp; ROAD EQUIPMENT</masterLabel>
+        <translation><!-- SAFETY &amp; ROAD EQUIPMENT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STEERING</masterLabel>
+        <translation><!-- STEERING --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRANSMISSION</masterLabel>
+        <translation><!-- TRANSMISSION --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WHEEL &amp; TIRE</masterLabel>
+        <translation><!-- WHEEL &amp; TIRE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WINDOW</masterLabel>
+        <translation><!-- WINDOW --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

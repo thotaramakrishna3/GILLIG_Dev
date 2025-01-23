@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Diesel</fullName>
+        <default>false</default>
+        <label>Diesel</label>
+    </customValue>
+    <customValue>
+        <fullName>CNG</fullName>
+        <default>false</default>
+        <label>CNG</label>
+    </customValue>
+    <customValue>
+        <fullName>Allison Hybrid</fullName>
+        <default>false</default>
+        <label>Allison Hybrid</label>
+    </customValue>
+    <customValue>
+        <fullName>BAE Hybrid</fullName>
+        <default>false</default>
+        <label>BAE Hybrid</label>
+    </customValue>
+    <customValue>
+        <fullName>Electric</fullName>
+        <default>false</default>
+        <label>Electric</label>
+    </customValue>
+    <customValue>
+        <fullName>Fuel Cell</fullName>
+        <default>false</default>
+        <label>Fuel Cell</label>
+    </customValue>
+    <masterLabel>Mode</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

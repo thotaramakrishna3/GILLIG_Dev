@@ -1,0 +1,144 @@
+<!doctype html>
+<html style="font-family:Arial;">
+<head>
+<meta charset="UTF-8">
+<title>GILLIG - Truck Trailer Transit</title>
+</head>
+
+<body style="font-family:Arial; margin: 0; padding: 0;">
+	<div id="logo" style="background-color: #184b9b;padding: 50px;
+		text-align: center;
+		border-bottom: 4px solid white;">
+		<a href="https://www.gillig.com/" target="_blank"/><img class="logo" src="https://i.ibb.co/VCRRKSz/GILLIG-Logo-White.png" style="width: 250px;"/></a>
+	</div>
+	
+	<font color='#FFFFFF'><div id="header" style="background-image: url(https://i.ibb.co/HNvt4Rx/bg1.png);
+		background-size: cover; overflow: auto;
+		padding: 20px 0;">
+		<div class="header-content" style="margin: auto;
+
+		text-align: center;">
+			<h1 style="text-transform: uppercase;
+		font-family: Arial;
+		font-weight: normal;
+		color: #ffffff;
+		margin: 0;">GILLIG is proud to announce</h1></font>
+			<font color='#ffcd03'><h2 style="text-transform: none;
+		font-family: Arial;
+		margin: 0;
+		color: #ffcd03;
+		font-size: 30px;
+		font-weight: normal;">Reliable Cost-Effective Replacement Brake Parts &amp; Kits by Truck Trailer Transit (TTT)</h2></font>
+		</div>
+	</div>
+	<div id="content" style="margin: 50px 50px 10px 50px;
+		padding-bottom: 20px;">
+		<img class="brake-kit" src="https://i.ibb.co/pWXFhc4/Brake-Kit-Illustration.png" style="width: 50%;
+		max-width: 500px;
+		min-width: 300px;
+		float: right;
+		margin: 25px;"/>
+		<img class="ttt-logo" src="https://i.ibb.co/nkp8j6T/TTT-Logo.png" style="height: 70px;"/>
+		<p style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">Since its inception in 1982, the Truck Trailer Transit business model has been at the forefront of development and distribution of affordable and dependable brake maintenance kits. TTT stands at the ready to develop Brake Service Kit’s that meet your fleet’s individual maintenance requirements.</p>
+		<p style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">The TTT brake kit is tailored to meet your specific fleet maintenance needs ensuring that all the necessary brake parts are included during each brake service interval.</p>
+		<p style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">In addition, using TTT Brake Kits places the decision for component selection in the hands of The Fleet Management Team and ensures standardized maintenance practices across the fleet.</p>
+		<p style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">Another key element of the TTT brake kit is flexibility, as requirements change so can the contents of the Kit.</p>
+		<p style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">TTT has the expertise to customize kits for each individual customer depending on their maintenance needs.</p>
+		<ul style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">
+			<li style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">TTT Brake Kits Ensure the Right parts are Right where you Need them</li>
+			<li style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">TTT Brake Kits help Standardize your Brake Maintenance Program</li>
+			<li style="font-family: Arial;
+		text-align: justify;
+		color: #4d4d4d;">TTT Brake Kits help Maximize efficiency</li>
+		</ul><br/>
+		<div class="date" style="text-align: right;
+		font-size: 10px;
+		margin: 0; width: 100%; overflow: hidden;">
+			04.14.2020
+		</div>
+	</div>
+	
+	<div id="footer" style="padding: 0 50px 0 50px;">
+		<font color="17479e"><h3 style="font-family: Arial;
+		color: #17479e;
+		margin: 0 0 0 0;
+		text-align: center;">CONTACT GILLIG PARTS FOR COMPETITIVE PRICING!</h3></font>
+		<font color="d71920"><h4 style="font-family: Arial;
+		color: #d71920;
+		margin: 0;
+		padding-bottom: 20px;
+		text-align: center;
+		border-bottom: 1px solid #17479e;">Stock up on GILLIG OEM parts, tools, and equipment to minimize downtime.</h4></font>
+		<div class="flex-container" style="list-style: none;
+  		margin: 0;
+	  	padding: 0 40px 0 0;
+	  	display:flex;
+	  	align-items: center;
+	  	justify-content: space-between;">
+			<ul class="row">
+				<li class="flex-item" style="display: block;
+  		list-style: none;
+  		margin: 0;
+  		padding: 0;
+  		width: 100%; font-family: Arial;">
+					GILLIG Parts<br/>
+					25972 Eden Landing Road<br/>
+					Hayward, CA 94545<br/>
+				</li>
+			</ul>
+			<ul class="row">
+				<li class="flex-item" style="display: block;
+  		list-style: none;
+  		margin: 0;
+  		padding: 0;
+  		width: 100%;">
+					<img src="https://i.ibb.co/TtYzFJ1/American-Built.png" width="80" />
+				</li>
+			</ul>
+			<ul class="row">
+				<li class="flex-item" style="display: block;
+  		list-style: none;
+  		margin: 0;
+  		padding: 0;
+  		width: 100%;">
+					<a class="email" href="mailto:parts-sales@gillig.com" style="color: #4d4d4d; font-family: Arial;
+		text-decoration: none;">parts-sales@gillig.com</a>
+					<font color="17479e"><h5 style="font-family: Arial;
+		font-size: 23px;
+		font-weight: normal;
+		color: #17479e;
+		margin: 0;">510.264.5160</h5></font>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+
+
+<style>
+	@font-face {
+		font-family: Axiforma-Bold, sans-serif;
+		src: local('Montserrat-Regular'), url(https://gillig-my.sharepoint.com/:u:/r/personal/kristinar_gillig_com/Documents/Email%20Files/Kastelov%20-%20Axiforma%20Bold.otf?csf=1&web=1&e=SJYWik) format('woff');
+	}
+	@font-face {
+		font-family: Axiforma-Book, sans-serif;
+		src: 'https://gillig-my.sharepoint.com/:u:/r/personal/kristinar_gillig_com/Documents/Email%20Files/Kastelov%20-%20Axiforma%20Book.otf?csf=1&web=1&e=IE6rbK';
+	}
+</style>

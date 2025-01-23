@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalDataSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authProvider>Sharepoint_Meeting_Notes</authProvider>
+    <customConfiguration>{&quot;sharepointConnectorUrl&quot;:&quot;https://gillig.sharepoint.com/sites/meetingnotes&quot;,&quot;singleSiteCollection&quot;:&quot;true&quot;}</customConfiguration>
+    <isWritable>false</isWritable>
+    <label>Meeting Notes</label>
+    <principalType>PerUser</principalType>
+    <protocol>Oauth</protocol>
+    <type>ContentHubSharepointOffice365</type>
+</ExternalDataSource>

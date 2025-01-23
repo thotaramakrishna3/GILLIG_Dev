@@ -1,0 +1,19 @@
+<br><br>
+
+Hello  {!ServiceAppointment.The_Service_Resource_from_the_Assigned_R__c}, <br><br>
+
+
+Service Appointment Details: <br> 
+{!ServiceAppointment.Link}    for  <br><br>
+ Account : {!ServiceAppointment.Account} <br>
+ Status : {!ServiceAppointment.Status}<br> 
+<br> Time <br>
+Scheduled Start : {!ServiceAppointment.SchedStartTime} <br>
+Scheduled End :{!ServiceAppointment.SchedEndTime}<br>
+<br>Location : <br>
+ {!ServiceAppointment.Address} <br><br><br>
+
+
+Thanks, <br>
+
+{!ServiceAppointment.OwnerFullName}

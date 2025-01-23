@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Operation Check Master Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Operation Check Master Data</value>
+    </caseValues>
+    <layouts>
+        <layout>Operation Check Master Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Customer specific jobs. --></description>
+        <label><!-- Customer Job --></label>
+        <name>Customer_Job</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- QA checks Jobs --></description>
+        <label><!-- QA Check --></label>
+        <name>QA_Check</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Production job. --></description>
+        <label><!-- Standard Job --></label>
+        <name>Standard_Job</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select a current or future date for the Active and Inactive Date. --></errorMessage>
+        <name>Active_past_dates_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Changes to Build Station not allowed. Set current Op Check to Inactive and create a new Op Chk --></errorMessage>
+        <name>Build_station_Changes_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Changes to Bus Mode not allowed. Set current Op Check to Inactive and create a new Op Chk --></errorMessage>
+        <name>Bus_Mode_Changes_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Do not use None as a Transmission Op-Chk --></errorMessage>
+        <name>Check_Transmission_selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Changes to Department not allowed. Set current Op Check to Inactive and create a new Op Chk --></errorMessage>
+        <name>Department_Changes_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a current or future date for the Active and Inactive Date. --></errorMessage>
+        <name>Inactive_past_dates_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Operation Description Value --></errorMessage>
+        <name>Operation_Description_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Changes to Transmission not allowed. Set current Op Check to Inactive and create a new Op Chk --></errorMessage>
+        <name>Transmission_Changes_not_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Value description when setting Value Required --></errorMessage>
+        <name>Value_Description</name>
+    </validationRules>
+</CustomObjectTranslation>

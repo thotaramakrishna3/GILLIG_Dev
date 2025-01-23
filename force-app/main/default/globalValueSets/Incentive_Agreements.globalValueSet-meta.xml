@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Allison</fullName>
+        <default>false</default>
+        <label>Allison</label>
+    </customValue>
+    <customValue>
+        <fullName>Voith</fullName>
+        <default>false</default>
+        <label>Voith</label>
+    </customValue>
+    <customValue>
+        <fullName>Thermo King</fullName>
+        <default>false</default>
+        <label>Thermo King</label>
+    </customValue>
+    <customValue>
+        <fullName>BAE</fullName>
+        <default>false</default>
+        <label>BAE</label>
+    </customValue>
+    <customValue>
+        <fullName>Cummins</fullName>
+        <default>false</default>
+        <label>Cummins</label>
+    </customValue>
+    <customValue>
+        <fullName>Hanover</fullName>
+        <default>false</default>
+        <label>Hanover</label>
+    </customValue>
+    <customValue>
+        <fullName>Luminator</fullName>
+        <default>false</default>
+        <label>Luminator</label>
+    </customValue>
+    <customValue>
+        <fullName>USSC</fullName>
+        <default>false</default>
+        <label>USSC</label>
+    </customValue>
+    <customValue>
+        <fullName>American Seating</fullName>
+        <default>false</default>
+        <label>American Seating</label>
+    </customValue>
+    <customValue>
+        <fullName>Arow</fullName>
+        <default>false</default>
+        <label>Arow</label>
+    </customValue>
+    <customValue>
+        <fullName>Ricon</fullName>
+        <default>false</default>
+        <label>Ricon</label>
+    </customValue>
+    <customValue>
+        <fullName>Vapor</fullName>
+        <default>false</default>
+        <label>Vapor</label>
+    </customValue>
+    <customValue>
+        <fullName>Lift U</fullName>
+        <default>false</default>
+        <label>Lift U</label>
+    </customValue>
+    <masterLabel>Incentive Agreements</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

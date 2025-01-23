@@ -1,0 +1,7 @@
+<BR>You are being assigned to the Project {!Project_Tracker__c.Project_Name__c}
+<BR><BR>
+Project Details are found below  <BR>  {!Project_Tracker__c.Link}<BR>
+
+
+Thanks,<BR>
+{!Project_Tracker__c.Product_Manager__c}

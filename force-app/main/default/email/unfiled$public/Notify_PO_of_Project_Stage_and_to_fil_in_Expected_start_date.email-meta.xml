@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notify PO of Project Stage and to fil in Expected start date</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notify PO of Project Stage and to fil in Expected start date</name>
+    <style>none</style>
+    <subject>Please fill in the Expected start date for Project  {!Project_Tracker__c.Project_Name__c}</subject>
+    <textOnly>&lt;BR&gt;
+Hi {!Project_Tracker__c.ProjectOwner__c}, &lt;BR&gt;
+
+The Project {!Project_Tracker__c.Project_Name__c} is in stage  {!Project_Tracker__c.Status__c} &lt;BR&gt;
+Please fill in Expected start date
+
+&lt;BR&gt;
+Thanks,&lt;BR&gt;
+{!Project_Tracker__c.Product_Manager__c}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

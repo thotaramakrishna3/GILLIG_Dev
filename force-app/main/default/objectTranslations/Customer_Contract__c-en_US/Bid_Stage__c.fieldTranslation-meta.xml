@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Bid Stage --></label>
+    <name>Bid_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Awaiting Approved Equals</masterLabel>
+        <translation><!-- Awaiting Approved Equals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Awaiting Decision</masterLabel>
+        <translation><!-- Awaiting Decision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Award Competitor</masterLabel>
+        <translation><!-- Award Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Award GILLIG</masterLabel>
+        <translation><!-- Award GILLIG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAFO</masterLabel>
+        <translation><!-- BAFO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Canceled</masterLabel>
+        <translation><!-- Canceled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clarifications</masterLabel>
+        <translation><!-- Clarifications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intent to Award GILLIG</masterLabel>
+        <translation><!-- Intent to Award GILLIG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No-Bid</masterLabel>
+        <translation><!-- No-Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prepare Approved Equals</masterLabel>
+        <translation><!-- Prepare Approved Equals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prepare Bid</masterLabel>
+        <translation><!-- Prepare Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Specification Received</masterLabel>
+        <translation><!-- Specification Received --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

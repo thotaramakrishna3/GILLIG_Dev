@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>A start date is expected to be entered in by the project owner since its approved by product manager</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notify projectOwner of Project assignment</name>
+    <style>none</style>
+    <subject>{!Project_Tracker__c.ProjectOwner__c} assigned as the Project Owner for Project  {!Project_Tracker__c.Project_Name__c}</subject>
+    <textOnly>Hi {!Project_Tracker__c.ProjectOwner__c},
+ &lt;BR&gt; Please fill in the expected start date for the project : {!Project_Tracker__c.Link} &lt;BR&gt;
+as its been approved by the product manager : {!Project_Tracker__c.Product_Manager__c}  &lt;BR&gt;&lt;BR&gt;Thanks, &lt;BR&gt; {!Project_Tracker__c.OwnerFirstName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>A Service Appointment is created and assigned to Service Resource</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notify Service Resource of Service Appointment</name>
+    <style>none</style>
+    <subject>Notification : Service Appointment is Scheduled for {!ServiceAppointment.Account}</subject>
+    <textOnly>Hello, &lt;br&gt;&lt;br&gt;
+
+
+
+
+Service Appointment Details: {!ServiceAppointment.Link}   for Account : {!ServiceAppointment.Account} &lt;br&gt;
+Status : {!ServiceAppointment.Status}&lt;br&gt; 
+
+Scheduled Start : {!ServiceAppointment.SchedStartTime} &lt;br&gt;
+Scheduled End :{!ServiceAppointment.SchedEndTime}&lt;br&gt;
+
+Location : {!ServiceAppointment.Address} &lt;br&gt;
+
+
+Thanks, &lt;br&gt;
+
+{!ServiceAppointment.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Style --></label>
+    <name>Style__c</name>
+    <picklistValues>
+        <masterLabel>BRT PLUS</masterLabel>
+        <translation><!-- BRT PLUS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Double Decker</masterLabel>
+        <translation><!-- Double Decker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Floor</masterLabel>
+        <translation><!-- Low Floor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Floor BRT</masterLabel>
+        <translation><!-- Low Floor BRT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Floor Plus</masterLabel>
+        <translation><!-- Low Floor Plus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUBURBAN</masterLabel>
+        <translation><!-- SUBURBAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trolley</masterLabel>
+        <translation><!-- Trolley --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

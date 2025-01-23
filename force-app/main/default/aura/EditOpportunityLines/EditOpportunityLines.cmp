@@ -1,0 +1,57 @@
+<!--***********************************************************************************************************************************
+     Developer :Suyati
+     Name      : EditOpportunityLines
+     Usage     : Lightning component to edit an opportunity line 
+     Date      : October 2019   
+************************************************************************************************************************************--> 
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <!-- attributes -->
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="openModal" type="boolean" default="true"/>
+    <aura:attribute name="showModal" type="Boolean" />
+     <!-- event -->
+    <aura:registerEvent name="refreshParentComponent" type="c:CaseRelatedListRefreshEvent"/>
+    <!--Modal content starts here-->
+    <div class="slds-modal__content slds-p-around_medium"  aura:id="caseModal" id="modal-content-id-1">
+        
+        <div class="slds-grid slds-grid_vertical">
+            <lightning:notificationsLibrary aura:id="notifLib"/>
+            <!---Edit an opportunity line-->
+            <lightning:recordEditForm
+                                      aura:id="recordEditForm"
+                                      objectApiName="Opportunity_Line__c"
+                                      recordId="{!v.recordId}"
+                                      onsuccess="{!c.handleSuccess}">
+                
+                <lightning:messages />
+                <div class="slds-grid slds-wrap">	
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Name"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Quantity__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Mode__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Length__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Style__c"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning:inputField fieldName="Opportunity_Line__c"/>
+                    </div>   
+                </div>
+            </lightning:recordEditForm>
+        </div>
+        <div class="slds-grid slds-wrap slds-float_right">	
+            <lightning:button variant="brand"
+                              label="Save"
+                              title="Save"
+                              onclick="{!c.handleSubmit}"/>
+        </div>
+    </div>
+    <!---Model End Here-->
+</aura:component>

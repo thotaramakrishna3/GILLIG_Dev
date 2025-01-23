@@ -1,0 +1,5 @@
+{!Customer_Contract__c.Name} has been awarded to GILLIG and has now been updated in Salesforce to "GILLIG" Status.  
+
+Please confirm that all of the fields on the Salesforce record ({!Customer_Contract__c.Link}) have been populated and are updated including the Award Date, Expiration Date, Delivery Details for the Initial Order and the Option Orders.  Please also reconfirm the accuracy of all other fields on the record one last time.
+
+Thank you!

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Active Project Stage --></label>
+    <name>Active_Project_Stage__c</name>
+    <picklistValues>
+        <masterLabel>1. Initiating</masterLabel>
+        <translation><!-- 1. Initiating --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2. Planning</masterLabel>
+        <translation><!-- 2. Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3. Executing</masterLabel>
+        <translation><!-- 3. Executing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4. Monitoring &amp; Controlling</masterLabel>
+        <translation><!-- 4. Monitoring &amp; Controlling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5. Closing</masterLabel>
+        <translation><!-- 5. Closing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

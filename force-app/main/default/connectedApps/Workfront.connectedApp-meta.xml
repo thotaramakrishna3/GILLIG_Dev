@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>it_group@gillig.com</contactEmail>
+    <label>Workfront</label>
+    <samlConfig>
+        <acsUrl>https://gillig.my.workfront.com/attask/saml2consumer.cmd</acsUrl>
+        <encryptionType>AES_128</encryptionType>
+        <entityUrl>gillig.my.workfront.com/SAML2</entityUrl>
+        <samlNameIdFormat>Unspecified</samlNameIdFormat>
+        <samlSigningAlgoType>SHA1</samlSigningAlgoType>
+        <samlSubjectType>FederationId</samlSubjectType>
+    </samlConfig>
+    <startUrl>https://gillig.attask-ondemand.com</startUrl>
+</ConnectedApp>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Distribution --></label>
+    <name>Distribution__c</name>
+    <picklistValues>
+        <masterLabel>Contract Administration</masterLabel>
+        <translation><!-- Contract Administration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Sales Managers</masterLabel>
+        <translation><!-- Project Sales Managers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional Sales Managers</masterLabel>
+        <translation><!-- Regional Sales Managers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Administration</masterLabel>
+        <translation><!-- Sales Administration --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

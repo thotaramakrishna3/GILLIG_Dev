@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Sales Information Bulletin</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Sales Information Bulletin</name>
+    <style>none</style>
+    <subject>A new Sales Information Bulletin &quot;{!Sales_Information_Bulletin__c.Name}&quot; has been created</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

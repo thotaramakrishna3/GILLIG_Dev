@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Charging Requirements --></label>
+    <name>Charging_Requirements__c</name>
+    <picklistValues>
+        <masterLabel>Momentum Dynamics Inductive</masterLabel>
+        <translation><!-- Momentum Dynamics Inductive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overhead Conductive - Blade</masterLabel>
+        <translation><!-- Overhead Conductive - Blade --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overhead Conductive - Inverted Pantograph</masterLabel>
+        <translation><!-- Overhead Conductive - Inverted Pantograph --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overhead Conductive - Pantograph</masterLabel>
+        <translation><!-- Overhead Conductive - Pantograph --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plug In (CCS Type 1)</masterLabel>
+        <translation><!-- Plug In (CCS Type 1) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plug In (CCS Type 2)</masterLabel>
+        <translation><!-- Plug In (CCS Type 2) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WAVE Inductive</masterLabel>
+        <translation><!-- WAVE Inductive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

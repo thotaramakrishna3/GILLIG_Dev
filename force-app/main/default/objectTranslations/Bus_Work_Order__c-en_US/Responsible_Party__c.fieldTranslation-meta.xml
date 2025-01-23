@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Responsible Party --></label>
+    <name>Responsible_Party__c</name>
+    <picklistValues>
+        <masterLabel>Engineering</masterLabel>
+        <translation><!-- Engineering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Production</masterLabel>
+        <translation><!-- Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchasing</masterLabel>
+        <translation><!-- Purchasing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quality</masterLabel>
+        <translation><!-- Quality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales</masterLabel>
+        <translation><!-- Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Supplier</masterLabel>
+        <translation><!-- Supplier --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warehouse</masterLabel>
+        <translation><!-- Warehouse --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

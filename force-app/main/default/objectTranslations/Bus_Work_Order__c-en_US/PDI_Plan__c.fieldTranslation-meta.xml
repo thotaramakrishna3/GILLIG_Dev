@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PDI Plan --></label>
+    <name>PDI_Plan__c</name>
+    <picklistValues>
+        <masterLabel>PCO</masterLabel>
+        <translation><!-- PCO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PDI BEB</masterLabel>
+        <translation><!-- PDI BEB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PDI CNG</masterLabel>
+        <translation><!-- PDI CNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PDI Diesel</masterLabel>
+        <translation><!-- PDI Diesel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PDI Hybrid</masterLabel>
+        <translation><!-- PDI Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PDI Issues</masterLabel>
+        <translation><!-- PDI Issues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ship Short</masterLabel>
+        <translation><!-- Ship Short --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

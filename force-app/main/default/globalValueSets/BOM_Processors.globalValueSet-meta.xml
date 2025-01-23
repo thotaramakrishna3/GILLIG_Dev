@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>E.J. Mariscal</fullName>
+        <default>false</default>
+        <label>E.J. Mariscal</label>
+    </customValue>
+    <customValue>
+        <fullName>Fred Cruz</fullName>
+        <default>false</default>
+        <label>Fred Cruz</label>
+    </customValue>
+    <customValue>
+        <fullName>Greg Roderick</fullName>
+        <default>false</default>
+        <label>Greg Roderick</label>
+    </customValue>
+    <customValue>
+        <fullName>Joe Abrew</fullName>
+        <default>false</default>
+        <label>Joe Abrew</label>
+    </customValue>
+    <customValue>
+        <fullName>Cesar Gonzalez</fullName>
+        <default>false</default>
+        <label>Cesar Gonzalez</label>
+    </customValue>
+    <customValue>
+        <fullName>Aaron DeGracia</fullName>
+        <default>false</default>
+        <label>Aaron DeGracia</label>
+    </customValue>
+    <customValue>
+        <fullName>Kevin Fernandez</fullName>
+        <default>false</default>
+        <label>Kevin Fernandez</label>
+    </customValue>
+    <customValue>
+        <fullName>Keith Lynch</fullName>
+        <default>false</default>
+        <label>Keith Lynch</label>
+    </customValue>
+    <customValue>
+        <fullName>Michael Rands</fullName>
+        <default>false</default>
+        <label>Michael Rands</label>
+    </customValue>
+    <customValue>
+        <fullName>Tim Agawa</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tim Agawa</label>
+    </customValue>
+    <customValue>
+        <fullName>Ron Quebbeman</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ron Quebbeman</label>
+    </customValue>
+    <customValue>
+        <fullName>John Edmondson</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>John Edmondson</label>
+    </customValue>
+    <customValue>
+        <fullName>Joanie Seei</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Joanie Seei</label>
+    </customValue>
+    <customValue>
+        <fullName>Jeff Ralleta</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Jeff Ralleta</label>
+    </customValue>
+    <customValue>
+        <fullName>Jason Graves</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Jason Graves</label>
+    </customValue>
+    <masterLabel>BOM Processors</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Communications Project</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Communication Projects</value>
+    </caseValues>
+    <layouts>
+        <layout>Communications Project Layout</layout>
+        <sections>
+            <label><!-- Content --></label>
+            <section>Content</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details &amp; Dates --></label>
+            <section>Details &amp; Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Scope &amp; Budget --></label>
+            <section>Scope &amp; Budget</section>
+        </sections>
+        <sections>
+            <label><!-- Team &amp; Effort --></label>
+            <section>Team &amp; Effort</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

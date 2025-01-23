@@ -1,0 +1,199 @@
+.headstyle{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.tblheader{
+    height:3rem;
+}
+.tblheaderth{
+    color: #005fb2 !important;
+}
+.emptyContentInner {
+    padding-top:25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+}
+.emptymessage{
+    margin : -55px 0px 55px 0px;
+}
+
+.setdescriptionwidth{
+    display: block;
+    width: 700px;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
+}
+.statusbadge {
+    color: rgb(32, 31, 31);
+    /*background-color: rgb(225, 230, 225);*/
+    border : 1px solid rgb(221, 219, 218); 
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
+    /*display: inline-flex; */
+    width: 70px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .allignbadge{
+    padding:6px 10px 6px 0px;
+  }
+
+  .deptbadge {
+    color: rgb(37, 79, 158);
+    /*background-color: rgb(225, 230, 225);*/
+    border : 1px solid rgb(37, 79, 158); 
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    width : 48px;
+  }
+  .normalbadge{
+    color: rgb(37, 79, 158);
+    /*background-color: rgb(225, 230, 225);*/
+    border : 1px solid rgb(37, 79, 158); 
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    width: 48px;
+  }
+
+  .descriptiondetail{
+    padding-top: 7px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: fit-content;
+    white-space: pre-line;
+}
+.tblborder{
+  border: 1px solid rgb(221, 219, 218);
+}
+
+.activetab{
+  background: rgba(24, 75, 155, 0.1);
+}
+
+.filterstyle{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bgcell{
+  width:200px;
+}
+/* Table auto serial number */
+.auto-index
+{
+    counter-reset: Serial;           /* Set the Serial counter to 0 */
+}
+
+.auto-index td:first-child:before
+{
+  counter-increment: Serial;      /* Increment the Serial counter */
+  content: counter(Serial); /* Display the counter */
+}
+
+.zoomcheckbox{
+  zoom: 200%;
+}
+
+.greytitle{
+  color: grey;
+}
+
+.pageheader{
+  height:500px;/*550px*/
+  overflow-y:auto;
+}
+
+.tableheader{
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.setapplicablewidth{
+  width: 180px;
+}
+
+.setactionbtnewidth{
+  min-width: 230px;
+}
+
+.setvaluefieldwidth{
+  min-width: 170px;
+}
+
+ .avatar-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-initials {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #0070d2; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.blue-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  margin-right: 5px; 
+}
+
+.green-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  margin-right: 5px; 
+}
+
+.orange-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+  border-radius: 50%;
+  margin-right: 5px; 
+}
+.setdescriptionwidth {
+  width: 200px; /* Fixed width for the column */
+  max-width: 100%; /* Prevent content from exceeding the container */
+  white-space: normal; /* Allow text to wrap to the next line */
+  word-wrap: break-word; /* Break long words if necessary */
+  overflow-wrap: anywhere; /* Break content to prevent overflow */
+  resize: horizontal; /* Allow users to resize horizontally */
+  overflow: auto; /* Ensure scrollbars appear if necessary */
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>CLIENT - Notify Client of Bus Break Down</name>
+    <style>none</style>
+    <subject>{!Bus__c.Current_Owner__c} Bus # {!Break_Down_Report__c.Bus__c} Breakdown Notification</subject>
+    <textOnly>Hello  {!Break_Down_Report__c.contact_Name__c},
+{!Bus__c.Current_Owner__c} Bus # {!Break_Down_Report__c.Bus__c} is currently awaiting repairs prior to delivery.
+For more information regarding this breakdown, Please contact Technical Service Advisor Bo Vongamath at  bo.vongamath@gillig.com
+
+Thanks, {!Break_Down_Report__c.CreatedBy}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

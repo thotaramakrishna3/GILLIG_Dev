@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Acknowledgment of Bus Acceptance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bus Acceptance Letters</value>
+    </caseValues>
+    <layouts>
+        <layout>Bus Acceptance Letter Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GILLIG Field Service --></label>
+            <section>GILLIG Field Service</section>
+        </sections>
+        <sections>
+            <label><!-- Property Owner(s) --></label>
+            <section>Property Owner(s)</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

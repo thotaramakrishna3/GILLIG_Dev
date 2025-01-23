@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Loss Reason --></label>
+    <name>Loss_Reason__c</name>
+    <picklistValues>
+        <masterLabel>Lost to Competitor</masterLabel>
+        <translation><!-- Lost to Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Named on competitor contract</masterLabel>
+        <translation><!-- Named on competitor contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Bid</masterLabel>
+        <translation><!-- No Bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Budget / Lost Funding</masterLabel>
+        <translation><!-- No Budget / Lost Funding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Decision / Non-Responsive</masterLabel>
+        <translation><!-- No Decision / Non-Responsive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not given opportunity to bid</masterLabel>
+        <translation><!-- Not given opportunity to bid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchased Medium Duty</masterLabel>
+        <translation><!-- Purchased Medium Duty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchased Used Buses</masterLabel>
+        <translation><!-- Purchased Used Buses --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

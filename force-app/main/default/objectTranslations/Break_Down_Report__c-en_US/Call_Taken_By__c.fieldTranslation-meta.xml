@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Call Taken By --></label>
+    <name>Call_Taken_By__c</name>
+    <picklistValues>
+        <masterLabel>Ben Garcia</masterLabel>
+        <translation><!-- Ben Garcia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bo Vongamath</masterLabel>
+        <translation><!-- Bo Vongamath --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bob Birdwell</masterLabel>
+        <translation><!-- Bob Birdwell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eric Ocampo</masterLabel>
+        <translation><!-- Eric Ocampo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Garfull Chan</masterLabel>
+        <translation><!-- Garfull Chan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ryan Linn</masterLabel>
+        <translation><!-- Ryan Linn --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

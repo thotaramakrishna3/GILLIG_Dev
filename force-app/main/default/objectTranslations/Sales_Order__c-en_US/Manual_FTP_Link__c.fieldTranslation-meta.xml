@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Link to top-level customer folder, in which sit the VIN folders with manuals. --></help>
+    <label><!-- Manuals FTP --></label>
+    <name>Manual_FTP_Link__c</name>
+</CustomFieldTranslation>

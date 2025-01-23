@@ -1,0 +1,58 @@
+<!--***********************************************************************************************************************************
+     Developer :Suyati
+     Name      : OpportunityLineRelatedListComponent
+     Apex Controller:OpportunityLineRelatedList
+     Usage     : Lightning component to display opportunity lines 
+     Date      : October 2019   
+************************************************************************************************************************************--> 
+<aura:component controller="OpportunityLineRelatedList" implements="flexipage:availableForAllPageTypes,force:hasRecordId"  access="global" >
+    <!-- attributes -->
+    <aura:attribute name="accountId" type="String" />
+    <aura:attribute name="recordTypeId" type="String" />
+    <aura:attribute name="count" type="String" />
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="isModalOpen" type="Boolean" default="false"/>
+    <aura:attribute name="editOpportunityLineId" type="String" />
+    <aura:attribute name="editButtonClick" type="Boolean" default="false"/>
+    <aura:attribute name="Style" type="String"/>
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    <aura:handler event="c:CaseRelatedListRefreshEvent" action="{!c.refreshChild}" />
+    <lightning:card iconName="standard:opportunity" title="{!'OpportunityLines (' + v.count + ')'}">      
+        <!-- To check  whether datatable contains record data-->
+        <aura:if isTrue="{!(v.count > 0)}">
+            <lightning:datatable
+                                 
+                                 data="{! v.data }"
+                                 columns="{! v.columns }" 
+                                 onsave="{! c.handleSaveEdition }" 
+                                 keyField="Id"
+                                 onrowaction="{!c.EditDetails}"            
+                                 hideCheckboxColumn="true"/>
+        </aura:if>
+    </lightning:card>
+    <!--Model starts here-->
+    <aura:if isTrue="{!v.editButtonClick}">
+        <div class="slds-p-around_medium">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container" >
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeCreateModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Edit Opportunity Lines</h2>
+                    </header>
+                    <div class="slds-modal__content" >
+                        <c:EditOpportunityLines aura:id="childEditLines" recordId="{!v.editOpportunityLineId}" showModal="{!v.editButtonClick}"/>
+                    </div>
+                </div>
+            </section>
+        </div>
+       <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <!--Model End here-->
+  
+</aura:component>

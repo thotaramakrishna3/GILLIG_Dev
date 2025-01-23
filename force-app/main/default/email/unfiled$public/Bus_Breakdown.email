@@ -1,0 +1,15 @@
+Hello ,<BR>
+
+<BR>
+The bus breakdown information;<BR> <BR>
+
+Internal Name : {!Break_Down_Report__c.Internal_Name__c}<BR>
+Bus Serial Number  : {!Bus__c.Name} <BR>
+Bus lnformation : {!Bus__c.Link}<BR>
+Bus breakdown information:  {!Break_Down_Report__c.Link}<BR>
+Issue: {!Break_Down_Report__c.Description_of_Issue__c} <BR>
+
+
+<BR>
+Thanks,<BR>
+{!Break_Down_Report__c.CreatedBy}

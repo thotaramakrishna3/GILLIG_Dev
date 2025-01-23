@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Once the fields are populated, change the status to the next step to move the process along. --></help>
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>1. Draft</masterLabel>
+        <translation><!-- 1. Draft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2. Awaiting Approval</masterLabel>
+        <translation><!-- 2. Awaiting Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3. Awaiting Bus Assignment</masterLabel>
+        <translation><!-- 3. Awaiting Bus Assignment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4. Submitted</masterLabel>
+        <translation><!-- 4. Submitted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5. Held by Engineering</masterLabel>
+        <translation><!-- 5. Held by Engineering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5. On Demo</masterLabel>
+        <translation><!-- 5. On Demo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6. Hold Released</masterLabel>
+        <translation><!-- 6. Hold Released --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Work Days between the Answer Due Date and the Response Date --></help>
+    <label><!-- BIR Answer Due Days --></label>
+    <name>Work_Days__c</name>
+</CustomFieldTranslation>

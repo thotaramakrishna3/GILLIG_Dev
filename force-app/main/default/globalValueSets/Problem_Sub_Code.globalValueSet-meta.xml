@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>0001	ENGINE</fullName>
+        <default>false</default>
+        <label>0001	ENGINE</label>
+    </customValue>
+    <customValue>
+        <fullName>0045	MISC ENGINE PARTS</fullName>
+        <default>false</default>
+        <label>0045	MISC ENGINE PARTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	ENGINE--MOUNTING</fullName>
+        <default>false</default>
+        <label>0050	ENGINE--MOUNTING</label>
+    </customValue>
+    <customValue>
+        <fullName>0060	TURBO</fullName>
+        <default>false</default>
+        <label>0060	TURBO</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	THROTTLE CONTROL</fullName>
+        <default>false</default>
+        <label>0100	THROTTLE CONTROL</label>
+    </customValue>
+    <customValue>
+        <fullName>0130	CRUISE CONTROL</fullName>
+        <default>false</default>
+        <label>0130	CRUISE CONTROL</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	ALT. MTG</fullName>
+        <default>false</default>
+        <label>0150	ALT. MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0160	ENGINE BELT GUARD</fullName>
+        <default>false</default>
+        <label>0160	ENGINE BELT GUARD</label>
+    </customValue>
+    <customValue>
+        <fullName>0163	ENG/TRANS PAN PROTECTOR</fullName>
+        <default>false</default>
+        <label>0163	ENG/TRANS PAN PROTECTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0164	ENG/BELT</fullName>
+        <default>false</default>
+        <label>0164	ENG/BELT</label>
+    </customValue>
+    <customValue>
+        <fullName>0165	ENGINE PULLEY</fullName>
+        <default>false</default>
+        <label>0165	ENGINE PULLEY</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	MUFFLER/MTG</fullName>
+        <default>false</default>
+        <label>0200	MUFFLER/MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0201	TAIL PIPE/MTG</fullName>
+        <default>false</default>
+        <label>0201	TAIL PIPE/MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0202	EXHAUST SYSTEM REAR ENGINE</fullName>
+        <default>false</default>
+        <label>0202	EXHAUST SYSTEM REAR ENGINE</label>
+    </customValue>
+    <customValue>
+        <fullName>0203	EXHAUST SYSTEM CLAMPS</fullName>
+        <default>false</default>
+        <label>0203	EXHAUST SYSTEM CLAMPS</label>
+    </customValue>
+    <customValue>
+        <fullName>0210	EXHAUST BRAKE</fullName>
+        <default>false</default>
+        <label>0210	EXHAUST BRAKE</label>
+    </customValue>
+    <customValue>
+        <fullName>0230	EXHAUST SYS. INSULATION</fullName>
+        <default>false</default>
+        <label>0230	EXHAUST SYS. INSULATION</label>
+    </customValue>
+    <customValue>
+        <fullName>0252	AIR CLEANER W/REST. INDICATOR</fullName>
+        <default>false</default>
+        <label>0252	AIR CLEANER W/REST. INDICATOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0255	AIR INTAKE</fullName>
+        <default>false</default>
+        <label>0255	AIR INTAKE</label>
+    </customValue>
+    <customValue>
+        <fullName>0280	CHARGE AIR COOLING/PIPING</fullName>
+        <default>false</default>
+        <label>0280	CHARGE AIR COOLING/PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0300	RADIATOR</fullName>
+        <default>false</default>
+        <label>0300	RADIATOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0320	COOLING SYSTEM</fullName>
+        <default>false</default>
+        <label>0320	COOLING SYSTEM</label>
+    </customValue>
+    <customValue>
+        <fullName>0340	SURGE TANK</fullName>
+        <default>false</default>
+        <label>0340	SURGE TANK</label>
+    </customValue>
+    <customValue>
+        <fullName>0341	COOLANT SENSOR</fullName>
+        <default>false</default>
+        <label>0341	COOLANT SENSOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0350	HYD. FAN MOTOR</fullName>
+        <default>false</default>
+        <label>0350	HYD. FAN MOTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0351	HYD. FAN MOTOR PIPING</fullName>
+        <default>false</default>
+        <label>0351	HYD. FAN MOTOR PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0360	FAN CONTROL</fullName>
+        <default>false</default>
+        <label>0360	FAN CONTROL</label>
+    </customValue>
+    <customValue>
+        <fullName>0370	HYDRAULIC PUMP</fullName>
+        <default>false</default>
+        <label>0370	HYDRAULIC PUMP</label>
+    </customValue>
+    <customValue>
+        <fullName>0371	HYDRAULIC PUMP PIPING</fullName>
+        <default>false</default>
+        <label>0371	HYDRAULIC PUMP PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0372	HYDRAULIC OIL COOLER</fullName>
+        <default>false</default>
+        <label>0372	HYDRAULIC OIL COOLER</label>
+    </customValue>
+    <customValue>
+        <fullName>0400	ENGINE OIL FILL</fullName>
+        <default>false</default>
+        <label>0400	ENGINE OIL FILL</label>
+    </customValue>
+    <customValue>
+        <fullName>0450	OIL FILTER</fullName>
+        <default>false</default>
+        <label>0450	OIL FILTER</label>
+    </customValue>
+    <customValue>
+        <fullName>0460	DIPSTICK</fullName>
+        <default>false</default>
+        <label>0460	DIPSTICK</label>
+    </customValue>
+    <customValue>
+        <fullName>0550	WATER FILTER</fullName>
+        <default>false</default>
+        <label>0550	WATER FILTER</label>
+    </customValue>
+    <customValue>
+        <fullName>0600	KIM HOTSTART</fullName>
+        <default>false</default>
+        <label>0600	KIM HOTSTART</label>
+    </customValue>
+    <customValue>
+        <fullName>0605	QUICK START /ETHER</fullName>
+        <default>false</default>
+        <label>0605	QUICK START /ETHER</label>
+    </customValue>
+    <customValue>
+        <fullName>0610	BLOCK HEATER</fullName>
+        <default>false</default>
+        <label>0610	BLOCK HEATER</label>
+    </customValue>
+    <customValue>
+        <fullName>0650	ENGINE FUEL PIPING</fullName>
+        <default>false</default>
+        <label>0650	ENGINE FUEL PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0660	ENGINE FUEL PRIMER PUMP</fullName>
+        <default>false</default>
+        <label>0660	ENGINE FUEL PRIMER PUMP</label>
+    </customValue>
+    <customValue>
+        <fullName>0670	CHASSIS FUEL PIPING</fullName>
+        <default>false</default>
+        <label>0670	CHASSIS FUEL PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0700	FUEL FILTER</fullName>
+        <default>false</default>
+        <label>0700	FUEL FILTER</label>
+    </customValue>
+    <customValue>
+        <fullName>0800	ENGINE OIL COOLERS</fullName>
+        <default>false</default>
+        <label>0800	ENGINE OIL COOLERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0950	CONSTANT TENSION HOSE CLAMP</fullName>
+        <default>false</default>
+        <label>0950	CONSTANT TENSION HOSE CLAMP</label>
+    </customValue>
+    <customValue>
+        <fullName>0450	CONSTANT TENSION HOSE CLAMP</fullName>
+        <default>false</default>
+        <label>0450	CONSTANT TENSION HOSE CLAMP</label>
+    </customValue>
+    <customValue>
+        <fullName>0960	HOSES</fullName>
+        <default>false</default>
+        <label>0960	HOSES</label>
+    </customValue>
+    <customValue>
+        <fullName>0970	PRESSURE SENDER</fullName>
+        <default>false</default>
+        <label>0970	PRESSURE SENDER</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	FRONT SUSP LEVELING VALVE</fullName>
+        <default>false</default>
+        <label>0100	FRONT SUSP LEVELING VALVE</label>
+    </customValue>
+    <customValue>
+        <fullName>0110	REAR SUSP LEVELING VALVE</fullName>
+        <default>false</default>
+        <label>0110	REAR SUSP LEVELING VALVE</label>
+    </customValue>
+    <customValue>
+        <fullName>0160	AIR COMPRESSOR PIPING</fullName>
+        <default>false</default>
+        <label>0160	AIR COMPRESSOR PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0163	CHASSIS AIR PIPING</fullName>
+        <default>false</default>
+        <label>0163	CHASSIS AIR PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0165	TREADLE VALVE</fullName>
+        <default>false</default>
+        <label>0165	TREADLE VALVE</label>
+    </customValue>
+    <customValue>
+        <fullName>0168	AIR TANK/MTG</fullName>
+        <default>false</default>
+        <label>0168	AIR TANK/MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0170	SHOP AIR FILL</fullName>
+        <default>false</default>
+        <label>0170	SHOP AIR FILL</label>
+    </customValue>
+    <customValue>
+        <fullName>0172	FRONT BRAKE CHAMBER HOSES</fullName>
+        <default>false</default>
+        <label>0172	FRONT BRAKE CHAMBER HOSES</label>
+    </customValue>
+    <customValue>
+        <fullName>0173	REAR BRAKE CHAMBER HOSES</fullName>
+        <default>false</default>
+        <label>0173	REAR BRAKE CHAMBER HOSES</label>
+    </customValue>
+    <customValue>
+        <fullName>0175	AIR TANK DRAIN</fullName>
+        <default>false</default>
+        <label>0175	AIR TANK DRAIN</label>
+    </customValue>
+    <customValue>
+        <fullName>0180	AIR DRYER/MTG</fullName>
+        <default>false</default>
+        <label>0180	AIR DRYER/MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	AIR COMPRESSOR</fullName>
+        <default>false</default>
+        <label>0200	AIR COMPRESSOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0210	GOVERNOR</fullName>
+        <default>false</default>
+        <label>0210	GOVERNOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0350	REAR BRAKE CHAMBERS</fullName>
+        <default>false</default>
+        <label>0350	REAR BRAKE CHAMBERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0351	FRONT BRAKE CHAMBERS</fullName>
+        <default>false</default>
+        <label>0351	FRONT BRAKE CHAMBERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0400	FRONT DOOR PIPING</fullName>
+        <default>false</default>
+        <label>0400	FRONT DOOR PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0410	REAR DOOR PIPING</fullName>
+        <default>false</default>
+        <label>0410	REAR DOOR PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0411	DOOR MOTOR</fullName>
+        <default>false</default>
+        <label>0411	DOOR MOTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0450	TOWING CONNECTION</fullName>
+        <default>false</default>
+        <label>0450	TOWING CONNECTION</label>
+    </customValue>
+    <customValue>
+        <fullName>0600	KNEELING OR DUMP VALVE SYST.</fullName>
+        <default>false</default>
+        <label>0600	KNEELING OR DUMP VALVE SYST.</label>
+    </customValue>
+    <customValue>
+        <fullName>0610	AIR BAGS</fullName>
+        <default>false</default>
+        <label>0610	AIR BAGS</label>
+    </customValue>
+    <customValue>
+        <fullName>0650	AIR STARTER</fullName>
+        <default>false</default>
+        <label>0650	AIR STARTER</label>
+    </customValue>
+    <customValue>
+        <fullName>0660	AIR STARTER MTG</fullName>
+        <default>false</default>
+        <label>0660	AIR STARTER MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0661	AIR STARTER TANK CHRGNG LINE</fullName>
+        <default>false</default>
+        <label>0661	AIR STARTER TANK CHRGNG LINE</label>
+    </customValue>
+    <customValue>
+        <fullName>0680	BRAKE LIGHT SWITCH</fullName>
+        <default>false</default>
+        <label>0680	BRAKE LIGHT SWITCH</label>
+    </customValue>
+    <customValue>
+        <fullName>0681	PARKING BRAKE, AIR</fullName>
+        <default>false</default>
+        <label>0681	PARKING BRAKE, AIR</label>
+    </customValue>
+    <customValue>
+        <fullName>0682	WATTS VALVE</fullName>
+        <default>false</default>
+        <label>0682	WATTS VALVE</label>
+    </customValue>
+    <customValue>
+        <fullName>0683	BRAKE VALVE</fullName>
+        <default>false</default>
+        <label>0683	BRAKE VALVE</label>
+    </customValue>
+    <customValue>
+        <fullName>0004	REAR AXLE</fullName>
+        <default>false</default>
+        <label>0004	REAR AXLE</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	REAR AXLE OIL SEALS</fullName>
+        <default>false</default>
+        <label>0050	REAR AXLE OIL SEALS</label>
+    </customValue>
+    <customValue>
+        <fullName>0075	OIL FILL &amp; DRAIN PLUGS</fullName>
+        <default>false</default>
+        <label>0075	OIL FILL &amp; DRAIN PLUGS</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	SLACK ADJUSTERS</fullName>
+        <default>false</default>
+        <label>0100	SLACK ADJUSTERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	HUBODOMETER</fullName>
+        <default>false</default>
+        <label>0150	HUBODOMETER</label>
+    </customValue>
+    <customValue>
+        <fullName>0160	ABS SENSOR</fullName>
+        <default>false</default>
+        <label>0160	ABS SENSOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	AXLE D/L YOKE</fullName>
+        <default>false</default>
+        <label>0200	AXLE D/L YOKE</label>
+    </customValue>
+    <customValue>
+        <fullName>0202	DRUMS</fullName>
+        <default>false</default>
+        <label>0202	DRUMS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	REAR SUSPENSION</fullName>
+        <default>false</default>
+        <label>0001	REAR SUSPENSION</label>
+    </customValue>
+    <customValue>
+        <fullName>0024	REAR SUSPENSION SWAY BAR</fullName>
+        <default>false</default>
+        <label>0024	REAR SUSPENSION SWAY BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>0025	REAR AXLE SUSP. MODIFICATIONS</fullName>
+        <default>false</default>
+        <label>0025	REAR AXLE SUSP. MODIFICATIONS</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	REAR SHOCK ABSORBERS</fullName>
+        <default>false</default>
+        <label>0050	REAR SHOCK ABSORBERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0000	WHEEL MTG HARDWARE--C/F TIRES</fullName>
+        <default>false</default>
+        <label>0000	WHEEL MTG HARDWARE--C/F TIRES</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	WHEEL STL/HARDWARE</fullName>
+        <default>false</default>
+        <label>0001	WHEEL STL/HARDWARE</label>
+    </customValue>
+    <customValue>
+        <fullName>0011	SPARE WHEEL</fullName>
+        <default>false</default>
+        <label>0011	SPARE WHEEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0025	TIRE PRESSURE EQUALIZER</fullName>
+        <default>false</default>
+        <label>0025	TIRE PRESSURE EQUALIZER</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	HUB COVERS/10 STUD</fullName>
+        <default>false</default>
+        <label>0050	HUB COVERS/10 STUD</label>
+    </customValue>
+    <customValue>
+        <fullName>0500	TIRES</fullName>
+        <default>false</default>
+        <label>0500	TIRES</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	TRANSMISSION</fullName>
+        <default>false</default>
+        <label>0001	TRANSMISSION</label>
+    </customValue>
+    <customValue>
+        <fullName>0040	RETARDER CONTROLS</fullName>
+        <default>false</default>
+        <label>0040	RETARDER CONTROLS</label>
+    </customValue>
+    <customValue>
+        <fullName>0051	TRANS. TAIL SUPPORT/MTG</fullName>
+        <default>false</default>
+        <label>0051	TRANS. TAIL SUPPORT/MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0070	TRANSMISSION POWER TAKE OFF</fullName>
+        <default>false</default>
+        <label>0070	TRANSMISSION POWER TAKE OFF</label>
+    </customValue>
+    <customValue>
+        <fullName>0075	ACCUMULATOR</fullName>
+        <default>false</default>
+        <label>0075	ACCUMULATOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	TRANSMISSION DIPSTICK</fullName>
+        <default>false</default>
+        <label>0100	TRANSMISSION DIPSTICK</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	TRANSMISSION COOLER</fullName>
+        <default>false</default>
+        <label>0150	TRANSMISSION COOLER</label>
+    </customValue>
+    <customValue>
+        <fullName>0203	SHIFT LINKAGE</fullName>
+        <default>false</default>
+        <label>0203	SHIFT LINKAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>0350	TRANSMISSION YOKE</fullName>
+        <default>false</default>
+        <label>0350	TRANSMISSION YOKE</label>
+    </customValue>
+    <customValue>
+        <fullName>0400	SPEEDO DRIVE</fullName>
+        <default>false</default>
+        <label>0400	SPEEDO DRIVE</label>
+    </customValue>
+    <customValue>
+        <fullName>0460	HOSES</fullName>
+        <default>false</default>
+        <label>0460	HOSES</label>
+    </customValue>
+    <customValue>
+        <fullName>0470	SENDER, TEMPERATURE</fullName>
+        <default>false</default>
+        <label>0470	SENDER, TEMPERATURE</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	DRIVELINE</fullName>
+        <default>false</default>
+        <label>0001	DRIVELINE</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	STEERING GEAR</fullName>
+        <default>false</default>
+        <label>0001	STEERING GEAR</label>
+    </customValue>
+    <customValue>
+        <fullName>0002	DRAG LINK</fullName>
+        <default>false</default>
+        <label>0002	DRAG LINK</label>
+    </customValue>
+    <customValue>
+        <fullName>0003	TIE RODS</fullName>
+        <default>false</default>
+        <label>0003	TIE RODS</label>
+    </customValue>
+    <customValue>
+        <fullName>0004	STEERING PARTS, MISC</fullName>
+        <default>false</default>
+        <label>0004	STEERING PARTS, MISC</label>
+    </customValue>
+    <customValue>
+        <fullName>0051	STEERING COLUMN TILT</fullName>
+        <default>false</default>
+        <label>0051	STEERING COLUMN TILT</label>
+    </customValue>
+    <customValue>
+        <fullName>0070	STEERING WHEEL</fullName>
+        <default>false</default>
+        <label>0070	STEERING WHEEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	PUMP</fullName>
+        <default>false</default>
+        <label>0100	PUMP</label>
+    </customValue>
+    <customValue>
+        <fullName>0110	FRONT POWER STEERING HOSES</fullName>
+        <default>false</default>
+        <label>0110	FRONT POWER STEERING HOSES</label>
+    </customValue>
+    <customValue>
+        <fullName>0120	REAR POWER STEERING HOSES</fullName>
+        <default>false</default>
+        <label>0120	REAR POWER STEERING HOSES</label>
+    </customValue>
+    <customValue>
+        <fullName>0130	LOW FLUID PROBE</fullName>
+        <default>false</default>
+        <label>0130	LOW FLUID PROBE</label>
+    </customValue>
+    <customValue>
+        <fullName>0131	RESERVOR</fullName>
+        <default>false</default>
+        <label>0131	RESERVOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	FRAME RAILS</fullName>
+        <default>false</default>
+        <label>0001	FRAME RAILS</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	CHASSIS COMPONENTS</fullName>
+        <default>false</default>
+        <label>0050	CHASSIS COMPONENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0070	LOAD LEVELING BRACKETS</fullName>
+        <default>false</default>
+        <label>0070	LOAD LEVELING BRACKETS</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	DRIVER PLATFORM TB</fullName>
+        <default>false</default>
+        <label>0100	DRIVER PLATFORM TB</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	TOW EYES, FRONT</fullName>
+        <default>false</default>
+        <label>0150	TOW EYES, FRONT</label>
+    </customValue>
+    <customValue>
+        <fullName>0151	TOW EYES, REAR</fullName>
+        <default>false</default>
+        <label>0151	TOW EYES, REAR</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	BATTERY BOX</fullName>
+        <default>false</default>
+        <label>0200	BATTERY BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>0300	ROAD SANDERS</fullName>
+        <default>false</default>
+        <label>0300	ROAD SANDERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0400	FIRE SUPPRESSION COMPONENTS</fullName>
+        <default>false</default>
+        <label>0400	FIRE SUPPRESSION COMPONENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0003	FRONT AXLE</fullName>
+        <default>false</default>
+        <label>0003	FRONT AXLE</label>
+    </customValue>
+    <customValue>
+        <fullName>0012	AXLE LUBE FITTINGS</fullName>
+        <default>false</default>
+        <label>0012	AXLE LUBE FITTINGS</label>
+    </customValue>
+    <customValue>
+        <fullName>0013	BEARINGS</fullName>
+        <default>false</default>
+        <label>0013	BEARINGS</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	FRONT AXLE OIL SEALS</fullName>
+        <default>false</default>
+        <label>0050	FRONT AXLE OIL SEALS</label>
+    </customValue>
+    <customValue>
+        <fullName>0055	BUMPERS, RUBBER</fullName>
+        <default>false</default>
+        <label>0055	BUMPERS, RUBBER</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	FRONT MANUAL SLACKS</fullName>
+        <default>false</default>
+        <label>0100	FRONT MANUAL SLACKS</label>
+    </customValue>
+    <customValue>
+        <fullName>0101	FRONT HALDEX AUTO SLACKS</fullName>
+        <default>false</default>
+        <label>0101	FRONT HALDEX AUTO SLACKS</label>
+    </customValue>
+    <customValue>
+        <fullName>0102	DRUMS</fullName>
+        <default>false</default>
+        <label>0102	DRUMS</label>
+    </customValue>
+    <customValue>
+        <fullName>0103	BRAKE FOUNDATION / LINING</fullName>
+        <default>false</default>
+        <label>0103	BRAKE FOUNDATION / LINING</label>
+    </customValue>
+    <customValue>
+        <fullName>0203	BRAKE FOUNDATION / LINING</fullName>
+        <default>false</default>
+        <label>0203	BRAKE FOUNDATION / LINING</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	FRONT SUSPENSION</fullName>
+        <default>false</default>
+        <label>0001	FRONT SUSPENSION</label>
+    </customValue>
+    <customValue>
+        <fullName>0024	SWAY BAR</fullName>
+        <default>false</default>
+        <label>0024	SWAY BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>0051	FRONT SHOCKS</fullName>
+        <default>false</default>
+        <label>0051	FRONT SHOCKS</label>
+    </customValue>
+    <customValue>
+        <fullName>0060	TORQUE RODS</fullName>
+        <default>false</default>
+        <label>0060	TORQUE RODS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	ROOF HARNESS/TB</fullName>
+        <default>false</default>
+        <label>0001	ROOF HARNESS/TB</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	HEADLIGHTS/HARNESS</fullName>
+        <default>false</default>
+        <label>0050	HEADLIGHTS/HARNESS</label>
+    </customValue>
+    <customValue>
+        <fullName>0060	FRONT TURN SIGNALS &amp; WIRING</fullName>
+        <default>false</default>
+        <label>0060	FRONT TURN SIGNALS &amp; WIRING</label>
+    </customValue>
+    <customValue>
+        <fullName>0075	FOG OR DRIVING LIGHT</fullName>
+        <default>false</default>
+        <label>0075	FOG OR DRIVING LIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>0080	BACK-UP LIGHT</fullName>
+        <default>false</default>
+        <label>0080	BACK-UP LIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	ENG./STARTER/INTERMED HARN.</fullName>
+        <default>false</default>
+        <label>0100	ENG./STARTER/INTERMED HARN.</label>
+    </customValue>
+    <customValue>
+        <fullName>0102	PARTICULATE TRAP</fullName>
+        <default>false</default>
+        <label>0102	PARTICULATE TRAP</label>
+    </customValue>
+    <customValue>
+        <fullName>0140	ELECTRONIC ENGINE CONTROLS</fullName>
+        <default>false</default>
+        <label>0140	ELECTRONIC ENGINE CONTROLS</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	CHASSIS HARNESS</fullName>
+        <default>false</default>
+        <label>0150	CHASSIS HARNESS</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	SHIFT CONTROL ELECTRONIC</fullName>
+        <default>false</default>
+        <label>0200	SHIFT CONTROL ELECTRONIC</label>
+    </customValue>
+    <customValue>
+        <fullName>0240	TRANSMISSION CONTROLS</fullName>
+        <default>false</default>
+        <label>0240	TRANSMISSION CONTROLS</label>
+    </customValue>
+    <customValue>
+        <fullName>0250	ELECT. CONT PANEL OR BOX</fullName>
+        <default>false</default>
+        <label>0250	ELECT. CONT PANEL OR BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>0253	ELECT ENG &amp; TRANS CONT PANEL</fullName>
+        <default>false</default>
+        <label>0253	ELECT ENG &amp; TRANS CONT PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0290	AUX ELECT. CONTROL PANEL</fullName>
+        <default>false</default>
+        <label>0290	AUX ELECT. CONTROL PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0300	DINEX</fullName>
+        <default>false</default>
+        <label>0300	DINEX</label>
+    </customValue>
+    <customValue>
+        <fullName>0302	DASH/CONSOLE/HARNESS</fullName>
+        <default>false</default>
+        <label>0302	DASH/CONSOLE/HARNESS</label>
+    </customValue>
+    <customValue>
+        <fullName>0310	UPPER DASH/MTG,HARNESS</fullName>
+        <default>false</default>
+        <label>0310	UPPER DASH/MTG,HARNESS</label>
+    </customValue>
+    <customValue>
+        <fullName>0353	STOP/TAIL/TURN LIGHTS/HARN.</fullName>
+        <default>false</default>
+        <label>0353	STOP/TAIL/TURN LIGHTS/HARN.</label>
+    </customValue>
+    <customValue>
+        <fullName>0360	CENTER MTD/ADTL. STOP LIGHTS</fullName>
+        <default>false</default>
+        <label>0360	CENTER MTD/ADTL. STOP LIGHTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0361	DECELERATION LIGHTS</fullName>
+        <default>false</default>
+        <label>0361	DECELERATION LIGHTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0362	MARKER LIGHTS</fullName>
+        <default>false</default>
+        <label>0362	MARKER LIGHTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0365	REAR SIDE TURN SIGNALS</fullName>
+        <default>false</default>
+        <label>0365	REAR SIDE TURN SIGNALS</label>
+    </customValue>
+    <customValue>
+        <fullName>0366	RIGHT TURN HORN</fullName>
+        <default>false</default>
+        <label>0366	RIGHT TURN HORN</label>
+    </customValue>
+    <customValue>
+        <fullName>0370	LICENSE PLATE LIGHT</fullName>
+        <default>false</default>
+        <label>0370	LICENSE PLATE LIGHT</label>
+    </customValue>
+    <customValue>
+        <fullName>0400	BATT/CABLES</fullName>
+        <default>false</default>
+        <label>0400	BATT/CABLES</label>
+    </customValue>
+    <customValue>
+        <fullName>0417	ELECT POWER SUPPLY/CABLES</fullName>
+        <default>false</default>
+        <label>0417	ELECT POWER SUPPLY/CABLES</label>
+    </customValue>
+    <customValue>
+        <fullName>0420	JUMP START CONNECTION</fullName>
+        <default>false</default>
+        <label>0420	JUMP START CONNECTION</label>
+    </customValue>
+    <customValue>
+        <fullName>0425	STARTER</fullName>
+        <default>false</default>
+        <label>0425	STARTER</label>
+    </customValue>
+    <customValue>
+        <fullName>0427	STARTER DISENGAGEMENT</fullName>
+        <default>false</default>
+        <label>0427	STARTER DISENGAGEMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>0428	STARTER CABLES</fullName>
+        <default>false</default>
+        <label>0428	STARTER CABLES</label>
+    </customValue>
+    <customValue>
+        <fullName>0450	ALTERNATOR</fullName>
+        <default>false</default>
+        <label>0450	ALTERNATOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0455	ALTERNATOR/REG DUAL WIRING</fullName>
+        <default>false</default>
+        <label>0455	ALTERNATOR/REG DUAL WIRING</label>
+    </customValue>
+    <customValue>
+        <fullName>0460	CHARGING SYSTEM WARNING</fullName>
+        <default>false</default>
+        <label>0460	CHARGING SYSTEM WARNING</label>
+    </customValue>
+    <customValue>
+        <fullName>0465	VANNER</fullName>
+        <default>false</default>
+        <label>0465	VANNER</label>
+    </customValue>
+    <customValue>
+        <fullName>0466	ANTERNATOR BELT</fullName>
+        <default>false</default>
+        <label>0466	ANTERNATOR BELT</label>
+    </customValue>
+    <customValue>
+        <fullName>0467	ALTERNATOR PULLEY</fullName>
+        <default>false</default>
+        <label>0467	ALTERNATOR PULLEY</label>
+    </customValue>
+    <customValue>
+        <fullName>0500	REAR RUN PANEL OR BOX</fullName>
+        <default>false</default>
+        <label>0500	REAR RUN PANEL OR BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>0510	MECH. GAUGES</fullName>
+        <default>false</default>
+        <label>0510	MECH. GAUGES</label>
+    </customValue>
+    <customValue>
+        <fullName>0511	REAR MTD AIR PRESS GA</fullName>
+        <default>false</default>
+        <label>0511	REAR MTD AIR PRESS GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0512	REAR TRANS TEMP GA</fullName>
+        <default>false</default>
+        <label>0512	REAR TRANS TEMP GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0513	REAR RUN BOX VOLTMETER</fullName>
+        <default>false</default>
+        <label>0513	REAR RUN BOX VOLTMETER</label>
+    </customValue>
+    <customValue>
+        <fullName>0515	REAR HOURMETER</fullName>
+        <default>false</default>
+        <label>0515	REAR HOURMETER</label>
+    </customValue>
+    <customValue>
+        <fullName>0516	REAR MTD ENG TEMP GUAGE</fullName>
+        <default>false</default>
+        <label>0516	REAR MTD ENG TEMP GUAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>0517	REAR MTD ENG PRESS GUAGE</fullName>
+        <default>false</default>
+        <label>0517	REAR MTD ENG PRESS GUAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>0550	ELECTRIC HORNS, DUAL</fullName>
+        <default>false</default>
+        <label>0550	ELECTRIC HORNS, DUAL</label>
+    </customValue>
+    <customValue>
+        <fullName>0551	AIR HORN</fullName>
+        <default>false</default>
+        <label>0551	AIR HORN</label>
+    </customValue>
+    <customValue>
+        <fullName>0576	DOOR ALARMS</fullName>
+        <default>false</default>
+        <label>0576	DOOR ALARMS</label>
+    </customValue>
+    <customValue>
+        <fullName>0577	CRIME ALARM</fullName>
+        <default>false</default>
+        <label>0577	CRIME ALARM</label>
+    </customValue>
+    <customValue>
+        <fullName>0578	WINDOW ALARMS</fullName>
+        <default>false</default>
+        <label>0578	WINDOW ALARMS</label>
+    </customValue>
+    <customValue>
+        <fullName>0580	FIRE ALARM &amp; OR SUPPRESSION</fullName>
+        <default>false</default>
+        <label>0580	FIRE ALARM &amp; OR SUPPRESSION</label>
+    </customValue>
+    <customValue>
+        <fullName>0582	PASS AREA GAS DETECTION SYS</fullName>
+        <default>false</default>
+        <label>0582	PASS AREA GAS DETECTION SYS</label>
+    </customValue>
+    <customValue>
+        <fullName>0590	RR BACK UP ALARM (FLOYD BELL)</fullName>
+        <default>false</default>
+        <label>0590	RR BACK UP ALARM (FLOYD BELL)</label>
+    </customValue>
+    <customValue>
+        <fullName>0600	EXTERIOR LIGHTING</fullName>
+        <default>false</default>
+        <label>0600	EXTERIOR LIGHTING</label>
+    </customValue>
+    <customValue>
+        <fullName>0625	FLASHING LIGHTS</fullName>
+        <default>false</default>
+        <label>0625	FLASHING LIGHTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0650	INTERIOR LIGHTING</fullName>
+        <default>false</default>
+        <label>0650	INTERIOR LIGHTING</label>
+    </customValue>
+    <customValue>
+        <fullName>0652	AISLE LIGHTING, SEAT RISER</fullName>
+        <default>false</default>
+        <label>0652	AISLE LIGHTING, SEAT RISER</label>
+    </customValue>
+    <customValue>
+        <fullName>0653	MAP LIGHTS</fullName>
+        <default>false</default>
+        <label>0653	MAP LIGHTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0655	READING LIGHTS</fullName>
+        <default>false</default>
+        <label>0655	READING LIGHTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0660	FLUORESCENT TUBE COVERS</fullName>
+        <default>false</default>
+        <label>0660	FLUORESCENT TUBE COVERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0700	ENGINE PROTECTION</fullName>
+        <default>false</default>
+        <label>0700	ENGINE PROTECTION</label>
+    </customValue>
+    <customValue>
+        <fullName>0702	ENGINE ANALYSIS</fullName>
+        <default>false</default>
+        <label>0702	ENGINE ANALYSIS</label>
+    </customValue>
+    <customValue>
+        <fullName>0725	GPS</fullName>
+        <default>false</default>
+        <label>0725	GPS</label>
+    </customValue>
+    <customValue>
+        <fullName>0730	RADIO/FAREBOX POWER SUPPLY</fullName>
+        <default>false</default>
+        <label>0730	RADIO/FAREBOX POWER SUPPLY</label>
+    </customValue>
+    <customValue>
+        <fullName>0735	FAREBOX LIGHT SWITCH</fullName>
+        <default>false</default>
+        <label>0735	FAREBOX LIGHT SWITCH</label>
+    </customValue>
+    <customValue>
+        <fullName>0737	WIRING FOR TRANSFER MACHINE</fullName>
+        <default>false</default>
+        <label>0737	WIRING FOR TRANSFER MACHINE</label>
+    </customValue>
+    <customValue>
+        <fullName>0750	RADIO/SPEAKERS</fullName>
+        <default>false</default>
+        <label>0750	RADIO/SPEAKERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0751	BOOM MIKE</fullName>
+        <default>false</default>
+        <label>0751	BOOM MIKE</label>
+    </customValue>
+    <customValue>
+        <fullName>0752	OUTSIDE SPEAKERS</fullName>
+        <default>false</default>
+        <label>0752	OUTSIDE SPEAKERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0755	INSIDE SPEAKERS</fullName>
+        <default>false</default>
+        <label>0755	INSIDE SPEAKERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0760	P.A. SYSTEM</fullName>
+        <default>false</default>
+        <label>0760	P.A. SYSTEM</label>
+    </customValue>
+    <customValue>
+        <fullName>0763	VOICE ENUNCIATOR SYS</fullName>
+        <default>false</default>
+        <label>0763	VOICE ENUNCIATOR SYS</label>
+    </customValue>
+    <customValue>
+        <fullName>0765	ANTENNA OR RADIO MTG.</fullName>
+        <default>false</default>
+        <label>0765	ANTENNA OR RADIO MTG.</label>
+    </customValue>
+    <customValue>
+        <fullName>0767	2-WAY RADIO MTG BRKT</fullName>
+        <default>false</default>
+        <label>0767	2-WAY RADIO MTG BRKT</label>
+    </customValue>
+    <customValue>
+        <fullName>0769	IGNITION SW CONTROL</fullName>
+        <default>false</default>
+        <label>0769	IGNITION SW CONTROL</label>
+    </customValue>
+    <customValue>
+        <fullName>0770	BRAKE &amp; ACCEL INTERLOCK</fullName>
+        <default>false</default>
+        <label>0770	BRAKE &amp; ACCEL INTERLOCK</label>
+    </customValue>
+    <customValue>
+        <fullName>0775	HILL HOLDER</fullName>
+        <default>false</default>
+        <label>0775	HILL HOLDER</label>
+    </customValue>
+    <customValue>
+        <fullName>0800	KNEELING ELECTRICAL</fullName>
+        <default>false</default>
+        <label>0800	KNEELING ELECTRICAL</label>
+    </customValue>
+    <customValue>
+        <fullName>0810	ABS EFFECTS</fullName>
+        <default>false</default>
+        <label>0810	ABS EFFECTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0825	DRIVERS FANS</fullName>
+        <default>false</default>
+        <label>0825	DRIVERS FANS</label>
+    </customValue>
+    <customValue>
+        <fullName>0850	PASSENGER SIGNAL PULL CORD</fullName>
+        <default>false</default>
+        <label>0850	PASSENGER SIGNAL PULL CORD</label>
+    </customValue>
+    <customValue>
+        <fullName>0852	PASSENGER SIGNAL TOUCH TAPE</fullName>
+        <default>false</default>
+        <label>0852	PASSENGER SIGNAL TOUCH TAPE</label>
+    </customValue>
+    <customValue>
+        <fullName>0860	STOP REQUESTED SIGN</fullName>
+        <default>false</default>
+        <label>0860	STOP REQUESTED SIGN</label>
+    </customValue>
+    <customValue>
+        <fullName>0855	PASSENGER CORD SWITCH</fullName>
+        <default>false</default>
+        <label>0855	PASSENGER CORD SWITCH</label>
+    </customValue>
+    <customValue>
+        <fullName>0865	PASSENGER CHIME</fullName>
+        <default>false</default>
+        <label>0865	PASSENGER CHIME</label>
+    </customValue>
+    <customValue>
+        <fullName>0900	HEADLIGHT MONITOR</fullName>
+        <default>false</default>
+        <label>0900	HEADLIGHT MONITOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0902	VIDEO CAMERA</fullName>
+        <default>false</default>
+        <label>0902	VIDEO CAMERA</label>
+    </customValue>
+    <customValue>
+        <fullName>0903	ELECTRICAL TOWING PLUG</fullName>
+        <default>false</default>
+        <label>0903	ELECTRICAL TOWING PLUG</label>
+    </customValue>
+    <customValue>
+        <fullName>0911	EXIT DOOR WIRING</fullName>
+        <default>false</default>
+        <label>0911	EXIT DOOR WIRING</label>
+    </customValue>
+    <customValue>
+        <fullName>0912	ENTRANCE DOOR WIRING</fullName>
+        <default>false</default>
+        <label>0912	ENTRANCE DOOR WIRING</label>
+    </customValue>
+    <customValue>
+        <fullName>0950	HEATER OR A/C CONTROLS</fullName>
+        <default>false</default>
+        <label>0950	HEATER OR A/C CONTROLS</label>
+    </customValue>
+    <customValue>
+        <fullName>0975	LIFT ELECTRICAL EFFECTS</fullName>
+        <default>false</default>
+        <label>0975	LIFT ELECTRICAL EFFECTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	FRONT BODY FRAMING</fullName>
+        <default>false</default>
+        <label>0001	FRONT BODY FRAMING</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	LEFT SIDE FRAMING</fullName>
+        <default>false</default>
+        <label>0050	LEFT SIDE FRAMING</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	RIGHT SIDEWALL FRAMING</fullName>
+        <default>false</default>
+        <label>0100	RIGHT SIDEWALL FRAMING</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	SETTEE &amp; BULKHEAD</fullName>
+        <default>false</default>
+        <label>0150	SETTEE &amp; BULKHEAD</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	ROOF FRAMING</fullName>
+        <default>false</default>
+        <label>0200	ROOF FRAMING</label>
+    </customValue>
+    <customValue>
+        <fullName>0252	FRONT STEPWELL</fullName>
+        <default>false</default>
+        <label>0252	FRONT STEPWELL</label>
+    </customValue>
+    <customValue>
+        <fullName>0300	FRONT WHEELWELL</fullName>
+        <default>false</default>
+        <label>0300	FRONT WHEELWELL</label>
+    </customValue>
+    <customValue>
+        <fullName>0310	REAR WHEELWELL</fullName>
+        <default>false</default>
+        <label>0310	REAR WHEELWELL</label>
+    </customValue>
+    <customValue>
+        <fullName>0320	REAR STEPWELL</fullName>
+        <default>false</default>
+        <label>0320	REAR STEPWELL</label>
+    </customValue>
+    <customValue>
+        <fullName>0350	PLYWOOD FLRG.--TAPPING PLATE</fullName>
+        <default>false</default>
+        <label>0350	PLYWOOD FLRG.--TAPPING PLATE</label>
+    </customValue>
+    <customValue>
+        <fullName>0355	SEAT RISERS</fullName>
+        <default>false</default>
+        <label>0355	SEAT RISERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0356	FLOORING STRUCTURE</fullName>
+        <default>false</default>
+        <label>0356	FLOORING STRUCTURE</label>
+    </customValue>
+    <customValue>
+        <fullName>0359	FLOORING REINFORCEMENT</fullName>
+        <default>false</default>
+        <label>0359	FLOORING REINFORCEMENT</label>
+    </customValue>
+    <customValue>
+        <fullName>0360	FLOOR ACCESS PANELS</fullName>
+        <default>false</default>
+        <label>0360	FLOOR ACCESS PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0370	MISC ACCESS DOORS</fullName>
+        <default>false</default>
+        <label>0370	MISC ACCESS DOORS</label>
+    </customValue>
+    <customValue>
+        <fullName>0400	FRONT DOOR</fullName>
+        <default>false</default>
+        <label>0400	FRONT DOOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0404	REAR EMERGENCY DOOR</fullName>
+        <default>false</default>
+        <label>0404	REAR EMERGENCY DOOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0405	REAR ENGINE DOOR</fullName>
+        <default>false</default>
+        <label>0405	REAR ENGINE DOOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0410	EXIT DOORS</fullName>
+        <default>false</default>
+        <label>0410	EXIT DOORS</label>
+    </customValue>
+    <customValue>
+        <fullName>0412	EMERGENCY DOOR RELEASE</fullName>
+        <default>false</default>
+        <label>0412	EMERGENCY DOOR RELEASE</label>
+    </customValue>
+    <customValue>
+        <fullName>0413	DOOR CONTROL, FRONT SB</fullName>
+        <default>false</default>
+        <label>0413	DOOR CONTROL, FRONT SB</label>
+    </customValue>
+    <customValue>
+        <fullName>0420	RADIATOR ACCESS DOOR</fullName>
+        <default>false</default>
+        <label>0420	RADIATOR ACCESS DOOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0421	FILTER ACCESS DOOR</fullName>
+        <default>false</default>
+        <label>0421	FILTER ACCESS DOOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0430	DECALS</fullName>
+        <default>false</default>
+        <label>0430	DECALS</label>
+    </customValue>
+    <customValue>
+        <fullName>0450	FRONT CAP</fullName>
+        <default>false</default>
+        <label>0450	FRONT CAP</label>
+    </customValue>
+    <customValue>
+        <fullName>0475	FRONT ACCESS DOORS</fullName>
+        <default>false</default>
+        <label>0475	FRONT ACCESS DOORS</label>
+    </customValue>
+    <customValue>
+        <fullName>0500	REAR CAP/GRILLE</fullName>
+        <default>false</default>
+        <label>0500	REAR CAP/GRILLE</label>
+    </customValue>
+    <customValue>
+        <fullName>0550	ROOF SKINS</fullName>
+        <default>false</default>
+        <label>0550	ROOF SKINS</label>
+    </customValue>
+    <customValue>
+        <fullName>0555	ADDITIONAL ROOF VENTS</fullName>
+        <default>false</default>
+        <label>0555	ADDITIONAL ROOF VENTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0600	LEFT SIDE SKINS</fullName>
+        <default>false</default>
+        <label>0600	LEFT SIDE SKINS</label>
+    </customValue>
+    <customValue>
+        <fullName>0650	RIGHT SIDE SKINS</fullName>
+        <default>false</default>
+        <label>0650	RIGHT SIDE SKINS</label>
+    </customValue>
+    <customValue>
+        <fullName>0700	REAR CORNER PANELS</fullName>
+        <default>false</default>
+        <label>0700	REAR CORNER PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0710	GAS SHOCKS</fullName>
+        <default>false</default>
+        <label>0710	GAS SHOCKS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	RCA FLOORING/TRIM</fullName>
+        <default>false</default>
+        <label>0001	RCA FLOORING/TRIM</label>
+    </customValue>
+    <customValue>
+        <fullName>0025	SSTL INTERIOR TRIM</fullName>
+        <default>false</default>
+        <label>0025	SSTL INTERIOR TRIM</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	LEFT SIDEWALL PANELS</fullName>
+        <default>false</default>
+        <label>0050	LEFT SIDEWALL PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	RIGHT SIDEWALL PANELS</fullName>
+        <default>false</default>
+        <label>0100	RIGHT SIDEWALL PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	INT. DUCTING &amp; LIGHT PANELS</fullName>
+        <default>false</default>
+        <label>0150	INT. DUCTING &amp; LIGHT PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0151	ROOF PANELS</fullName>
+        <default>false</default>
+        <label>0151	ROOF PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0154	CEILING PANELS</fullName>
+        <default>false</default>
+        <label>0154	CEILING PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0158	LOWERED A/C DUCTING</fullName>
+        <default>false</default>
+        <label>0158	LOWERED A/C DUCTING</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	RETURN AIR GRILLE</fullName>
+        <default>false</default>
+        <label>0200	RETURN AIR GRILLE</label>
+    </customValue>
+    <customValue>
+        <fullName>0220	REAR SHELF &amp; SETTEE TRIM</fullName>
+        <default>false</default>
+        <label>0220	REAR SHELF &amp; SETTEE TRIM</label>
+    </customValue>
+    <customValue>
+        <fullName>0250	FRONT STEPWELL TRIM</fullName>
+        <default>false</default>
+        <label>0250	FRONT STEPWELL TRIM</label>
+    </customValue>
+    <customValue>
+        <fullName>0260	REAR STEPWELL TRIM</fullName>
+        <default>false</default>
+        <label>0260	REAR STEPWELL TRIM</label>
+    </customValue>
+    <customValue>
+        <fullName>0300	DRVR BARRIER--MODESTY PANEL</fullName>
+        <default>false</default>
+        <label>0300	DRVR BARRIER--MODESTY PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0302	FRONT DOOR MODESTY PANEL</fullName>
+        <default>false</default>
+        <label>0302	FRONT DOOR MODESTY PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0303	REAR DOOR MODESTY PANEL</fullName>
+        <default>false</default>
+        <label>0303	REAR DOOR MODESTY PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0304	FWD/RR DOOR MODESTY PANEL</fullName>
+        <default>false</default>
+        <label>0304	FWD/RR DOOR MODESTY PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0306	W/C BARRIER MODESTY PANEL</fullName>
+        <default>false</default>
+        <label>0306	W/C BARRIER MODESTY PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0325	UPPER DRIVERS PANEL</fullName>
+        <default>false</default>
+        <label>0325	UPPER DRIVERS PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0326	UPPER ENTRANCE DOOR PANEL</fullName>
+        <default>false</default>
+        <label>0326	UPPER ENTRANCE DOOR PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0327	UPPER EXIT DOOR PANEL</fullName>
+        <default>false</default>
+        <label>0327	UPPER EXIT DOOR PANEL</label>
+    </customValue>
+    <customValue>
+        <fullName>0328	DOOR SEALS</fullName>
+        <default>false</default>
+        <label>0328	DOOR SEALS</label>
+    </customValue>
+    <customValue>
+        <fullName>0350	GRABRAILS/STANCHIONS</fullName>
+        <default>false</default>
+        <label>0350	GRABRAILS/STANCHIONS</label>
+    </customValue>
+    <customValue>
+        <fullName>0451	INTERIOR MIRRORS</fullName>
+        <default>false</default>
+        <label>0451	INTERIOR MIRRORS</label>
+    </customValue>
+    <customValue>
+        <fullName>0500	DRIVER SEAT</fullName>
+        <default>false</default>
+        <label>0500	DRIVER SEAT</label>
+    </customValue>
+    <customValue>
+        <fullName>0560	PASSENGER SEATS</fullName>
+        <default>false</default>
+        <label>0560	PASSENGER SEATS</label>
+    </customValue>
+    <customValue>
+        <fullName>0570	STANCHIONS, VERTICAL</fullName>
+        <default>false</default>
+        <label>0570	STANCHIONS, VERTICAL</label>
+    </customValue>
+    <customValue>
+        <fullName>0580	SEAT BELTS, Driver&apos;s or passenger</fullName>
+        <default>false</default>
+        <label>0580	SEAT BELTS, Driver&apos;s or passenger</label>
+    </customValue>
+    <customValue>
+        <fullName>0600	RADIO BOX</fullName>
+        <default>false</default>
+        <label>0600	RADIO BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>0602	BATT OR DIGITAL RECORDER BOX</fullName>
+        <default>false</default>
+        <label>0602	BATT OR DIGITAL RECORDER BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>0624	ANTENNA CONDUIT</fullName>
+        <default>false</default>
+        <label>0624	ANTENNA CONDUIT</label>
+    </customValue>
+    <customValue>
+        <fullName>0625	STOWAGE BOX</fullName>
+        <default>false</default>
+        <label>0625	STOWAGE BOX</label>
+    </customValue>
+    <customValue>
+        <fullName>0650	SUN VISOR OR SUNSCREEN</fullName>
+        <default>false</default>
+        <label>0650	SUN VISOR OR SUNSCREEN</label>
+    </customValue>
+    <customValue>
+        <fullName>0680	FIRST AID COMPT</fullName>
+        <default>false</default>
+        <label>0680	FIRST AID COMPT</label>
+    </customValue>
+    <customValue>
+        <fullName>0681	DEST SIGN CLOSEOUT</fullName>
+        <default>false</default>
+        <label>0681	DEST SIGN CLOSEOUT</label>
+    </customValue>
+    <customValue>
+        <fullName>0685	DECALS</fullName>
+        <default>false</default>
+        <label>0685	DECALS</label>
+    </customValue>
+    <customValue>
+        <fullName>0700	LUGGAGE RACK</fullName>
+        <default>false</default>
+        <label>0700	LUGGAGE RACK</label>
+    </customValue>
+    <customValue>
+        <fullName>0703	SKI RACK</fullName>
+        <default>false</default>
+        <label>0703	SKI RACK</label>
+    </customValue>
+    <customValue>
+        <fullName>0704	TRANSFER MACHINE</fullName>
+        <default>false</default>
+        <label>0704	TRANSFER MACHINE</label>
+    </customValue>
+    <customValue>
+        <fullName>0850	FAREBOX</fullName>
+        <default>false</default>
+        <label>0850	FAREBOX</label>
+    </customValue>
+    <customValue>
+        <fullName>0860	STEP NOSING</fullName>
+        <default>false</default>
+        <label>0860	STEP NOSING</label>
+    </customValue>
+    <customValue>
+        <fullName>0904	DRIVER&apos;S CURTAIN</fullName>
+        <default>false</default>
+        <label>0904	DRIVER&apos;S CURTAIN</label>
+    </customValue>
+    <customValue>
+        <fullName>0905	WATER BARRIER, DRIVER&apos;S AREA</fullName>
+        <default>false</default>
+        <label>0905	WATER BARRIER, DRIVER&apos;S AREA</label>
+    </customValue>
+    <customValue>
+        <fullName>0906	PASSENGER COUNTER</fullName>
+        <default>false</default>
+        <label>0906	PASSENGER COUNTER</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	DESTINATION SIGN</fullName>
+        <default>false</default>
+        <label>0001	DESTINATION SIGN</label>
+    </customValue>
+    <customValue>
+        <fullName>0011	DESTINATION SIGN BAY DOOR</fullName>
+        <default>false</default>
+        <label>0011	DESTINATION SIGN BAY DOOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0012	FRT DESTINATION GLAZING</fullName>
+        <default>false</default>
+        <label>0012	FRT DESTINATION GLAZING</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	SIDE DEST. SIGN</fullName>
+        <default>false</default>
+        <label>0050	SIDE DEST. SIGN</label>
+    </customValue>
+    <customValue>
+        <fullName>0104	REAR RUN SIGN</fullName>
+        <default>false</default>
+        <label>0104	REAR RUN SIGN</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	FRONT RUN NO. SIGN</fullName>
+        <default>false</default>
+        <label>0150	FRONT RUN NO. SIGN</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	LIFT CONT/POWER PACK</fullName>
+        <default>false</default>
+        <label>0050	LIFT CONT/POWER PACK</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	WHEELCHAIR TIE DOWNS</fullName>
+        <default>false</default>
+        <label>0100	WHEELCHAIR TIE DOWNS</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	LIFT ALARM (FLOYD BELL)</fullName>
+        <default>false</default>
+        <label>0150	LIFT ALARM (FLOYD BELL)</label>
+    </customValue>
+    <customValue>
+        <fullName>0002	LIFT MECHANICALS</fullName>
+        <default>false</default>
+        <label>0002	LIFT MECHANICALS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	EXTERIOR MIRRORS</fullName>
+        <default>false</default>
+        <label>0001	EXTERIOR MIRRORS</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	MUD FLAPS</fullName>
+        <default>false</default>
+        <label>0050	MUD FLAPS</label>
+    </customValue>
+    <customValue>
+        <fullName>0052	CENTER REAR SPLASH SHIELDS</fullName>
+        <default>false</default>
+        <label>0052	CENTER REAR SPLASH SHIELDS</label>
+    </customValue>
+    <customValue>
+        <fullName>100	        BIKE RACK</fullName>
+        <default>false</default>
+        <label>100	        BIKE RACK</label>
+    </customValue>
+    <customValue>
+        <fullName>101	        SKI RACKS</fullName>
+        <default>false</default>
+        <label>101	        SKI RACKS</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	LEFT SKIRT PANELS</fullName>
+        <default>false</default>
+        <label>0150	LEFT SKIRT PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	RIGHT SKIRT PANELS</fullName>
+        <default>false</default>
+        <label>0200	RIGHT SKIRT PANELS</label>
+    </customValue>
+    <customValue>
+        <fullName>0300	FENDER FLARES</fullName>
+        <default>false</default>
+        <label>0300	FENDER FLARES</label>
+    </customValue>
+    <customValue>
+        <fullName>0301	RUB RAILS</fullName>
+        <default>false</default>
+        <label>0301	RUB RAILS</label>
+    </customValue>
+    <customValue>
+        <fullName>0350	EXTERIOR AD FRAMES</fullName>
+        <default>false</default>
+        <label>0350	EXTERIOR AD FRAMES</label>
+    </customValue>
+    <customValue>
+        <fullName>0360	RAIN GUTTERS</fullName>
+        <default>false</default>
+        <label>0360	RAIN GUTTERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0400	FRONT BUMPER/MTG</fullName>
+        <default>false</default>
+        <label>0400	FRONT BUMPER/MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0410	REAR BUMPER MTG.</fullName>
+        <default>false</default>
+        <label>0410	REAR BUMPER MTG.</label>
+    </customValue>
+    <customValue>
+        <fullName>0450	WINDSHIELD WASHER/WIPER</fullName>
+        <default>false</default>
+        <label>0450	WINDSHIELD WASHER/WIPER</label>
+    </customValue>
+    <customValue>
+        <fullName>0460	INTERMITTENT W/S WIPER</fullName>
+        <default>false</default>
+        <label>0460	INTERMITTENT W/S WIPER</label>
+    </customValue>
+    <customValue>
+        <fullName>0600	LICENSE PLATE FRAME/HOLDER</fullName>
+        <default>false</default>
+        <label>0600	LICENSE PLATE FRAME/HOLDER</label>
+    </customValue>
+    <customValue>
+        <fullName>0605	EXTERIOR LOGOS</fullName>
+        <default>false</default>
+        <label>0605	EXTERIOR LOGOS</label>
+    </customValue>
+    <customValue>
+        <fullName>0610	REFLECTORS</fullName>
+        <default>false</default>
+        <label>0610	REFLECTORS</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	AD FRAMES INTERIOR</fullName>
+        <default>false</default>
+        <label>0050	AD FRAMES INTERIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0060	AD FRAMES EXTERIOR</fullName>
+        <default>false</default>
+        <label>0060	AD FRAMES EXTERIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	FIRST AID KIT</fullName>
+        <default>false</default>
+        <label>0001	FIRST AID KIT</label>
+    </customValue>
+    <customValue>
+        <fullName>0002	FIRE EXTINGUISHER</fullName>
+        <default>false</default>
+        <label>0002	FIRE EXTINGUISHER</label>
+    </customValue>
+    <customValue>
+        <fullName>0003	ROAD FLARES/FLAGS</fullName>
+        <default>false</default>
+        <label>0003	ROAD FLARES/FLAGS</label>
+    </customValue>
+    <customValue>
+        <fullName>0006	SAFETY TRIANGLES</fullName>
+        <default>false</default>
+        <label>0006	SAFETY TRIANGLES</label>
+    </customValue>
+    <customValue>
+        <fullName>0007	FRT. FOLDING STEP</fullName>
+        <default>false</default>
+        <label>0007	FRT. FOLDING STEP</label>
+    </customValue>
+    <customValue>
+        <fullName>0008	INSTA CHAINS</fullName>
+        <default>false</default>
+        <label>0008	INSTA CHAINS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	DRIVERS HEATERS/CONTROLS</fullName>
+        <default>false</default>
+        <label>0001	DRIVERS HEATERS/CONTROLS</label>
+    </customValue>
+    <customValue>
+        <fullName>0002	DIVER&apos;S HEATER PIPING</fullName>
+        <default>false</default>
+        <label>0002	DIVER&apos;S HEATER PIPING</label>
+    </customValue>
+    <customValue>
+        <fullName>0010	DEFROSTER DUCTS</fullName>
+        <default>false</default>
+        <label>0010	DEFROSTER DUCTS</label>
+    </customValue>
+    <customValue>
+        <fullName>0020	DRIVER HEATER CORE</fullName>
+        <default>false</default>
+        <label>0020	DRIVER HEATER CORE</label>
+    </customValue>
+    <customValue>
+        <fullName>0030	DRIVER HEATER MOTOR</fullName>
+        <default>false</default>
+        <label>0030	DRIVER HEATER MOTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	HEATER &amp; A/C PLATFORM/MTG</fullName>
+        <default>false</default>
+        <label>0050	HEATER &amp; A/C PLATFORM/MTG</label>
+    </customValue>
+    <customValue>
+        <fullName>0051	HEATER BOOSTER PUMP</fullName>
+        <default>false</default>
+        <label>0051	HEATER BOOSTER PUMP</label>
+    </customValue>
+    <customValue>
+        <fullName>0052	HEATER VALVE</fullName>
+        <default>false</default>
+        <label>0052	HEATER VALVE</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	PASSENGER HEATER</fullName>
+        <default>false</default>
+        <label>0100	PASSENGER HEATER</label>
+    </customValue>
+    <customValue>
+        <fullName>0102	AUXILIARY WATER HEATER</fullName>
+        <default>false</default>
+        <label>0102	AUXILIARY WATER HEATER</label>
+    </customValue>
+    <customValue>
+        <fullName>0103	HEATER/AIR COND MTG/SEALING</fullName>
+        <default>false</default>
+        <label>0103	HEATER/AIR COND MTG/SEALING</label>
+    </customValue>
+    <customValue>
+        <fullName>0104	PASS. HEATER/UNDER SEAT</fullName>
+        <default>false</default>
+        <label>0104	PASS. HEATER/UNDER SEAT</label>
+    </customValue>
+    <customValue>
+        <fullName>0110	PASS. HEATER PIPING/DRAINS</fullName>
+        <default>false</default>
+        <label>0110	PASS. HEATER PIPING/DRAINS</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	FRONT STEPWELL HEATER</fullName>
+        <default>false</default>
+        <label>0150	FRONT STEPWELL HEATER</label>
+    </customValue>
+    <customValue>
+        <fullName>0151	REAR STEPWELL HEATER</fullName>
+        <default>false</default>
+        <label>0151	REAR STEPWELL HEATER</label>
+    </customValue>
+    <customValue>
+        <fullName>0153	LIFT CONTROL BOX HTR DUCTING</fullName>
+        <default>false</default>
+        <label>0153	LIFT CONTROL BOX HTR DUCTING</label>
+    </customValue>
+    <customValue>
+        <fullName>0220	OUTSIDE AIR DUCT</fullName>
+        <default>false</default>
+        <label>0220	OUTSIDE AIR DUCT</label>
+    </customValue>
+    <customValue>
+        <fullName>0250	DRIVER&apos;S AREA BOOSTER FAN</fullName>
+        <default>false</default>
+        <label>0250	DRIVER&apos;S AREA BOOSTER FAN</label>
+    </customValue>
+    <customValue>
+        <fullName>0251	DEFROSTER FAN&apos;S</fullName>
+        <default>false</default>
+        <label>0251	DEFROSTER FAN&apos;S</label>
+    </customValue>
+    <customValue>
+        <fullName>0301	PANEL #1</fullName>
+        <default>false</default>
+        <label>0301	PANEL #1</label>
+    </customValue>
+    <customValue>
+        <fullName>0302	PANEL #2</fullName>
+        <default>false</default>
+        <label>0302	PANEL #2</label>
+    </customValue>
+    <customValue>
+        <fullName>0303	PANEL #3</fullName>
+        <default>false</default>
+        <label>0303	PANEL #3</label>
+    </customValue>
+    <customValue>
+        <fullName>0304	PANEL #4</fullName>
+        <default>false</default>
+        <label>0304	PANEL #4</label>
+    </customValue>
+    <customValue>
+        <fullName>0305	PANEL #5</fullName>
+        <default>false</default>
+        <label>0305	PANEL #5</label>
+    </customValue>
+    <customValue>
+        <fullName>0306	HVAC CONTROLS</fullName>
+        <default>false</default>
+        <label>0306	HVAC CONTROLS</label>
+    </customValue>
+    <customValue>
+        <fullName>0309	PANEL #9, INDICATOR LAMP BAR</fullName>
+        <default>false</default>
+        <label>0309	PANEL #9, INDICATOR LAMP BAR</label>
+    </customValue>
+    <customValue>
+        <fullName>0310	Driver&apos;s Console</fullName>
+        <default>false</default>
+        <label>0310	Driver&apos;s Console</label>
+    </customValue>
+    <customValue>
+        <fullName>0350	ENG OIL PRESS GA</fullName>
+        <default>false</default>
+        <label>0350	ENG OIL PRESS GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0352	ENG COOLANT TEMP GA</fullName>
+        <default>false</default>
+        <label>0352	ENG COOLANT TEMP GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0354	TRANS OIL TEMP GA</fullName>
+        <default>false</default>
+        <label>0354	TRANS OIL TEMP GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0355	AIR PRESS. GA</fullName>
+        <default>false</default>
+        <label>0355	AIR PRESS. GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0356	AIR APPL. GA</fullName>
+        <default>false</default>
+        <label>0356	AIR APPL. GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0357	VOLTMETER GA</fullName>
+        <default>false</default>
+        <label>0357	VOLTMETER GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0358	ENG. HOURMETER GA</fullName>
+        <default>false</default>
+        <label>0358	ENG. HOURMETER GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0359	FUEL LEVEL GA</fullName>
+        <default>false</default>
+        <label>0359	FUEL LEVEL GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0360	EXHAUST PYROMETER GA</fullName>
+        <default>false</default>
+        <label>0360	EXHAUST PYROMETER GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0361	AMP METER GA</fullName>
+        <default>false</default>
+        <label>0361	AMP METER GA</label>
+    </customValue>
+    <customValue>
+        <fullName>0365	SPEEDOMETER &amp; OR CABLES</fullName>
+        <default>false</default>
+        <label>0365	SPEEDOMETER &amp; OR CABLES</label>
+    </customValue>
+    <customValue>
+        <fullName>0366	TACHOMETER</fullName>
+        <default>false</default>
+        <label>0366	TACHOMETER</label>
+    </customValue>
+    <customValue>
+        <fullName>0367	TACHOGRAPH</fullName>
+        <default>false</default>
+        <label>0367	TACHOGRAPH</label>
+    </customValue>
+    <customValue>
+        <fullName>0368	RECORDING SPEEDOMETER</fullName>
+        <default>false</default>
+        <label>0368	RECORDING SPEEDOMETER</label>
+    </customValue>
+    <customValue>
+        <fullName>0900	SWITCHES/SENDERS</fullName>
+        <default>false</default>
+        <label>0900	SWITCHES/SENDERS</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	AIR CONDITIONING COND. MOTOR</fullName>
+        <default>false</default>
+        <label>0001	AIR CONDITIONING COND. MOTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0002	AIR CONDITIONING CONDENSER</fullName>
+        <default>false</default>
+        <label>0002	AIR CONDITIONING CONDENSER</label>
+    </customValue>
+    <customValue>
+        <fullName>0003	AIR COND. EVAP COOLER</fullName>
+        <default>false</default>
+        <label>0003	AIR COND. EVAP COOLER</label>
+    </customValue>
+    <customValue>
+        <fullName>0004	AIR CONDITION EVAP MOTOR</fullName>
+        <default>false</default>
+        <label>0004	AIR CONDITION EVAP MOTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0020	AIR COND PIPING/DRAIN</fullName>
+        <default>false</default>
+        <label>0020	AIR COND PIPING/DRAIN</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	FREON COMPRESSOR</fullName>
+        <default>false</default>
+        <label>0050	FREON COMPRESSOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0051	FREON COMPRESSOR BELT</fullName>
+        <default>false</default>
+        <label>0051	FREON COMPRESSOR BELT</label>
+    </customValue>
+    <customValue>
+        <fullName>0052	FREON COMPRESSOR PULLEY</fullName>
+        <default>false</default>
+        <label>0052	FREON COMPRESSOR PULLEY</label>
+    </customValue>
+    <customValue>
+        <fullName>0053	FREON COMPRESSOR IDLER PULLEY</fullName>
+        <default>false</default>
+        <label>0053	FREON COMPRESSOR IDLER PULLEY</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	INTERIOR</fullName>
+        <default>false</default>
+        <label>0100	INTERIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0200	EXTERIOR</fullName>
+        <default>false</default>
+        <label>0200	EXTERIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	WINDSHIELD GLAZING</fullName>
+        <default>false</default>
+        <label>0001	WINDSHIELD GLAZING</label>
+    </customValue>
+    <customValue>
+        <fullName>0002	REAR WINDOW</fullName>
+        <default>false</default>
+        <label>0002	REAR WINDOW</label>
+    </customValue>
+    <customValue>
+        <fullName>0051	DRIVER&apos;S WINDOW</fullName>
+        <default>false</default>
+        <label>0051	DRIVER&apos;S WINDOW</label>
+    </customValue>
+    <customValue>
+        <fullName>0052	RIGHT VISIBILITY WINDOW</fullName>
+        <default>false</default>
+        <label>0052	RIGHT VISIBILITY WINDOW</label>
+    </customValue>
+    <customValue>
+        <fullName>0100	TRANSOM PASSENGER WINDOWS</fullName>
+        <default>false</default>
+        <label>0100	TRANSOM PASSENGER WINDOWS</label>
+    </customValue>
+    <customValue>
+        <fullName>0150	FULL SLIDING PASS. WINDOW</fullName>
+        <default>false</default>
+        <label>0150	FULL SLIDING PASS. WINDOW</label>
+    </customValue>
+    <customValue>
+        <fullName>0160	RH FWD FULL SLIDING</fullName>
+        <default>false</default>
+        <label>0160	RH FWD FULL SLIDING</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	FIRE</fullName>
+        <default>false</default>
+        <label>0001	FIRE</label>
+    </customValue>
+    <customValue>
+        <fullName>0001	FUEL TANK</fullName>
+        <default>false</default>
+        <label>0001	FUEL TANK</label>
+    </customValue>
+    <customValue>
+        <fullName>0050	FUEL TANK PIPING</fullName>
+        <default>false</default>
+        <label>0050	FUEL TANK PIPING</label>
+    </customValue>
+    <masterLabel>Problem Sub Code</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

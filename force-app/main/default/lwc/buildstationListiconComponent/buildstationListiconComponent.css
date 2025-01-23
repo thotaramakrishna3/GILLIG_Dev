@@ -1,0 +1,27 @@
+.bsbadge {
+    color: rgb(32, 31, 31);
+    /*background-color: rgb(225, 230, 225);*/
+    border: 1px solid rgb(221, 219, 218);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: normal;
+    white-space: nowrap;
+    /*display: inline-flex; */
+    /*width: 95px;*/
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .bsbuttonstyle {
+      height: 25px;
+      padding: 0.25rem 0.5rem;
+
+  }
+
+  /* .nobsbuttonstyle > button {
+    color: transparent;
+    border-color: transparent;
+  } */

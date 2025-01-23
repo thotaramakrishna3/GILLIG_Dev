@@ -1,0 +1,278 @@
+<template>
+    <!--Show spinner start-->
+    <div if:true={showSpinner}>
+        <div class="slds-spinner_container">
+            <div class="slds-spinner--brand slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </div>
+        <!--Show spinner end-->
+        <template if:true={showtable}>
+        <section class="main">
+            <div class="discrepancyhead">
+                <div class="slds-p-top_x-small filterdiv">
+                    <div class="slds-grid slds-wrap slds-grid_align-spread slds-m-top_x-small slds-m-bottom_x-small">
+                    </div>
+                    
+                        <div class="slds-m-left_x-small"> <span class="slds-page-header__title slds-truncate" title=""> <lightning-icon size="small" class="slds-m-right_x-small" icon-name="standard:file" alternative-text="Total Rejects" title="Total Rejects"></lightning-icon>Rework ({nosearchdata.length})</span></div>
+                        <c-new-rework-component class="slds-float_right" buttonlabel="Unknown Part Rework" modalheading="New Rework" onloadtable={loaddatatable} page="reworkdb" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} permissionset={permissionset} ></c-new-rework-component>
+                        <template if:false={showSpinner}>
+                        <c-paginator records={nosearchdata}
+              total-records={nosearchdata.length} 
+              onsearchchange={handleSearchChange} 
+              search-value={searchValue}
+              show-search-box="true" 
+              onpaginatorchange={handlePaginatorChange}>
+          </c-paginator>
+                        </template>
+                </div>
+            </div>
+            <div class="opcontentbody slds-m-top_x-small"  style="overflow-x:auto">
+            <div style="min-width: 1890px">    
+                <table
+                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered tableouterborder tablelayout"><!--added class vishwas-->
+                    <thead>
+                        <tr class="slds-line-height_reset slds-text-title_caps">
+                           
+                            <th class="fixedheader" scope="col" style="width:5%">
+                                <lightning-button variant="base" data-id="current_line_location_sort" label="BUS" title="BUS"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate"><!--current_line_location-->
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:5%">
+                                <lightning-button variant="base" data-id="bus_start_date" label="BUILDSTATION" title="BUILDSTATION"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate">
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:4%">
+                                <lightning-button variant="base" data-id="chassis_no" label="DEPARTMENT" title="DEPARTMENT" icon-position="right"
+                                    onclick={sortdiscrepancytable} class="slds-truncate">
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:4%">
+                                <lightning-button variant="base" data-id="raised_date" label="PART NUMBER" title="PART NUMBER"
+                                    icon-position="right" class="slds-truncate"></lightning-button><!--ETA from Due Date-->
+                            </th> 
+                            <th class="fixedheader" scope="col" style="width:4%">
+                                <lightning-button variant="base" data-id="raised_date" label="REWORKED PART NUMBER" title="REWORKED PART NUMBER"
+                                    icon-position="right" class="slds-truncate"></lightning-button><!--ETA from Due Date-->
+                            </th> 
+                            <th class="fixedheader" scope="col" style="width:5.67%">
+                                <lightning-button variant="base" data-id="department_name" label="REWORK DESCRIPTION" title="REWORK DESCRIPTION"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate">
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:4.67%">
+                                <lightning-button variant="base" data-id="buspart_no_sort" label="REWORKED BY" title="REWORKED BY"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate">
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:3.67%">
+                                <lightning-button variant="base" data-id="created_date" label="CREATED DATE" title="CREATED DATE"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate">
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:3.67%">
+                                <lightning-button variant="base" data-id="buspart_name" label="REASON CODE" title="REASON CODE" icon-position="right"
+                                    onclick={sortdiscrepancytable} class="slds-truncate">
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:3.67%">
+                                <lightning-button variant="base" data-id="vendor_name_sort" label="QUANTITY REWORKED" title="QUANTITY REWORKED"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate"><!--vendor_name-->
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:2.67%">
+                                <lightning-button variant="base" data-id="vendor_name_sort" label="STATUS" title="STATUS"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate"><!--vendor_name-->
+                                </lightning-button>
+                            </th>
+                            <th class="fixedheader" scope="col" style="width:3%">
+                                <lightning-button variant="base" data-id="vendor_name_sort" label="ACTION" title="ACTION"
+                                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate"><!--vendor_name-->
+                                </lightning-button>
+                            </th>
+                                                   
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={filteredreworks} for:item="rework">
+                            <tr key={rework.Id} class="cellfontstyle">
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>
+                                        <a href="javascript:void(0);" onclick={showreworkdetail} data-id={rework.Id}>{rework.Name}</a>
+                                    </div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Buildstation}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Department}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Bus_Part_Number}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Rework_Bus_Part_No}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Reject_Description}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.UserName}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <lightning-formatted-date-time value={rework.CreatedDate} month="numeric" day="numeric" year="numeric"   hour="2-digit"
+                                    minute="2-digit"  hour12="true"></lightning-formatted-date-time>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Reason_Code}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Quantity_Rejected}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>{rework.Status}</div>
+                                </td>
+                                <td data-id={rework.Id} onclick={showpartshortagedetail}>
+                                    <div>
+                                        <lightning-button data-id={rework.Id} label="Update" variant="Neutral" onclick={handleUpdate} icon-name="utility:edit"></lightning-button>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+    
+                <template if:true={disclistempty}>
+                    <div class="slds-align_absolute-center">
+                        <div class="empty-state-container slds-text-align_center">
+                            <img src={nodatadessert} width="500px" aria-hidden="true"
+                                alt=" No data matching the applied filters to display." />
+                            <div class="emptymessage">
+                                No data matching the applied filters to display.
+                            </div>
+                        </div>
+                    </div>
+                </template>
+    
+            </div>
+        </div>
+        </section> 
+    </template>
+        <!-- Reject view modal start -->
+<template if:true={ShowReworkModal}>
+    <section role="dialog" tabindex="-1"
+             aria-labelledby="modal-heading-01"
+             aria-modal="true"
+             aria-describedby="modal-content-id-1"
+            class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+          <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+             </button>
+             <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Rework Details</h2>
+          </header>
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="text" name="selectedrejectbus" label="Selected Bus" value={updateRecord.Name} disabled></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input  disabled required class="partshortagevalidationrework" value={updateRecord.Department__c} type="text" label="Department" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input disabled required class="partshortagevalidationrework" value={updateRecord.Buildstation__c} type="text" label="Build Station" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input disabled required class="partshortagevalidationrework" value={updateRecord.Bus_Part_Number__c} type="text" name="dummy" label="Part Number" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-input required class="partshortagevalidationrework" onchange={updatenewrework} value={updateRecord.Reworked_to_Part} type="text" name="rework_part" label="Rework to Part Number" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-textarea required class="partshortagevalidationrework" disabled name="buspart_name" value={updateRecord.Rework_Description__c} label="Description" placeholder="Please select a Part Number to fill."></lightning-textarea>
+                </div>
+                <div class="slds-size_1-of-2 slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input required class="partshortagevalidationrework" type="number" name="quantity_reworked"
+                                         onchange={updatenewrework} label="Quantity Reworked" value={updateRecord.Quantity_Reworked__c} min="0.00001"
+                                         step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input disabled required class="partshortagevalidationrework" value={updateRecord.Reason_Code__c} type="text" name="reason_code" label="Reason Code" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox required class="partshortagevalidationrework" value={updateRecord.Status__c} type="text" name="status" label="Status" options={picklistOptions}  onchange={updatenewrework}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox required class="partshortagevalidationrework" value={updateRecord.Supply_Chain__c} type="text" name="supply_chain" label="Supply Chain" options={supplyChainPicklistOptions}  onchange={updatenewrework}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="text" name="Reworked By" label="Reworked By" value={updateRecord.Reworked_by} disabled></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="text" name="createddate" label="Created Date" value={updateRecord.createddate} disabled></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-textarea name="remarks" value={updateRecord.Remarks__c} label="Remark" onchange={updatenewrework}></lightning-textarea>
+                </div>
+                <div class="slds-float_none slds-p-around_x-small">
+                    <span class="slds-text-heading_small">Attachments (<b>{attachmentsize}</b>)</span><br>
+                    <lightning-spinner variant="brand"
+                                    if:true={isImageLoading}
+                                    alternative-text="Loading"
+                                    size="small">
+                    </lightning-spinner>
+                    <template if:true={isrejectpresent}>
+                        <div class="slds-grid slds-wrap slds-gutters slds-m-top_medium">
+                            <template for:each={rejectimagelist} for:item='checklist'>
+                                <div key={checklist.Id} class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                    <div style="width:12rem; margin: 0 auto;">
+                                    <div class="slds-file slds-file_card">
+                                        <figure style="margin: 0; padding: 0;">
+                                          <a href={checklist.url} target="_blank" class="slds-file__crop">
+                                            <span class="slds-assistive-text">Preview:</span>
+                                            <img src={checklist.url} alt="Description of the image" style="width: 100%; height: auto;" />
+                                          </a>
+                                        </figure>
+                                        <div class="slds-file__title slds-file__title_scrim">
+                                            <lightning-button-icon title={checklist.Updatedbyandtimestamp} variant="brand" icon-name="utility:info_alt" class="slds-m-left_xx-small"></lightning-button-icon>
+                                          </div>
+                                      </div>
+                                </div>
+                            </div>
+                            </template>
+                        </div>
+                    </template>
+                    <template if:false={isrejectpresent}>
+                        <div class="slds-align_absolute-center">
+                            <div class="empty-state-container slds-text-align_center">
+                                <img src={nodatadessert} width="500px" aria-hidden="true" alt="No data to display.">
+                                <div class="emptymessage">
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+           <lightning-button label="Cancel" title="Cancel" onclick={closeModal} class="slds-m-right_x-small"></lightning-button>
+           <lightning-button if:true={isupdated} variant="brand" label="Update" disabled={IsupdateDisable} title="Update" icon-name="utility:record_update" onclick={updatereworktoserver}></lightning-button>
+           </footer>
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>   
+</template>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The link connecting to Sharepoint --></help>
+    <label><!-- Active Project List ID --></label>
+    <name>Active_Project_List__c</name>
+</CustomFieldTranslation>

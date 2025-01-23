@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>admin@gillig.com</contactEmail>
+    <contactPhone>5102643838</contactPhone>
+    <description>AWS Admin console</description>
+    <label>AWS admin</label>
+    <samlConfig>
+        <acsUrl>https://signin.aws.amazon.com/saml</acsUrl>
+        <encryptionType>AES_128</encryptionType>
+        <entityUrl>https://signin.aws.amazon.com/saml</entityUrl>
+        <issuer>https://gillig.my.salesforce.com</issuer>
+        <samlNameIdFormat>Persistent</samlNameIdFormat>
+        <samlSigningAlgoType>SHA1</samlSigningAlgoType>
+        <samlSubjectType>PersistentId</samlSubjectType>
+    </samlConfig>
+</ConnectedApp>

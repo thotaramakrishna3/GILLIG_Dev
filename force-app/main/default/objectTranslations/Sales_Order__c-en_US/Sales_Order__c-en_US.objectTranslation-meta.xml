@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sales Orders</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Board Search Filters --></label>
+        <name>Board_Search_Filters</name>
+    </fieldSets>
+    <layouts>
+        <layout>Finance Sales Order Layout</layout>
+        <sections>
+            <label><!-- Actuals --></label>
+            <section>Actuals</section>
+        </sections>
+        <sections>
+            <label><!-- Administrative --></label>
+            <section>Administrative</section>
+        </sections>
+        <sections>
+            <label><!-- Buy America --></label>
+            <section>Buy America</section>
+        </sections>
+        <sections>
+            <label><!-- Component Information --></label>
+            <section>Component Information</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Approval Tracking --></label>
+            <section>Customer Approval Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery --></label>
+            <section>Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Finance --></label>
+            <section>Finance</section>
+        </sections>
+        <sections>
+            <label><!-- Gross Margin --></label>
+            <section>Gross Margin</section>
+        </sections>
+        <sections>
+            <label><!-- Margin Assumption and Reference --></label>
+            <section>Margin Assumption and Reference</section>
+        </sections>
+        <sections>
+            <label><!-- New Contract / Bids Costs --></label>
+            <section>New Contract / Bids Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Order Processing Dates --></label>
+            <section>Order Processing Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Purchase Price Index --></label>
+            <section>Purchase Price Index</section>
+        </sections>
+        <sections>
+            <label><!-- Reference Sales Order Costs --></label>
+            <section>Reference Sales Order Costs</section>
+        </sections>
+        <sections>
+            <label><!-- Revenue --></label>
+            <section>Revenue</section>
+        </sections>
+        <sections>
+            <label><!-- Total Cost --></label>
+            <section>Total Cost</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Merged Sales Order Layout</layout>
+        <sections>
+            <label><!-- Accounting Information --></label>
+            <section>Accounting Information</section>
+        </sections>
+        <sections>
+            <label><!-- Component Information --></label>
+            <section>Component Information</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Approval Tracking --></label>
+            <section>Customer Approval Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Order Processing Dates --></label>
+            <section>Order Processing Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Pubs Dept Limited Access Sales Order Layout</layout>
+        <sections>
+            <label><!-- Component Information --></label>
+            <section>Component Information</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Delivery --></label>
+            <section>Publications - Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Driver&apos;s Handbook --></label>
+            <section>Publications - Driver&apos;s Handbook</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Parts Manual --></label>
+            <section>Publications - Parts Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Photos --></label>
+            <section>Publications - Photos</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Schematics Manual --></label>
+            <section>Publications - Schematics Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Service Manual --></label>
+            <section>Publications - Service Manual</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Pubs Dept Sales Order Layout</layout>
+        <sections>
+            <label><!-- Component Information --></label>
+            <section>Component Information</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Order Processing Dates --></label>
+            <section>Order Processing Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Delivery --></label>
+            <section>Publications - Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Driver&apos;s Handbook --></label>
+            <section>Publications - Driver&apos;s Handbook</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Parts Manual --></label>
+            <section>Publications - Parts Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Photos --></label>
+            <section>Publications - Photos</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Schematics Manual --></label>
+            <section>Publications - Schematics Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Service Manual --></label>
+            <section>Publications - Service Manual</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Pubs Limited Access Sales Order Layout</layout>
+        <sections>
+            <label><!-- Component Information --></label>
+            <section>Component Information</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Order Processing Dates --></label>
+            <section>Order Processing Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Publications  - FTP --></label>
+            <section>Publications  - FTP</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Delivery --></label>
+            <section>Publications - Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Driver&apos;s Handbook --></label>
+            <section>Publications - Driver&apos;s Handbook</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Parts Manual --></label>
+            <section>Publications - Parts Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Photos --></label>
+            <section>Publications - Photos</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Schematics Manual --></label>
+            <section>Publications - Schematics Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Service Manual --></label>
+            <section>Publications - Service Manual</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Pubs Sales Order Layout</layout>
+        <sections>
+            <label><!-- Component Information --></label>
+            <section>Component Information</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Order Processing Dates --></label>
+            <section>Order Processing Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Publications  - FTP --></label>
+            <section>Publications  - FTP</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Delivery --></label>
+            <section>Publications - Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Driver&apos;s Handbook --></label>
+            <section>Publications - Driver&apos;s Handbook</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Parts Manual --></label>
+            <section>Publications - Parts Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Photos --></label>
+            <section>Publications - Photos</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Schematics Manual --></label>
+            <section>Publications - Schematics Manual</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Service Manual --></label>
+            <section>Publications - Service Manual</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sales Order Layout</layout>
+        <sections>
+            <label><!-- Administrative --></label>
+            <section>Administrative</section>
+        </sections>
+        <sections>
+            <label><!-- Buy America --></label>
+            <section>Buy America</section>
+        </sections>
+        <sections>
+            <label><!-- Component Information --></label>
+            <section>Component Information</section>
+        </sections>
+        <sections>
+            <label><!-- Configuration --></label>
+            <section>Configuration</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Approval Tracking --></label>
+            <section>Customer Approval Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery --></label>
+            <section>Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Finance --></label>
+            <section>Finance</section>
+        </sections>
+        <sections>
+            <label><!-- Order Processing Dates --></label>
+            <section>Order Processing Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Delivery --></label>
+            <section>Publications - Delivery</section>
+        </sections>
+        <sections>
+            <label><!-- Publications - Photos --></label>
+            <section>Publications - Photos</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Cancelled --></label>
+        <name>Cancelled</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- History --></label>
+        <name>History</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sales Orders that have merged into another Order --></description>
+        <label><!-- Merged --></label>
+        <name>Merged</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sales Orders that have yet to be built --></description>
+        <label><!-- Planned --></label>
+        <name>Planned</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Split_Merge --></label>
+        <name>Split_Merge</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,3 @@
+{!Task.OwnerId},
+
+Task {!Task.Link} has been completed

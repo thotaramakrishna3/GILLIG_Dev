@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select all configurations which will meet your requriement --></help>
+    <label><!-- Configuration(s) Required --></label>
+    <name>Configuration_s_Required__c</name>
+    <picklistValues>
+        <masterLabel>29&apos; Allison Hybrid</masterLabel>
+        <translation><!-- 29&apos; Allison Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>29&apos; CNG</masterLabel>
+        <translation><!-- 29&apos; CNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>29&apos; Diesel</masterLabel>
+        <translation><!-- 29&apos; Diesel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>35&apos; Allison Hybrid</masterLabel>
+        <translation><!-- 35&apos; Allison Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>35&apos; BAE Hybrid</masterLabel>
+        <translation><!-- 35&apos; BAE Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>35&apos; CNG</masterLabel>
+        <translation><!-- 35&apos; CNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>35&apos; Diesel</masterLabel>
+        <translation><!-- 35&apos; Diesel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40&apos; Allison Hybrid</masterLabel>
+        <translation><!-- 40&apos; Allison Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40&apos; BAE Hybrid</masterLabel>
+        <translation><!-- 40&apos; BAE Hybrid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40&apos; CNG</masterLabel>
+        <translation><!-- 40&apos; CNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40&apos; Diesel</masterLabel>
+        <translation><!-- 40&apos; Diesel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>40&apos; Electric</masterLabel>
+        <translation><!-- 40&apos; Electric --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

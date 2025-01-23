@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Topic --></label>
+    <name>Topic__c</name>
+    <picklistValues>
+        <masterLabel>General update</masterLabel>
+        <translation><!-- General update --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parts</masterLabel>
+        <translation><!-- Parts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology</masterLabel>
+        <translation><!-- Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warranty &amp; Service</masterLabel>
+        <translation><!-- Warranty &amp; Service --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

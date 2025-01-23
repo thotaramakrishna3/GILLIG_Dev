@@ -1,0 +1,242 @@
+<template>
+<div if:true={showSpinner}>
+    <div class="slds-spinner_container slds-is-fixed">
+        <div class="slds-spinner--brand slds-spinner slds-spinner--large slds-is-relative" role="alert">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+</div>
+<section class="actionhead">
+    <div class="slds-grid slds-grid_align-spread slds-m-top_small slds-m-bottom_small">
+        <div class="slds-col">
+            <div class="slds-float_none slds-p-around_x-small">
+                <span class="slds-text-heading_small headstyle">{department} - {operation}</span>
+                <template if:true={filterapplied}>
+                    <lightning-pill label={filterlabelfordisplay}  class="slds-m-left_small filterstyle">
+                </lightning-pill>
+                </template>
+                
+            </div>
+        </div>
+        <div class="slds-col alignbutton">
+            <c-new-reject-component buttonlabel="Unknown Part Reject" modalheading="New Reject" onloadtable={loadRejectList} page="rejecttab" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} permissionset={permissionset} onrefreshdata={refreshoperation}></c-new-reject-component>
+          </div>
+    </div>
+    
+</section>
+<section class="actioncontent">
+<div class="slds-card pageheader">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+                <tr class="slds-line-height_reset slds-text-title_caps tblheader">
+            <th class="tblheaderth tableheader" scope="col">
+                <div class="slds-truncate" title="Bus">Bus</div>
+                </th>
+                <th class="tblheaderth tableheader" scope="col">
+                <div class="slds-truncate" title="Name">Date</div>
+                </th>
+                <th class="tblheaderth tableheader" scope="col">
+                <div class="slds-truncate" title="Build Station">BuildStation</div>
+            </th>
+            <th class="tblheaderth tableheader" scope="col">
+                <div class="slds-truncate" title="Department">Department</div>
+            </th>
+            <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+            <div class="slds-truncate" title="Part Number">Part Number</div>
+            </th>
+            <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+                <div class="slds-truncate" title="Description">Reject Description</div>
+            </th>
+            <th class="tblheaderth setapplicablewidth tableheader" scope="col">
+                <div class="slds-truncate" title="Rejected By">Rejected By</div>
+            </th>
+            <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+                <div class="slds-truncate" title="Reason Code">Reason Code</div>
+            </th>
+
+            <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+                <div class="slds-truncate" title="Quantity Rejected">Quantity Rejected</div>
+            </th>
+            <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+                <div class="slds-truncate" title="Quantity Rejected">Status</div>
+            </th>
+            <th class="tblheaderth setvaluefieldwidth tableheader" scope="col">
+                <lightning-button variant="base" data-id="vendor_name_sort" label="ACTION" title="ACTION"
+                    icon-position="right" onclick={sortdiscrepancytable} class="slds-truncate"><!--vendor_name-->
+                </lightning-button>
+            </th>
+            
+                
+</tr>
+            </thead>
+            <tbody>
+                <template for:each={rejectItems} for:item="item">
+                    <tr key={item.Id} class="tabledata">
+                        <td data-label="Name" class="centertext">
+                            <div  title={item.Name}>
+                                <a href="javascript:void(0);" onclick={showrejectdetail} data-id={item.Id}>{item.Name}</a>
+                            </div>
+                            
+                        </td>
+                        
+                        <td data-label="CreatedDate">
+                            
+                        <div class="centertext">
+                            <lightning-formatted-date-time value={item.CreatedDate} month="numeric" day="numeric" year="numeric"   hour="2-digit"
+                            minute="2-digit"  hour12="true"></lightning-formatted-date-time>
+                        
+                        </div>
+                        </td>
+                        <td data-label="Buildstation" class="centertext">
+                            <div  title={item.Buildstation}>{item.Buildstation}</div>
+                        </td>
+                        <td data-label="Department" class="centertext">
+                        <div  title={item.Department}>{item.Department}</div>
+                    </td>
+                    <td data-label="Bus_Part_Number" class="centertext">
+                    <div  title={item.Bus_Part_Number}>{item.Bus_Part_Number}</div>
+                </td>
+                    <td data-label="Reject_Description" class="centertext">
+                    <div  title={item.Reject_Description}>{item.Reject_Description}</div>
+                </td>
+                <td data-label="UserName" class="centertext">
+                    <div title={item.UserName}>{item.UserName}</div>
+                </td>
+                <td data-label="Reason_Code" class="centertext">
+                <div title={item.Reason_Code}>{item.Reason_Code}</div>
+            </td>
+            <td data-label="Quantity_Rejected" class="centertext">
+            <div  title={item.Quantity_Rejected}>{item.Quantity_Rejected}</div>
+        </td>
+        <td data-label="Quantity_Rejected" class="centertext">
+            <div  title={item.Quantity_Rejected}>{item.Status}</div>
+        </td>
+        <td data-id={item.Id} >
+            <div>
+                <lightning-button data-id={item.Id} label="Update" variant="Neutral" onclick={handleUpdate} icon-name="utility:edit"></lightning-button>
+            </div>
+        </td>
+        
+                    </tr>
+                </template>
+            </tbody>
+            </table></div></section>
+
+
+                    <!-- Reject view modal start -->
+<template if:true={ShowRejectModal}>
+    <section role="dialog" tabindex="-1"
+             aria-labelledby="modal-heading-01"
+             aria-modal="true"
+             aria-describedby="modal-content-id-1"
+            class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+          <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small" ></lightning-icon>
+             </button>
+             <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Reject Details</h2>
+          </header>
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="text" name="selectedrejectbus" label="Selected Bus" value={updateRecord.Name} disabled></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input  disabled required class="partshortagevalidationreject" value={updateRecord.Department__c} type="text" label="Department" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input disabled required class="partshortagevalidationreject" value={updateRecord.Buildstation__c} type="text" label="Build Station" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input disabled required class="partshortagevalidationreject" value={updateRecord.Bus_Part_Number__c} type="text" name="dummy" label="Part Number" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-textarea required class="partshortagevalidationreject" disabled name="buspart_name" value={updateRecord.Reject_Description__c} label="Description" placeholder="Please select a Part Number to fill."></lightning-textarea>
+                </div>
+                <div class="slds-size_1-of-2 slds-grid">
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-input required class="partshortagevalidationreject" type="number" name="quantity_rejected"
+                                         onchange={updatenewreject} label="Quantity Rejected" value={updateRecord.Quantity_Rejected__c} min="0.00001"
+                                         step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input disabled required class="partshortagevalidationreject" value={updateRecord.Reason_Code__c} type="text" name="reason_code" label="Reason Code" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox required class="partshortagevalidationreject" value={updateRecord.Status__c} type="text" name="status" label="Status" options={picklistOptions}  onchange={updatenewreject}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox required class="partshortagevalidationreject" value={updateRecord.Supply_Chain__c} type="text" name="supply_chain" label="Supply Chain" options={supplyChainPicklistOptions}  onchange={updatenewreject}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="text" name="Rejected By" label="Rejected By" value={updateRecord.Rejected_by} disabled></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="text" name="createddate" label="Created Date" value={updateRecord.createddate} disabled></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox required={isLocationRequired} class="partshortagevalidationreject" name="location__c" label="Choose a Location" onchange={updatenewreject} value={updateRecord.location__c} placeholder="Select Location" options={locationcode}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input type="checkbox" name="partremove" label="Remove Part From Bus" checked={updateRecord.partremove} onchange={updatenewreject}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-textarea name="remarks" value={updateRecord.Remarks__c} label="Remark" onchange={updatenewreject}></lightning-textarea>
+                </div>
+                <div class="slds-float_none slds-p-around_x-small">
+                    <span class="slds-text-heading_small">Attachments (<b>{attachmentsize}</b>)</span><br>
+                    <lightning-spinner variant="brand"
+                                    if:true={isImageLoading}
+                                    alternative-text="Loading"
+                                    size="small">
+                    </lightning-spinner>
+                    <template if:true={isrejectpresent}>
+                        <div class="slds-grid slds-wrap slds-gutters">
+                            <template for:each={rejectimagelist} for:item='checklist'>
+                                <div key={checklist.Id} class="slds-col slds-size_1-of-2 slds-m-bottom_small">
+                                    <div style="width:16rem">
+                                    <div class="slds-file slds-file_card">
+                                        <figure>
+                                          <a href={checklist.url} target="_blank" class="slds-file__crop">
+                                            <span class="slds-assistive-text">Preview:</span>
+                                            <img src={checklist.url} alt="Description of the image" />
+                                          </a>
+                                        </figure>
+                                        <div class="slds-file__title slds-file__title_scrim">
+                                            <lightning-button-icon title={checklist.Updatedbyandtimestamp} variant="brand" icon-name="utility:info_alt" class="slds-m-left_xx-small"></lightning-button-icon>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                    <template if:false={isrejectpresent}>
+                        <div class="slds-align_absolute-center">
+                            <div class="empty-state-container slds-text-align_center">
+                                <img src={nodatadessert} width="500px" aria-hidden="true" alt="No data to display.">
+                                <div class="emptymessage">
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+           <lightning-button label="Cancel" title="Cancel" onclick={closeModal} class="slds-m-right_x-small"></lightning-button>
+           <lightning-button if:true={isupdated} variant="brand" label="Update" disabled={IsupdateDisable} title="Update" icon-name="utility:record_update" onclick={updaterejecttoserver}></lightning-button>
+        </footer>
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>   
+
+</template>

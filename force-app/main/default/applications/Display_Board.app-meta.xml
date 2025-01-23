@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Holds Display Board related Tabs</description>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Display Board</label>
+    <tabs>Digital_Board</tabs>
+    <tabs>Exception_Day__c</tabs>
+    <tabs>Display_Board_History__c</tabs>
+    <tabs>Spare__c</tabs>
+    <tabs>Reason_Code__c</tabs>
+    <tabs>Reject__c</tabs>
+    <tabs>Rework__c</tabs>
+</CustomApplication>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Front Axle --></label>
+    <name>Front_Axle__c</name>
+    <picklistValues>
+        <masterLabel>FH946</masterLabel>
+        <translation><!-- FH946 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MFS12155</masterLabel>
+        <translation><!-- MFS12155 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

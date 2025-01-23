@@ -1,0 +1,7 @@
+{!Bid_Information_Request__c.Assigned_To__c}, <BR><BR>
+
+Bid Information Request {!Bid_Information_Request__c.Link} has been assigned to you.<BR><BR>
+
+Please reply by {!Bid_Information_Request__c.Response_Date__c} and provide the information for the question:<BR><BR>
+
+{!Bid_Information_Request__c.Question__c}

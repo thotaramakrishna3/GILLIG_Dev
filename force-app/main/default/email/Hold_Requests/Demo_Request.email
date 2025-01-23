@@ -1,0 +1,92 @@
+<p><strong>{!Bus_Hold_Request__c.Internal_Name__c} {!Bus_Hold_Request__c.Bus_Assigned__c} </strong>will be used for a demo. See below for details.</p>
+<p>&nbsp;</p>
+<p><u>Ready Row: </u></p>
+<p>This bus is scheduled to be completed on <strong>{!Bus_Hold_Request__c.Scheduled_Completion_Date__c}</strong></p>
+<p>The bus must be ready to leave GILLIG by <strong>{!Bus_Hold_Request__c.Date_Bus_Must_Leave__c} </strong>in order to meet the scheduled Demo date.</p>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="312">
+<p>Demo Date</p>
+<p><strong>{!Bus_Hold_Request__c.Demo_Date_Time__c}</strong></p>
+</td>
+<td width="312">
+<p>Customer</p>
+<p><strong>{!Bus_Hold_Request__c.Demo_Customer__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Address</p>
+<p><strong>{!Bus_Hold_Request__c.Address_for_Demo__c}</strong></p>
+</td>
+<td width="312">
+<p>Contact</p>
+<p><strong>{!Bus_Hold_Request__c.Demo_Contact__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Length of Demo</p>
+<p><strong>{!Bus_Hold_Request__c.Duration_of_Test__c}</strong></p>
+</td>
+<td width="312">
+<p>Contact Phone</p>
+<p><strong>{!Bus_Hold_Request__c.Demo_Contact_Phone__c}</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="312">
+<p>Serial Number</p>
+<p><strong>{!Bus_Hold_Request__c.Bus_Assigned__c}</strong></p>
+</td>
+<td width="312">
+<p>Customer</p>
+<p><strong>{!Bus_Hold_Request__c.Internal_Name__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Length</p>
+<p><strong>{!Bus_Hold_Request__c.Length__c}</strong></p>
+</td>
+<td width="312">
+<p>Mode</p>
+<p><strong>{!Bus_Hold_Request__c.Mode__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td width="312">
+<p>Start Date</p>
+<p><strong>{!Bus_Hold_Request__c.Start_Date__c}</strong></p>
+</td>
+<td width="312">
+<p>Style</p>
+<p><strong>{!Bus_Hold_Request__c.Style__c}</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="623">
+<p>Notes for Supply Chain</p>
+<p><strong>{!Bus_Hold_Request__c.Notes_for_Supply_Chain__c}</strong></p>
+</td>
+</tr>
+<tr>
+<td width="623">
+<p>Notes for Production<br /> <strong>{!Bus_Hold_Request__c.Notes_for_Production__c}</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>

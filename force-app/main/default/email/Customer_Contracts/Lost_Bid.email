@@ -1,0 +1,1 @@
+!Customer_Contract__c.LastModifiedBy} has updated the status of {!Customer_Contract__c.Name} to "Awarded to Competitor" and has listed {!Customer_Contract__c.Competitor__c} as the winner.

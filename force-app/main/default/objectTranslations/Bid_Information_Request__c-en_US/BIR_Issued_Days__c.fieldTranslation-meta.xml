@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Days taken to issue BIR --></help>
+    <label><!-- BIR Issued Days --></label>
+    <name>BIR_Issued_Days__c</name>
+</CustomFieldTranslation>

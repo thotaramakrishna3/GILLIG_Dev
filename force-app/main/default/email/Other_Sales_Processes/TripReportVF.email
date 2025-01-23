@@ -1,0 +1,102 @@
+<messaging:emailTemplate subject="Trip report for {!relatedTo.account_visited__r.name}" recipientType="User" relatedToType="Trip_Report__c">
+
+<messaging:htmlEmailBody >
+
+    <center> 
+    <h1> <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))+relatedTo.ID}" target="_parent" >Trip Report</apex:outputLink></h1>
+    <h2>{!relatedTo.account_visited__r.Name} Visted on</h2>
+    <h2><apex:outputField value="{!relatedTo.Date_of_Visit__c}"/></h2>
+    
+    </center>
+    <h2>Property:</h2>
+    <apex:panelGrid columns="4" frame="border" border="2" cellpadding="2">
+
+    <apex:outputLabel for="Name" value="Name:"></apex:outputLabel> 
+    <apex:outputLink value="{!LEFT($CurrentPage.URL,FIND('/',$CurrentPage.URL,9))+relatedTo.Account_Visited__c}" target="_parent">{!relatedTo.account_visited__r.Internal_Name__c}</apex:outputLink>
+         
+    <apex:outputLabel for="ASW" value="ASW:"></apex:outputLabel>
+    <apex:outputField id="ASW" value="{!relatedTo.account_visited__r.ASW_ID__c}"/>
+        
+    <apex:outputLabel for="Add" value="Address:"></apex:outputLabel>
+    <apex:outputField id="Add" value="{!relatedTo.account_visited__r.BillingStreet}"/>
+        
+    <apex:outputLabel for="Rep" value="Rep:"></apex:outputLabel>
+    <apex:outputField id="Rep" value="{!relatedTo.account_visited__r.Part_Sales_Rep__r.Name}"/>
+
+    <apex:outputLabel for="Addline2" value=" "></apex:outputLabel>
+    <apex:outputText id="Addline2" value="{!relatedTo.account_visited__r.BillingCity + ', ' + relatedTo.account_visited__r.BillingState + ' ' + relatedTo.account_visited__r.BillingPostalCode}"/>
+
+    <apex:outputLabel for="Phone" value="Phone:"></apex:outputLabel>
+    <apex:outputField id="Phone" value="{!relatedTo.account_visited__r.Phone}"/>
+        
+    <apex:outputLabel for="AddLine3" value=" "></apex:outputLabel>
+    <apex:outputText id="AddLine3" value=""></apex:outputText>
+        
+    <apex:outputLabel for="Fax" value="Fax:"></apex:outputLabel>
+    <apex:outputField id="Fax" value="{!relatedTo.account_visited__r.Fax}"/>
+
+    </apex:panelGrid>  
+
+    <h2>Contacts Visited:</h2>    
+    <c:contactsVisited tripID="{!relatedTo.ID}"></c:contactsVisited>
+    
+    <h2>Key Contact Updates:</h2>
+    <apex:outputText >{!relatedTo.Key_Contact_Updates__c}</apex:outputText>
+    
+    <h2>Opportunities Discussed:</h2>
+    <c:oppDiscussed tripID="{!relatedTo.ID}"></c:oppDiscussed>
+    
+    <h2>Customer Contracts:</h2>
+    <c:listContracts acctId="{!relatedTo.Account_Visited__c}"></c:listContracts>
+    
+    <h2>Joint Procurements:</h2>
+    <c:listJointProcurements acctId="{!relatedTo.Account_Visited__c}"></c:listJointProcurements>
+    
+    <h2>General Update:</h2>
+    <apex:outputField id="Gen" value="{!relatedTo.General_Account_Updates__c}"/>
+
+    <h2>Electric Bus Plans:</h2>
+    <apex:outputField id="Eplan" value="{!relatedTo.Electric_Bus_Plans__c}"/>
+
+    <h2>Articulated Bus Plans:</h2>
+    <apex:outputField id="Aplan" value="{!relatedTo.Artic_Bus_Plans__c}"/>
+
+    <h2>Fleet Replacement Plans:</h2>
+    <apex:outputField id="Rplan" value="{!relatedTo.Fleet_Replacement_Plans__c}"/>
+    
+    <h2>Fleet Performance Update:</h2>
+    <apex:outputField id="Pupd" value="{!relatedTo.Fleet_Performance__c}"/>
+    
+    <h2>Ridership Update:</h2>
+    <apex:outputField id="Rider" value="{!relatedTo.Ridership__c}"/>
+    
+    <h2>Customer Experience:</h2>
+    <apex:outputField id="CX" value="{!relatedTo.Customer_Experience__c}"/>      
+
+    <h2>Part Sales Update:</h2>    
+    <apex:panelGrid columns="6" frame="border" border="2" cellpadding="2">
+ 
+    <apex:outputLabel for="PSalesYTD" value="Part Sales YTD"></apex:outputLabel>
+    <apex:outputField id="PSalesYTD" value="{!relatedTo.Part_Sales_YTD__c}"/>
+        
+    <apex:outputLabel for="PSalesPyear" value="Part Sales Prior Year:"></apex:outputLabel>
+    <apex:outputField id="PSalesPyear" value="{!relatedTo.Part_Sales_Prior_Year__c}"/>
+
+    <apex:outputLabel for="PSales2Pyear" value="Part Sales 2 Years Prior:"></apex:outputLabel>
+    <apex:outputField id="PSales2Pyear" value="{!relatedTo.Parts_Sales_2_Years_Prior__c}"/> 
+    
+    </apex:panelGrid>
+
+    <apex:outputField id="Pupdate" value="{!relatedTo.Part_Sales_Updates__c}"/>    
+
+    <h2>Retrofits:</h2>
+    <apex:outputField id="Rfit" value="{!relatedTo.Retrofits__c}"/>
+
+    <h2>Field Service Update:</h2>
+    <apex:outputField id="FSUpdate" value="{!relatedTo.Field_Service_Items__c}"/>
+        
+    <h2>Publications Update:</h2>
+    <apex:outputField id="PubsUpdate" value="{!relatedTo.Publications_Info__c}"/>
+
+</messaging:htmlEmailBody> 
+</messaging:emailTemplate>

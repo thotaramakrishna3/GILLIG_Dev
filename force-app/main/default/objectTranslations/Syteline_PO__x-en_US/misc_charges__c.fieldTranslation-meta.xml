@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- misc_charges --></label>
+    <name>misc_charges__c</name>
+</CustomFieldTranslation>

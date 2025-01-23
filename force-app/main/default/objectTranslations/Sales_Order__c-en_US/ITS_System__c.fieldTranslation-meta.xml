@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- ITS System --></label>
+    <name>ITS_System__c</name>
+    <picklistValues>
+        <masterLabel>Avail</masterLabel>
+        <translation><!-- Avail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clever</masterLabel>
+        <translation><!-- Clever --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conduent (ACS)</masterLabel>
+        <translation><!-- Conduent (ACS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Connexionz</masterLabel>
+        <translation><!-- Connexionz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Digital Recorders</masterLabel>
+        <translation><!-- Digital Recorders --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DoubleMap</masterLabel>
+        <translation><!-- DoubleMap --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ETA Transit Systems</masterLabel>
+        <translation><!-- ETA Transit Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Greyhawk</masterLabel>
+        <translation><!-- Greyhawk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hanover</masterLabel>
+        <translation><!-- Hanover --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Init</masterLabel>
+        <translation><!-- Init --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integrated System Research (ISR Transit)</masterLabel>
+        <translation><!-- Integrated System Research (ISR Transit) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mentor</masterLabel>
+        <translation><!-- Mentor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nextbus</masterLabel>
+        <translation><!-- Nextbus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Required</masterLabel>
+        <translation><!-- Not Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pasio</masterLabel>
+        <translation><!-- Pasio --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Routematch</masterLabel>
+        <translation><!-- Routematch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategic Mapping</masterLabel>
+        <translation><!-- Strategic Mapping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Syncromatics</masterLabel>
+        <translation><!-- Syncromatics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transitfare</masterLabel>
+        <translation><!-- Transitfare --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TripSpark</masterLabel>
+        <translation><!-- TripSpark --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vontas Novus</masterLabel>
+        <translation><!-- Vontas Novus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vontas TransitMaster</masterLabel>
+        <translation><!-- Vontas TransitMaster --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notify that the OAR Status has been Approved</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>OAR Status Approved</name>
+    <style>none</style>
+    <subject>The Status of {!Option_Approval_Request__c.Name} {!Option_Approval_Request__c.Option_Request_Description__c} has been Approved!</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

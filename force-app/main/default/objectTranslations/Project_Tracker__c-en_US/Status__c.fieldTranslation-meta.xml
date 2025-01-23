@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Stage --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Approval Phase</masterLabel>
+        <translation><!-- Approval Phase --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benefits Evaluation</masterLabel>
+        <translation><!-- Benefits Evaluation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business Case Phase</masterLabel>
+        <translation><!-- Business Case Phase --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Complete</masterLabel>
+        <translation><!-- Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Investments/Risks Evaluation</masterLabel>
+        <translation><!-- Investments/Risks Evaluation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre-Project Collection</masterLabel>
+        <translation><!-- Pre-Project Collection --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preliminary Investigation</masterLabel>
+        <translation><!-- Preliminary Investigation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Plan Phase</masterLabel>
+        <translation><!-- Project Plan Phase --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

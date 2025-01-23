@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PDI Unit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PDI Units</value>
+    </caseValues>
+    <layouts>
+        <layout>PDI Unit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PDI Checks --></label>
+            <section>PDI Checks</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Information --></label>
+            <section>Unit Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This bus does not belong to this account --></errorMessage>
+        <name>Account_PDI_Unit</name>
+    </validationRules>
+</CustomObjectTranslation>

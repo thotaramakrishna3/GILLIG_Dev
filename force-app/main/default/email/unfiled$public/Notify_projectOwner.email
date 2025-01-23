@@ -1,0 +1,3 @@
+<BR>Hi {!Project_Tracker__c.ProjectOwner__c},
+ <BR><BR>You are assigned as the Project Owner for the project  {!Project_Tracker__c.Project_Name__c}  <BR> The Project Details are  {!Project_Tracker__c.Link} <BR>
+ <BR><BR>Thanks, <BR> {!Project_Tracker__c.OwnerFirstName}

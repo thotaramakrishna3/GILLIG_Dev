@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Exception Day</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Exception Days</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Working Day Configuration must provide max slots allowed. --></errorMessage>
+        <name>slots_value_must</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PDI Report</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PDI Reports</value>
+    </caseValues>
+    <layouts>
+        <layout>PDI Report Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Report Details --></label>
+            <section>Report Details</section>
+        </sections>
+        <sections>
+            <label><!-- Training Information --></label>
+            <section>Training Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- FS Rep is preparing report --></description>
+        <label><!-- In Process --></label>
+        <name>In_Process</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Root Cause, Corrective Action &amp; Build Stations have been assigned --></description>
+        <label><!-- Reviewed --></label>
+        <name>Reviewed</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- FS Rep has completed the report --></description>
+        <label><!-- Submitted --></label>
+        <name>Submitted</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

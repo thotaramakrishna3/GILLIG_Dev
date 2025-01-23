@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Priority --></label>
+    <name>Priority__c</name>
+    <picklistValues>
+        <masterLabel>BOM</masterLabel>
+        <translation><!-- BOM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Material Clarification</masterLabel>
+        <translation><!-- Material Clarification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Material Output Error</masterLabel>
+        <translation><!-- Material Output Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Feature</masterLabel>
+        <translation><!-- New Feature --></translation>
+    </picklistValues>
+</CustomFieldTranslation>
