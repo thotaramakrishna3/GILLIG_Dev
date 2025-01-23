@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WorkOrder.ServiceAppointments$Address</field>
+    </columns>
+    <columns>
+        <field>WorkOrder.ServiceAppointments$Name</field>
+    </columns>
+    <columns>
+        <field>WorkOrder.ServiceAppointments$User__c</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Account</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>WorkOrder$Service_Request_Count__c</field>
+    </columns>
+    <columns>
+        <field>WorkOrder.ServiceAppointments$SchedStartTime</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Status</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkOrder$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Work Orders Scheduled This Month</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Work_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkOrder.ServiceAppointments$SchedStartTime</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

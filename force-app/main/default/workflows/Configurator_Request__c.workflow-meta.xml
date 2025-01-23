@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_Buy_Design_Request</fullName>
+        <description>New Buy Design Request</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <recipient>Director_Project_Sales</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Project_Sales_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>fred.cruz@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>greg.roderick@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jeff.ralleta@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>joanie.seei@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kevin.fernandez@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ron.quebbeman@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Buy_Design/New_Configurator_Request</template>
+    </alerts>
+</Workflow>

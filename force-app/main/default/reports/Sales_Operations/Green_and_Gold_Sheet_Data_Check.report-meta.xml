@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Bus__c$Current_Owner__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Name</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Customer_Bus_Number__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Green_Sheet_Date__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Shipped_Date__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Delivery_Driver__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Mode__c</field>
+    </columns>
+    <description>Buses Shipped in the Last 5 Days - Green and Gold Sheet data verification.</description>
+    <filter>
+        <criteriaItems>
+            <column>Bus__c$Shipped_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_N_DAYS:5</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Green and Gold Sheet Data Check</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Bus_Information__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Bus__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

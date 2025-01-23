@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>Username</identityMapping>
+    <issuer>exk10qrn1yomMX2Un5d7</issuer>
+    <loginUrl>https://gillig.okta.com/app/salesforce/exk10qrn1yomMX2Un5d7/sso/saml</loginUrl>
+    <logoutUrl>https://gillig.okta.com</logoutUrl>
+    <name>Okta</name>
+    <oauthTokenEndpoint>https://gillig--dev0406.sandbox.my.salesforce.com/services/oauth2/token?so=00D8K0000004emA</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P11C000000Ko6L</requestSigningCertId>
+    <salesforceLoginUrl>https://gillig--dev0406.sandbox.my.salesforce.com?so=00D8K0000004emA</salesforceLoginUrl>
+    <samlEntityId>https://gillig.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>false</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDnDCCAoSgAwIBAgIGAXToSgMQMA0GCSqGSIb3DQEBCwUAMIGOMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEUMBIGA1UECwwLU1NPUHJvdmlkZXIxDzANBgNVBAMMBmdpbGxpZzEcMBoGCSqGSIb3DQEJARYNaW5mb0Bva3RhLmNvbTAeFw0yMDEwMDIwNzQ4NThaFw0zMDEwMDIwNzQ5NThaMIGOMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzENMAsGA1UECgwET2t0YTEUMBIGA1UECwwLU1NPUHJvdmlkZXIxDzANBgNVBAMMBmdpbGxpZzEcMBoGCSqGSIb3DQEJARYNaW5mb0Bva3RhLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMx82UX+Q4Rx8oWvgIM8wBreNmikLOXZUer68x1bg+C5TfNZ+aVOHZv3ZtuhD6+Wh1Lkl7TtSQT9JD0rmGn/VGxp96u8F/jSKqxmQimOX59X3ZMSKibiUvBSkp15muj5E70GbSk1IZUj9RP5fsYAzzwbH6M5LJXFKc7iXzStdA/HP45BleGWjT41MJ8HCzTLxSzI6hM44tAQgOEoAkR+nFekIhYPkWGcSG5ghLlHt+9DclR27+6oXtilf1yv8RNfKO9fA0mLQ87RK5L99zzn9rjYoUjcXtKUUex74YGQCI8qlaUZqUu+KHpz+RjPZBCpmz10oZvclPxIglqg/ZTXVicCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAlW1mLmpG4CmbUrpAkc9PJrDPHLUONjQH8GcNQ0wP9w0oKZYCFEidNpLKRqV3fAGZnUa7i9SEdFOLr9iIonUnZlfXOEa4AUoS7GFWAzhKqRxdna01gSupHa5UB9PhqbMVC51kSUYfwnTkwVtsxhWjJKlre6JPhkbjjsTa/UO2RMU4pPSox3/aJ+2djo9chvodM5x0SA+2VTZbt285kp04Oip4mOfcWGrjRGCeUk5aN3GbrLaxsjLzUse3NAJYcziehCjE/CfJYkEpi/BAogpq94gEMThzx+bgAMUsghr4/uy1ZQjoyL8cG1wTCk7MdGXEmCnSnzNpVXbDvhTUbMSNiw==</validationCert>
+</SamlSsoConfig>

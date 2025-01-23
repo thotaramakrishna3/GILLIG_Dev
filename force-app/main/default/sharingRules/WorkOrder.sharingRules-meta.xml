@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Field_Service_Coordinator</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Field Service Coordinator</label>
+        <sharedTo>
+            <role>Field_Service_Coordinator</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Field_Service_Mgr</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Work_Order_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Work Order - Read</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Field_Service_Mgr</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <role>Field_Service_Coordinator</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>eCard_Part_Shortage__x.Bus_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Part_Shortage__x.Customer_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Part_Shortage__x.Chassis_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Part_Shortage__x.Current_Workcenter__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Part_Shortage__x.AC_System_PDI__c</field>
+    </columns>
+    <description>WIP for Alex Lopez</description>
+    <format>Tabular</format>
+    <name>eCard AC System Inspections</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Part_Shortage__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>eCard_Part_Shortage__x.Bus_Start_Date__c</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

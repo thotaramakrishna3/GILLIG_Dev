@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>eCard_Discrepancy__x.Customer_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Discrepancy__x.Chassis_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Discrepancy__x.Coach_Unladen_Weight__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Discrepancy__x.Front_Axle_Weight__c</field>
+    </columns>
+    <description>Front Axle &amp; Coach Weight - Unladen</description>
+    <filter>
+        <criteriaItems>
+            <column>eCard_Discrepancy__x.Discrepancy_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Approve</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>eCard_Discrepancy__x.Chassis_Number__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>B197724</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>E Card Coach Weight Data</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Discrepancy__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>eCard_Discrepancy__x.Created_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

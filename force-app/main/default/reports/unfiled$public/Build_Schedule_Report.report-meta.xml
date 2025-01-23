@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Scheduled_Green_Sheet_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Sales_Order__c.Mode__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Buses__r$Sequence__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Account.Buses__r$Sales_Order__c.Quantity__c</field>
+    </columns>
+    <description>Filter by Order Number</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Buses__r$Sales_Order__c.Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>197765</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Build Schedule Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Buses__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Buses__r$Sales_Order__c.PO_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

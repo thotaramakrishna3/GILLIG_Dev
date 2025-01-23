@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>eCard_Status_Detail__x.total_shortages_open__c:MAX</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Total Shortages Open</description>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total Shortages Open</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>eCard_Status_Detail__x.total_shortages_ordered__c:MAX</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Total Shortages Ordered</description>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total Shortages Ordered</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>eCard_Status_Detail__x.total_shortages_received__c:MAX</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Total Shortages Received</description>
+        <developerName>FORMULA3</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Total Shortages Received</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>eCard_Status_Detail__x.opcheck_not_verified__c:MAX</calculatedFormula>
+        <datatype>number</datatype>
+        <description>Op Checks Not Verified</description>
+        <developerName>FORMULA4</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Op Checks Not Verified</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>eCard_Status_Detail__x.eta__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Status_Detail__x.date_received__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Status_Detail__x.part_number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Status_Detail__x.part_description__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Status_Detail__x.discrepancy__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Status_Detail__x.department__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Status_Detail__x.defect__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>eCard_Status_Detail__x.out_of_factory_location__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Dirt Lot</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>eCard_Status_Detail__x.discrepancy_status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Approve</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>eCard_Status_Detail__x.internal_name_bus_c__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>eCard_Status_Detail__x.category__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>eCard_Status_Detail__x.shortage_rank__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>eCard Buses in Dirt Lot</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Status_Detail__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>eCard_Status_Detail__x.bus_start_date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

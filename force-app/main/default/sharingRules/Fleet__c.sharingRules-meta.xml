@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Fleet_Share</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Only allow users to see non-merged fleets</description>
+        <label>Fleet Share</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>President</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Merged</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>IT_Fleet_access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>IT access to view merged fleets</description>
+        <label>IT Fleet access</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Director_IT</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>GILLIG,Competitor,Planned Build,Merged</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

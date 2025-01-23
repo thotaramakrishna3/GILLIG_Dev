@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Buspart_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Serial_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Product_Category__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Remarks__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Created_Date__c</field>
+    </columns>
+    <description>Report used to retrieve serial number components for customer bus builds. (by customer or by product Category or by chassis)</description>
+    <filter>
+        <criteriaItems>
+            <column>eCard_Serial_Number_Log__x.Chassis_Number__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>198039</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>eCard_Serial_Number_Log__x.Customer_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>eCard_Serial_Number_Log__x.Chassis_Number__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Serial Numbers Report for Customers</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Serial_Number_Log__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>eCard_Serial_Number_Log__x.Created_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

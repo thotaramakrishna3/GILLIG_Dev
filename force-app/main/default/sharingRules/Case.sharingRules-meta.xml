@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Cases_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Currently includes read-only access to Field Support, Customer Care &amp; Technical Support cases.</description>
+        <label>Cases Read Only</label>
+        <sharedTo>
+            <group>Cases_Read_Only</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Charging_Solutions_Case_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Charging Solutions Case Access</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Charging_Solutions</roleAndSubordinatesInternal>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Production Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Collections_Case_AR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Collections Case-AR</label>
+        <sharedTo>
+            <role>Accounts_Receivable</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Collections</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Customer_Care_Case</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Customer Care Case</label>
+        <sharedTo>
+            <group>Customer_Care_Case</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Warranty</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Engineer</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Engineer</label>
+        <sharedTo>
+            <role>Engineer</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Engineering_Field_and_Technical_Case_Read</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Engineering Field and Technical Case Read/Write</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_of_Engineering</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support,Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Engineering_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Engineering Manager</label>
+        <sharedTo>
+            <role>Engineering_Manager</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Field_Service_Engineer</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Case access for the Service Engineers</description>
+        <label>Field Service Engineer</label>
+        <sharedTo>
+            <role>Service_Engineer</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Production Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Field_Service_Read</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Field Service - Read</label>
+        <sharedTo>
+            <role>Field_Service_Rep</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Field_Support_FS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Field Support-FS</label>
+        <sharedTo>
+            <role>Field_Service_Mgr</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Warranty</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Field_Technical_Case</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Write access for Field Support and Technical Support cases</description>
+        <label>Field &amp; Technical Cases</label>
+        <sharedTo>
+            <group>Field_Technical_Cases</group>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Manufacturing_Eng_Read_Cases</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Manufacturing Eng - Read Cases</label>
+        <sharedTo>
+            <role>Manufacturing_Engineer</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Operational_Excellence_Director</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Operational Excellence Director</label>
+        <sharedTo>
+            <role>Director_Operational_Excellence</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Parts_Technical_and_Field_Case_Read</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Parts Technical and Field Case Read/Write</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_Part_Sales</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support,Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Plant_Manager</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Production Leadership</description>
+        <label>Plant Manager Field and Technical Case Read</label>
+        <sharedTo>
+            <role>Plant_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support,Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pubs_Customer_Care_Cases</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>View access to cases related to Customer Care</description>
+        <label>Pubs Customer Care Cases</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Publications_Supervisor</roleAndSubordinatesInternal>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pubs_Edit_Pubs_Cases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Pubs Edit Pubs Cases</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Publications_Supervisor</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Publications</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Quality_Engineer</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share Field Service cases with Quality Engineers</description>
+        <label>Quality Engineer</label>
+        <sharedTo>
+            <role>Quality_Engineer</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Quality_Field_and_Technical_Case_Read</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Quality Field and Technical Case Read/Write</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_of_Quality</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support,Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Read_Technical_and_Field_for_Product_Planning</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>For product planning group to add Cases related to Project evaluations to the Case Project tracker</description>
+        <label>Read/Write Technical and Field for Product Planning</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_Product_Planning_Strategy</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support,Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Supply_Chain_Technical_and_Field_Case_Read</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Supply Chain Technical and Field Case Read/Write</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_Supply_Chain</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support,Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Technical_Support_FS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share cases with Technical Support role</description>
+        <label>Technical_Support-FS</label>
+        <sharedTo>
+            <role>Technical_Support</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Training_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Training - Read</label>
+        <sharedTo>
+            <role>Customer_Training</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Warranty_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Warranty Admin</label>
+        <sharedTo>
+            <role>Warranty_Administrators</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Warranty</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Warranty_Mgr</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Warranty Mgr</label>
+        <sharedTo>
+            <role>Warranty_Manager</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2 Or 3 Or 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Warranty</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Warranty_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Warranty Read</label>
+        <sharedTo>
+            <group>Warranty_Case</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Warranty</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Warranty_Specialist</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Case access for Johnny P.</description>
+        <label>Warranty Specialist</label>
+        <sharedTo>
+            <role>Warranty_Processing_Specialist</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Sales Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Campaign</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Technical Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Warranty</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Training</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Director_of_Field_Service</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Provides access to all cases to Exec Director of Field Service</description>
+        <label>Director of Field Service</label>
+        <sharedTo>
+            <role>Exec_Dir_Quality_Service</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>President</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Director_of_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Provides access to sales cases to Director of Sales</description>
+        <label>Director of Sales</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_National_Sales</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Director_National_Sales</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_CC_Case_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sales read access to customer care cases</description>
+        <label>Sales CC Case Read</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_National_Sales</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Director_Customer_Care</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Field_Case_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sales read access to Field cases</description>
+        <label>Sales Field Case Read</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_National_Sales</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Exec_Dir_Quality_Service</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

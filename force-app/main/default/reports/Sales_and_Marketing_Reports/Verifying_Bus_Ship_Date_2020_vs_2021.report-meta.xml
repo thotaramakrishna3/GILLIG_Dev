@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Bus__c.Sales_Orders__r$Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Name</field>
+    </columns>
+    <columns>
+        <field>Bus__c.Sales_Orders__r$Name</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Scheduled_Green_Sheet_Date__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Green_Sheet_Date__c</field>
+    </columns>
+    <columns>
+        <field>Bus__c$Shipped_Date__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Verifying Bus Ship Date - 2020 vs 2021</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Buses_with_Sales_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Bus__c$Green_Sheet_Date__c</dateColumn>
+        <endDate>2021-01-21</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2020-12-15</startDate>
+    </timeFrameFilter>
+</Report>

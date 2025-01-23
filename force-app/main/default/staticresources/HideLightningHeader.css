@@ -1,0 +1,15 @@
+header.flexipageHeader.slds-page-header.uiBlock.oneAnchorHeader { display: none; }
+.slds-form-element__label:empty{
+	display : none !important;
+}
+.btnwidth100[c-statusOperationsComponent_statusOperationsComponent] button{width: 100% !important;}
+.verifybutton[c-statusOperationsComponent_statusOperationsComponent] button{
+	color: #0d813e;
+}
+
+.slds-button:disabled[c-statusOperationsComponent_statusOperationsComponent], .slds-button[disabled][c-statusOperationsComponent_statusOperationsComponent] button{
+	color: rgb(221 219 218) !important;
+}
+[app_flexipage-header_header-host]{
+    display:none;
+}

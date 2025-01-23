@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Closed</fullName>
+        <description>Case Closed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Case_Closed</template>
+    </alerts>
+    <alerts>
+        <fullName>Case_Escalated_to_Issues_Log</fullName>
+        <description>Case Escalated to Issues Log</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Accounting</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Administrator</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Design Engineer</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Field Service</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>General User</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Production</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Production Support Engineer</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Quality</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Sales</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Supply Chain</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Field_Service</fullName>
+        <description>Email Field Service</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>bob.birdwell@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>eric.ocampo@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</template>
+    </alerts>
+    <alerts>
+        <fullName>New</fullName>
+        <description>New Training Case - Notify the Training Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kevin.hardesty@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/A_new_Case_created</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Production_Support_Case_Created</fullName>
+        <description>New Production Support Case Created</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>christian.bartonico@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>javier.hernandez@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jhernandezjr@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>philip.titus@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>Reported_By_Supervisor__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Production_Issue_Case_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Technical_Support_Case_Notify_Technical_Support_Team</fullName>
+        <description>New Technical Support Case - Notify Technical Support Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>bo.vongamath@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jacqueline.hernandez@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tim.lopez@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/A_new_Case_created</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Warranty_Case_Notify_Warranty_Team</fullName>
+        <description>New Warranty Case- Notify Warranty Team</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>dominic.nava@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>johnny.phothipanya@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kristina.aldana@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>victor.doran@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/A_new_Case_created</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Date_Time_Assigned</fullName>
+        <description>Publications Case</description>
+        <field>Date_Time_Assigned__c</field>
+        <formula>NOW()</formula>
+        <name>Date/Time Assigned</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Escalated to Issues Log</fullName>
+        <actions>
+            <name>Case_Escalated_to_Issues_Log</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Include_on_Issues_Log__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Field Case</fullName>
+        <actions>
+            <name>Email_Field_Service</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Field Support</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

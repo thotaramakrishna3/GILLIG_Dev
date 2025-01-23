@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Finance</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Finance</label>
+        <sharedTo>
+            <roleAndSubordinates>Vice_President_Finance</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Merged</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Hides Merged Orders</description>
+        <label>Merged</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Merged</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Cancelled</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Finance_Margin_Update</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Finance Margin Update</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_Finance</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sales Admin</label>
+        <sharedTo>
+            <role>Sales_Admin</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Director</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sales Director</label>
+        <sharedTo>
+            <role>Director_National_Sales</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Director_Operations</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sales Director - Operations</label>
+        <sharedTo>
+            <role>Director_Project_Sales</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

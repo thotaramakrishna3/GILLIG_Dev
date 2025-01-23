@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Charging_Solutions</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Charging Solutions</label>
+        <sharedTo>
+            <role>Charging_Solutions</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Charging_Solutions1</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>For Charging Solutions users</description>
+        <label>Charging Solutions</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Charging_Solutions</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Continuous_Improvement</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>For Mo to access Opportunities</description>
+        <label>Continuous Improvement</label>
+        <sharedTo>
+            <role>Engineering_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Finance</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Finance</label>
+        <sharedTo>
+            <roleAndSubordinates>Vice_President_Finance</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>FinanceMarginUpdate</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Finance Margin Update</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_Finance</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PSM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share opportunity to enable PSM to create supplier quotes</description>
+        <label>PSM</label>
+        <sharedTo>
+            <role>Project_Sales_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Product_Planning</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Product Planning</label>
+        <sharedTo>
+            <role>Product_Planning_Manager</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_Admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sales Admin</label>
+        <sharedTo>
+            <role>Sales_Admin</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

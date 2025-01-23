@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Engineering_BIR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Engineering BIR</label>
+        <sharedTo>
+            <roleAndSubordinates>Vice_President_Engineering</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Exec_Customer_Care_BIR_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Exec Customer Care - BIR Access</label>
+        <sharedTo>
+            <role>Exec_Dir_Quality_Service</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Pubs_BIR_Access</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>To give Heather access to BIR @mentions.</description>
+        <label>Pubs BIR Access</label>
+        <sharedTo>
+            <role>Publications_Supervisor</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Sales_PSM</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Sales PSM</label>
+        <sharedTo>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Salesforce_Admin</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Rekha George</description>
+        <label>Salesforce Admin</label>
+        <sharedTo>
+            <role>IT</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>VP_marketing</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Supply_Chain_BIR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Supply Chain BIR</label>
+        <sharedTo>
+            <roleAndSubordinates>Director_Supply_Chain</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Vice_President_Engineering</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

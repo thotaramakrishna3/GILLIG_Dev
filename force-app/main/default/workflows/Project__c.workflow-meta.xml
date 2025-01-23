@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Assign_ID</fullName>
+        <description>Update Project Number</description>
+        <field>Name</field>
+        <formula>IF(text(Category__c) = &apos;New Product Introduction&apos;, &apos;NPI-&apos;,
+IF(text(Category__c) = &apos;Continuous Product Improvement&apos;, &apos;CPI-&apos;, 
+IF(text(Category__c) = &apos;Cost Savings&apos; , &apos;CR-&apos;,  
+IF(text(Category__c) = &apos;Sustainability Initiative&apos; , &apos;SI-&apos;, &apos;Other-&apos;) ) ) ) +  Project_Id__c</formula>
+        <name>Assign ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Project Number Autoassign</fullName>
+        <actions>
+            <name>Assign_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Automatically assign project number</description>
+        <formula>Name != (
+IF(text(Category__c) = &apos;New Product Introduction&apos;, &apos;NPI-&apos;,
+IF(text(Category__c) = &apos;Continuous Product Improvement&apos;, &apos;CPI-&apos;, 
+IF(text(Category__c) = &apos;Cost Savings&apos; , &apos;CR-&apos;,  
+IF(text(Category__c) = &apos;Sustainability Initiative&apos; , &apos;SI-&apos;, &apos;Other-&apos;) ) ) ) +  Project_Id__c
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

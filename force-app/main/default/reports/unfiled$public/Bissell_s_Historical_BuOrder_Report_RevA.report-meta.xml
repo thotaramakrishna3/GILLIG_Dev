@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Sales_Order__c.PO_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Date_Booked__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Sales_Order__c.Quantity__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Mode__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Length__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>Bissell&apos;s Historical Order Report RevA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Sales_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Sales_Order__c.Date_Booked__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

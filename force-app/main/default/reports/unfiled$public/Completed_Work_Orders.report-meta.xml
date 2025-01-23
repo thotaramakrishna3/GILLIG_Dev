@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>WorkOrder$Account</field>
+    </columns>
+    <columns>
+        <field>WorkOrder.ServiceAppointments$Name</field>
+    </columns>
+    <columns>
+        <field>WorkOrder.ServiceAppointments$The_Service_Resource_from_the_Assigned_R__c</field>
+    </columns>
+    <columns>
+        <field>WorkOrder$Status</field>
+    </columns>
+    <columns>
+        <field>WorkOrder.ServiceAppointments$SchedStartTime</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>WorkOrder$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Completed,Closed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>WorkOrder$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Closed Work Orders</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Work_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>WorkOrder.ServiceAppointments$ActualEndTime</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

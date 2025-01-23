@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_Sales_Information_Bulletin_Admin</fullName>
+        <description>New Sales Information Bulletin - Admin</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Sales_Admin</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Other_Sales_Processes/Sales_Information_Bulletin</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Sales_Information_Bulletin_Contract</fullName>
+        <description>New Sales Information Bulletin - Contract</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Contract_Administrator</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Other_Sales_Processes/Sales_Information_Bulletin</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Sales_Information_Bulletin_Management</fullName>
+        <description>New Sales Information Bulletin - Management</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Director_National_Sales</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Director_Product_Planning_Strategy</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>Director_Project_Sales</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>VP_marketing</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>richard.bissell@gillig.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Other_Sales_Processes/Sales_Information_Bulletin</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Sales_Information_Bulletin_PSM</fullName>
+        <description>New Sales Information Bulletin - PSM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Project_Sales_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Other_Sales_Processes/Sales_Information_Bulletin</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Sales_Information_Bulletin_RSM</fullName>
+        <description>New Sales Information Bulletin - RSM</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Sales_Manager</recipient>
+            <type>role</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Other_Sales_Processes/Sales_Information_Bulletin</template>
+    </alerts>
+</Workflow>
