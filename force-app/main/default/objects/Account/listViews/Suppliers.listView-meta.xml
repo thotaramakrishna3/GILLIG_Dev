@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suppliers</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>PARENT_NAME</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Supplier</value>
+    </filters>
+    <label>Suppliers</label>
+</ListView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_is_Blank</fullName>
+    <active>true</active>
+    <description>Checks whether Type has been populated</description>
+    <errorConditionFormula>isblank( text(Type ))</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>Please Select a Type.  New Business = Customer&apos;s Last Order was not GILLIG. Existing Business = Customer&apos;s Last Order was GILLIG.</errorMessage>
+</ValidationRule>

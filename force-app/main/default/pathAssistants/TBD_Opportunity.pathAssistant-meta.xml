@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>TBD Opportunity</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <fieldNames>Total_Qty__c</fieldNames>
+        <info>The &amp;quot;TBD&amp;quot; Record type is used when we don&amp;#39;t know exactly how the customer intends to purchase buses but we have a forecast for their units.  When an order is in this stage, we are gathering information about the timing of the order placement and as many of the order details as the customer is able to provide. &lt;br&gt;&lt;br&gt;The &amp;quot;Close Date&amp;quot; is the day we anticipate receiving the purchase order.  &lt;br&gt;&lt;br&gt;As a reminder, we utilize the Opportunity Line to log the details of the buses to be ordered to the best of our knowledge. The length(s), fuel type(s) and body style(s) are logged on the line along with the quantity for each configuration.&lt;br&gt;&lt;br&gt;Once we have determined how the customer will purchase the buses, the record type should be updated and further details completed.  &lt;br&gt;&lt;br&gt;Order updates should be logged using the chatter functionality to provide historical information for review. </info>
+        <picklistValueName>Forecast</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>If we determine that we are not going to pursue this business, we will need to update the record type to Competitor and log which of our competitors won the business.  Managing these fields approrpiately will ensure that your reports, dashboards and fleet lists properly reflect the data we have available.</info>
+        <picklistValueName>No-Bid</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>Name</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <fieldNames>StageName</fieldNames>
+        <fieldNames>CloseDate</fieldNames>
+        <info>Once we determine to pursue the business, we should determine how they intend to buy the buses and update the record type to reflect the correct order type.  </info>
+        <picklistValueName>Proposal</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>TBD</recordTypeName>
+</PathAssistant>

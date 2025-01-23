@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Richard_Salas_s_PDIs</fullName>
+    <columns>Internal_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>Shipped_Date__c</columns>
+    <columns>PDI_Start_Date__c</columns>
+    <columns>PDI_Completion_Date__c</columns>
+    <columns>Acceptance_Date__c</columns>
+    <columns>In_service_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>PDI_Owner__c</field>
+        <operation>equals</operation>
+        <value>Richard Salas</value>
+    </filters>
+    <label>Richard Salas&apos;s PDIs</label>
+    <sharedTo>
+        <roleAndSubordinates>Director_Customer_Care</roleAndSubordinates>
+    </sharedTo>
+</ListView>

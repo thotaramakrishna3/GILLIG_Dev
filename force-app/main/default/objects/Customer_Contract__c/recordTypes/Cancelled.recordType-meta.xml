@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled</fullName>
+    <active>true</active>
+    <description>Cancelled</description>
+    <label>Cancelled</label>
+    <picklistValues>
+        <picklist>Bid_Stage__c</picklist>
+        <values>
+            <fullName>Awaiting Approved Equals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Award Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Award GILLIG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAFO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clarifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intent to Award GILLIG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepare Approved Equals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepare Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specification Received</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bid_Status__c</picklist>
+        <values>
+            <fullName>Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No-Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reviewing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bid_Submission_Type__c</picklist>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail In</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail In %26 Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mail In %26 USB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bid_Type__c</picklist>
+        <values>
+            <fullName>Evaluated%2FNegotiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Bid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>State Contract</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Initial_Delivery_Picklist__c</picklist>
+        <values>
+            <fullName>365 Days %2B End of Calendar Quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By specific date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiated at time of order placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per schedule included in contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Days After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Months After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Weeks After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Inventive_Agreements__c</picklist>
+        <values>
+            <fullName>Allison</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>No_Bid_Reason__c</picklist>
+        <values>
+            <fullName>Customer Risk Profile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric %E2%80%93 Range Constraint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule - Customer Bid Timing Constraint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule - Insufficient Bid Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specification - Medium Duty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specification - Overly Onerous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specification - Product %28i%2Ee Artic%2C Coach%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Option_Delivery_Picklist__c</picklist>
+        <values>
+            <fullName>365 Days %2B End of Calendar Quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By specific date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiated at time of order placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per schedule included in contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Days After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Months After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Weeks After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

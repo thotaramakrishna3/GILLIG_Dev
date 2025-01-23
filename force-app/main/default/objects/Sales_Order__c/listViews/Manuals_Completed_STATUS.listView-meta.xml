@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manuals_Completed_STATUS</fullName>
+    <columns>NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Serial_Numbers__c</columns>
+    <columns>Manuals_Identical_To__c</columns>
+    <columns>Drivers_Handbook_Completion_Date__c</columns>
+    <columns>Driver_s_Handbook_Identical_To__c</columns>
+    <columns>Service_Manual_Completion_Date__c</columns>
+    <columns>Service_Manual_Identical_To__c</columns>
+    <columns>Schematics_Manual_Completion_Date__c</columns>
+    <columns>Schematics_Manual_Identical_To__c</columns>
+    <columns>Parts_Manual_Completion_Date__c</columns>
+    <columns>Parts_Manual_Identical_To__c</columns>
+    <columns>Manual_Completion_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.Planned</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2021</value>
+    </filters>
+    <filters>
+        <field>Manual_Completion_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>TW_Ship_Due_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Manuals Completed STATUS</label>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_past_dates_not_allowed</fullName>
+    <active>true</active>
+    <description>Restricted past active dates from creation and updation..</description>
+    <errorConditionFormula>AND(
+OR(ISCHANGED(Active_Date__c),ISNEW()),
+NOT(ISBLANK(Active_Date__c)),
+Active_Date__c &lt; TODAY()
+)</errorConditionFormula>
+    <errorMessage>Please select a current or future date for the Active and Inactive Date.</errorMessage>
+</ValidationRule>

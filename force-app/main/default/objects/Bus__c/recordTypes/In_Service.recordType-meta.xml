@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Service</fullName>
+    <active>true</active>
+    <description>Bus has an in-service date</description>
+    <label>In Service</label>
+    <picklistValues>
+        <picklist>Out_of_Factory_Location__c</picklist>
+        <values>
+            <fullName>Dirt Lot</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Altoona</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out Of Factory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out for Test</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ready Row</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repair Shop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Road Test</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

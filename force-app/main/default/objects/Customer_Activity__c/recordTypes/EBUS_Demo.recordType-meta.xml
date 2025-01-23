@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EBUS_Demo</fullName>
+    <active>true</active>
+    <label>EBUS Demo</label>
+    <picklistValues>
+        <picklist>Topic__c</picklist>
+        <values>
+            <fullName>General update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty %26 Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

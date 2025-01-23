@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Packing_Slip_Problems__c</fullName>
+    <externalId>false</externalId>
+    <label>Packing Slip Problems</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gillig part number on packing slip is missing or incorrect</fullName>
+                <default>false</default>
+                <label>Gillig part number on packing slip is missing or incorrect</label>
+            </value>
+            <value>
+                <fullName>PO on packing slip is missing or incorrect</fullName>
+                <default>false</default>
+                <label>PO on packing slip is missing or incorrect</label>
+            </value>
+            <value>
+                <fullName>Quantity on packing slip is missing or incorrect</fullName>
+                <default>false</default>
+                <label>Quantity on packing slip is missing or incorrect</label>
+            </value>
+            <value>
+                <fullName>Shipment did not have a packing slip</fullName>
+                <default>false</default>
+                <label>Shipment did not have a packing slip</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

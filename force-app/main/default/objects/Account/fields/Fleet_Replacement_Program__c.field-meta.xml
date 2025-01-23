@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fleet_Replacement_Program__c</fullName>
+    <externalId>false</externalId>
+    <label>Fleet Replacement Program</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>12 Years or 500,000 Miles, whichever comes first</fullName>
+                <default>false</default>
+                <label>12 Years or 500,000 Miles, whichever comes first</label>
+            </value>
+            <value>
+                <fullName>12 Years</fullName>
+                <default>false</default>
+                <label>12 Years</label>
+            </value>
+            <value>
+                <fullName>13 Years</fullName>
+                <default>false</default>
+                <label>13 Years</label>
+            </value>
+            <value>
+                <fullName>14 Years</fullName>
+                <default>false</default>
+                <label>14 Years</label>
+            </value>
+            <value>
+                <fullName>15 Years</fullName>
+                <default>false</default>
+                <label>15 Years</label>
+            </value>
+            <value>
+                <fullName>16 Years</fullName>
+                <default>false</default>
+                <label>16 Years</label>
+            </value>
+            <value>
+                <fullName>17 Years</fullName>
+                <default>false</default>
+                <label>17 Years</label>
+            </value>
+            <value>
+                <fullName>500,000 Miles</fullName>
+                <default>false</default>
+                <label>500,000 Miles</label>
+            </value>
+            <value>
+                <fullName>10 Years or 350,000 Miles, whichever comes first</fullName>
+                <default>false</default>
+                <label>10 Years or 350,000 Miles, whichever comes first</label>
+            </value>
+            <value>
+                <fullName>20 Years</fullName>
+                <default>false</default>
+                <label>20 Years</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

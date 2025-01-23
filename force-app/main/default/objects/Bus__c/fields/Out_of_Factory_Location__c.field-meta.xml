@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Out_of_Factory_Location__c</fullName>
+    <description>Location of the bus after Production and before shipped</description>
+    <externalId>false</externalId>
+    <label>Out of Factory Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dirt Lot</fullName>
+                <default>true</default>
+                <label>Dirt Lot</label>
+            </value>
+            <value>
+                <fullName>RR WIP</fullName>
+                <default>false</default>
+                <label>RR WIP</label>
+            </value>
+            <value>
+                <fullName>Fence</fullName>
+                <default>false</default>
+                <label>Fence</label>
+            </value>
+            <value>
+                <fullName>Lane 3</fullName>
+                <default>false</default>
+                <label>Lane 3</label>
+            </value>
+            <value>
+                <fullName>BS RR</fullName>
+                <default>false</default>
+                <label>BS RR</label>
+            </value>
+            <value>
+                <fullName>Picture Land</fullName>
+                <default>false</default>
+                <label>Picture Land</label>
+            </value>
+            <value>
+                <fullName>Off Property</fullName>
+                <default>false</default>
+                <label>Off Property</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bus_Work_Order__c</fullName>
+    <description>Master Detail Relationship between Bus Word Order and Bus Acceptance Letter for form to get acknowledgement of the work done.</description>
+    <externalId>false</externalId>
+    <label>Service Request</label>
+    <referenceTo>Bus_Work_Order__c</referenceTo>
+    <relationshipLabel>Acknowledgement  of Bus Acceptance</relationshipLabel>
+    <relationshipName>Bus_Acceptance_Letters</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

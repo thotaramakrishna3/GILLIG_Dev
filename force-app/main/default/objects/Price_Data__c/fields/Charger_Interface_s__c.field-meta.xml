@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charger_Interface_s__c</fullName>
+    <externalId>false</externalId>
+    <label>Charger Interface(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(1) J1772 CCS-1 Connection</fullName>
+                <default>false</default>
+                <label>(1) J1772 CCS-1 Connection</label>
+            </value>
+            <value>
+                <fullName>(2) J1772 CCS-1 Connections</fullName>
+                <default>false</default>
+                <label>(2) J1772 CCS-1 Connections</label>
+            </value>
+            <value>
+                <fullName>(1) J1772 CCS-1 Connection and Overhead Charge Rails</fullName>
+                <default>false</default>
+                <label>(1) J1772 CCS-1 Connection and Overhead Charge Rails</label>
+            </value>
+            <value>
+                <fullName>(2) J1772 CCS-1 Connections and Overhead Charge Rails</fullName>
+                <default>false</default>
+                <label>(2) J1772 CCS-1 Connections and Overhead Charge Rails</label>
+            </value>
+            <value>
+                <fullName>(1) J1772 CCS-1 Connection and Bus-Up Pantograph</fullName>
+                <default>false</default>
+                <label>(1) J1772 CCS-1 Connection and Bus-Up Pantograph</label>
+            </value>
+            <value>
+                <fullName>(1) J1772 CCS-1 Connection and WAVE Inductive Charging</fullName>
+                <default>false</default>
+                <label>(1) J1772 CCS-1 Connection and WAVE Inductive Charging</label>
+            </value>
+            <value>
+                <fullName>(1) J1772 CCS-1 Connection and Momentum Dynamics Inductive Charging</fullName>
+                <default>false</default>
+                <label>(1) J1772 CCS-1 Connection and Momentum Dynamics Inductive Charging</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

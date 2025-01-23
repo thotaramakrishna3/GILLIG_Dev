@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Start_Considerations__c</fullName>
+    <externalId>false</externalId>
+    <label>New Start Considerations</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+                <label>New Customer</label>
+            </value>
+            <value>
+                <fullName>Poor Previous Delivery Experience</fullName>
+                <default>false</default>
+                <label>Poor Previous Delivery Experience</label>
+            </value>
+            <value>
+                <fullName>Inspector</fullName>
+                <default>false</default>
+                <label>Inspector</label>
+            </value>
+            <value>
+                <fullName>Field Matters</fullName>
+                <default>false</default>
+                <label>Field Matters</label>
+            </value>
+            <value>
+                <fullName>Upcoming Bid</fullName>
+                <default>false</default>
+                <label>Upcoming Bid</label>
+            </value>
+            <value>
+                <fullName>Bid in process</fullName>
+                <default>false</default>
+                <label>Bid in process</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Electric_Buses</fullName>
+    <columns>NAME</columns>
+    <columns>Current_Owner__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Sequence__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Bus_Length__c</columns>
+    <columns>Green_Sheet_Date__c</columns>
+    <columns>Shipped_Date__c</columns>
+    <columns>Delivered_Date__c</columns>
+    <columns>Internal_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mode__c</field>
+        <operation>equals</operation>
+        <value>Electric</value>
+    </filters>
+    <label>Electric Buses</label>
+</ListView>

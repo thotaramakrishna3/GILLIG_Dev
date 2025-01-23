@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_have_Internal_Name</fullName>
+    <active>true</active>
+    <description>Account must have an internal name before booking</description>
+    <errorConditionFormula>AND(ISBLANK(Internal_Name__c), NOT( ISNULL( Date_Booked__c )))</errorConditionFormula>
+    <errorMessage>Please set an Internal Name on the Account before booking</errorMessage>
+</ValidationRule>

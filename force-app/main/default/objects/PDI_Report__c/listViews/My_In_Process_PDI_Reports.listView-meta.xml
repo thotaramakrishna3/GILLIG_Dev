@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_In_Process_PDI_Reports</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>PDI_Date__c</columns>
+    <columns>RECORDTYPE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PDI_Report__c.In_Process</value>
+    </filters>
+    <label>My In Process PDI Reports</label>
+</ListView>

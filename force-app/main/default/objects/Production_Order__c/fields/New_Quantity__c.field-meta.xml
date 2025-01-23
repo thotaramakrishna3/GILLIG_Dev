@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Quantity__c</fullName>
+    <description>The new number of buses that have changed or modified resulting in a new production order</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The quantity of bus connected with the new production order (above)</inlineHelpText>
+    <label>Quantity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

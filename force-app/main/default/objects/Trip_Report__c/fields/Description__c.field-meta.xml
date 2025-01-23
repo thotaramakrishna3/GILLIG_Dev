@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <externalId>false</externalId>
+    <label>Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Visit</fullName>
+                <default>true</default>
+                <label>Customer Visit</label>
+            </value>
+            <value>
+                <fullName>Demo</fullName>
+                <default>false</default>
+                <label>Demo</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>Virtual Meeting</fullName>
+                <default>false</default>
+                <label>Virtual Meeting</label>
+            </value>
+            <value>
+                <fullName>Non- Gillig Customer</fullName>
+                <default>false</default>
+                <label>Non- Gillig Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

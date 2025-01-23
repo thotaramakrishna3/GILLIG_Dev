@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Holds working day vs holiday. BTW, working day provisioning is required for only Saturday or Sunday. Not for Mon-Fri</description>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Holiday</fullName>
+                <default>false</default>
+                <label>Holiday</label>
+            </value>
+            <value>
+                <fullName>Working Day</fullName>
+                <default>false</default>
+                <label>Working Day</label>
+            </value>
+            <value>
+                <fullName>Scheduled Week</fullName>
+                <default>false</default>
+                <label>Scheduled Week</label>
+            </value>
+            <value>
+                <fullName>Default Slots Per Day</fullName>
+                <default>false</default>
+                <label>Default Slots Per Day</label>
+            </value>
+            <value>
+                <fullName>Slots Per Week Constant</fullName>
+                <default>false</default>
+                <label>Slots Per Week Constant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

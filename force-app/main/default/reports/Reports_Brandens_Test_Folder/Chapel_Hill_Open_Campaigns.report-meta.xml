@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Customer_Care_Campaign__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>Customer_Care_Campaign__c.Bus__c</field>
+    </columns>
+    <columns>
+        <field>Customer_Care_Campaign__c.Campaign_Type__c</field>
+    </columns>
+    <columns>
+        <field>Customer_Care_Campaign__c.Campaign_Status__c</field>
+    </columns>
+    <description>List of all Campaigns by account, unit, campaign number</description>
+    <filter>
+        <criteriaItems>
+            <column>Customer_Care_Campaign__c.Account__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Chapel Hill Transit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Customer_Care_Campaign__c.Campaign_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Completed</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Chapel Hill Open Campaigns</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Customer_Care_Campaign__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Customer_Care_Campaign__c.Campaign_Completion_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

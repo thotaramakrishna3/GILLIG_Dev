@@ -1,0 +1,1074 @@
+<apex:page showHeader="false" sidebar="false" docType="html">
+
+<script type="text/javascript">
+
+
+    /*function print( ) {
+  	console.debug( ' from sub js class');
+  }*/
+
+  var undoList = [];
+  var totalWeekColumns;
+  var totalRowsInColumn;
+ 
+  
+  $j(document).ready( function() { 
+      //console.log('************** hello from js controller');
+      
+      //consoleLog('hello from js controller');
+	 // var schedules = JSON.parse( inputJson);
+	  //console.debug( 'JSCONTROLLER - ' + inputJson);
+	  //if ( buses)
+	  // var visibleweeks = document.getElementById('visibleweeks').value;
+	  // var visibleslots = document.getElementById('visibleslots').value;
+	  totalWeekColumns = schedules.length;
+	  totalRowsInColumn = schedules[0].slots.length;
+	  
+	  consoleLog( totalWeekColumns + ' - ' + totalRowsInColumn);
+	  consoleLog( 'visibleSlots - ' + settings.visibleSlots);
+  });
+  
+// need schedules and settings from master js script
+  
+  function displayTable() {
+    consoleLog( 'displayTable()');
+  } // function()
+
+  function displayScheduledTable() {
+    consoleLog( 'displayTable()');
+  } // function()
+
+  // needed 
+  var undoList = [];
+ // var isLocked = false; // default after refresh is always lock the board
+  
+  function reloadLocalData() {
+	visibleweeks = document.getElementById('visibleweeks').value;
+	visibleslots = document.getElementById('visibleslots').value;
+	if ( visibleweeks > schedules.length) {
+		visibleweeks = schedules.length;
+	}
+	
+	if ( visibleslots > schedules[0].slots.length) { 
+		visibleslots = schedules[0].slots.length;
+	}
+  	displayScheduledTable();
+  }
+  
+  function slideDownInWeek() { 
+	var fromWeekSlotIndex = document.getElementById('fromWeekSlotIndex').value;
+	var slideFrom = fromWeekSlotIndex.split( ':');
+	_saveIntoUndo();
+   	_moveSlotsDown( slideFrom[0], slideFrom[1]);
+  	displayScheduledTable();
+  }
+  
+  function dragAndDrop( dragFrom, dropInto) {
+    var dragFrom = document.getElementById( 'sourceindex').value;
+    var dropInto = document.getElementById ( 'destinationindex').value;
+    dragAndDropSlots( dragFrom, dropInto);
+  } 
+  
+  function dragAndDropSlots( dragFrom, dropInto) {
+
+    consoleLog( dragFrom);
+    if ( !dragFrom) {
+        alert( "Source Index is empty");
+        return;
+    }
+
+    if ( !dropInto ) {
+      alert( "Destination Index is empty");
+      return;
+    }
+
+    consoleLog( dragFrom + " -- " + dropInto);
+    var dragWeekFrom = dragFrom.split( ':');
+    if ( dragWeekFrom.length != 2) {
+      alert( "DragFrom format should be N:M");
+      return;
+    }
+
+    consoleLog( 'WeekIndex drag = ' + dragWeekFrom[0]);
+    consoleLog( 'Slot Index drag = ' + dragWeekFrom[1]);
+
+    var dropWeekInto = dropInto.split( ':');
+    if ( dropWeekInto.length != 2) {
+      alert( "dropInto format should be N:M");
+      return;
+    }
+
+    consoleLog( 'WeekIndex drop = ' + dropWeekInto[0]);
+    consoleLog( 'Slot Index drop = ' + dropWeekInto[1]);
+
+    // make sure indexes are within the range
+    if ( dragWeekFrom[0] > schedules.length) {
+      alert( 'DragFrom Week is out of range ' + schedules.length);
+      return;
+    }
+
+    if ( dropWeekInto[0] > schedules.length) {
+      alert( 'Drop Week is out of range ' + schedules.length);
+      return;
+    }
+
+    if ( dragWeekFrom[1] > schedules[0].slots.length) {
+      alert( 'DragFrom Slot is out of range ' + schedules[0].slots.length);
+      return;
+    }
+
+    if ( dropWeekInto[1] > schedules[0].slots.length) {
+      alert( 'Drop Slot is out of range.' + schedules[0].slots.length);
+      return;
+    }
+
+    consoleLog( ' Input is within the range');
+
+    // check if dropIsHoliday
+    var dragSlotObj  = schedules[dragWeekFrom[0]].slots[dragWeekFrom[1]];
+    var dropSlotObj = schedules[dropWeekInto[0]].slots[dropWeekInto[1]];
+    consoleLog( ' Drag Slot = ' + dragSlotObj);
+    consoleLog( ' Drop Slot = ' + dropSlotObj);
+    if ( schedules[dropWeekInto[0]].slots[dropWeekInto[1]].isEmpty != true) {
+      alert( 'Drop Slot is holiday/non-empty. Operation Cancelled');
+      return;
+    }
+
+    if ( schedules[dragWeekFrom[0]].slots[dragWeekFrom[1]].isEmpty != false) {
+      alert( 'Drag Slot is holiday/non-empty. Operation Cancelled');
+      return;
+    }
+
+    consoleLog( 'Drag Slot and Drop Slot are good');
+
+    consoleLog( ' Before Drag Slot = ' + _toString( schedules[dragWeekFrom[0]].slots[dragWeekFrom[1]]));
+    consoleLog( ' Before Drop Slot = ' + _toString( schedules[dropWeekInto[0]].slots[dropWeekInto[1]]));
+
+	_saveInUndo();
+    _makeSwapWithEmptySlot( dragWeekFrom[0], dragWeekFrom[1], dropWeekInto[0], dropWeekInto[1]);
+
+    consoleLog( ' After Drag Slot = ' + _toString( schedules[dragWeekFrom[0]].slots[dragWeekFrom[1]]));
+    consoleLog( ' After Drop Slot = ' + _toString( schedules[dropWeekInto[0]].slots[dropWeekInto[1]]));
+    _recalculateWeekDetails( dragWeekFrom[0]);
+    _recalculateWeekDetails( dropWeekInto[0]);
+    displayScheduledTable();
+  } //function()
+
+
+  function _saveIntoUndo() {
+  	undoList.push( JSON.stringify( schedules));
+  }
+
+  function undoLastChange() {
+
+    if ( undoList.length > 0) {
+        schedules = JSON.parse( undoList.pop());
+        displayScheduledTable();
+    } else {
+        alert( 'No more changes to UNDO');
+    } // if
+
+  } // function
+  
+  function multipleDragsAndDrop() {
+     var dragFrom = document.getElementById( 'msourceindex').value;
+     var dropInto = document.getElementById ( 'mdestinationindex').value;
+     dragMultipleSlots( dragFrom, dropInto);
+  }
+  
+  function dragMultipleSlots( dragSlots, dropSlot) { 
+
+    // make sure drag slots are not empty nor holidays
+	// sort the list
+	// build destination list
+	// count needed empty slots per week from destionation weeks
+	// loop
+	//		check if each destination week has sufficient empty slots 
+	//		if good, otherwise throw error
+	// now source and destinations are done
+	// for each slot from source list 
+	//		create empty slot in destination weeks slot 
+	//		perform simple single swap 
+	// build total list of weeks including source and destination
+	// loop
+	//		rebuild week status
+	// return total list of weeks 
+	
+	if ( isLocked == true) {
+		alert( 'Schedule Board is locked. Please unlock it before making any changes');
+		return null;
+	} 
+	
+  	consoleLog( 'drapMultipleSlots( dropSlots, dropSlot)' + dragSlots + ' - ' + dropSlot);
+  	var dragSlotsArray = dragSlots.split(',');
+  	consoleLog( 'total dragSlots count = ' + dragSlotsArray.length);
+  	
+  	// get first slot which corresponds to dropSlot
+  	var dropSlotDragSlot = dragSlotsArray[0];
+  	consoleLog( ' dropSlotDragIndex = ' + dropSlotDragSlot);
+  	var dropSlotDragSlotIndex = dropSlotDragSlot.split(':');
+  	consoleLog( ' dropSlotDragSlotIndex = ' + dropSlotDragSlotIndex);
+  	
+  	// build multislotbus details
+  	dragSlotsArray = _checkAndIncludeMultiSlotBusIndexes( dragSlotsArray);
+  	consoleLog( ' Includes all multislotbuses = ' + dragSlotsArray);
+  	
+  	dragSlotsArray = dragSlotsArray.sort();
+  	consoleLog( 'sorted dragSlots = ' + dragSlotsArray);
+  	dragSlotsArray = Array.from( new Set( dragSlotsArray));
+  	consoleLog( 'sorted unique dragSlots = ' + dragSlotsArray);
+  	
+  	
+  	var sourceList = [];
+  	for ( var i = 0; i < dragSlotsArray.length; i++) {
+  		consoleLog( 'processing dragSlot - ' + dragSlotsArray[i]);
+  		var dragSlot = dragSlotsArray[i].split( ':');
+  		sourceList.push( [ parseInt(dragSlot[0]), parseInt( dragSlot[1])]);
+  	}
+  	
+  	consoleLog( 'Source DragSlots list size ' + sourceList.length);
+  	consoleLog( 'Source DragSlots inside list size ' + sourceList[0].length);
+  	consoleLog( sourceList[0][0] +  ' - ' +sourceList[0][1]);
+  	consoleLog( 'source list ' + sourceList); 
+  	
+  	sourceList = _validateDragSolts( sourceList);
+  	
+  	if ( sourceList == null || sourceList.length == 0) {
+  		consoleLog( ' Selected drag list is empty or no non-empty sources found.')
+  		return null;
+  	}
+  	
+  	// build destination list
+  	var destinationList = [];
+  	var destinationStart = dropSlot.split(':');
+  	destinationStart[0] = parseInt( destinationStart[0]);
+  	destinationStart[1] = parseInt( destinationStart[1]);
+  	
+  	if ( _validateDropSolt( destinationStart) == false) {
+  		consoleLog( ' Selected Drop Spot is not valid. Stop the process')
+  		return null;
+  	}
+  	
+  	//destinationList.push( destinationStart);
+  	var weekIndexDiff = parseInt(destinationStart[0]) - parseInt( dropSlotDragSlotIndex[0]);
+  	var slotIndexDiff = parseInt(destinationStart[1]) - parseInt( dropSlotDragSlotIndex[1]);
+  	
+  	consoleLog( 'diff week/slot = ' + weekIndexDiff + ' - ' + slotIndexDiff);
+  	
+  	for ( var i = 0; i < sourceList.length; i++) {
+  		consoleLog( 'processing destination for source drag' + sourceList[i]);
+  		var newDestinationSlot = [];
+  		var dWeek = parseInt(sourceList[i][0]) + weekIndexDiff;
+  		var dSlot = parseInt(sourceList[i][1]) + slotIndexDiff;
+  		if ( dWeek < 0 || dSlot < 0) {
+  			alert( 'Destination slots are out of range');
+  			return null;
+  		}
+  		newDestinationSlot.push( parseInt(sourceList[i][0]) + weekIndexDiff);
+  		newDestinationSlot.push( parseInt(sourceList[i][1]) + slotIndexDiff);
+  		consoleLog( ' new destination = ' + newDestinationSlot);
+  		// consoleLog( ' new destination = ' + newDestinationSlot);
+  		destinationList.push( newDestinationSlot);
+  	} // for
+
+	if ( _validateDropSolts( destinationList) == false) {
+		alert( ' Destination slots are not valid');
+		return null;
+	} 
+  	consoleLog( 'destination list size ' + destinationList.length);
+  	consoleLog( 'destination inside list size ' + destinationList[0].length);
+  	consoleLog( destinationList[0][0] +  ' - ' + destinationList[0][1]);
+  	consoleLog( 'destinationList list ' + destinationList); 
+  	
+  	// find the distance between source list 
+  	var sourceDragSlotsDistance = [];
+  	var prevWeek = -1;
+  	for ( var i = 0; i < sourceList.length; i++) {
+  		consoleLog( ' Prev Week - current week index = ' + prevWeek + ' - ' + sourceList[i][0]);
+  		if ( prevWeek != sourceList[i][0]) {
+  			consoleLog( ' New week found. So store as 0 distance');
+  			sourceDragSlotsDistance[i] = 0;
+  			prevWeek = sourceList[i][0];
+  		} else {
+  			consoleLog( ' prev week is same . so find distance');
+  			var distance = _getDragSlotsDistance( sourceList[i - 1][0], 
+  												  sourceList[i - 1][1], 
+  												  sourceList[i][0], 
+  												  sourceList[i][1]);
+  			consoleLog( ' start slot - end slot - distance ' + 
+  										sourceList[i - 1] + " - " + 
+  										sourceList[i] + ' - ' + 
+  										distance);
+  			sourceDragSlotsDistance[i] = distance;
+  		}
+  	}
+  	
+  	consoleLog( ' sourceDragSlotsDistance length ' + sourceDragSlotsDistance.length);
+  	consoleLog( ' sourceDragSlotsDistance = ' + sourceDragSlotsDistance);
+  	
+  	var uniqueDragWeekIndex = [];
+  	for ( var i = 0; i < sourceList.length; i++) {
+  		uniqueDragWeekIndex.push( sourceList[i][0]);
+  	}
+  	consoleLog( ' List of uniqueDragWeekIndex w dup ' + uniqueDragWeekIndex);
+  	
+  	uniqueDragWeekIndex = Array.from( new Set( uniqueDragWeekIndex));
+  	consoleLog( ' List of uniqueDragWeekIndex wo dup ' + uniqueDragWeekIndex);
+  	 
+
+  	var uniqueDropWeekIndex = [];
+  	for ( var i = 0; i < destinationList.length; i++) {
+  		uniqueDropWeekIndex.push( destinationList[i][0]);
+  	}
+  	consoleLog( ' List of uniqueDropWeekIndex w dup ' + uniqueDropWeekIndex);
+  	
+  	uniqueDropWeekIndex = Array.from( new Set( uniqueDropWeekIndex));
+  	consoleLog( ' List of uniqueDropWeekIndex wo dup' + uniqueDropWeekIndex);
+  	
+  	// create destination slots count per week [wi] [totalslots needed]
+	var destinationWeekSlotCount = [];
+	for ( var i = 0; i < uniqueDropWeekIndex.length; i++) {
+		var count = 0;
+		var fromSlotIndex = 0;
+		for ( var j = 0; j < destinationList.length; j++) {
+			if (  j == 0) {
+				fromSlotIndex = destinationList[j][1];
+			}
+			if ( destinationList[j][0] == uniqueDropWeekIndex[i]) {
+				count++;
+			}
+		}
+		var weekVsSlotsCount = [ parseInt(uniqueDropWeekIndex[i]), count, parseInt(fromSlotIndex)];
+		consoleLog( ' week/ count/ fromSlotIndex = ' + weekVsSlotsCount);
+		destinationWeekSlotCount.push( weekVsSlotsCount);
+	}
+	consoleLog( ' Destination week slots length = ' + destinationWeekSlotCount.length);
+	consoleLog( ' Destination week slots needed list = ' + destinationWeekSlotCount);
+	
+	// new logic
+	// create sourcecopy
+	// make all drag slots as empty in the orig-sourcecopy
+	// check if needed empty slots on the orig-sourcecopy
+
+	_saveIntoUndo();
+
+	consoleLog( ' empty the source slots for same row replacement purpose');	
+	var sourceTempSchedules = JSON.parse( _toString( schedules)); // sourcecopy
+	for ( var i = 0; i < sourceList.length; i++) {
+		_makeSlotEmpty( sourceList[i][0], sourceList[i][1]);
+	} // for
+	
+	
+	consoleLog( ' Check if destination has needed empty slots');
+	for ( var i = 0; i < destinationWeekSlotCount.length; i++) {
+		var emptySlotsCount = _countEmptySlot( destinationWeekSlotCount[i][0], destinationWeekSlotCount[i][2]);
+		consoleLog( 'Empty slots in weeks / fromSlotIndex/ need/ exists = ' + 
+								destinationWeekSlotCount[i][0] + ' - ' + 
+								destinationWeekSlotCount[i][2] + ' - ' + 
+								destinationWeekSlotCount[i][1] + ' - ' + 
+								emptySlotsCount);
+		if ( emptySlotsCount < destinationWeekSlotCount[i][1]) {
+			alert( 'Not enough empty slots in destination week . cancel the operation');
+			schedules = sourceTempSchedules;
+			return null;
+		}	
+	} // for
+	
+	consoleLog( ' Seems all destination weeks have enough empty slots per week');
+	
+	// rebuild the destination Slots Index by skipping holidays 
+	// in the middle based on original distance from drap source list
+	
+	consoleLog( ' begin rebuilding destination slots based on drag slots distance');
+	var destinationSlotsWithDistance = [];
+	var prevSlot = [];
+	for ( var i = 0; i < sourceList.length; i++) { 
+		consoleLog( 'dragslot/distance/orig drop slot ' + 
+										sourceList[i] + ' - ' + 
+										sourceDragSlotsDistance[i] + ' - ' +
+										destinationList[i]);
+		if ( sourceDragSlotsDistance[i] == 0) {
+			consoleLog(' week start drag slot');
+			prevSlot = _getValidSlotAtDistance( destinationList[i][0], destinationList[i][1], sourceDragSlotsDistance[i]);
+		} else { 
+			consoleLog( ' processing slots in the middle of the week');
+			prevSlot = _getValidSlotAtDistance( prevSlot[0], prevSlot[1], sourceDragSlotsDistance[i]);
+		} // if
+
+	 	// make sure multislotbus does not fall between two days.
+	 	// Multislot bus can\'t be placed between two days. check the source and destination slots
+	 	// Check if source slot is multislotbus and drop slot is last slot of the day. Multislot bus can\'t be placed between two days')
+  		
+  		// ** need testing
+  		// prevSlot = _checkIfMultiSlotBusBtwTwoDays( sourceList[i], prevSlot);
+
+		destinationSlotsWithDistance.push( prevSlot);
+		consoleLog( ' New slot = ' + prevSlot);
+	} // for
+
+	consoleLog( ' Sorted Source Drag List ' + sourceList);
+	consoleLog( ' Distance between source Slots ' + sourceDragSlotsDistance);
+	consoleLog( ' Original Sorted drop List ' + destinationList);
+	consoleLog( ' New Sorted Drop list with distance ' + destinationSlotsWithDistance);
+	
+	// start the weekSlotSlide and perform the swap
+	for ( var i = 0; i < destinationSlotsWithDistance.length; i++) {
+		consoleLog('slide');
+		var finalSlotDrop = _moveSlotsDown( destinationSlotsWithDistance[i][0], destinationSlotsWithDistance[i][1]);
+		consoleLog( ' swap');
+		// _makeSwapWithEmptySlot( sourceList[i][0], sourceList[i][1], destinationSlotsWithDistance[i][0], destinationSlotsWithDistance[i][1]);
+		// _copyDragSlotIntoDropSlot( sourceTempSchedules, sourceList[i][0], sourceList[i][1], destinationSlotsWithDistance[i][0], destinationSlotsWithDistance[i][1]);
+		// using final slot after multi-slot non0 adjustment
+		_copyDragSlotIntoDropSlot( sourceTempSchedules, sourceList[i][0], sourceList[i][1], destinationSlotsWithDistance[i][0], finalSlotDrop);
+	} // for
+	
+	// new logic
+	// make sure multi-slot buses are not split between two days
+	// if so push it down to next day
+	consoleLog( 'Check if multi-slot is split into two days');
+	for( var i = 0; i < uniqueDropWeekIndex.length; i++) {
+		var weekIndex = uniqueDropWeekIndex[i];
+		consoleLog('Processing week index = ' + weekIndex);
+	    if ( schedules[weekIndex].isScheduledWeek == false) {
+  			consoleLog( ' Destination week is unscheduled. So no changes.')
+			continue;
+  		}
+		for( var j = 0; j < schedules[weekIndex].slots.length; j++) {
+			var multislot0 = schedules[weekIndex].slots[j].bus;
+			var slot0 = schedules[weekIndex].slots[j];
+			// consoleLog( multislot0);
+			if ( multislot0 != null && 
+				 multislot0.slotSize > 1 &&
+				 multislot0.multiSlotSequence == 1) {
+				consoleLog( 'Found multi-slot bus. check the days');
+				var multislot1 = schedules[weekIndex].slots[j + 1].bus;
+				var slot1 = schedules[weekIndex].slots[j + 1];
+				consoleLog( 'slot0.slotDate = ' + slot0.slotDate);
+				consoleLog( 'slot1.slotDate = ' + slot1.slotDate);
+				if ( slot0.slotDate == slot1.slotDate) {
+					consoleLog('Both date are same. so no special handling');
+				} else {
+					consoleLog('Both dates are not same. so slide slot by 1 down');
+					_moveSlotsDown( weekIndex, j);
+				} // if
+			} // if
+		} // for slots
+	} // for weeks
+	consoleLog('Done checking and re-adjusting split slots');
+	
+	// time to rebuild weeks details
+	var totalUniqueWeeks = uniqueDragWeekIndex.concat( uniqueDropWeekIndex);
+	totalUniqueWeeks = Array.from( new Set( totalUniqueWeeks));
+	consoleLog( ' Total Weeks changed ' + totalUniqueWeeks);
+	for ( var i = 0; i < totalUniqueWeeks.length; i++) {
+		_recalculateWeekDetails( totalUniqueWeeks[i]);
+	} // for 
+	consoleLog( 'Done recalculating weeks details');
+	
+	displayScheduledTable(); 
+	
+	consoleLog('over and back to you');
+	  
+	return 	totalUniqueWeeks;
+  } // function
+  
+  
+  function _checkIfMultiSlotBusBtwTwoDays( sourceSlot, destinationSlot) {
+  	consoleLog( '_checkIfMultiSlotBusBtwTwoDays()');
+  	consoleLog( 'sourceSlot = ' + sourceSlot);
+  	consoleLog( 'destinationSlot = ' + destinationSlot);
+  	
+  	// check if the destination week is unscheduled. 
+  	//     if yes, no processing needed.
+
+  	// check if the source slot is firstslot in multislot bus
+  	//     if yes, continue. if no, exit
+  	// if destination week is scheduled
+  	//   get destination days max slots, current destination withinday slot index
+  	//   if max slots and SlotWithinDay are equal
+  	//        increment the destination by one
+  	
+  	var destinationWeekDetails = schedules[destinationSlot[0]];
+  	if ( destinationWeekDetails.isScheduledWeek == false) {
+  		consoleLog( ' Destination week is unscheduled. So no changes.')
+  		return destinationSlot;
+  	}
+  	consoleLog( ' Destination week is scheduled');
+  	
+  	// check if the destination slot is NOT last slot of the day
+  	var destinationSlotDetails = schedules[destinationSlot[0]].slots[destinationSlot[1]];
+  	consoleLog( 'destinationSlotDetails = ' + destinationSlotDetails);
+  	if ( destinationSlotDetails.slotInDayIndex != (destinationSlotDetails.maxSlots - 1)) {
+  		consoleLog( ' Destination slot is not not last slot of the day. so no changes');
+  		return destinationSlot;
+  	}
+  	consoleLog( ' Destination slot is last slot of the day');
+  	
+  	var bus = schedules[sourceSlot[0]].slots[sourceSlot[1]].bus; 
+  	if ( bus.slotSize == 1) {
+  		consoleLog( 'Source bus is single slot bus. so no changes.');
+  		return destinationSlot;
+  	}
+  	consoleLog( ' source slot is multislot bus');
+  	
+  	if ( bus.slotSize == 2  && bus.multiSlotSequence == 2) {
+  		consoleLog( ' Multislotbus but slot 2. So no changes');
+  		return destinationSlot;
+  	}
+  	consoleLog( ' source slot is multislot bus and multiSlotSequence = 1');
+  	
+  	consoleLog('Found bus with multislot and multiSlotSequence = 1 and last slot of the day');
+  	var newDestinationSlotInNextDay = _getValidSlotAtDistance( destinationSlot[0], destinationSlot[1], 1);
+  	consoleLog( ' New Slot for multislotbus first slot = ' + newDestinationSlotInNextDay);
+  	return newDestinationSlotInNextDay;
+  }
+
+  function _checkAndIncludeMultiSlotBusIndexes( sourceDragList) {
+ 	consoleLog( '_checkAndIncludeMultiSlotBusIndexes()');
+ 	consoleLog( 'before sourceDragList = ' + sourceDragList);
+ 	consoleLog( 'before sourceDragList length = ' + sourceDragList.length );
+ 	var sourceDragListWMultiSlotBus = [];
+ 	var sourceDragListNoMultiSlotBus = [];
+ 	
+	for ( var i = 0; i < sourceDragList.length; i++) {
+ 		consoleLog( 'processing dragSlot for multislotbuses: ' + sourceDragList[i]);
+ 		var dragSlot = sourceDragList[i].split( ':');
+ 		sourceDragListNoMultiSlotBus.push( [ parseInt(dragSlot[0]), parseInt( dragSlot[1])]);
+  	}
+  	
+  	consoleLog( 'sourceDragListNoMultiSlotBus length = ' + sourceDragListNoMultiSlotBus.length);
+  	var weekIndex = 0;
+  	var slotIndex = 0;
+  	var bus = null;
+  	var origIndex = 0;
+  	for( var i = 0; i < sourceDragListNoMultiSlotBus.length; i++) {
+  		weekIndex = sourceDragListNoMultiSlotBus[i][0];
+  		slotIndex = sourceDragListNoMultiSlotBus[i][1];
+  		bus = schedules[weekIndex].slots[slotIndex].bus;
+  		if ( bus.slotSize == 1) {
+  			consoleLog( 'Slot is not multislotbus');
+  			sourceDragListWMultiSlotBus.push( sourceDragList[i]);
+  		} else { 
+  			consoleLog( 'Found multi slot bus. index' + bus);
+  			origIndex = bus.multiSlotSequence - 1;
+  			slotIndex = slotIndex - origIndex;
+  			for ( var j = 0; j < bus.slotSize; j++) {
+  				var slotPosition = weekIndex + ':' + (slotIndex + j);
+  				consoleLog( ' Including new drag slot = ' + slotPosition)
+  				sourceDragListWMultiSlotBus.push( slotPosition);
+  			}
+  		}
+  	}
+  	return sourceDragListWMultiSlotBus;
+  } // function()
+  
+  function _getValidSlotAtDistance( startWeekIndex, startSlotIndex, distance) { 
+  	consoleLog( '_getValidSlotAtDistance( startWeekIndex, startSlotIndex, distance)');
+ 	consoleLog( startWeekIndex + ' : ' +  startSlotIndex  + ' : ' +  distance);
+ 	var localDistanceCount = -1;
+ 	consoleLog( ' settings.slotsPerWeek = ' + settings.slotsPerWeek);
+ 	for( var i = startSlotIndex; i < settings.slotsPerWeek; i++) {
+ 		consoleLog(' Processing slot = ' + i);
+ 		if ( schedules[startWeekIndex].slots[i].isHoliday == true) {
+ 			consoleLog( 'Slot is not valid for drop. Holiday');
+ 		} else if ( schedules[startWeekIndex].slots[i].isEmpty == false && 
+ 				    schedules[startWeekIndex].slots[i].bus.slotSize > 1 &&
+ 			        schedules[startWeekIndex].slots[i].bus.multiSlotSequence > 1) {
+ 			 	consoleLog( 'Slot is not valid for drop. Double slot but count it at the end adjust it');
+ 				localDistanceCount++;
+ 		} else {
+ 				consoleLog( ' Slot is valid. Increment distance');
+ 				localDistanceCount++;
+ 		} // if
+ 		
+ 		if ( localDistanceCount == distance) {
+ 			consoleLog( ' Distance has reached and found slot startWeekIndex, startSlotIndex ' + startWeekIndex + ' - ' + i);
+ 			return [startWeekIndex, parseInt(i)];
+ 		} // if
+ 	} // for
+  } // function
+  
+  function _getDragSlotsDistance( startWeekIndex, startSlotIndex, 
+  										endWeekIndex, endSlotIndex) {
+  		consoleLog( '_getDragSlotsDistance( startWeekIndex, startSlotIndex, ' +  
+  										'endWeekIndex, endSlotIndex)');
+  		consoleLog( startWeekIndex + ' - ' + startSlotIndex + ' - ' +  endWeekIndex + ' - ' +  endSlotIndex); 								
+ 		var distance = 0;
+ 		for ( var i =  1 + parseInt( startSlotIndex) ; i <= parseInt(endSlotIndex); i++) {
+ 			consoleLog( ' Checking slot ' + startWeekIndex + ":" + i);
+ 			// consoleLog( _toString(schedules[startWeekIndex].slots[i]));
+ 			if ( schedules[startWeekIndex].slots[i].isHoliday == false) {
+ 				distance++;
+ 			} // if
+ 		} // for
+ 
+ 		consoleLog( 'distance = ' + distance);
+ 		return distance;
+  } // function
+  
+  function _validateDragSolts( sourceDragList) {
+  	consoleLog( 'validateDragSolts( sourceDragList)' + sourceDragList);
+  	consoleLog( 'source List length ' + sourceDragList.length);
+  	var newSourceList = [];
+  	var futureHolidingSlotsCount = 0;
+  	var schedulableSlotCount = 0;
+  	for( var i = 0; i < sourceDragList.length; i++) {
+  		if ( schedules[ sourceDragList[i][0]].slots[sourceDragList[i][1]].isHoliday == true) {
+  			consoleLog( 'found as holiday. remove from sourceList @' + sourceDragList[i]);
+  			continue; 
+  		} else if ( schedules[ sourceDragList[i][0]].slots[sourceDragList[i][1]].isEmpty == true) { 
+  			consoleLog( 'found as Empty. remove from sourceList @' + sourceDragList[i]);
+  			continue; 
+  		} else if ( schedules[ sourceDragList[i][0]].slots[sourceDragList[i][1]].isFutureHoldingSlot == true) { 
+  			consoleLog( 'found future holding slot.' + sourceDragList[i]);
+  			newSourceList.push( sourceDragList[i]);
+  			futureHolidingSlotsCount++;
+  			continue; 
+  		} else {
+  			consoleLog( 'Found as non-empty. Keep it.');
+  			schedulableSlotCount++;
+  			newSourceList.push( sourceDragList[i]);
+  		} // 
+  	}
+  	
+  	if ( futureHolidingSlotsCount > 0 && schedulableSlotCount > 0) {
+  		consoleLog( ' found source list has both future holding and schedulable slots. So reject the source list');
+  		newSourceList = [];
+  	}
+  	return newSourceList;
+  }
+
+  function _validateDropSolts( destinationList) {
+  	consoleLog( '_validateDropSolts( destinationList)' + destinationList);
+  	consoleLog( 'destination List length ' + destinationList.length);
+  	var newSourceList = [];
+  	var futureHolidingSlotsCount = 0;
+  	var schedulableSlotCount = 0;
+  	
+  	for( var i = 0; i < destinationList.length; i++) {
+  		if ( destinationList[i][0] >= schedules.length ||  
+  			destinationList[i][1] >= schedules[0].slots.length ) { 
+  			consoleLog('Found destination slot outside the range.')
+  			return false;	
+  		}
+  		
+  		if ( schedules[ destinationList[i][0]].slots[destinationList[i][1]].isFutureHoldingSlot == true) {
+  			consoleLog( 'found as isFutureHoldingSlot. remove from sourceList @' + destinationList[i]);
+  			futureHolidingSlotsCount++;
+  			continue; 
+  		} else {
+  			consoleLog( 'Found as non-empty. Keep it.');
+  			schedulableSlotCount++;
+  		} // 
+  	}
+  	
+  	if ( futureHolidingSlotsCount > 0 && schedulableSlotCount > 0) {
+  		consoleLog( ' found destination list has both future holding and schedulable slots. So reject the destination list');
+		return false;
+  	}
+  	return true;
+  }
+
+  function _validateDropSolt( destinationSlot) {
+  	consoleLog( '_validateDropSolt( destinationSlot)' + destinationSlot);
+  	consoleLog( 'destinationSlot length ' + destinationSlot.length);
+  	
+  	if ( schedules[destinationSlot[0]].slots[destinationSlot[1]].isHoliday == true) {
+  		consoleLog('Found drop destination is holiday. return false');
+  		return false
+  	} else if ( schedules[destinationSlot[0]].slots[destinationSlot[1]].isEmpty == false &&
+  				schedules[destinationSlot[0]].slots[destinationSlot[1]].bus.slotSize > 2) {
+  		consoleLog('Found drop destination is multislot. return false');
+  		return false
+  	}
+  	return true;
+  }
+
+  
+  function _moveSlotsDown( fromWeekIndex, fromSlotIndex) {
+  	consoleLog( 'moveSlotsDown( fromWeek, fromSlot) ' +  fromWeekIndex + '-' + fromSlotIndex);
+  	
+  	// current slot is multi-slot non-0 slot after slides. goto next slot as destination slot.
+  	if ( schedules[fromWeekIndex].slots[fromSlotIndex].isEmpty == false &&
+  		 schedules[fromWeekIndex].slots[fromSlotIndex].bus.slotSize > 1 &&
+ 	     schedules[fromWeekIndex].slots[fromSlotIndex].bus.multiSlotSequence > 1) {
+ 	     consoleLog( 'Found dropslot as multi-slot-non-0 slot. So selecting next slot as drop slot');
+ 	     fromSlotIndex++;
+  		consoleLog( 'new fromWeek/fromSlot ' +  fromWeekIndex + '-' + fromSlotIndex);
+ 	}
+  		
+  	
+  	var weekDetails = schedules[fromWeekIndex];
+  	consoleLog( 'processing week = ' + weekDetails.weekIndex);
+  	consoleLog( 'processing week = ' + weekDetails.weekDisplayString);
+  	var slotsCount = weekDetails.slots.length;
+  	var countEmptySlots = 0;
+  	for( var i = fromSlotIndex; i < slotsCount; i++) {
+  		if ( weekDetails.slots[i].isEmpty == true) {
+  			countEmptySlots++;
+  		} // if
+  	} // for
+  	
+  	consoleLog( ' Total empty slots below required slotIndex = ' + countEmptySlots);
+  	
+  	if ( countEmptySlots == 0) {
+  		alert( 'No slots are empty below the slot = ' + fromSlotIndex);
+  		return false;
+  	} // if
+	
+	var nextEmptySlotIndex =  _findNextEmptySlot(fromWeekIndex, fromSlotIndex);
+	consoleLog( ' nextEmptySlotIndex = ' + nextEmptySlotIndex);
+	while ( nextEmptySlotIndex > fromSlotIndex) {
+		consoleLog( ' nextEmptySlotIndex = ' + nextEmptySlotIndex);
+		for( var i = nextEmptySlotIndex - 1 ; i >= fromSlotIndex; i--) {
+			if ( weekDetails.slots[i].isHoliday == true) {
+				consoleLog( ' Found holiday at position = ' + i);
+				continue;
+			} else if ( weekDetails.slots[i].isEmpty == false ) {
+				consoleLog( 'Lets swap with emptyslot.  Found non=-empty postion = ' + i);
+				_makeSwapWithEmptySlot( fromWeekIndex, i, fromWeekIndex, nextEmptySlotIndex);
+				nextEmptySlotIndex = i;
+				break;
+			} else {
+				consoleLog( ' Found empty slot. Check the logic');
+			}// if
+		}
+	} 
+	
+	// return final fromSlotIndex due to multi-slot non-0
+	return fromSlotIndex;
+  	
+  	// no need to re-run weeks logic. bc moves are within the same week.
+  }
+  
+  
+  function _findNextEmptySlot( weekIndex, fromSlotIndex) {
+  	consoleLog( 'findNextEmptySlot( weekIndex, fromSlotIndex) ' + weekIndex + '-' + fromSlotIndex);
+  	var emptySlotIndex = -1;
+  	for ( var i = fromSlotIndex; i < schedules[weekIndex].slots.length; i++) {
+  		if ( schedules[weekIndex].slots[i].isEmpty == true) {
+  			consoleLog( 'Found empty slot at position = ' + i);
+  			return i;
+  		}
+  	}
+  	consoleLog( 'Failed to find empty slot at position');
+  	return -1;
+  } // function return slotIndexNumber
+  
+  function _countEmptySlot( weekIndex, fromSlotIndex) {
+  	consoleLog( 'countEmptySlot( weekIndex, fromSlotIndex) ' + weekIndex + '-' + fromSlotIndex);
+  	var countEmptySlots = 0;
+  	var slotsCount = schedules[weekIndex].slots.length;
+  	for( var i = fromSlotIndex; i < slotsCount; i++) {
+  		if ( schedules[weekIndex].slots[i].isEmpty == true) {
+  			countEmptySlots++;
+  		} // if
+  	} // for
+  	return countEmptySlots;
+  } // function 
+   
+   function _copyDragSlotIntoDropSlot( sourceScheduleCopy, dragW, dragS, dropW, dropS) { // source week, source slot, source week, source slot
+    // swap the content
+    consoleLog( '_copyDragSlotIntoDropSlot( dragW, dragS, dropW, dropS)' + 
+    				dragW + '-' + dragS + '-' + dropW + '-' + dropS); 	
+    schedules[dropW].slots[dropS].bus = sourceScheduleCopy[dragW].slots[dragS].bus;
+    schedules[dropW].slots[dropS].isEmpty = false;
+    schedules[dropW].slots[dropS].isRendered = false;
+    schedules[dropW].slots[dropS].isSaved = false;
+/*
+    schedules[dragW].slots[dragS].isMovable = false;
+    schedules[dragW].slots[dragS].isEmpty = true;
+    schedules[dragW].slots[dragS].isRendered = false;
+    schedules[dragW].slots[dragS].isSaved = true;
+    schedules[dragW].slots[dragS].bus = null;
+    */
+  } // function 
+   
+
+  function _makeSwapWithEmptySlot( dragW, dragS, dropW, dropS) { // source week, source slot, source week, source slot
+    // swap the content
+    consoleLog( 'makeSwapWithEmptySlot( dragW, dragS, dropW, dropS)' + 
+    				dragW + '-' + dragS + '-' + dropW + '-' + dropS); 	
+    schedules[dropW].slots[dropS].bus = schedules[dragW].slots[dragS].bus;
+    schedules[dropW].slots[dropS].isEmpty = false;
+    schedules[dropW].slots[dropS].isRendered = false;
+    schedules[dropW].slots[dropS].isSaved = false;
+
+    schedules[dragW].slots[dragS].isMovable = false;
+    schedules[dragW].slots[dragS].isEmpty = true;
+    schedules[dragW].slots[dragS].isRendered = false;
+    schedules[dragW].slots[dragS].isSaved = true;
+
+    schedules[dragW].slots[dragS].bus = null;
+  }
+  
+  function _makeSlotEmpty( dragW, dragS) { 
+  	consoleLog( '_makeSlotEmpty( dragW, dragS) ' + dragW + ' - ' + dragS);
+	schedules[dragW].slots[dragS].isMovable = false;
+    schedules[dragW].slots[dragS].isEmpty = true;
+    schedules[dragW].slots[dragS].isRendered = false;
+    schedules[dragW].slots[dragS].isSaved = true;
+    schedules[dragW].slots[dragS].bus = null;
+  }// function
+
+  function _recalculateWeekDetails( weekIndex) {
+
+      weekDetails = schedules[weekIndex];
+      _toWeekDetails( weekDetails);
+      // console.debug( 'Before WeekDetails = ' + _toString( weekDetails));
+      var newCount= 0;
+      for ( var i = 0; i < schedules[weekIndex].slots.length; i++) {
+          if ( schedules[weekIndex].slots[i].bus != null) {
+            newCount++;
+          }
+      } // for
+      weekDetails.totalScheduledBuses = newCount;
+      if ( weekDetails.totalScheduledBuses > weekDetails.maxSchedulableBuses) {
+      	weekDetails.isOverbooked = true;
+      } else {
+      	weekDetails.isOverbooked = false;
+      }
+      // console.debug( 'After WeekDetails = ' + _toString( weekDetails));
+      _toWeekDetails( weekDetails);
+  } // function
+   
+  function _toWeekDetails( weekDetails) {
+  	consoleLog( weekDetails.weekDisplayString);
+  	consoleLog( weekDetails.weekStartDate);
+  	consoleLog( weekDetails.totalWorkingDays);
+  	consoleLog( weekDetails.totalScheduledBuses);
+  	consoleLog( weekDetails.maxSchedulableBuses);
+  	consoleLog( weekDetails.calendarQuater);
+  	consoleLog( weekDetails.isOverbooked);
+  	consoleLog( weekDetails.isOutOfDisplay);
+  	consoleLog( weekDetails.isFutureHoldingWeek);
+  }
+  function _toString( obj) {
+    return JSON.stringify( obj, null, 4);
+  } // displayObj
+
+  function _calculateActualDropSlots( destinationSlotsList) {
+  	consoleLog( ' _calculateActualDropSlots( destinationSlotsList) ' + destinationSlotsList);
+  	var newDestinationSlotsList = [];
+  	var diffBetweenSlots = 0;
+  	var currentWeek = -1;
+  	for ( var i = 0; i < destinationSlotsList.length ; i++) {
+  		if ( destinationSlotsList[i][0] != currentWeek) {
+  			currentWeek = destinationSlotsList[i][0];
+  			diffBetweenSlots = 0;
+  		}
+  		var newRelativeSlot = diffBetweenSlots + destinationSlotsList[i][1];
+  		var newSlot = _nextValidDropSlot( destinationSlotsList[i][0], newRelativeSlot);
+  		diffBetweenSlots = newSlot - destinationSlotsList[i][1];
+  		newDestinationSlotsList.push( [destinationSlotsList[i][0],newSlot]);
+  	} // for
+  	consoleLog( 'New Destination List skipping holidays = ' + newDestinationSlotsList);
+  	return newDestinationSlotsList;
+  }
+  
+  function _nextValidDropSlot( weekIndex, fromSlotIndex) {
+  	consoleLog( '_nextValidDropSlot( weekIndex, fromSlotIndex) ' + weekIndex + ' - ' + fromSlotIndex);
+  	var slotsCount = schedules[weekIndex].slots.length;
+  	for ( var i = fromSlotIndex; i < slotsCount; i++) {
+  		if ( schedules[weekIndex].slots[i].isHoliday == false) {
+  			consoleLog( ' Found validDropSlot @ ' + i);
+  			return i;
+  		}
+  	}
+  	return null;
+  }
+  
+  function getLockStatus() {
+  	consoleLog( ' Final lock status = ' + isLocked);
+	return isLocked;	
+  }
+  
+/*  function toggleLock() {
+  	isLocked = !isLocked;
+  	console.debug( ' Final lock status = ' + isLocked);
+  	if ( isLocked == true) {
+  		document.getElementById("lockButton").innerHTML = "Unlock";
+  	} else {
+  		document.getElementById("lockButton").innerHTML = "Lock";
+  	}
+  	
+  }
+*/  
+
+  function searchJSON() {
+ 	var fieldname = [ 'mode', 'style'];
+	var fieldvalue = [ 'CNG', 'Trolley'];
+	searchByFilterFields( fieldname, fieldvalue);
+  } 
+
+function searchByFilterFields( fieldname, fieldvalue) {
+  	consoleLog( 'searchByFilterFields()');
+  	consoleLog( fieldname);
+  	consoleLog( fieldvalue);
+  	if ( fieldname.length != fieldvalue.length) {
+  		consoleLog( ' fieldname and filedvalues are not equal sizes. so skip the process');
+  		return null;
+  	}
+  	
+  	var xpathstring = '//bus[';
+  	for ( var i = 0; i < fieldname.length; i++) {
+  		if ( i > 0) {
+  			xpathstring += ' and '; 
+  		}
+  		xpathstring += fieldname[i] + ' = ' + '"' + fieldvalue[i] + '" ';
+  	}
+  	xpathstring += ']/recordID';
+  	consoleLog( 'xpathstring = ' + xpathstring );
+  	
+  	var snapshot = Defiant.getSnapshot( schedules);
+	// Snapshot search - this is more than 100 times faster than 'regular search'
+	found = JSON.search(snapshot, xpathstring);
+	consoleLog( found);
+	consoleLog( 'remove duplicates');
+	nodup = removeDuplicates( found);
+	consoleLog( nodup);
+
+	return nodup;  	
+  }
+  
+  // make sure to add  actionRegion and onload too
+  /*
+  setInterval( apexControllerPing, 600000); // every 10 mins
+  apexControllerPing(); 
+  */
+  function apexControllerPing() {
+ 	var pingTime = Date();
+ 	consoleLog( 'apexControllerPing() = ' + pingTime);  
+  	firePing( pingTime);
+  }
+  
+  function clearUndoList() {
+  	undoList = [];
+  }
+  
+  function removeDuplicates( arrayElements) {
+  	return Array.from( new Set( arrayElements));
+  }
+ 
+  function viewWeeksRange() {
+  	var fromDate = new Date( '03/29/2017');
+  	var toDate = new Date( '04/30/2017');
+  	getViewStartEndWeekIndexes( fromDate, null);
+  }
+  
+  function getViewStartEndWeekIndexes( fromDate, toDate) {
+  	consoleLog( 'getStartEndWeekIndexes ' + fromDate + ' - ' + toDate);
+  	var fromWeekDate = null;
+  	var toWeekDate = null;
+  	var schedulesFirstWeekDetails = null;
+  	var schedulesLastWeekDetails = null;
+  	if ( !fromDate ) { 
+  		consoleLog( 'FromDate is null');
+	  	schedulesFirstWeekDetails = schedules[ settings.weeksPerRow];
+	  	consoleLog( 'fromDate = ' + schedulesFirstWeekDetails.weekStartDate);
+	  	fromWeekDate = _getDateFromSchedulesWeek( schedulesFirstWeekDetails.weekStartDate);
+  	} else {
+	  	fromWeekDate = _getMonday( fromDate);
+  	}
+
+	if ( !toDate) {
+  		consoleLog( 'toDate is null');
+	  	schedulesLastWeekDetails = schedules[ schedules.length - 1];
+	  	consoleLog( 'toDate = ' + schedulesLastWeekDetails.weekStartDate);
+	  	toWeekDate = _getDateFromSchedulesWeek( schedulesLastWeekDetails.weekStartDate);
+	} else {
+		toWeekDate = _getMonday ( toDate);
+	}
+	  	
+  	consoleLog( 'fromWeekDate = '  + fromWeekDate);
+  	consoleLog( 'toWeekDate = ' + toWeekDate);
+  	
+  	if ( fromWeekDate > toWeekDate ) {
+  		var temp = fromWeekDate;
+  		fromWeekDate = toWeekDate;
+  		toWeekDate = temp;
+  	}
+
+  	consoleLog( 'fromWeekDate = '  + fromWeekDate);
+  	consoleLog( 'toWeekDate = ' + toWeekDate);
+  	
+  	schedulesFirstWeekDetails = schedules[ settings.weeksPerRow];
+  	consoleLog( 'First Week = ' + schedulesFirstWeekDetails.weekStartDate);
+  	consoleLog( 'First Week Index = ' + schedulesFirstWeekDetails.weekIndex);
+  	var firstWeekDate = _getDateFromSchedulesWeek( schedulesFirstWeekDetails.weekStartDate);
+  	consoleLog( 'firstWeekDate = '  + firstWeekDate.toDateString());
+  	if ( fromWeekDate < firstWeekDate ) {
+  		fromWeekDate = firstWeekDate; 
+  	}
+
+  	schedulesLastWeekDetails = schedules[ schedules.length - 1];
+  	consoleLog( 'Last Week = ' + schedulesLastWeekDetails.weekStartDate);
+  	consoleLog( 'Last Week Index = ' + schedulesLastWeekDetails.weekIndex);
+  	var lastWeekDate = _getDateFromSchedulesWeek( schedulesLastWeekDetails.weekStartDate);
+  	consoleLog( 'lastWeekDate = '  + lastWeekDate);
+  	if ( toWeekDate > lastWeekDate) {
+  		toWeekDate = lastWeekDate;
+  	}
+  	
+  	consoleLog( 'Adjusted fromWeekDate = '  + fromWeekDate);
+  	consoleLog( 'Adjusted toWeekDate = ' + toWeekDate);
+  	
+  	var viewStartIndex = _getWeeksDiff( firstWeekDate, fromWeekDate) + settings.weeksPerRow;
+  	
+  	var viewEndIndex = _getWeeksDiff( fromWeekDate, toWeekDate) + viewStartIndex;
+  	
+  	consoleLog( 'viewStartIndex = ' + viewStartIndex);
+  	consoleLog( 'viewEndIndex = ' + viewEndIndex);
+  	var viewStartEndIndexes = [ parseInt( viewStartIndex), parseInt(viewEndIndex)];
+  	consoleLog( viewStartEndIndexes);
+  	return viewStartEndIndexes;
+  }
+  
+  function _getMonday( date ) {
+    if( date == null) {
+    	return null;
+    }
+    var day = date.getDay() || 7;  
+    if( day !== 1 ) 
+        date.setHours(-24 * (day - 1)); 
+    return date;
+  }
+  
+  function _getWeeksDiff( date1, date2) {
+    consoleLog( '_getWeeksDiff( date1, date2) ' + date1 + date2);
+  	var diffDays = Math.round((date2 - date1) / (7 * 24 * 60 * 60 * 1000));
+  	consoleLog( ' week diff = ' + diffDays);
+  	return diffDays;
+  }
+  
+  function _getDateFromSchedulesWeek( weekDate) { 
+    var parts = weekDate;
+  	parts = parts.split('-');
+  	var newDate = parts[1] + '/' + parts[2] + '/' + parts[0];
+  	var testDate = new Date( newDate);
+  	consoleLog( testDate);
+  	return testDate;
+  }
+
+  function elapsedSinceLastRefreshTimeString() {
+    consoleLog( 'elapsedSinceLastRefreshTimeString()');
+    var theevent = new Date( settings.lastRefreshedTime);
+    now = new Date();
+    var sec_num = (now  - theevent ) / 1000;
+    var days    = Math.floor(sec_num / (3600 * 24));
+    var hours   = Math.floor((sec_num - (days * (3600 * 24)))/3600);
+    var minutes = Math.floor((sec_num - (days * (3600 * 24)) - (hours * 3600)) / 60);
+    var seconds = Math.floor(sec_num - (days * (3600 * 24)) - (hours * 3600) - (minutes * 60));
+
+    if (hours   < 10) {hours   = "0"+hours;}
+    if (minutes < 10) {minutes = "0"+minutes;}
+    if (seconds < 10) {seconds = "0"+seconds;}
+	
+	var result = 'Elapsed time since last refreshed: ' + days+' Days: '+ hours+' Hours: '+minutes + ' Minutes';
+	consoleLog( result);
+    return  result;
+}  
+  
+  
+</script>
+</apex:page>

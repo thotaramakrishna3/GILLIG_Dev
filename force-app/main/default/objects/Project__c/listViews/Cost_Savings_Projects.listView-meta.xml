@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Savings_Projects</fullName>
+    <columns>NAME</columns>
+    <columns>Project_Name__c</columns>
+    <columns>Product__c</columns>
+    <columns>Technical_Risk_Index__c</columns>
+    <columns>Program_Manager__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Status__c</columns>
+    <columns>Project_Start_Date__c</columns>
+    <columns>Production_Availability__c</columns>
+    <columns>Cost_Impact_per_Bus__c</columns>
+    <columns>Annualized_Cost_Impact__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Project__c.Product</value>
+    </filters>
+    <filters>
+        <field>Category__c</field>
+        <operation>equals</operation>
+        <value>Cost Savings</value>
+    </filters>
+    <label>Cost Savings Projects</label>
+</ListView>

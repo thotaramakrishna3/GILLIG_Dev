@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charging_Requirements__c</fullName>
+    <externalId>false</externalId>
+    <label>Charging Requirements</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Plug In (CCS Type 1)</fullName>
+                <default>false</default>
+                <label>Plug In (CCS Type 1)</label>
+            </value>
+            <value>
+                <fullName>Plug In (CCS Type 2)</fullName>
+                <default>false</default>
+                <label>Plug In (CCS Type 2)</label>
+            </value>
+            <value>
+                <fullName>WAVE Inductive</fullName>
+                <default>false</default>
+                <label>WAVE Inductive</label>
+            </value>
+            <value>
+                <fullName>Momentum Dynamics Inductive</fullName>
+                <default>false</default>
+                <label>Momentum Dynamics Inductive</label>
+            </value>
+            <value>
+                <fullName>Overhead Conductive</fullName>
+                <default>false</default>
+                <label>Overhead Conductive - Pantograph</label>
+            </value>
+            <value>
+                <fullName>Overhead Conductive - Blade</fullName>
+                <default>false</default>
+                <label>Overhead Conductive - Blade</label>
+            </value>
+            <value>
+                <fullName>Overhead Conductive - Inverted Pantograph</fullName>
+                <default>false</default>
+                <label>Overhead Conductive - Inverted Pantograph</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

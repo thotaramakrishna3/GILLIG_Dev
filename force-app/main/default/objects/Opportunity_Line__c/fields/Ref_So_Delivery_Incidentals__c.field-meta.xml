@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ref_So_Delivery_Incidentals__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( INCLUDES(Mode__c, &quot;CNG&quot;), 
+(
+ IF(INCLUDES(Length__c, &quot;29&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.CNG_29_Delivery_Incidentals__c, 
+    IF(INCLUDES(Length__c, &quot;35&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.CNG_35_Delivery_Incidentals__c, 
+       IF(INCLUDES(Length__c, &quot;40&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.CNG_40_Delivery_Incidentals__c, 0) ) ) 
+), 
+IF(INCLUDES(Mode__c, &quot;Diesel&quot;), 
+(
+ IF(INCLUDES(Length__c, &quot;29&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Diesel_29_Delivery_Incidentals__c, 
+    IF(INCLUDES(Length__c, &quot;35&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Diesel_35_Delivery_Incidentals__c, 
+       IF(INCLUDES(Length__c, &quot;40&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Diesel_40_Delivery_Incidentals__c, 0) ) ) 
+),
+IF(INCLUDES(Mode__c, &quot;Hybrid&quot;), 
+(
+ IF(INCLUDES(Length__c, &quot;29&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Hybrid_29_Delivery_Incidentals__c, 
+    IF(INCLUDES(Length__c, &quot;35&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Hybrid_35_Delivery_Incidentals__c, 
+       IF(INCLUDES(Length__c, &quot;40&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Hybrid_40_Delivery_Incidentals__c, 0) ) ) 
+), 
+IF(INCLUDES(Mode__c, &quot;Electric&quot;), 
+(
+ IF(INCLUDES(Length__c, &quot;29&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Electric_29_Delivery_Incidentals__c, 
+    IF(INCLUDES(Length__c, &quot;35&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Electric_35_Delivery_Incidentals__c, 
+       IF(INCLUDES(Length__c, &quot;40&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.Electric_40_Delivery_Incidentals__c, 0) ) ) 
+),0
+))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Ref So Delivery Incidentals</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

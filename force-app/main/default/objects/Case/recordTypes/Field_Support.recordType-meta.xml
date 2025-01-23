@@ -1,0 +1,2584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Support</fullName>
+    <active>true</active>
+    <businessProcess>Field Support</businessProcess>
+    <description>1 Issue, Multiple Buses</description>
+    <label>Field Support</label>
+    <picklistValues>
+        <picklist>Action__c</picklist>
+        <values>
+            <fullName>Customer Care Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Service Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixes and Fail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety Recall Campaign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Campaign_Type__c</picklist>
+        <values>
+            <fullName>Customer Service Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Service Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Safety Recall Campaign</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Content_Type__c</picklist>
+        <values>
+            <fullName>Emergency Rescue Sheet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emergency Responders Guide</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GILLIG All Manuals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GILLIG Driver%E2%80%99s Handbook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GILLIG Parts Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GILLIG Schematics Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GILLIG Service Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OEM Service Manuals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Videos</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Manual_Creator__c</picklist>
+        <values>
+            <fullName>Arminder Dhillon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avinash Singh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balkrushna More</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Becky Ortega</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrie Osborn-Houchin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Darija Desancic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Bonini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ed Montano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eliaser Fuentes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Baron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jay Headley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Juliana Moore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julio Ruiz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kim Korsak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mahesh Dani</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael McClure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Roe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nathan Fisher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigel Hill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other%2FLegacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prasad Sutar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rahul Baisane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raspreet Nagra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ryan Marquez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sergio Romo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shafaque Firoz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shivkumar Kanthikar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Lum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Susan Otterson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tony Gonzalez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unassigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vivian Hoang</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Service Trip Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fleet Defect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PDI Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Trip Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty Claims</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Package_Labeling_Problems__c</picklist>
+        <values>
+            <fullName>Barcodes are missing or do not scan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gillig PO line%2Frelease number is missing or incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gillig PO number is missing or incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gillig part number is missing or incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quantity is missing or incorrect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Packing_Slip_Problems__c</picklist>
+        <values>
+            <fullName>Gillig part number on packing slip is missing or incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO on packing slip is missing or incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quantity on packing slip is missing or incorrect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipment did not have a packing slip</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Page_Creator__c</picklist>
+        <values>
+            <fullName>Arminder Dhillon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avinash Singh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balkrushna More</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Becky Ortega</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carrie Osborn-Houchin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Darija Desancic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dave Bonini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ed Montano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eliaser Fuentes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heather Baron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jay Headley</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Juliana Moore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Julio Ruiz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kim Korsak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mahesh Dani</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael McClure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mike Roe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nathan Fisher</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigel Hill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other%2FLegacy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prasad Sutar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rahul Baisane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Raspreet Nagra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ryan Marquez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sergio Romo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shafaque Firoz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shivkumar Kanthikar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Steve Lum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Susan Otterson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tony Gonzalez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unassigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vivian Hoang</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner_Notifications__c</picklist>
+        <values>
+            <fullName>Cummins OEM Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GILLIG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thermo King</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZF Steering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Non-mission Disabling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Problem_Code__c</picklist>
+        <values>
+            <fullName>01 Engine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>02 Transmission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>03 Driveline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>04 Piping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>05 Steering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>06 Chassis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>07 Front Axle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>08 Front Suspension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10 Rear Axle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11 Rear Suspension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 Wheel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13 Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14 Body</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15 Interior Trim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16 Destination Sign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17 Passenger Lift</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18 Exterior Trim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19 Heater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20 Air Conditioning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21 Windows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22 Ad Frames</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23 Safety %26 Road Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 Dash Panels %26 Gauges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25 Decals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26 Fuel Tank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>96 Fire</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Problem_Sub_Code__c</picklist>
+        <values>
+            <fullName>0000%09WHEEL MTG HARDWARE--C%2FF TIRES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09AIR CONDITIONING COND%2E MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09DESTINATION SIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09DRIVELINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09DRIVERS HEATERS%2FCONTROLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09ENGINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09EXTERIOR MIRRORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09FIRE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09FIRST AID KIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09FRAME RAILS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09FRONT BODY FRAMING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09FRONT SUSPENSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09FUEL TANK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09RCA FLOORING%2FTRIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09REAR SUSPENSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09ROOF HARNESS%2FTB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09STEERING GEAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09TRANSMISSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09WHEEL STL%2FHARDWARE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0001%09WINDSHIELD GLAZING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0002%09AIR CONDITIONING CONDENSER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0002%09DIVER%27S HEATER PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0002%09DRAG LINK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0002%09FIRE EXTINGUISHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0002%09LIFT MECHANICALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0002%09REAR WINDOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0003%09AIR COND%2E EVAP COOLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0003%09FRONT AXLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0003%09ROAD FLARES%2FFLAGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0003%09TIE RODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0004%09AIR CONDITION EVAP MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0004%09REAR AXLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0004%09STEERING PARTS%2C MISC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0006%09SAFETY TRIANGLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0007%09FRT%2E FOLDING STEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0008%09INSTA CHAINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0010%09DEFROSTER DUCTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0011%09DESTINATION SIGN BAY DOOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0011%09SPARE WHEEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0012%09AXLE LUBE FITTINGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0012%09FRT DESTINATION GLAZING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0013%09BEARINGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0020%09AIR COND PIPING%2FDRAIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0020%09DRIVER HEATER CORE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0024%09REAR SUSPENSION SWAY BAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0024%09SWAY BAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0025%09REAR AXLE SUSP%2E MODIFICATIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0025%09SSTL INTERIOR TRIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0025%09TIRE PRESSURE EQUALIZER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0030%09DRIVER HEATER MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0040%09RETARDER CONTROLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0045%09MISC ENGINE PARTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09AD FRAMES INTERIOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09CHASSIS COMPONENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09ENGINE--MOUNTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09FREON COMPRESSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09FRONT AXLE OIL SEALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09FUEL TANK PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09HEADLIGHTS%2FHARNESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09HEATER %26 A%2FC PLATFORM%2FMTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09HUB COVERS%2F10 STUD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09LEFT SIDE FRAMING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09LEFT SIDEWALL PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09LIFT CONT%2FPOWER PACK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09MUD FLAPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09REAR AXLE OIL SEALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09REAR SHOCK ABSORBERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0050%09SIDE DEST%2E SIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0051%09DRIVER%27S WINDOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0051%09FREON COMPRESSOR BELT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0051%09FRONT SHOCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0051%09HEATER BOOSTER PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0051%09STEERING COLUMN TILT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0051%09TRANS%2E TAIL SUPPORT%2FMTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0052%09CENTER REAR SPLASH SHIELDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0052%09FREON COMPRESSOR PULLEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0052%09HEATER VALVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0052%09RIGHT VISIBILITY WINDOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0053%09FREON COMPRESSOR IDLER PULLEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0055%09BUMPERS%2C RUBBER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0060%09AD FRAMES EXTERIOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0060%09FRONT TURN SIGNALS %26 WIRING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0060%09TORQUE RODS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0060%09TURBO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0070%09LOAD LEVELING BRACKETS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0070%09STEERING WHEEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0070%09TRANSMISSION POWER TAKE OFF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0075%09ACCUMULATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0075%09FOG OR DRIVING LIGHT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0075%09OIL FILL %26 DRAIN PLUGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0080%09BACK-UP LIGHT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09DRIVER PLATFORM TB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09ENG%2E%2FSTARTER%2FINTERMED HARN%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09FRONT MANUAL SLACKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09FRONT SUSP LEVELING VALVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09INTERIOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09PASSENGER HEATER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09RIGHT SIDEWALL FRAMING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09RIGHT SIDEWALL PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09SLACK ADJUSTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09THROTTLE CONTROL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09TRANSMISSION DIPSTICK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09TRANSOM PASSENGER WINDOWS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0100%09WHEELCHAIR TIE DOWNS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0101%09FRONT HALDEX AUTO SLACKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0102%09AUXILIARY WATER HEATER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0102%09DRUMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0102%09PARTICULATE TRAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0103%09BRAKE FOUNDATION %2F LINING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0103%09HEATER%2FAIR COND MTG%2FSEALING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0104%09PASS%2E HEATER%2FUNDER SEAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0104%09REAR RUN SIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0110%09FRONT POWER STEERING HOSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0110%09PASS%2E HEATER PIPING%2FDRAINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0110%09REAR SUSP LEVELING VALVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0120%09REAR POWER STEERING HOSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0130%09CRUISE CONTROL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0130%09LOW FLUID PROBE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0131%09RESERVOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0140%09ELECTRONIC ENGINE CONTROLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09ALT%2E MTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09CHASSIS HARNESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09FRONT RUN NO%2E SIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09FRONT STEPWELL HEATER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09FULL SLIDING PASS%2E WINDOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09HUBODOMETER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09INT%2E DUCTING %26 LIGHT PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09LEFT SKIRT PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09LIFT ALARM %28FLOYD BELL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09SETTEE %26 BULKHEAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09TOW EYES%2C FRONT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0150%09TRANSMISSION COOLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0151%09REAR STEPWELL HEATER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0151%09ROOF PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0151%09TOW EYES%2C REAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0153%09LIFT CONTROL BOX HTR DUCTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0154%09CEILING PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0158%09LOWERED A%2FC DUCTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0160%09ABS SENSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0160%09AIR COMPRESSOR PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0160%09ENGINE BELT GUARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0160%09RH FWD FULL SLIDING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0163%09CHASSIS AIR PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0163%09ENG%2FTRANS PAN PROTECTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0164%09ENG%2FBELT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0165%09ENGINE PULLEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0165%09TREADLE VALVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0168%09AIR TANK%2FMTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0170%09SHOP AIR FILL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0172%09FRONT BRAKE CHAMBER HOSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0173%09REAR BRAKE CHAMBER HOSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0175%09AIR TANK DRAIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0180%09AIR DRYER%2FMTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09AIR COMPRESSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09AXLE D%2FL YOKE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09BATTERY BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09EXTERIOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09MUFFLER%2FMTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09RETURN AIR GRILLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09RIGHT SKIRT PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09ROOF FRAMING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0200%09SHIFT CONTROL ELECTRONIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0201%09TAIL PIPE%2FMTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0202%09DRUMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0202%09EXHAUST SYSTEM REAR ENGINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0203%09BRAKE FOUNDATION %2F LINING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0203%09EXHAUST SYSTEM CLAMPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0203%09SHIFT LINKAGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0210%09EXHAUST BRAKE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0210%09GOVERNOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0220%09OUTSIDE AIR DUCT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0220%09REAR SHELF %26 SETTEE TRIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0230%09EXHAUST SYS%2E INSULATION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0240%09TRANSMISSION CONTROLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0250%09DRIVER%27S AREA BOOSTER FAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0250%09ELECT%2E CONT PANEL OR BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0250%09FRONT STEPWELL TRIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0251%09DEFROSTER FAN%27S</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0252%09AIR CLEANER W%2FREST%2E INDICATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0252%09FRONT STEPWELL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0253%09ELECT ENG %26 TRANS CONT PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0255%09AIR INTAKE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0260%09REAR STEPWELL TRIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0280%09CHARGE AIR COOLING%2FPIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0290%09AUX ELECT%2E CONTROL PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0300%09DINEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0300%09DRVR BARRIER--MODESTY PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0300%09FENDER FLARES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0300%09FRONT WHEELWELL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0300%09RADIATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0300%09ROAD SANDERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0301%09PANEL %231</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0301%09RUB RAILS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0302%09DASH%2FCONSOLE%2FHARNESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0302%09FRONT DOOR MODESTY PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0302%09PANEL %232</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0303%09PANEL %233</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0303%09REAR DOOR MODESTY PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0304%09FWD%2FRR DOOR MODESTY PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0304%09PANEL %234</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0305%09PANEL %235</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0306%09HVAC CONTROLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0306%09W%2FC BARRIER MODESTY PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0309%09PANEL %239%2C INDICATOR LAMP BAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0310%09Driver%27s Console</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0310%09REAR WHEELWELL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0310%09UPPER DASH%2FMTG%2CHARNESS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0320%09COOLING SYSTEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0320%09REAR STEPWELL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0325%09UPPER DRIVERS PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0326%09UPPER ENTRANCE DOOR PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0327%09UPPER EXIT DOOR PANEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0328%09DOOR SEALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0340%09SURGE TANK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0341%09COOLANT SENSOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0350%09ENG OIL PRESS GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0350%09EXTERIOR AD FRAMES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0350%09GRABRAILS%2FSTANCHIONS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0350%09HYD%2E FAN MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0350%09PLYWOOD FLRG%2E--TAPPING PLATE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0350%09REAR BRAKE CHAMBERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0350%09TRANSMISSION YOKE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0351%09FRONT BRAKE CHAMBERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0351%09HYD%2E FAN MOTOR PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0352%09ENG COOLANT TEMP GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0353%09STOP%2FTAIL%2FTURN LIGHTS%2FHARN%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0354%09TRANS OIL TEMP GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0355%09AIR PRESS%2E GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0355%09SEAT RISERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0356%09AIR APPL%2E GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0356%09FLOORING STRUCTURE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0357%09VOLTMETER GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0358%09ENG%2E HOURMETER GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0359%09FLOORING REINFORCEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0359%09FUEL LEVEL GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0360%09CENTER MTD%2FADTL%2E STOP LIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0360%09EXHAUST PYROMETER GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0360%09FAN CONTROL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0360%09FLOOR ACCESS PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0360%09RAIN GUTTERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0361%09AMP METER GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0361%09DECELERATION LIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0362%09MARKER LIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0365%09REAR SIDE TURN SIGNALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0365%09SPEEDOMETER %26 OR CABLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0366%09RIGHT TURN HORN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0366%09TACHOMETER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0367%09TACHOGRAPH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0368%09RECORDING SPEEDOMETER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0370%09HYDRAULIC PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0370%09LICENSE PLATE LIGHT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0370%09MISC ACCESS DOORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0371%09HYDRAULIC PUMP PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0372%09HYDRAULIC OIL COOLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0400%09BATT%2FCABLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0400%09ENGINE OIL FILL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0400%09FIRE SUPPRESSION COMPONENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0400%09FRONT BUMPER%2FMTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0400%09FRONT DOOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0400%09FRONT DOOR PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0400%09SPEEDO DRIVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0404%09REAR EMERGENCY DOOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0405%09REAR ENGINE DOOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0410%09EXIT DOORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0410%09REAR BUMPER MTG%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0410%09REAR DOOR PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0411%09DOOR MOTOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0412%09EMERGENCY DOOR RELEASE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0413%09DOOR CONTROL%2C FRONT SB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0417%09ELECT POWER SUPPLY%2FCABLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0420%09JUMP START CONNECTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0420%09RADIATOR ACCESS DOOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0421%09FILTER ACCESS DOOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0425%09STARTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0427%09STARTER DISENGAGEMENT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0428%09STARTER CABLES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0430%09DECALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0450%09ALTERNATOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0450%09CONSTANT TENSION HOSE CLAMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0450%09FRONT CAP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0450%09OIL FILTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0450%09TOWING CONNECTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0450%09WINDSHIELD WASHER%2FWIPER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0451%09INTERIOR MIRRORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0455%09ALTERNATOR%2FREG DUAL WIRING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0460%09CHARGING SYSTEM WARNING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0460%09DIPSTICK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0460%09HOSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0460%09INTERMITTENT W%2FS WIPER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0465%09VANNER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0466%09ANTERNATOR BELT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0467%09ALTERNATOR PULLEY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0470%09SENDER%2C TEMPERATURE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0475%09FRONT ACCESS DOORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0500%09DRIVER SEAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0500%09REAR CAP%2FGRILLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0500%09REAR RUN PANEL OR BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0500%09TIRES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0510%09MECH%2E GAUGES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0511%09REAR MTD AIR PRESS GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0512%09REAR TRANS TEMP GA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0513%09REAR RUN BOX VOLTMETER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0515%09REAR HOURMETER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0516%09REAR MTD ENG TEMP GUAGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0517%09REAR MTD ENG PRESS GUAGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0550%09ELECTRIC HORNS%2C DUAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0550%09ROOF SKINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0550%09WATER FILTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0551%09AIR HORN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0555%09ADDITIONAL ROOF VENTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0560%09PASSENGER SEATS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0570%09STANCHIONS%2C VERTICAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0576%09DOOR ALARMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0577%09CRIME ALARM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0578%09WINDOW ALARMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0580%09FIRE ALARM %26 OR SUPPRESSION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0580%09SEAT BELTS%2C Driver%27s or passenger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0582%09PASS AREA GAS DETECTION SYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0590%09RR BACK UP ALARM %28FLOYD BELL%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0600%09EXTERIOR LIGHTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0600%09KIM HOTSTART</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0600%09KNEELING OR DUMP VALVE SYST%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0600%09LEFT SIDE SKINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0600%09LICENSE PLATE FRAME%2FHOLDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0600%09RADIO BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0602%09BATT OR DIGITAL RECORDER BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0605%09EXTERIOR LOGOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0605%09QUICK START %2FETHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0610%09AIR BAGS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0610%09BLOCK HEATER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0610%09REFLECTORS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0624%09ANTENNA CONDUIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0625%09FLASHING LIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0625%09STOWAGE BOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0650%09AIR STARTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0650%09ENGINE FUEL PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0650%09INTERIOR LIGHTING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0650%09RIGHT SIDE SKINS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0650%09SUN VISOR OR SUNSCREEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0652%09AISLE LIGHTING%2C SEAT RISER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0653%09MAP LIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0655%09READING LIGHTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0660%09AIR STARTER MTG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0660%09ENGINE FUEL PRIMER PUMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0660%09FLUORESCENT TUBE COVERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0661%09AIR STARTER TANK CHRGNG LINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0670%09CHASSIS FUEL PIPING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0680%09BRAKE LIGHT SWITCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0680%09FIRST AID COMPT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0681%09DEST SIGN CLOSEOUT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0681%09PARKING BRAKE%2C AIR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0682%09WATTS VALVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0683%09BRAKE VALVE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0685%09DECALS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0700%09ENGINE PROTECTION</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0700%09FUEL FILTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0700%09LUGGAGE RACK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0700%09REAR CORNER PANELS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0702%09ENGINE ANALYSIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0703%09SKI RACK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0704%09TRANSFER MACHINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0710%09GAS SHOCKS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0725%09GPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0730%09RADIO%2FFAREBOX POWER SUPPLY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0735%09FAREBOX LIGHT SWITCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0737%09WIRING FOR TRANSFER MACHINE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0750%09RADIO%2FSPEAKERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0751%09BOOM MIKE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0752%09OUTSIDE SPEAKERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0755%09INSIDE SPEAKERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0760%09P%2EA%2E SYSTEM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0763%09VOICE ENUNCIATOR SYS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0765%09ANTENNA OR RADIO MTG%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0767%092-WAY RADIO MTG BRKT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0769%09IGNITION SW CONTROL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0770%09BRAKE %26 ACCEL INTERLOCK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0775%09HILL HOLDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0800%09ENGINE OIL COOLERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0800%09KNEELING ELECTRICAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0810%09ABS EFFECTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0825%09DRIVERS FANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0850%09FAREBOX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0850%09PASSENGER SIGNAL PULL CORD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0852%09PASSENGER SIGNAL TOUCH TAPE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0855%09PASSENGER CORD SWITCH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0860%09STEP NOSING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0860%09STOP REQUESTED SIGN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0865%09PASSENGER CHIME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0900%09HEADLIGHT MONITOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0900%09SWITCHES%2FSENDERS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0902%09VIDEO CAMERA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0903%09ELECTRICAL TOWING PLUG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0904%09DRIVER%27S CURTAIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0905%09WATER BARRIER%2C DRIVER%27S AREA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0906%09PASSENGER COUNTER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0911%09EXIT DOOR WIRING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0912%09ENTRANCE DOOR WIRING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0950%09CONSTANT TENSION HOSE CLAMP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0950%09HEATER OR A%2FC CONTROLS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0960%09HOSES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0970%09PRESSURE SENDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>0975%09LIFT ELECTRICAL EFFECTS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100%09        BIKE RACK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101%09        SKI RACKS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Purchase_Order_Problems__c</picklist>
+        <values>
+            <fullName>PO is already received%2C complete or closed in Symix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO is still planned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PO will be over received</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Complex functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Instructions not clear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User didn%27t attend training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Root_Cause__c</picklist>
+        <values>
+            <fullName>Assembly error - Not built to print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assembly error - Wrong part</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Bill is missing%2FEngineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Missing install%2F Engineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Missing part%2FEngineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Missing schematic%2FEngineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong bill%2F Engieering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong install%2F Engineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong part%2F Engineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong schematic%2F Engineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design error - Part made to print does not work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - Bad IOC Module</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - Gillig Incorrect Harness Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - Harness Vendor Wiring Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - IOC Software Bug Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - Improper Parts Installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - Missed I%2FO Requirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - PCO - Controls Group Not Informed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - Poor Testing Practices %28Functioning Correctly%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I%2FO - Vendor System Design Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Bad - Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Bad - Wrong supplier information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Damaged%2F Production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Damaged%2F Supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Loose fit%2FSupplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Marking%2FSupplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Not programmed%2FEngineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Not programmed%2FSupplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Out of specification limits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schematic Wrong%2Fincomplete%2FEngineering error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Still in debug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tolerance Stack up error%2FEngineering</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Severity__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Shipment_Problems__c</picklist>
+        <values>
+            <fullName>Material received is not what was ordered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pallets are incorrect size or grade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipment delivered with incorrect address</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sympton__c</picklist>
+        <values>
+            <fullName>Adhesion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Bill is missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Missing install</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Missing part</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Missing schematic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong install</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong part</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill - Wrong schematic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Booting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Display - Bad video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Display - No video</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Harness - Too short or too long</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On_off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overheat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PA system not working properly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Bad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Damaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Interference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Loose fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Marking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Not programmed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part - Out of specification limits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Part -Mechanical fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schematic - Missing information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schematic - Wrong information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support - Advice%2F training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Update_Reason__c</picklist>
+        <values>
+            <fullName>Already Updated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change%3A Eng</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change%3A PDI%2FRetrofit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change%3A Vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error%3A Eng</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error%3A Omission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error%3A Pubs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Error%3A Vendor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Action</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process</fullName>
+    <active>true</active>
+    <description>Project to implement a process improvement (such as a new system implementation).</description>
+    <label>Process</label>
+    <picklistValues>
+        <picklist>Active_Project_Stage__c</picklist>
+        <values>
+            <fullName>1%2E Initiating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E Executing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E Monitoring %26 Controlling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2E Closing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Continuous Product Improvement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cost Savings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Product Introduction</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Length__c</picklist>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Mode__c</picklist>
+        <values>
+            <fullName>Allison Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAE Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diesel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel Cell</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Style__c</picklist>
+        <values>
+            <fullName>BRT PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Double Decker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor BRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trolley</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Green</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yellow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Technical_Risk_Index__c</picklist>
+        <values>
+            <fullName>TR0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

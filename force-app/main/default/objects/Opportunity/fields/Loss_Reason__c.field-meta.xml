@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+                <label>Lost to Competitor</label>
+            </value>
+            <value>
+                <fullName>Purchased Medium Duty</fullName>
+                <default>false</default>
+                <label>Purchased Medium Duty</label>
+            </value>
+            <value>
+                <fullName>Purchased Used Buses</fullName>
+                <default>false</default>
+                <label>Purchased Used Buses</label>
+            </value>
+            <value>
+                <fullName>Named on competitor contract</fullName>
+                <default>false</default>
+                <label>Named on competitor contract</label>
+            </value>
+            <value>
+                <fullName>No Budget / Lost Funding</fullName>
+                <default>false</default>
+                <label>No Budget / Lost Funding</label>
+            </value>
+            <value>
+                <fullName>No Decision / Non-Responsive</fullName>
+                <default>false</default>
+                <label>No Decision / Non-Responsive</label>
+            </value>
+            <value>
+                <fullName>No Bid</fullName>
+                <default>false</default>
+                <label>No Bid</label>
+            </value>
+            <value>
+                <fullName>Not given opportunity to bid</fullName>
+                <default>false</default>
+                <label>Not given opportunity to bid</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>No-Bid</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>No Bid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost to Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Purchased Medium Duty</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Purchased Used Buses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Named on competitor contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not given opportunity to bid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Customer Delayed (Closed)</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Delayed (Closed)</controllingFieldValue>
+            <controllingFieldValue>Closed: Customer Delayed</controllingFieldValue>
+            <valueName>No Budget / Lost Funding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Delayed (Closed)</controllingFieldValue>
+            <controllingFieldValue>Closed: Customer Delayed</controllingFieldValue>
+            <valueName>No Decision / Non-Responsive</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

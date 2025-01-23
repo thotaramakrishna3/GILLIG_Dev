@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Status_Details</fullName>
+    <columns>Start_Date__c</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Serial_Numbers__c</columns>
+    <columns>Mode__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>TW_Ship_Due_Date__c</columns>
+    <columns>Manual_Completion_Date__c</columns>
+    <columns>Customer_Legacy_Status__c</columns>
+    <columns>Manual_Notes__c</columns>
+    <columns>Manuals_Samples_Sent__c</columns>
+    <columns>Pubs_Unique_Customer_Info__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.Planned</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2020</value>
+    </filters>
+    <filters>
+        <field>Customer_Legacy_Status__c</field>
+        <operation>equals</operation>
+        <value>New Customer,Return Customer,New Mode for Existing Customer</value>
+    </filters>
+    <filters>
+        <field>Manual_Completion_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Manuals_Identical_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Mode__c</field>
+        <operation>contains</operation>
+        <value>CNG,Diesel,Electric,Allison Hybrid,BAE Hybrid,Trolley (Overhead),Glider</value>
+    </filters>
+    <label>New Customers</label>
+</ListView>

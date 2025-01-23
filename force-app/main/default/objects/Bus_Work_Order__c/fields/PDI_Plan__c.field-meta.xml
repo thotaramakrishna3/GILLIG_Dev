@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDI_Plan__c</fullName>
+    <externalId>false</externalId>
+    <label>PDI Plan</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PDI BEB</fullName>
+                <default>false</default>
+                <label>PDI BEB</label>
+            </value>
+            <value>
+                <fullName>PDI CNG</fullName>
+                <default>false</default>
+                <label>PDI CNG</label>
+            </value>
+            <value>
+                <fullName>PDI Hybrid</fullName>
+                <default>false</default>
+                <label>PDI Hybrid</label>
+            </value>
+            <value>
+                <fullName>PDI Diesel</fullName>
+                <default>false</default>
+                <label>PDI Diesel</label>
+            </value>
+            <value>
+                <fullName>PDI Issues</fullName>
+                <default>false</default>
+                <label>PDI Issues</label>
+            </value>
+            <value>
+                <fullName>PCO</fullName>
+                <default>false</default>
+                <label>PCO</label>
+            </value>
+            <value>
+                <fullName>Ship Short</fullName>
+                <default>false</default>
+                <label>Ship Short</label>
+            </value>
+            <value>
+                <fullName>Customer Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Training</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Vendor Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vendor Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ITS_System__c</fullName>
+    <externalId>false</externalId>
+    <label>ITS System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Avail</fullName>
+                <default>false</default>
+                <label>Avail</label>
+            </value>
+            <value>
+                <fullName>Clever</fullName>
+                <default>false</default>
+                <label>Clever</label>
+            </value>
+            <value>
+                <fullName>ACS</fullName>
+                <default>false</default>
+                <label>Conduent (ACS)</label>
+            </value>
+            <value>
+                <fullName>Connexionz</fullName>
+                <default>false</default>
+                <label>Connexionz</label>
+            </value>
+            <value>
+                <fullName>Digital Recorders</fullName>
+                <default>false</default>
+                <label>Digital Recorders</label>
+            </value>
+            <value>
+                <fullName>DoubleMap</fullName>
+                <default>false</default>
+                <label>DoubleMap</label>
+            </value>
+            <value>
+                <fullName>ETA Transit Systems</fullName>
+                <default>false</default>
+                <label>ETA Transit Systems</label>
+            </value>
+            <value>
+                <fullName>Greyhawk</fullName>
+                <default>false</default>
+                <label>Greyhawk</label>
+            </value>
+            <value>
+                <fullName>Hanover</fullName>
+                <default>false</default>
+                <label>Hanover</label>
+            </value>
+            <value>
+                <fullName>Init</fullName>
+                <default>false</default>
+                <label>Init</label>
+            </value>
+            <value>
+                <fullName>Integrated System Research (ISR)</fullName>
+                <default>false</default>
+                <label>Integrated System Research (ISR Transit)</label>
+            </value>
+            <value>
+                <fullName>Mentor</fullName>
+                <default>false</default>
+                <label>Mentor</label>
+            </value>
+            <value>
+                <fullName>Nextbus</fullName>
+                <default>false</default>
+                <label>Nextbus</label>
+            </value>
+            <value>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+                <label>Not Required</label>
+            </value>
+            <value>
+                <fullName>Pasio</fullName>
+                <default>false</default>
+                <label>Pasio</label>
+            </value>
+            <value>
+                <fullName>Routematch</fullName>
+                <default>false</default>
+                <label>Routematch</label>
+            </value>
+            <value>
+                <fullName>Strategic Mapping</fullName>
+                <default>false</default>
+                <label>Strategic Mapping</label>
+            </value>
+            <value>
+                <fullName>Syncromatics</fullName>
+                <default>false</default>
+                <label>Syncromatics</label>
+            </value>
+            <value>
+                <fullName>Transitfare</fullName>
+                <default>false</default>
+                <label>Transitfare</label>
+            </value>
+            <value>
+                <fullName>TripSpark</fullName>
+                <default>false</default>
+                <label>TripSpark</label>
+            </value>
+            <value>
+                <fullName>Vontas Novus</fullName>
+                <default>false</default>
+                <label>Vontas Novus</label>
+            </value>
+            <value>
+                <fullName>Vontas TransitMaster</fullName>
+                <default>false</default>
+                <label>Vontas TransitMaster</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

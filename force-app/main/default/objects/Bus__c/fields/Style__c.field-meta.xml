@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Style__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( or(RecordType.Name =&quot;Delivered&quot;,RecordType.Name =&quot;Firm&quot;,RecordType.Name =&quot;In Service&quot;), text(Sales_Order__r.Style__c) ,
+
+IF(INCLUDES( Opportunity_Line__r.Style__c , &quot;Low Floor&quot;), &quot;Low Floor&quot;, NULL) +
+IF(INCLUDES( Opportunity_Line__r.Style__c , &quot;Low Floor BRT&quot;), &quot;Low Floor BRT&quot;, NULL) +
+IF(INCLUDES( Opportunity_Line__r.Style__c , &quot;Low Floor Plus&quot;), &quot;Low Floor Plus&quot;, NULL) +
+IF(INCLUDES( Opportunity_Line__r.Style__c , &quot;BRT Plus&quot;), &quot;BRT Plus&quot;, NULL) +
+IF(INCLUDES( Opportunity_Line__r.Style__c , &quot;Suburban&quot;), &quot;Suburban&quot;, NULL) +
+IF(INCLUDES( Opportunity_Line__r.Style__c , &quot;Trolley&quot;), &quot;Trolley&quot;, NULL)
+)</formula>
+    <label>Style</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

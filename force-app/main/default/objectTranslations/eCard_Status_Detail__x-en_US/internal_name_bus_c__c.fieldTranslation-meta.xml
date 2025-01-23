@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- internal_name_bus__c --></label>
+    <name>internal_name_bus_c__c</name>
+</CustomFieldTranslation>

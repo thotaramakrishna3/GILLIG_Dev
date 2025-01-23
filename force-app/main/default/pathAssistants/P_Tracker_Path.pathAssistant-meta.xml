@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <entityName>Project_Tracker__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>P Tracker Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Operating_Committee_Evaluation_Date__c</fieldNames>
+        <fieldNames>Operating_Committee_Evaluation_Comments__c</fieldNames>
+        <fieldNames>Product_Planning_Evaluation__c</fieldNames>
+        <fieldNames>Product_Planning_Evaluation_Comments__c</fieldNames>
+        <fieldNames>Committee_Recommendation__c</fieldNames>
+        <picklistValueName>Approval Phase</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Benefits_Summary__c</fieldNames>
+        <fieldNames>Product_Project_Complexity_Reduction__c</fieldNames>
+        <fieldNames>Product_Cost_Reduction__c</fieldNames>
+        <fieldNames>Market_Opportunity__c</fieldNames>
+        <picklistValueName>Benefits_Evaluation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Product_Manager__c</fieldNames>
+        <fieldNames>Product_Manager_Comments__c</fieldNames>
+        <fieldNames>Project_Scope__c</fieldNames>
+        <fieldNames>ProjectOwner__c</fieldNames>
+        <fieldNames>Product_Manager_Recommendation__c</fieldNames>
+        <info>&lt;p&gt;The Product manager recommendation are required &lt;/p&gt;</info>
+        <picklistValueName>Business Case Phase</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Final_Project_Decision__c</fieldNames>
+        <picklistValueName>Complete</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Investments_Risks_Summary__c</fieldNames>
+        <fieldNames>Non_Recurring_Costs_Other__c</fieldNames>
+        <fieldNames>Estimated_Total_EnggHours__c</fieldNames>
+        <fieldNames>Manufacturing_Risk_Assesment__c</fieldNames>
+        <fieldNames>Supplier_Assessment__c</fieldNames>
+        <picklistValueName>Investments/Risks_Evaluation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Project_Name__c</fieldNames>
+        <fieldNames>Category__c</fieldNames>
+        <fieldNames>Product__c</fieldNames>
+        <fieldNames>Problem_Statement__c</fieldNames>
+        <info>&lt;p&gt;Please fil in with as much as details you can add. &lt;/p&gt;&lt;p&gt;Please select the product &lt;/p&gt;&lt;p&gt;Please select the category based on the whether its to improve the product , for cost saving etc&lt;/p&gt;</info>
+        <picklistValueName>Pre-Project Collection</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Technical_Risk_Index__c</fieldNames>
+        <fieldNames>Proposed_Project_Scope__c</fieldNames>
+        <info>&lt;p&gt;&lt;img src=&quot;https://www.exceltip.com/wp-content/uploads/2019/09/114.png&quot;&gt;&lt;/img&gt;&lt;/p&gt;</info>
+        <picklistValueName>Preliminary Investigation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Expected_Start_Date__c</fieldNames>
+        <picklistValueName>Project Plan Phase</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

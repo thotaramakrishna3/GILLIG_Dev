@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Quantity_from_OppoSO__c</columns>
+    <columns>Q__c</columns>
+    <columns>OSD__c</columns>
+    <columns>Current_Schedule_Date__c</columns>
+    <columns>X1st_Check_Auditors__c</columns>
+    <columns>X1st_Check_Audit_complete_Date__c</columns>
+    <columns>X2nd_Check_Audit_Date__c</columns>
+    <columns>Total_Actual_Order_Processing_hours__c</columns>
+    <columns>Order_Processor__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Production_Order__c.DefaultProductionOrders</value>
+    </filters>
+    <label>All Production Orders</label>
+</ListView>

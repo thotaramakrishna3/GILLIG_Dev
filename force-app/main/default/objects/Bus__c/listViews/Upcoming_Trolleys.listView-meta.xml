@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Upcoming_Trolleys</fullName>
+    <columns>NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Current_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Style__c</field>
+        <operation>equals</operation>
+        <value>Trolley</value>
+    </filters>
+    <label>Upcoming Trolleys</label>
+</ListView>

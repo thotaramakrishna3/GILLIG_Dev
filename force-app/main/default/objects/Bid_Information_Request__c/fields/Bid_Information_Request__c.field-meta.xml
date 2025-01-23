@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bid_Information_Request__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Detailed information request to summarize for a Bid Response</description>
+    <externalId>false</externalId>
+    <label>Bid Information Request</label>
+    <referenceTo>Bid_Information_Request__c</referenceTo>
+    <relationshipLabel>Detailed Bid Information Requests</relationshipLabel>
+    <relationshipName>Bid_Information_Requests</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

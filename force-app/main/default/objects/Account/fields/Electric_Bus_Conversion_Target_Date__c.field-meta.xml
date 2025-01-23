@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Electric_Bus_Conversion_Target_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>When will 100% of their orders be for electric buses.</inlineHelpText>
+    <label>Electric Bus Conversion Target Date</label>
+    <length>60</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

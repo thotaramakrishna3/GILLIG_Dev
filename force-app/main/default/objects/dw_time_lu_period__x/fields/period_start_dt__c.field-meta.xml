@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>period_start_dt__c</fullName>
+    <description>period_start_dt</description>
+    <externalDeveloperName>period_start_dt</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>period_start_dt</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

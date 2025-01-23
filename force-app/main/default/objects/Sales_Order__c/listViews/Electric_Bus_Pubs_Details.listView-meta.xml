@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Electric_Bus_Pubs_Details</fullName>
+    <columns>Start_Date__c</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Serial_Numbers__c</columns>
+    <columns>Manuals_Samples_Sent__c</columns>
+    <columns>TW_Ship_Due_Date__c</columns>
+    <columns>Drivers_Handbook_Completion_Date__c</columns>
+    <columns>Service_Manual_Completion_Date__c</columns>
+    <columns>Schematics_Manual_Completion_Date__c</columns>
+    <columns>Parts_Manual_Ship_Due_Date__c</columns>
+    <columns>Parts_Manual_Completion_Date__c</columns>
+    <columns>Battery_Configuration__c</columns>
+    <columns>Charging_Configuration__c</columns>
+    <columns>Manual_Notes__c</columns>
+    <columns>Manuals_Identical_To__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.Planned</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2022</value>
+    </filters>
+    <filters>
+        <field>Mode__c</field>
+        <operation>equals</operation>
+        <value>Electric</value>
+    </filters>
+    <filters>
+        <field>Manuals_Identical_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Battery_Configuration__c</field>
+        <operation>equals</operation>
+        <value>(5) Cummins BP74E,(6) Cummins BP74E,(7) Cummins BP74E,(5) AKASOL 98 kWh,(6) AKASOL 98 kWh,(7) AKASOL 98 kWh</value>
+    </filters>
+    <filters>
+        <field>Charging_Configuration__c</field>
+        <operation>equals</operation>
+        <value>(1) Plug-in,(2) Plug-in,(1) Plug-in w/ Opp Charge,(2) Plug-in w/ Opp Charge,(1) Plug-in w/Momentum Dynamics,(2) Plug-in w/Momentum Dynamics</value>
+    </filters>
+    <filters>
+        <field>Battery_Configuration__c</field>
+        <operation>equals</operation>
+        <value>(5) AKASOL 98 kWh,(6) AKASOL 98 kWh,(7) AKASOL 98 kWh</value>
+    </filters>
+    <label>Electric Bus Pubs Details</label>
+</ListView>

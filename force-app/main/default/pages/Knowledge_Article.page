@@ -1,0 +1,313 @@
+<apex:page controller="KnowledgeArticleController" renderAs="pdf" applyBodyTag="false">
+    <head>      
+        <style type="text/css" media="print">
+            @page {
+            padding-top: 13%;
+            padding-bottom: 30px;
+            
+            @top-center {
+            content: element(header);
+            }
+            
+            @top-left {
+            content: element(title);
+            } 
+            
+            @bottom-left {
+            content: "Questions or Technical Support? Call 888-201-4125 or email TechnicalSupport@gillig.com";
+            font-family: sans-serif;
+            font-style: italic;
+            color: #808080;
+            font-size: 13px;
+            padding-bottom: 50px;
+            }
+            
+            @bottom-right {
+            content: counter(page) " / " counter(pages);
+            font-family: sans-serif;
+            font-style: italic;
+            color: #808080;
+            font-size: 13px;
+            padding-bottom: 50px;
+            }
+            
+            @center {
+            content: element(div.content);
+            } 
+            }
+            
+            @page :first {
+            @top-left {
+            content: none;
+            }
+            }
+            
+            @page :first {
+            padding-top: 5%;
+            }
+            
+            @page:not(:first) {
+            @top-left {
+            content: element(title);
+            }
+            }
+            
+            * {
+            margin: 0px;
+            padding: 0px;
+            }
+            
+            div.title {
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            width: 20%;
+            white-space: nowrap;
+            padding-top: 100px;
+            font-style: italic;
+            padding-left: 2px;
+            position: running(title);
+            }
+            
+            div.header {
+            margin-top: 0.75cm;
+            position: running(header);
+            }
+            
+            div.footer {
+            display: block;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            position: running(footer);
+            }
+            
+            div.subfooter {
+            display: inline-block;
+            }
+            
+            div.right {
+            float: right;
+            }
+            
+            .pagenumber:before {
+            content: counter(page);
+            }
+            
+            .pagecount:before {
+            content: counter(pages);
+            }
+            
+            table {
+            width: 100%;
+            }
+            
+            .bottom-left {
+            font-size: 1pt;
+            }
+            
+            .tableHeader {
+            border-width: 0px 0px 1px 0px;
+            border-color: #000;
+            border-style: solid;
+            }
+            
+            body {
+            margin: 0;
+            padding: 0;
+            }
+            
+            .content {
+            color: black;
+            font-size: 16px;
+            line-height: normal;
+            width: 98%;
+            list-style-position: outside;
+            margin-left: 0;
+            padding-left: 0;
+            font-family: Arial Unicode MS;
+            overflow-wrap: break-word;
+            }
+            
+            ol {
+            font-size: 16px;
+            font-family: Arial Unicode MS;
+            list-style-position: outside;  
+            margin-left: 0;
+            padding-left: 0;
+            color:black;
+            margin: 0;
+            padding: 0;
+            }  
+            
+            ol, ul {
+            font-size: 16px;
+            font-family: Arial Unicode MS;
+            margin: 0;
+            padding: 0;
+            padding-left: 3%;
+            }
+            
+            li {
+            font-size: 16px;
+            font-family: Arial Unicode MS;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            }  
+            
+            .li:before {
+            list-style: none;
+            list-style-position: inside;
+            margin-left: 0;
+            padding-left: 0;
+            color:black;
+            }    
+        </style>
+    </head>
+    
+    <body>    
+        <div class="header" style="margin-left: 0; padding-left: 0;">
+            <td>
+                <apex:image id="gilliglogo" value="{!$Resource.gilliglogo}" width="100" height="30"/>
+            </td>
+            <td style="color:#184B9B; font-family: sans-serif; font-weight: bold; font-size: 22px; text-align:right; padding-left:320px;
+                       padding-right:0px;">SERVICE DOCUMENT</td>
+            
+            <table align="center" style="width: 100%; height:10px; text-align: justify;">
+                <td style ="height:4px; background-color:#184B9B; width: 100%; border-collapse: collapse;"></td>
+            </table>  
+        </div>
+        
+        <div class="title">
+            <apex:outputText value="{!account.Title}"/>
+        </div>
+        
+        <div>    
+            <div>  
+                <tr>
+                    <td style="color:#184B9B; font-family: sans-serif; font-weight: bold; font-size: 19px; text-align:left; margin-left: 0; padding-left: 0;
+                               vertical-align:top;">
+                        Diagnostic and Repair Plan
+                    </td>
+                </tr><br/>
+                
+                <tr>
+                    <td>
+                        <apex:outputText style="font-family: sans-serif; font-size: 16px; text-align:left; margin-left: 0; padding-left: 0;
+                                                line-height:25px; font-weight: bold; width: 100%;" value="{!account.Title}"/>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td style="font-family: sans-serif; font-size: 16px; text-align:left; margin-left: 0; padding-left: 0; font-style: italic;">
+                        Version {!account.VersionNumber}, {!account.PublishStatus}
+                    </td>      
+                </tr>      
+            </div>
+        </div>
+        
+        <div class="content" style="line-height:25px;">   
+            <apex:outputPanel rendered="{!account.Issue_Description1__c != null}">      
+                <td style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">ISSUE DESCRIPTION:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Issue_Description1__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Symptoms1__c != null}">      
+                <td style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">SYMPTOMS:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Symptoms1__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Tools_Required1__c != null}">
+                <td style="font-family: sans-serif; font-size: 16px; font-weight: bold; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">TOOLS REQUIRED:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left:2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Tools_Required1__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Parts_Required__c != null}">
+                <td style="font-family: sans-serif; font-weight: bold; font-size: 16px; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">PARTS REQUIRED:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Parts_Required__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Diagnostic_Steps__c != null}">
+                <td style="font-family: sans-serif; font-weight: bold; font-size: 16px; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">DIAGNOSTIC STEPS:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Diagnostic_Steps__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Repair_Steps__c != null}">
+                <td style="font-family: sans-serif; font-weight: bold; font-size: 16px; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">REPAIR STEPS:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Repair_Steps__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Labor_Information__c != null}">
+                <td style="font-family: sans-serif; font-weight: bold; font-size: 16px; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">LABOR INFORMATION:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Labor_Information__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Warranty_Claims__c != null}">
+                <td style="font-family: sans-serif; font-weight: bold; font-size: 16px; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">WARRANTY CLAIMS:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Warranty_Claims__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Parts_Return_Disposition__c != null}">
+                <td style="font-family: sans-serif; font-weight: bold; font-size: 16px; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">PARTS RETURN DISPOSITION:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Parts_Return_Disposition__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!account.Vendor_Article__c != null}">
+                <td style="font-family: sans-serif; font-weight: bold; font-size: 16px; margin-left: 0; padding-left: 0;
+                           line-height: 45px;">VENDOR ARTICLE:</td>
+                <div style="padding-left: 25px; margin-left: 0; padding-left: 0; line-height: 29px; margin-left: 2px;">
+                    <apex:outputText style="font-family: Arial Unicode MS; color: black; font-size: 16px; margin-left: 1px;"
+                                     escape="false" value="{!account.Vendor_Article__c}"/>
+                </div>
+                <td style="line-height: 50px;"></td>
+            </apex:outputPanel>      
+        </div>
+    </body>
+</apex:page>

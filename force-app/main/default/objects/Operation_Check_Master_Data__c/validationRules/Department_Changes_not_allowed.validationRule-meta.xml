@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Changes_not_allowed</fullName>
+    <active>false</active>
+    <description>Department cannot be change. Set current to inactive and create new Op Chk</description>
+    <errorConditionFormula>not(ISBLANK(Department_ID__c)) &amp;&amp;  PRIORVALUE(Department_ID__c)  &lt;&gt;  Department_ID__c</errorConditionFormula>
+    <errorMessage>Changes to Department not allowed. Set current Op Check to Inactive and create a new Op Chk</errorMessage>
+</ValidationRule>

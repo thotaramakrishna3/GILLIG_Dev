@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products_Covered__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>What are the products covered by the warranty parchment you are attaching.</inlineHelpText>
+    <label>Products Covered</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

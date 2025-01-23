@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_PSM</fullName>
+    <active>true</active>
+    <description>PSM needs to be assigned before Serial or start date is added</description>
+    <errorConditionFormula>AND(ISNULL(Opportunity_Line__r.Account.Project_Sales_Manager__c ) ,OR(ISCHANGED( Serial_Number__c ) ,ISCHANGED( Start_Date__c)) )</errorConditionFormula>
+    <errorMessage>Assign a Project Sales Manager to this Account before setting Serial Number or Start Date</errorMessage>
+</ValidationRule>

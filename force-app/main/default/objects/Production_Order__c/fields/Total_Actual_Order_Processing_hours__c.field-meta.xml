@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Actual_Order_Processing_hours__c</fullName>
+    <externalId>false</externalId>
+    <formula>Order_Processing_Actual_Hours_Pre_SWO_R__c + Order_Processing_Actual_Hours_Post_SWOR__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The Sum of the Order processing hours</inlineHelpText>
+    <label>Total Actual Order Processing hours</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

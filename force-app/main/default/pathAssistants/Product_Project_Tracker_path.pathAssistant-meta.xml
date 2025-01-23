@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Project_Tracker__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Product Project Tracker path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Operating_Committee_Evaluation_Date__c</fieldNames>
+        <fieldNames>Operating_Committee_Evaluation_Comments__c</fieldNames>
+        <fieldNames>Product_Planning_Evaluation__c</fieldNames>
+        <fieldNames>Product_Planning_Evaluation_Comments__c</fieldNames>
+        <fieldNames>Committee_Recommendation__c</fieldNames>
+        <picklistValueName>Approval Phase</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Benefits_Summary__c</fieldNames>
+        <fieldNames>Product_Project_Complexity_Reduction__c</fieldNames>
+        <fieldNames>Product_Cost_Reduction__c</fieldNames>
+        <fieldNames>Market_Opportunity__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;(&lt;/span&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;&lt;u&gt;REQUIRED&lt;/u&gt;&lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;) &lt;/span&gt;&lt;strong&gt;Benefits Summary&lt;/strong&gt;: &lt;em&gt;Should include all potential benefits of the project. Add attachments whenever possible.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Product/Project Complexity Reduction:&lt;/strong&gt; &lt;span style=&quot;font-size: 13px;&quot;&gt;Engineering/Operations the project will offer complexity reduction, highlight within this cell.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product Cost Reduction:&lt;/strong&gt; &lt;em&gt;Engineering/Operations should include estimated cost details, whenever possible&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Market Opportunity:&lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt; &lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Benefits_Evaluation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Product_Manager__c</fieldNames>
+        <fieldNames>Project_Scope__c</fieldNames>
+        <fieldNames>Product_Manager_Comments__c</fieldNames>
+        <fieldNames>ProjectOwner__c</fieldNames>
+        <fieldNames>Product_Manager_Recommendation__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;(REQUIRED) Project Scope:&lt;em&gt; &lt;/em&gt;&lt;/strong&gt;&lt;em&gt;The project scope should address the problem statement. This is the agreed upon scope to be used for the business case evaluation.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Product Manager Comments:  &lt;/strong&gt;&lt;em&gt;Product Manager to provide initial project assessment of feasibility and expected benefits.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Project Owner: &lt;/strong&gt;&lt;em&gt;Owner should the person who will be assigned to complete the project.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;BEFORE ASSIGNING THE &lt;em&gt;PRODUCT MANAGER RECOMMENDATIONS&lt;/em&gt; PLEASE SCROLL BELOW TO THE &amp;quot; &lt;em&gt;BUSINESS CASE PHASE SECTION &amp;quot; &lt;/em&gt;TO ADD ADDITIONAL TEAM MEMBERS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Project Team member 1: &lt;/strong&gt;&lt;em&gt;Should be the subject matter expert (SME), if different than the owner.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Project Team 2-5: &lt;/strong&gt;&lt;em&gt;Any other team members who will be working on the project.&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Business Case Phase</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Final_Project_Decision__c</fieldNames>
+        <picklistValueName>Complete</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Investments_Risks_Summary__c</fieldNames>
+        <fieldNames>Non_Recurring_Costs_Other__c</fieldNames>
+        <fieldNames>Estimated_Total_EnggHours__c</fieldNames>
+        <fieldNames>Manufacturing_Risk_Assesment__c</fieldNames>
+        <fieldNames>Supplier_Assessment__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;(&lt;/span&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;&lt;u&gt;REQUIRED&lt;/u&gt;&lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;) &lt;/span&gt;&lt;strong&gt;Investments/Risks Summary:&lt;/strong&gt; &lt;em&gt;Should include all potential risks or expected investments that are involved with project implement. Add attachments whenever possible.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Non-recurring costs (Other)&lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;: &lt;/span&gt;&lt;em style=&quot;font-size: 13px;&quot;&gt;Purchasing/Manufacturing engineering to provide expected tooling costs, either at supplier or on the production line&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Estimated Total Engineering Hours:&lt;em&gt; &lt;/em&gt;&lt;/strong&gt;&lt;em&gt;Project Owner / SME to provide hour estimate.&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Manufacturing Risk Assessment:&lt;/strong&gt; &lt;em&gt;Manufacturing Engineering to assess project impacts to production line&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Supplier Assessment:&lt;/strong&gt; &lt;em&gt;Purchasing to provide supplier evaluation, (whether new or existing relationship)&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Investments/Risks_Evaluation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Project_Name__c</fieldNames>
+        <fieldNames>Category__c</fieldNames>
+        <fieldNames>Product__c</fieldNames>
+        <fieldNames>Problem_Statement__c</fieldNames>
+        <fieldNames>OwnerId</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;Problem Statement&lt;/strong&gt;: &lt;em&gt;Description of issue that needs to be solved. (e.g. what is customer, vendor, manufacturing asking for? etc)&lt;/em&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Category:&lt;/strong&gt;  &lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;&lt;em&gt;Cost Savings: Project will reduce costs/complexity&lt;/em&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;&lt;em&gt;Product Improvement: Project will improve current product’s performance and/or reliability&lt;/em&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;&lt;em&gt;Market Growth: Project will procure new business, either with new or existing customers&lt;/em&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;&lt;em&gt;Product Stability: Project addresses supply chain or production line resiliency.&lt;/em&gt;&lt;/p&gt;&lt;p class=&quot;ql-indent-1&quot;&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>Pre-Project Collection</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Proposed_Project_Scope__c</fieldNames>
+        <info>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Proposed Project Scope:&lt;/strong&gt; &lt;em&gt;Project sponsor to propose a suggested solution. This will be taken into consideration when determining actual project scope.&lt;/em&gt;&lt;/p&gt;</info>
+        <picklistValueName>Preliminary Investigation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Technical_Risk_Index__c</fieldNames>
+        <fieldNames>Active_Project_List__c</fieldNames>
+        <fieldNames>Expected_Start_Date__c</fieldNames>
+        <info>&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;Technical Risk Index &lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;: Please click on &lt;/span&gt;&lt;a href=&quot;https://gillig--c.vf.force.com/resource/1682097233000/TechnicalRiskIndex&quot; target=&quot;_blank&quot; style=&quot;font-size: 13px;&quot;&gt;link&lt;/a&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt; for details.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;(REQUIRED) Active Project List ID:&lt;/strong&gt; The ID of this project is in this &lt;a href=&quot;https://gillig.sharepoint.com/sites/CPE/SustainingEngineering/Lists/Active%20Project%20List/All%20Active%20Items1.aspx?skipSignal=true&quot; target=&quot;_blank&quot;&gt;Sharepoint&lt;/a&gt; engineering project management tool. Once at the Active Project List site, search the APL ID for further details on the project status. If you do not have access click on request access.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 13px;&quot;&gt;(REQUIRED) Expected Start Date&lt;/strong&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;: The expected date of start for the project&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Project Plan Phase</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Product_Test</recordTypeName>
+</PathAssistant>

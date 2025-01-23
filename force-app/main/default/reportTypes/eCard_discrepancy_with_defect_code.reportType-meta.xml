@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>other</category>
+    <deployed>false</deployed>
+    <description>eCard Discrepancy with Defect Code</description>
+    <label>eCard discrepancy with defect code</label>
+    <sections>
+        <masterLabel>dw_ecard_app$dat_defect_code</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>ecard_discrepancy_log</masterLabel>
+    </sections>
+</ReportType>

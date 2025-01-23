@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_Quoted__c</fullName>
+    <externalId>false</externalId>
+    <label>System Quoted</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CPE250</fullName>
+                <default>false</default>
+                <label>CPE250</label>
+            </value>
+            <value>
+                <fullName>Custom/Mixed</fullName>
+                <default>false</default>
+                <label>Custom/Mixed</label>
+            </value>
+            <value>
+                <fullName>Express Plus 150-160kW</fullName>
+                <default>false</default>
+                <label>Express Plus 150-160kW</label>
+            </value>
+            <value>
+                <fullName>Express Plus 200kW</fullName>
+                <default>false</default>
+                <label>Express Plus 200kW</label>
+            </value>
+            <value>
+                <fullName>Flex 180kW</fullName>
+                <default>false</default>
+                <label>Flex 180kW</label>
+            </value>
+            <value>
+                <fullName>HVC-100</fullName>
+                <default>false</default>
+                <label>HVC-100</label>
+            </value>
+            <value>
+                <fullName>HVC-150</fullName>
+                <default>false</default>
+                <label>HVC-150</label>
+            </value>
+            <value>
+                <fullName>HVC-150PD</fullName>
+                <default>false</default>
+                <label>HVC-150PD</label>
+            </value>
+            <value>
+                <fullName>HVC-300PD</fullName>
+                <default>false</default>
+                <label>HVC-300PD</label>
+            </value>
+            <value>
+                <fullName>HVC-450PD</fullName>
+                <default>false</default>
+                <label>HVC-450PD</label>
+            </value>
+            <value>
+                <fullName>MD 150kW</fullName>
+                <default>false</default>
+                <label>MD 150kW</label>
+            </value>
+            <value>
+                <fullName>MD 300kW</fullName>
+                <default>false</default>
+                <label>MD 300kW</label>
+            </value>
+            <value>
+                <fullName>MD 75kW</fullName>
+                <default>false</default>
+                <label>MD 75kW</label>
+            </value>
+            <value>
+                <fullName>Mobile 25kW</fullName>
+                <default>false</default>
+                <label>Mobile 25kW</label>
+            </value>
+            <value>
+                <fullName>Mobile 50kW</fullName>
+                <default>false</default>
+                <label>Mobile 50kW</label>
+            </value>
+            <value>
+                <fullName>SiCharge UC200</fullName>
+                <default>false</default>
+                <label>SiCharge UC200</label>
+            </value>
+            <value>
+                <fullName>SiCharge UC600</fullName>
+                <default>false</default>
+                <label>SiCharge UC600</label>
+            </value>
+            <value>
+                <fullName>Terra 54HV</fullName>
+                <default>false</default>
+                <label>Terra 54HV</label>
+            </value>
+            <value>
+                <fullName>Ultra Fast 450kW</fullName>
+                <default>false</default>
+                <label>Ultra Fast 450kW</label>
+            </value>
+            <value>
+                <fullName>WAVE 250kW</fullName>
+                <default>false</default>
+                <label>WAVE 250kW</label>
+            </value>
+            <value>
+                <fullName>MaxxHP 150kW</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MaxxHP 150kW</label>
+            </value>
+            <value>
+                <fullName>Power Block</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Power Block</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

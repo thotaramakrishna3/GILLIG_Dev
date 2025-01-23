@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Tracker__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Project Tracker</label>
+    <referenceTo>Project_Tracker__c</referenceTo>
+    <relationshipLabel>BIR-Project Trackers</relationshipLabel>
+    <relationshipName>BIR_Project_Trackers</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

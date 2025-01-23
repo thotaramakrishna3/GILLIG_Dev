@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Training_Classes__c</fullName>
+    <description>The Different Training Classes offered for Customers and Vendors</description>
+    <externalId>false</externalId>
+    <label>Training Classes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Training_Plan__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Operator Instruction</fullName>
+                <default>false</default>
+                <label>Operator Instruction</label>
+            </value>
+            <value>
+                <fullName>Gillig Battery Electric Bus Operator Training</fullName>
+                <default>false</default>
+                <label>Gillig Battery Electric Bus Operator Training</label>
+            </value>
+            <value>
+                <fullName>Maintenance Department General Vehicle Orientation</fullName>
+                <default>false</default>
+                <label>Maintenance Department General Vehicle Orientation</label>
+            </value>
+            <value>
+                <fullName>Gillig Battery Electric Bus Service Personnel Training</fullName>
+                <default>false</default>
+                <label>Gillig Battery Electric Bus Service Personnel Training</label>
+            </value>
+            <value>
+                <fullName>Air Systems and Brake</fullName>
+                <default>false</default>
+                <label>Air Systems and Brake</label>
+            </value>
+            <value>
+                <fullName>Basic Bus Electrical System</fullName>
+                <default>false</default>
+                <label>Basic Bus Electrical System</label>
+            </value>
+            <value>
+                <fullName>Multiplex Electrical System</fullName>
+                <default>false</default>
+                <label>Multiplex Electrical System</label>
+            </value>
+            <value>
+                <fullName>CNG System</fullName>
+                <default>false</default>
+                <label>CNG System</label>
+            </value>
+            <value>
+                <fullName>Hydraulic System</fullName>
+                <default>false</default>
+                <label>Hydraulic System</label>
+            </value>
+            <value>
+                <fullName>EFAN System</fullName>
+                <default>false</default>
+                <label>EFAN System</label>
+            </value>
+            <value>
+                <fullName>Allison Hybrid Familiarization</fullName>
+                <default>false</default>
+                <label>Allison Hybrid Familiarization</label>
+            </value>
+            <value>
+                <fullName>BAE hybrid Familiarization</fullName>
+                <default>false</default>
+                <label>BAE hybrid Familiarization</label>
+            </value>
+            <value>
+                <fullName>Gillig Emissions</fullName>
+                <default>false</default>
+                <label>Gillig Emissions</label>
+            </value>
+            <value>
+                <fullName>Entrance/Exit Door Systems</fullName>
+                <default>false</default>
+                <label>Entrance/Exit Door Systems</label>
+            </value>
+            <value>
+                <fullName>Gillig Battery Electric Bus Technician Training</fullName>
+                <default>false</default>
+                <label>Gillig Battery Electric Bus Technician Training</label>
+            </value>
+            <value>
+                <fullName>Cummins</fullName>
+                <default>false</default>
+                <label>Cummins</label>
+            </value>
+            <value>
+                <fullName>Allison Hybrid</fullName>
+                <default>false</default>
+                <label>Allison Hybrid</label>
+            </value>
+            <value>
+                <fullName>Allison Transmisions</fullName>
+                <default>false</default>
+                <label>Allison Transmisions</label>
+            </value>
+            <value>
+                <fullName>Voith</fullName>
+                <default>false</default>
+                <label>Voith</label>
+            </value>
+            <value>
+                <fullName>Meritor Axle / Wheel End</fullName>
+                <default>false</default>
+                <label>Meritor Axle / Wheel End</label>
+            </value>
+            <value>
+                <fullName>ZF</fullName>
+                <default>false</default>
+                <label>ZF</label>
+            </value>
+            <value>
+                <fullName>Thermo King</fullName>
+                <default>false</default>
+                <label>Thermo King</label>
+            </value>
+            <value>
+                <fullName>Lift-U</fullName>
+                <default>false</default>
+                <label>Lift-U</label>
+            </value>
+            <value>
+                <fullName>Ricon - Wheel Chair</fullName>
+                <default>false</default>
+                <label>Ricon - Wheel Chair</label>
+            </value>
+            <value>
+                <fullName>Vapor</fullName>
+                <default>false</default>
+                <label>Vapor</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Operator Instruction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Gillig Battery Electric Bus Operator Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Maintenance Department General Vehicle Orientation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Gillig Battery Electric Bus Service Personnel Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Air Systems and Brake</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Basic Bus Electrical System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Multiplex Electrical System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Voith</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Meritor Axle / Wheel End</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>ZF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Thermo King</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer</controllingFieldValue>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Lift-U</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>CNG System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Hydraulic System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>EFAN System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Allison Hybrid Familiarization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>BAE hybrid Familiarization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Gillig Emissions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Entrance/Exit Door Systems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Gillig Battery Electric Bus Technician Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Cummins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Allison Hybrid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Allison Transmisions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Ricon - Wheel Chair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Vapor</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

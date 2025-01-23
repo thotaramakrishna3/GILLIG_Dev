@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Overhead</fullName>
+                <default>false</default>
+                <label>Overhead</label>
+            </value>
+            <value>
+                <fullName>Labor Rate</fullName>
+                <default>false</default>
+                <label>Labor Rate</label>
+            </value>
+            <value>
+                <fullName>Other COS Allocation</fullName>
+                <default>false</default>
+                <label>Other COS Allocation</label>
+            </value>
+            <value>
+                <fullName>Outside Processes</fullName>
+                <default>false</default>
+                <label>Outside Processes</label>
+            </value>
+            <value>
+                <fullName>Warranty</fullName>
+                <default>false</default>
+                <label>Warranty</label>
+            </value>
+            <value>
+                <fullName>Options Margin</fullName>
+                <default>false</default>
+                <label>Options Margin</label>
+            </value>
+            <value>
+                <fullName>Labor Hours</fullName>
+                <default>false</default>
+                <label>Labor Hours</label>
+            </value>
+            <value>
+                <fullName>Delivery Rate/Mile</fullName>
+                <default>false</default>
+                <label>Delivery Rate/Mile</label>
+            </value>
+            <value>
+                <fullName>Delivery Incidentals</fullName>
+                <default>false</default>
+                <label>Delivery Incidentals</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

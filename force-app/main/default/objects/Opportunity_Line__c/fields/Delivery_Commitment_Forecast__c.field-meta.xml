@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Commitment_Forecast__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( not(isblank(PO_Date__c )),null,
+if(
+ISPICKVAL( Quoted_Delivery_Picklist__c ,&quot;X Months After Receipt of Order&quot;), Opportunity_Line__r.CloseDate + (365* (Quoted_Delivery_Variable__c /12)),
+
+If(ISPICKVAL( Quoted_Delivery_Picklist__c ,&quot;X Weeks After Receipt of Order&quot;), Opportunity_Line__r.CloseDate + (7* Quoted_Delivery_Variable__c ),
+
+
+If(ISPICKVAL( Quoted_Delivery_Picklist__c ,&quot;X Days After Receipt of Order&quot;), Opportunity_Line__r.CloseDate +  Quoted_Delivery_Variable__c,
+
+If(ISPICKVAL( Quoted_Delivery_Picklist__c ,&quot;365 Days + End of Calendar Quarter&quot;), 
+
+date( YEAR(Opportunity_Line__r.CloseDate)+1 ,
+
+If(or(month(Opportunity_Line__r.CloseDate)=1, month(Opportunity_Line__r.CloseDate)=2, month(Opportunity_Line__r.CloseDate)=3),3, if(or(month(Opportunity_Line__r.CloseDate)=4,month(Opportunity_Line__r.CloseDate)=5,month(Opportunity_Line__r.CloseDate)=6),6,
+if(or(month(Opportunity_Line__r.CloseDate)=7,month(Opportunity_Line__r.CloseDate)=8,month(Opportunity_Line__r.CloseDate)=9),9,12))),
+
+
+if(or(month(Opportunity_Line__r.CloseDate)=4,month(Opportunity_Line__r.CloseDate)=5,month(Opportunity_Line__r.CloseDate)=6,month(Opportunity_Line__r.CloseDate)=7,month(Opportunity_Line__r.CloseDate)=8,month(Opportunity_Line__r.CloseDate)=9),30,31)),
+
+
+Null
+
+)))))</formula>
+    <label>Delivery Commitment (Forecast)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

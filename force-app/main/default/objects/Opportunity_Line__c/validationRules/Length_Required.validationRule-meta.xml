@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Length_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK( Length__c ) , NOT( ISBLANK( Date_Booked__c ) ))</errorConditionFormula>
+    <errorDisplayField>Length__c</errorDisplayField>
+    <errorMessage>Please enter a Length</errorMessage>
+</ValidationRule>

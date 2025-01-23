@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1st_Check_Auditors__c</fullName>
+    <description>The BOM processors involved in the first Auditing check</description>
+    <externalId>false</externalId>
+    <label>1st Check Auditors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Daniel Garcia</fullName>
+                <default>false</default>
+                <label>Daniel Garcia</label>
+            </value>
+            <value>
+                <fullName>Jose Ocampo</fullName>
+                <default>false</default>
+                <label>Jose Ocampo</label>
+            </value>
+            <value>
+                <fullName>Tyler Talavera</fullName>
+                <default>false</default>
+                <label>Tyler Talavera</label>
+            </value>
+            <value>
+                <fullName>Jesus Ruiz</fullName>
+                <default>false</default>
+                <label>Jesus Ruiz</label>
+            </value>
+            <value>
+                <fullName>Curtis Silvia</fullName>
+                <default>false</default>
+                <label>Curtis Silvia</label>
+            </value>
+            <value>
+                <fullName>Aaron DeGarcia</fullName>
+                <default>false</default>
+                <label>Aaron DeGarcia</label>
+            </value>
+            <value>
+                <fullName>Michael Rands</fullName>
+                <default>false</default>
+                <label>Michael Rands</label>
+            </value>
+            <value>
+                <fullName>Keith Lynch</fullName>
+                <default>false</default>
+                <label>Keith Lynch</label>
+            </value>
+            <value>
+                <fullName>Fabian Alarcon</fullName>
+                <default>false</default>
+                <label>Fabian Alarcon</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

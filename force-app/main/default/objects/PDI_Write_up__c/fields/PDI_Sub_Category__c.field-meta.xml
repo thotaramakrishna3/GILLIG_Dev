@@ -1,0 +1,3654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDI_Sub_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PDI_Main_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>2-WAY RADIO MTG BRKT</fullName>
+                <default>false</default>
+                <label>2-WAY RADIO MTG BRKT</label>
+            </value>
+            <value>
+                <fullName>ABS EFFECTS</fullName>
+                <default>false</default>
+                <label>ABS EFFECTS</label>
+            </value>
+            <value>
+                <fullName>ABS SENSOR</fullName>
+                <default>false</default>
+                <label>ABS SENSOR</label>
+            </value>
+            <value>
+                <fullName>ACCUMULATOR</fullName>
+                <default>false</default>
+                <label>ACCUMULATOR</label>
+            </value>
+            <value>
+                <fullName>AD FRAMES EXTERIOR</fullName>
+                <default>false</default>
+                <label>AD FRAMES EXTERIOR</label>
+            </value>
+            <value>
+                <fullName>AD FRAMES INTERIOR</fullName>
+                <default>false</default>
+                <label>AD FRAMES INTERIOR</label>
+            </value>
+            <value>
+                <fullName>AIR APPL. GA (OBS)</fullName>
+                <default>false</default>
+                <label>AIR APPL. GA (OBS)</label>
+            </value>
+            <value>
+                <fullName>AIR BAGS</fullName>
+                <default>false</default>
+                <label>AIR BAGS</label>
+            </value>
+            <value>
+                <fullName>AIR CLEANER</fullName>
+                <default>false</default>
+                <label>AIR CLEANER</label>
+            </value>
+            <value>
+                <fullName>AIR COMPRESSOR</fullName>
+                <default>false</default>
+                <label>AIR COMPRESSOR</label>
+            </value>
+            <value>
+                <fullName>AIR COND. EVAP COOLER</fullName>
+                <default>false</default>
+                <label>AIR COND. EVAP COOLER</label>
+            </value>
+            <value>
+                <fullName>AIR CONDITION EVAP MOTOR</fullName>
+                <default>false</default>
+                <label>AIR CONDITION EVAP MOTOR</label>
+            </value>
+            <value>
+                <fullName>AIR CONDITIONING COND. MOTOR</fullName>
+                <default>false</default>
+                <label>AIR CONDITIONING COND. MOTOR</label>
+            </value>
+            <value>
+                <fullName>AIR CONDITIONING CONDENSER</fullName>
+                <default>false</default>
+                <label>AIR CONDITIONING CONDENSER</label>
+            </value>
+            <value>
+                <fullName>AIR COND PIPING/DRAIN</fullName>
+                <default>false</default>
+                <label>AIR COND PIPING/DRAIN</label>
+            </value>
+            <value>
+                <fullName>AIR DRYER/MTG</fullName>
+                <default>false</default>
+                <label>AIR DRYER/MTG</label>
+            </value>
+            <value>
+                <fullName>AIR HORN (OBS)</fullName>
+                <default>false</default>
+                <label>AIR HORN (OBS)</label>
+            </value>
+            <value>
+                <fullName>AIR INTAKE PIPING</fullName>
+                <default>false</default>
+                <label>AIR INTAKE PIPING</label>
+            </value>
+            <value>
+                <fullName>AIR PRESS. GA</fullName>
+                <default>false</default>
+                <label>AIR PRESS. GA</label>
+            </value>
+            <value>
+                <fullName>AIR STARTER</fullName>
+                <default>false</default>
+                <label>AIR STARTER</label>
+            </value>
+            <value>
+                <fullName>AIR STARTER MTG</fullName>
+                <default>false</default>
+                <label>AIR STARTER MTG</label>
+            </value>
+            <value>
+                <fullName>AIR STARTER TANK CHRGNG LINE</fullName>
+                <default>false</default>
+                <label>AIR STARTER TANK CHRGNG LINE</label>
+            </value>
+            <value>
+                <fullName>AIR TANK DRAIN</fullName>
+                <default>false</default>
+                <label>AIR TANK DRAIN</label>
+            </value>
+            <value>
+                <fullName>AIR TANK MTG</fullName>
+                <default>false</default>
+                <label>AIR TANK MTG</label>
+            </value>
+            <value>
+                <fullName>AISLE LIGHTING, SEAT RISER</fullName>
+                <default>false</default>
+                <label>AISLE LIGHTING, SEAT RISER</label>
+            </value>
+            <value>
+                <fullName>ALTERNATOR</fullName>
+                <default>false</default>
+                <label>ALTERNATOR</label>
+            </value>
+            <value>
+                <fullName>ALTERNATOR/REG DUAL WIRING</fullName>
+                <default>false</default>
+                <label>ALTERNATOR/REG DUAL WIRING</label>
+            </value>
+            <value>
+                <fullName>ALTERNATOR MTG</fullName>
+                <default>false</default>
+                <label>ALTERNATOR MTG</label>
+            </value>
+            <value>
+                <fullName>ALTERNATOR PULLEY</fullName>
+                <default>false</default>
+                <label>ALTERNATOR PULLEY</label>
+            </value>
+            <value>
+                <fullName>AMP METER GA. (OBS)</fullName>
+                <default>false</default>
+                <label>AMP METER GA. (OBS)</label>
+            </value>
+            <value>
+                <fullName>ANTENNA CONDUIT</fullName>
+                <default>false</default>
+                <label>ANTENNA CONDUIT</label>
+            </value>
+            <value>
+                <fullName>ANTENNA OR RADIO MTG.</fullName>
+                <default>false</default>
+                <label>ANTENNA OR RADIO MTG.</label>
+            </value>
+            <value>
+                <fullName>ANTERNATOR BELT</fullName>
+                <default>false</default>
+                <label>ANTERNATOR BELT</label>
+            </value>
+            <value>
+                <fullName>AUX ELECT. CONTROL PANEL</fullName>
+                <default>false</default>
+                <label>AUX ELECT. CONTROL PANEL</label>
+            </value>
+            <value>
+                <fullName>AUXILIARY WATER HEATER</fullName>
+                <default>false</default>
+                <label>AUXILIARY WATER HEATER</label>
+            </value>
+            <value>
+                <fullName>AXLE D/L YOKE</fullName>
+                <default>false</default>
+                <label>AXLE D/L YOKE</label>
+            </value>
+            <value>
+                <fullName>AXLE LUBE FITTINGS</fullName>
+                <default>false</default>
+                <label>AXLE LUBE FITTINGS</label>
+            </value>
+            <value>
+                <fullName>BACK-UP LIGHT</fullName>
+                <default>false</default>
+                <label>BACK-UP LIGHT</label>
+            </value>
+            <value>
+                <fullName>BATT/CABLES</fullName>
+                <default>false</default>
+                <label>BATT/CABLES</label>
+            </value>
+            <value>
+                <fullName>BATTERY BOX</fullName>
+                <default>false</default>
+                <label>BATTERY BOX</label>
+            </value>
+            <value>
+                <fullName>BATT OR DIGITAL RECORDER BOX</fullName>
+                <default>false</default>
+                <label>BATT OR DIGITAL RECORDER BOX</label>
+            </value>
+            <value>
+                <fullName>BEARINGS</fullName>
+                <default>false</default>
+                <label>BEARINGS</label>
+            </value>
+            <value>
+                <fullName>BIKE RACK</fullName>
+                <default>false</default>
+                <label>BIKE RACK</label>
+            </value>
+            <value>
+                <fullName>BLOCK HEATER</fullName>
+                <default>false</default>
+                <label>BLOCK HEATER</label>
+            </value>
+            <value>
+                <fullName>BOOM MIC / HANDHELD MIC</fullName>
+                <default>false</default>
+                <label>BOOM MIC / HANDHELD MIC</label>
+            </value>
+            <value>
+                <fullName>BRAKE FOUNDATION / LINING</fullName>
+                <default>false</default>
+                <label>BRAKE FOUNDATION / LINING</label>
+            </value>
+            <value>
+                <fullName>BRAKE INTERLOCK</fullName>
+                <default>false</default>
+                <label>BRAKE INTERLOCK</label>
+            </value>
+            <value>
+                <fullName>BRAKE LIGHT SWITCH</fullName>
+                <default>false</default>
+                <label>BRAKE LIGHT SWITCH</label>
+            </value>
+            <value>
+                <fullName>BRAKE VALVE</fullName>
+                <default>false</default>
+                <label>BRAKE VALVE</label>
+            </value>
+            <value>
+                <fullName>BUMPERS</fullName>
+                <default>false</default>
+                <label>BUMPERS</label>
+            </value>
+            <value>
+                <fullName>CEILING PANELS</fullName>
+                <default>false</default>
+                <label>CEILING PANELS</label>
+            </value>
+            <value>
+                <fullName>CENTER MTD / ADTL. STOP LIGHTS</fullName>
+                <default>false</default>
+                <label>CENTER MTD / ADTL. STOP LIGHTS</label>
+            </value>
+            <value>
+                <fullName>CENTER REAR SPLASH SHIELDS</fullName>
+                <default>false</default>
+                <label>CENTER REAR SPLASH SHIELDS</label>
+            </value>
+            <value>
+                <fullName>CHARGE AIR COOLING/PIPING</fullName>
+                <default>false</default>
+                <label>CHARGE AIR COOLING/PIPING</label>
+            </value>
+            <value>
+                <fullName>CHARGING SYSTEM WARNING</fullName>
+                <default>false</default>
+                <label>CHARGING SYSTEM WARNING</label>
+            </value>
+            <value>
+                <fullName>CHASSIS AIR PIPING</fullName>
+                <default>false</default>
+                <label>CHASSIS AIR PIPING</label>
+            </value>
+            <value>
+                <fullName>CHASSIS COMPONENTS</fullName>
+                <default>false</default>
+                <label>CHASSIS COMPONENTS</label>
+            </value>
+            <value>
+                <fullName>CHASSIS FUEL PIPING</fullName>
+                <default>false</default>
+                <label>CHASSIS FUEL PIPING</label>
+            </value>
+            <value>
+                <fullName>CHASSIS HARNESS</fullName>
+                <default>false</default>
+                <label>CHASSIS HARNESS</label>
+            </value>
+            <value>
+                <fullName>CONSTANT TENSION HOSE CLAMP</fullName>
+                <default>false</default>
+                <label>CONSTANT TENSION HOSE CLAMP</label>
+            </value>
+            <value>
+                <fullName>COOLANT SENSOR</fullName>
+                <default>false</default>
+                <label>COOLANT SENSOR</label>
+            </value>
+            <value>
+                <fullName>COOLING SYSTEM</fullName>
+                <default>false</default>
+                <label>COOLING SYSTEM</label>
+            </value>
+            <value>
+                <fullName>CRIME ALARM</fullName>
+                <default>false</default>
+                <label>CRIME ALARM</label>
+            </value>
+            <value>
+                <fullName>CRUISE CONTROL (OBS)</fullName>
+                <default>false</default>
+                <label>CRUISE CONTROL (OBS)</label>
+            </value>
+            <value>
+                <fullName>DASH/CONSOLE/HARNESS</fullName>
+                <default>false</default>
+                <label>DASH/CONSOLE/HARNESS</label>
+            </value>
+            <value>
+                <fullName>DECALS</fullName>
+                <default>false</default>
+                <label>DECALS</label>
+            </value>
+            <value>
+                <fullName>DECELERATION LIGHTS</fullName>
+                <default>false</default>
+                <label>DECELERATION LIGHTS</label>
+            </value>
+            <value>
+                <fullName>DEFROSTER DUCTS</fullName>
+                <default>false</default>
+                <label>DEFROSTER DUCTS</label>
+            </value>
+            <value>
+                <fullName>DEFROSTER FAN&apos;S</fullName>
+                <default>false</default>
+                <label>DEFROSTER FAN&apos;S</label>
+            </value>
+            <value>
+                <fullName>DESTINATION GLAZING</fullName>
+                <default>false</default>
+                <label>DESTINATION GLAZING</label>
+            </value>
+            <value>
+                <fullName>DESTINATION SIGN</fullName>
+                <default>false</default>
+                <label>DESTINATION SIGN</label>
+            </value>
+            <value>
+                <fullName>DESTINATION SIGN BAY DOOR</fullName>
+                <default>false</default>
+                <label>DESTINATION SIGN BAY DOOR</label>
+            </value>
+            <value>
+                <fullName>DESTINATION SIGN CLOSEOUT</fullName>
+                <default>false</default>
+                <label>DESTINATION SIGN CLOSEOUT</label>
+            </value>
+            <value>
+                <fullName>DINEX</fullName>
+                <default>false</default>
+                <label>DINEX</label>
+            </value>
+            <value>
+                <fullName>DIPSTICK</fullName>
+                <default>false</default>
+                <label>DIPSTICK</label>
+            </value>
+            <value>
+                <fullName>DOOR ALARMS</fullName>
+                <default>false</default>
+                <label>DOOR ALARMS</label>
+            </value>
+            <value>
+                <fullName>DOOR CONTROL, FRONT SB</fullName>
+                <default>false</default>
+                <label>DOOR CONTROL, FRONT SB</label>
+            </value>
+            <value>
+                <fullName>DOOR MOTOR</fullName>
+                <default>false</default>
+                <label>DOOR MOTOR</label>
+            </value>
+            <value>
+                <fullName>DOOR SEALS</fullName>
+                <default>false</default>
+                <label>DOOR SEALS</label>
+            </value>
+            <value>
+                <fullName>DRAG LINK</fullName>
+                <default>false</default>
+                <label>DRAG LINK</label>
+            </value>
+            <value>
+                <fullName>DRIVELINE</fullName>
+                <default>false</default>
+                <label>DRIVELINE</label>
+            </value>
+            <value>
+                <fullName>DRIVER&apos;S AREA BOOSTER FAN</fullName>
+                <default>false</default>
+                <label>DRIVER&apos;S AREA BOOSTER FAN</label>
+            </value>
+            <value>
+                <fullName>DRIVER&apos;S CONSOLE</fullName>
+                <default>false</default>
+                <label>DRIVER&apos;S CONSOLE</label>
+            </value>
+            <value>
+                <fullName>DRIVER&apos;S CURTAIN</fullName>
+                <default>false</default>
+                <label>DRIVER&apos;S CURTAIN</label>
+            </value>
+            <value>
+                <fullName>DRIVER&apos;S FANS</fullName>
+                <default>false</default>
+                <label>DRIVER&apos;S FANS</label>
+            </value>
+            <value>
+                <fullName>DRIVER&apos;S HEATER PIPING</fullName>
+                <default>false</default>
+                <label>DRIVER&apos;S HEATER PIPING</label>
+            </value>
+            <value>
+                <fullName>DRIVER&apos;S WINDOW</fullName>
+                <default>false</default>
+                <label>DRIVER&apos;S WINDOW</label>
+            </value>
+            <value>
+                <fullName>DRIVER HEATER CORE</fullName>
+                <default>false</default>
+                <label>DRIVER HEATER CORE</label>
+            </value>
+            <value>
+                <fullName>DRIVER HEATER MOTOR</fullName>
+                <default>false</default>
+                <label>DRIVER HEATER MOTOR</label>
+            </value>
+            <value>
+                <fullName>DRIVER PLATFORM TB</fullName>
+                <default>false</default>
+                <label>DRIVER PLATFORM TB</label>
+            </value>
+            <value>
+                <fullName>DRIVERS BARRIER</fullName>
+                <default>false</default>
+                <label>DRIVERS BARRIER</label>
+            </value>
+            <value>
+                <fullName>DRIVER SEAT</fullName>
+                <default>false</default>
+                <label>DRIVER SEAT</label>
+            </value>
+            <value>
+                <fullName>DRIVERS HEATERS/CONTROLS</fullName>
+                <default>false</default>
+                <label>DRIVERS HEATERS/CONTROLS</label>
+            </value>
+            <value>
+                <fullName>DRUMS</fullName>
+                <default>false</default>
+                <label>DRUMS</label>
+            </value>
+            <value>
+                <fullName>ELECT CONT PANEL OR BOX</fullName>
+                <default>false</default>
+                <label>ELECT CONT PANEL OR BOX</label>
+            </value>
+            <value>
+                <fullName>ELECT ENG &amp; TRANS CONTROL PANEL</fullName>
+                <default>false</default>
+                <label>ELECT ENG &amp; TRANS CONTROL PANEL</label>
+            </value>
+            <value>
+                <fullName>ELECT POWER SUPPLY/CABLES</fullName>
+                <default>false</default>
+                <label>ELECT POWER SUPPLY/CABLES</label>
+            </value>
+            <value>
+                <fullName>ELECTRICAL TOWING PLUG</fullName>
+                <default>false</default>
+                <label>ELECTRICAL TOWING PLUG</label>
+            </value>
+            <value>
+                <fullName>ELECTRIC HORNS, DUAL</fullName>
+                <default>false</default>
+                <label>ELECTRIC HORNS, DUAL</label>
+            </value>
+            <value>
+                <fullName>ELECTRONIC ENGINE CONTROLS</fullName>
+                <default>false</default>
+                <label>ELECTRONIC ENGINE CONTROLS</label>
+            </value>
+            <value>
+                <fullName>EMERGENCY DOOR RELEASE</fullName>
+                <default>false</default>
+                <label>EMERGENCY DOOR RELEASE</label>
+            </value>
+            <value>
+                <fullName>ENG/STARTER/INTERMED HARN.</fullName>
+                <default>false</default>
+                <label>ENG/STARTER/INTERMED HARN.</label>
+            </value>
+            <value>
+                <fullName>ENG/TRANS PAN PROTECTOR</fullName>
+                <default>false</default>
+                <label>ENG/TRANS PAN PROTECTOR</label>
+            </value>
+            <value>
+                <fullName>ENG COOLANT TEMP GA</fullName>
+                <default>false</default>
+                <label>ENG COOLANT TEMP GA</label>
+            </value>
+            <value>
+                <fullName>ENG HOUR METER GA. (OBS)</fullName>
+                <default>false</default>
+                <label>ENG HOUR METER GA. (OBS)</label>
+            </value>
+            <value>
+                <fullName>ENGINE</fullName>
+                <default>false</default>
+                <label>ENGINE</label>
+            </value>
+            <value>
+                <fullName>ENGINE ANALYSIS (OBS)</fullName>
+                <default>false</default>
+                <label>ENGINE ANALYSIS (OBS)</label>
+            </value>
+            <value>
+                <fullName>ENGINE BELT</fullName>
+                <default>false</default>
+                <label>ENGINE BELT</label>
+            </value>
+            <value>
+                <fullName>ENGINE BELT GUARD</fullName>
+                <default>false</default>
+                <label>ENGINE BELT GUARD</label>
+            </value>
+            <value>
+                <fullName>ENGINE FUEL PIPING</fullName>
+                <default>false</default>
+                <label>ENGINE FUEL PIPING</label>
+            </value>
+            <value>
+                <fullName>ENGINE FUEL PRIMER PUMP</fullName>
+                <default>false</default>
+                <label>ENGINE FUEL PRIMER PUMP</label>
+            </value>
+            <value>
+                <fullName>ENGINE MOUNTING</fullName>
+                <default>false</default>
+                <label>ENGINE MOUNTING</label>
+            </value>
+            <value>
+                <fullName>ENGINE OIL COOLERS</fullName>
+                <default>false</default>
+                <label>ENGINE OIL COOLERS</label>
+            </value>
+            <value>
+                <fullName>ENGINE OIL FILL</fullName>
+                <default>false</default>
+                <label>ENGINE OIL FILL</label>
+            </value>
+            <value>
+                <fullName>ENGINE PROTECTION (OBS)</fullName>
+                <default>false</default>
+                <label>ENGINE PROTECTION (OBS)</label>
+            </value>
+            <value>
+                <fullName>ENGINE PULLEY</fullName>
+                <default>false</default>
+                <label>ENGINE PULLEY</label>
+            </value>
+            <value>
+                <fullName>ENG OIL PRESS GA</fullName>
+                <default>false</default>
+                <label>ENG OIL PRESS GA</label>
+            </value>
+            <value>
+                <fullName>ENTRANCE DOOR WIRING</fullName>
+                <default>false</default>
+                <label>ENTRANCE DOOR WIRING</label>
+            </value>
+            <value>
+                <fullName>EXHAUST BRAKES (OBS)</fullName>
+                <default>false</default>
+                <label>EXHAUST BRAKES (OBS)</label>
+            </value>
+            <value>
+                <fullName>EXHAUST PYROMETER GA (OBS)</fullName>
+                <default>false</default>
+                <label>EXHAUST PYROMETER GA (OBS)</label>
+            </value>
+            <value>
+                <fullName>EXHAUST SYS. INSULATION</fullName>
+                <default>false</default>
+                <label>EXHAUST SYS. INSULATION</label>
+            </value>
+            <value>
+                <fullName>EXHAUST SYSTEM CLAMPS</fullName>
+                <default>false</default>
+                <label>EXHAUST SYSTEM CLAMPS</label>
+            </value>
+            <value>
+                <fullName>EXHAUST SYSTEM REAR ENGINE</fullName>
+                <default>false</default>
+                <label>EXHAUST SYSTEM REAR ENGINE</label>
+            </value>
+            <value>
+                <fullName>EXIT DOORS</fullName>
+                <default>false</default>
+                <label>EXIT DOORS</label>
+            </value>
+            <value>
+                <fullName>EXIT DOOR WIRING</fullName>
+                <default>false</default>
+                <label>EXIT DOOR WIRING</label>
+            </value>
+            <value>
+                <fullName>EXTERIOR</fullName>
+                <default>false</default>
+                <label>EXTERIOR</label>
+            </value>
+            <value>
+                <fullName>FAIRINGS ALLISON</fullName>
+                <default>false</default>
+                <label>FAIRINGS ALLISON</label>
+            </value>
+            <value>
+                <fullName>FAIRINGS BAE</fullName>
+                <default>false</default>
+                <label>FAIRINGS BAE</label>
+            </value>
+            <value>
+                <fullName>FAIRINGS CNG</fullName>
+                <default>false</default>
+                <label>FAIRINGS CNG</label>
+            </value>
+            <value>
+                <fullName>FAN CONTROL</fullName>
+                <default>false</default>
+                <label>FAN CONTROL</label>
+            </value>
+            <value>
+                <fullName>FAREBOX</fullName>
+                <default>false</default>
+                <label>FAREBOX</label>
+            </value>
+            <value>
+                <fullName>FAREBOX LIGHT SWITCH</fullName>
+                <default>false</default>
+                <label>FAREBOX LIGHT SWITCH</label>
+            </value>
+            <value>
+                <fullName>FENDER FLARES</fullName>
+                <default>false</default>
+                <label>FENDER FLARES</label>
+            </value>
+            <value>
+                <fullName>FILTER ACCESS DOOR</fullName>
+                <default>false</default>
+                <label>FILTER ACCESS DOOR</label>
+            </value>
+            <value>
+                <fullName>FIRE</fullName>
+                <default>false</default>
+                <label>FIRE</label>
+            </value>
+            <value>
+                <fullName>FIRE ALARM &amp; OR SUPPRESSION</fullName>
+                <default>false</default>
+                <label>FIRE ALARM &amp; OR SUPPRESSION</label>
+            </value>
+            <value>
+                <fullName>FIRE EXTINGUISHER</fullName>
+                <default>false</default>
+                <label>FIRE EXTINGUISHER</label>
+            </value>
+            <value>
+                <fullName>FIRE SUPPRESSION COMPONENTS</fullName>
+                <default>false</default>
+                <label>FIRE SUPPRESSION COMPONENTS</label>
+            </value>
+            <value>
+                <fullName>FIRST AID COMPT (OBS)</fullName>
+                <default>false</default>
+                <label>FIRST AID COMPT (OBS)</label>
+            </value>
+            <value>
+                <fullName>FIRST AID KIT</fullName>
+                <default>false</default>
+                <label>FIRST AID KIT</label>
+            </value>
+            <value>
+                <fullName>FLASHING LIGHTS</fullName>
+                <default>false</default>
+                <label>FLASHING LIGHTS</label>
+            </value>
+            <value>
+                <fullName>FLOOR ACCESS PANELS</fullName>
+                <default>false</default>
+                <label>FLOOR ACCESS PANELS</label>
+            </value>
+            <value>
+                <fullName>FLOORING COMPOSITE</fullName>
+                <default>false</default>
+                <label>FLOORING COMPOSITE</label>
+            </value>
+            <value>
+                <fullName>FLOORING PLYWOOD</fullName>
+                <default>false</default>
+                <label>FLOORING PLYWOOD</label>
+            </value>
+            <value>
+                <fullName>FLOORING REINFORCEMENT</fullName>
+                <default>false</default>
+                <label>FLOORING REINFORCEMENT</label>
+            </value>
+            <value>
+                <fullName>FLOORING STRUCTURE</fullName>
+                <default>false</default>
+                <label>FLOORING STRUCTURE</label>
+            </value>
+            <value>
+                <fullName>FLUORESCENT TUBE COVERS</fullName>
+                <default>false</default>
+                <label>FLUORESCENT TUBE COVERS</label>
+            </value>
+            <value>
+                <fullName>FOG OR DRIVING LIGHT</fullName>
+                <default>false</default>
+                <label>FOG OR DRIVING LIGHT</label>
+            </value>
+            <value>
+                <fullName>FRAME RAILS</fullName>
+                <default>false</default>
+                <label>FRAME RAILS</label>
+            </value>
+            <value>
+                <fullName>FREON COMPRESSOR</fullName>
+                <default>false</default>
+                <label>FREON COMPRESSOR</label>
+            </value>
+            <value>
+                <fullName>FREON COMPRESSOR BELT</fullName>
+                <default>false</default>
+                <label>FREON COMPRESSOR BELT</label>
+            </value>
+            <value>
+                <fullName>FREON COMPRESSOR IDLER PULLEY</fullName>
+                <default>false</default>
+                <label>FREON COMPRESSOR IDLER PULLEY</label>
+            </value>
+            <value>
+                <fullName>FREON COMPRESSOR PULLEY</fullName>
+                <default>false</default>
+                <label>FREON COMPRESSOR PULLEY</label>
+            </value>
+            <value>
+                <fullName>FRONT ACCESS DOORS</fullName>
+                <default>false</default>
+                <label>FRONT ACCESS DOORS</label>
+            </value>
+            <value>
+                <fullName>FRONT AXLE</fullName>
+                <default>false</default>
+                <label>FRONT AXLE</label>
+            </value>
+            <value>
+                <fullName>FRONT AXLE OIL SEALS</fullName>
+                <default>false</default>
+                <label>FRONT AXLE OIL SEALS</label>
+            </value>
+            <value>
+                <fullName>FRONT BODY FRAMING</fullName>
+                <default>false</default>
+                <label>FRONT BODY FRAMING</label>
+            </value>
+            <value>
+                <fullName>FRONT BRAKE CHAMBER HOSES</fullName>
+                <default>false</default>
+                <label>FRONT BRAKE CHAMBER HOSES</label>
+            </value>
+            <value>
+                <fullName>FRONT BRAKE CHAMBERS</fullName>
+                <default>false</default>
+                <label>FRONT BRAKE CHAMBERS</label>
+            </value>
+            <value>
+                <fullName>FRONT BUMPER/MTG</fullName>
+                <default>false</default>
+                <label>FRONT BUMPER/MTG</label>
+            </value>
+            <value>
+                <fullName>FRONT CAP</fullName>
+                <default>false</default>
+                <label>FRONT CAP</label>
+            </value>
+            <value>
+                <fullName>FRONT DESTINATION GLAZING</fullName>
+                <default>false</default>
+                <label>FRONT DESTINATION GLAZING</label>
+            </value>
+            <value>
+                <fullName>FRONT DOOR</fullName>
+                <default>false</default>
+                <label>FRONT DOOR</label>
+            </value>
+            <value>
+                <fullName>FRONT DOOR MODESTY PANEL</fullName>
+                <default>false</default>
+                <label>FRONT DOOR MODESTY PANEL</label>
+            </value>
+            <value>
+                <fullName>FRONT FOLDING STEP (OBS)</fullName>
+                <default>false</default>
+                <label>FRONT FOLDING STEP (OBS)</label>
+            </value>
+            <value>
+                <fullName>FRONT HALDEX AUTO SLACKS</fullName>
+                <default>false</default>
+                <label>FRONT HALDEX AUTO SLACKS</label>
+            </value>
+            <value>
+                <fullName>FRONT MANUAL SLACKS (OBS)</fullName>
+                <default>false</default>
+                <label>FRONT MANUAL SLACKS (OBS)</label>
+            </value>
+            <value>
+                <fullName>FRONT POWER STEERING HOSES</fullName>
+                <default>false</default>
+                <label>FRONT POWER STEERING HOSES</label>
+            </value>
+            <value>
+                <fullName>FRONT RUN NO. SIGN</fullName>
+                <default>false</default>
+                <label>FRONT RUN NO. SIGN</label>
+            </value>
+            <value>
+                <fullName>FRONT SHOCKS</fullName>
+                <default>false</default>
+                <label>FRONT SHOCKS</label>
+            </value>
+            <value>
+                <fullName>FRONT STEPWELL</fullName>
+                <default>false</default>
+                <label>FRONT STEPWELL</label>
+            </value>
+            <value>
+                <fullName>FRONT STEPWELL HEATER</fullName>
+                <default>false</default>
+                <label>FRONT STEPWELL HEATER</label>
+            </value>
+            <value>
+                <fullName>FRONT STEPWELL TRIM</fullName>
+                <default>false</default>
+                <label>FRONT STEPWELL TRIM</label>
+            </value>
+            <value>
+                <fullName>FRONT SUSPENSION</fullName>
+                <default>false</default>
+                <label>FRONT SUSPENSION</label>
+            </value>
+            <value>
+                <fullName>FRONT SUSP LEVELING VALVE</fullName>
+                <default>false</default>
+                <label>FRONT SUSP LEVELING VALVE</label>
+            </value>
+            <value>
+                <fullName>FRONT TURN SIGNALS &amp; WIRING</fullName>
+                <default>false</default>
+                <label>FRONT TURN SIGNALS &amp; WIRING</label>
+            </value>
+            <value>
+                <fullName>FRONT WHEELWELL</fullName>
+                <default>false</default>
+                <label>FRONT WHEELWELL</label>
+            </value>
+            <value>
+                <fullName>FUEL FILTER</fullName>
+                <default>false</default>
+                <label>FUEL FILTER</label>
+            </value>
+            <value>
+                <fullName>FUEL LEVEL GA</fullName>
+                <default>false</default>
+                <label>FUEL LEVEL GA</label>
+            </value>
+            <value>
+                <fullName>FUEL TANK</fullName>
+                <default>false</default>
+                <label>FUEL TANK</label>
+            </value>
+            <value>
+                <fullName>FUEL TANK PIPING</fullName>
+                <default>false</default>
+                <label>FUEL TANK PIPING</label>
+            </value>
+            <value>
+                <fullName>FULL SLIDING PASS. WINDOW</fullName>
+                <default>false</default>
+                <label>FULL SLIDING PASS. WINDOW</label>
+            </value>
+            <value>
+                <fullName>FWD/RR DOOR MODESTY PANEL</fullName>
+                <default>false</default>
+                <label>FWD/RR DOOR MODESTY PANEL</label>
+            </value>
+            <value>
+                <fullName>GAS SHOCKS</fullName>
+                <default>false</default>
+                <label>GAS SHOCKS</label>
+            </value>
+            <value>
+                <fullName>GOVERNOR</fullName>
+                <default>false</default>
+                <label>GOVERNOR</label>
+            </value>
+            <value>
+                <fullName>GPS</fullName>
+                <default>false</default>
+                <label>GPS</label>
+            </value>
+            <value>
+                <fullName>GRABRAILS/STANCHIONS</fullName>
+                <default>false</default>
+                <label>GRABRAILS/STANCHIONS</label>
+            </value>
+            <value>
+                <fullName>HEADLIGHT MONITOR (OBS)</fullName>
+                <default>false</default>
+                <label>HEADLIGHT MONITOR (OBS)</label>
+            </value>
+            <value>
+                <fullName>HEADLIGHTS / HARNESS</fullName>
+                <default>false</default>
+                <label>HEADLIGHTS / HARNESS</label>
+            </value>
+            <value>
+                <fullName>HEATER/AIR COND MTG/SEALING</fullName>
+                <default>false</default>
+                <label>HEATER/AIR COND MTG/SEALING</label>
+            </value>
+            <value>
+                <fullName>HEATER &amp; A/C PLATFORM/MTG</fullName>
+                <default>false</default>
+                <label>HEATER &amp; A/C PLATFORM/MTG</label>
+            </value>
+            <value>
+                <fullName>HEATER BOOSTER PUMP</fullName>
+                <default>false</default>
+                <label>HEATER BOOSTER PUMP</label>
+            </value>
+            <value>
+                <fullName>HEATER OR A/C CONTROLS</fullName>
+                <default>false</default>
+                <label>HEATER OR A/C CONTROLS</label>
+            </value>
+            <value>
+                <fullName>HEATER VALVE</fullName>
+                <default>false</default>
+                <label>HEATER VALVE</label>
+            </value>
+            <value>
+                <fullName>HILL HOLDER</fullName>
+                <default>false</default>
+                <label>HILL HOLDER</label>
+            </value>
+            <value>
+                <fullName>HOSES</fullName>
+                <default>false</default>
+                <label>HOSES</label>
+            </value>
+            <value>
+                <fullName>HUB COVERS / 10 STUD</fullName>
+                <default>false</default>
+                <label>HUB COVERS / 10 STUD</label>
+            </value>
+            <value>
+                <fullName>HUB ODOMETER</fullName>
+                <default>false</default>
+                <label>HUB ODOMETER</label>
+            </value>
+            <value>
+                <fullName>HVAC CONTROLS</fullName>
+                <default>false</default>
+                <label>HVAC CONTROLS</label>
+            </value>
+            <value>
+                <fullName>HYD FAN MOTOR</fullName>
+                <default>false</default>
+                <label>HYD FAN MOTOR</label>
+            </value>
+            <value>
+                <fullName>HYD FAN MOTOR PIPING</fullName>
+                <default>false</default>
+                <label>HYD FAN MOTOR PIPING</label>
+            </value>
+            <value>
+                <fullName>HYD OIL COOLER</fullName>
+                <default>false</default>
+                <label>HYD OIL COOLER</label>
+            </value>
+            <value>
+                <fullName>HYD PUMP PIPING (ALSO IN 05)</fullName>
+                <default>false</default>
+                <label>HYD PUMP PIPING (ALSO IN 05)</label>
+            </value>
+            <value>
+                <fullName>HYDRUALIC PUMP (ALSO IN 05)</fullName>
+                <default>false</default>
+                <label>HYDRUALIC PUMP (ALSO IN 05)</label>
+            </value>
+            <value>
+                <fullName>IGNITION SW CONTROL</fullName>
+                <default>false</default>
+                <label>IGNITION SW CONTROL</label>
+            </value>
+            <value>
+                <fullName>INSIDE SPEAKERS</fullName>
+                <default>false</default>
+                <label>INSIDE SPEAKERS</label>
+            </value>
+            <value>
+                <fullName>INSTA CHAINS</fullName>
+                <default>false</default>
+                <label>INSTA CHAINS</label>
+            </value>
+            <value>
+                <fullName>INTERIOR</fullName>
+                <default>false</default>
+                <label>INTERIOR</label>
+            </value>
+            <value>
+                <fullName>INTERIOR DUCTING &amp; LIGHT PANELS</fullName>
+                <default>false</default>
+                <label>INTERIOR DUCTING &amp; LIGHT PANELS</label>
+            </value>
+            <value>
+                <fullName>INTERMITTENT W/S WIPER SWITCH</fullName>
+                <default>false</default>
+                <label>INTERMITTENT W/S WIPER SWITCH</label>
+            </value>
+            <value>
+                <fullName>JUMP START CONNECTION</fullName>
+                <default>false</default>
+                <label>JUMP START CONNECTION</label>
+            </value>
+            <value>
+                <fullName>KIM HOTSTART</fullName>
+                <default>false</default>
+                <label>KIM HOTSTART</label>
+            </value>
+            <value>
+                <fullName>KNEELING ELECTRICAL</fullName>
+                <default>false</default>
+                <label>KNEELING ELECTRICAL</label>
+            </value>
+            <value>
+                <fullName>KNEELING OR DUMP VALVE SYST.</fullName>
+                <default>false</default>
+                <label>KNEELING OR DUMP VALVE SYST.</label>
+            </value>
+            <value>
+                <fullName>LICENSE PLATE FRAME/HOLDER</fullName>
+                <default>false</default>
+                <label>LICENSE PLATE FRAME/HOLDER</label>
+            </value>
+            <value>
+                <fullName>LICENSE PLATE LIGHT</fullName>
+                <default>false</default>
+                <label>LICENSE PLATE LIGHT</label>
+            </value>
+            <value>
+                <fullName>LIFT CONT. BOX HTR DUCT (OBS)</fullName>
+                <default>false</default>
+                <label>LIFT CONT. BOX HTR DUCT (OBS)</label>
+            </value>
+            <value>
+                <fullName>LIGHTING EXTERIOR</fullName>
+                <default>false</default>
+                <label>LIGHTING EXTERIOR</label>
+            </value>
+            <value>
+                <fullName>LIGHTING INTERIOR</fullName>
+                <default>false</default>
+                <label>LIGHTING INTERIOR</label>
+            </value>
+            <value>
+                <fullName>LOAD LEVELING BRACKETS (OBS)</fullName>
+                <default>false</default>
+                <label>LOAD LEVELING BRACKETS (OBS)</label>
+            </value>
+            <value>
+                <fullName>LOWERED A/C DUCTING</fullName>
+                <default>false</default>
+                <label>LOWERED A/C DUCTING</label>
+            </value>
+            <value>
+                <fullName>LOW FLUID PROBE</fullName>
+                <default>false</default>
+                <label>LOW FLUID PROBE</label>
+            </value>
+            <value>
+                <fullName>LUGGAGE RACK</fullName>
+                <default>false</default>
+                <label>LUGGAGE RACK</label>
+            </value>
+            <value>
+                <fullName>MAP LIGHTS</fullName>
+                <default>false</default>
+                <label>MAP LIGHTS</label>
+            </value>
+            <value>
+                <fullName>MARKER LIGHTS</fullName>
+                <default>false</default>
+                <label>MARKER LIGHTS</label>
+            </value>
+            <value>
+                <fullName>MECH. GAUGES</fullName>
+                <default>false</default>
+                <label>MECH. GAUGES</label>
+            </value>
+            <value>
+                <fullName>MFD</fullName>
+                <default>false</default>
+                <label>MFD</label>
+            </value>
+            <value>
+                <fullName>MIRRORS EXTERIOR</fullName>
+                <default>false</default>
+                <label>MIRRORS EXTERIOR</label>
+            </value>
+            <value>
+                <fullName>MIRRORS INTERIOR</fullName>
+                <default>false</default>
+                <label>MIRRORS INTERIOR</label>
+            </value>
+            <value>
+                <fullName>MISC</fullName>
+                <default>false</default>
+                <label>MISC</label>
+            </value>
+            <value>
+                <fullName>MISC ACCESS DOORS</fullName>
+                <default>false</default>
+                <label>MISC ACCESS DOORS</label>
+            </value>
+            <value>
+                <fullName>MISC ENGINE PARTS</fullName>
+                <default>false</default>
+                <label>MISC ENGINE PARTS</label>
+            </value>
+            <value>
+                <fullName>MUD FLAPS</fullName>
+                <default>false</default>
+                <label>MUD FLAPS</label>
+            </value>
+            <value>
+                <fullName>MUFFLER/MTG</fullName>
+                <default>false</default>
+                <label>MUFFLER/MTG</label>
+            </value>
+            <value>
+                <fullName>OIL FILL &amp; DRAIN PLUGS</fullName>
+                <default>false</default>
+                <label>OIL FILL &amp; DRAIN PLUGS</label>
+            </value>
+            <value>
+                <fullName>OIL FILTER</fullName>
+                <default>false</default>
+                <label>OIL FILTER</label>
+            </value>
+            <value>
+                <fullName>OUTSIDE AIR DUCT</fullName>
+                <default>false</default>
+                <label>OUTSIDE AIR DUCT</label>
+            </value>
+            <value>
+                <fullName>OUTSIDE SPEAKERS</fullName>
+                <default>false</default>
+                <label>OUTSIDE SPEAKERS</label>
+            </value>
+            <value>
+                <fullName>P.A. SYSTEM</fullName>
+                <default>false</default>
+                <label>P.A. SYSTEM</label>
+            </value>
+            <value>
+                <fullName>PANEL #1</fullName>
+                <default>false</default>
+                <label>PANEL #1</label>
+            </value>
+            <value>
+                <fullName>PANEL #2</fullName>
+                <default>false</default>
+                <label>PANEL #2</label>
+            </value>
+            <value>
+                <fullName>PANEL #3</fullName>
+                <default>false</default>
+                <label>PANEL #3</label>
+            </value>
+            <value>
+                <fullName>PANEL #4</fullName>
+                <default>false</default>
+                <label>PANEL #4</label>
+            </value>
+            <value>
+                <fullName>PANEL #5</fullName>
+                <default>false</default>
+                <label>PANEL #5</label>
+            </value>
+            <value>
+                <fullName>PANEL #9, INDICATOR LAMP BAR</fullName>
+                <default>false</default>
+                <label>PANEL #9, INDICATOR LAMP BAR</label>
+            </value>
+            <value>
+                <fullName>PARKING BRAKE, AIR</fullName>
+                <default>false</default>
+                <label>PARKING BRAKE, AIR</label>
+            </value>
+            <value>
+                <fullName>PARTICULATE TRAP</fullName>
+                <default>false</default>
+                <label>PARTICULATE TRAP</label>
+            </value>
+            <value>
+                <fullName>PASS AREA GAS DET. SYSTEM (OBS)</fullName>
+                <default>false</default>
+                <label>PASS AREA GAS DET. SYSTEM (OBS)</label>
+            </value>
+            <value>
+                <fullName>PASSENGER CHIME</fullName>
+                <default>false</default>
+                <label>PASSENGER CHIME</label>
+            </value>
+            <value>
+                <fullName>PASSENGER CORD SWITCH</fullName>
+                <default>false</default>
+                <label>PASSENGER CORD SWITCH</label>
+            </value>
+            <value>
+                <fullName>PASSENGER COUNTER</fullName>
+                <default>false</default>
+                <label>PASSENGER COUNTER</label>
+            </value>
+            <value>
+                <fullName>PASSENGER HEATER</fullName>
+                <default>false</default>
+                <label>PASSENGER HEATER</label>
+            </value>
+            <value>
+                <fullName>PASSENGER SEATS</fullName>
+                <default>false</default>
+                <label>PASSENGER SEATS</label>
+            </value>
+            <value>
+                <fullName>PASSENGER SIGNAL PULL CORD</fullName>
+                <default>false</default>
+                <label>PASSENGER SIGNAL PULL CORD</label>
+            </value>
+            <value>
+                <fullName>PASSENGER SIGNAL TOUCH TAPE</fullName>
+                <default>false</default>
+                <label>PASSENGER SIGNAL TOUCH TAPE</label>
+            </value>
+            <value>
+                <fullName>PASS HEATER/UNDER SEAT</fullName>
+                <default>false</default>
+                <label>PASS HEATER/UNDER SEAT</label>
+            </value>
+            <value>
+                <fullName>PASS HEATER PIPING/DRAINS</fullName>
+                <default>false</default>
+                <label>PASS HEATER PIPING/DRAINS</label>
+            </value>
+            <value>
+                <fullName>PRESSURE SENDER (OBS)</fullName>
+                <default>false</default>
+                <label>PRESSURE SENDER (OBS)</label>
+            </value>
+            <value>
+                <fullName>PUMP/PIPING</fullName>
+                <default>false</default>
+                <label>PUMP/PIPING</label>
+            </value>
+            <value>
+                <fullName>QUICK START /ETHER</fullName>
+                <default>false</default>
+                <label>QUICK START /ETHER</label>
+            </value>
+            <value>
+                <fullName>RADIATOR</fullName>
+                <default>false</default>
+                <label>RADIATOR</label>
+            </value>
+            <value>
+                <fullName>RADIATOR ACCESS DOOR</fullName>
+                <default>false</default>
+                <label>RADIATOR ACCESS DOOR</label>
+            </value>
+            <value>
+                <fullName>RADIO/FAREBOX POWER SUPPLY</fullName>
+                <default>false</default>
+                <label>RADIO/FAREBOX POWER SUPPLY</label>
+            </value>
+            <value>
+                <fullName>RADIO/SPEAKERS</fullName>
+                <default>false</default>
+                <label>RADIO/SPEAKERS</label>
+            </value>
+            <value>
+                <fullName>RADIO BOX</fullName>
+                <default>false</default>
+                <label>RADIO BOX</label>
+            </value>
+            <value>
+                <fullName>RAIN GUTTERS</fullName>
+                <default>false</default>
+                <label>RAIN GUTTERS</label>
+            </value>
+            <value>
+                <fullName>RAMP ALARM (FLOYD BELL)</fullName>
+                <default>false</default>
+                <label>RAMP ALARM (FLOYD BELL)</label>
+            </value>
+            <value>
+                <fullName>RAMP CONT/POWER PACK</fullName>
+                <default>false</default>
+                <label>RAMP CONT/POWER PACK</label>
+            </value>
+            <value>
+                <fullName>RAMP ELECTRICAL EFFECTS</fullName>
+                <default>false</default>
+                <label>RAMP ELECTRICAL EFFECTS</label>
+            </value>
+            <value>
+                <fullName>RAMP MECHANICALS</fullName>
+                <default>false</default>
+                <label>RAMP MECHANICALS</label>
+            </value>
+            <value>
+                <fullName>RCA FLOORING/TRIM</fullName>
+                <default>false</default>
+                <label>RCA FLOORING/TRIM</label>
+            </value>
+            <value>
+                <fullName>READING LIGHTS</fullName>
+                <default>false</default>
+                <label>READING LIGHTS</label>
+            </value>
+            <value>
+                <fullName>REAR AXLE</fullName>
+                <default>false</default>
+                <label>REAR AXLE</label>
+            </value>
+            <value>
+                <fullName>REAR AXLE OIL SEALS</fullName>
+                <default>false</default>
+                <label>REAR AXLE OIL SEALS</label>
+            </value>
+            <value>
+                <fullName>REAR AXLE SUSP. MODIFICATIONS</fullName>
+                <default>false</default>
+                <label>REAR AXLE SUSP. MODIFICATIONS</label>
+            </value>
+            <value>
+                <fullName>REAR BRAKE CHAMBER HOSES</fullName>
+                <default>false</default>
+                <label>REAR BRAKE CHAMBER HOSES</label>
+            </value>
+            <value>
+                <fullName>REAR BRAKE CHAMBERS</fullName>
+                <default>false</default>
+                <label>REAR BRAKE CHAMBERS</label>
+            </value>
+            <value>
+                <fullName>REAR BUMPER MTG.</fullName>
+                <default>false</default>
+                <label>REAR BUMPER MTG.</label>
+            </value>
+            <value>
+                <fullName>REAR CAP/GRILLE</fullName>
+                <default>false</default>
+                <label>REAR CAP/GRILLE</label>
+            </value>
+            <value>
+                <fullName>REAR CORNER PANELS</fullName>
+                <default>false</default>
+                <label>REAR CORNER PANELS</label>
+            </value>
+            <value>
+                <fullName>REAR DOOR</fullName>
+                <default>false</default>
+                <label>REAR DOOR</label>
+            </value>
+            <value>
+                <fullName>REAR DOOR MODESTY PANEL</fullName>
+                <default>false</default>
+                <label>REAR DOOR MODESTY PANEL</label>
+            </value>
+            <value>
+                <fullName>REAR EMERGENCY DOOR (OBS)</fullName>
+                <default>false</default>
+                <label>REAR EMERGENCY DOOR (OBS)</label>
+            </value>
+            <value>
+                <fullName>REAR ENGINE DOOR</fullName>
+                <default>false</default>
+                <label>REAR ENGINE DOOR</label>
+            </value>
+            <value>
+                <fullName>REAR HOURMETER</fullName>
+                <default>false</default>
+                <label>REAR HOURMETER</label>
+            </value>
+            <value>
+                <fullName>REAR MTD AIR PRESS GA (OBS)</fullName>
+                <default>false</default>
+                <label>REAR MTD AIR PRESS GA (OBS)</label>
+            </value>
+            <value>
+                <fullName>REAR MTD ENG PRESS GUAGE</fullName>
+                <default>false</default>
+                <label>REAR MTD ENG PRESS GUAGE</label>
+            </value>
+            <value>
+                <fullName>REAR MTD ENG TEMP GUAGE</fullName>
+                <default>false</default>
+                <label>REAR MTD ENG TEMP GUAGE</label>
+            </value>
+            <value>
+                <fullName>REAR POWER STEERING HOSES</fullName>
+                <default>false</default>
+                <label>REAR POWER STEERING HOSES</label>
+            </value>
+            <value>
+                <fullName>REAR RUN BOX VOLTMETER</fullName>
+                <default>false</default>
+                <label>REAR RUN BOX VOLTMETER</label>
+            </value>
+            <value>
+                <fullName>REAR RUN PANEL OR BOX</fullName>
+                <default>false</default>
+                <label>REAR RUN PANEL OR BOX</label>
+            </value>
+            <value>
+                <fullName>REAR RUN SIGN</fullName>
+                <default>false</default>
+                <label>REAR RUN SIGN</label>
+            </value>
+            <value>
+                <fullName>REAR SHELF &amp; SETTEE TRIM</fullName>
+                <default>false</default>
+                <label>REAR SHELF &amp; SETTEE TRIM</label>
+            </value>
+            <value>
+                <fullName>REAR SHOCK ABSORBERS</fullName>
+                <default>false</default>
+                <label>REAR SHOCK ABSORBERS</label>
+            </value>
+            <value>
+                <fullName>REAR SIDE TURN SIGNALS</fullName>
+                <default>false</default>
+                <label>REAR SIDE TURN SIGNALS</label>
+            </value>
+            <value>
+                <fullName>REAR STEPWELL</fullName>
+                <default>false</default>
+                <label>REAR STEPWELL</label>
+            </value>
+            <value>
+                <fullName>REAR STEPWELL HEATER</fullName>
+                <default>false</default>
+                <label>REAR STEPWELL HEATER</label>
+            </value>
+            <value>
+                <fullName>REAR STEPWELL TRIM</fullName>
+                <default>false</default>
+                <label>REAR STEPWELL TRIM</label>
+            </value>
+            <value>
+                <fullName>REAR SUSPENSION</fullName>
+                <default>false</default>
+                <label>REAR SUSPENSION</label>
+            </value>
+            <value>
+                <fullName>REAR SUSPENSION SWAY BAR (OBS)</fullName>
+                <default>false</default>
+                <label>REAR SUSPENSION SWAY BAR (OBS)</label>
+            </value>
+            <value>
+                <fullName>REAR SUSP LEVELING VALVE</fullName>
+                <default>false</default>
+                <label>REAR SUSP LEVELING VALVE</label>
+            </value>
+            <value>
+                <fullName>REAR TRANS TEMP GA</fullName>
+                <default>false</default>
+                <label>REAR TRANS TEMP GA</label>
+            </value>
+            <value>
+                <fullName>REAR WHEELWELL</fullName>
+                <default>false</default>
+                <label>REAR WHEELWELL</label>
+            </value>
+            <value>
+                <fullName>REAR WINDOW</fullName>
+                <default>false</default>
+                <label>REAR WINDOW</label>
+            </value>
+            <value>
+                <fullName>RECORDING SPEEDOMETER (OBS)</fullName>
+                <default>false</default>
+                <label>RECORDING SPEEDOMETER (OBS)</label>
+            </value>
+            <value>
+                <fullName>REFLECTORS</fullName>
+                <default>false</default>
+                <label>REFLECTORS</label>
+            </value>
+            <value>
+                <fullName>RESERVOR</fullName>
+                <default>false</default>
+                <label>RESERVOR</label>
+            </value>
+            <value>
+                <fullName>RETARDER CONTROLS</fullName>
+                <default>false</default>
+                <label>RETARDER CONTROLS</label>
+            </value>
+            <value>
+                <fullName>RETURN AIR GRILLE</fullName>
+                <default>false</default>
+                <label>RETURN AIR GRILLE</label>
+            </value>
+            <value>
+                <fullName>RH FWD FULL SLIDING</fullName>
+                <default>false</default>
+                <label>RH FWD FULL SLIDING</label>
+            </value>
+            <value>
+                <fullName>RIGHT VISIBILITY WINDOW</fullName>
+                <default>false</default>
+                <label>RIGHT VISIBILITY WINDOW</label>
+            </value>
+            <value>
+                <fullName>ROAD FLARES/FLAGS</fullName>
+                <default>false</default>
+                <label>ROAD FLARES/FLAGS</label>
+            </value>
+            <value>
+                <fullName>ROAD SANDERS (OBS)</fullName>
+                <default>false</default>
+                <label>ROAD SANDERS (OBS)</label>
+            </value>
+            <value>
+                <fullName>ROOF FRAMING</fullName>
+                <default>false</default>
+                <label>ROOF FRAMING</label>
+            </value>
+            <value>
+                <fullName>ROOF HARNESS/TB</fullName>
+                <default>false</default>
+                <label>ROOF HARNESS/TB</label>
+            </value>
+            <value>
+                <fullName>ROOF PANELS</fullName>
+                <default>false</default>
+                <label>ROOF PANELS</label>
+            </value>
+            <value>
+                <fullName>ROOF SKINS</fullName>
+                <default>false</default>
+                <label>ROOF SKINS</label>
+            </value>
+            <value>
+                <fullName>ROOF VENTS</fullName>
+                <default>false</default>
+                <label>ROOF VENTS</label>
+            </value>
+            <value>
+                <fullName>RR BACK UP ALARM (FLOYD BELL)</fullName>
+                <default>false</default>
+                <label>RR BACK UP ALARM (FLOYD BELL)</label>
+            </value>
+            <value>
+                <fullName>RUB RAILS</fullName>
+                <default>false</default>
+                <label>RUB RAILS</label>
+            </value>
+            <value>
+                <fullName>SAFETY TRIANGLES</fullName>
+                <default>false</default>
+                <label>SAFETY TRIANGLES</label>
+            </value>
+            <value>
+                <fullName>SEAT BELT ALARM</fullName>
+                <default>false</default>
+                <label>SEAT BELT ALARM</label>
+            </value>
+            <value>
+                <fullName>SEAT BELTS, Driver&apos;s or passenger</fullName>
+                <default>false</default>
+                <label>SEAT BELTS, Driver&apos;s or passenger</label>
+            </value>
+            <value>
+                <fullName>SEAT RISERS</fullName>
+                <default>false</default>
+                <label>SEAT RISERS</label>
+            </value>
+            <value>
+                <fullName>SENDER, TEMPERATURE (OBS)</fullName>
+                <default>false</default>
+                <label>SENDER, TEMPERATURE (OBS)</label>
+            </value>
+            <value>
+                <fullName>SETTEE &amp; BULKHEAD</fullName>
+                <default>false</default>
+                <label>SETTEE &amp; BULKHEAD</label>
+            </value>
+            <value>
+                <fullName>SHIFT CONTROL ELECTRONIC</fullName>
+                <default>false</default>
+                <label>SHIFT CONTROL ELECTRONIC</label>
+            </value>
+            <value>
+                <fullName>SHIFT LINKAGE (OBS)</fullName>
+                <default>false</default>
+                <label>SHIFT LINKAGE (OBS)</label>
+            </value>
+            <value>
+                <fullName>SHOP AIR FILL</fullName>
+                <default>false</default>
+                <label>SHOP AIR FILL</label>
+            </value>
+            <value>
+                <fullName>SIDE DEST. SIGN</fullName>
+                <default>false</default>
+                <label>SIDE DEST. SIGN</label>
+            </value>
+            <value>
+                <fullName>SIDEWALL FRAMING LEFT</fullName>
+                <default>false</default>
+                <label>SIDEWALL FRAMING LEFT</label>
+            </value>
+            <value>
+                <fullName>SIDEWALL FRAMING RIGHT</fullName>
+                <default>false</default>
+                <label>SIDEWALL FRAMING RIGHT</label>
+            </value>
+            <value>
+                <fullName>SIDEWALL PANELS LEFT</fullName>
+                <default>false</default>
+                <label>SIDEWALL PANELS LEFT</label>
+            </value>
+            <value>
+                <fullName>SIDEWALL PANELS RIGHT</fullName>
+                <default>false</default>
+                <label>SIDEWALL PANELS RIGHT</label>
+            </value>
+            <value>
+                <fullName>Signage</fullName>
+                <default>false</default>
+                <label>Signage</label>
+            </value>
+            <value>
+                <fullName>SKI RACK</fullName>
+                <default>false</default>
+                <label>SKI RACK</label>
+            </value>
+            <value>
+                <fullName>SKIRT PANELS LEFT</fullName>
+                <default>false</default>
+                <label>SKIRT PANELS LEFT</label>
+            </value>
+            <value>
+                <fullName>SKIRT PANELS RIGHT</fullName>
+                <default>false</default>
+                <label>SKIRT PANELS RIGHT</label>
+            </value>
+            <value>
+                <fullName>SLACK ADJUSTERS</fullName>
+                <default>false</default>
+                <label>SLACK ADJUSTERS</label>
+            </value>
+            <value>
+                <fullName>SPARE WHEEL</fullName>
+                <default>false</default>
+                <label>SPARE WHEEL</label>
+            </value>
+            <value>
+                <fullName>SPEEDO DRIVE (OBS)</fullName>
+                <default>false</default>
+                <label>SPEEDO DRIVE (OBS)</label>
+            </value>
+            <value>
+                <fullName>SPEEDOMETER</fullName>
+                <default>false</default>
+                <label>SPEEDOMETER</label>
+            </value>
+            <value>
+                <fullName>SSTL INTERIOR TRIM</fullName>
+                <default>false</default>
+                <label>SSTL INTERIOR TRIM</label>
+            </value>
+            <value>
+                <fullName>STANCHIONS, VERTICAL</fullName>
+                <default>false</default>
+                <label>STANCHIONS, VERTICAL</label>
+            </value>
+            <value>
+                <fullName>STARTER</fullName>
+                <default>false</default>
+                <label>STARTER</label>
+            </value>
+            <value>
+                <fullName>STARTER CABLES</fullName>
+                <default>false</default>
+                <label>STARTER CABLES</label>
+            </value>
+            <value>
+                <fullName>STARTER DISENGAGEMENT (OBS)</fullName>
+                <default>false</default>
+                <label>STARTER DISENGAGEMENT (OBS)</label>
+            </value>
+            <value>
+                <fullName>STEERING COLUMN TILT</fullName>
+                <default>false</default>
+                <label>STEERING COLUMN TILT</label>
+            </value>
+            <value>
+                <fullName>STEERING GEAR</fullName>
+                <default>false</default>
+                <label>STEERING GEAR</label>
+            </value>
+            <value>
+                <fullName>STEERING PARTS, MISC</fullName>
+                <default>false</default>
+                <label>STEERING PARTS, MISC</label>
+            </value>
+            <value>
+                <fullName>STEERING WHEEL</fullName>
+                <default>false</default>
+                <label>STEERING WHEEL</label>
+            </value>
+            <value>
+                <fullName>STEP NOSING</fullName>
+                <default>false</default>
+                <label>STEP NOSING</label>
+            </value>
+            <value>
+                <fullName>STOP/TAIL/TURN LIGHTS/HARN.</fullName>
+                <default>false</default>
+                <label>STOP/TAIL/TURN LIGHTS/HARN.</label>
+            </value>
+            <value>
+                <fullName>STOP REQUESTED SIGN</fullName>
+                <default>false</default>
+                <label>STOP REQUESTED SIGN</label>
+            </value>
+            <value>
+                <fullName>STORAGE BOX</fullName>
+                <default>false</default>
+                <label>STORAGE BOX</label>
+            </value>
+            <value>
+                <fullName>SUN VISOR OR SUNSCREEN</fullName>
+                <default>false</default>
+                <label>SUN VISOR OR SUNSCREEN</label>
+            </value>
+            <value>
+                <fullName>SURGE TANK</fullName>
+                <default>false</default>
+                <label>SURGE TANK</label>
+            </value>
+            <value>
+                <fullName>SWAY BAR (OBS)</fullName>
+                <default>false</default>
+                <label>SWAY BAR (OBS)</label>
+            </value>
+            <value>
+                <fullName>SWITCHES/SENDERS</fullName>
+                <default>false</default>
+                <label>SWITCHES/SENDERS</label>
+            </value>
+            <value>
+                <fullName>TACHOMETER</fullName>
+                <default>false</default>
+                <label>TACHOMETER</label>
+            </value>
+            <value>
+                <fullName>TAIL PIPE/MTG</fullName>
+                <default>false</default>
+                <label>TAIL PIPE/MTG</label>
+            </value>
+            <value>
+                <fullName>THROTTLE CONTROL</fullName>
+                <default>false</default>
+                <label>THROTTLE CONTROL</label>
+            </value>
+            <value>
+                <fullName>TIE RODS</fullName>
+                <default>false</default>
+                <label>TIE RODS</label>
+            </value>
+            <value>
+                <fullName>TIRE PRESSURE EQUALIZER</fullName>
+                <default>false</default>
+                <label>TIRE PRESSURE EQUALIZER</label>
+            </value>
+            <value>
+                <fullName>TIRES</fullName>
+                <default>false</default>
+                <label>TIRES</label>
+            </value>
+            <value>
+                <fullName>TORQUE RODS</fullName>
+                <default>false</default>
+                <label>TORQUE RODS</label>
+            </value>
+            <value>
+                <fullName>TOW EYES, FRONT</fullName>
+                <default>false</default>
+                <label>TOW EYES, FRONT</label>
+            </value>
+            <value>
+                <fullName>TOW EYES, REAR</fullName>
+                <default>false</default>
+                <label>TOW EYES, REAR</label>
+            </value>
+            <value>
+                <fullName>TOWING CONNECTION</fullName>
+                <default>false</default>
+                <label>TOWING CONNECTION</label>
+            </value>
+            <value>
+                <fullName>TRANS. TAIL SUPPORT/MTG</fullName>
+                <default>false</default>
+                <label>TRANS. TAIL SUPPORT/MTG</label>
+            </value>
+            <value>
+                <fullName>TRANSFER MACHINE</fullName>
+                <default>false</default>
+                <label>TRANSFER MACHINE</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION</fullName>
+                <default>false</default>
+                <label>TRANSMISSION</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION CONTROLS</fullName>
+                <default>false</default>
+                <label>TRANSMISSION CONTROLS</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION COOLER</fullName>
+                <default>false</default>
+                <label>TRANSMISSION COOLER</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION DIPSTICK</fullName>
+                <default>false</default>
+                <label>TRANSMISSION DIPSTICK</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION POWER TAKE OFF</fullName>
+                <default>false</default>
+                <label>TRANSMISSION POWER TAKE OFF</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION YOKE</fullName>
+                <default>false</default>
+                <label>TRANSMISSION YOKE</label>
+            </value>
+            <value>
+                <fullName>TRANS OIL TEMP GA</fullName>
+                <default>false</default>
+                <label>TRANS OIL TEMP GA</label>
+            </value>
+            <value>
+                <fullName>TRANSOM PASSENGER WINDOWS</fullName>
+                <default>false</default>
+                <label>TRANSOM PASSENGER WINDOWS</label>
+            </value>
+            <value>
+                <fullName>TREADLE VALVE</fullName>
+                <default>false</default>
+                <label>TREADLE VALVE</label>
+            </value>
+            <value>
+                <fullName>TURBO</fullName>
+                <default>false</default>
+                <label>TURBO</label>
+            </value>
+            <value>
+                <fullName>TURN HORN</fullName>
+                <default>false</default>
+                <label>TURN HORN</label>
+            </value>
+            <value>
+                <fullName>UPPER DASH/MTG,HARNESS</fullName>
+                <default>false</default>
+                <label>UPPER DASH/MTG,HARNESS</label>
+            </value>
+            <value>
+                <fullName>UPPER DRIVERS PANEL</fullName>
+                <default>false</default>
+                <label>UPPER DRIVERS PANEL</label>
+            </value>
+            <value>
+                <fullName>UPPER ENTRANCE DOOR PANEL</fullName>
+                <default>false</default>
+                <label>UPPER ENTRANCE DOOR PANEL</label>
+            </value>
+            <value>
+                <fullName>UPPER EXIT DOOR PANEL</fullName>
+                <default>false</default>
+                <label>UPPER EXIT DOOR PANEL</label>
+            </value>
+            <value>
+                <fullName>VANNER EQUILIZER</fullName>
+                <default>false</default>
+                <label>VANNER EQUILIZER</label>
+            </value>
+            <value>
+                <fullName>VIDEO SYSTEMS/CAMERAS</fullName>
+                <default>false</default>
+                <label>VIDEO SYSTEMS/CAMERAS</label>
+            </value>
+            <value>
+                <fullName>VOICE ENUNCIATOR SYS</fullName>
+                <default>false</default>
+                <label>VOICE ENUNCIATOR SYS</label>
+            </value>
+            <value>
+                <fullName>VOLTMETER GA</fullName>
+                <default>false</default>
+                <label>VOLTMETER GA</label>
+            </value>
+            <value>
+                <fullName>W/C BARRIER MODESTY PANEL</fullName>
+                <default>false</default>
+                <label>W/C BARRIER MODESTY PANEL</label>
+            </value>
+            <value>
+                <fullName>WATER BARRIER, DRIVER&apos;S AREA</fullName>
+                <default>false</default>
+                <label>WATER BARRIER, DRIVER&apos;S AREA</label>
+            </value>
+            <value>
+                <fullName>WATER FILTER</fullName>
+                <default>false</default>
+                <label>WATER FILTER</label>
+            </value>
+            <value>
+                <fullName>WATTS VALVE (OBS)</fullName>
+                <default>false</default>
+                <label>WATTS VALVE (OBS)</label>
+            </value>
+            <value>
+                <fullName>WHEELCHAIR TIE DOWNS</fullName>
+                <default>false</default>
+                <label>WHEELCHAIR TIE DOWNS</label>
+            </value>
+            <value>
+                <fullName>WHEEL MTG HARDWARE--C/F TIRES</fullName>
+                <default>false</default>
+                <label>WHEEL MTG HARDWARE--C/F TIRES</label>
+            </value>
+            <value>
+                <fullName>WHEEL STL/HARDWARE</fullName>
+                <default>false</default>
+                <label>WHEEL STL/HARDWARE</label>
+            </value>
+            <value>
+                <fullName>WINDSHIELD GLAZING</fullName>
+                <default>false</default>
+                <label>WINDSHIELD GLAZING</label>
+            </value>
+            <value>
+                <fullName>WINDSHIELD WASHER/WIPER</fullName>
+                <default>false</default>
+                <label>WINDSHIELD WASHER/WIPER</label>
+            </value>
+            <value>
+                <fullName>WIRING FOR TRANSFER MACHINE</fullName>
+                <default>false</default>
+                <label>WIRING FOR TRANSFER MACHINE</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>DRAG LINK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>FRONT POWER STEERING HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>LOW FLUID PROBE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>PUMP/PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>REAR POWER STEERING HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>RESERVOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>STEERING COLUMN TILT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>STEERING GEAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>STEERING PARTS, MISC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>STEERING WHEEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>STEERING</controllingFieldValue>
+            <valueName>TIE RODS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>ACCUMULATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>CONSTANT TENSION HOSE CLAMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <controllingFieldValue>WHEEL &amp; TIRE</controllingFieldValue>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <controllingFieldValue>RAMP</controllingFieldValue>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>MISC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>RETARDER CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>SENDER, TEMPERATURE (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>SHIFT LINKAGE (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>SPEEDO DRIVE (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANS. TAIL SUPPORT/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANSMISSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>TRANSMISSION CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANSMISSION COOLER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANSMISSION DIPSTICK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANSMISSION POWER TAKE OFF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRANSMISSION</controllingFieldValue>
+            <valueName>TRANSMISSION YOKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WHEEL &amp; TIRE</controllingFieldValue>
+            <valueName>HUB COVERS / 10 STUD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WHEEL &amp; TIRE</controllingFieldValue>
+            <valueName>SPARE WHEEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WHEEL &amp; TIRE</controllingFieldValue>
+            <valueName>TIRE PRESSURE EQUALIZER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WHEEL &amp; TIRE</controllingFieldValue>
+            <valueName>TIRES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WHEEL &amp; TIRE</controllingFieldValue>
+            <valueName>WHEEL MTG HARDWARE--C/F TIRES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WHEEL &amp; TIRE</controllingFieldValue>
+            <valueName>WHEEL STL/HARDWARE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>SAFETY &amp; ROAD EQUIPMENT</controllingFieldValue>
+            <valueName>DECALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>DRIVER&apos;S WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <valueName>FULL SLIDING PASS. WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <valueName>REAR WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <valueName>RH FWD FULL SLIDING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <valueName>RIGHT VISIBILITY WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>TRANSOM PASSENGER WINDOWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WINDOW</controllingFieldValue>
+            <valueName>WINDSHIELD GLAZING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FIRE</controllingFieldValue>
+            <valueName>FIRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FIRE</controllingFieldValue>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>FIRE ALARM &amp; OR SUPPRESSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FIRE</controllingFieldValue>
+            <controllingFieldValue>SAFETY &amp; ROAD EQUIPMENT</controllingFieldValue>
+            <valueName>FIRE EXTINGUISHER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FIRE</controllingFieldValue>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>FIRE SUPPRESSION COMPONENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>ABS SENSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <valueName>AXLE LUBE FITTINGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>BEARINGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>BRAKE FOUNDATION / LINING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>BUMPERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>DRUMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <valueName>FRONT AXLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <valueName>FRONT AXLE OIL SEALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <valueName>FRONT HALDEX AUTO SLACKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT AXLE</controllingFieldValue>
+            <valueName>FRONT MANUAL SLACKS (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT SUSPENSION</controllingFieldValue>
+            <valueName>FRONT SHOCKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT SUSPENSION</controllingFieldValue>
+            <valueName>FRONT SUSPENSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT SUSPENSION</controllingFieldValue>
+            <valueName>SWAY BAR (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRONT SUSPENSION</controllingFieldValue>
+            <controllingFieldValue>REAR SUSPENSION</controllingFieldValue>
+            <valueName>TORQUE RODS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>FUEL FILTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <valueName>FUEL TANK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FUEL</controllingFieldValue>
+            <valueName>FUEL TANK PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>AUXILIARY WATER HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>DEFROSTER DUCTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>DEFROSTER FAN&apos;S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>DRIVER&apos;S AREA BOOSTER FAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>DRIVER&apos;S HEATER PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>DRIVER HEATER CORE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>DRIVER HEATER MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>DRIVERS HEATERS/CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>FRONT STEPWELL HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>HEATER/AIR COND MTG/SEALING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>HEATER &amp; A/C PLATFORM/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>HEATER BOOSTER PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>HEATER VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>LIFT CONT. BOX HTR DUCT (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>OUTSIDE AIR DUCT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>PASSENGER HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>PASS HEATER/UNDER SEAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <valueName>PASS HEATER PIPING/DRAINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HEATER</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>REAR STEPWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>AD FRAMES INTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>ANTENNA CONDUIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>BATT OR DIGITAL RECORDER BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>CEILING PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>DESTINATION SIGN</controllingFieldValue>
+            <valueName>DESTINATION SIGN BAY DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>DESTINATION SIGN</controllingFieldValue>
+            <valueName>DESTINATION SIGN CLOSEOUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>DOOR SEALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>DRIVER&apos;S CONSOLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>DRIVER&apos;S CURTAIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>DRIVERS BARRIER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>DRIVER SEAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>FAREBOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>FIRST AID COMPT (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>FRONT DOOR MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FRONT STEPWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>FRONT STEPWELL TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>FWD/RR DOOR MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>GRABRAILS/STANCHIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <valueName>INTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>INTERIOR DUCTING &amp; LIGHT PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>LIGHTING INTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>LOWERED A/C DUCTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>LUGGAGE RACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>MIRRORS INTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>PASSENGER COUNTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>PASSENGER SEATS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>RADIO BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>RCA FLOORING/TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>REAR DOOR MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>REAR SHELF &amp; SETTEE TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>REAR STEPWELL TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>RETURN AIR GRILLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>ROOF PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>SEAT BELTS, Driver&apos;s or passenger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>SEAT RISERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <valueName>SIDEWALL PANELS LEFT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <valueName>SIDEWALL PANELS RIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>Signage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>SKI RACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>SSTL INTERIOR TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>STANCHIONS, VERTICAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>STEP NOSING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>STORAGE BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>SUN VISOR OR SUNSCREEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>TRANSFER MACHINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>UPPER DRIVERS PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>UPPER ENTRANCE DOOR PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>UPPER EXIT DOOR PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>W/C BARRIER MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTERIOR TRIM</controllingFieldValue>
+            <valueName>WATER BARRIER, DRIVER&apos;S AREA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>EXIT DOORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <valueName>EXTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FAIRINGS ALLISON</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FAIRINGS BAE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FAIRINGS CNG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FRONT ACCESS DOORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FRONT CAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FRONT DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>REAR CAP/GRILLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>REAR CORNER PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>REAR DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>REAR ENGINE DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PAINT &amp; DECAL</controllingFieldValue>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>ROOF SKINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>AIR BAGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>AIR COMPRESSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>AIR COND PIPING/DRAIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>AIR DRYER/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>AIR INTAKE PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>AIR STARTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>AIR STARTER MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>AIR STARTER TANK CHRGNG LINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>AIR TANK DRAIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>AIR TANK MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>BRAKE LIGHT SWITCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>BRAKE VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>CHASSIS AIR PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>DOOR MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>FRONT BRAKE CHAMBER HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>FRONT BRAKE CHAMBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>FRONT SUSP LEVELING VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>GOVERNOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>KNEELING OR DUMP VALVE SYST.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>PARKING BRAKE, AIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>REAR BRAKE CHAMBER HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>REAR BRAKE CHAMBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>REAR SUSP LEVELING VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>SHOP AIR FILL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>TOWING CONNECTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>TREADLE VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PIPING</controllingFieldValue>
+            <valueName>WATTS VALVE (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RAMP</controllingFieldValue>
+            <valueName>RAMP ALARM (FLOYD BELL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RAMP</controllingFieldValue>
+            <valueName>RAMP CONT/POWER PACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RAMP</controllingFieldValue>
+            <valueName>RAMP MECHANICALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RAMP</controllingFieldValue>
+            <valueName>WHEELCHAIR TIE DOWNS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>AXLE D/L YOKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>HUB ODOMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>OIL FILL &amp; DRAIN PLUGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <controllingFieldValue>REAR SUSPENSION</controllingFieldValue>
+            <valueName>REAR AXLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>REAR AXLE OIL SEALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR AXLE</controllingFieldValue>
+            <valueName>SLACK ADJUSTERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>AIR COND. EVAP COOLER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>AIR CONDITION EVAP MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>AIR CONDITIONING COND. MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>AIR CONDITIONING CONDENSER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>FREON COMPRESSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>FREON COMPRESSOR BELT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>FREON COMPRESSOR IDLER PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AIR CONDITIONING</controllingFieldValue>
+            <valueName>FREON COMPRESSOR PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>AD FRAMES EXTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>BIKE RACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>DOOR CONTROL, FRONT SB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>EMERGENCY DOOR RELEASE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE BELT GUARD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FILTER ACCESS DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FLOOR ACCESS PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FLOORING PLYWOOD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FLOORING REINFORCEMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FLOORING STRUCTURE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FRONT BODY FRAMING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>FRONT BUMPER/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>FRONT WHEELWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>GAS SHOCKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>MISC ACCESS DOORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>RADIATOR ACCESS DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>REAR EMERGENCY DOOR (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>REAR WHEELWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>ROOF FRAMING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>ROOF VENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>SETTEE &amp; BULKHEAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>SIDEWALL FRAMING LEFT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <valueName>SIDEWALL FRAMING RIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BODY</controllingFieldValue>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>WINDSHIELD WASHER/WIPER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>BATTERY BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>CHASSIS COMPONENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>DRIVER PLATFORM TB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>FRAME RAILS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>LOAD LEVELING BRACKETS (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>ROAD SANDERS (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>TOW EYES, FRONT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CHASSIS</controllingFieldValue>
+            <valueName>TOW EYES, REAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>AIR APPL. GA (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>AIR PRESS. GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>AMP METER GA. (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>ENG COOLANT TEMP GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>ENG HOUR METER GA. (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>ENG OIL PRESS GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>EXHAUST PYROMETER GA (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>FUEL LEVEL GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>HVAC CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>MFD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>PANEL #1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>PANEL #2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>PANEL #3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>PANEL #4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>PANEL #5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>PANEL #9, INDICATOR LAMP BAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>RECORDING SPEEDOMETER (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>SPEEDOMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>SWITCHES/SENDERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>TACHOMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>TRANS OIL TEMP GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DASH PANEL &amp; GUAGE</controllingFieldValue>
+            <valueName>VOLTMETER GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESTINATION SIGN</controllingFieldValue>
+            <valueName>DESTINATION GLAZING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESTINATION SIGN</controllingFieldValue>
+            <valueName>DESTINATION SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESTINATION SIGN</controllingFieldValue>
+            <valueName>FRONT RUN NO. SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESTINATION SIGN</controllingFieldValue>
+            <valueName>REAR RUN SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESTINATION SIGN</controllingFieldValue>
+            <valueName>SIDE DEST. SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DRIVELINE</controllingFieldValue>
+            <valueName>DRIVELINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>2-WAY RADIO MTG BRKT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ABS EFFECTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>AIR HORN (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>AISLE LIGHTING, SEAT RISER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ALTERNATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ALTERNATOR/REG DUAL WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ALTERNATOR PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ANTENNA OR RADIO MTG.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>AUX ELECT. CONTROL PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>BACK-UP LIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>BATT/CABLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>BOOM MIC / HANDHELD MIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>BRAKE INTERLOCK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>CENTER MTD / ADTL. STOP LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>CHARGING SYSTEM WARNING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>CHASSIS HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>CRIME ALARM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>DASH/CONSOLE/HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>DECELERATION LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>DINEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>DOOR ALARMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>DRIVER&apos;S FANS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ELECT CONT PANEL OR BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ELECT ENG &amp; TRANS CONTROL PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ELECT POWER SUPPLY/CABLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ELECTRICAL TOWING PLUG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ELECTRIC HORNS, DUAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ELECTRONIC ENGINE CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ENG/STARTER/INTERMED HARN.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ENGINE ANALYSIS (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ENGINE PROTECTION (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ENTRANCE DOOR WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>EXIT DOOR WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>FAREBOX LIGHT SWITCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>FLASHING LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>FLUORESCENT TUBE COVERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>FOG OR DRIVING LIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>FRONT TURN SIGNALS &amp; WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>GPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>HEADLIGHT MONITOR (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>HEADLIGHTS / HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>HEATER OR A/C CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>HILL HOLDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>IGNITION SW CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>INSIDE SPEAKERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>JUMP START CONNECTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>KNEELING ELECTRICAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>LICENSE PLATE LIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>LIGHTING EXTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>MAP LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>MARKER LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>MECH. GAUGES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>OUTSIDE SPEAKERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>P.A. SYSTEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>PASS AREA GAS DET. SYSTEM (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>PASSENGER CHIME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>PASSENGER CORD SWITCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>PASSENGER SIGNAL PULL CORD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>PASSENGER SIGNAL TOUCH TAPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>RADIO/FAREBOX POWER SUPPLY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>RADIO/SPEAKERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>RAMP ELECTRICAL EFFECTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>READING LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR HOURMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR MTD AIR PRESS GA (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR MTD ENG PRESS GUAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR MTD ENG TEMP GUAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR RUN BOX VOLTMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR RUN PANEL OR BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR SIDE TURN SIGNALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>REAR TRANS TEMP GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>ROOF HARNESS/TB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>RR BACK UP ALARM (FLOYD BELL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>SEAT BELT ALARM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>SHIFT CONTROL ELECTRONIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>STARTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>STARTER CABLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>STARTER DISENGAGEMENT (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>STOP/TAIL/TURN LIGHTS/HARN.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>STOP REQUESTED SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>TURN HORN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>UPPER DASH/MTG,HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>VANNER EQUILIZER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>VIDEO SYSTEMS/CAMERAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>VOICE ENUNCIATOR SYS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ELECTRICAL</controllingFieldValue>
+            <valueName>WIRING FOR TRANSFER MACHINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>AIR CLEANER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ALTERNATOR MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>BLOCK HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>CHARGE AIR COOLING/PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>CHASSIS FUEL PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>COOLANT SENSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>COOLING SYSTEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>CRUISE CONTROL (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>DIPSTICK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENG/TRANS PAN PROTECTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE BELT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE FUEL PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE FUEL PRIMER PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE MOUNTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE OIL COOLERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE OIL FILL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>ENGINE PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>EXHAUST BRAKES (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>EXHAUST SYS. INSULATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>EXHAUST SYSTEM CLAMPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>EXHAUST SYSTEM REAR ENGINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>FAN CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>HYD FAN MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>HYD FAN MOTOR PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>HYD OIL COOLER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>HYD PUMP PIPING (ALSO IN 05)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>HYDRUALIC PUMP (ALSO IN 05)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>KIM HOTSTART</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>MISC ENGINE PARTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>MUFFLER/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>OIL FILTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>PRESSURE SENDER (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>QUICK START /ETHER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>RADIATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>SURGE TANK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>TAIL PIPE/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>THROTTLE CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>TURBO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ENGINE</controllingFieldValue>
+            <valueName>WATER FILTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>CENTER REAR SPLASH SHIELDS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>FENDER FLARES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>LICENSE PLATE FRAME/HOLDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>MIRRORS EXTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>MUD FLAPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>RAIN GUTTERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>REAR BUMPER MTG.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>REFLECTORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>RUB RAILS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>SKIRT PANELS LEFT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EXTERIOR TRIM</controllingFieldValue>
+            <valueName>SKIRT PANELS RIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR SUSPENSION</controllingFieldValue>
+            <valueName>REAR AXLE SUSP. MODIFICATIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR SUSPENSION</controllingFieldValue>
+            <valueName>REAR SHOCK ABSORBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR SUSPENSION</controllingFieldValue>
+            <valueName>REAR SUSPENSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REAR SUSPENSION</controllingFieldValue>
+            <valueName>REAR SUSPENSION SWAY BAR (OBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFETY &amp; ROAD EQUIPMENT</controllingFieldValue>
+            <valueName>FIRST AID KIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFETY &amp; ROAD EQUIPMENT</controllingFieldValue>
+            <valueName>INSTA CHAINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFETY &amp; ROAD EQUIPMENT</controllingFieldValue>
+            <valueName>ROAD FLARES/FLAGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAFETY &amp; ROAD EQUIPMENT</controllingFieldValue>
+            <valueName>SAFETY TRIANGLES</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

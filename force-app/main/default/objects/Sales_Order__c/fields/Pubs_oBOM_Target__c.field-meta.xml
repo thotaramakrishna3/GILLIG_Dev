@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pubs_oBOM_Target__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Pubs oBOM Target</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Pubs_Targets__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Parts</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Pubs_Targets__c</referenceTo>
+    <relationshipLabel>Sales Orders</relationshipLabel>
+    <relationshipName>Sales_Orders</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

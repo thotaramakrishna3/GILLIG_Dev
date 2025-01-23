@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>schedule_date__c</fullName>
+    <description>schedule_date</description>
+    <externalDeveloperName>schedule_date</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>schedule_date</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

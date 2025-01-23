@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Letter_Code__c</fullName>
+    <description>The Model or Line letter code used in the VIN</description>
+    <externalId>false</externalId>
+    <inlineHelpText>E = Incomplete Vehicle
+G = Low Floor Bus</inlineHelpText>
+    <label>Letter Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>G</fullName>
+                <default>true</default>
+                <label>G</label>
+            </value>
+            <value>
+                <fullName>E</fullName>
+                <default>false</default>
+                <label>E</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

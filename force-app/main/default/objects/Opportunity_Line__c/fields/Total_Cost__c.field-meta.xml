@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Cost__c</fullName>
+    <externalId>false</externalId>
+    <formula>Finance_Std_Materials__c +  Materials_adj_for_Options_w_PPI__c +  Overhead__c +   Labor_Cost__c +  Warranty__c +  Delivery__c +  Delivery_Incidentals__c +  Other_COS_Allocation__c +  Outside_Processes__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

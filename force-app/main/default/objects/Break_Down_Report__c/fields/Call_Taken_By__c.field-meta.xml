@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Taken_By__c</fullName>
+    <externalId>false</externalId>
+    <label>Call Taken By</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bob Birdwell</fullName>
+                <default>false</default>
+                <label>Bob Birdwell</label>
+            </value>
+            <value>
+                <fullName>Bo Vongamath</fullName>
+                <default>false</default>
+                <label>Bo Vongamath</label>
+            </value>
+            <value>
+                <fullName>Eric Ocampo</fullName>
+                <default>false</default>
+                <label>Eric Ocampo</label>
+            </value>
+            <value>
+                <fullName>Garfull Chan</fullName>
+                <default>false</default>
+                <label>Garfull Chan</label>
+            </value>
+            <value>
+                <fullName>Ben Garcia</fullName>
+                <default>false</default>
+                <label>Ben Garcia</label>
+            </value>
+            <value>
+                <fullName>Ryan Linn</fullName>
+                <default>false</default>
+                <label>Ryan Linn</label>
+            </value>
+            <value>
+                <fullName>Richard Galvan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Richard Galvan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>slots_value_must</fullName>
+    <active>true</active>
+    <description>working day should always be configured with maxslots allowed. Also slots per day and slots per week.</description>
+    <errorConditionFormula>( ISPICKVAL( Type__c , &quot;Working Day&quot;) 
+|| 
+  ISPICKVAL( Type__c , &quot;Default Slots Per Day&quot;) 
+|| 
+  ISPICKVAL( Type__c , &quot;Slots Per Week Constant&quot;) 
+)
+&amp;&amp;  ISBLANK(Slots__c)</errorConditionFormula>
+    <errorMessage>Working Day Configuration must provide max slots allowed.</errorMessage>
+</ValidationRule>

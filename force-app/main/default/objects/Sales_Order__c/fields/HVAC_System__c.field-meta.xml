@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HVAC_System__c</fullName>
+    <externalId>false</externalId>
+    <label>HVAC System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Thermo King</fullName>
+                <default>false</default>
+                <label>Thermo King</label>
+            </value>
+            <value>
+                <fullName>Moblie Climate Control</fullName>
+                <default>false</default>
+                <label>Moblie Climate Control</label>
+            </value>
+            <value>
+                <fullName>Sutrak</fullName>
+                <default>false</default>
+                <label>Sutrak</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

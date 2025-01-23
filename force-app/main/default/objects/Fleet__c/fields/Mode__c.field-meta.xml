@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mode__c</fullName>
+    <externalId>false</externalId>
+    <label>Mode</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CNG</fullName>
+                <default>false</default>
+                <label>CNG</label>
+            </value>
+            <value>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+                <label>DIESEL</label>
+            </value>
+            <value>
+                <fullName>ELECTRIC</fullName>
+                <default>false</default>
+                <label>ELECTRIC</label>
+            </value>
+            <value>
+                <fullName>HYBRID ALLISON</fullName>
+                <default>false</default>
+                <label>HYBRID ALLISON</label>
+            </value>
+            <value>
+                <fullName>HYBRID BAE</fullName>
+                <default>false</default>
+                <label>HYBRID BAE</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Field and Technical support</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Case-Project F/T for Platform Users</label>
+    <permissionSets>Case_Projects</permissionSets>
+    <permissionSets>Case_Read_Field_Technical_Permissions</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

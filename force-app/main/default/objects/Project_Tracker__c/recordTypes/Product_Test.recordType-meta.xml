@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Test</fullName>
+    <active>true</active>
+    <label>Product Test</label>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Cost Savings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Improvement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Stability</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Committee_Recommendation__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merged</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Length__c</picklist>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Mode__c</picklist>
+        <values>
+            <fullName>Allison Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAE Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diesel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel Cell</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Style__c</picklist>
+        <values>
+            <fullName>BRT PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor BRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trolley</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Manager_Recommendation__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merged</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approval Phase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benefits_Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Case Phase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investments%2FRisks_Evaluation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Project Collection</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Preliminary Investigation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Plan Phase</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Technical_Risk_Index__c</picklist>
+        <values>
+            <fullName>TR0</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>TR1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TR5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

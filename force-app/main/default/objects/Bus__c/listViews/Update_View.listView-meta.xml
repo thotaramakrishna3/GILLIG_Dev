@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_View</fullName>
+    <columns>NAME</columns>
+    <columns>Current_Owner__c</columns>
+    <columns>Slot_Index__c</columns>
+    <columns>Slot_Index_In_Day__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Week_Start_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sales_Order__c</field>
+        <operation>equals</operation>
+        <value>191689</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Bus__c.Firm</value>
+    </filters>
+    <label>Update View</label>
+</ListView>

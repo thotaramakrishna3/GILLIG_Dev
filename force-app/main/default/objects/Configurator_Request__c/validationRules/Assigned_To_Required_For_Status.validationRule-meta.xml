@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_To_Required_For_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>and( isnull(Assigned_to__c),ischanged( Status__c ),text( Status__c )=&quot;Assigned&quot;)</errorConditionFormula>
+    <errorDisplayField>Assigned_to__c</errorDisplayField>
+    <errorMessage>Enter the &quot;Assigned To&quot; prior to changing status.</errorMessage>
+</ValidationRule>

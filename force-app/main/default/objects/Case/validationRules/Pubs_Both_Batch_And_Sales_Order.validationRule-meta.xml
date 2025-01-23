@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pubs_Both_Batch_And_Sales_Order</fullName>
+    <active>true</active>
+    <description>Pubs case cannot have both batch update checked and a sales order entered.</description>
+    <errorConditionFormula>$RecordType.DeveloperName = &quot;Publications&quot; &amp;&amp;
+(Batch_Update__c = TRUE) &amp;&amp;
+NOT(ISBLANK( Sales_Order__c ))</errorConditionFormula>
+    <errorMessage>Case must be either a batch update OR tied to a sales order.</errorMessage>
+</ValidationRule>

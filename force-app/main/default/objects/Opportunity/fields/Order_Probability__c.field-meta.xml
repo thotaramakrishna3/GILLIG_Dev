@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Probability__c</fullName>
+    <externalId>false</externalId>
+    <label>Order Probability</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1. High Probability</fullName>
+                <default>false</default>
+                <label>1. High Probability</label>
+            </value>
+            <value>
+                <fullName>2. Medium Probability</fullName>
+                <default>false</default>
+                <label>2. Medium Probability</label>
+            </value>
+            <value>
+                <fullName>3. Low Probability</fullName>
+                <default>false</default>
+                <label>3. Low Probability</label>
+            </value>
+            <value>
+                <fullName>4. Unlikely</fullName>
+                <default>false</default>
+                <label>4. Unlikely</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

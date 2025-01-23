@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Service_Bulletin</fullName>
+    <active>true</active>
+    <businessProcess>Field Service Bulletin</businessProcess>
+    <label>Field Service Bulletin</label>
+    <picklistValues>
+        <picklist>Lengths_Affected__c</picklist>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Modes_Affected__c</picklist>
+        <values>
+            <fullName>Allison Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAE Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diesel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel Cell</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Styles_Affected__c</picklist>
+        <values>
+            <fullName>BRT PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor BRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trolley</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

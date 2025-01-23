@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity$Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Charger_Sales_Orders_Junction__r$Sales_Order_Number__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Account__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Customer_Installation_Expectation__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity$GILLIG_Quote_to_Customer__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity$Supplier_Quote_to_GILLIG__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity$Sales_Tax__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Opportunity$Estimated_Margin_or_Fee__c</field>
+    </columns>
+    <description>Charger Opportunities with Sales Order Revenue</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$StageName</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Charger Opportunity Revenue Forecast</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Charger_Opportunity__c</reportType>
+    <roleHierarchyFilter>Director_IT</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

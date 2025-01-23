@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Configuration_s_Required__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all configurations which will meet your requriement</inlineHelpText>
+    <label>Configuration(s) Required</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>29&apos; Diesel</fullName>
+                <default>false</default>
+                <label>29&apos; Diesel</label>
+            </value>
+            <value>
+                <fullName>29&apos; Allison Hybrid</fullName>
+                <default>false</default>
+                <label>29&apos; Allison Hybrid</label>
+            </value>
+            <value>
+                <fullName>29&apos; CNG</fullName>
+                <default>false</default>
+                <label>29&apos; CNG</label>
+            </value>
+            <value>
+                <fullName>35&apos; Diesel</fullName>
+                <default>false</default>
+                <label>35&apos; Diesel</label>
+            </value>
+            <value>
+                <fullName>35&apos; Allison Hybrid</fullName>
+                <default>false</default>
+                <label>35&apos; Allison Hybrid</label>
+            </value>
+            <value>
+                <fullName>35&apos; BAE Hybrid</fullName>
+                <default>false</default>
+                <label>35&apos; BAE Hybrid</label>
+            </value>
+            <value>
+                <fullName>35&apos; CNG</fullName>
+                <default>false</default>
+                <label>35&apos; CNG</label>
+            </value>
+            <value>
+                <fullName>40&apos; Diesel</fullName>
+                <default>false</default>
+                <label>40&apos; Diesel</label>
+            </value>
+            <value>
+                <fullName>40&apos; Allison Hybrid</fullName>
+                <default>false</default>
+                <label>40&apos; Allison Hybrid</label>
+            </value>
+            <value>
+                <fullName>40&apos; BAE Hybrid</fullName>
+                <default>false</default>
+                <label>40&apos; BAE Hybrid</label>
+            </value>
+            <value>
+                <fullName>40&apos; CNG</fullName>
+                <default>false</default>
+                <label>40&apos; CNG</label>
+            </value>
+            <value>
+                <fullName>40&apos; Electric</fullName>
+                <default>false</default>
+                <label>40&apos; Electric</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

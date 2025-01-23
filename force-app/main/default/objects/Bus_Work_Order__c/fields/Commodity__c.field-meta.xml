@@ -1,0 +1,1698 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commodity__c</fullName>
+    <description>The Problem SubCode</description>
+    <externalId>false</externalId>
+    <label>Commodity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Defect_Code__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Problem_Sub_Code</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>23 Safety &amp; Road Equipment</controllingFieldValue>
+            <valueName>0001	FIRST AID KIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>23 Safety &amp; Road Equipment</controllingFieldValue>
+            <valueName>0002	FIRE EXTINGUISHER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>23 Safety &amp; Road Equipment</controllingFieldValue>
+            <valueName>0003	ROAD FLARES/FLAGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>23 Safety &amp; Road Equipment</controllingFieldValue>
+            <valueName>0006	SAFETY TRIANGLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>23 Safety &amp; Road Equipment</controllingFieldValue>
+            <valueName>0007	FRT. FOLDING STEP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>23 Safety &amp; Road Equipment</controllingFieldValue>
+            <valueName>0008	INSTA CHAINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0301	PANEL #1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0302	PANEL #2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0303	PANEL #3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0304	PANEL #4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0305	PANEL #5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0306	HVAC CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0309	PANEL #9, INDICATOR LAMP BAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0310	Driver&apos;s Console</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0350	ENG OIL PRESS GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0352	ENG COOLANT TEMP GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0354	TRANS OIL TEMP GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0355	AIR PRESS. GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0356	AIR APPL. GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0357	VOLTMETER GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0358	ENG. HOURMETER GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0359	FUEL LEVEL GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0360	EXHAUST PYROMETER GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0361	AMP METER GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0365	SPEEDOMETER &amp; OR CABLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0366	TACHOMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0367	TACHOGRAPH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0368	RECORDING SPEEDOMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>24 Dash Panels &amp; Gauges</controllingFieldValue>
+            <valueName>0900	SWITCHES/SENDERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>25 Decals</controllingFieldValue>
+            <valueName>0100	INTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>25 Decals</controllingFieldValue>
+            <valueName>0200	EXTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>26 Fuel Tank</controllingFieldValue>
+            <valueName>0001	FUEL TANK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>26 Fuel Tank</controllingFieldValue>
+            <valueName>0050	FUEL TANK PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>96 Fire</controllingFieldValue>
+            <valueName>0001	FIRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>11 Rear Suspension</controllingFieldValue>
+            <valueName>0001	REAR SUSPENSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>11 Rear Suspension</controllingFieldValue>
+            <valueName>0024	REAR SUSPENSION SWAY BAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>11 Rear Suspension</controllingFieldValue>
+            <valueName>0025	REAR AXLE SUSP. MODIFICATIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>11 Rear Suspension</controllingFieldValue>
+            <valueName>0050	REAR SHOCK ABSORBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>12 Wheel</controllingFieldValue>
+            <valueName>0000	WHEEL MTG HARDWARE--C/F TIRES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>12 Wheel</controllingFieldValue>
+            <valueName>0001	WHEEL STL/HARDWARE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>12 Wheel</controllingFieldValue>
+            <valueName>0011	SPARE WHEEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>12 Wheel</controllingFieldValue>
+            <valueName>0025	TIRE PRESSURE EQUALIZER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>12 Wheel</controllingFieldValue>
+            <valueName>0050	HUB COVERS/10 STUD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0001	ROOF HARNESS/TB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0050	HEADLIGHTS/HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0060	FRONT TURN SIGNALS &amp; WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0075	FOG OR DRIVING LIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0080	BACK-UP LIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0100	ENG./STARTER/INTERMED HARN.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0102	PARTICULATE TRAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0140	ELECTRONIC ENGINE CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0150	CHASSIS HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0200	SHIFT CONTROL ELECTRONIC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0240	TRANSMISSION CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0250	ELECT. CONT PANEL OR BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0253	ELECT ENG &amp; TRANS CONT PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0290	AUX ELECT. CONTROL PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0300	DINEX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0302	DASH/CONSOLE/HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0310	UPPER DASH/MTG,HARNESS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0353	STOP/TAIL/TURN LIGHTS/HARN.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0360	CENTER MTD/ADTL. STOP LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0361	DECELERATION LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0362	MARKER LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0365	REAR SIDE TURN SIGNALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0366	RIGHT TURN HORN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0370	LICENSE PLATE LIGHT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0400	BATT/CABLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0417	ELECT POWER SUPPLY/CABLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0420	JUMP START CONNECTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0425	STARTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0427	STARTER DISENGAGEMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0428	STARTER CABLES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0450	ALTERNATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0455	ALTERNATOR/REG DUAL WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0460	CHARGING SYSTEM WARNING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0465	VANNER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0466	ANTERNATOR BELT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0467	ALTERNATOR PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0500	REAR RUN PANEL OR BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0510	MECH. GAUGES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0511	REAR MTD AIR PRESS GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0512	REAR TRANS TEMP GA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0513	REAR RUN BOX VOLTMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0515	REAR HOURMETER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0516	REAR MTD ENG TEMP GUAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0517	REAR MTD ENG PRESS GUAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0550	ELECTRIC HORNS, DUAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0551	AIR HORN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0576	DOOR ALARMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0577	CRIME ALARM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0578	WINDOW ALARMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0580	FIRE ALARM &amp; OR SUPPRESSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0582	PASS AREA GAS DETECTION SYS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0590	RR BACK UP ALARM (FLOYD BELL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0600	EXTERIOR LIGHTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0625	FLASHING LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0650	INTERIOR LIGHTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0652	AISLE LIGHTING, SEAT RISER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0653	MAP LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0655	READING LIGHTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0660	FLUORESCENT TUBE COVERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0700	ENGINE PROTECTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0702	ENGINE ANALYSIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0725	GPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0730	RADIO/FAREBOX POWER SUPPLY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0735	FAREBOX LIGHT SWITCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0737	WIRING FOR TRANSFER MACHINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0750	RADIO/SPEAKERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0751	BOOM MIKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0752	OUTSIDE SPEAKERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0755	INSIDE SPEAKERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0760	P.A. SYSTEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0763	VOICE ENUNCIATOR SYS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0765	ANTENNA OR RADIO MTG.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0767	2-WAY RADIO MTG BRKT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0769	IGNITION SW CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0770	BRAKE &amp; ACCEL INTERLOCK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0775	HILL HOLDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0800	KNEELING ELECTRICAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0810	ABS EFFECTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0825	DRIVERS FANS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0850	PASSENGER SIGNAL PULL CORD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0852	PASSENGER SIGNAL TOUCH TAPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0860	STOP REQUESTED SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0855	PASSENGER CORD SWITCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0865	PASSENGER CHIME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0900	HEADLIGHT MONITOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0902	VIDEO CAMERA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0903	ELECTRICAL TOWING PLUG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0911	EXIT DOOR WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0912	ENTRANCE DOOR WIRING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0950	HEATER OR A/C CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>13 Electrical</controllingFieldValue>
+            <controllingFieldValue>10 Rear Axle</controllingFieldValue>
+            <valueName>0975	LIFT ELECTRICAL EFFECTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0001	FRONT BODY FRAMING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0050	LEFT SIDE FRAMING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0100	RIGHT SIDEWALL FRAMING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0150	SETTEE &amp; BULKHEAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0200	ROOF FRAMING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0252	FRONT STEPWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0300	FRONT WHEELWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0310	REAR WHEELWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0320	REAR STEPWELL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0350	PLYWOOD FLRG.--TAPPING PLATE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0355	SEAT RISERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0356	FLOORING STRUCTURE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0359	FLOORING REINFORCEMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0360	FLOOR ACCESS PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0370	MISC ACCESS DOORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0400	FRONT DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0404	REAR EMERGENCY DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0405	REAR ENGINE DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0410	EXIT DOORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0412	EMERGENCY DOOR RELEASE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0413	DOOR CONTROL, FRONT SB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0420	RADIATOR ACCESS DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0421	FILTER ACCESS DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0430	DECALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0450	FRONT CAP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0475	FRONT ACCESS DOORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0500	REAR CAP/GRILLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0550	ROOF SKINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0555	ADDITIONAL ROOF VENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0600	LEFT SIDE SKINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0650	RIGHT SIDE SKINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0700	REAR CORNER PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>14 Body</controllingFieldValue>
+            <valueName>0710	GAS SHOCKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0001	RCA FLOORING/TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0025	SSTL INTERIOR TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0050	LEFT SIDEWALL PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0100	RIGHT SIDEWALL PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0150	INT. DUCTING &amp; LIGHT PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0151	ROOF PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0154	CEILING PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0158	LOWERED A/C DUCTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0200	RETURN AIR GRILLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0220	REAR SHELF &amp; SETTEE TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0250	FRONT STEPWELL TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0260	REAR STEPWELL TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0300	DRVR BARRIER--MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0302	FRONT DOOR MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0303	REAR DOOR MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0304	FWD/RR DOOR MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0306	W/C BARRIER MODESTY PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0325	UPPER DRIVERS PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0326	UPPER ENTRANCE DOOR PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0327	UPPER EXIT DOOR PANEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0328	DOOR SEALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0350	GRABRAILS/STANCHIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0451	INTERIOR MIRRORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0500	DRIVER SEAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0560	PASSENGER SEATS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0570	STANCHIONS, VERTICAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0580	SEAT BELTS, Driver&apos;s or passenger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0600	RADIO BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0602	BATT OR DIGITAL RECORDER BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0624	ANTENNA CONDUIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0625	STOWAGE BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0650	SUN VISOR OR SUNSCREEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0680	FIRST AID COMPT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0681	DEST SIGN CLOSEOUT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0685	DECALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0700	LUGGAGE RACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0703	SKI RACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0704	TRANSFER MACHINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0850	FAREBOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0860	STEP NOSING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0904	DRIVER&apos;S CURTAIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0905	WATER BARRIER, DRIVER&apos;S AREA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>15 Interior Trim</controllingFieldValue>
+            <valueName>0906	PASSENGER COUNTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>16 Destination Sign</controllingFieldValue>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0001	DESTINATION SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>16 Destination Sign</controllingFieldValue>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0011	DESTINATION SIGN BAY DOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>16 Destination Sign</controllingFieldValue>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0012	FRT DESTINATION GLAZING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>16 Destination Sign</controllingFieldValue>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0050	SIDE DEST. SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>16 Destination Sign</controllingFieldValue>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0104	REAR RUN SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>16 Destination Sign</controllingFieldValue>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0150	FRONT RUN NO. SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>17 Passenger Lift</controllingFieldValue>
+            <valueName>0050	LIFT CONT/POWER PACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>17 Passenger Lift</controllingFieldValue>
+            <valueName>0100	WHEELCHAIR TIE DOWNS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>17 Passenger Lift</controllingFieldValue>
+            <valueName>0150	LIFT ALARM (FLOYD BELL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>17 Passenger Lift</controllingFieldValue>
+            <valueName>0002	LIFT MECHANICALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0001	EXTERIOR MIRRORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0050	MUD FLAPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0052	CENTER REAR SPLASH SHIELDS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>100	        BIKE RACK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>101	        SKI RACKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0150	LEFT SKIRT PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0200	RIGHT SKIRT PANELS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0300	FENDER FLARES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0301	RUB RAILS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0350	EXTERIOR AD FRAMES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0360	RAIN GUTTERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0400	FRONT BUMPER/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0410	REAR BUMPER MTG.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0450	WINDSHIELD WASHER/WIPER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0460	INTERMITTENT W/S WIPER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0600	LICENSE PLATE FRAME/HOLDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0605	EXTERIOR LOGOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>18 Exterior Trim</controllingFieldValue>
+            <valueName>0610	REFLECTORS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0001	DRIVERS HEATERS/CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0002	DIVER&apos;S HEATER PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0010	DEFROSTER DUCTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0020	DRIVER HEATER CORE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0030	DRIVER HEATER MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0050	HEATER &amp; A/C PLATFORM/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0051	HEATER BOOSTER PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0052	HEATER VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0100	PASSENGER HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0102	AUXILIARY WATER HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0103	HEATER/AIR COND MTG/SEALING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0104	PASS. HEATER/UNDER SEAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0110	PASS. HEATER PIPING/DRAINS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0150	FRONT STEPWELL HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0151	REAR STEPWELL HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0153	LIFT CONTROL BOX HTR DUCTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0220	OUTSIDE AIR DUCT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0250	DRIVER&apos;S AREA BOOSTER FAN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>19 Heater</controllingFieldValue>
+            <valueName>0251	DEFROSTER FAN&apos;S</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0001	AIR CONDITIONING COND. MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0002	AIR CONDITIONING CONDENSER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0003	AIR COND. EVAP COOLER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0004	AIR CONDITION EVAP MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0020	AIR COND PIPING/DRAIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0050	FREON COMPRESSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0051	FREON COMPRESSOR BELT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0052	FREON COMPRESSOR PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>20 Air Conditioning</controllingFieldValue>
+            <valueName>0053	FREON COMPRESSOR IDLER PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0001	ENGINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0045	MISC ENGINE PARTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0050	ENGINE--MOUNTING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0060	TURBO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0100	THROTTLE CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0130	CRUISE CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0150	ALT. MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0160	ENGINE BELT GUARD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0163	ENG/TRANS PAN PROTECTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0164	ENG/BELT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0165	ENGINE PULLEY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0200	MUFFLER/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0201	TAIL PIPE/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0202	EXHAUST SYSTEM REAR ENGINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0203	EXHAUST SYSTEM CLAMPS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0210	EXHAUST BRAKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0230	EXHAUST SYS. INSULATION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0252	AIR CLEANER W/REST. INDICATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0255	AIR INTAKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0280	CHARGE AIR COOLING/PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0300	RADIATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0320	COOLING SYSTEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0340	SURGE TANK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0341	COOLANT SENSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0350	HYD. FAN MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0351	HYD. FAN MOTOR PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0360	FAN CONTROL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0370	HYDRAULIC PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0371	HYDRAULIC PUMP PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0372	HYDRAULIC OIL COOLER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0400	ENGINE OIL FILL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0450	OIL FILTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0460	DIPSTICK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0550	WATER FILTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0600	KIM HOTSTART</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0605	QUICK START /ETHER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0610	BLOCK HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0650	ENGINE FUEL PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0660	ENGINE FUEL PRIMER PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0670	CHASSIS FUEL PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0700	FUEL FILTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0800	ENGINE OIL COOLERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0950	CONSTANT TENSION HOSE CLAMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0450	CONSTANT TENSION HOSE CLAMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0960	HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>01 Engine</controllingFieldValue>
+            <valueName>0970	PRESSURE SENDER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0001	TRANSMISSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0040	RETARDER CONTROLS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0051	TRANS. TAIL SUPPORT/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0070	TRANSMISSION POWER TAKE OFF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0075	ACCUMULATOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0100	TRANSMISSION DIPSTICK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0150	TRANSMISSION COOLER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0203	SHIFT LINKAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0350	TRANSMISSION YOKE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0400	SPEEDO DRIVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0460	HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>02 Transmission</controllingFieldValue>
+            <valueName>0470	SENDER, TEMPERATURE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 Driveline</controllingFieldValue>
+            <valueName>0001	DRIVELINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0100	FRONT SUSP LEVELING VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0110	REAR SUSP LEVELING VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0160	AIR COMPRESSOR PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0163	CHASSIS AIR PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0165	TREADLE VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0168	AIR TANK/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0170	SHOP AIR FILL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0172	FRONT BRAKE CHAMBER HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0173	REAR BRAKE CHAMBER HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0175	AIR TANK DRAIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0180	AIR DRYER/MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0200	AIR COMPRESSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0210	GOVERNOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0350	REAR BRAKE CHAMBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0351	FRONT BRAKE CHAMBERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0400	FRONT DOOR PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0410	REAR DOOR PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0411	DOOR MOTOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0450	TOWING CONNECTION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0600	KNEELING OR DUMP VALVE SYST.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0610	AIR BAGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0650	AIR STARTER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0660	AIR STARTER MTG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0661	AIR STARTER TANK CHRGNG LINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0680	BRAKE LIGHT SWITCH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0681	PARKING BRAKE, AIR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0682	WATTS VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 Piping</controllingFieldValue>
+            <valueName>0683	BRAKE VALVE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0001	STEERING GEAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0002	DRAG LINK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0003	TIE RODS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0004	STEERING PARTS, MISC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0051	STEERING COLUMN TILT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0070	STEERING WHEEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0100	PUMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0110	FRONT POWER STEERING HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0120	REAR POWER STEERING HOSES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0130	LOW FLUID PROBE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05 Steering</controllingFieldValue>
+            <valueName>0131	RESERVOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0001	FRAME RAILS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0050	CHASSIS COMPONENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0070	LOAD LEVELING BRACKETS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0100	DRIVER PLATFORM TB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0150	TOW EYES, FRONT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0151	TOW EYES, REAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0200	BATTERY BOX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0300	ROAD SANDERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>06 Chassis</controllingFieldValue>
+            <valueName>0400	FIRE SUPPRESSION COMPONENTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0160	ABS SENSOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0003	FRONT AXLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0012	AXLE LUBE FITTINGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0013	BEARINGS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0050	FRONT AXLE OIL SEALS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0055	BUMPERS, RUBBER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0100	FRONT MANUAL SLACKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0101	FRONT HALDEX AUTO SLACKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0102	DRUMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 Front Axle</controllingFieldValue>
+            <valueName>0103	BRAKE FOUNDATION / LINING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>08 Front Suspension</controllingFieldValue>
+            <valueName>0001	FRONT SUSPENSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>08 Front Suspension</controllingFieldValue>
+            <valueName>0024	SWAY BAR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>08 Front Suspension</controllingFieldValue>
+            <valueName>0051	FRONT SHOCKS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>08 Front Suspension</controllingFieldValue>
+            <valueName>0060	TORQUE RODS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>21 Windows</controllingFieldValue>
+            <valueName>0001	WINDSHIELD GLAZING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>21 Windows</controllingFieldValue>
+            <valueName>0002	REAR WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>21 Windows</controllingFieldValue>
+            <valueName>0051	DRIVER&apos;S WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>21 Windows</controllingFieldValue>
+            <valueName>0052	RIGHT VISIBILITY WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>21 Windows</controllingFieldValue>
+            <valueName>0100	TRANSOM PASSENGER WINDOWS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>21 Windows</controllingFieldValue>
+            <valueName>0150	FULL SLIDING PASS. WINDOW</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>21 Windows</controllingFieldValue>
+            <valueName>0160	RH FWD FULL SLIDING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>22 Ad Frames</controllingFieldValue>
+            <valueName>0050	AD FRAMES INTERIOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>22 Ad Frames</controllingFieldValue>
+            <valueName>0060	AD FRAMES EXTERIOR</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

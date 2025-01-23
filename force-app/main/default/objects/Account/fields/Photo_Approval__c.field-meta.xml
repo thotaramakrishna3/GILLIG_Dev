@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Photo_Approval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>A checked box indicates that we have received the customer&apos;s approval to utilize images of their bus in marketing materials</description>
+    <externalId>false</externalId>
+    <label>Photo Approval</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

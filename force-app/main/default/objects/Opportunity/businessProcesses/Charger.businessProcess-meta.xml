@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charger</fullName>
+    <description>Electric Bus Charger Opportunities</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>101 - GILLIG Forecast</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>102 - GILLIG Low-No or Grant Forecast</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>201 - GILLIG RFP Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>202 - Supplier RFP Review</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>301 - GILLIG to Contact Customer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>302 - GILLIG to Refer to Supplier</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>303 - Supplier to Contact Customer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>401 - GILLIG to Request Quote</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>402 - Supplier to Quote GILLIG</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>403 - Supplier to Quote Customer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>404 - GILLIG to Quote Customer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>501 - GILLIG Awaiting Customer Decision</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>502 - GILLIG Awaiting PO</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>503 - GILLIG to Issue PO</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>504 - GILLIG to Update PO</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>601 - Supplier to Ship</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>602 - Supplier to Install</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>603 - Supplier to Commission</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>701 - Supplier to Issue Credit Memo</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>702 - Customer to Pay</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>703 - Customer to Update PO</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>704 - Customer Invoice Issue</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>705 - Supplier Invoice Issue</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>901 - Closed%3A Project Complete</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>902 - Closed%3A Non-GILLIG Project</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>903 - Closed%3A No Bus Purchase</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>904 - Closed%3A Customer Delayed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>905 - Closed%3A Customer Cancelled Project</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>906 - Closed%3A Alternate Opportunity</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

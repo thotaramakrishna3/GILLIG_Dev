@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Flyer_Contracts</fullName>
+    <columns>NAME</columns>
+    <columns>Award_Date__c</columns>
+    <columns>Bid_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Competitor__c</field>
+        <operation>equals</operation>
+        <value>New Flyer</value>
+    </filters>
+    <label>New Flyer Contracts</label>
+</ListView>

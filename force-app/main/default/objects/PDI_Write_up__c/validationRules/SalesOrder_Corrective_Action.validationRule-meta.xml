@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesOrder_Corrective_Action</fullName>
+    <active>true</active>
+    <description>Compares the Sales Order on the Corrective Action bus to the PDI Unit&apos;s Sales Order to validate that they are from the same build</description>
+    <errorConditionFormula>PDI_Unit__r.Sales_Order__c = Corrective_Action_First_Bus__r.Sales_Order__c</errorConditionFormula>
+    <errorDisplayField>Corrective_Action_First_Bus__c</errorDisplayField>
+    <errorMessage>The Corrective Action First Unit must be from the same Sales Order as the PDI Unit</errorMessage>
+</ValidationRule>

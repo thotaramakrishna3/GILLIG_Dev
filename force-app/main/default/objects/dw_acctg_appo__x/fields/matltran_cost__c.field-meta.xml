@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>matltran_cost__c</fullName>
+    <description>matltran_cost</description>
+    <externalDeveloperName>matltran_cost</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>matltran_cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>8</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

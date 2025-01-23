@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Territory__c</fullName>
+    <description>The Territory based on the customer care department (field service)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Territory based on the customer care department (field service)</inlineHelpText>
+    <label>Service Territory</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

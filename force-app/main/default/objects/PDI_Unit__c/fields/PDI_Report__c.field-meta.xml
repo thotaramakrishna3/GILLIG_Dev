@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDI_Report__c</fullName>
+    <externalId>false</externalId>
+    <label>PDI Report</label>
+    <referenceTo>PDI_Report__c</referenceTo>
+    <relationshipLabel>PDI Units</relationshipLabel>
+    <relationshipName>PDI_Units</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

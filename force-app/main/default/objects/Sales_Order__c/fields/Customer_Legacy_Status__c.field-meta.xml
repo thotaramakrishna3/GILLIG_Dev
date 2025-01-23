@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Legacy_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Legacy Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Customer</fullName>
+                <default>true</default>
+                <label>New Customer</label>
+            </value>
+            <value>
+                <fullName>Return Customer</fullName>
+                <default>false</default>
+                <label>Return Customer</label>
+            </value>
+            <value>
+                <fullName>New Mode for Existing Customer</fullName>
+                <default>false</default>
+                <label>New Mode for Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <label>Existing Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

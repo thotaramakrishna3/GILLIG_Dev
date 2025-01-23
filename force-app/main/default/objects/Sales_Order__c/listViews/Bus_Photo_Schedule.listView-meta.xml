@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bus_Photo_Schedule</fullName>
+    <columns>Bus_Photos_Due__c</columns>
+    <columns>NAME</columns>
+    <columns>Quantity__c</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Length__c</columns>
+    <columns>Mode__c</columns>
+    <columns>Style__c</columns>
+    <columns>Bus_Photos_Notes__c</columns>
+    <columns>Bus_Photos_Processor__c</columns>
+    <columns>Bus_Photos_Date__c</columns>
+    <columns>Bus_Photos_SN_Captured__c</columns>
+    <columns>Bus_Photos_Identical_To__c</columns>
+    <columns>Manuals_Identical_To__c</columns>
+    <columns>Customer_Legacy_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.Planned</value>
+    </filters>
+    <filters>
+        <field>Bus_Photos_Due__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2022</value>
+    </filters>
+    <filters>
+        <field>Bus_Photos_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Bus Photo Schedule</label>
+</ListView>

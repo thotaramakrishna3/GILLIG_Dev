@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Archived_Split_Production_Orders</fullName>
+    <active>true</active>
+    <description>The production orders that were split prior to Sales order splits and do not have any buses</description>
+    <label>Archived Split Production Orders</label>
+    <picklistValues>
+        <picklist>Buy_Design_Auditors__c</picklist>
+        <values>
+            <fullName>Fred Cruz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Roderick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jeff Ralleta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joan Seei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ron Quebbemanman</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Buy_Design_Check__c</picklist>
+        <values>
+            <fullName>Aaron DeGracia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cesar Gonzalez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%2EJ%2E Mariscal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fred Cruz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Roderick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Abrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keith Lynch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Rands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Processor__c</picklist>
+        <values>
+            <fullName>Aaron DeGracia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cesar Gonzalez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%2EJ%2E Mariscal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fred Cruz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Roderick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Abrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keith Lynch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Rands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X1st_Check_Auditors__c</picklist>
+        <values>
+            <fullName>Aaron DeGarcia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Curtis Silvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daniel Garcia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fabian Alarcon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jesus Ruiz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jose Ocampo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keith Lynch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Rands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tyler Talavera</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>X2nd_Check_Auditors__c</picklist>
+        <values>
+            <fullName>Aaron DeGracia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cesar Gonzalez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E%2EJ%2E Mariscal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fred Cruz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greg Roderick</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joe Abrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keith Lynch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kevin Fernandez</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Michael Rands</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

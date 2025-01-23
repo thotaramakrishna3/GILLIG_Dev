@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Board_Manager__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Hold is the user can Update operations. Defined only because encrypted field can&apos;t not be used in filters</description>
+    <externalId>false</externalId>
+    <label>Display Board Manager</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

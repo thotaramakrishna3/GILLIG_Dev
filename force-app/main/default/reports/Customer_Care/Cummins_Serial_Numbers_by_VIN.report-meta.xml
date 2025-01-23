@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Customer_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Chassis_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Buspart_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Serial_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Created_Date__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Product_Category__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Remarks__c</field>
+    </columns>
+    <description>Cummins Component Serial Numbers by VIN previous Fiscal Qtr.</description>
+    <filter>
+        <criteriaItems>
+            <column>eCard_Serial_Number_Log__x.Buspart_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,BATTERY EQUALIZER,E-BUS BATTERY PACK #1,E-BUS BATTERY PACK #2,E-BUS BATTERY PACK #3,E-BUS BATTERY PACK #4,E-BUS BATTERY PACK #5,E-BUS BATTERY PACK #6,E-BUS BATTERY PACK #7,E-BUS CHARGER CONTROLLER #1,E-BUS CHARGER CONTROLLER #2,E-BUS CUMMINS TELEMATICS,E-BUS DC-DC CONVERTER #1,E-BUS DC-DC CONVERTER #2,E-BUS HVDC JUNCTION BOX,E-BUS MASTER BMS,E-BUS SCM,E-BUS TRACTION MOTOR,E-BUS TRACTION MOTOR INVERTER,ENGINE,MUFFLER,DPR,SCR,MUFFLER -- ISB</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Cummins Serial Numbers by VIN</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Serial_Number_Log__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>eCard_Serial_Number_Log__x.Serial_Number__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>eCard_Serial_Number_Log__x.Created_Date__c</dateColumn>
+        <interval>INTERVAL_PREV1</interval>
+    </timeFrameFilter>
+</Report>

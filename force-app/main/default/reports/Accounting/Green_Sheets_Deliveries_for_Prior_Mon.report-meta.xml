@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Sales_Order__c.Name</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Mode__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Green_Sheet_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Delivery_Driver__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Shipped_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Buses__r$Delivered_Date__c</field>
+    </columns>
+    <description>Run for Delivery Accrual</description>
+    <format>Tabular</format>
+    <name>Green Sheets &amp; Deliveries for Prior Mon.</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Buses__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Account.Buses__r$Green_Sheet_Date__c</dateColumn>
+        <interval>INTERVAL_LASTMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>numerSerial</fullName>
+    <active>true</active>
+    <description>Must have a valid serial number</description>
+    <errorConditionFormula>NOT(ISNUMBER( Serial_Number__c )) &amp;&amp; not(ISBLANK( Serial_Number__c ))</errorConditionFormula>
+    <errorDisplayField>Serial_Number__c</errorDisplayField>
+    <errorMessage>Please enter a valid number great than zero and less than 999,999</errorMessage>
+</ValidationRule>

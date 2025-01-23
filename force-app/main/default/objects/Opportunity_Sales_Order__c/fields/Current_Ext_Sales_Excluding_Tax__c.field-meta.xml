@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Ext_Sales_Excluding_Tax__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Sales_Order__r.Current_Price__c - Sales_Order__r.Current_Tax__c) *  Quantity__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current Ext Sales (Excluding Tax)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

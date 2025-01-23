@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Header_Loaded__c</fullName>
+    <description>Confirms the following fields are populated: Brakes, Axle Ratio, Engine, Front Axle, HVAC, ITS System, Passenger Seating Manufacturer, Rear Axle, Rear Door, Transmission, Wheelchair Ramp) or Start Date was before 10/1/2017 (Old Data Issue)</description>
+    <externalId>false</externalId>
+    <formula>or(not(or( isblank(text(Brakes__c)) , isblank(text( Axle_Ratio__c )), isblank(text( Engine__c )), isblank(text( Front_Axle__c )),isblank(text( HVAC_System__c )),isblank(text( ITS_System__c )),isblank(text( Passenger_Seating_Manufacturer__c )),isblank(text( Rear_Axle__c )),isblank(text( Rear_Door__c )),isblank(text( Transmission__c )),isblank(text( Wheelchair_Ramp__c )))), Start_Date__c &lt;date(2017,10,1))</formula>
+    <label>Order Header Loaded</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Tracker__c</fullName>
+    <description>The time taken for the project to progress from the Business Case Phase to the Complete stage (auto calculated by flow)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The time in days taken by the project to progress from the Business Case Phase to completion</inlineHelpText>
+    <label>Time Tracker (Days)</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

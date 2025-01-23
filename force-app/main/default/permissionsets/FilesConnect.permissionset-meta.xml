@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>With Salesforce License</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>FilesConnect</label>
+    <license>Salesforce</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ContentHubUser</name>
+    </userPermissions>
+</PermissionSet>

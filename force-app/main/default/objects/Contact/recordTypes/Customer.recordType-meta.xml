@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer</fullName>
+    <active>true</active>
+    <label>Customer</label>
+    <picklistValues>
+        <picklist>Contact_Lists__c</picklist>
+        <values>
+            <fullName>APTA Invite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounts Payable Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bus Delivery Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bus Shipment Notification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Correspondent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Reference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delivery List Reference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Service Bulletin Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holiday Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice %2F MSO Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maintenance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manuals Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parts Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Production Meeting Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primary Parts Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recall Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sees Candy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spares Delivery Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warranty Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCard Contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

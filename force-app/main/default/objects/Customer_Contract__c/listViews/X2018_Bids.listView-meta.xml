@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2018_Bids</fullName>
+    <columns>NAME</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Bid_Type__c</columns>
+    <columns>Bid_Date__c</columns>
+    <columns>Competitor__c</columns>
+    <columns>Project_Sales_Manager__c</columns>
+    <columns>Bid_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Award_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2018</value>
+    </filters>
+    <filters>
+        <field>Award_Date__c</field>
+        <operation>lessThan</operation>
+        <value>1/1/2019</value>
+    </filters>
+    <label>2018 Bids</label>
+</ListView>

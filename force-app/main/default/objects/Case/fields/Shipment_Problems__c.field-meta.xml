@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipment_Problems__c</fullName>
+    <externalId>false</externalId>
+    <label>Shipment Problems</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Material received is not what was ordered</fullName>
+                <default>false</default>
+                <label>Material received is not what was ordered</label>
+            </value>
+            <value>
+                <fullName>Pallets are incorrect size or grade</fullName>
+                <default>false</default>
+                <label>Pallets are incorrect size or grade</label>
+            </value>
+            <value>
+                <fullName>Shipment delivered with incorrect address</fullName>
+                <default>false</default>
+                <label>Shipment delivered with incorrect address</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

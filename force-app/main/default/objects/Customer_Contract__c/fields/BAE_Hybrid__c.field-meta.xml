@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BAE_Hybrid__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>BAE Hybrid option listed</description>
+    <externalId>false</externalId>
+    <label>BAE Hybrid</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

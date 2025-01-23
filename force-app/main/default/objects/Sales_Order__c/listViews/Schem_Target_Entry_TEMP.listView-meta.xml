@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schem_Target_Entry_TEMP</fullName>
+    <columns>Serial_Numbers__c</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Schematics_Manual_Completion_Date__c</columns>
+    <columns>Schematics_Manual_Processor__c</columns>
+    <columns>Schematics_Manual_Active_Days__c</columns>
+    <columns>Schem_New_Dwgs__c</columns>
+    <columns>Schem_Dwg_Target__c</columns>
+    <columns>Schem_Rating__c</columns>
+    <columns>Schem_Reason_Code__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.Planned</value>
+    </filters>
+    <filters>
+        <field>Schematics_Manual_Identical_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Schematics_Manual_Completion_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Manuals_Identical_To__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Schem_New_Dwgs__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Schem_New_Dwgs__c</field>
+        <operation>lessOrEqual</operation>
+        <value>13</value>
+    </filters>
+    <label>Schem Target Entry TEMP</label>
+</ListView>

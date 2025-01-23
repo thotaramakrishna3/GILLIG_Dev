@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Once the fields are populated, change the status to the next step to move the process along.</inlineHelpText>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1. Draft</fullName>
+                <default>true</default>
+                <label>1. Draft</label>
+            </value>
+            <value>
+                <fullName>2. Awaiting Approval</fullName>
+                <default>false</default>
+                <label>2. Awaiting Approval</label>
+            </value>
+            <value>
+                <fullName>3. Awaiting Bus Assignment</fullName>
+                <default>false</default>
+                <label>3. Awaiting Bus Assignment</label>
+            </value>
+            <value>
+                <fullName>4. Submitted</fullName>
+                <default>false</default>
+                <label>4. Submitted</label>
+            </value>
+            <value>
+                <fullName>5. Held by Engineering</fullName>
+                <default>false</default>
+                <label>5. Held by Engineering</label>
+            </value>
+            <value>
+                <fullName>5. On Demo</fullName>
+                <default>false</default>
+                <label>5. On Demo</label>
+            </value>
+            <value>
+                <fullName>6. Hold Released</fullName>
+                <default>false</default>
+                <label>6. Hold Released</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

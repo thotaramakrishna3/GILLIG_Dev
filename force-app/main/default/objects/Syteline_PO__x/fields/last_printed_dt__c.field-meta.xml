@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>last_printed_dt__c</fullName>
+    <description>last_printed_dt</description>
+    <externalDeveloperName>last_printed_dt</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>last_printed_dt</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Type__c</fullName>
+    <description>The 3 different kinds of Campaign Case
+SRC -Manufacturer or NHTSA determines that a vehicle creates an unreasonable safety risk or fails to meet minimum safety standards
+FSC-Product improvement update impacting multiple customers
+CSC -Product improvement update impacting single customer</description>
+    <externalId>false</externalId>
+    <label>Campaign Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Safety Recall Campaign</fullName>
+                <default>false</default>
+                <label>Safety Recall Campaign</label>
+            </value>
+            <value>
+                <fullName>Field Service Campaign</fullName>
+                <default>false</default>
+                <label>Field Service Campaign</label>
+            </value>
+            <value>
+                <fullName>Customer Service Campaign</fullName>
+                <default>false</default>
+                <label>Customer Service Campaign</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

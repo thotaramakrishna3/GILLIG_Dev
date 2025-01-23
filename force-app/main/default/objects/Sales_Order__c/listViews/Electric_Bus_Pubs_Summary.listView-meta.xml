@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Electric_Bus_Pubs_Summary</fullName>
+    <columns>Start_Date__c</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Serial_Numbers__c</columns>
+    <columns>Length__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>TW_Ship_Due_Date__c</columns>
+    <columns>Parts_Manual_Ship_Due_Date__c</columns>
+    <columns>Manuals_Identical_To__c</columns>
+    <columns>Manual_Completion_Date__c</columns>
+    <columns>Manual_Notes__c</columns>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.Planned</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2018</value>
+    </filters>
+    <filters>
+        <field>Mode__c</field>
+        <operation>equals</operation>
+        <value>Electric</value>
+    </filters>
+    <label>Electric Bus Pubs Summary</label>
+</ListView>

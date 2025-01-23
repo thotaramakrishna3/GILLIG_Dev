@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Description</fullName>
+    <active>false</active>
+    <description>Value Description required when Required Value</description>
+    <errorConditionFormula>ISBLANK( Value_Description__c )  &amp;&amp;  Value_Required_Indicator__c</errorConditionFormula>
+    <errorMessage>Please enter a Value description when setting Value Required</errorMessage>
+</ValidationRule>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Customer_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Chassis_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Product_Category__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Buspart_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Serial_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Created_Date__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Createdby_Name__c</field>
+    </columns>
+    <description>for Pubs, with ENGINE filter on</description>
+    <filter>
+        <criteriaItems>
+            <column>eCard_Serial_Number_Log__x.Chassis_Number__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>B093757</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>PUBS eCard Serial Numbers ALL</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Serial_Number_Log__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>eCard_Serial_Number_Log__x.Buspart_Name__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>eCard_Serial_Number_Log__x.Created_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2022-03-11</startDate>
+    </timeFrameFilter>
+</Report>

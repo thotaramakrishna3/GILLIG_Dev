@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Tickets</fullName>
+    <columns>NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Date_Requested__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Status__c</columns>
+    <columns>Buy_Design_Section__c</columns>
+    <columns>Problem_Description__c</columns>
+    <columns>Lotus_Ticket_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Complete</value>
+    </filters>
+    <label>Open Tickets</label>
+</ListView>

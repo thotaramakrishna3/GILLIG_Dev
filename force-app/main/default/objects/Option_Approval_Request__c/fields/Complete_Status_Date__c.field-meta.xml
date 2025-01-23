@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complete_Status_Date__c</fullName>
+    <description>The autofilled date when status changes to approve or disapprove or canceled or see details or conditional or deferred from flow</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The autofilled date when status changes to approve or disapprove or canceled or see details or conditional or deferred</inlineHelpText>
+    <label>Complete Status Date</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

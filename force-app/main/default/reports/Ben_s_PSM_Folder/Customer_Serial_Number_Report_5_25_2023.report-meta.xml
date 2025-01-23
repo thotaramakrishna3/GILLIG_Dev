@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>eCard_Serial_Export__x.customer_name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.sales_order_number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.chassis_number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.manufacture__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.model_number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.bus_area__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.brand__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.buspart_name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Export__x.serial_number__c</field>
+    </columns>
+    <description>This report will output the serial numbers for the customer by the base serial number in a fleet. If an order is split you will need to enter the starting serial number for the split fleets as a separate report.</description>
+    <filter>
+        <criteriaItems>
+            <column>eCard_Serial_Export__x.sales_order_number__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>197642</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Customer Serial Number Report (5/25/2023</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Serial_Export__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>eCard_Serial_Export__x.chassis_number__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>eCard_Serial_Export__x.created_date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

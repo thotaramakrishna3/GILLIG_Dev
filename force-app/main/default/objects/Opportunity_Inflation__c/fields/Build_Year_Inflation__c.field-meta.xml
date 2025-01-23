@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Build_Year_Inflation__c</fullName>
+    <externalId>false</externalId>
+    <label>Build Year Inflation</label>
+    <referenceTo>Margin_Assumption__c</referenceTo>
+    <relationshipName>Build_Year_Inflation</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

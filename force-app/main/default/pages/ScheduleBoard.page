@@ -1,0 +1,1762 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" controller="DisplayBoardController">
+	<apex:stylesheet value="{!URLFOR($Resource.Scheduling,'resources/css/bootstrap.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.jQueryUICSS)}"/>
+    
+    <apex:includeScript value="{!URLFOR($Resource.Scheduling, 'resources/js/jquery.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Scheduling, 'resources/js/jquery-ui.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.TouchPunch2)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Scheduling, 'resources/js/bootstrap.min.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search, 'defiant.js-master/src/defiant.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/string.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/ie.polyfill.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/json.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/json.search.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/json.toXML.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/json.mtrace.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/node.toJSON.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/node.select.js')}"/>
+	<apex:includeScript value="{!URLFOR($Resource.Defiant_JSON_search,'defiant.js-master/src/node.serialize.js')}"/>
+	
+    <!-- Modified jQuery UI Touch Punch Plug-in -->
+    <!-- Original can be found here http://touchpunch.furf.com/ -->
+	<apex:form >
+		<apex:actionRegion >
+		    <apex:actionFunction action="{!save}" oncomplete="saveComplete();" name="saveAction">
+		        <apex:param name="saveInputJson" assignTo="{!saveInputJson}" value="" />
+		        <apex:param name="userRecordID" assignTo="{!userRecordID}" value="" />
+		    </apex:actionFunction>
+		    
+		    <apex:actionFunction action="{!validatePassword}" oncomplete="validateComplete();" name="validatePassword" rerender="updateValue">
+		        <apex:param name="userRecordID" assignTo="{!userRecordID}" value="" />
+		        <apex:param name="password" assignTo="{!password}" value="" />
+		    </apex:actionFunction>
+		    
+		    <apex:outputPanel id="updateValue">
+		    	<script>
+		    		var validManager = {!validManager};
+		    	</script>
+		    </apex:outputPanel>
+		</apex:actionRegion>
+	
+        <!-- <apex:outputText value="Watch this counter: {!count}" id="counter"/> -->
+        <apex:actionPoller action="{!incrementCounter}" reRender="counter" interval="600"/>
+	</apex:form>
+    
+	<style>
+	    body {
+        	font-size: 0.35em;
+	    }
+	
+		#header {
+        	font-size: 2em;
+			text-align: center;
+			font-weight: bold;
+        	position: fixed;
+        	top: 0;
+        	width: 100%;
+        	z-index: 99900;
+		}
+        
+        #header button {
+        	border: none !important;
+        }
+        
+        #content {
+        	display: table;
+        	margin: auto;
+		}
+        
+        .btn-toolbar {
+        	margin-left: 0;
+        
+        	display: table;
+        	margin: auto;
+        }
+	
+        .ui-autocomplete {
+        	font-size: 2em !important;
+        }
+        
+        .selected-slot {
+        	background-color: tomato;
+        }
+        
+	    .week {
+	        vertical-align: top;
+	        border-style: solid; 
+	        border-width: 1px; 
+	        border-color: #ddd;
+	        border-spacing: 0;
+	        font-family: Lucida Grande,Helvetica,Arial,Verdana,sans-serif;
+	        float: left;
+	    }
+	
+	    .week>tbody>tr>th {
+	        padding: 1px;
+	    }
+	
+	    .week>tbody>tr>td {
+	        border-top: none;
+	        padding: 0px;
+	        line-height: 1;
+	    }
+	
+	    .bottom-border-dotted {
+	        border-bottom: 1px dotted #ddd;
+	    }
+	
+	    .bottom-border-solid {
+	        border-bottom: 1px solid #FF5733;
+	    }
+	    
+	    .hidden {
+	    	display: none;
+	    }
+   		
+   		.float-left {
+   			float: left;
+   		}
+   		
+   		.float-right {
+   			float: right;
+   		}
+        
+        .bus {
+	        margin: 1px;
+	        border-radius: 4px;
+	        text-align: center;
+	        padding: 2px;
+	    }
+	    
+	    .multi-slot-bus,
+	    .multi-slot-bus-first {
+	    	margin-bottom: 0px;
+	    	border-bottom-left-radius: 0px;
+	    	border-bottom-right-radius: 0px;
+	    	padding-bottom: 3px !important;
+	    }
+	    
+	    .multi-slot-bus,
+	    .multi-slot-bus-last {
+	    	margin-top: 0px;
+	    	border-top-left-radius: 0px;
+	    	border-top-right-radius: 0px;
+	    	padding-top: 3px !important;
+	    }
+	    
+        .modal-backdrop {
+        	z-index: 99920;
+        }
+        
+        .modal {
+        	font-size: 2em;
+        	z-index: 99930;
+        }
+        
+        .dropdown-menu {
+        	font-size: inherit;
+        }
+        
+        .scrollable-menu {
+		    height: auto;
+		    max-height: 200px;
+		    overflow-x: hidden;
+		}
+		
+		.checkbox {
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		
+		.checkbox input[type=checkbox] {
+			margin-left: 0px;
+		}
+		
+		.modal-header {
+			padding: 10px;
+		}
+		
+		.form-control {
+			font-size: inherit;
+			margin: 1px;
+			padding: 2px;
+		}
+		
+		.grayout {
+       		opacity: 0.1;
+       	}
+       	
+       	.input-group-addon {
+       		font-size: inherit;
+       		padding-top: 0px;
+       		padding-bottom: 0px;
+       	}
+       	
+       	.message {
+       		padding-top: 0px;
+       		padding-bottom: 0px;
+       		margin-left: 0px;
+       		margin-right: 0px;
+       		margin-bottom: 4px;
+       	}
+       	
+       	.message > .close {
+       		top: 1px !important;
+       		font-size: inherit !important;
+       	}
+       	
+       	.dropdown > .btn {
+       		width: 100%;
+       		text-align: left;
+       	}
+       	
+       	.dropdown > .btn > .caret {
+       		float: right;
+       	}
+       	
+        .btn-toolbar .btn {
+        	float: none;
+        }
+
+		.checkbox input[type=checkbox] {
+			margin: 1px;
+			position: inherit;
+			padding: 2px;
+		}
+		
+		input[type="text"], input[type="password"], input[type="number"], input[type="date"] {
+			height: 12px;
+		}
+		
+		::-webkit-inner-spin-button {
+			display: none;
+		}
+		
+		.ui-autocomplete {
+			z-index: 99940;
+			max-height: 500px;
+			overflow-y: auto;
+			overflow-x: hidden;
+		}
+        
+        .clear {
+        	clear: both;
+        }
+        
+        .holiday, .bus-placeholder {
+        	height:100%;
+        	width: 100%;
+        }
+        
+        .selected-bus-placeholder {
+        	background-color: lightblue !important;
+        }
+        
+        .toolbar-info {
+        	padding-left: 7px;
+        	padding-top: 3px;
+        	margin-bottom: 0px;
+        }
+        
+        .bus-line-one {
+        	/*font-size: 0.9em;*/
+        }
+        
+        .bus-line-two {
+        	/*font-size: 0.9em;*/
+        }
+	</style>
+	
+	<script>
+		$j = jQuery.noConflict();
+		var futureHoldingVisible = false;
+		var isLocked = true;
+		var fullView = false;
+		var selectedSlotsInfo = [];
+		var isHistory = false;
+    	var lastEmptySlot;
+    	var weekWidth;
+        var contentWidth;
+    	var slotHeight;
+        var selectedBusCount = 0;
+    	var touchStartX;
+    	var touchStartY;
+
+		var displayBoardDataJson = '{!DisplayBoardData}';
+	  	var displayBoardData = JSON.parse( displayBoardDataJson);
+	  	var settings = displayBoardData.settings;
+	  	var schedules = displayBoardData.schedules;
+		var filterFields = JSON.parse('{!DisplayBoardFilterFields}');
+		var historyValues = JSON.parse('{!DisplayBoardHistoryDetails}');
+		var userValues = JSON.parse('{!DisplayBoardUserDetails}');
+  		var urlParams;
+    
+		var templates = new Object();
+
+		templates.bus = 
+			'<div class="bus [MULTI-SLOT-BUS-CLASS]" style="[BUS-STYLE]" data-record-id="[RECORD-ID]" data-serial-number="[SERIAL-NUMBER]" data-slot-size="[SLOT-SIZE]" data-multi-slot-sequence="[MULTI-SLOT-SEQUENCE]">' +
+            '	<span class="bus-line-one" style="[BUS-LINE-ONE-STYLE]">[COMPANY-NAME]</span><br/>' +
+        	'	<span class="bus-line-two" style="[BUS-LINE-TWO-STYLE]">[SERIAL-NUMBER] [LENGTH-DISPLAY] [STYLE-DISPLAY] [SEQUENCE-NUMBER] [IS-PILOT]</span>' +
+            '</div>';
+
+		templates.busPlaceholder = 
+            '<div class="bus-placeholder" style="[PLACEHOLDER-STYLE]">' +
+            '	[CONTENT]' +
+            '</div>';
+            
+        templates.holidayPlaceholder = 
+            '<div class="holiday holiday-placeholder" style="[HOLIDAY-PLACEHOLDER-STYLE]">' +
+            '	[CONTENT]' +
+            '</div>';
+    
+    	templates.slot = 
+            '<tr class="slot-row [SLOT-CLASS]">' +
+            '	<td class="slot"  oncontextmenu="slotContextMenu($j(this)); return false;" data-week-index="[WEEK-INDEX]" data-slot-index="[SLOT-INDEX]">' +
+            '		[CONTENT]' +
+           	'	</td>' +
+            '</tr>';
+    
+        templates.weekHeader = 
+			'<tr>' +
+            '	<th style="[WEEK-HEADER-STYLE]">' +
+            '		<span class="float-left">&nbsp;[LEFT-CONTENT]</span><span class="float-right">[RIGHT-CONTENT]&nbsp;</span>' +
+            '	</th>' +
+            '</tr>';
+
+		templates.week = 
+            '<table class="week [WEEK-CLASS]" style="[WEEK-STYLE]" data-week-index="[WEEK-INDEX]">' + 
+            '	[WEEK-HEADER]' +
+            '   [CONTENT]' +
+            '</table>';
+
+		window.onbeforeunload = confirmNavigateAway;
+
+		$j(document).ready(function() {
+            $j('body').css('background-color', settings.colors.pageBackGround);
+            
+            setUrlParams();
+            touchInit();
+			isHistory = (urlParams.historyid)? true: false;
+
+			buildSchedules();
+            buildSettings();
+            buildVerification();
+            buildHistory();
+            
+            $j('.dropdown-menu li a').on('click', function() {
+				$j(this).parents('.dropdown').find('.btn').html($j(this).text() + ' <span class="caret"></span>');
+				$j(this).parents('.dropdown').find('.btn').val($j(this).data('value'));
+			});
+            //	$('.bus').draggable();
+            //     $('.bus-placeholder').droppable();
+			futureHoldingVisible = !futureHoldingVisible;
+			toggleFutureHolding();
+			checkPageDirty();
+			$j('#header').show();
+            
+			if(isHistory) {				
+				$j('#lockButton').prop("disabled",true);
+				$j('#saveButton').prop("disabled",true);
+				$j('#undoButton').prop("disabled",true);
+                $j('#refreshButton').prop("disabled",true);
+                $j('#clearSelectionButton').prop("disabled",true);
+			}
+			
+			$j('#lastSaveLabel').text('Last refreshed on ' + settings.lastRefreshedTime);
+            $j('#content').css('padding-top', $j('#header').outerHeight(true) + 'px');
+            
+			if(displayBoardData.rogueBusesDetails) {
+				setTimeout(function(){ alert(displayBoardData.rogueBusesDetails); }, 250);
+			}
+        }).disableSelection();
+
+    	/**** START: Build DOM ****/
+    
+    var mouseMoved = false;
+    function touchHandler(event) {
+        // Declare the default mouse event.
+        var mouseEvent = "mousedown";
+        // Create the event to transmit.
+        var simulatedEvent = document.createEvent("MouseEvent");
+
+        switch (event.type) {
+        case "touchstart":
+            mouseEvent = "mousedown";
+            break;
+        case "touchmove":
+            /*
+            * If this has been hit, then it's a move and a mouseup, not a click
+            * will be transmitted.
+            */
+            mouseMoved = true;
+            mouseEvent = "mousemove";
+            break;
+        case "touchend":
+            /*
+            * Check to see if a touchmove event has been fired. If it has
+            * it means this have been a move and not a click, if not
+            * transmit a mouse click event.
+            */
+            if (!mouseMoved) {
+                mouseEvent = "click";
+            } else {
+                mouseEvent = "mouseup";
+            }
+            // Initialize the mouseMove flag back to false.
+            mouseMoved = false;
+            break;
+        }
+
+        var touch = event.changedTouches[0];
+
+        /*
+         * Build the simulated mouse event to fire on touch events.
+         */
+        simulatedEvent.initMouseEvent(mouseEvent, true, true, window, 1,
+        touch.screenX, touch.screenY,
+        touch.clientX, touch.clientY, false,
+        false, false, false, 0, null);
+
+        /*
+         * Transmit the simulated event to the target. This, in combination
+         * with the case statement above, ensures that click events are still
+         * transmitted and bubbled up the chain.
+         */
+        touch.target.dispatchEvent(simulatedEvent);
+
+        /*
+         * Prevent default dragging of element.
+         */
+        event.preventDefault();
+    }
+    
+    function touchInit() {
+    document.addEventListener("touchstart", touchHandler, true);
+    document.addEventListener("touchmove", touchHandler, true);
+    document.addEventListener("touchend", touchHandler, true);
+    document.addEventListener("touchcancel", touchHandler, true);
+}
+    	function buildVerification() {
+			var html = '<li><a href="#" data-value="">- Select User -</a></li>';
+			
+			for(var index = 0; index < userValues.length; index++) {
+				html += '<li><a href="#" data-value="' + userValues[index].recordID + '">' + userValues[index].userName + '</a></li>';
+			}
+			
+			$j('#userNameValues').append(html);
+		}
+		
+		function buildHistory() {
+			var html = '<li><a href="#" data-value="">- Current Schedule -</a></li>';
+			
+			for(var index = 0; index < historyValues.length; index++) {
+				html += '<li><a href="#" data-value="' + historyValues[index].historyRecordID + '">' + historyValues[index].savedTime + ' | ' + historyValues[index].savedByName + '</a></li>';
+			}
+			
+			$j('#historyValues').append(html);
+			
+			$j('#historyValues li a').on('click', function() {
+				navigateHistory($j(this).data('value'));
+			});
+			
+			if(isHistory) {
+				for(var index = 0; index < historyValues.length; index++) {
+					if(historyValues[index].historyRecordId == urlParams.historyId) {
+						$j('#historyDropdown').text(historyValues[index].savedTime + ' | ' + historyValues[index].savedByName);
+						$j('#historyDropdown').val(urlParams.historyId);
+						break;
+					}
+				}
+			}
+		}
+    
+		function buildSchedules() {
+			var contentHtml = '';
+			var weeksHtml = '';
+			
+			for(var weekCount = 0; weekCount < schedules.length; weekCount++) {
+				weeksHtml += buildWeek(schedules[weekCount]);			
+			}
+
+            $j('#content').html(weeksHtml + '<span class="clear"></span>');
+            setDimensions(true);
+            init($j('#content'));
+		}
+    
+    	function buildWeek(weekSchedule) {
+            var weekStyle = '';
+			var slotsHtml = '';
+			
+			for(var slotCount = 0; slotCount < settings.slotsPerWeek; slotCount++) {
+				var cssClass = '';
+				
+				if(weekSchedule.slots[slotCount].isFutureHoldingSlot) {
+					cssClass = 'bottom-border-dotted';
+				} else if(slotCount == settings.slotsPerWeek - 1) {
+					cssClass = 'bottom-border-solid';
+				} else if(weekSchedule.slots[slotCount].slotDate == weekSchedule.slots[slotCount + 1].slotDate){
+					cssClass = 'bottom-border-dotted';
+				} else {
+					cssClass = 'bottom-border-solid';
+				}
+				
+				if(slotCount >= settings.visibleSlots) {
+					if(fullView) {
+						cssClass += ' hidden-slot';
+					} else {
+						cssClass += ' hidden-slot hidden';
+					}
+				}
+	
+				slotsHtml += templates.slot
+								.replace('[WEEK-INDEX]', weekSchedule.weekIndex)
+								.replace('[SLOT-INDEX]', slotCount)
+								.replace('[SLOT-CLASS]', cssClass)
+								.replace('[CONTENT]', buildSlot(weekSchedule.slots[slotCount]));
+			}
+			
+			var leftContent = '';
+			var rightContent = '';
+			var weekHeaderStyle = '';
+			
+			weekHeaderStyle += 'border:2px solid ';
+			
+			var weekClass = '';
+			
+			if(weekSchedule.isFutureHoldingWeek) {
+				weekClass = 'future-holding-week';
+				weekHeaderStyle += settings.colors.futureHoldingsWeek + ';background-color:' + settings.colors.futureHoldingsWeek + ';';
+			} else {
+				weekClass = 'scheduled-week';
+				leftContent = weekSchedule.weekDisplayString;
+				rightContent = weekSchedule.totalScheduledBuses + '/' + weekSchedule.maxSchedulableBuses;
+				
+				switch(weekSchedule.weekQuarter) {
+					case 1:
+						weekHeaderStyle += settings.colors.q1;
+						break;
+						
+					case 2:
+						weekHeaderStyle += settings.colors.q2;
+						break;
+					
+					case 3:
+						weekHeaderStyle += settings.colors.q3;
+						break;
+						
+					case 4:
+						weekHeaderStyle += settings.colors.q4;
+						break;
+						
+					default:
+						weekHeaderStyle += settings.colors.q4;
+				}
+				
+				weekHeaderStyle += ';';
+				
+				if(weekSchedule.isOverbooked) {
+					weekHeaderClass = 'overbooked-week';
+					
+					if(weekSchedule.isScheduledWeek) {
+						weekHeaderStyle += 'background:linear-gradient(to right, ' + settings.colors.scheduledWeekHeader + ' 50%, ' + settings.colors.weekHeaderOverbooked + ' 50%);';
+					} else {
+						weekHeaderStyle += 'background:linear-gradient(to right, ' + settings.colors.unscheduledWeekHeader + ' 50%, ' + settings.colors.weekHeaderOverbooked + ' 50%);';
+					}
+				} else if(weekSchedule.isScheduledWeek) {
+					weekHeaderStyle += 'background-color:' + settings.colors.scheduledWeekHeader + ';';
+				} else {
+					weekHeaderStyle += 'background-color:' + settings.colors.unscheduledWeekHeader + ';';
+				}
+			}
+			
+			weekHeaderStyle += 'color:' + settings.colors.weekHeaderFont + ';';
+	
+			var weekHeaderHtml = templates.weekHeader
+									.replace('[LEFT-CONTENT]', leftContent)
+									.replace('[RIGHT-CONTENT]', rightContent)
+									.replace('[WEEK-HEADER-STYLE]', weekHeaderStyle);
+	
+			return templates.week
+						.replace('[WEEK-CLASS]', weekClass)
+            			.replace('[WEEK-STYLE]', weekStyle)
+						.replace('[WEEK-INDEX]', weekSchedule.weekIndex)
+						.replace('[WEEK-HEADER]', weekHeaderHtml)
+						.replace('[CONTENT]', slotsHtml);
+		}
+		
+		function buildSlot(slot) {
+			if(slot.isEmpty) {
+				return buildEmptyPlaceholder(slot.sWeekIndex, slot.slotIndex, slot.bus);
+			}
+					
+			if(slot.isHoliday) {
+				return buildHolidayPlaceholder(slot.sWeekIndex, slot.slotIndex, slot.bus);
+			}
+			
+			return buildBus(slot.bus);
+		}
+		
+		function buildEmptyPlaceholder(weekIndex, slotIndex, bus) {
+			var emptyStyle = '';
+			
+			if(settings.colors.emptySlot) {
+				emptyStyle = 'background-color:' + settings.colors.emptySlot;
+			}
+			
+			var content = '';
+            
+			if(settings.debug) {
+				content = weekIndex + ',' + slotIndex;
+			}
+			
+			return templates.busPlaceholder
+						.replace('[CONTENT]', content)
+						.replace('[PLACEHOLDER-STYLE]', emptyStyle);
+		}
+		
+		function buildHolidayPlaceholder(weekIndex, slotIndex, bus) {			
+			var holidayStyle = '';
+			
+			if(settings.colors.holiday) {
+				holidayStyle = 'background-color:' + settings.colors.holiday;
+			}
+			
+			var content = '';
+            
+			if(settings.debug) {
+				content = weekIndex + ',' + slotIndex;
+			}
+			
+			return templates.holidayPlaceholder
+						.replace('[CONTENT]', content)
+						.replace('[HOLIDAY-PLACEHOLDER-STYLE]', holidayStyle);
+		}
+		
+		function buildBus(bus) {
+			var modeString = bus.mode.replace(/ /g, '').toLowerCase();
+			var modeColor = settings.colors[modeString];
+			
+			if(!modeColor) {
+				modeColor = settings.colors.mode;
+			}
+			
+			var busStyle = 'background:linear-gradient(to right, ' + modeColor + ' 0%, ' + modeColor + ' 15%, ' + bus.companyColor + ' 15%, ' + bus.companyColor;
+
+			if(bus.isReserved) {
+				busStyle += ' 85%, ' + settings.colors.reserved + ' 85%, ' + settings.colors.reserved + ' 100%)';
+			} else if(bus.isScheduled) {
+				busStyle += ' 85%, ' + settings.colors.scheduled + ' 85%, ' + settings.colors.scheduled + ' 100%)';
+			} else if(bus.isFutureHolding) {
+				busStyle += ' 85%, ' + settings.colors.futureHolding + ' 85%, ' + settings.colors.futureHolding + ' 100%)';
+			} else {
+				busStyle += ' 100%)';
+			}
+			
+			var multiSlotBusClass = '';
+		
+			if(bus.slotSize > 1) {
+				if(bus.multiSlotSequence == 1) {
+                    multiSlotBusClass = 'multi-slot-bus-first';
+				} else if(bus.multiSlotSequence == bus.slotSize) {
+					multiSlotBusClass = 'multi-slot-bus-last';
+				} else {
+					multiSlotBusClass = 'multi-slot-bus';
+				}
+			}
+			
+            var pilotString = '';
+            
+			if(bus.isPilot) {
+				pilotString = '#';
+			}
+
+            var busLineOneStyle = 'font-size:' + settings.busLine1Font + 'em';
+            var busLineTwoStyle = 'font-size:' + settings.busLine2Font + 'em';                
+            
+			return templates.bus
+						.replace('[STYLE-DISPLAY]', bus.styleDisplay)
+            			.replace('[LENGTH-DISPLAY]', bus.lengthDisplay)
+						.replace('[RECORD-ID]', bus.recordID)
+						.replace(/\[SERIAL-NUMBER\]/g, bus.serialNumber)
+						.replace('[COMPANY-NAME]', bus.companyName)
+						.replace('[SEQUENCE-NUMBER]', bus.sequenceNumber)
+            			.replace('[IS-PILOT]', pilotString)
+						.replace('[SLOT-SIZE]', bus.slotSize)
+						.replace('[MULTI-SLOT-SEQUENCE]', bus.multiSlotSequence)
+						.replace('[BUS-STYLE]', busStyle)
+						.replace('[MULTI-SLOT-BUS-CLASS]', multiSlotBusClass)
+						.replace('[BUS-LENGTH]', bus.busLength + '\'')
+            			.replace('[BUS-LINE-ONE-STYLE]', busLineOneStyle)
+            			.replace('[BUS-LINE-TWO-STYLE]', busLineTwoStyle);
+		}
+        
+        function buildSettings() {
+		  	var grid = 
+		  		'<div id="filtersContainer" class="container col-sm-12">' +
+		  		'	[ROWS]' +
+		  		'</div>';
+		  		
+		  	var row = 
+		  		'<div class="row">' +
+		  		'	[COLUMNS]' +
+		  		'</div>';
+		  		
+		  	var column = 
+		  		'<div class="col-sm-3">' +
+		  		'	[CONTENT]' +
+		  		'</div>';
+		  	
+		  	var rowsHtml = '';
+		  	var columnsHtml = '';
+		  	
+		  	for(var count = 0; count < filterFields.length; count++) {
+		  		var filterField = filterFields[count];
+		  		
+		  		columnsHtml += column.replace('[CONTENT]', buildLabel(filterField));
+		  		
+		  		var columnContent = '';
+		  		
+		  		switch(filterField.dataType.toUpperCase()) {
+		  			case 'PICKLIST':
+		  			case 'REFERENCE':
+		  				columnContent = buildDropdown(filterField);
+		  				break;
+		  			
+		  			case 'BOOLEAN':
+		  				columnContent = buildCheckbox(filterField);
+		  				break;
+		  		
+		  			case 'AUTOFILL':
+                    case 'STRING':
+		  			case 'TEXT':
+		  			case 'DATE':
+		  			case 'INTEGER':
+		  				columnContent = buildTextbox(filterField);
+		  				break;
+		  		}
+		  		
+		  		columnsHtml += column.replace('[CONTENT]', columnContent);
+		  		
+		  		if(count % 2 == 1 || count == filterFields.length - 1) {
+		  			rowsHtml += row.replace('[COLUMNS]', columnsHtml);
+		  			columnsHtml = '';
+		  		}
+		  	}
+		  	
+		  	var gridHtml = grid.replace('[ROWS]', rowsHtml);
+		  	$j('#filtersBody').html(gridHtml);
+		  	
+		  	for(var count = 0; count < filterFields.length; count++) {
+		  		var filterField = filterFields[count];
+		  		
+		  		if(filterField.dataType.toUpperCase() == 'AUTOFILL') {
+		  			$j( "#" +  filterField.jsonFieldName).autocomplete({
+					      source: filterField.values
+					});
+		  		}
+		  	}
+		}
+		  
+		function buildLabel(filterField) {
+		  	return settings.jsonFieldNameLabels['jsonfieldname.' + filterField.jsonFieldName];
+		}
+		  
+		function buildDropdown(filterField) {
+		  	var dropDown = 
+	  			'<div class="dropdown">' +
+	  			'	<button class="btn btn-default dropdown-toggle" type="button" id="[ID]" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">' +
+				'		- select -' +
+				'		<span class="caret"></span>' +
+				'	</button>' +
+				'	<ul class="dropdown-menu scrollable-menu" aria-labelledby="[ID]">' +
+				'		[LIST-ITEMS]' +
+				'	</ul>' +
+				'</div>';
+				
+		  	var dropDownList = 
+		  		'<li><a href="#" data-value="[VALUE]">[VALUE]</a></li>';
+		  		
+		  	var dropDownListHtml = dropDownList.replace(/\[VALUE]/g, '- select -');
+		  	
+		  	for(var count = 0; count < filterField.values.length; count++) {
+		  		dropDownListHtml += dropDownList.replace(/\[VALUE]/g, filterField.values[count]);
+		  	}
+		  
+		  	return dropDown
+		  				.replace(/\[ID\]/g, filterField.jsonFieldName)
+		  				.replace('[LIST-ITEMS]', dropDownListHtml);
+		}
+		  
+		function buildCheckbox(filterField) {
+		  	var checkbox =
+		  		'<div class="checkbox">' +
+		  		'	<input id="[ID]" type="checkbox" value=""/>' +
+		  		'</div>';
+		  		
+		  	return checkbox.replace('[ID]', filterField.jsonFieldName);
+		}
+		  
+		function buildTextbox(filterField) {
+		  	var textbox =
+		  		'<input id="[ID]" type="[TYPE]" [ATTRIBUTES] class="form-control"/>';
+		  	
+		  	var type = '';
+		  	var attributes = '';
+		  	
+		  	switch(filterField.dataType.toUpperCase()) {
+		  		case 'AUTOFILL':
+                case 'STRING':
+		  		case 'TEXT':
+		  			type = 'text';
+		  			break;
+		  		
+		  		case 'INTEGER':
+		  			type = 'number';
+		  			attributes = 'min="0" step="1"';
+		  			break;
+		  			
+		  		case 'DATE':
+		  			type = 'date';
+		  			break;
+		  	}
+		  	
+		  	return textbox
+		  				.replace('[ID]', filterField.jsonFieldName)
+		  				.replace('[TYPE]', type)
+		  				.replace('[ATTRIBUTES]', attributes);
+		}
+		
+    	function buildSlotProperties(slot) {
+			var propertiesString = '';
+    		var index;
+    	
+    		for(index = 0; index < settings.hoverFields.length; index++) {
+    			var key = settings.hoverFields[index].jsonFieldName;
+    			var value = slot.bus[key];
+    			var label = settings.jsonFieldNameLabels['jsonfieldname.' + key];
+    			
+    			if(value == undefined) {
+    				value = slot[key];
+    				
+    				if(value == undefined) {
+    					value = '';
+    				}
+    			}
+    			
+    			if(key.toUpperCase() == 'SLOTINDEX' || key.toUpperCase() == 'SLOTINDAYINDEX') {
+					var numValue = Number(value);
+					
+					if(numValue) {
+						value = ++numValue;
+					}
+ 				}
+    			
+    			var isIndexEven = (index % 2 == 0);
+    			
+    			if(isIndexEven) {
+ 					propertiesString += '<tr>';
+ 				}
+ 				
+ 				propertiesString += '<td style="font-weight:bold;padding-right:1px;">' + label + '</td><td style="padding-left:1px;">' + value + '</td>';
+ 				
+ 				if(isIndexEven) {
+                    propertiesString += '<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>';
+  				} else {
+  					propertiesString += '</tr>';
+  				}
+    		}
+    		
+    		var isIndexEven1 = (index % 2 == 0);
+	                                    
+            if(!isIndexEven1) {
+            	propertiesString += '<td></td><td></td></tr>';
+            }
+    		
+			return propertiesString;
+		}
+    
+    	/**** END: Build DOM ****/
+    
+    	/**** START: Slot DOM Events ****/
+    
+    	function init(jObj) {
+            var jSlots = jObj.find('.slot');
+            var jBuses = jObj.find('.bus');
+            
+            jBuses.on('touchstart', function(e) {
+                var jSlot = $j(this).closest('.slot');
+                
+                consoleLog(jSlot.find('span').html() + ' - touch start');
+                
+                touchStartX = e.originalEvent.touches[0].pageX;
+                touchStartY = e.originalEvent.touches[0].pageY;
+            });
+             jSlots.on('touchend', function(e) {
+                //e.stopPropagation();
+                //e.preventDefault();
+                var jSlot = $j(this);
+                
+                consoleLog(jSlot.find('span').html() + ' - touch end');
+                
+                var distanceX = touchStartX - e.originalEvent.changedTouches[0].pageX;
+                var distanceY = touchStartY - e.originalEvent.changedTouches[0].pageY;
+                var distance = Math.hypot(distanceX, distanceY);
+                
+                if(distance <= settings.touchMoveBuffer) { // && e.preventDefault() Added for Touch re-config 
+                    selectSlot(jSlot); 
+                    
+                } else {
+                    consoleLog('touch end > ' + settings.touchMoveBuffer);
+                }
+                //alert();
+            });
+            jBuses.on('touchend', function(e) {
+                var jSlot = $j(this).closest('.slot');
+                
+                consoleLog(jSlot.find('span').html() + ' - touch end');
+                
+                var distanceX = touchStartX - e.originalEvent.changedTouches[0].pageX;
+                var distanceY = touchStartY - e.originalEvent.changedTouches[0].pageY;
+                var distance = Math.hypot(distanceX, distanceY);
+                
+                if(distance <= settings.touchMoveBuffer) { // && e.preventDefault() Added for Touch re-config 
+                    selectSlot(jSlot); 
+                    
+                } else {
+                    consoleLog('touch end > ' + settings.touchMoveBuffer);
+                }
+            });
+            
+            jSlots.on('click', function(e) {
+                
+                var jSlot = $j(this);
+                consoleLog(jSlot.find('span').html() + ' - slot click');
+                selectSlot($j(this));
+                
+            });
+
+            if(!isHistory) {
+            	jBuses.draggable({
+                    cursor: "move",
+                    delay: settings.dragDelay,
+                    //distance: 20,
+					revert: true,
+                    revertDuration: 0,
+					scroll: true,
+					stack: '.bus',
+					
+					start: function(event, ui) {
+                        consoleLog('Drag start');
+                        
+	                    if(isLocked) {
+	                    	return false;
+	                    }
+	                    
+                        clearMoveHere();
+                        
+	                    if(!$j(this).hasClass('selected-bus')) {
+                            if(selectedBusCount > 0) {
+	                            //prevent dragging of an unselected bus when multiple buses are selected
+                                return false;
+	                        } else {
+	                            //select the bus when an unselected single bus is dragged
+	                            selectBus($j(this));
+	                        }
+	                    }
+					},
+	
+                    drag: function(event, ui) {
+                        consoleLog('Drag');
+                        
+					    var zIndex = $j(this).css('zIndex');
+					
+					    $j('.selected-bus').css({
+					        top: ui.position.top,
+					        left: ui.position.left,
+					        zIndex: 99910
+					    });
+					},
+                    
+					stop: function(event, ui) {
+                        var jTargetSlot;
+                        var jTargetElement = $j(document.elementFromPoint(event.clientX, event.clientY));
+                        jTargetSlot = jTargetElement.closest('.slot');
+
+                        if(jTargetSlot.length == 1) {
+                            var jSourceBus = $j(event.target);
+                            var sourceSlotInfo = getSlotInfo(jSourceBus.parent(), jSourceBus);
+                            var targetSlotInfo = getSlotInfo(jTargetSlot, null);
+                            droppedSlot(sourceSlotInfo, targetSlotInfo);
+                        } else {
+                            resetBusPosition();
+                        }
+					}
+				});
+			}
+        }
+
+    	function slotContextMenu(jSlot){
+            consoleLog('In slot Context Menu'); 
+            //alert();
+            jBus = findBusInSlot(jSlot);
+             
+            if(jBus) {
+                var slotInfo = getSlotInfo(jSlot, jBus);
+                var slot = schedules[slotInfo.weekIndex].slots[slotInfo.slotIndex];
+                var propertiesString = buildSlotProperties(slot);
+                
+                $j("#busDetailsTable").find("tr:gt(0)").remove();
+                $j('#busDetailsTable').append(propertiesString);
+                $j('#busDetailsModal').modal();
+            }
+        }
+
+    	/**** END: Slot DOM Events ****/
+    
+    	/**** START: Bus select and move ****/
+
+    	function selectSlot(jSlot) {
+            jBus = findBusInSlot(jSlot);
+            
+            if(jBus) {
+                selectBus(jBus);                	
+            } else {
+                var jBusPlaceholder = jSlot.find('.bus-placeholder');
+                
+                if(jBusPlaceholder.length == 1) {
+                    if(lastEmptySlot) {
+                        if(jSlot[0] === lastEmptySlot[0]) {
+                            clearMoveHere();
+                            return;
+                        }
+                    }
+                    
+                    clearMoveHere();
+                    jSlot.addClass('selected-empty-slot');
+                    jBusPlaceholder.addClass('selected-bus-placeholder');
+                    
+                    lastEmptySlot = jSlot;
+                }
+            }
+            
+            if(selectedBusCount > 0 && lastEmptySlot) {
+                $j('#moveHereButton').prop('disabled', false);
+            } else {
+                $j('#moveHereButton').prop('disabled', true);
+            }
+        }
+    
+		function selectBus(jBusToSelect) {
+            var selectedSlotInfo = getSlotInfo($j(jBusToSelect.parent()), jBusToSelect);
+            var weekIndex = jBusToSelect.data('week-index');
+			var selectedSlotsInfoIndex = findInSelectedSlotsInfo(selectedSlotInfo.recordID);
+            var jBuses = $j('td[data-week-index="' + selectedSlotInfo.weekIndex + '"]').find('div[data-record-id="' + selectedSlotInfo.recordID + '"]');
+            
+			if(selectedSlotsInfoIndex == -1) {
+				for(var index = 0; index < jBuses.length; index++) {
+					var jBus = $j(jBuses[index]);
+                    var jSlot = jBus.parent();
+					var slotInfo = getSlotInfo(jSlot, jBus);
+					
+					jBus.addClass('selected-bus');
+					selectedSlotsInfo.push(slotInfo);
+					jSlot.addClass('selected-slot');
+				}
+                
+                selectedBusCount++;
+			} else {
+				for(var index = 0; index < jBuses.length; index++) {
+					var jBus = $j(jBuses[index]);
+					var jSlot = jBus.parent();
+              	
+					jBus.removeClass('selected-bus');
+					deleteFromSelectedSlotsInfo(jBus.data('record-id'));
+					jSlot.removeClass('selected-slot');
+				}
+                
+                selectedBusCount--;
+			}
+            
+            if(selectedBusCount > 0) {
+                $j('#moveHereButton').text('Move Here (' + selectedBusCount + ')');
+            } else {
+                $j('#moveHereButton').text('Move Here');
+            }
+            
+            if(selectedBusCount == 1) {
+                $j('#viewBusDetailsButton').prop('disabled', false);
+            } else {
+            	$j('#viewBusDetailsButton').prop('disabled', true);
+            }
+		}
+    
+		function droppedSlot(sourceSlotInfo, targetSlotInfo) {
+            consoleLog('sourceSlotInfo: ' + JSON.stringify(sourceSlotInfo));
+            consoleLog('targetSlotInfo: ' + JSON.stringify(targetSlotInfo));
+            
+            if(sourceSlotInfo.weekIndex == targetSlotInfo.weekIndex
+              && sourceSlotInfo.slotIndex == targetSlotInfo.slotIndex) {
+                resetBusPosition();
+            	return;
+          	}
+            
+            var targetPosition = targetSlotInfo.weekIndex + ':' + targetSlotInfo.slotIndex;
+			var sourcePositions = sourceSlotInfo.weekIndex + ':' + sourceSlotInfo.slotIndex;
+            
+			for(var index = 0; index < selectedSlotsInfo.length; index++) {
+				if(!(sourceSlotInfo.weekIndex == selectedSlotsInfo[index].weekIndex && 
+					sourceSlotInfo.slotIndex == selectedSlotsInfo[index].slotIndex)) {
+			
+					sourcePositions += ',' + selectedSlotsInfo[index].weekIndex + ':' + selectedSlotsInfo[index].slotIndex;
+				}
+			}
+            
+            consoleLog('Drop sourcePositions : ' + sourcePositions);
+            consoleLog('Drop targetPosition : ' + targetPosition);
+                        
+            var rerenderWeeks = dragMultipleSlots(sourcePositions, targetPosition);
+            
+            consoleLog('dragMultipleSlots return value : ' + rerenderWeeks);
+            
+			if(rerenderWeeks && rerenderWeeks.length > 0) {
+				for(var index = 0; index < rerenderWeeks.length; index++) {
+					var rerenderWeek = rerenderWeeks[index];
+					
+                    var week = buildWeek(schedules[rerenderWeek]);
+                    $j($j('.week')[rerenderWeek]).replaceWith(week);
+                    
+                    init($j($j('.week')[rerenderWeek]));
+				}
+				
+                futureHoldingVisible = !futureHoldingVisible;
+				toggleFutureHolding();
+                weekFilterChange();
+                setDimensions(false);
+				clearSlotSelections();
+                clearFilters();
+			} else {
+                resetBusPosition();
+			}
+			
+			checkPageDirty();
+		}
+        
+    	/**** END: Bus select and move ****/
+    
+    	/**** START: Header button methods ****/
+    
+    	function applyFilter() {
+		  	$j('.bus').removeClass('grayout');
+		  	
+		  	var ids = [];
+		  	var values = [];
+		  	
+		  	for(var count = 0; count < filterFields.length; count++) {
+		  		var filterField = filterFields[count];
+		  		var jField = $j('#' + filterField.jsonFieldName);
+		  		var value = '';
+		  		
+		  		switch(filterField.dataType.toUpperCase()) {
+		  			case 'PICKLIST':
+		  			case 'REFERENCE':
+		  				value = jField.text().trim();
+		  				if(value == '- select -') {
+							value = null;		  				
+		  				}
+		  				
+		  				break;
+		  			
+		  			case 'BOOLEAN':
+		  				value = jField.prop('checked');
+		  				break;
+		  		
+		  			case 'AUTOFILL':
+                    case 'STRING':
+		  			case 'TEXT':
+		  			case 'INTEGER':
+		  				value = jField.val();
+		  				break;
+		  				
+		  			case 'DATE':
+		  				value = jField.val();
+		  				
+		  				if(value) {
+		  					var splitValue = value.split('-');
+		  					value = splitValue[1] + '/' + splitValue[2] + '/' + splitValue[0]; 
+		  				}
+		  				
+		  				break;
+		  		}
+		  		
+		  		if(value) {
+		  			ids.push(filterField.jsonFieldName);
+		  			values.push(value);
+		  		}
+		  	}
+		  	
+		  	if(values.length > 0) {
+		  		var selectRecordIds = searchByFilterFields(ids, values);
+		  		var selectionString = '';
+                
+                consoleLog('Filter ids: ' + ids);
+                consoleLog('Filter values: ' + values);
+                consoleLog('Selected record Ids: ' + selectRecordIds);
+                
+		  		for(var index = 0; index < selectRecordIds.length; index++) {
+		  			selectionString += '.bus[data-record-id="' + selectRecordIds[index] + '"],';
+		  		}
+		  			
+		  		selectionString = selectionString.substring(0, selectionString.length - 1);
+		  		$j('.bus').not(selectionString).addClass('grayout');
+		  	}
+		}
+    
+    	function buildSaveList() {
+            lockBoard();
+   
+			if(undoList.length != 0) {
+                $j('#lockButton').prop('disabled', true);
+                
+			    // go thru all the isSaved flag == false and create a list
+			    var changedList = [];
+			    for ( col = 0; col < totalWeekColumns ; col++) {
+			        for ( row = 0; row < totalRowsInColumn; row++) {
+			          if ( schedules[col].slots[row].isSaved == false) {
+			             changedList.push( schedules[col].slots[row]);
+			          }
+			        } // for
+			    } // for
+
+			    var changesJson = _toString( changedList);
+			    
+                if(settings.debug) {
+                    console.debug( 'Save List Count = ' + changedList.length);
+                }
+                
+			    saveAction(changesJson, $j('#userNameDropdown').val());
+		    }
+		}
+    
+    	function saveComplete() {
+     		clearUndoList();
+     		reload();
+      	}
+
+		function toggleFutureHolding() {
+			futureHoldingVisible = !futureHoldingVisible;
+		
+			if(futureHoldingVisible) {
+				$j('.future-holding-week').show();
+				$j('#futureHoldingButton').text('Hide Future Holding (' + settings.futureHoldingCount + ')*');
+			} else {
+				$j('.future-holding-week').hide();
+				$j('#futureHoldingButton').text('Show Future Holding (' + settings.futureHoldingCount + ')*');
+			}
+		}
+    
+    	function clearSlotSelections() {
+			$j('.selected-slot').removeClass('selected-slot');
+			$j('.selected-bus').removeClass('selected-bus');
+            $j('#viewBusDetailsButton').prop('disabled', true);
+            $j('#moveHereButton').text('Move Here');
+			
+            clearMoveHere();
+            selectedSlotsInfo = [];
+            selectedBusCount = 0;
+		}
+
+		function reload() {
+			location.reload();
+		}
+		
+		function undoPage() {
+			undoLastChange();
+			checkPageDirty();
+			buildSchedules();
+            
+            futureHoldingVisible = !futureHoldingVisible;
+			toggleFutureHolding();
+		}    
+    
+   		function showFilters() {
+			$j('#filtersModal').modal();
+			
+			setTimeout(
+				function() {
+					var jFiltersContainer = $j('#filtersContainer');
+			 		$j('#filtersBody').css('height', jFiltersContainer.outerHeight(true) + 30);
+				}, 
+				200
+			);
+		}
+    
+    	function clearFilters() {
+		  	$j('.bus').removeClass('grayout');
+            var filtersModal = $j('#filtersModal');
+            filtersModal.find('.dropdown .btn').html('- select -' + ' <span class="caret"></span>').val('- select -');
+            filtersModal.find('input').val('').filter('[type="checkbox"]').prop('checked', false);
+		}
+    
+    	function clearWeekFilters() {
+       		$j('#fromDateFilterInput').val('');
+            $j('#toDateFilterInput').val('');
+            weekFilterChange();
+        }
+    
+    	function weekFilterChange() {
+      		var fromDate = $j('#fromDateFilterInput').val();
+      		var toDate = $j('#toDateFilterInput').val();
+      		
+      		if(!fromDate) {
+      			fromDate = null;
+      		} else {
+      			fromDate = formatDate(fromDate);
+      		}
+      		
+      		if(!toDate) {
+      			toDate = null;
+      		} else {
+      			toDate = formatDate(toDate);
+      		}
+      		
+      		var weeksRange = getViewStartEndWeekIndexes(fromDate, toDate);
+      		
+      		var futureHoldingWeeks = settings.weeksPerRow;
+      		var scheduledWeeks = $j('.scheduled-week');
+      		scheduledWeeks.hide();
+      		
+      		var startIndex = weeksRange[0] - futureHoldingWeeks;
+      		var endIndex = weeksRange[1] - futureHoldingWeeks + 1;
+ 
+      		var weeksToShow = scheduledWeeks.slice(startIndex, endIndex);
+      		weeksToShow.show();
+
+            setDimensions(true);
+            
+            consoleLog('startIndex: ' + startIndex);
+            consoleLog('endIndex: ' + endIndex);
+            consoleLog('count: ' + (endIndex - startIndex));
+      	}
+      	
+      	function toggleFullView() {
+      		fullView = !fullView;
+      	
+      		if(fullView) {
+      			$j('.hidden-slot').removeClass('hidden');
+				$j('#fullViewButton').text('Hide Full View');
+      		} else {
+      			$j('.hidden-slot').addClass('hidden');
+      			$j('#fullViewButton').text('Show Full View');
+      		}
+      	}
+      	
+      	function toggleLock() {
+      		if(isLocked) {
+      			$j('#verificationFailMessage').hide();
+      			$j('#userNameDropdown').html('- Select User -' + ' <span class="caret"></span>');
+				$j('#userNameDropdown').val('');
+      			$j('#passwordTextbox').val('');
+      		
+      			$j('#elapsedLastRefreshed').text(elapsedSinceLastRefreshTimeString());
+      		
+      			$j('#verificationModal').modal();
+      		} else {
+      			if(undoList.length == 0) {
+                    lockBoard();
+				} else {
+					var selectedValue = confirm("Page has pending changes. Save now to lock the board?");
+					
+					if(selectedValue) {
+						buildSaveList();
+					}
+				}
+      		}
+		}
+    
+    	function validateUser() {
+			var uid = $j('#userNameDropdown').val();
+			var pwd = $j('#passwordTextbox').val();
+			
+			if(uid && pwd) {
+				validatePassword(uid, pwd);
+			}
+		}
+      	
+      	function validateComplete() {
+      		if(validManager) {
+      			isLocked = false;
+      			
+      			$j('#lockButton').text('Lock');
+      			$j('#verificationModal').modal('hide');
+      			
+      			var currentText = $j('#lastSaveLabel').text();
+      			$j('#lastSaveLabel').text('Unlocked by ' + $j('#userNameDropdown').text() + ' | ' + currentText);
+      		
+            	$j('#saveButton').attr('disabled', false);
+                $j('#undoButton').attr('disabled', false);
+            } else {
+      			$j('#verificationFailMessage').show();
+      		}
+      		
+      		validManager = false;
+      	}
+      	
+      	function navigateHistory(selectedHistoryId) {
+    		var url = window.location.origin + window.location.pathname + '?';
+    		var params = '';
+    			
+    		if(selectedHistoryId) {
+    			params += 'historyid=' + selectedHistoryId + '&';
+    		}
+    			
+    		for(var key in urlParams) {
+    			if(key != 'historyid') {    			
+  					value = urlParams[key];
+  					params += key + '=' + value + '&';
+  				}
+  			}
+  			
+  			params = params.substring(0, params.length - 1);
+    		window.location.href = url + params;
+      	}
+    
+    	function moveHere() {
+            var minSlot = selectedSlotsInfo[0];
+
+            for(var index = 1; index < selectedSlotsInfo.length; index++) {
+           		if(selectedSlotsInfo[index].weekIndex <= minSlot.weekIndex
+                  && selectedSlotsInfo[index].slotIndex < minSlot.slotIndex) {
+                   minSlot = selectedSlotsInfo[index];
+                }
+            }
+
+            var sourceSlotInfo = minSlot;
+        	var targetSlotInfo = getSlotInfo(lastEmptySlot, null);
+            droppedSlot(sourceSlotInfo, targetSlotInfo);
+        }
+    
+    	/**** END: Header button methods ****/
+    
+    	/**** START: Helper methods ****/
+    
+    	function findInSelectedSlotsInfo(recordID) {
+        	for(var index = 0; index < selectedSlotsInfo.length; index++) {
+        		if(selectedSlotsInfo[index].recordID == recordID) {
+        			return index;
+        		}
+        	}
+        	
+        	return -1;
+        }
+    
+    	function deleteFromSelectedSlotsInfo(recordID) {
+        	var index = findInSelectedSlotsInfo(recordID);
+        	
+        	if(index >= 0) {
+        		selectedSlotsInfo.splice(index, 1);
+        		return index;
+        	}
+        	
+        	return -1;
+        }
+    
+        function getSlotInfo(jSlot, jBus) {
+        	var slotInfo = new Object();
+        	
+        	if(jSlot) {
+				slotInfo.weekIndex = Number(jSlot.data('week-index'));
+				slotInfo.slotIndex = Number(jSlot.data('slot-index'));
+			} else {
+				slotInfo.weekIndex = slotInfo.slotIndex = null;
+			}
+			
+			if(jBus) {
+				slotInfo.recordID = jBus.data('record-id');
+				slotInfo.serialNumber = jBus.data('serial-number');
+			} else {
+				slotInfo.recordID = slotInfo.serialNumber = null;
+			}
+			
+			return slotInfo;
+        }
+		
+		function checkPageDirty() {
+			if(isHistory) {
+				$j('#header').css('background-color', settings.colors.toolBarHistory);
+			} else if(undoList.length == 0) {
+				$j('#header').css('background-color', settings.colors.toolBar);
+			} else {
+				$j('#header').css('background-color', settings.colors.toolBarDirty);
+			}
+		}
+		
+		function confirmNavigateAway() {
+			if(undoList.length > 0) {
+			    if(confirm()) {
+			        return true;
+			    } else {
+			        return false;
+			    }
+			}
+        }
+		  
+      	function formatDate(dateString) {
+      		dateString = dateString.split('-');
+      		return new Date(Date.UTC(dateString[0], dateString[1] - 1, dateString[2], 12, 0, 0));
+      	}
+
+    	function lockBoard() {
+            if(!isLocked) {
+                isLocked = true;
+                $j('#lockButton').text('Unlock');
+                
+                var currentText = $j('#lastSaveLabel').text();
+                currentText = currentText.split(' | ');
+                $j('#lastSaveLabel').text(currentText[1]);
+                
+                clearSlotSelections();
+                
+                $j('#saveButton').attr('disabled', true);
+                $j('#undoButton').attr('disabled', true);
+            }
+        }
+
+    	function calculateWeekWidth(numWeeks) {
+			if(numWeeks < settings.minWeeksPerRow) {
+				numWeeks = settings.minWeeksPerRow;
+			}
+			
+            var totalWidth = $j(window).width();
+            var weekWidth = Math.floor(totalWidth / numWeeks);
+            
+            return weekWidth;
+		}
+    
+    	function setDimensions(recalculateDimensions) {
+            if(recalculateDimensions || !weekWidth || !contentWidth) {
+                var visibleScheduledWeeksCount = $j('.scheduled-week:visible').length;
+                var futureHoldingWeeks = $j('.future-holding-week');
+                
+                if(visibleScheduledWeeksCount < settings.weeksPerRow) {
+                    weekWidth = calculateWeekWidth(visibleScheduledWeeksCount);
+                    futureHoldingWeeks.addClass('hidden');
+                    
+                    var weeksToShow = (visibleScheduledWeeksCount < settings.minWeeksPerRow)?
+                                            settings.minWeeksPerRow: 
+                                            visibleScheduledWeeksCount;
+                    
+                    contentWidth = weekWidth * weeksToShow;
+                    
+                    var futureHoldingWeeksToShow = futureHoldingWeeks.slice(0, weeksToShow);
+                    futureHoldingWeeksToShow.removeClass('hidden');
+                } else {
+                    weekWidth = calculateWeekWidth(settings.weeksPerRow);
+                    contentWidth = weekWidth * settings.weeksPerRow;
+                    futureHoldingWeeks.removeClass('hidden');
+                }
+            }
+            
+            $j('.week').css('width', weekWidth + 'px');
+			$j('#content').css('width', contentWidth + 'px');
+            
+            if(recalculateDimensions || !slotHeight) {
+            	var jBus = $j('.week .bus:visible:eq(0)');
+            	slotHeight = jBus.parent().outerHeight(true);
+            }
+            
+            $j('.slot').css('height', slotHeight + 'px');
+            
+            consoleLog('Setting dimensions..');
+            consoleLog('Content width: ' + contentWidth);
+            consoleLog('Week width: ' + weekWidth);
+            consoleLog('Slot height: ' + slotHeight);
+        }
+
+		function setUrlParams() {
+		    var vars = {};
+		    var parts = window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+		    function(m,key,value) {
+		      vars[key] = value;
+		    });
+		    
+		    urlParams = vars;
+		}
+
+    	function resetBusPosition() {
+    		$j('.selected-bus').css({
+                    top: 0,
+                    left: 0
+        	});
+    	}
+    
+    	function showBusDetails() {
+            var slotInfo = selectedSlotsInfo[0];
+            var slot = schedules[slotInfo.weekIndex].slots[slotInfo.slotIndex];
+            var propertiesString = buildSlotProperties(slot);
+            var busDetailsTable = $j("#busDetailsTable");
+            busDetailsTable.find("tr:gt(0)").remove();
+            busDetailsTable.append(propertiesString);
+            
+            $j('#busDetailsModal').modal();
+        }
+    
+    	function clearMoveHere() {
+       		if(lastEmptySlot) {
+                $j('#moveHereButton').prop('disabled', true);
+                lastEmptySlot.removeClass('selected-empty-slot')
+                			.find('.bus-placeholder')
+                			.removeClass('selected-bus-placeholder');
+            	
+                lastEmptySlot = null;
+            }
+        }
+    
+    	function findBusInSlot(jSlot) {
+            var buses = jSlot.find('.bus');
+            var jBus;
+            
+            if(buses.length == 1) {
+            	jBus = $j(buses[0]);
+            }
+            
+            return jBus;
+       	}
+    
+    	function consoleLog(val) {
+            if(settings.debug) {
+            	console.log(val);
+            }
+        }
+    
+    	/**** END: Helper methods ****/
+	</script>
+
+	<div id="header" style="display:none;">
+	 	<div class="toolbar btn-toolbar mb-3" role="toolbar" >
+            <div class="btn-group mr-2" role="group">
+                <button id="futureHoldingButton" type="button" onclick="toggleFutureHolding(); return false;" class="btn btn-secondary"></button>
+                <button id="fullViewButton" type="button" onclick="toggleFullView(); return false;" class="btn btn-secondary">Show Full View</button>
+                
+            </div>
+            
+            <div class="btn-group mr-2" role="group">
+		    	<div class="dropdown">
+					<button class="btn btn-default dropdown-toggle" value="" type="button" id="historyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						- Current Schedule -
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu scrollable-menu" id="historyValues" aria-labelledby="historyDropdown"></ul>
+			  	</div>
+            </div>
+            
+            <div class="btn-group mr-2" role="group">
+                <button id="saveButton" disabled="true" type="button" onclick="buildSaveList(); return false;" class="btn btn-secondary">Save</button>
+                <button id="undoButton" disabled="true" type="button" onclick="undoPage(); return false;" class="btn btn-secondary">Undo</button>
+                <button id="lockButton" type="button" onclick="toggleLock(); return false;" class="btn btn-secondary">Unlock</button>
+            </div>
+            
+           	<div class="btn-group mr-2" role="group">
+                <button id="clearSelectionButton" type="button" onclick="clearSlotSelections(); return false;" class="btn btn-secondary">Clear Selection</button>
+				<button id="moveHereButton" disabled="true" type="button" onclick="moveHere(); return false;" class="btn btn-secondary">Move Here</button>
+				<button id="viewBusDetailsButton" disabled="true" type="button" onclick="showBusDetails(); return false;" class="btn btn-secondary">Show Bus Details</button>
+            </div>
+            
+            <div class="btn-group mr-2" role="group">
+                <button id="refreshButton" type="button" onclick="reload();" class="btn btn-secondary">Refresh</button>
+            </div>
+            
+            <div class="btn-group mr-2" role="group">
+		    	<button id="filtersButton" type="button" onclick="showFilters(); return false;" class="btn btn-secondary">Filters</button>
+	  			<button id="clearFiltersButton" type="button" onclick="clearFilters(); return false;" class="btn btn-secondary">Clear Filters</button>
+		  	</div>
+            
+            <div class="btn-group form-inline mr-2" role="group">
+		  		<input id="fromDateFilterInput" type="date" onchange="weekFilterChange();" class="form-control"/>
+				<input id="toDateFilterInput" type="date" onchange="weekFilterChange();" class="form-control"/>  
+				<button id="clearWeekFiltersButton" type="button" onclick="clearWeekFilters(); return false;" class="btn btn-secondary">Clear Week Filters</button>
+            </div>
+            
+            <label id="lastSaveLabel" class="toolbar-info"></label>
+		</div>
+	</div>
+	
+	<div id="content">
+    </div>
+
+    <div id="busDetailsModal" class="modal autoModal fade" role="dialog">
+      	<div class="modal-dialog modal-md">
+        	<div class="modal-content">
+          		<div class="modal-header">
+            		<button type="button" class="close" data-dismiss="modal">&times;</button>
+            		<h6 class="modal-title">Bus Details</h6>
+          		</div>
+          		<div id="busDetailsBody" class="modal-body">
+          			<table id="busDetailsTable" style="width:100%">
+          				<tr>
+          					<th style="width:15%">
+          					</th>
+          					<th style="width:35%">
+          					</th>
+          					<th style="">
+          					</th>
+          					<th style="width:15%;">
+          					</th>
+          					<th style="width:35%">
+          					</th>
+        				</tr>
+          			</table>
+          		</div>
+          		<div class="modal-footer">
+            		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          		</div>
+        	</div>
+      	</div>
+    </div>
+
+	<div id="verificationModal" class="modal autoModal fade" role="dialog">
+      	<div class="modal-dialog modal-sm">
+        	<div class="modal-content">
+          		<div class="modal-header">
+            		<button type="button" class="close" data-dismiss="modal">&times;</button>
+            		<h6 class="modal-title">Verify User</h6>
+          		</div>
+          		<div id="verificationBody" class="modal-body">
+            		<div id="verificationFailMessage" class="alert alert-danger alert-dismissable fade in message">
+    					<a href="#" class="close" onclick="$j('#verificationFailMessage').hide();" aria-label="close">&times;</a>
+    					Verification failed! Please try again.
+  					</div>
+            		<label id="elapsedLastRefreshed"></label>
+		           	<div class="dropdown">
+		  				<button class="btn btn-default dropdown-toggle" value="" type="button" id="userNameDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							- Select User -
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu scrollable-menu" id="userNameValues" aria-labelledby="userNameDropdown"></ul>
+					</div>
+            		<input id="passwordTextbox" type="password" class="form-control"/>
+          		</div>
+          		<div class="modal-footer">
+            		<button type="button" onclick="validateUser(); return false;" class="btn btn-default">Unlock</button>
+          		</div>
+        	</div>
+      	</div>
+    </div>
+
+	<div id="filtersModal" class="modal fade" role="dialog">
+    	<div class="modal-dialog modal-md">
+        	<div class="modal-content">
+          		<div class="modal-header">
+            		<button type="button" class="close" data-dismiss="modal">&times;</button>
+            		<h6 class="modal-title">Filters</h6>
+          		</div>
+          		<div id="filtersBody" class="modal-body">
+          		</div>
+          		<div class="modal-footer">
+            		<button type="button" class="btn btn-default" onclick="applyFilter();" data-dismiss="modal">Apply Filter</button>
+          		</div>
+        	</div>
+      	</div>
+    </div>
+
+	<apex:include pageName="DisplayBoardJSController"/>
+</apex:page>

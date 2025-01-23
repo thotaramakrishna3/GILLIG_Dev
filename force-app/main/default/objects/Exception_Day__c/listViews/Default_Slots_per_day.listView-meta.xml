@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Slots_per_day</fullName>
+    <columns>NAME</columns>
+    <columns>Day_Of_the_Week__c</columns>
+    <columns>Exception_Date__c</columns>
+    <columns>Slots__c</columns>
+    <columns>Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Default Slots Per Day</value>
+    </filters>
+    <label>Default Slots per day</label>
+</ListView>

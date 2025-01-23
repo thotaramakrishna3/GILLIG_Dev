@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Q1. Representative is responsive (i.e. Returns calls/emails, expediting hot parts) --></help>
+    <label><!-- Q1. Representative is responsive --></label>
+    <name>Q1_Representative_is_responsive__c</name>
+</CustomFieldTranslation>

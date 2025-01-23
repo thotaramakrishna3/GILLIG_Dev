@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transmission__c</fullName>
+    <externalId>false</externalId>
+    <label>Transmission</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Mode__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Allison B3400R xFE</fullName>
+                <default>false</default>
+                <label>Allison B3400R xFE</label>
+            </value>
+            <value>
+                <fullName>Allison B400R-6</fullName>
+                <default>false</default>
+                <label>Allison B400R-6</label>
+            </value>
+            <value>
+                <fullName>Allison B500R-6</fullName>
+                <default>false</default>
+                <label>Allison B500R-6</label>
+            </value>
+            <value>
+                <fullName>Allison eGen Flex Max</fullName>
+                <default>false</default>
+                <label>Allison eGen Flex Max</label>
+            </value>
+            <value>
+                <fullName>Allison H40EP</fullName>
+                <default>false</default>
+                <label>Allison H40EP</label>
+            </value>
+            <value>
+                <fullName>Allison H50EP</fullName>
+                <default>false</default>
+                <label>Allison H50EP</label>
+            </value>
+            <value>
+                <fullName>BAE HDS200</fullName>
+                <default>false</default>
+                <label>BAE HDS200</label>
+            </value>
+            <value>
+                <fullName>Voith D864.6</fullName>
+                <default>false</default>
+                <label>Voith D864.6</label>
+            </value>
+            <value>
+                <fullName>Voith D867.8</fullName>
+                <default>false</default>
+                <label>Voith D867.8</label>
+            </value>
+            <value>
+                <fullName>ZF 6AP1400B</fullName>
+                <default>false</default>
+                <label>ZF 6AP1400B</label>
+            </value>
+            <value>
+                <fullName>ZF 6AP1420B</fullName>
+                <default>false</default>
+                <label>ZF 6AP1420B</label>
+            </value>
+            <value>
+                <fullName>ZF 6AP1420P</fullName>
+                <default>false</default>
+                <label>ZF 6AP1420P</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>Allison B3400R xFE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>Allison B400R-6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>Allison B500R-6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>Voith D864.6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>Voith D867.8</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>ZF 6AP1400B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>ZF 6AP1420B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CNG</controllingFieldValue>
+            <controllingFieldValue>Diesel</controllingFieldValue>
+            <valueName>ZF 6AP1420P</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Electric</controllingFieldValue>
+            <valueName>None</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allison Hybrid</controllingFieldValue>
+            <valueName>Allison eGen Flex Max</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allison Hybrid</controllingFieldValue>
+            <valueName>Allison H40EP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Allison Hybrid</controllingFieldValue>
+            <valueName>Allison H50EP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BAE Hybrid</controllingFieldValue>
+            <valueName>BAE HDS200</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

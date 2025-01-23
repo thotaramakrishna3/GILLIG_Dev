@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Bus_length</fullName>
+    <active>true</active>
+    <description>Cannot be longer than 15 characters for compatibility with Adept</description>
+    <errorConditionFormula>LEN(Name) &lt;= 15</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Bus serial number/Rework number cannot be longer than 15 characters</errorMessage>
+</ValidationRule>

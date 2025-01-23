@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_62078770</developerName>
+        <masterLabel>Optim</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Sales_Order__c.Parts_Manual_Optimizer__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Carrie Osborn-Houchin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Darija Desancic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ed Montano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Eliaser Fuentes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Juliana Moore</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Julio Ruiz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mike Roe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Raspreet Nagra</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sergio Romo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vivian Hoang</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dave Bonini</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Susan Otterson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Avinash Singh</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shafaque Firoz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rahul Baisane</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prasad Sutar</sourceValue>
+            </sourceValues>
+            <value>Optimized</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Unassigned</sourceValue>
+            </sourceValues>
+            <value>Up Next</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_47307381</developerName>
+        <masterLabel>PDF</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Sales_Order__c.Parts_PDF_Person__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Carrie Osborn-Houchin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Darija Desancic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ed Montano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Eliaser Fuentes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Juliana Moore</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Julio Ruiz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mike Roe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Raspreet Nagra</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sergio Romo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vivian Hoang</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dave Bonini</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Susan Otterson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Avinash Singh</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shafaque Firoz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rahul Baisane</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prasad Sutar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michael McClure</sourceValue>
+            </sourceValues>
+            <value>Ready</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_31563726</developerName>
+        <masterLabel>Work</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Sales_Order__c.Parts_Manual_Processor__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Carrie Osborn-Houchin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Darija Desancic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ed Montano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Eliaser Fuentes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Juliana Moore</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Julio Ruiz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michael McClure</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mike Roe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Raspreet Nagra</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sergio Romo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vivian Hoang</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dave Bonini</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Susan Otterson</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Avinash Singh</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shafaque Firoz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rahul Baisane</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prasad Sutar</sourceValue>
+            </sourceValues>
+            <value>Assigned</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Unassigned</sourceValue>
+            </sourceValues>
+            <value>Up Next</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Sales_Order__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Serial_Numbers__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Quantity__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Ship_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Optimizer__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Processor__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Start_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Sales_Order__c.Parts_Manual_oBOM_Pages__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Sales_Order__c.Parts_Manual_oBOM_Bills__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Manual_Notes__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Length__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Mode__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Style__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Engine__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Transmission__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Due_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Sales_Order__c.Rush_Manuals__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Status__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Optim_Done__c</field>
+    </columns>
+    <description>Export for Assembly Schedule (currently have to sort by status in Excel and then move Status and Optim Date to end of column fields, making sure not to copy this info into Assy Schedule. Needs to be fixed. )</description>
+    <filter>
+        <booleanFilter>2 AND 3 AND 4 AND 5 AND (1 OR 6) AND 7</booleanFilter>
+        <criteriaItems>
+            <column>Sales_Order__c.Parts_Manual_Due_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1/1/2020</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Manuals_Identical_To__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Parts_Manual_Completion_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Start_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Hold_Manuals__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Parts_Manual_Ship_Due_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1/1/2020</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Parts_Manual_Identical_To__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_31563726</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_62078770</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Backup of Assembly Schedule Export</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Sales_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Sales_Order__c.Start_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

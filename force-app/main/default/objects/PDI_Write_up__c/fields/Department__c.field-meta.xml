@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <externalId>false</externalId>
+    <label>Department</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>03 - Electrical</fullName>
+                <default>false</default>
+                <label>03 - Electrical</label>
+            </value>
+            <value>
+                <fullName>04 - Chassis</fullName>
+                <default>false</default>
+                <label>04 - Chassis</label>
+            </value>
+            <value>
+                <fullName>05a - Roof</fullName>
+                <default>false</default>
+                <label>05a - Roof</label>
+            </value>
+            <value>
+                <fullName>05b - Unibody</fullName>
+                <default>false</default>
+                <label>05b - Unibody</label>
+            </value>
+            <value>
+                <fullName>06 - Body</fullName>
+                <default>false</default>
+                <label>06 - Body</label>
+            </value>
+            <value>
+                <fullName>07 - Paint</fullName>
+                <default>false</default>
+                <label>07 - Paint</label>
+            </value>
+            <value>
+                <fullName>08a - Trim</fullName>
+                <default>false</default>
+                <label>08a - Trim</label>
+            </value>
+            <value>
+                <fullName>08b - Trim</fullName>
+                <default>false</default>
+                <label>08b - Trim</label>
+            </value>
+            <value>
+                <fullName>09 - Rack</fullName>
+                <default>false</default>
+                <label>09 - Rack</label>
+            </value>
+            <value>
+                <fullName>11 - Final</fullName>
+                <default>false</default>
+                <label>11 - Final</label>
+            </value>
+            <value>
+                <fullName>RR - Ready Row</fullName>
+                <default>false</default>
+                <label>RR - Ready Row</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TREAD_Reportable</fullName>
+    <active>false</active>
+    <errorConditionFormula>And( TREAD_Reportable__c , or( isblank(text(Problem_Code__c)),isblank( text(Problem_Sub_Code__c) ),isblank( Failure_Date__c )))</errorConditionFormula>
+    <errorMessage>Failure Date, Problem, and Problem Sub Code required when TREAD reportable</errorMessage>
+</ValidationRule>

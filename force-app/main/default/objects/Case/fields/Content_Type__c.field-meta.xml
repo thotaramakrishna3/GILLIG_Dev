@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Content_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Content Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GILLIG Driver’s Handbook</fullName>
+                <default>false</default>
+                <label>GILLIG Driver’s Handbook</label>
+            </value>
+            <value>
+                <fullName>GILLIG Parts Manual</fullName>
+                <default>false</default>
+                <label>GILLIG Parts Manual</label>
+            </value>
+            <value>
+                <fullName>GILLIG Schematics Manual</fullName>
+                <default>false</default>
+                <label>GILLIG Schematics Manual</label>
+            </value>
+            <value>
+                <fullName>GILLIG Service Manual</fullName>
+                <default>false</default>
+                <label>GILLIG Service Manual</label>
+            </value>
+            <value>
+                <fullName>OEM Service Manuals</fullName>
+                <default>false</default>
+                <label>OEM Service Manuals</label>
+            </value>
+            <value>
+                <fullName>GILLIG All Manuals</fullName>
+                <default>false</default>
+                <label>GILLIG All Manuals</label>
+            </value>
+            <value>
+                <fullName>Training Videos</fullName>
+                <default>false</default>
+                <label>Training Videos</label>
+            </value>
+            <value>
+                <fullName>Emergency Rescue Sheet</fullName>
+                <default>false</default>
+                <label>Emergency Rescue Sheet</label>
+            </value>
+            <value>
+                <fullName>Emergency Responders Guide</fullName>
+                <default>false</default>
+                <label>Emergency Responders Guide</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

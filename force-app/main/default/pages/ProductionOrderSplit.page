@@ -1,0 +1,21 @@
+<apex:page showHeader="true" sidebar="true" standardController="Production_Order__c" extensions="Production_Order">
+	<apex:form >
+		<apex:pageBlock title="Production Order Split">
+			<apex:pageBlockSection columns="1" title="Originating Production Order">
+				<apex:outputField label="Production Order" value="{!Production_Order__c.Name}"/>
+				<apex:outputField label="Current Quantity" value="{!Production_Order__c.Quantity__c}" />
+			</apex:pageBlockSection>
+			<apex:pageBlockSection columns="3" title="Split at Bus Number">
+      			<apex:selectList label="Split at" value="{!selectedbus}" multiselect="false" size="1">
+          		<apex:selectOptions value="{!prodBusses}" id="sBus"></apex:selectOptions>
+				<apex:actionSupport event="onchange" reRender="values" action="{!splitatthisbus}"/>
+      		</apex:selectList>
+			</apex:pageBlockSection>
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!splitTo}" value="Split"/>
+				<apex:commandButton action="{!cancel}" value="Cancel"/>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+	<apex:messages />
+</apex:page>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecast_Green_Sheet_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  Mode__c  = &quot;Electric&quot; ,   
+CASE( 
+  MOD( Start_Date__c - DATE( 1900, 1, 7 ), 7 ),
+  3, Start_Date__c + 6 + 20,
+  4, Start_Date__c + 6 + 20,
+  5, Start_Date__c + 6 + 20,
+  6, Start_Date__c + 3 + 20,
+  Start_Date__c + 20 + 5
+),  IF(  text(Bus__r.Sales_Order__r.Style__c) = &quot;Trolley&quot;, 
+CASE( 
+  MOD( Start_Date__c - DATE( 1900, 1, 7 ), 7 ),
+  3, Start_Date__c + 10 + 35,
+  4, Start_Date__c + 10 + 35,
+  5, Start_Date__c + 10 + 35,
+  6, Start_Date__c + 8 + 35,
+  Start_Date__c + 35 + 8
+), 
+CASE( 
+  MOD( Start_Date__c - DATE( 1900, 1, 7 ), 7 ),
+  3, Start_Date__c + 4 + 11,
+  4, Start_Date__c + 4 + 11,
+  5, Start_Date__c + 4 + 11,
+  6, Start_Date__c + 2 + 11,
+  Start_Date__c + 11 + 4
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Forecast Green Sheet Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

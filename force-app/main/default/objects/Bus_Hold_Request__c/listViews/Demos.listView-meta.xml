@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demos</fullName>
+    <columns>NAME</columns>
+    <columns>Demo_Customer__c</columns>
+    <columns>Demo_Date_Time__c</columns>
+    <columns>Bus_Assigned__c</columns>
+    <columns>Internal_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Bus_Hold_Request__c.Demo_Request</value>
+    </filters>
+    <label>Demos</label>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_Header</fullName>
+    <fields>Name</fields>
+    <fields>Internal_Name__c</fields>
+    <fields>Q__c</fields>
+    <fields>OSD__c</fields>
+    <fields>RecordTypeId</fields>
+    <label>PO Header</label>
+</CompactLayout>

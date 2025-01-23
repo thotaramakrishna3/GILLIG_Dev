@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>By_Mode</fullName>
+    <columns>Internal_Name__c</columns>
+    <columns>Mode__c</columns>
+    <columns>NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Length__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Sales_Order__c.Merged</value>
+    </filters>
+    <filters>
+        <field>Mode__c</field>
+        <operation>equals</operation>
+        <value>Electric</value>
+    </filters>
+    <label>By Mode</label>
+</ListView>

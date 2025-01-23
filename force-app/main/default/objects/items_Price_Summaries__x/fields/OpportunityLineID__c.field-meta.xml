@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpportunityLineID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalDeveloperName>OpportunityLineID</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>OpportunityLineID</label>
+    <referenceTo>Opportunity_Line__c</referenceTo>
+    <relationshipLabel>Price Summaries</relationshipLabel>
+    <relationshipName>items_Price_Summaries</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

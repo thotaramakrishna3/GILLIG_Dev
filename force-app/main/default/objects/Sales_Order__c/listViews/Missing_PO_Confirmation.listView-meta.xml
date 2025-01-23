@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_PO_Confirmation</fullName>
+    <columns>NAME</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Sales_Order_Release__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Quantity__c</columns>
+    <columns>PO_Confirmation_Delivery__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Weeks_from_Start_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.Planned</value>
+    </filters>
+    <filters>
+        <field>PO_Confirmation_Delivery__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Missing PO Confirmation</label>
+</ListView>

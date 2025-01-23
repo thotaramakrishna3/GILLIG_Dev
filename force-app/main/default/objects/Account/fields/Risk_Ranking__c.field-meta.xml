@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Ranking__c</fullName>
+    <externalId>false</externalId>
+    <label>Risk Ranking</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Non-GILLIG</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Non-GILLIG</label>
+            </value>
+            <value>
+                <fullName>Long-term Target</fullName>
+                <color>#F3D904</color>
+                <default>false</default>
+                <label>Long-term Target</label>
+            </value>
+            <value>
+                <fullName>Current Target</fullName>
+                <color>#78C953</color>
+                <default>false</default>
+                <label>Current Target</label>
+            </value>
+            <value>
+                <fullName>Current GILLIG</fullName>
+                <color>#0B6FCE</color>
+                <default>false</default>
+                <label>Current GILLIG</label>
+            </value>
+            <value>
+                <fullName>Parts Only (No Buses)</fullName>
+                <color>#A845DC</color>
+                <default>false</default>
+                <label>Parts Only (No Buses)</label>
+            </value>
+            <value>
+                <fullName>Lost Customer Target</fullName>
+                <default>false</default>
+                <label>Lost Customer Target</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

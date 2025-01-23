@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Job</fullName>
+    <active>true</active>
+    <description>Production job.</description>
+    <label>Standard Job</label>
+    <picklistValues>
+        <picklist>Bus_Mode__c</picklist>
+        <values>
+            <fullName>Allison Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAE Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diesel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel Cell</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transmission__c</picklist>
+        <values>
+            <fullName>Allison B3400R xFE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allison B400-5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allison B400R-5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allison B400R-6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allison B500R-6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allison H40EP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allison H50EP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAE HDS200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voith D864%2E6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voith D867%2E8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZF 6AP1400B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZF 6AP1420B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ref_SO_Total_Cost__c</fullName>
+    <externalId>false</externalId>
+    <formula>Margin_Ref_SO_Standard_Materials__c + Ref_SO_Overhead__c + Ref_SO_Labor_Cost__c +  Ref_SO_Int_Std_Warranty__c +  Ref_SO_Ext_Pur_Warranty__c  + Ref_SO_Delivery__c  + Ref_SO_Other_COS_Allocation__c + Ref_SO_Outside_Processes__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Ref SO Total Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

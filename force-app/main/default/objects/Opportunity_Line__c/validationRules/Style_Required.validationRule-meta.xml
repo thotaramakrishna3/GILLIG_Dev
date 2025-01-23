@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Style_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK( Style__c ) , NOT( ISBLANK( Date_Booked__c ) ))</errorConditionFormula>
+    <errorDisplayField>Style__c</errorDisplayField>
+    <errorMessage>Please enter a Style</errorMessage>
+</ValidationRule>

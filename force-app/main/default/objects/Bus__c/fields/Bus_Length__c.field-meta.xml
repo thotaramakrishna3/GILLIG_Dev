@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bus_Length__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( or(RecordType.Name =&quot;Delivered&quot;,RecordType.Name =&quot;Firm&quot;,RecordType.Name =&quot;In Service&quot;), text(Sales_Order__r.Length__c) , 
+
+IF(INCLUDES( Opportunity_Line__r.Length__c , &quot;29&quot;), &quot;29&quot;, NULL) + 
+IF(INCLUDES( Opportunity_Line__r.Length__c , &quot;35&quot;), &quot;35&quot;, NULL) + 
+IF(INCLUDES( Opportunity_Line__r.Length__c , &quot;40&quot;), &quot;40&quot;, NULL)+ 
+IF(INCLUDES( Opportunity_Line__r.Length__c , &quot;60&quot;), &quot;60&quot;, NULL))</formula>
+    <label>Bus Length</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

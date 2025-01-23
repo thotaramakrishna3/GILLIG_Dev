@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Product_Projects</fullName>
+    <columns>NAME</columns>
+    <columns>Project_Name__c</columns>
+    <columns>Parent_Project__c</columns>
+    <columns>Product__c</columns>
+    <columns>Category__c</columns>
+    <columns>Program_Manager__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Project_Start_Date__c</columns>
+    <columns>Pilot_Bus__c</columns>
+    <columns>Pilot_Customer__c</columns>
+    <columns>Pilot_Bus_Start_Date__c</columns>
+    <columns>Production_Availability__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>5. Active Project</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Project__c.Product</value>
+    </filters>
+    <label>Active Projects</label>
+</ListView>

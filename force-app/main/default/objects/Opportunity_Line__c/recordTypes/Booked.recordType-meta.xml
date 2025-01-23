@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booked</fullName>
+    <active>false</active>
+    <label>Booked</label>
+    <picklistValues>
+        <picklist>Charging_Requirements__c</picklist>
+        <values>
+            <fullName>Momentum Dynamics Inductive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overhead Conductive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plug In %28CCS Type 1%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plug In %28CCS Type 2%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WAVE Inductive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Length__c</picklist>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mode__c</picklist>
+        <values>
+            <fullName>Allison Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAE Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diesel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electric</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuel Cell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trolley %28Overhead%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quoted_Delivery_Picklist__c</picklist>
+        <values>
+            <fullName>365 Days %2B End of Calendar Quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>By specific date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiated at time of order placement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Per schedule included in contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Days After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Months After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>X Weeks After Receipt of Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Style__c</picklist>
+        <values>
+            <fullName>BRT PLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor BRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trolley</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tag_Request__c</picklist>
+        <values>
+            <fullName>Contract Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter of Intent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Promised Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserve for Bid</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

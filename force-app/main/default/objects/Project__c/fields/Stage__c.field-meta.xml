@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-project Collection</fullName>
+                <default>true</default>
+                <label>Pre-project Collection</label>
+            </value>
+            <value>
+                <fullName>Preliminary Investigation</fullName>
+                <default>false</default>
+                <label>Preliminary Investigation</label>
+            </value>
+            <value>
+                <fullName>Project Selection</fullName>
+                <default>false</default>
+                <label>Project Selection</label>
+            </value>
+            <value>
+                <fullName>Business Case Phase</fullName>
+                <default>false</default>
+                <label>Business Case Phase</label>
+            </value>
+            <value>
+                <fullName>Business Case Evaluation</fullName>
+                <default>false</default>
+                <label>Business Case Evaluation</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>1. Concept</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1. Concept</label>
+            </value>
+            <value>
+                <fullName>2. Researching</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2. Researching</label>
+            </value>
+            <value>
+                <fullName>3. Charter Development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3. Charter Development</label>
+            </value>
+            <value>
+                <fullName>4. Pending Approval</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4. Pending Approval</label>
+            </value>
+            <value>
+                <fullName>5. Active Project</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5. Active Project</label>
+            </value>
+            <value>
+                <fullName>6. In Production</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6. In Production</label>
+            </value>
+            <value>
+                <fullName>H. On Hold</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>H. On Hold</label>
+            </value>
+            <value>
+                <fullName>X. Denied</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>X. Denied</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

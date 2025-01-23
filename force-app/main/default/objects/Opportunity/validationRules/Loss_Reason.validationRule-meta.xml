@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason</fullName>
+    <active>true</active>
+    <description>Requires a loss reason to be entered if closing an opportunity as lost to competitor.</description>
+    <errorConditionFormula>text(StageName) = &quot;Closed Lost&quot; &amp;&amp; isblank(text( Loss_Reason__c ))</errorConditionFormula>
+    <errorDisplayField>Loss_Reason__c</errorDisplayField>
+    <errorMessage>Please select a value for loss reason</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_PDI_is_100_completed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>PDI Completion Date</inlineHelpText>
+    <label>Date PDI is 100% completed</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

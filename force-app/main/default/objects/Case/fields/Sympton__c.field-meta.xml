@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sympton__c</fullName>
+    <externalId>false</externalId>
+    <label>Symptom</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adhesion</fullName>
+                <default>false</default>
+                <label>Adhesion</label>
+            </value>
+            <value>
+                <fullName>Bill - Bill is missing</fullName>
+                <default>false</default>
+                <label>Bill - Bill is missing</label>
+            </value>
+            <value>
+                <fullName>Bill - Missing install</fullName>
+                <default>false</default>
+                <label>Bill - Missing install</label>
+            </value>
+            <value>
+                <fullName>Bill - Missing part</fullName>
+                <default>false</default>
+                <label>Bill - Missing part</label>
+            </value>
+            <value>
+                <fullName>Bill - Missing schematic</fullName>
+                <default>false</default>
+                <label>Bill - Missing schematic</label>
+            </value>
+            <value>
+                <fullName>Bill - Wrong bill</fullName>
+                <default>false</default>
+                <label>Bill - Wrong bill</label>
+            </value>
+            <value>
+                <fullName>Bill - Wrong install</fullName>
+                <default>false</default>
+                <label>Bill - Wrong install</label>
+            </value>
+            <value>
+                <fullName>Bill - Wrong part</fullName>
+                <default>false</default>
+                <label>Bill - Wrong part</label>
+            </value>
+            <value>
+                <fullName>Bill - Wrong schematic</fullName>
+                <default>false</default>
+                <label>Bill - Wrong schematic</label>
+            </value>
+            <value>
+                <fullName>Booting</fullName>
+                <default>false</default>
+                <label>Booting</label>
+            </value>
+            <value>
+                <fullName>Display - Bad video</fullName>
+                <default>false</default>
+                <label>Display - Bad video</label>
+            </value>
+            <value>
+                <fullName>Display - No video</fullName>
+                <default>false</default>
+                <label>Display - No video</label>
+            </value>
+            <value>
+                <fullName>Harness - Too short or too long</fullName>
+                <default>false</default>
+                <label>Harness - Too short or too long</label>
+            </value>
+            <value>
+                <fullName>No response</fullName>
+                <default>false</default>
+                <label>No response</label>
+            </value>
+            <value>
+                <fullName>On_off</fullName>
+                <default>false</default>
+                <label>On_off</label>
+            </value>
+            <value>
+                <fullName>Overheat</fullName>
+                <default>false</default>
+                <label>Overheat</label>
+            </value>
+            <value>
+                <fullName>Part - Bad</fullName>
+                <default>false</default>
+                <label>Part - Bad</label>
+            </value>
+            <value>
+                <fullName>Part - Damaged</fullName>
+                <default>false</default>
+                <label>Part - Damaged</label>
+            </value>
+            <value>
+                <fullName>Part - Interference</fullName>
+                <default>false</default>
+                <label>Part - Interference</label>
+            </value>
+            <value>
+                <fullName>Part - Loose fit</fullName>
+                <default>false</default>
+                <label>Part - Loose fit</label>
+            </value>
+            <value>
+                <fullName>Part - Marking</fullName>
+                <default>false</default>
+                <label>Part - Marking</label>
+            </value>
+            <value>
+                <fullName>Part -Mechanical fit</fullName>
+                <default>false</default>
+                <label>Part -Mechanical fit</label>
+            </value>
+            <value>
+                <fullName>Part - Not programmed</fullName>
+                <default>false</default>
+                <label>Part - Not programmed</label>
+            </value>
+            <value>
+                <fullName>Part - Out of specification limits</fullName>
+                <default>false</default>
+                <label>Part - Out of specification limits</label>
+            </value>
+            <value>
+                <fullName>PA system not working properly</fullName>
+                <default>false</default>
+                <label>PA system not working properly</label>
+            </value>
+            <value>
+                <fullName>Schematic - Missing information</fullName>
+                <default>false</default>
+                <label>Schematic - Missing information</label>
+            </value>
+            <value>
+                <fullName>Schematic - Wrong information</fullName>
+                <default>false</default>
+                <label>Schematic - Wrong information</label>
+            </value>
+            <value>
+                <fullName>Support - Advice/ training</fullName>
+                <default>false</default>
+                <label>Support - Advice/ training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

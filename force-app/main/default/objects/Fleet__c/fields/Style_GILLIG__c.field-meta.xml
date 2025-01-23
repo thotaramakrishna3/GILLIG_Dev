@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Style_GILLIG__c</fullName>
+    <externalId>false</externalId>
+    <label>Style (GILLIG)</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Low Floor</fullName>
+                <default>false</default>
+                <label>Low Floor</label>
+            </value>
+            <value>
+                <fullName>Low Floor BRT</fullName>
+                <default>false</default>
+                <label>Low Floor BRT</label>
+            </value>
+            <value>
+                <fullName>BRTPLUS</fullName>
+                <default>false</default>
+                <label>BRTPLUS</label>
+            </value>
+            <value>
+                <fullName>Trolley</fullName>
+                <default>false</default>
+                <label>Trolley</label>
+            </value>
+            <value>
+                <fullName>Low Floor Plus</fullName>
+                <default>false</default>
+                <label>Low Floor Plus</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

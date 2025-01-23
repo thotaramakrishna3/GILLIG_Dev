@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Video_Surveillance_System__c</fullName>
+    <externalId>false</externalId>
+    <label>Video Surveillance System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>247 Security Inc.</fullName>
+                <default>false</default>
+                <label>247 Security Inc.</label>
+            </value>
+            <value>
+                <fullName>Angeltrax</fullName>
+                <default>false</default>
+                <label>Angeltrax</label>
+            </value>
+            <value>
+                <fullName>CWI Digital Systems</fullName>
+                <default>false</default>
+                <label>CWI Digital Systems</label>
+            </value>
+            <value>
+                <fullName>Dedicated Micros</fullName>
+                <default>false</default>
+                <label>Dedicated Micros</label>
+            </value>
+            <value>
+                <fullName>Loronix</fullName>
+                <default>false</default>
+                <label>Loronix</label>
+            </value>
+            <value>
+                <fullName>Luminator</fullName>
+                <default>false</default>
+                <label>Luminator Technology Group</label>
+            </value>
+            <value>
+                <fullName>March Networks</fullName>
+                <default>false</default>
+                <label>March Networks</label>
+            </value>
+            <value>
+                <fullName>Modern Railway Systems</fullName>
+                <default>false</default>
+                <label>Modern Railway Systems</label>
+            </value>
+            <value>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+                <label>Not Required</label>
+            </value>
+            <value>
+                <fullName>Preferred Technology</fullName>
+                <default>false</default>
+                <label>Preferred Technology</label>
+            </value>
+            <value>
+                <fullName>REI Buswatch</fullName>
+                <default>false</default>
+                <label>REI Buswatch</label>
+            </value>
+            <value>
+                <fullName>Safety Vision</fullName>
+                <default>false</default>
+                <label>Safety Vision</label>
+            </value>
+            <value>
+                <fullName>Seon</fullName>
+                <default>false</default>
+                <label>Seon</label>
+            </value>
+            <value>
+                <fullName>Transit Solutions (TSI)</fullName>
+                <default>false</default>
+                <label>Transit Solutions (TSI)</label>
+            </value>
+            <value>
+                <fullName>UTC Mobileview</fullName>
+                <default>false</default>
+                <label>UTC Mobileview</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

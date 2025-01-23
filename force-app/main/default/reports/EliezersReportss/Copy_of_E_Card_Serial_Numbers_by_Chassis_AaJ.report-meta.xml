@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Customer_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Buspart_Name__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Chassis_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Serial_Number__c</field>
+    </columns>
+    <columns>
+        <field>eCard_Serial_Number_Log__x.Model_Number__c</field>
+    </columns>
+    <description>WIP for Denise. E Card Serial Numbers with chassis filter/ All time.</description>
+    <filter>
+        <criteriaItems>
+            <column>eCard_Serial_Number_Log__x.Chassis_Number__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>B197707</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>eCard_Serial_Number_Log__x.Buspart_Name__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,ENGINE,TRANSMISSION,FRONT AXLE,REAR AXLE,A/C COMPRESSOR,A/C CONDENSOR</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Copy of E Card Serial Numbers by Chassis</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$eCard_Serial_Number_Log__x</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>eCard_Serial_Number_Log__x.Model_Number__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>eCard_Serial_Number_Log__x.Created_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

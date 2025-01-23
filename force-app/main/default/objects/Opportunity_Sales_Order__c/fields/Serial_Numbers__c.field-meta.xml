@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Serial_Numbers__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Quantity__c &gt; 0, Sales_Order__r.Name &amp; &quot; - &quot; &amp; Text(VALUE(Sales_Order__r.Name) + Quantity__c - 1), &apos; &apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Serial Numbers</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Publications</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Request_Date__c</columns>
+    <columns>GILLIG_Requester__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Content_Type__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Next_Steps__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Sales_Order__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Publications</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>New,Assigned,Pending,Review</value>
+    </filters>
+    <label>Publications</label>
+</ListView>

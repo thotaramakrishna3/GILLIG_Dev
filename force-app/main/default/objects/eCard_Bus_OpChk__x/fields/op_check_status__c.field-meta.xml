@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>op_check_status__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>op_check_status</description>
+    <externalDeveloperName>op_check_status</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>op_check_status</label>
+    <type>Checkbox</type>
+</CustomField>

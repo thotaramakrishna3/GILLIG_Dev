@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Buy_Design_Auditors__c</fullName>
+    <externalId>false</externalId>
+    <label>Buy Design Auditors</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Greg Roderick</fullName>
+                <default>false</default>
+                <label>Greg Roderick</label>
+            </value>
+            <value>
+                <fullName>Kevin Fernandez</fullName>
+                <default>false</default>
+                <label>Kevin Fernandez</label>
+            </value>
+            <value>
+                <fullName>Fred Cruz</fullName>
+                <default>false</default>
+                <label>Fred Cruz</label>
+            </value>
+            <value>
+                <fullName>Joan Seei</fullName>
+                <default>false</default>
+                <label>Joan Seei</label>
+            </value>
+            <value>
+                <fullName>Jeff Ralleta</fullName>
+                <default>false</default>
+                <label>Jeff Ralleta</label>
+            </value>
+            <value>
+                <fullName>Ron Quebbemanman</fullName>
+                <default>false</default>
+                <label>Ron Quebbemanman</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

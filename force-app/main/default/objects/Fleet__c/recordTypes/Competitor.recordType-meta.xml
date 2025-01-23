@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor</fullName>
+    <active>true</active>
+    <description>Fleet information for Competitor Fleets</description>
+    <label>Competitor</label>
+    <picklistValues>
+        <picklist>Length_GILLIG__c</picklist>
+        <values>
+            <fullName>29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mode__c</picklist>
+        <values>
+            <fullName>CNG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DIESEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ELECTRIC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYBRID ALLISON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYBRID BAE</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Style_GILLIG__c</picklist>
+        <values>
+            <fullName>BRTPLUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Floor BRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trolley</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

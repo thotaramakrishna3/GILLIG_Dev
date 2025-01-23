@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Specific</fullName>
+    <active>true</active>
+    <label>Customer Specific</label>
+    <picklistValues>
+        <picklist>Buy_Design_Section__c</picklist>
+        <values>
+            <fullName>0%2E Header</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E Engine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%2E Rear Run Box %26 Controls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11%2E Air System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12%2E Frame</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13%2E Capacitor%2C Batteries%2C Shore Power%2C Vehicle Voltage Inverter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14%2E Locks %26 Latches</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2E Body Section</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>16%2E Wheelchair Ramp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17%2E HVAC Main Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18%2E Drivers Heater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19%2E Auxiliary Coolant Heater</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E Transmission Selections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20%2E Door Threshold%2C Underseat Heaters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>21%2E Dash Fans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22-23%2E Front %26 Rear Doors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24%2E Wheelwell Mounted Storage Box%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%2E Rear Engine Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26%2E Ad Frames</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28%2E Passenger Seats</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28a%2E Driver%E2%80%99s Seat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>29%2E Passenger Signals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E Driveline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30%2E Drivers Barrier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31%2E Front Wheelwells %26 Front Door Modesty Panel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>32%2E Rear Door and%2C or 3rd Step Modesty Panels %26 Stanchions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>33%2E Drivers Coat Hook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>34%2E Display%2C Schedule%2C Registration%2C Card Holder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35%2E Interior Passenger Assists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36%2E Windshield</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>37%2E Windows %26 Door Glazing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>38%2E Fog Lamp%2C Driving Lamp%2C Headlamp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>39%2E Exterior Lamps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4-5 Front %26 Rear Axle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>40%2E Interior Lamps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>41%2E Pleasure %26 Voice %282-Way%29 Radio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>42%2E PA %28Public Address%2C Voice Annunciator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>43%2E Destination%2C Backlighted Signs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>44%2E Farebox%2C Drivers Step</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>45%2E Transfer Cutter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>46%2E Manual Passenger Counter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>47%2E Dash Bracket</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>48%2E Floor Panels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>49%2E Floor Covering %26 Trim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%2E Interior Panels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51%2E Roof Hatch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>52%2E Front Wheelwell Handrails%2C Package Racks %26 Other Trim Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>53-54%2E Street Side %26 Curb Side Exterior Mirror%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>55%2E Interior Mirrors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>56%2E Stanchion Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>57%2E Multiplexing Control Section %26 Misc%2E Electrical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>58%2E Sun Shade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>59%2E Fire Alarm%2C Detection %26 Suppression System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6%2E Wheels %26 Tires</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>60%2E Traffic Light Preemption System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>61%2E Video Surveillance System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>62%2E Independent Back-up Camera%2C Monitor System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>63%2E Passenger Information Video Monitor Display System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>64%2E Exterior Trim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>65%2E Bike Rack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>66%2E Safety Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>67%2E Dash Applications Not Previously Selected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>68%2E Drivers Area Instrumentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>69%2E Optional Components Mounted at Dash Area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>69a%2E APC%2C ITS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>69b%2E Pre-Trip Inspection Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>69c%2E Advanced Driver Assistance Systems %28ADAS%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>69d%2E Tap-Card Reader%2FWireless Payment Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7%2E Steering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>70%2E Decal Section</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>71%2E Paint %26 Graphic Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>72%2E Ship Loose Items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>72b%2E Trolley Order Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>72c %2EDelivery Details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>73%2E Manual Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>74%2E Warranty Requirements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75%2E Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>76%2E Spare Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>78%2E Hybrid Tools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%2E Hydraulics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9%2E Fuel System</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Compliance_Recommendation__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_Care_Recommendation__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Electrical_Engineering_Recommendation__c</picklist>
+        <values>
+            <fullName>Alternative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Engineering_Recommendation__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mechanical_Engineering_Recommendation__c</picklist>
+        <values>
+            <fullName>Alternative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OAR_Status__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conditional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Reviewing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>See Details</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Production_Recommendation__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Publications_Recommendation__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Purchasing_Recommendation__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Recommendation__c</picklist>
+        <values>
+            <fullName>Approve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapprove</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

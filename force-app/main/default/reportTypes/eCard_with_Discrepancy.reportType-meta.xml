@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>other</category>
+    <deployed>false</deployed>
+    <description>eCards with Discrepancies</description>
+    <label>eCard with Discrepancy</label>
+    <sections>
+        <masterLabel>dw_ecard_app$customer_master</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>ecard</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>dw_ecard_app$ecard_discrepancy_log</masterLabel>
+    </sections>
+</ReportType>

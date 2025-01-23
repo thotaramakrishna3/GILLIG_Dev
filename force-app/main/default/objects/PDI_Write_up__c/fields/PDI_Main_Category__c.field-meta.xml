@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDI_Main_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Main Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AIR CONDITIONING</fullName>
+                <default>false</default>
+                <label>AIR CONDITIONING</label>
+            </value>
+            <value>
+                <fullName>BODY</fullName>
+                <default>false</default>
+                <label>BODY</label>
+            </value>
+            <value>
+                <fullName>CHASSIS</fullName>
+                <default>false</default>
+                <label>CHASSIS</label>
+            </value>
+            <value>
+                <fullName>DASH PANEL &amp; GUAGE</fullName>
+                <default>false</default>
+                <label>DASH PANEL &amp; GUAGE</label>
+            </value>
+            <value>
+                <fullName>DESTINATION SIGN</fullName>
+                <default>false</default>
+                <label>DESTINATION SIGN</label>
+            </value>
+            <value>
+                <fullName>DRIVELINE</fullName>
+                <default>false</default>
+                <label>DRIVELINE</label>
+            </value>
+            <value>
+                <fullName>ELECTRICAL</fullName>
+                <default>false</default>
+                <label>ELECTRICAL</label>
+            </value>
+            <value>
+                <fullName>ENGINE</fullName>
+                <default>false</default>
+                <label>ENGINE</label>
+            </value>
+            <value>
+                <fullName>EXTERIOR TRIM</fullName>
+                <default>false</default>
+                <label>EXTERIOR TRIM</label>
+            </value>
+            <value>
+                <fullName>FIRE</fullName>
+                <default>false</default>
+                <label>FIRE</label>
+            </value>
+            <value>
+                <fullName>FRONT AXLE</fullName>
+                <default>false</default>
+                <label>FRONT AXLE</label>
+            </value>
+            <value>
+                <fullName>FRONT SUSPENSION</fullName>
+                <default>false</default>
+                <label>FRONT SUSPENSION</label>
+            </value>
+            <value>
+                <fullName>FUEL</fullName>
+                <default>false</default>
+                <label>FUEL</label>
+            </value>
+            <value>
+                <fullName>HEATER</fullName>
+                <default>false</default>
+                <label>HEATER</label>
+            </value>
+            <value>
+                <fullName>INTERIOR TRIM</fullName>
+                <default>false</default>
+                <label>INTERIOR TRIM</label>
+            </value>
+            <value>
+                <fullName>PAINT &amp; DECAL</fullName>
+                <default>false</default>
+                <label>PAINT &amp; DECAL</label>
+            </value>
+            <value>
+                <fullName>PIPING</fullName>
+                <default>false</default>
+                <label>PIPING</label>
+            </value>
+            <value>
+                <fullName>RAMP</fullName>
+                <default>false</default>
+                <label>RAMP</label>
+            </value>
+            <value>
+                <fullName>REAR AXLE</fullName>
+                <default>false</default>
+                <label>REAR AXLE</label>
+            </value>
+            <value>
+                <fullName>REAR SUSPENSION</fullName>
+                <default>false</default>
+                <label>REAR SUSPENSION</label>
+            </value>
+            <value>
+                <fullName>SAFETY &amp; ROAD EQUIPMENT</fullName>
+                <default>false</default>
+                <label>SAFETY &amp; ROAD EQUIPMENT</label>
+            </value>
+            <value>
+                <fullName>STEERING</fullName>
+                <default>false</default>
+                <label>STEERING</label>
+            </value>
+            <value>
+                <fullName>TRANSMISSION</fullName>
+                <default>false</default>
+                <label>TRANSMISSION</label>
+            </value>
+            <value>
+                <fullName>WHEEL &amp; TIRE</fullName>
+                <default>false</default>
+                <label>WHEEL &amp; TIRE</label>
+            </value>
+            <value>
+                <fullName>WINDOW</fullName>
+                <default>false</default>
+                <label>WINDOW</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>RR - Ready Row</controllingFieldValue>
+            <controllingFieldValue>07 - Paint</controllingFieldValue>
+            <controllingFieldValue>08a - Trim</controllingFieldValue>
+            <controllingFieldValue>08b - Trim</controllingFieldValue>
+            <controllingFieldValue>11 - Final</controllingFieldValue>
+            <valueName>PAINT &amp; DECAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RR - Ready Row</controllingFieldValue>
+            <controllingFieldValue>11 - Final</controllingFieldValue>
+            <valueName>SAFETY &amp; ROAD EQUIPMENT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RR - Ready Row</controllingFieldValue>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>WHEEL &amp; TIRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 - Electrical</controllingFieldValue>
+            <controllingFieldValue>06 - Body</controllingFieldValue>
+            <controllingFieldValue>07 - Paint</controllingFieldValue>
+            <valueName>DASH PANEL &amp; GUAGE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 - Electrical</controllingFieldValue>
+            <controllingFieldValue>06 - Body</controllingFieldValue>
+            <valueName>DESTINATION SIGN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 - Electrical</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <controllingFieldValue>11 - Final</controllingFieldValue>
+            <valueName>ELECTRICAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 - Electrical</controllingFieldValue>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>ENGINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 - Electrical</controllingFieldValue>
+            <valueName>FIRE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 - Electrical</controllingFieldValue>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>05a - Roof</controllingFieldValue>
+            <controllingFieldValue>05b - Unibody</controllingFieldValue>
+            <controllingFieldValue>06 - Body</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>HEATER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>03 - Electrical</controllingFieldValue>
+            <valueName>RAMP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>05a - Roof</controllingFieldValue>
+            <controllingFieldValue>05b - Unibody</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>AIR CONDITIONING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>CHASSIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <valueName>DRIVELINE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <valueName>FRONT AXLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <valueName>FRONT SUSPENSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>FUEL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>PIPING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <valueName>REAR AXLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <valueName>REAR SUSPENSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <valueName>STEERING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>04 - Chassis</controllingFieldValue>
+            <controllingFieldValue>09 - Rack</controllingFieldValue>
+            <valueName>TRANSMISSION</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05a - Roof</controllingFieldValue>
+            <controllingFieldValue>05b - Unibody</controllingFieldValue>
+            <controllingFieldValue>06 - Body</controllingFieldValue>
+            <controllingFieldValue>07 - Paint</controllingFieldValue>
+            <controllingFieldValue>08a - Trim</controllingFieldValue>
+            <controllingFieldValue>08b - Trim</controllingFieldValue>
+            <valueName>BODY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05a - Roof</controllingFieldValue>
+            <controllingFieldValue>05b - Unibody</controllingFieldValue>
+            <controllingFieldValue>06 - Body</controllingFieldValue>
+            <controllingFieldValue>07 - Paint</controllingFieldValue>
+            <controllingFieldValue>08a - Trim</controllingFieldValue>
+            <controllingFieldValue>08b - Trim</controllingFieldValue>
+            <valueName>INTERIOR TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>05b - Unibody</controllingFieldValue>
+            <controllingFieldValue>06 - Body</controllingFieldValue>
+            <controllingFieldValue>07 - Paint</controllingFieldValue>
+            <controllingFieldValue>08a - Trim</controllingFieldValue>
+            <controllingFieldValue>08b - Trim</controllingFieldValue>
+            <valueName>EXTERIOR TRIM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>07 - Paint</controllingFieldValue>
+            <controllingFieldValue>08a - Trim</controllingFieldValue>
+            <controllingFieldValue>08b - Trim</controllingFieldValue>
+            <valueName>WINDOW</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

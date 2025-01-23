@@ -1,0 +1,32 @@
+<apex:page standardController="Opportunity_Line__c">
+    <apex:form >
+        <apex:pageBlock title="New Opportunity Line">
+            
+            <apex:pageBlockSection columns="1" >
+                <apex:inputField value="{!Opportunity_Line__c.Opportunity_Line__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.Quantity__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.Length__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.Mode__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.Style__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection title="Quote Information" columns="2">
+                <apex:inputField value="{!Opportunity_Line__c.Quote_Date__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.Quoted_Price__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.Quote_Validity_Period_Days__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.Quoted_Delivery__c}"/>
+            </apex:pageBlockSection>
+        
+            <apex:pageBlockSection columns="2" title="Purchase Order">
+                <apex:inputField value="{!Opportunity_Line__c.PO_Reference__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.PO_Date__c}"/>
+                <apex:inputField value="{!Opportunity_Line__c.PO_Amount__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >
+            	<apex:commandButton action="{! save }" value="Save" />        
+		    	<apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

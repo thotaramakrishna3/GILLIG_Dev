@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue_Description_del__c</fullName>
+    <description>Brief Description of the issue being addressed with this TSB</description>
+    <externalId>false</externalId>
+    <label>Issue Description</label>
+    <length>25500</length>
+    <type>LongTextArea</type>
+    <visibleLines>50</visibleLines>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Problem_Code_Required_with_Field_Support</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( RecordType.Name  =  &quot;Field Support&quot;,
+ISPICKVAL ( Status , &quot;Closed&quot;), 
+ISBLANK (TEXT(Problem_Code__c )))</errorConditionFormula>
+    <errorDisplayField>Problem_Code__c</errorDisplayField>
+    <errorMessage>Please fill in the Problem Code to close this Field Support Case</errorMessage>
+</ValidationRule>

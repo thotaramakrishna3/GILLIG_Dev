@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity$Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Charger_Sales_Orders_Junction__r$Sales_Order_Number__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Account__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Charger_Sales_Orders_Junction__r$Sales_Order_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$StageName</field>
+    </columns>
+    <description>Ebus customers with known charging supplier. EMPTY slots may indicate Proterra brand charging equipment on site. Some customers also have two or more charging equipment suppliers.</description>
+    <format>Tabular</format>
+    <name>E-Bus Customers and Charger</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Charger_Opportunity__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Opportunity$StageName</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

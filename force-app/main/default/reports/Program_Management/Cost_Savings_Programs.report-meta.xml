@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Project__c.Project_Name__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Project__c.Cost_Impact_per_Bus__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Project__c.Annualized_Cost_Impact__c</field>
+    </columns>
+    <columns>
+        <field>Project__c.Program_Manager__c</field>
+    </columns>
+    <columns>
+        <field>Project__c.Stage__c</field>
+    </columns>
+    <columns>
+        <field>Project__c.Active_Project_Stage__c</field>
+    </columns>
+    <columns>
+        <field>Project__c.Project_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Project__c.Production_Availability__c</field>
+    </columns>
+    <columns>
+        <field>Project__c.Status__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Project__c.Stage__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,1. Concept,2. Researching,3. Charter Development,4. Pending Approval,5. Active Project,6. In Production,H. On Hold,X. Denied</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Project__c.Category__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cost Savings</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Cost Savings Programs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Project__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Project__c.Production_Availability__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

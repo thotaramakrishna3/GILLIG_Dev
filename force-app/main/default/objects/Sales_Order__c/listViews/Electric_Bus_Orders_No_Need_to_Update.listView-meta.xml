@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Electric_Bus_Orders_No_Need_to_Update</fullName>
+    <booleanFilter>1 AND not (2 or 3) and 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Battery_Configuration__c</columns>
+    <columns>Charging_Configuration__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mode__c</field>
+        <operation>equals</operation>
+        <value>Electric</value>
+    </filters>
+    <filters>
+        <field>Battery_Configuration__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Charging_Configuration__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Sales_Order__c.History,Sales_Order__c.Planned</value>
+    </filters>
+    <label>Electric Bus Orders No Need to Update</label>
+</ListView>

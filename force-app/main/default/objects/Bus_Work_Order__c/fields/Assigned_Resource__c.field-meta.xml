@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Resource__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>To get the assigned resource for this bus work order</description>
+    <externalId>false</externalId>
+    <label>Assigned Resource</label>
+    <referenceTo>AssignedResource</referenceTo>
+    <relationshipName>Bus_Work_Orders</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

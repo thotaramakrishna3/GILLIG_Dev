@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Transmission_selected</fullName>
+    <active>false</active>
+    <description>None cannot be used as a transmission type</description>
+    <errorConditionFormula>text(Transmission__c)  = &apos;None&apos;</errorConditionFormula>
+    <errorMessage>Do not use None as a Transmission Op-Chk</errorMessage>
+</ValidationRule>

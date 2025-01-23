@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Bid_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>No-Bid Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Risk Profile</fullName>
+                <default>false</default>
+                <label>Customer Risk Profile</label>
+            </value>
+            <value>
+                <fullName>Delivery</fullName>
+                <default>false</default>
+                <label>Delivery</label>
+            </value>
+            <value>
+                <fullName>Schedule - Insufficient Bid Resources</fullName>
+                <default>false</default>
+                <label>Schedule - Insufficient Bid Resources</label>
+            </value>
+            <value>
+                <fullName>Schedule - Customer Bid Timing Constraint</fullName>
+                <default>false</default>
+                <label>Schedule - Customer Bid Timing Constraint</label>
+            </value>
+            <value>
+                <fullName>Specification - Medium Duty</fullName>
+                <default>false</default>
+                <label>Specification - Medium Duty</label>
+            </value>
+            <value>
+                <fullName>Specification - Overly Onerous</fullName>
+                <default>false</default>
+                <label>Specification - Overly Onerous</label>
+            </value>
+            <value>
+                <fullName>Specification - Product (i.e Artic, Coach)</fullName>
+                <default>false</default>
+                <label>Specification - Product (i.e Artic, Coach)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Electric – Range Constraint</fullName>
+                <default>false</default>
+                <label>Electric – Range Constraint</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

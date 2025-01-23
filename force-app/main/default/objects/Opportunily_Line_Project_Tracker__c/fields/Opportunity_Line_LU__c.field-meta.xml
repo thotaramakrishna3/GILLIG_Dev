@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Line_LU__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Opportunity Line</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Opportunity_Line__c.Opportunity_Line__r.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Accounts__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Opportunity_Line__c.Opportunity_Line__r.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.Opportunity__c</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Opportunity_Line__c</referenceTo>
+    <relationshipLabel>Opportunity Line - Project Trackers</relationshipLabel>
+    <relationshipName>Opportunily_Line_Project_Trackers</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

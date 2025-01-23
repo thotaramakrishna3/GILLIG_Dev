@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesforceID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalDeveloperName>SalesforceID</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>SalesforceID</label>
+    <referenceTo>Sales_Order__c</referenceTo>
+    <relationshipLabel>Meeting Notes</relationshipLabel>
+    <relationshipName>items_Meeting_Notes</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

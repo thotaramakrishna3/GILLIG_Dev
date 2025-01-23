@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipped_Date_Not_Null</fullName>
+    <active>true</active>
+    <description>If shipped date is null, breakdown report cannot be created.</description>
+    <errorConditionFormula>Shipped_Date__c &lt;&gt; NULL</errorConditionFormula>
+    <errorMessage>Breakdown report cannot be created if Shipped Date is null.</errorMessage>
+</ValidationRule>

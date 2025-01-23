@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Configurator_Request__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Configurator_Request__c.Assigned_to__c</field>
+    </columns>
+    <columns>
+        <field>Configurator_Request__c.Buy_Design_Section__c</field>
+    </columns>
+    <columns>
+        <field>Configurator_Request__c.Problem_Description__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>((Not 1) or  2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>Configurator_Request__c.Date_Closed__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>1/1/2018</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Configurator_Request__c.Date_Closed__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Configurator_Request__c.Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Request Generated,Assigned,In Review,Hold</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Configurator_Request__c.Priority__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>Configurator_Request__c.Date_Requested__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Buy Design Ticket Analysis</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Configurator_Request__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Configurator_Request__c.Date_Assigned__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

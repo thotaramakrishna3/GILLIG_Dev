@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_bus_accepted_at_Property_Location__c</fullName>
+    <description>The Acceptance date entered by the Service Resource.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Acceptance date entered by the Service Resource.</inlineHelpText>
+    <label>Date Bus accepted at Property Location</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

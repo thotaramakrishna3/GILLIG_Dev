@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Account__c</columns>
+    <columns>NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>Internal_Name__c</columns>
+    <columns>Preproduction_Meeting__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Customer_Legacy_Status__c</columns>
+    <columns>Pubs_Unique_Customer_Info__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Preproduction_Meeting__c</field>
+        <operation>greaterThan</operation>
+        <value>4/1/2023</value>
+    </filters>
+    <filters>
+        <field>Customer_Legacy_Status__c</field>
+        <operation>equals</operation>
+        <value>New Customer,Return Customer</value>
+    </filters>
+    <label>All</label>
+</ListView>

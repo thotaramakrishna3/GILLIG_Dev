@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Working_Days</fullName>
+    <columns>NAME</columns>
+    <columns>Day_Of_the_Week__c</columns>
+    <columns>Exception_Date__c</columns>
+    <columns>Slots__c</columns>
+    <columns>Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Working Day</value>
+    </filters>
+    <label>Working Days</label>
+</ListView>

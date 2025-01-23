@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Completion_Date__c</fullName>
+    <description>When all four manuals have been sent, this date reflects when the final item was sent to the customer.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date all four manual PDFs were completed and delivered.</inlineHelpText>
+    <label>Manuals Done</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

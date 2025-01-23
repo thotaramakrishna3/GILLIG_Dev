@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Due_Date</fullName>
+    <active>true</active>
+    <description>Set quote due date when pricing is requested</description>
+    <errorConditionFormula>text(StageName) = &quot;Prepare Pricing&quot; &amp;&amp; ISNULL(Quote_Due_Date__c)</errorConditionFormula>
+    <errorMessage>Please update Quote Due date before pricing is requested</errorMessage>
+</ValidationRule>

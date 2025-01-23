@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Package_Labeling_Problems__c</fullName>
+    <externalId>false</externalId>
+    <label>Package Labeling Problems</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Barcodes are missing or do not scan</fullName>
+                <default>false</default>
+                <label>Barcodes are missing or do not scan</label>
+            </value>
+            <value>
+                <fullName>Gillig part number is missing or incorrect</fullName>
+                <default>false</default>
+                <label>Gillig part number is missing or incorrect</label>
+            </value>
+            <value>
+                <fullName>Gillig PO line/release number is missing or incorrect</fullName>
+                <default>false</default>
+                <label>Gillig PO line/release number is missing or incorrect</label>
+            </value>
+            <value>
+                <fullName>Gillig PO number is missing or incorrect</fullName>
+                <default>false</default>
+                <label>Gillig PO number is missing or incorrect</label>
+            </value>
+            <value>
+                <fullName>Quantity is missing or incorrect</fullName>
+                <default>false</default>
+                <label>Quantity is missing or incorrect</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

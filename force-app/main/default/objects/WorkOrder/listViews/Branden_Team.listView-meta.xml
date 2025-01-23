@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branden_Team</fullName>
+    <booleanFilter>(1 OR 5 ) AND ( 2 OR 3 OR 4)</booleanFilter>
+    <columns>Name</columns>
+    <columns>Account</columns>
+    <columns>Subject</columns>
+    <columns>Status</columns>
+    <columns>ASR__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner</field>
+        <operation>contains</operation>
+        <value>branden Ander</value>
+    </filters>
+    <filters>
+        <field>ASR__c</field>
+        <operation>contains</operation>
+        <value>Jason Schwa</value>
+    </filters>
+    <filters>
+        <field>ASR__c</field>
+        <operation>contains</operation>
+        <value>Scott kovaly</value>
+    </filters>
+    <filters>
+        <field>ASR__c</field>
+        <operation>contains</operation>
+        <value>Steve F</value>
+    </filters>
+    <filters>
+        <field>Owner</field>
+        <operation>contains</operation>
+        <value>jacqueline</value>
+    </filters>
+    <label>Branden Team</label>
+    <sharedTo>
+        <group>FS_Branden</group>
+    </sharedTo>
+</ListView>

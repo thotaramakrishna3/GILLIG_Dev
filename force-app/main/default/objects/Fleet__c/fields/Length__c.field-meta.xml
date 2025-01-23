@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Length__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( RecordType.Name =&quot;Competitor&quot;, Length_Competitor__c, if(isblank( Sales_Order__c ), &quot;TBD&quot;,text( Sales_Order__r.Length__c )))</formula>
+    <label>Length</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

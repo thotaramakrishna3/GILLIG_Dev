@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_28477638</developerName>
+        <masterLabel>Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Sales_Order__c.Parts_Manual_Optimizer__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Carrie Osborn-Houchin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Darija Desancic</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ed Montano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Eliaser Fuentes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Juliana Moore</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Julio Ruiz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michael McClure</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mike Roe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Raspreet Nagra</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sergio Romo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Unassigned</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nathan Fisher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ryan Marquez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jay Headley</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vivian Hoang</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Heather Baron</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Arminder Dhillon</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dave Bonini</sourceValue>
+            </sourceValues>
+            <value>Started</value>
+        </values>
+        <values>
+            <value>Not Started</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Sales_Order__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Serial_Numbers__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Internal_Name__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Quantity__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Drivers_Handbook_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.TW_Ship_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Schematics_Manual_Completion_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Service_Manual_Completion_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Drivers_Handbook_Completion_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Ship_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Parts_Manual_Completion_Date__c</field>
+    </columns>
+    <columns>
+        <field>Sales_Order__c.Manual_Notes__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND 2 AND (3 OR 4 OR 5 OR 6) AND 7</booleanFilter>
+        <criteriaItems>
+            <column>Sales_Order__c.Drivers_Handbook_Due_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>1/1/2020</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Start_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Drivers_Handbook_Completion_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Parts_Manual_Completion_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Schematics_Manual_Completion_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Service_Manual_Completion_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Sales_Order__c.Manuals_Identical_To__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Any Manual NOT Yet Complete</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Sales_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Sales_Order__c.Start_Date__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Sales_Order__c.Start_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

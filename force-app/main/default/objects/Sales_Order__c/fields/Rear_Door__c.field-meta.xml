@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rear_Door__c</fullName>
+    <externalId>false</externalId>
+    <label>Rear Door</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>34&quot;</fullName>
+                <default>false</default>
+                <label>34&quot;</label>
+            </value>
+            <value>
+                <fullName>48&quot;</fullName>
+                <default>false</default>
+                <label>48&quot;</label>
+            </value>
+            <value>
+                <fullName>56&quot;</fullName>
+                <default>false</default>
+                <label>56&quot;</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

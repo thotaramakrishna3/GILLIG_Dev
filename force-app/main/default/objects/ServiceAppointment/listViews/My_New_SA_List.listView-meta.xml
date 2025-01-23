@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_New_SA_List</fullName>
+    <columns>Name</columns>
+    <columns>ArrivalWindowStartTime</columns>
+    <columns>ArrivalWindowEndTime</columns>
+    <columns>Status</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Check_Assigned_Resource__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>My Service Appointment List View</label>
+</ListView>

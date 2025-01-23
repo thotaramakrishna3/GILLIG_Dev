@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bus_Photos_Due__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( 
+MOD( Start_Date__c - DATE(1900, 1, 7), 7), 
+0, (Start_Date__c ) + 10 + FLOOR((10-1)/5)*2, 
+1, (Start_Date__c ) + 10 + FLOOR((10)/5)*2, 
+2, (Start_Date__c ) + 10 + FLOOR((10+1)/5)*2, 
+3, (Start_Date__c ) + 10 + FLOOR((10+2)/5)*2, 
+4, (Start_Date__c ) + 10 + FLOOR((10+3)/5)*2, 
+5, (Start_Date__c ) + 10 + CEILING((10)/5)*2, 
+6, (Start_Date__c ) - IF(10&gt;0,1,0) + 10 + CEILING((10)/5)*2, 
+null)</formula>
+    <label>Bus Photos Due</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

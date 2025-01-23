@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>vScore</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>vScores</value>
+    </caseValues>
+    <layouts>
+        <layout>vScore Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Delivery Score --></label>
+            <section>Delivery Score</section>
+        </sections>
+        <sections>
+            <label><!-- Quality Score --></label>
+            <section>Quality Score</section>
+        </sections>
+        <sections>
+            <label><!-- Questionnaire Score --></label>
+            <section>Questionnaire Score</section>
+        </sections>
+        <sections>
+            <label><!-- Warranty Score --></label>
+            <section>Warranty Score</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

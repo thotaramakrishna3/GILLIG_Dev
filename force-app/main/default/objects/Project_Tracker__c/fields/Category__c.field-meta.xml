@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product Improvement</fullName>
+                <default>false</default>
+                <label>Product Improvement</label>
+            </value>
+            <value>
+                <fullName>Cost Savings</fullName>
+                <default>false</default>
+                <label>Cost Savings</label>
+            </value>
+            <value>
+                <fullName>Market Growth</fullName>
+                <default>false</default>
+                <label>Market Growth</label>
+            </value>
+            <value>
+                <fullName>Product Stability</fullName>
+                <default>false</default>
+                <label>Product Stability</label>
+            </value>
+            <value>
+                <fullName>Aftermarket Parts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Aftermarket Parts</label>
+            </value>
+            <value>
+                <fullName>New Product Introduction</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Product Introduction</label>
+            </value>
+            <value>
+                <fullName>Sustainability Initiative</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sustainability Initiative</label>
+            </value>
+            <value>
+                <fullName>Value1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Value1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

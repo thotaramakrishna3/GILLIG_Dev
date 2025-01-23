@@ -1,0 +1,26 @@
+<apex:page standardController="Fleet__c">
+    <apex:form >
+    
+    <apex:pageBlock title="Fleet" >
+
+        <apex:pageBlockSection title="Fleet" columns="1">
+            <apex:inputField value="{!Fleet__c.Competitor__c}" required="true" rendered="{!$CurrentPage.parameters.RecordType = '01215000001UQDL'}" />
+			<apex:inputField value="{!Fleet__c.Start_Date__c}" required="true" rendered="{!NOT($CurrentPage.parameters.RecordType = '01215000001UQDL')}"/>
+            <apex:inputField value="{!Fleet__c.Competitor_Date_Delivered__c}" label="Date Delivered" required="true" rendered="{!$CurrentPage.parameters.RecordType = '01215000001UQDL'}"/>
+            <apex:inputField value="{!Fleet__c.Length_GILLIG__c}" label="Length" rendered="{!NOT($CurrentPage.parameters.RecordType = '01215000001UQDL')}"/>
+            <apex:inputField value="{!Fleet__c.Length_Competitor__c}" label="Length" rendered="{!$CurrentPage.parameters.RecordType = '01215000001UQDL'}"/>
+            <apex:inputField value="{!Fleet__c.Mode__c}"/>
+            <apex:inputField value="{!Fleet__c.Style_GILLIG__c}" label="Style" rendered="{!NOT($CurrentPage.parameters.RecordType = '01215000001UQDL')}"/>
+            <apex:inputField value="{!Fleet__c.Style_Competitor__c}" label="Style" rendered="{!$CurrentPage.parameters.RecordType = '01215000001UQDL'}"/>
+            <apex:inputField value="{!Fleet__c.Active_Quantity_Competitor__c}" label="Quantity" rendered="{!$CurrentPage.parameters.RecordType = '01215000001UQDL'}"/>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{! save }" value="Save" />        
+		    <apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+        </apex:pageBlockButtons>
+
+    </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>
