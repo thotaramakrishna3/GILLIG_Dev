@@ -84,8 +84,8 @@ export default class ShortageDbPaginationComponent extends LightningElement {
   @track detailsmodal = false;
   @track selecteddiscrepancy;
   @track selecteddiscrepancycomments = [];
-  @track qccapturerole = false;
-  @track qccaptureaction = false;
+  // @track qccapturerole = false;
+  // @track qccaptureaction = false;
   @track isdelenabled = false;
   @track busstatuslist = [{ label: 'All Bus Status', value: 'All Bus Status' }];
   @track selectedBusStatus = 'All Bus Status';
@@ -151,9 +151,9 @@ export default class ShortageDbPaginationComponent extends LightningElement {
     return this.filtereddepartmentdiscrepancy.length == 0;
   }
 
-  get disableprodforupdate() {
-    return !this.permissionset.shortage_update_prod.write || this.selectedshortage.discrepancy_status.toLowerCase() != "open";//added
-  }
+  // get disableprodforupdate() {
+  //   return !this.permissionset.shortage_update_prod.write || this.selectedshortage.discrepancy_status.toLowerCase() != "open";//added
+  // }
 
   get disableqcforupdate() {
     if (this.selecteddiscrepancy.discrepancy_status.toLowerCase() == "approve") {
@@ -236,11 +236,11 @@ export default class ShortageDbPaginationComponent extends LightningElement {
     EcardLogin()
       .then((result) => {
         this.loggedinuser = result.data.user;
-        if (this.loggedinuser.approle_id == 1 || this.loggedinuser.approle_id == 4) {
-          this.qccapturerole = true;
-        } else {
-          this.qccapturerole = false;
-        }
+        // if (this.loggedinuser.approle_id == 1 || this.loggedinuser.approle_id == 4) {
+        //   this.qccapturerole = true;
+        // } else {
+        //   this.qccapturerole = false;
+        // }
         this.currentuserempid = this.loggedinuser.employee_id;
       })
       .catch((error) => {
@@ -295,7 +295,7 @@ export default class ShortageDbPaginationComponent extends LightningElement {
           }
           var bsavailable = shortageobj.buildstation_code == '9999' ? false : true;
           var currentlocationavailable = (shortageobj.current_line_location != '9999' && shortageobj.current_line_location != null) ? true : false;
-          var qc_avilable = shortageobj.assigend_qc_id != null ? true : false;
+          //var qc_avilable = shortageobj.assigend_qc_id != null ? true : false;
           var moddedshortage = {
             index: index,
             departmentid: shortageobj.department_id,
@@ -340,15 +340,15 @@ export default class ShortageDbPaginationComponent extends LightningElement {
             last_name: shortageobj.last_name,
             customername: `${shortageobj.customer_name}`,
             has_part_shortage: shortageobj.has_part_shortage,
-            assignedprod: getselectedformandetails(shortageobj),
+            //assignedprod: getselectedformandetails(shortageobj),
             part_avilable: shortageobj.part_avilable,
             buyer_code_avilable: (shortageobj.buyer == null || shortageobj.planner_code == null) ? false : true,
             po_no: shortageobj.po_no,
-            allprodlist: modifieduserlist(shortageobj.prod),
-            allqclist: modifieduserlist(shortageobj.qc),
+            // allprodlist: modifieduserlist(shortageobj.prod),
+            // allqclist: modifieduserlist(shortageobj.qc),
             quantity: shortageobj.quantity,
-            assigend_qc_id: modifieduserlist([shortageobj.assigend_qc_id]),
-            qcavailable: qc_avilable,
+           // assigend_qc_id: modifieduserlist([shortageobj.assigend_qc_id]),
+            //qcavailable: qc_avilable,
             raised_date: shortageobj.raised_date,
             raised_date_display: getmoddeddate(shortageobj.raised_date),
             raised_status_updated_date: shortageobj.raised_status_updated_date,
@@ -457,29 +457,29 @@ export default class ShortageDbPaginationComponent extends LightningElement {
 
 
   // Update PROD list with users not in scheduled
-  updateprodlistwithall(selectedprod, allprod) {
-    function checkifexisting(element, searcharray) {
-      var elementexisting = true;
-      for (var i in searcharray) {
-        if (searcharray[i].Id == element) {
-          elementexisting = false;
-        }
-      }
-      return elementexisting;
-    }
-    var updatedprodlist = [];
-    if (allprod != undefined && allprod.length != 0) {
-      updatedprodlist = JSON.parse(JSON.stringify(allprod));
-    }
-    if (selectedprod != undefined && selectedprod.length != 0) {
-      for (var i in selectedprod) {
-        if (checkifexisting(selectedprod[i].Id, updatedprodlist)) {
-          updatedprodlist.push(selectedprod[i]);
-        }
-      }
-    }
-    return updatedprodlist;
-  }
+  // updateprodlistwithall(selectedprod, allprod) {
+  //   function checkifexisting(element, searcharray) {
+  //     var elementexisting = true;
+  //     for (var i in searcharray) {
+  //       if (searcharray[i].Id == element) {
+  //         elementexisting = false;
+  //       }
+  //     }
+  //     return elementexisting;
+  //   }
+  //   var updatedprodlist = [];
+  //   if (allprod != undefined && allprod.length != 0) {
+  //     updatedprodlist = JSON.parse(JSON.stringify(allprod));
+  //   }
+  //   if (selectedprod != undefined && selectedprod.length != 0) {
+  //     for (var i in selectedprod) {
+  //       if (checkifexisting(selectedprod[i].Id, updatedprodlist)) {
+  //         updatedprodlist.push(selectedprod[i]);
+  //       }
+  //     }
+  //   }
+  //   return updatedprodlist;
+  // }
 
   // Capitalize string passe
   capitalize(text) {
@@ -563,15 +563,15 @@ export default class ShortageDbPaginationComponent extends LightningElement {
   }
 
   // To get the forman details in a list format from API structure.
-  getselectedformandetails(discrepancyobj) {
-    var users = [];
-    for (var i = 0; i < 5; i++) {
-      if (discrepancyobj[`forman${i + 1}_id`] != undefined) {
-        users.push(discrepancyobj[`forman${i + 1}_id`]);
-      }
-    }
-    return this.modifyuserlistfordisplay(users);
-  }
+  // getselectedformandetails(discrepancyobj) {
+  //   var users = [];
+  //   for (var i = 0; i < 5; i++) {
+  //     if (discrepancyobj[`forman${i + 1}_id`] != undefined) {
+  //       users.push(discrepancyobj[`forman${i + 1}_id`]);
+  //     }
+  //   }
+  //   return this.modifyuserlistfordisplay(users);
+  // }
 
   // To sort Normal Discrepancy Table
   sortdiscrepancytable(event) {
@@ -745,19 +745,19 @@ export default class ShortageDbPaginationComponent extends LightningElement {
 
     
   // To Update the responsebody with selected formanIds from List Views.
-  updateformans(responsebody, formanlist) {
-    var newresponse = JSON.parse(responsebody);
-    var newformanlist;
-    if (formanlist.length > 5) {
-      newformanlist = formanlist.slice(0, 5);
-    } else {
-      newformanlist = formanlist;
-    }
-    for (var i = 0; i < newformanlist.length; i++) {
-      newresponse[`forman${i + 1}_id`] = newformanlist[i].userid;
-    }
-    return newresponse;
-  }
+  // updateformans(responsebody, formanlist) {
+  //   var newresponse = JSON.parse(responsebody);
+  //   var newformanlist;
+  //   if (formanlist.length > 5) {
+  //     newformanlist = formanlist.slice(0, 5);
+  //   } else {
+  //     newformanlist = formanlist;
+  //   }
+  //   for (var i = 0; i < newformanlist.length; i++) {
+  //     newresponse[`forman${i + 1}_id`] = newformanlist[i].userid;
+  //   }
+  //   return newresponse;
+  // }
 
   // Get Department picklist from server
   getdepartmentPicklist(event) {
@@ -891,12 +891,12 @@ export default class ShortageDbPaginationComponent extends LightningElement {
   // For getting Buildstation Details on department/ecardId change for new Discrepancy.
   getcompleteBuilstationlist(data) {
     let workstationdata = data.builstationMapWrapper.workcenter;
-    var prod_supervisor = this.modifyuserlistfordisplay(
-      data.builstationMapWrapper.prod_supervisor
-    );
-    this.deptsupervisorforselecteddept = prod_supervisor;
+    // var prod_supervisor = this.modifyuserlistfordisplay(
+    //   data.builstationMapWrapper.prod_supervisor
+    // );
+    // this.deptsupervisorforselecteddept = prod_supervisor;
     let modifiedworkstationdata = [];
-    var QC = this.modifyuserlistfordisplay(data.builstationMapWrapper.qc);
+    //var QC = this.modifyuserlistfordisplay(data.builstationMapWrapper.qc);
     if (workstationdata.length != 0) {
       for (var wc in workstationdata) {
         let workcentre = workstationdata[wc];
@@ -904,11 +904,11 @@ export default class ShortageDbPaginationComponent extends LightningElement {
         let workcentername = workcentre.workcentername;
         for (var bs in workcentre.buildstation) {
           var buildstation = workcentre.buildstation[bs];
-          var PROD = this.modifyuserlistfordisplay(buildstation.prod);
-          var selectedprod = this.getselectedformandetails(buildstation);
-          var selectedqc = this.modifyuserlistfordisplay([
-            buildstation.qc_approvedby_id
-          ]);
+          // var PROD = this.modifyuserlistfordisplay(buildstation.prod);
+          // var selectedprod = this.getselectedformandetails(buildstation);
+          // var selectedqc = this.modifyuserlistfordisplay([
+          //   buildstation.qc_approvedby_id
+          // ]);
           var modifiedwsdata = {
             workcenter_id: workcenter_id,
             ecard_operation_log_id: buildstation.ecard_operation_log_id,
@@ -919,11 +919,11 @@ export default class ShortageDbPaginationComponent extends LightningElement {
                 ? buildstation.has_descrepancy
                 : false,
             buildstation_id: buildstation.buildstation_id,
-            buildstation_code: buildstation.buildstation_code,
-            selectedprod: selectedprod,
-            selectedqc: selectedqc,
-            PRODlist: PROD,
-            QClist: QC
+            buildstation_code: buildstation.buildstation_code
+            // selectedprod: selectedprod,
+            // selectedqc: selectedqc,
+            // PRODlist: PROD,
+            // QClist: QC
           };
           modifiedworkstationdata.push(modifiedwsdata);
         }
@@ -956,19 +956,29 @@ export default class ShortageDbPaginationComponent extends LightningElement {
     for (var i in this.modifiedshortageslist) {
       if (this.modifiedshortageslist[i].ecard_discrepancy_log_id == selectepartshortagelogid) {
         this.selectedshortage = Object.assign({}, this.modifiedshortageslist[i]);
+        if(this.modifiedshortageslist[i].resolved_status_updatedby_id !=null && (this.modifiedshortageslist[i].discrepancy_status == 'resolve' || this.modifiedshortageslist[i].discrepancy_status == 'approve')){
+          this.selectedshortage.resolved_updatedby_id = this.modifiedshortageslist[i].resolved_status_updatedby_id[0].fullname;//+' '+this.modifiedshortageslist[i].resolved_status_updatedby_id.last_name;
+      }else{
+          this.selectedshortage.resolved_updatedby_id = '';
+      }
+      if(this.modifiedshortageslist[i].verifiedby_id !=null && this.modifiedshortageslist[i].discrepancy_status == 'approve'){
+          this.selectedshortage.verified_updatedby_id = this.modifiedshortageslist[i].verifiedby_id[0].fullname;//+' '+this.modifiedshortageslist[i].verifiedby_id.last_name;
+      }else{
+          this.selectedshortage.verified_updatedby_id = '';
+      }
       }
     }
-    if (this.selectedshortage.allprodlist.length == 0) {
-      var userdetails = [];
-      await getcrewingsuserslist({ deptid: this.selectedshortage.departmentid })
-        .then((result) => {
-          userdetails = JSON.parse(result.responsebody).data.user;
-          userdetails = this.removeDuplicates(userdetails);//todo
-          this.selectedshortage.allprodlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
-        })
-        .catch((error) => {
-        });
-    }
+    // if (this.selectedshortage.allprodlist.length == 0) {
+    //   var userdetails = [];
+    //   await getcrewingsuserslist({ deptid: this.selectedshortage.departmentid })
+    //     .then((result) => {
+    //       userdetails = JSON.parse(result.responsebody).data.user;
+    //       userdetails = this.removeDuplicates(userdetails);//todo
+    //       this.selectedshortage.allprodlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
+    //     })
+    //     .catch((error) => {
+    //     });
+    // }
     this.getselecteddiscrepancycomments(selectepartshortagelogid);
     this.getVendorlistforparts(this.selectedshortage.buspart_no);
     if (this.selectedshortage.vendor_name == null) { //to-do list in partsvendor list
@@ -1035,16 +1045,16 @@ export default class ShortageDbPaginationComponent extends LightningElement {
     this.updatepartshortagetoserver(event, true);
   }
 
-  updateuserpartshortage(event) {
-    var detail = event.detail;
-    if (detail.type == 'QC') {
-      this.selectedshortage.assigend_qc_id = detail.userlist;
-    }
-    if (detail.type == 'PROD') {
-      this.selectedshortage.assignedprod = detail.userlist;
-    }
-    this.updatepartshortagetoserver(event, false);
-  }
+  // updateuserpartshortage(event) {
+  //   var detail = event.detail;
+  //   if (detail.type == 'QC') {
+  //     this.selectedshortage.assigend_qc_id = detail.userlist;
+  //   }
+  //   if (detail.type == 'PROD') {
+  //     this.selectedshortage.assignedprod = detail.userlist;
+  //   }
+  //   this.updatepartshortagetoserver(event, false);
+  // }
 
   // Handle actions from Part Shortage Detail modal.
   handlepartshortageactions(event) {
@@ -1053,12 +1063,12 @@ export default class ShortageDbPaginationComponent extends LightningElement {
     if (action == "Reject") {
       this.selectedshortage.discrepancy_statusdisplay = setstatusfordisplay('open'); // reject
       this.selectedshortage.discrepancy_status = 'open'; //reject
-      this.qccaptureaction = true;
+      //this.qccaptureaction = true;
     }
     if (action == 'Verify') {
       this.selectedshortage.discrepancy_statusdisplay = setstatusfordisplay('approve');
       this.selectedshortage.discrepancy_status = 'approve';
-      this.qccaptureaction = true;
+      //this.qccaptureaction = true;
     }
     if (action == 'Mark as done') {
       const allValid = [
@@ -1068,7 +1078,7 @@ export default class ShortageDbPaginationComponent extends LightningElement {
         return validSoFar && inputCmp.checkValidity();
       }, true);
       if (allValid) {
-        this.qccaptureaction = false;
+        //this.qccaptureaction = false;
         this.selectedshortage.discrepancy_statusdisplay = setstatusfordisplay('resolve');
         this.selectedshortage.discrepancy_status = 'resolve';
         this.isdelenabled = false;
@@ -1086,17 +1096,17 @@ export default class ShortageDbPaginationComponent extends LightningElement {
     if (action == 'Cancel') {
       this.selectedshortage.discrepancy_statusdisplay = setstatusfordisplay('open');
       this.selectedshortage.discrepancy_status = 'open';
-      this.qccaptureaction = true;
+      //this.qccaptureaction = true;
     }
     if (action == 'Cancel Verified') {
       this.selectedshortage.discrepancy_statusdisplay = setstatusfordisplay('resolve');
       this.selectedshortage.discrepancy_status = 'resolve';
-      this.qccaptureaction = true;
+      //this.qccaptureaction = true;
     }
     if (action == 'Cancel Rejected') {
       this.selectedshortage.discrepancy_statusdisplay = setstatusfordisplay('resolve');
       this.selectedshortage.discrepancy_status = 'resolve';
-      this.qccaptureaction = true;
+      //this.qccaptureaction = true;
     }
     if (passedallvalidation) {
       this.statusascomment = true;
@@ -1170,12 +1180,12 @@ export default class ShortageDbPaginationComponent extends LightningElement {
         "modified_date": discrepancytobeupdated.modified_date,
         "buildstation_id": discrepancytobeupdated.buildstation_id
       };
-      if (this.qccaptureaction && this.qccapturerole) {
-        responsebody["assigend_qc_id"] = this.loggedinuser.employee_id;
-        this.qccaptureaction = false;
-      }
-      var requestwithforman = this.updateformans(JSON.stringify(responsebody), discrepancytobeupdated.assignedprod);
-
+      // if (this.qccaptureaction && this.qccapturerole) {
+      //   responsebody["assigend_qc_id"] = this.loggedinuser.employee_id;
+      //   this.qccaptureaction = false;
+      // }
+      //var requestwithforman = this.updateformans(JSON.stringify(responsebody), discrepancytobeupdated.assignedprod);
+      var requestwithforman = responsebody;
       updatePartshortage({ requestbody: JSON.stringify(requestwithforman) })
         .then(data => {
           if (data.isError) {
@@ -1192,6 +1202,16 @@ export default class ShortageDbPaginationComponent extends LightningElement {
           }
           else {
             this.selectedshortage['modified_date'] = JSON.parse(data.operationlogresponse).data.modified_date;
+            if(JSON.parse(data.operationlogresponse).data.resolved_status_updatedby_id !=null && (JSON.parse(data.operationlogresponse).data.discrepancy_status == 'Resolve' || JSON.parse(data.operationlogresponse).data.discrepancy_status == 'Approve')){                   
+              this.selectedshortage['resolved_updatedby_id'] = JSON.parse(data.operationlogresponse).data.resolved_status_updatedby_id.first_name+' '+JSON.parse(data.operationlogresponse).data.resolved_status_updatedby_id.last_name;
+          }else{
+              this.selectedshortage['resolved_updatedby_id'] = '';
+          }
+          if(JSON.parse(data.operationlogresponse).data.verifiedby_id !=null && JSON.parse(data.operationlogresponse).data.discrepancy_status == 'Approve'){
+              this.selectedshortage['verified_updatedby_id'] = JSON.parse(data.operationlogresponse).data.verifiedby_id.first_name+' '+JSON.parse(data.operationlogresponse).data.verifiedby_id.last_name;
+          }else{
+              this.selectedshortage['verified_updatedby_id'] = '';
+          }
             this.isupdated = false;
             if (this.statusascomment) {
               this.statusascomment = false;
@@ -1779,6 +1799,7 @@ export default class ShortageDbPaginationComponent extends LightningElement {
           ecardcustomerlist.push(ecard.chassis_no);
           ecardcustomerlist.push(ecard.customer_name);
         }
+
         var uniqenamelist = new Set(ecardcustomerlist);
         this.searchnamelists = Array.from(uniqenamelist);
       })

@@ -17,11 +17,13 @@
                      
                 <!--Selected Records Pills Section-->
                     <template if:true={showselected}>
+                        <div style="display: flex; flex-wrap: wrap; gap: 5px; max-width: 100%; padding: 5px;">
                         <template for:each={lstSelectedRecords} for:item="singleRec"> 
                             <lightning-pill key={singleRec.value} class={pillstate} label={singleRec.label} name={singleRec.value} variant="plain" onremove={clear}>
                              <lightning-icon class="slds-m-right_xx-small" icon-name={IconName} variant="circle" size="x-small" alternative-text="icon"></lightning-icon>
                             </lightning-pill>
                         </template>
+                    </div>
                     </template>
                   </div>
             </div>
@@ -32,9 +34,11 @@
             <lightning-spinner class="slds-hide" variant="brand" size="small" data-id="mySpinner" alternative-text="Loading"></lightning-spinner>
             <center> {Message}</center>
             <template if:true={showsearchresults}>
+                <div style="max-height: 200px; overflow-y: auto; border: 1px solid #d8dde6; border-radius: 5px;">
             <template for:each={listOfSearchRecords} for:item="singleRec">
                 <c-custom-multi-select-customers-result key={singleRec.value} -icon-name={IconName} o-record={singleRec} onselect={handleComponentEvent}></c-custom-multi-select-customers-result>
             </template>
+        </div>
             </template>
             
         </ul>

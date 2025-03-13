@@ -199,11 +199,11 @@ export default class CustomMultiSelectCustomers extends LightningElement {
             }
             else{
                 for(var i in listtosearchfor){
-                    if(storeResponse.length < 6){
+                    //if(storeResponse.length < 6){
                         if(!checkselected(listtosearchfor[i], alreadyselectedrecords)){
                             storeResponse.push(listtosearchfor[i]);
                             }
-                    }
+                   // }
                     
                 }
             }

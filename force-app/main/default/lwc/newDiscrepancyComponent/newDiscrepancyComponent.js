@@ -79,9 +79,9 @@ export default class NewDiscrepancyComponent extends LightningElement {
     //                            ];
     //                            return discrepancytypes;
     //             }
-    get allPRODlist(){
-        return this.newdiscrepancy.allPRODlist;
-    }
+    // get allPRODlist(){
+    //     return this.newdiscrepancy.allPRODlist;
+    // }
     
     //used to enable disable the discrepancy button
     get disablebutton() {
@@ -151,11 +151,11 @@ export default class NewDiscrepancyComponent extends LightningElement {
                 departmentid: undefined,
                 buildstation_id: undefined,
                 priority: "Normal",
-                defectcode: undefined,
-                qclist: [],
-                prodlist: [],
-                allQClist: [],
-                allPRODlist: []
+                defectcode: undefined
+                // qclist: [],
+                // prodlist: [],
+                // allQClist: [],
+                // allPRODlist: []
             };
         }
         else {
@@ -167,8 +167,8 @@ export default class NewDiscrepancyComponent extends LightningElement {
             var bs = { label: "Unknown", value: "Unknown", workcentreId: 0, workcentreName: "0000" };
             await getDepartmentOperations({ ecardiddeptid: JSON.stringify(ecardiddeptid) })
                 .then(data => {
-                    var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
-                    this.deptsupervisorforselecteddept = prod_supervisor;
+                   // var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
+                   // this.deptsupervisorforselecteddept = prod_supervisor;
                     this.buildstationoptions = data.buildstationList;
                     this.buildstationoptions.push(bs);
                     this.selecteddeptbsdetails = this.getcompleteBuilstationlist(data);
@@ -205,25 +205,25 @@ export default class NewDiscrepancyComponent extends LightningElement {
                 departmentid: departmentid,
                 buildstation_id: buildstation_id,
                 priority: 'Normal',
-                defectcode: undefined,
-                qclist: [],
-                prodlist: [],
-                allQClist: [],
-                allPRODlist: this.deptsupervisorforselecteddept
+                defectcode: undefined
+                // qclist: [],
+                // prodlist: [],
+                // allQClist: [],
+                // allPRODlist: this.deptsupervisorforselecteddept
             };
-            if (buildstationId != undefined && selectedbuildstation.PRODlist != null && selectedbuildstation.PRODlist.length != 0) {
-                newdiscrepancy.allPRODlist = selectedbuildstation.PRODlist;
-            }
-            if (newdiscrepancy.allPRODlist.length == 0) {
-                var userdetails = [];
-                await getcrewingsuserslist({ deptid: newdiscrepancy.departmentid })
-                    .then((result) => {
-                        userdetails = JSON.parse(result.responsebody).data.user;
-                        newdiscrepancy.allPRODlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
-                    })
-                    .catch((error) => {
-                    });
-            }
+            // if (buildstationId != undefined && selectedbuildstation.PRODlist != null && selectedbuildstation.PRODlist.length != 0) {
+            //     newdiscrepancy.allPRODlist = selectedbuildstation.PRODlist;
+            // }
+            // if (newdiscrepancy.allPRODlist.length == 0) {
+            //     var userdetails = [];
+            //     await getcrewingsuserslist({ deptid: newdiscrepancy.departmentid })
+            //         .then((result) => {
+            //             userdetails = JSON.parse(result.responsebody).data.user;
+            //             newdiscrepancy.allPRODlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
+            //         })
+            //         .catch((error) => {
+            //         });
+            // }
         }
         
         this.newdiscrepancy = newdiscrepancy;
@@ -281,10 +281,10 @@ export default class NewDiscrepancyComponent extends LightningElement {
         this.newdiscrepancy.departmentid = undefined;
         this.newdiscrepancy.buildstation_id = undefined;
         this.newdiscrepancy.defectcode = undefined;
-        this.newdiscrepancy.qclist = emptylist;
-        this.newdiscrepancy.prodlist = emptylist;
-        this.newdiscrepancy.allQClist = emptylist;
-        this.newdiscrepancy.allPRODlist = emptylist;
+        // this.newdiscrepancy.qclist = emptylist;
+        // this.newdiscrepancy.prodlist = emptylist;
+        // this.newdiscrepancy.allQClist = emptylist;
+        // this.newdiscrepancy.allPRODlist = emptylist;
     }
     // Get Department picklist from server
     getdepartmentPicklist(event) {
@@ -379,10 +379,10 @@ export default class NewDiscrepancyComponent extends LightningElement {
     // For getting Buildstation Details on department change for Department Discrepancy.
     getcompleteBuilstationlist(data){
         let workstationdata = data.builstationMapWrapper.workcenter; 
-        var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
-        this.deptsupervisorforselecteddept = prod_supervisor;
+        // var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
+        // this.deptsupervisorforselecteddept = prod_supervisor;
         let modifiedworkstationdata = [];
-        var QC  = modifieduserlist(data.builstationMapWrapper.qc);
+        //var QC  = modifieduserlist(data.builstationMapWrapper.qc);
         if(workstationdata.length != 0){
             for(var wc in workstationdata){
                 let workcentre = workstationdata[wc];
@@ -391,9 +391,9 @@ export default class NewDiscrepancyComponent extends LightningElement {
                 for(var bs in workcentre.buildstation){
                     var buildstation = workcentre.buildstation[bs];
                     var modifiedvalidationlist = this.getmodifiedvalidationlist(buildstation);
-                    var PROD = modifieduserlist(buildstation.prod);
-                    var selectedprod = getselectedformandetails(buildstation);
-                    var selectedqc = modifieduserlist([buildstation.qc_approvedby_id]);
+                    // var PROD = modifieduserlist(buildstation.prod);
+                    // var selectedprod = getselectedformandetails(buildstation);
+                    // var selectedqc = modifieduserlist([buildstation.qc_approvedby_id]);
                     var bsstatus;
                     if(buildstation.status == null){
                         bsstatus = 'open';
@@ -419,11 +419,11 @@ export default class NewDiscrepancyComponent extends LightningElement {
                         status    : bsstatus,
                         buildstation_id : buildstation.buildstation_id,
                         buildstation_code : bscode,
-                        validationlist : modifiedvalidationlist,
-                        selectedprod : selectedprod,
-                        selectedqc : selectedqc,
-                        PRODlist : PROD,
-                        QClist : QC
+                        validationlist : modifiedvalidationlist
+                        // selectedprod : selectedprod,
+                        // selectedqc : selectedqc,
+                        // PRODlist : PROD,
+                        // QClist : QC
                     };
                     modifiedworkstationdata.push(modifiedwsdata);
                 }
@@ -443,15 +443,15 @@ export default class NewDiscrepancyComponent extends LightningElement {
     }
 
     // Update PROD And QC on New Discrepancy
-    updateuserselectonnewdesc(event){
-        var detail = event.detail;
-        if(detail.type == 'QC'){
-            this.newdiscrepancy.qclist = detail.userlist;
-        }
-        if(detail.type == 'PROD'){
-                this.newdiscrepancy.prodlist = detail.userlist;
-            }
-    }
+    // updateuserselectonnewdesc(event){
+    //     var detail = event.detail;
+    //     if(detail.type == 'QC'){
+    //         this.newdiscrepancy.qclist = detail.userlist;
+    //     }
+    //     if(detail.type == 'PROD'){
+    //             this.newdiscrepancy.prodlist = detail.userlist;
+    //         }
+    // }
 
     // Update New Discrepancy values.
     async modifynewdiscrepancyvalues(event){
@@ -463,15 +463,15 @@ export default class NewDiscrepancyComponent extends LightningElement {
             var emptylist = [];   
             this.newdiscrepancy.buildstation_id = undefined;
             this.newdiscrepancy.defectcode = undefined;
-            this.newdiscrepancy.qclist = emptylist;
-            this.newdiscrepancy.prodlist = emptylist;
-            this.newdiscrepancy.allQClist = emptylist;
-            this.newdiscrepancy.allPRODlist = emptylist;
+            // this.newdiscrepancy.qclist = emptylist;
+            // this.newdiscrepancy.prodlist = emptylist;
+            // this.newdiscrepancy.allQClist = emptylist;
+            // this.newdiscrepancy.allPRODlist = emptylist;
         }
         if(targetname == 'departmentid'){
             this.newdiscrepancy.departmentid = targetvalue;
             // Set Prod and QC also
-            this.newdiscrepancy.allPRODlist = [];
+            //this.newdiscrepancy.allPRODlist = [];
             if(this.newdiscrepancy.ecardid != undefined){
                 this.moddifydefectpickvalues(targetvalue);
                 var ecardid = this.newdiscrepancy.ecardid;
@@ -480,9 +480,9 @@ export default class NewDiscrepancyComponent extends LightningElement {
                 var bs = { label: "Unknown", value: "Unknown", workcentreId: 0, workcentreName: "0000" };
                 await getDepartmentOperations({ecardiddeptid:JSON.stringify(ecardiddeptid)})
                     .then(data => {
-                    var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
-                    this.deptsupervisorforselecteddept = prod_supervisor;
-                    this.newdiscrepancy.allPRODlist = prod_supervisor;
+                    // var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
+                    // this.deptsupervisorforselecteddept = prod_supervisor;
+                    // this.newdiscrepancy.allPRODlist = prod_supervisor;
                     this.buildstationoptions =  data.buildstationList;
                     this.buildstationoptions.push(bs);
                     this.selecteddeptbsdetails = this.getcompleteBuilstationlist(data);
@@ -510,42 +510,42 @@ export default class NewDiscrepancyComponent extends LightningElement {
             //this.newdiscrepancy.buildstation_id = selectedbuildstation.buildstation_id.toString();
             this.newdiscrepancy.buildstation_id = buildstationId == 'Unknown' ? this.newdiscrepancy.buildstation_id : selectedbuildstation.buildstation_id.toString();
             // Set Prod and QC also
-            var allPRODlist = [];
-            var allQClist = [];
-            var PRODlist = [];
-            if (buildstationId != 'Unknown' && selectedbuildstation.QClist != null && selectedbuildstation.QClist.length != 0) {
-                allQClist = selectedbuildstation.QClist;
-            }
-            if (this.newdiscrepancy.type == 'department') {
-                if (this.deptsupervisorforselecteddept.length != 0) {
-                    allPRODlist = this.deptsupervisorforselecteddept;
-                }
-                PRODlist = this.deptsupervisorforselecteddept;
-            }
-            else if (buildstationId != 'Unknown') {
-                if (selectedbuildstation.PRODlist != null && selectedbuildstation.PRODlist.length != 0) {
-                    allPRODlist = selectedbuildstation.PRODlist;
-                }
-                PRODlist = selectedbuildstation.selectedprod;
-            }
-            var QClist = buildstationId == 'Unknown' ? [] : selectedbuildstation.selectedqc;
-            this.newdiscrepancy.qclist = QClist;
-            this.newdiscrepancy.prodlist = PRODlist;
-            this.newdiscrepancy.allPRODlist = allPRODlist;
-            this.newdiscrepancy.allQClist = allQClist;
+            // var allPRODlist = [];
+            // var allQClist = [];
+            // var PRODlist = [];
+            // if (buildstationId != 'Unknown' && selectedbuildstation.QClist != null && selectedbuildstation.QClist.length != 0) {
+            //     allQClist = selectedbuildstation.QClist;
+            // }
+            // if (this.newdiscrepancy.type == 'department') {
+            //     if (this.deptsupervisorforselecteddept.length != 0) {
+            //         allPRODlist = this.deptsupervisorforselecteddept;
+            //     }
+            //     PRODlist = this.deptsupervisorforselecteddept;
+            // }
+            // else if (buildstationId != 'Unknown') {
+            //     if (selectedbuildstation.PRODlist != null && selectedbuildstation.PRODlist.length != 0) {
+            //         allPRODlist = selectedbuildstation.PRODlist;
+            //     }
+            //     PRODlist = selectedbuildstation.selectedprod;
+            // }
+            // var QClist = buildstationId == 'Unknown' ? [] : selectedbuildstation.selectedqc;
+            // this.newdiscrepancy.qclist = QClist;
+            // this.newdiscrepancy.prodlist = PRODlist;
+            // this.newdiscrepancy.allPRODlist = allPRODlist;
+            // this.newdiscrepancy.allQClist = allQClist;
         }
-        if (targetname != 'type') {
-            if (this.newdiscrepancy.allPRODlist.length == 0) {
-                var userdetails = [];
-                await getcrewingsuserslist({ deptid: this.newdiscrepancy.departmentid })
-                    .then((result) => {
-                        userdetails = JSON.parse(result.responsebody).data.user;
-                        this.newdiscrepancy.allPRODlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
-                    })
-                    .catch((error) => {
-                    });
-            }
-        }
+        // if (targetname != 'type') {
+        //     if (this.newdiscrepancy.allPRODlist.length == 0) {
+        //         var userdetails = [];
+        //         await getcrewingsuserslist({ deptid: this.newdiscrepancy.departmentid })
+        //             .then((result) => {
+        //                 userdetails = JSON.parse(result.responsebody).data.user;
+        //                 this.newdiscrepancy.allPRODlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
+        //             })
+        //             .catch((error) => {
+        //             });
+        //     }
+        // }
     }
 
     @track s3tempurlfornewdiscrepancy = [];
@@ -610,9 +610,9 @@ export default class NewDiscrepancyComponent extends LightningElement {
                 "dat_defect_code_id" : newdiscrepancyvalues.defectcode,
                 "buildstation_id" : newdiscrepancyvalues.buildstation_id  
             };
-            if(newdiscrepancyvalues.qclist.length != 0){
-                newdiscrequestbody["assigend_qc_id"] =  newdiscrepancyvalues.qclist[0].Id;
-            }
+            // if(newdiscrepancyvalues.qclist.length != 0){
+            //     newdiscrequestbody["assigend_qc_id"] =  newdiscrepancyvalues.qclist[0].Id;
+            // }
             var disctype = newdiscrepancyvalues.type;
             if(this.s3tempurlfornewdiscrepancy.length != 0){
                 newdiscrequestbody["s3_file_paths"] = JSON.stringify(this.s3tempurlfornewdiscrepancy);
@@ -620,7 +620,8 @@ export default class NewDiscrepancyComponent extends LightningElement {
             else{
                 newdiscrequestbody["s3_file_paths"] = null;
             }
-            var withforemans = this.updateformans(JSON.stringify(newdiscrequestbody),newdiscrepancyvalues.prodlist);
+            //var withforemans = this.updateformans(JSON.stringify(newdiscrequestbody),newdiscrepancyvalues.prodlist);
+            var withforemans = newdiscrequestbody;
             raisenewDiscrepancy({requestbody:JSON.stringify(withforemans), discrepancytype: disctype})
                   .then(data => {
                     if(data.isError){
@@ -648,21 +649,21 @@ export default class NewDiscrepancyComponent extends LightningElement {
     }
 
     // To Update the responsebody with selected formanIds from List Views.
-    updateformans(responsebody, formanlist){
-        var newresponse = JSON.parse(responsebody);
-        var newformanlist;
-        if(formanlist.length > 5){
-            newformanlist = formanlist.slice(0, 5);
-        }
-        else{
-            newformanlist = formanlist;
-        }
-        for(var i=0;i<newformanlist.length;i++){
-            newresponse[`forman${i+1}_id`] = newformanlist[i].userid;
-            }
+    // updateformans(responsebody, formanlist){
+    //     var newresponse = JSON.parse(responsebody);
+    //     var newformanlist;
+    //     if(formanlist.length > 5){
+    //         newformanlist = formanlist.slice(0, 5);
+    //     }
+    //     else{
+    //         newformanlist = formanlist;
+    //     }
+    //     for(var i=0;i<newformanlist.length;i++){
+    //         newresponse[`forman${i+1}_id`] = newformanlist[i].userid;
+    //         }
         
-        return newresponse;
-    }
+    //     return newresponse;
+    // }
 
     getmodifiedvalidationlist(buidstationdata){
         var validationsitems = { 

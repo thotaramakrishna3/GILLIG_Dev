@@ -1,5 +1,4 @@
 import { LightningElement, api, track } from 'lwc';
-//import EcardLogin from "@salesforce/apex/userAuthentication.EcardLogin";
 
 export default class AtpActionsForOpcks extends LightningElement {
   @api permitteduser;
@@ -7,6 +6,32 @@ export default class AtpActionsForOpcks extends LightningElement {
   @track isoklocal;
   @track qcuserlistlocal;
   @api name;
+  @track disableuserChanged = false;
+  @track disableuserok = false;
+  @track disableusernotok = false;
+  @track disableusernotrequired = false;
+  @track notrequired;
+  @track valuerequiredlocal;
+  @track opcheckvaluelocal;
+  connectedCallback() {
+    if(this.disabledlocal == false){
+      this.disableuserok = true;
+      this.disableusernotok = true;
+      this.disableusernotrequired = false;
+    }else if(this.isok == true || this.isok == false){
+      this.disableuserok = this.isok === true ? false : true;
+        this.disableusernotok = this.isok === false ? false : true;
+        this.disableusernotrequired = true;
+    }
+    if(this.disableuser == true){
+    this.disableuserok = this.disableuser;
+    this.disableusernotok = this.disableuser;
+    this.disableusernotrequired = this.disableuser;
+    }
+    if(this.disabledlocal == false && this.isok != null){
+      this.isoklocal = null;
+      }
+  }
 
   test;
   @api uniqueid;
@@ -17,6 +42,7 @@ export default class AtpActionsForOpcks extends LightningElement {
   }
   set isok(value) {
     this.isoklocal = value;
+    this.resetButtons(this.isoklocal);
   }
 
   @api
@@ -40,50 +66,56 @@ export default class AtpActionsForOpcks extends LightningElement {
   set disabled(value) {
     this.disabledlocal = value;
   }
-
-  //newly added by sathish
-  // @track disableNullbutton = false;
-  // connectedCallback(){
-  //   this.getloggedinuser();
-  // }
-  // getloggedinuser(){
-  //   EcardLogin()
-  //   .then((result) => {
-  //       this.loggedinuser=result.data.user;
-  //       if(this.loggedinuser.approle_id==1){
-  //           this.disableNullbutton=true;
-  //       }else{
-  //           this.disableNullbutton=false;
-  //       }
-  //   })
-  //   .catch((error) => {
-  //   });
-  // }
+  @api
+  get valuerequired() {
+    return this.valuerequiredlocal;
+  }
+  set valuerequired(value) {
+    this.valuerequiredlocal = value;
+  }
+  @api
+  get opcheckvalue() {
+    return this.opcheckvaluelocal;
+  }
+  set opcheckvalue(value) {
+    this.opcheckvaluelocal = value;
+  }
 //added end
   actiontriggered(event) {
-
-  //   if(event.target.name=='ok'){
-  //     this.isoklocal=true;
-  // }else if (event.target.name == 'notok') {
-  //      this.isoklocal = false;
-  // }
-  // else {
-  //      this.isoklocal = null;
-  // }
     let status;
     if (event.target.name == 'ok') {
       this.isoklocal = true;
       status = true;
+      this.notrequired = true;
+      this.disableuserok = false;
+      this.disableusernotok = true;
+      this.disableusernotrequired = true;
     } else if (event.target.name == 'notok') {
       this.isoklocal = false;
       status = false;
+      this.notrequired = true; 
+      this.disableuserok = true;
+      this.disableusernotok = false;
+      this.disableusernotrequired = true;
+    }else if (event.target.name == 'notrequired') {
+      this.notrequired = false;
+      this.isoklocal = null;
+      status = null;  
+      this.disableuserok = true;
+      this.disableusernotok = true;
+      this.disableusernotrequired = false;
     } else if (event.target.name == 'cancel'){
       this.isoklocal = null;
+      this.notrequired = true;
       status = null;
+      this.disableuserok = false;
+      this.disableusernotok = false;
+      this.disableusernotrequired = false;
     }
     else {
       this.isoklocal = null;
       status = null;
+      this.notrequired = true;
     }
 
     const statuschange = new CustomEvent(
@@ -91,7 +123,8 @@ export default class AtpActionsForOpcks extends LightningElement {
       {
           detail : {
               "uniqueid":this.uniqueid,
-              "status":this.isoklocal
+              "status":this.isoklocal,
+              "is_required":this.notrequired
           } 
       }
   );
@@ -99,15 +132,45 @@ export default class AtpActionsForOpcks extends LightningElement {
   }
 
   get okButtonVariant() {
-    return this.isoklocal === true ? 'success' : 'neutral';
+    if(this.isoklocal == true){
+      this.disableuserok = false;
+      this.disableusernotok = true;
+      this.disableusernotrequired = true;
+      return 'success';
+    }else{
+      return 'neutral';
+    }
   }
 
   get notOkButtonVariant() {
-    return this.isoklocal === false ? 'destructive' : 'neutral';
+    if(this.isoklocal == false){
+      this.disableuserok = true;
+      this.disableusernotok = false;
+      this.disableusernotrequired = true;
+      return 'destructive';
+    }else{
+      return 'neutral';
+    }
   }
-
+  get notrequiredButtonVariant() {
+    if(this.disabledlocal == false){
+      this.disableuserok = true;
+      this.disableusernotok = true;
+      this.disableusernotrequired = false;
+      return 'brand';
+    }else{
+      return 'neutral';
+    }
+  }
   get cancelButton(){
-    //return this.isoklocal == false && this.disableNullbutton == true || this.isoklocal == true && this.disableNullbutton == true;
-    return this.isoklocal == false || this.isoklocal == true;
+    return this.isoklocal == false || this.isoklocal == true || this.disabledlocal == false;
+  }
+  resetButtons(value){
+    if(value == null && this.disabledlocal == true && this.valuerequiredlocal == true && (this.opcheckvaluelocal == null || this.opcheckvaluelocal == "")){
+      this.disableuserok = false;
+      this.disableusernotok = false;
+      this.disableusernotrequired = false;     
+
+    }
   }
 }

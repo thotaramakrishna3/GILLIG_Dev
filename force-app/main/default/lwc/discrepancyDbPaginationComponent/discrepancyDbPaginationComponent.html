@@ -424,12 +424,18 @@
                             </div>
                         </template> 
                         <div class="slds-col slds-size_1-of-2">
+                            <lightning-input value={selecteddiscrepancy.resolved_updatedby_id} label="Resolved by" name="resolvedby" disabled></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input value={selecteddiscrepancy.verified_updatedby_id} label="Verified by" name="verifiedby" disabled></lightning-input>
+                        </div>
+                        <!-- <div class="slds-col slds-size_1-of-2">
                             <c-re-usable-multi-select-lookup disablecomponent={disableprodforupdate}
                                 limittoone={returnfalse} selectedrecords={selecteddiscrepancy.selectedprodlist}
                                 label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users"
                                 onitemselected={updateuserselection} listtosearch={selecteddiscrepancy.allprodlist}>
                             </c-re-usable-multi-select-lookup>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="slds-grid slds-wrap slds-gutters">
                         <div class="slds-col slds-size_1-of-1">
@@ -457,12 +463,12 @@
                         class="slds-m-right_x-small"></lightning-button>
                     <c-status-operations-component permissionset={permissionset}
                         discrepancytype={selecteddiscrepancy.discrepancy_type} type="discrepancy"
-                        prodlist={selecteddiscrepancy.selectedprodlist} qclist={selecteddiscrepancy.assigend_qc_id}
                         data-id={selecteddiscrepancy.ecard_discrepancy_log_id}
                         buildstationid={selecteddiscrepancy.ecard_discrepancy_log_id}
                         ecardid={selecteddiscrepancy.ecard_id} status={selecteddiscrepancy.discrepancy_status}
                         onsubmitchange={handlediscrepancyactions}></c-status-operations-component>
-                    <!--onsubmitchange={discrepancyactionshandler} -->
+                    <!--onsubmitchange={discrepancyactionshandler}
+                    prodlist={selecteddiscrepancy.selectedprodlist} qclist={selecteddiscrepancy.assigend_qc_id} -->
                 </footer>
             </div>
         </section>

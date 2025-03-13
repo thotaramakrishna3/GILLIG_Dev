@@ -58,12 +58,18 @@
                   <th class="tblheaderth" scope="col">
                       <div class="slds-truncate" title="DEFECT CODE">DEFECT CODE</div>
                   </th>
-                  <th class="tblheaderth" scope="col">
+                  <!-- <th class="tblheaderth" scope="col">
                       <div class="slds-truncate" title="PROD">PROD</div>
                   </th>
                   <th class="tblheaderth" scope="col">
                       <div class="slds-truncate" title="QC">QC</div>
-                  </th>
+                  </th> -->
+                  <th class="tblheaderth" scope="col">
+                    <div class="slds-truncate" title="Resolved By">Resolved By</div>
+                </th>
+                <th class="tblheaderth" scope="col">
+                  <div class="slds-truncate" title="Verified By">Verified By</div>
+              </th>
                   <th class="tblheaderth" scope="col">
                       <div class="slds-truncate" title="ACTION">ACTION</div>
                   </th>
@@ -106,11 +112,14 @@
                           <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="slds-text-heading_small slds-align_absolute-center"><span class="statusbadge">{discrepancy.discrepancy_statusdisplay}</span></div></td>
                           <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.buildstation_code}</div></td>
                           <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.defect_code}, {discrepancy.defect_name}</div></td> <!--.{discrepancy.defect_name}-->
-                          <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class=""><c-userlist-icon-component type='discrepancy prod' buildstationid={discrepancy.ecard_discrepancy_log_id}  userlist={discrepancy.assignedprod} ></c-userlist-icon-component></div> </td>
-                          <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div if:true={discrepancy.qcavailable} class=""><c-userlist-icon-component type='discrepancy qc' buildstationid={discrepancy.ecard_discrepancy_log_id} userlist={discrepancy.assigend_qc_id}></c-userlist-icon-component></div>  </td>
+                          <!-- <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class=""><c-userlist-icon-component type='discrepancy prod' buildstationid={discrepancy.ecard_discrepancy_log_id}  userlist={discrepancy.assignedprod} ></c-userlist-icon-component></div> </td>
+                          <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div if:true={discrepancy.qcavailable} class=""><c-userlist-icon-component type='discrepancy qc' buildstationid={discrepancy.ecard_discrepancy_log_id} userlist={discrepancy.assigend_qc_id}></c-userlist-icon-component></div>  </td> -->
+                          <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.resolved_updatedby_id}</div></td>
+                          <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.verified_updatedby_id}</div></td>
                           <td style="width:210px;">
                               <div class="" title={discrepancy.discrepancy_status}>
-                               <c-status-operations-component permissionset={permissionset} discrepancytype={discrepancy.discrepancy_type} type="discrepancy" islistview={returntrue} prodlist={discrepancy.assignedprod} qclist={discrepancy.assigend_qc_id} data-id={discrepancy.ecard_discrepancy_log_id} buildstationid={discrepancy.ecard_discrepancy_log_id} onsubmitchange={discrepancyactionshandler} ecardid={ecardid} status={discrepancy.discrepancy_status}></c-status-operations-component> 
+                               <c-status-operations-component permissionset={permissionset} discrepancytype={discrepancy.discrepancy_type} type="discrepancy" islistview={returntrue} data-id={discrepancy.ecard_discrepancy_log_id} buildstationid={discrepancy.ecard_discrepancy_log_id} onsubmitchange={discrepancyactionshandler} ecardid={ecardid} status={discrepancy.discrepancy_status}></c-status-operations-component> 
+                               <!-- prodlist={discrepancy.assignedprod} qclist={discrepancy.assigend_qc_id} -->
                               </div>
                           </td>
                           
@@ -156,12 +165,18 @@
                 <th class="tblheaderth" scope="col">
                     <div class="slds-truncate" title="ETA">ETA</div>
                 </th>
-               <th class="tblheaderth" scope="col">
+               <!-- <th class="tblheaderth" scope="col">
                     <div class="slds-truncate" title="PROD">PROD</div>
                 </th>
                 <th class="tblheaderth" scope="col">
                     <div class="slds-truncate" title="QC">QC</div>
-                </th>
+                </th> -->
+                <th class="tblheaderth" scope="col">
+                  <div class="slds-truncate" title="Resolved By">Resolved By</div>
+              </th>
+              <th class="tblheaderth" scope="col">
+                <div class="slds-truncate" title="Verified By">Verified By</div>
+            </th>
                 <th class="tblheaderth" scope="col">
                     <div class="slds-truncate" title="ACTION">ACTION</div>
                 </th>
@@ -181,11 +196,14 @@
                           
                         </div>
                         </td>
-                        <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class=""><c-userlist-icon-component type='partshortage prod' buildstationid={partshortage.ecard_discrepancy_log_id}  userlist={partshortage.assignedprod} ></c-userlist-icon-component></div> </td>
-                        <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class=""><c-userlist-icon-component type='partshortage qc' buildstationid={partshortage.ecard_discrepancy_log_id} userlist={partshortage.assigend_qc_id}></c-userlist-icon-component></div>  </td>
+                        <!-- <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class=""><c-userlist-icon-component type='partshortage prod' buildstationid={partshortage.ecard_discrepancy_log_id}  userlist={partshortage.assignedprod} ></c-userlist-icon-component></div> </td>
+                        <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class=""><c-userlist-icon-component type='partshortage qc' buildstationid={partshortage.ecard_discrepancy_log_id} userlist={partshortage.assigend_qc_id}></c-userlist-icon-component></div>  </td> -->
+                        <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class="">{partshortage.resolved_updatedby_id}</div></td>
+                        <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class="">{partshortage.verified_updatedby_id}</div></td>
                         <td style="width:210px;">
                             <div class="" title={partshortage.discrepancy_status}>
-                             <c-status-operations-component permissionset={permissionset} type="shortage" islistview={returntrue} prodlist={partshortage.assignedprod} qclist={partshortage.assigend_qc_id} data-id={partshortage.ecard_discrepancy_log_id} buildstationid={partshortage.ecard_discrepancy_log_id} onsubmitchange={partshortageactionshandler} ecardid={ecardid} status={partshortage.discrepancy_status}></c-status-operations-component> 
+                             <c-status-operations-component permissionset={permissionset} type="shortage" islistview={returntrue} data-id={partshortage.ecard_discrepancy_log_id} buildstationid={partshortage.ecard_discrepancy_log_id} onsubmitchange={partshortageactionshandler} ecardid={ecardid} status={partshortage.discrepancy_status}></c-status-operations-component> 
+                             <!-- prodlist={partshortage.assignedprod} qclist={partshortage.assigend_qc_id} -->
                             </div>
                         </td>
                         
@@ -317,12 +335,18 @@
           <lightning-input disabled={disablecomponentdates} required class="checkvalid" type="date" label="Cut In Date" name="cut_off_date" field-level-help="Please fill when resolving a Discrepancy" value={selecteddiscrepancy.cut_off_date} onchange={updateselecteddiscrepancy}></lightning-input>
         </div>
       </template>
-        <div  class="slds-col slds-size_1-of-2"> 
+      <div class="slds-col slds-size_1-of-2">
+        <lightning-input value={selecteddiscrepancy.resolved_updatedby_id} label="Resolved by" name="resolvedby" disabled></lightning-input>
+    </div>
+      <div class="slds-col slds-size_1-of-2">
+        <lightning-input value={selecteddiscrepancy.verified_updatedby_id} label="Verified by" name="verifiedby" disabled></lightning-input>
+    </div>
+        <!-- <div  class="slds-col slds-size_1-of-2"> 
           <c-re-usable-multi-select-lookup  disablecomponent="true" limittoone={returntrue} selectedrecords={selecteddiscrepancy.assigend_qc_id} label="QC" -icon-name="standard:user" placeholdertext="" onitemselected={updateuserselection} listtosearch={selecteddiscrepancy.qc}></c-re-usable-multi-select-lookup>
         </div>
         <div  class="slds-col slds-size_1-of-2">
           <c-re-usable-multi-select-lookup disablecomponent={disableprodforselecteddiscrepancy}  limittoone={returnfalse} selectedrecords={selecteddiscrepancy.assignedprod} label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users" onitemselected={updateuserselection} listtosearch={selecteddiscrepancy.prod}></c-re-usable-multi-select-lookup>
-        </div>
+        </div> -->
       </div>
       <div class="slds-grid slds-wrap slds-gutters">
         <div class="slds-col slds-size_1-of-1">
@@ -339,7 +363,8 @@
     <footer class="slds-modal__footer">
       <lightning-button if:true={isdeletable} variant="destructive" label="Delete" title="Delete action" icon-name="utility:delete" icon-position="right" class="slds-float_left" name={selecteddiscrepancy.ecard_discrepancy_log_id} onclick={deletediscshortage}></lightning-button>   
       <lightning-button label="Cancel" title="Cancel" onclick={hidediscrepancydetail} class="slds-m-right_x-small"></lightning-button>
-      <c-status-operations-component permissionset={permissionset} discrepancytype={selecteddiscrepancy.discrepancy_type} type="discrepancy" prodlist={selecteddiscrepancy.assignedprod} qclist={selecteddiscrepancy.assigend_qc_id} data-id={selecteddiscrepancy.ecard_discrepancy_log_id} buildstationid={selecteddiscrepancy.ecard_discrepancy_log_id} ecardid={selecteddiscrepancy.ecard_id} status={selecteddiscrepancy.discrepancy_status} onsubmitchange={handlediscrepancyactions}></c-status-operations-component> 
+      <c-status-operations-component permissionset={permissionset} discrepancytype={selecteddiscrepancy.discrepancy_type} type="discrepancy" data-id={selecteddiscrepancy.ecard_discrepancy_log_id} buildstationid={selecteddiscrepancy.ecard_discrepancy_log_id} ecardid={selecteddiscrepancy.ecard_id} status={selecteddiscrepancy.discrepancy_status} onsubmitchange={handlediscrepancyactions}></c-status-operations-component> 
+      <!-- prodlist={selecteddiscrepancy.assignedprod} qclist={selecteddiscrepancy.assigend_qc_id} -->
       <!--onsubmitchange={discrepancyactionshandler} -->
     </footer>
  </div>
@@ -485,12 +510,18 @@
         <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
           <lightning-input type="date" label="ETA" name="cut_off_date" value={selectedshortage.cut_off_date} read-only></lightning-input><!--Due Date to ETA-->
         </div>
-        <div  class="slds-col slds-size_1-of-2"> 
+        <!-- <div  class="slds-col slds-size_1-of-2"> 
           <c-re-usable-multi-select-lookup disablecomponent="true" limittoone={returntrue} selectedrecords={selectedshortage.assigend_qc_id} label="QC" -icon-name="standard:user" placeholdertext="" onitemselected={updateuserpartshortage} listtosearch={selectedshortage.allqclist}></c-re-usable-multi-select-lookup>
         </div>
         <div  class="slds-col slds-size_1-of-2">
           <c-re-usable-multi-select-lookup disablecomponent={disableprodforselectedshortage} limittoone={returnfalse} selectedrecords={selectedshortage.assignedprod} label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users" onitemselected={updateuserpartshortage} listtosearch={selectedshortage.allprodlist}></c-re-usable-multi-select-lookup>
-        </div>
+        </div> -->
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input value={selectedshortage.resolved_updatedby_id} label="Resolved by" name="resolvedby" disabled></lightning-input>
+      </div>
+        <div class="slds-col slds-size_1-of-2">
+          <lightning-input value={selectedshortage.verified_updatedby_id} label="Verified by" name="verifiedby" disabled></lightning-input>
+      </div>
       </div>
       <div class="slds-grid slds-wrap slds-gutters">
         <div class="slds-col slds-size_1-of-1">
@@ -507,7 +538,8 @@
       <lightning-button if:true={isupdated} variant="brand" label="Update" title="Update" icon-name="utility:record_update"
         class="slds-m-right_x-small" onclick={updatepartshortagetoserver}></lightning-button>
       <lightning-button label="Cancel" title="Cancel" onclick={hidepartshortagedetail} class="slds-m-right_x-small"></lightning-button>
-      <c-status-operations-component permissionset={permissionset} type="shortage" prodlist={selectedshortage.assignedprod} qclist={selectedshortage.assigend_qc_id} data-id={selectedshortage.ecard_discrepancy_log_id} buildstationid={selectedshortage.ecard_discrepancy_log_id} ecardid={selectedshortage.ecard_id} status={selectedshortage.discrepancy_status} onsubmitchange={handlepartshortageactions}></c-status-operations-component> 
+      <c-status-operations-component permissionset={permissionset} type="shortage" data-id={selectedshortage.ecard_discrepancy_log_id} buildstationid={selectedshortage.ecard_discrepancy_log_id} ecardid={selectedshortage.ecard_id} status={selectedshortage.discrepancy_status} onsubmitchange={handlepartshortageactions}></c-status-operations-component> 
+      <!-- prodlist={selectedshortage.assignedprod} qclist={selectedshortage.assigend_qc_id} -->
       <!--onsubmitchange={discrepancyactionshandler} -->
     </footer>
  </div>

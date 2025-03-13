@@ -18,14 +18,29 @@
         <!-- modal body start -->
         <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-4">
             <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-1">
+                <lightning-input type="checkbox" label="Add shortage to multiple customers/fleets" name="multiplefleets" checked={ismultipleshortage} onchange={updatemultipleshortagecheckbox}></lightning-input>
+            </div>
+            <div if:true={ismultipleshortage} class="slds-col slds-size_1-of-2">
+                <c-custom-multi-select-customers  isrequired=true onitemselected={updatecustomerselect}
+                label="Customer" -icon-name="utility:data_cloud" placeholdertext="Search for Customer"
+                listtosearch={customerlist}></c-custom-multi-select-customers>
+            </div>
+            <div if:true={ismultipleshortage} class="slds-col slds-size_1-of-2">
+                <c-custom-multi-select-customers  isrequired=true onitemselected={updatefleetselect}
+                label="Chassis Number" -icon-name="utility:transport_heavy_truck" placeholdertext="Search for Chassis Number"
+                listtosearch={fleetlist}></c-custom-multi-select-customers>
+            </div>
                 <div class="slds-col slds-size_1-of-1" if:false={shortagedb}>
                     <lightning-input type="text" name="selectedbus" label="Selected Bus" value={newpartshortage.selectedbus} disabled>
                     </lightning-input>
-                </div>
+            </div>
                 <div class="slds-col slds-size_1-of-1" if:true={shortagedb}>
+                    <div if:false={ismultipleshortage}>   
                     <c-custom-search-component isrequired=true showicon=true showlabel=true placeholdertext="Search for Chassis Number"
                         -icon-name="custom:custom98" listto-search={ecardnamechasislist} label="Select a Bus" onselect={onbusselection}
                         onclear={onclearbus}></c-custom-search-component>
+                    </div>
                 </div>
                 <div class="slds-col slds-size_1-of-2">
                     <lightning-combobox disabled={ecardnotselected} name="department_id" label="Department"
@@ -35,7 +50,7 @@
                 <div class="slds-col slds-size_1-of-2">
                     <lightning-combobox disabled={deptnotselected} required name="buildstation_id" class="partshortagevalidation"
                         label="Build Station (BS)" onchange={updatenewpartshortage} value={newpartshortage.buildstation_id}
-                        placeholder="Select BuildStation Code" options={buildstationoptions}></lightning-combobox>
+                        placeholder="Select Build Station Code" options={buildstationoptions}></lightning-combobox>
                 </div>
             <div class="slds-col slds-size_1-of-1">
                 <lightning-input if:false={buildstationselectedpart} disabled required class="partshortagevalidation" type="text" name="dummy"  label="Part Number" placeholder="Please select a Build Station" ></lightning-input>
@@ -43,14 +58,11 @@
             </div>
             <div class="slds-col slds-size_1-of-1">
                 <lightning-textarea required class="partshortagevalidation" disabled={enableeditonpartname} onchange={updatenewpartshortage} field-level-help="Please fill part number to auto fill the description.To edit the description select 'Part No. Not Found' option."  name="buspart_name" value={newpartshortage.buspart_name} label="Description" placeholder="Please select a Part Number to fill. If Part Number not found select 'Part No. Not Found' to enable edit."></lightning-textarea>
-            </div>   
-            <!-- <div class="slds-col slds-size_1-of-2">
-                <lightning-input required class="partshortagevalidation" type="number" name="quantity" onchange={updatenewpartshortage}  label="Quantity Required"  value={newpartshortage.quantity} min="0.00001" step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
-            </div> -->
+            </div>
             <div class="slds-size_1-of-2 slds-grid">
                 <div class="slds-col slds-size_1-of-2">
                     <lightning-input required class="partshortagevalidation" type="number" name="quantity"
-                        onchange={updatenewpartshortage} label="Quantity Required" value={newpartshortage.quantity} min="0.00001"
+                        onchange={updatenewpartshortage} label="Quantity Required per bus" value={newpartshortage.quantity} min="0.00001"
                         step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
                 </div>
                 <div class="slds-col slds-size_1-of-2">
@@ -63,87 +75,14 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="slds-col slds-size_1-of-2">
-                <lightning-input type="text" name="po_no"   label="PO Number" onchange={updatenewpartshortage} value={newpartshortage.po_no} ></lightning-input>
-            </div>
-            <div class="slds-col slds-size_1-of-2">
-                <lightning-input type="date" name="cut_off_date" min={todaysdate} onchange={updatenewpartshortage}  label="Due Date" value={newpartshortage.cut_off_date}></lightning-input>
-            </div> -->
             <div class="slds-col slds-size_1-of-2">
             <lightning-input type="text" name="date"   label="Created Date"  value={newpartshortage.date} disabled></lightning-input> 
-            </div>  
-            <!-- <div class="slds-col slds-size_1-of-2" if:false={shortagedb}>
-                <lightning-input type="text" name="selectedbus" label="Selected Bus" value={newpartshortage.selectedbus} disabled></lightning-input>
             </div>
-            <div class="slds-col slds-size_1-of-2" if:true={shortagedb}>
-                <c-custom-search-component isrequired=true showicon=true showlabel=true placeholdertext="Search for Chassis Number"
-                    -icon-name="custom:custom98" listto-search={ecardnamechasislist} label="Select a Bus" onselect={onbusselection}
-                    onclear={onclearbus}></c-custom-search-component>
-            </div> -->
             <div class="slds-col slds-size_1-of-2">
                 <lightning-combobox  name="priority" label="Priority" onchange={updatenewpartshortage}  value={newpartshortage.priority} placeholder="Select Priority" options={priorityoptions}></lightning-combobox>
             </div>
-            <!-- <div class="slds-col slds-size_1-of-2">
-                <lightning-combobox disabled={ecardnotselected} name="department_id" label="Department" onchange={updatenewpartshortage} value={newpartshortage.department_id} placeholder="Select Department" options={departmentoptions} ></lightning-combobox>
-            </div>
-            <div class="slds-col slds-size_1-of-2">
-                <lightning-combobox disabled={deptnotselected} required name="buildstation_id" class="partshortagevalidation" label="Build Station (BS)" onchange={updatenewpartshortage} value={newpartshortage.buildstation_id}  placeholder="Select BuildStation Code" options={buildstationoptions} ></lightning-combobox>
-            </div> -->
-            <!--div  class="slds-col slds-size_1-of-2">
-            <c-re-usable-multi-select-lookup limittoone={returntrue} onitemselected={updateuserselectonnewpartshortage} selectedrecords={newpartshortage.qclist} label="QC" -icon-name="standard:user" placeholdertext="Search for QC users"  listtosearch={newpartshortage.allQClist}></c-re-usable-multi-select-lookup>
-            </div-->
-            <div  class="slds-col slds-size_1-of-2">
+            <!-- <div  class="slds-col slds-size_1-of-2">
             <c-re-usable-multi-select-lookup limittoone={returnfalse} onitemselected={updateuserselectonnewpartshortage} selectedrecords={newpartshortage.prodlist} label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users"  listtosearch={newpartshortage.allPRODlist}></c-re-usable-multi-select-lookup>
-            </div>
-            <!--new fileds addition-->
-            <!-- <div class="slds-grid slds-wrap">
-                <div class="slds-col slds-size_1-of-1"><br /></div>
-                <div class="slds-col slds-size_2-of-8">
-                    <lightning-input type="text" name="buyer_code" label="Buyer / Planner Code" value={newpartshortage.buyer_code} readonly disabled={disablebuyercode}></lightning-input>
-                </div>
-                <div class="slds-col slds-size_3-of-8">
-                    <c-custom-search-lookup-component showicon={returntrue} showlabel={returntrue} disablecomponent={disablevendorfield}
-                        placeholdertext="Add Custom Vendor" -icon-name="custom:custom111"
-                        listto-search={vendornamelist} selectedcustomer={newpartshortage.vendor_name} label="Vendor"
-                        onselect={onvendorselection} onclear={onclearvendor}>
-                    </c-custom-search-lookup-component>
-                </div>
-                <div class="slds-col slds-size_3-of-8">
-                    <lightning-combobox name="shortage_cause_id" label="Cause" placeholder="Select Shortage Cause" value={newpartshortage.shortage_cause_id} options={shortgecauselist} onfocus={loadpartshotcauselist} onchange={updatenewpartshortage}></lightning-combobox>
-                </div>
-                <div class="slds-col slds-size_1-of-1"><br /></div>
-                <div class="slds-col slds-size_4-of-12">
-                    <lightning-combobox name="carrier_text" label="Carrier" placeholder="Select Carrier" value={newpartshortage.carrier_text} options={carrieroptions} onchange={updatenewpartshortage}></lightning-combobox>
-                </div>
-                <div class="slds-col slds-size_3-of-12">
-                    <lightning-input type="time" name="carrier_arrival_text" label="Carrier Arrival Time" value={newpartshortage.carrier_arrival_text} min="05:00:00.000" max="22:00:00.000" onchange={updatenewpartshortage}></lightning-input>
-                </div>
-                <div class="slds-col slds-size_4-of-12">
-                    <lightning-input type="text" name="tracking" label="Tracking #" value={newpartshortage.tracking} onchange={updatenewpartshortage}></lightning-input>
-                </div>
-                <div class="slds-col slds-size_1-of-1"><br /></div>
-                <div class="slds-col slds-size_2-of-6">
-                    <lightning-input type="date" name="date_received" label="Date Received" value={newpartshortage.date_received} onchange={updatenewpartshortage}></lightning-input>
-                </div>
-                <div class="slds-col slds-size_1-of-6">
-                    <div class="slds-form slds-form_stacked">
-                        <div class="slds-form-element">
-                            <label class="slds-form-element__label" for="is_b_whs_kit">B Whs Kit?</label>
-                            <lightning-input type="checkbox" name="is_b_whs_kit" checked={newpartshortage.is_b_whs_kit} onchange={updatenewpartshortagecheckbox}></lightning-input>
-                        </div>
-                    </div>
-                </div>
-                <div class="slds-col slds-size_1-of-6">
-                    <div class="slds-form slds-form_stacked">
-                        <div class="slds-form-element">
-                            <label class="slds-form-element__label" for="is_ship_short">Ship Short?</label>
-                            <lightning-input type="checkbox" name="is_ship_short" checked={newpartshortage.is_ship_short} onchange={updatenewpartshortagecheckbox}></lightning-input>
-                        </div>
-                    </div>
-                </div>
-                <div class="slds-col slds-size_1-of-6">
-                </div>
-                <div class="slds-col slds-size_1-of-1"><br /></div>
             </div> -->
             <div class="slds-col slds-size_1-of-1">
                 <lightning-textarea name="remarks" field-level-help="" value={newpartshortage.remarks} label="Remark"
@@ -158,7 +97,7 @@
         <!-- modal footer start-->
         <footer class="slds-modal__footer">
             <lightning-button label="Cancel" title="Cancel" onclick={hideReportShortageAdd} class="slds-m-right_x-small"></lightning-button>
-            <lightning-button variant="brand" label="Add" onclick={addnewpartshortage}  title="Add" icon-position="right" icon-name="utility:add"></lightning-button>
+            <lightning-button variant="brand" label="Add" disabled={isLoadingAPI} onclick={addnewpartshortage}  title="Add" icon-position="right" icon-name="utility:add"></lightning-button>
         </footer>
     </div>
         </section>

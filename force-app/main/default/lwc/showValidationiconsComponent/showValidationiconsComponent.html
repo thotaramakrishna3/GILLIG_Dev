@@ -442,11 +442,7 @@
                                 <th class="tblheaderth setapplicablewidth" scope="col">
                                 <div class="slds-truncate" title="OWNER">OWNER</div>
                                 </th>
-                     
-                                <th class="tblheaderth setapplicablewidth" scope="col">
-                                    <div class="slds-truncate" title="REQUIRED">REQUIRED</div>
-                                </th>
-                                <th class="tblheaderth setactionbtnewidth" scope="col">
+                                <th class="tblheaderth setactionbtnewidth">
                                     <div class="slds-truncate" title="ACTION">ACTION</div>
                                 </th>
                                 <th class="tblheaderth" scope="col">
@@ -493,7 +489,7 @@
                                         <td>
                                             <div if:false={opck.value_required} class="">
                                                 <lightning-input max-length="30" variant="label-hidden" type="text" title={opck.operation_check_id}
-                                                    name="op_check_value" placeholder="Value Not Required" readonly="true"></lightning-input>
+                                                    name="op_check_value" placeholder="No Value Required" readonly="true"></lightning-input>
                                             </div>
                                             <div if:true={opck.value_required} class="">
                                                 <template if:false={disablerequired}>
@@ -510,13 +506,6 @@
                                         </td>
                                     </template>
                                     <template if:false={opck.is_required}>
-                                        <!-- <td>
-                                            <div class="slds-truncate greytitle">
-                                                <span class="green-dot"></span> 
-                                                <lightning-formatted-rich-text value={opck.operation_check_description}>
-                                                </lightning-formatted-rich-text>
-                                                </div>
-                                        </td> -->
                                         <td>
                                             <div style="display: inline-block; vertical-align: middle;">
                                                 <template if:true={opck.stanjob}><div class="blue-dot" style="vertical-align: middle;"></div></template>
@@ -537,7 +526,7 @@
                                         <td>
                                             <div class="greytitle">
                                                 <lightning-input max-length="30" variant="label-hidden" type="text" title={opck.operation_check_id}
-                                                    name="op_check_value" placeholder="Value Not Required" readonly="true"></lightning-input>
+                                                    name="op_check_value" placeholder="No Value Required" readonly="true"></lightning-input>
                                             </div>
                                         </td>
                                     </template>
@@ -565,15 +554,9 @@
                                             <div></div>
                                             </td>
                                         </template> 
-      
-                                          <td>
-                                        <lightning-input disabled={disablerequired} name="applicable" class="slds-p-left_x-large zoomcheckbox"
-                                            type="checkbox" data-id={opck.operation_check_id} checked={opck.is_required} onchange={existingrowstatuschange}>
-                                        </lightning-input>
-                                    </td>
                                     <td>
                                         <div class="">
-                                            <c-atp-actions-for-opcks disabled={opck.is_required} onstatuschange={existingrowstatuschange} 
+                                            <c-atp-actions-for-opcks disabled={opck.is_required} onstatuschange={existingrowstatuschange} opcheckvalue={opck.op_check_value} valuerequired={opck.value_required}
                                             permitteduser={permissionset.operation_check.write} disableuser={disableuserinput} uniqueid={opck.operation_check_id} isok={opck.op_check_status}></c-atp-actions-for-opcks>
                                         </div>
                                     </td>

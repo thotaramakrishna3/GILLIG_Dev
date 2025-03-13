@@ -1,5 +1,4 @@
 <template>
-
 <!--Show spinner start-->
 <div if:true={showSpinner}>
     <div class="slds-spinner_container slds-is-fixed">
@@ -23,7 +22,6 @@
                     <span class="slds-text-heading_small headstyle">{department} - {operation}</span>
                     <template if:true={filterapplied}>
                       <lightning-pill label={filterlabelfordisplay} onremove={clearfilter} class="slds-m-left_small filterstyle">
-                        <!--<lightning-icon icon-name="utility:filter" variant="circle"  alternative-text="filter"></lightning-icon>-->
                     </lightning-pill>
                     </template>
                 </div>
@@ -32,20 +30,16 @@
               
             </div>
             <div class="slds-col alignbutton">
-              <!-- <c-new-reject-component buttonlabel="Unknown Part Reject" modalheading="New Shortage" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} permissionset={permissionset} onrefreshdata={refreshoperation}></c-new-reject-component> -->
-
               <c-new-shortage-component buttonlabel="Unknown Part Shortage" modalheading="New Shortage" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} permissionset={permissionset} onrefreshdata={refreshoperation}></c-new-shortage-component>
               <c-new-discrepancy-component if:true={addrepetitionbtn} buttonlabel="Report Issue" modalheading="New Issue" type="department" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="false" department-id-map={departmentIdMap} onoperationrefresh={refreshoperation} permissionset={permissionset}></c-new-discrepancy-component>
               <c-qc-check-list  departmentoptions={departmentoptions} ecardid={ecardid} departmentid={departmentId}></c-qc-check-list>
               <c-meeting-note-component  departmentoptions={departmentoptions} ecardid={ecardid} departmentid={departmentId}></c-meeting-note-component>
               <c-help-component departmentoptions={departmentoptions} ecardid={ecardid} departmentid={departmentId}></c-help-component>
             </div>
-          </div>
-        
+          </div>        
     </section>
     <section class="actioncontent">
-        <div class="slds-card pageheader">
-            
+        <div class="slds-card pageheader">           
             <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
                 <thead>
                 <tr class="slds-line-height_reset slds-text-title_caps tblheader">
@@ -69,8 +63,7 @@
                 </th>
                 <th class="tblheaderth tableheader" scope="col">
                     <div class="slds-truncate" title="ACTION">ACTION</div>
-                </th>
-                
+                </th>               
                 </tr>
                 </thead>
                 <tbody>
@@ -85,7 +78,7 @@
                                 </c-show-validationicons-component>
                               </div>
                             </td>
-                            <td><div> <!---->
+                            <td><div>
                                   <lightning-button if:true={buildstation.hasdescrepancy} label="View" title="View Issue" data-id={buildstation.buildstation_id} onclick={showdiscrepancylistmodal} class="slds-m-left_xx-small" ></lightning-button> <!--icon-name="utility:preview"-->
                                   <lightning-button-icon if:true={enableoperationdisc} icon-name="utility:add" data-id={buildstation.buildstation_id} variant="border-filled" alternative-text="Report Issue" title="Report Issue" onclick={showopdiscrepancymodal} class="slds-m-left_xx-small"></lightning-button-icon>
                                 </div>
@@ -98,11 +91,10 @@
                                   title="View" icon-name="utility:attach"></lightning-button>
                               </div>
                             </td>
-                            <!-- <td><div class=""><c-userlist-icon-component type='PROD' buildstationid={buildstation.buildstation_id} onmodify={usermodification} onaddnew={usermodification} userlist={buildstation.selectedprod} ></c-userlist-icon-component></div> </td>
-                            <td><div if:true={buildstation.qcavailable} class=""><c-userlist-icon-component type='QC' buildstationid={buildstation.buildstation_id} onmodify={usermodification} onaddnew={usermodification} userlist={buildstation.selectedqc}></c-userlist-icon-component></div>  </td> -->
                             <td title={buildstation.status}>
                                 <div class="" title={buildstation.status}>
-                                  <c-status-operations-component permissionset={permissionset} type="operations" isoperation={returntrue} buildstationdata={buildstation.buidstationdata} islistview={returntrue} data-id={buildstation.buildstation_id} prodlist={buildstation.selectedprod} qclist={buildstation.selectedqc} buildstationid={buildstation.buildstation_id} onsubmitchange={handleopertionaction} ecardid={ecardid} status={buildstation.status}></c-status-operations-component> 
+                                  <c-status-operations-component permissionset={permissionset} type="operations" isoperation={returntrue} buildstationdata={buildstation.buidstationdata} islistview={returntrue} data-id={buildstation.buildstation_id} buildstationid={buildstation.buildstation_id} onsubmitchange={handleopertionaction} ecardid={ecardid} status={buildstation.status}></c-status-operations-component> 
+                                  <!-- prodlist={buildstation.selectedprod} qclist={buildstation.selectedqc} -->
                                 </div>
                             </td>
                         </tr>
@@ -124,8 +116,6 @@
         </div>
     </div>
   </template>
-
-  <!--</template> -->
 </template> 
 <!-- Operations End-->
 
@@ -145,7 +135,6 @@
                         <span class="slds-text-heading_small headstyle">{department} - {operation}</span>
                         <template if:true={filterapplied}>
                           <lightning-pill label={filterlabelfordisplay} onremove={clearfilter} class="slds-m-left_small filterstyle">
-                            <!--<lightning-icon icon-name="utility:filter" variant="circle"  alternative-text="filter"></lightning-icon>-->
                         </lightning-pill>
                         </template>
                     </div>
@@ -186,12 +175,18 @@
                     <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="DEFECT CODE">DEFECT CODE</div>
                     </th>
-                    <th class="tblheaderth tableheader" scope="col">
+                    <!-- <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="PROD">PROD</div>
-                    </th>
+                    </th> -->
                     <th class="tblheaderth tableheader" scope="col">
+                      <div class="slds-truncate" title="Resolved By">RESOLVED BY</div>
+                  </th>
+                  <th class="tblheaderth tableheader" scope="col">
+                    <div class="slds-truncate" title="Verified By">VERIFIED BY</div>
+                </th>
+                    <!-- <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="QC">QC</div>
-                    </th>
+                    </th> -->
                     <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="ACTION">ACTION</div>
                     </th>
@@ -220,7 +215,7 @@
                                 </template>
                                 </template>
                                 </div>
-                                <div class="slds-col"> <!--class="slds-text-heading_small"-->
+                                <div class="slds-col">
                                   <div  style="font-weight:600; white-space: pre-wrap;"> {discrepancy.discrepancy} </div>
                                   
                                   <div><lightning-formatted-date-time value={discrepancy.raised_date} year="numeric" month="short" day="numeric" hour="2-digit"
@@ -233,11 +228,14 @@
                             <td if:true={discrepancy.disc_bsavailable} data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.buildstation_code}</div></td>
                             <td if:false={discrepancy.disc_bsavailable} data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >Unknown</div></td>
                             <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.defect_code}, {discrepancy.defect_name}</div></td> <!--.{discrepancy.defect_name}-->
-                            <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class=""><c-userlist-icon-component type='discrepancy prod' buildstationid={discrepancy.ecard_discrepancy_log_id}  userlist={discrepancy.assignedprod} ></c-userlist-icon-component></div> </td>
-                            <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div if:true={discrepancy.qcavailable} class=""><c-userlist-icon-component type='discrepancy qc' buildstationid={discrepancy.ecard_discrepancy_log_id} userlist={discrepancy.assigend_qc_id}></c-userlist-icon-component></div>  </td>
+                            <!-- <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class=""><c-userlist-icon-component type='discrepancy prod' buildstationid={discrepancy.ecard_discrepancy_log_id}  userlist={discrepancy.assignedprod} ></c-userlist-icon-component></div> </td>
+                            <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div if:true={discrepancy.qcavailable} class=""><c-userlist-icon-component type='discrepancy qc' buildstationid={discrepancy.ecard_discrepancy_log_id} userlist={discrepancy.assigend_qc_id}></c-userlist-icon-component></div>  </td> -->
+                            <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.resolved_updatedby_id}</div></td>
+                            <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails}><div class="" >{discrepancy.verified_updatedby_id}</div></td>
                             <td style="width:210px;">
                                 <div class="" title={discrepancy.discrepancy_status}>
-                                  <c-status-operations-component permissionset={permissionset} discrepancytype={discrepancy.discrepancy_type} type="discrepancy" islistview={returntrue} prodlist={discrepancy.assignedprod} qclist={discrepancy.assigend_qc_id} data-id={discrepancy.ecard_discrepancy_log_id} buildstationid={discrepancy.ecard_discrepancy_log_id} onsubmitchange={discrepancyactionshandler} ecardid={ecardid} status={discrepancy.discrepancy_status}></c-status-operations-component> 
+                                  <c-status-operations-component permissionset={permissionset} discrepancytype={discrepancy.discrepancy_type} type="discrepancy" islistview={returntrue} data-id={discrepancy.ecard_discrepancy_log_id} buildstationid={discrepancy.ecard_discrepancy_log_id} onsubmitchange={discrepancyactionshandler} ecardid={ecardid} status={discrepancy.discrepancy_status}></c-status-operations-component> 
+                                  <!-- prodlist={discrepancy.assignedprod} qclist={discrepancy.assigend_qc_id} -->
                                 </div>
                             </td>
                             
@@ -294,7 +292,6 @@
                         <span class="slds-text-heading_small headstyle">{department} - {operation}</span>
                         <template if:true={filterapplied}>
                           <lightning-pill label={filterlabelfordisplay} onremove={clearfilter} class="slds-m-left_small filterstyle">
-                            <!--<lightning-icon icon-name="utility:filter" variant="circle"  alternative-text="filter"></lightning-icon>-->
                         </lightning-pill>
                         </template>
                     </div>
@@ -338,12 +335,18 @@
                     <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="ETA">ETA</div>
                     </th>
-                    <th class="tblheaderth tableheader" scope="col">
+                    <!-- <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="PROD">PROD</div>
                     </th>
                     <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="QC">QC</div>
-                    </th>
+                    </th> -->
+                    <th class="tblheaderth tableheader" scope="col">
+                      <div class="slds-truncate" title="Resolved By">Resolved By</div>
+                  </th>
+                  <th class="tblheaderth tableheader" scope="col">
+                    <div class="slds-truncate" title="Verified By">Verified By</div>
+                </th>
                     <th class="tblheaderth tableheader" scope="col">
                         <div class="slds-truncate" title="ACTION">ACTION</div>
                     </th>
@@ -365,11 +368,14 @@
                               
                             </div>
                             </td>
-                            <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class=""><c-userlist-icon-component type='partshortage prod' buildstationid={partshortage.ecard_discrepancy_log_id}  userlist={partshortage.assignedprod} ></c-userlist-icon-component></div> </td>
-                            <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div if:true={partshortage.qcavailable} class=""><c-userlist-icon-component type='partshortage qc' buildstationid={partshortage.ecard_discrepancy_log_id} userlist={partshortage.assigend_qc_id}></c-userlist-icon-component></div>  </td>
+                            <!-- <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class=""><c-userlist-icon-component type='partshortage prod' buildstationid={partshortage.ecard_discrepancy_log_id}  userlist={partshortage.assignedprod} ></c-userlist-icon-component></div> </td>
+                            <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div if:true={partshortage.qcavailable} class=""><c-userlist-icon-component type='partshortage qc' buildstationid={partshortage.ecard_discrepancy_log_id} userlist={partshortage.assigend_qc_id}></c-userlist-icon-component></div>  </td> -->
+                            <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class="">{partshortage.resolved_updatedby_id}</div></td>
+                            <td data-id={partshortage.ecard_discrepancy_log_id} onclick={showpartshortagedetail}><div class="">{partshortage.verified_updatedby_id}</div></td>
                             <td style="width:210px;">
                                 <div class="" title={partshortage.discrepancy_status}>
-                                  <c-status-operations-component permissionset={permissionset} type="shortage" islistview={returntrue} prodlist={partshortage.assignedprod} qclist={partshortage.assigend_qc_id} data-id={partshortage.ecard_discrepancy_log_id} buildstationid={partshortage.ecard_discrepancy_log_id} onsubmitchange={partshortageactionshandler} ecardid={ecardid} status={partshortage.discrepancy_status}></c-status-operations-component> 
+                                  <c-status-operations-component permissionset={permissionset} type="shortage" islistview={returntrue} data-id={partshortage.ecard_discrepancy_log_id} buildstationid={partshortage.ecard_discrepancy_log_id} onsubmitchange={partshortageactionshandler} ecardid={ecardid} status={partshortage.discrepancy_status}></c-status-operations-component> 
+                                  <!-- prodlist={partshortage.assignedprod} qclist={partshortage.assigend_qc_id} -->
                                 </div>
                             </td>
                             
@@ -486,9 +492,9 @@
           <div class="slds-col slds-size_1-of-2">
             <lightning-combobox class="validValue" required name="defectcode" label="Defect Code (DC)"  onchange={updateoperationaldiscvalues} value={newoperationaldiscrepancy.defectcode} placeholder="Select a Defect Code" options={defectoptions}></lightning-combobox>
           </div>
-            <div  class="slds-col slds-size_1-of-2">
+            <!-- <div  class="slds-col slds-size_1-of-2">
               <c-re-usable-multi-select-lookup limittoone={returnfalse} onitemselected={updateuserselectonopdesc} selectedrecords={newoperationaldiscrepancy.prodlist} label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users"  listtosearch={newoperationaldiscrepancy.allPRODlist}></c-re-usable-multi-select-lookup>
-            </div>
+            </div> -->
           </div>
           <div class="slds-m-top_x-small slds-border_top">
               <c-attachmenttemp-component onnewfileupload={gets3tempurls}></c-attachmenttemp-component>
@@ -499,18 +505,28 @@
         <!--Adding new Shortage Start-->
         <div class="slds-grid slds-wrap slds-gutters">
           <div class="slds-col slds-size_1-of-1">
+            <lightning-input type="checkbox" label="Add shortage to multiple customers/fleets" name="multiplefleets" checked={ismultipleshortage} onchange={updatemultipleshortagecheckbox}></lightning-input>
+        </div>
+        <div if:true={ismultipleshortage} class="slds-col slds-size_1-of-2">
+            <c-custom-multi-select-customers  isrequired=true onitemselected={updatecustomerselect}
+            label="Customer" -icon-name="utility:data_cloud" placeholdertext="Search for Customer"
+            listtosearch={customerlist}></c-custom-multi-select-customers>
+        </div>
+        <div if:true={ismultipleshortage} class="slds-col slds-size_1-of-2">
+            <c-custom-multi-select-customers  isrequired=true onitemselected={updatefleetselect}
+            label="Chassis Number" -icon-name="utility:transport_heavy_truck" placeholdertext="Search for Chassis Number"
+            listtosearch={fleetlist}></c-custom-multi-select-customers>
+        </div>
+          <div class="slds-col slds-size_1-of-1">
             <c-custom-search-component isrequired={returntrue} showicon={returntrue} showlabel={returntrue} placeholdertext="Search Part Number" -icon-name="custom:custom19" listto-search={partnumberlist} label="Part Number" onselect={onpartnumberselection} onclear={onpartnumberclear}></c-custom-search-component>
           </div>
           <div class="slds-col slds-size_1-of-1">
             <lightning-textarea required class="partshortagevalidation" disabled={enableeditonpartname} onchange={updatenewpartshortage} field-level-help="Please fill part number to auto fill the description.To edit the description select 'Part No. Not Found' option."  name="buspart_name" value={newpartshortage.buspart_name} label="Description" placeholder="Please select a Part Number to fill. If Part Number not found select 'Part No. Not Found' to enable edit."></lightning-textarea>
-          </div>   
-          <!-- <div class="slds-col slds-size_1-of-2">
-              <lightning-input required class="partshortagevalidation" type="number" name="quantity" onchange={updatenewpartshortage}  label="Quantity Required"  value={newpartshortage.quantity} min="0.00001" step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
-          </div> -->
+          </div>
           <div class="slds-size_1-of-2 slds-grid">
             <div class="slds-col slds-size_1-of-2">
               <lightning-input required class="partshortagevalidation" type="number" name="quantity"
-                onchange={updatenewpartshortage} label="Quantity Required" value={newpartshortage.quantity} min="0.00001"
+                onchange={updatenewpartshortage} label="Quantity Required per bus" value={newpartshortage.quantity} min="0.00001"
                 step="0.00001" max="1000000" formatter="0000000.00000"></lightning-input>
             </div>
             <div class="slds-col slds-size_1-of-2">
@@ -523,12 +539,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="slds-col slds-size_1-of-2">
-            <lightning-input type="text" name="po_no"   label="PO Number" onchange={updatenewpartshortage} value={newpartshortage.po_no} ></lightning-input>
-          </div>
-          <div class="slds-col slds-size_1-of-2">
-            <lightning-input type="date" name="cut_off_date" onchange={updatenewpartshortage} min={todaysdate} label="Due Date" value={newpartshortage.cut_off_date}></lightning-input>
-          </div> -->
           <div class="slds-col slds-size_1-of-2">
           <lightning-combobox  name="priority" label="Priority" onchange={updatenewpartshortage}  value={newpartshortage.priority} placeholder="Select Priority" options={priorityoptions}></lightning-combobox>
         </div>
@@ -545,67 +555,11 @@
         <div class="slds-col slds-size_1-of-2">
             <lightning-combobox disabled required name="buildstation_id" class="partshortagevalidation" label="Build Station (BS)" onchange={updatenewpartshortage} value={newpartshortage.buildstation_id}  placeholder="Select BuildStation Code" options={buildstationfornewdisc} ></lightning-combobox>
         </div>
-        <div  class="slds-col slds-size_1-of-2">
+        <!-- <div  class="slds-col slds-size_1-of-2">
           <c-re-usable-multi-select-lookup limittoone={returnfalse} onitemselected={updateuserselectonnewpartshortage} selectedrecords={newpartshortage.prodlist} label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users"  listtosearch={newpartshortage.allPRODlist}></c-re-usable-multi-select-lookup>
-        </div>
+        </div> -->
             
         </div>
-        <!--new fileds addition-->
-        <!-- <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small">
-          <div class="slds-col slds-size_1-of-1"><br /></div>
-          <div class="slds-col slds-size_2-of-8">
-            <lightning-input type="text" name="buyer_code" label="Buyer / Planner Code" value={newpartshortage.buyer_code}
-              readonly disabled={disablebuyercode}></lightning-input>
-          </div>
-          <div class="slds-col slds-size_3-of-8">
-            <lightning-combobox name="vendor_number" label="Vendor" value={newpartshortage.vendor_number}
-              options={partsvendorslist} onchange={updatenewpartshortage} disabled={disablevendorselection}></lightning-combobox>
-          </div>
-          <div class="slds-col slds-size_3-of-8">
-            <lightning-combobox name="shortage_cause_id" label="Cause" placeholder="Select Shortage Cause"
-              value={newpartshortage.shortage_cause_id} options={shortgecauselist} onfocus={loadpartshotcauselist}
-              onchange={updatenewpartshortage}></lightning-combobox>
-          </div>
-          <div class="slds-col slds-size_1-of-1"><br /></div>
-          <div class="slds-col slds-size_4-of-12">
-              <lightning-combobox name="carrier_text" label="Carrier" placeholder="Select Carrier"
-                value={newpartshortage.carrier_text} options={carrieroptions} onchange={updatenewpartshortage}></lightning-combobox>
-          </div>
-          <div class="slds-col slds-size_3-of-12">
-              <lightning-input type="time" name="carrier_arrival_text" label="Carrier Arrival Time"
-                value={newpartshortage.carrier_arrival_text} min="05:00:00.000" max="22:00:00.000" onchange={updatenewpartshortage}></lightning-input>
-          </div>
-          <div class="slds-col slds-size_4-of-12">
-            <lightning-input type="text" name="tracking" label="Tracking #" value={newpartshortage.tracking}
-              onchange={updatenewpartshortage}></lightning-input>
-          </div>
-          <div class="slds-col slds-size_1-of-1"><br /></div>
-          <div class="slds-col slds-size_2-of-6">
-            <lightning-input type="date" name="date_received" label="Date Received" value={newpartshortage.date_received}
-              onchange={updatenewpartshortage}></lightning-input>
-          </div>
-          <div class="slds-col slds-size_1-of-6">
-            <div class="slds-form slds-form_stacked">
-              <div class="slds-form-element">
-                <label class="slds-form-element__label" for="is_b_whs_kit">B Whs Kit?</label>
-                <lightning-input type="checkbox" name="is_b_whs_kit" checked={newpartshortage.is_b_whs_kit}
-                  onchange={updatenewpartshortagecheckbox}></lightning-input>
-              </div>
-            </div>
-          </div>
-          <div class="slds-col slds-size_1-of-6">
-            <div class="slds-form slds-form_stacked">
-              <div class="slds-form-element">
-                <label class="slds-form-element__label" for="is_ship_short">Ship Short?</label>
-                <lightning-input type="checkbox" name="is_ship_short" checked={newpartshortage.is_ship_short}
-                  onchange={updatenewpartshortagecheckbox}></lightning-input>
-              </div>
-            </div>
-          </div>
-          <div class="slds-col slds-size_1-of-6">
-          </div>
-          <div class="slds-col slds-size_1-of-1"><br /></div>
-        </div> -->
         <div class="slds-col slds-size_1-of-1">
           <lightning-textarea name="remarks" field-level-help="" value={newpartshortage.remarks} label="Remark"
             onchange={updatenewpartshortage}></lightning-textarea>
@@ -621,10 +575,9 @@
   </div>
   <!-- modal footer start-->
   <footer class="slds-modal__footer">
-    <!--{isselecteddiscrepancy} -->
     <lightning-button label="Cancel" title="Cancel" onclick={hideoperationalDescrepancyAdd} class="slds-m-right_x-small"></lightning-button>
     <lightning-button if:true={isselecteddiscrepancy} variant="brand" label="Add" onclick={addnewopdiscrepancy} title="Add" icon-position="right" icon-name="utility:add"></lightning-button>
-    <lightning-button if:false={isselecteddiscrepancy} variant="brand" label="Add" onclick={addnewpartshortage}  title="Add" icon-position="right" icon-name="utility:add"></lightning-button>
+    <lightning-button if:false={isselecteddiscrepancy} variant="brand" label="Add" disabled={isLoadingAPI} onclick={addnewpartshortage}  title="Add" icon-position="right" icon-name="utility:add"></lightning-button>
   </footer>
 </div>
 </section>
@@ -695,27 +648,21 @@
                 <th class="" scope="col">
                     <div class="slds-align_absolute-center slds-truncate" title="">DISCREPANCIES</div>
                 </th>
-                <th class="" scope="col">
+                <!-- <th class="" scope="col">
                     <div class="slds-align_absolute-center slds-truncate" title="PROD">PROD</div>
-                </th>
+                </th> -->
+                <th class="tblheaderth tableheader" scope="col">
+                  <div class="slds-truncate" title="Resolved By">Resolved By</div>
+              </th>
+              <th class="tblheaderth tableheader" scope="col">
+                <div class="slds-truncate" title="Verified By">Verified By</div>
+            </th>
                 <th class="" scope="col">
                     <div class="slds-align_absolute-center slds-truncate" title="ACTION">ACTION</div>
                 </th>
                 </tr>
                 </thead>
                 <tbody>
-                    <!--<tr>
-                        <td><div class="slds-align_absolute-center">OPEN</div></td>
-                        <td><div class="slds-align_absolute-center" >Radiator leak</div></td>
-                        <td><div class="slds-align_absolute-center" >Joseph Pauly</div></td>
-                        <td><div class="slds-align_absolute-center" ></div></td>
-                    </tr>
-                    <tr>
-                        <td><div class="slds-align_absolute-center">OPEN</div></td>
-                        <td><div class="slds-align_absolute-center" >Fire Suppression</div></td>
-                        <td><div class="slds-align_absolute-center" >Ajay Krishna R</div></td>
-                        <td><div class="slds-align_absolute-center" ></div></td>
-                    </tr> -->
                   </tbody> 
                 </table>
         </div>
@@ -849,12 +796,18 @@
         <lightning-input disabled={disablecomponentdates} required class="checkvalid" type="date" label="Cut In Date" name="cut_off_date" field-level-help="Please fill when resolving a Discrepancy" value={selecteddiscrepancy.cut_off_date} onchange={updateselecteddiscrepancy}></lightning-input>
       </div>
     </template>
-      <div  class="slds-col slds-size_1-of-2"> 
+    <div class="slds-col slds-size_1-of-2">
+      <lightning-input value={selecteddiscrepancy.resolved_updatedby_id} label="Resolved by" name="resolvedby" disabled></lightning-input>
+  </div>
+    <div class="slds-col slds-size_1-of-2">
+      <lightning-input value={selecteddiscrepancy.verified_updatedby_id} label="Verified by" name="verifiedby" disabled></lightning-input>
+  </div>
+      <!-- <div  class="slds-col slds-size_1-of-2"> 
         <c-re-usable-multi-select-lookup  disablecomponent="true" limittoone={returntrue} selectedrecords={selecteddiscrepancy.assigend_qc_id} label="QC" -icon-name="standard:user" placeholdertext="" onitemselected={updateuserselection} listtosearch={selecteddiscrepancy.qc}></c-re-usable-multi-select-lookup>
       </div>
       <div  class="slds-col slds-size_1-of-2">
         <c-re-usable-multi-select-lookup disablecomponent={disableprodforselecteddiscrepancy}  limittoone={returnfalse} selectedrecords={selecteddiscrepancy.assignedprod} label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users" onitemselected={updateuserselection} listtosearch={selecteddiscrepancy.prod}></c-re-usable-multi-select-lookup>
-      </div>
+      </div> -->
     </div>
     <div class="slds-grid slds-wrap slds-gutters">
       <div class="slds-col slds-size_1-of-1">
@@ -868,12 +821,11 @@
   
 </div>
   <!-- modal footer start-->
-  <footer class="slds-modal__footer">
-    <!--lightning-button if:true={selecteddiscrepancy.deletepermission} variant="destructive" label="Delete" title="Delete action" icon-name="utility:delete" icon-position="right" class="slds-float_left"></lightning-button-->   
+  <footer class="slds-modal__footer">  
     <lightning-button if:true={isdeletable} variant="destructive" label="Delete" title="Delete action" icon-name="utility:delete" icon-position="right" class="slds-float_left" name={selecteddiscrepancy.ecard_discrepancy_log_id} onclick={deletediscshortage}></lightning-button>   
     <lightning-button label="Cancel" title="Cancel" onclick={hidediscrepancydetail} class="slds-m-right_x-small"></lightning-button>
-    <c-status-operations-component permissionset={permissionset} discrepancytype={selecteddiscrepancy.discrepancy_type} type="discrepancy" prodlist={selecteddiscrepancy.assignedprod} qclist={selecteddiscrepancy.assigend_qc_id} data-id={selecteddiscrepancy.ecard_discrepancy_log_id} buildstationid={selecteddiscrepancy.ecard_discrepancy_log_id} ecardid={selecteddiscrepancy.ecard_id} status={selecteddiscrepancy.discrepancy_status} onsubmitchange={handlediscrepancyactions}></c-status-operations-component> 
-    <!--onsubmitchange={discrepancyactionshandler} -->
+    <c-status-operations-component permissionset={permissionset} discrepancytype={selecteddiscrepancy.discrepancy_type} type="discrepancy" data-id={selecteddiscrepancy.ecard_discrepancy_log_id} buildstationid={selecteddiscrepancy.ecard_discrepancy_log_id} ecardid={selecteddiscrepancy.ecard_id} status={selecteddiscrepancy.discrepancy_status} onsubmitchange={handlediscrepancyactions}></c-status-operations-component> 
+    <!-- prodlist={selecteddiscrepancy.assignedprod} qclist={selecteddiscrepancy.assigend_qc_id} -->
   </footer>
 </div>
 </section>
@@ -956,17 +908,10 @@
     </div>
     <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small slds-border_bottom">
       <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
-        <!-- <c-custom-search-lookup-component showicon=true showlabel=true disablecomponent={disableeditshortage}
-                  placeholdertext="Add Custom Vendor" -icon-name="custom:custom111" listto-search={vendornamelist}
-                  selectedcustomer={selectedshortage.vendor_name} label="Vendor" onselect={onvendorselection} onclear={onclearvendor}>
-                </c-custom-search-lookup-component> -->
         <lightning-input type="text" label="Vendor" name="vendor" value={selectedshortage.vendor_name} read-only>
         </lightning-input>
       </div>
       <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
-        <!-- <lightning-combobox name="carrier_text" label="Carrier" placeholder="Select Carrier"
-          value={selectedshortage.carrier_text} options={carrieroptions} onchange={updateselectedshortage}
-          disabled={disableeditshortage}></lightning-combobox> -->
           <lightning-input class="readonlycbclass" type="text" label="Carrier" name="carrier"
             value={selectedshortage.carrier_text} read-only="">
           </lightning-input>
@@ -1019,12 +964,18 @@
       <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
         <lightning-input type="date" min={todaysdate} label="ETA" name="cut_off_date" value={selectedshortage.cut_off_date} readonly></lightning-input><!--Due Date to ETA-->
       </div>
-      <div  class="slds-col slds-size_1-of-2"> 
+      <!-- <div  class="slds-col slds-size_1-of-2"> 
         <c-re-usable-multi-select-lookup disablecomponent="true" limittoone={returntrue} selectedrecords={selectedshortage.assigend_qc_id} label="QC" -icon-name="standard:user" placeholdertext="" onitemselected={updateuserpartshortage} listtosearch={selectedshortage.allqclist}></c-re-usable-multi-select-lookup>
       </div>
       <div  class="slds-col slds-size_1-of-2">
         <c-re-usable-multi-select-lookup disablecomponent={disableprodforselectedshortage} limittoone={returnfalse} selectedrecords={selectedshortage.assignedprod} label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users" onitemselected={updateuserpartshortage} listtosearch={selectedshortage.allprodlist}></c-re-usable-multi-select-lookup>
-      </div>
+      </div> -->
+      <div class="slds-col slds-size_1-of-2">
+        <lightning-input value={selectedshortage.resolved_updatedby_id} label="Resolved by" name="resolvedby" disabled></lightning-input>
+    </div>
+      <div class="slds-col slds-size_1-of-2">
+        <lightning-input value={selectedshortage.verified_updatedby_id} label="Verified by" name="verifiedby" disabled></lightning-input>
+    </div>
     </div>
     <div class="slds-grid slds-wrap slds-gutters">
       <div class="slds-col slds-size_1-of-1">
@@ -1042,8 +993,8 @@
       class="slds-m-right_x-small" onclick={updatepartshortagetoserver}>
     </lightning-button>
     <lightning-button label="Cancel" title="Cancel" onclick={hidepartshortagedetail} class="slds-m-right_x-small"></lightning-button>
-    <c-status-operations-component permissionset={permissionset} type="shortage" prodlist={selectedshortage.assignedprod} qclist={selectedshortage.assigend_qc_id} data-id={selectedshortage.ecard_discrepancy_log_id} buildstationid={selectedshortage.ecard_discrepancy_log_id} ecardid={selectedshortage.ecard_id} status={selectedshortage.discrepancy_status} onsubmitchange={handlepartshortageactions}></c-status-operations-component> 
-    <!--onsubmitchange={discrepancyactionshandler} -->
+    <c-status-operations-component permissionset={permissionset} type="shortage" data-id={selectedshortage.ecard_discrepancy_log_id} buildstationid={selectedshortage.ecard_discrepancy_log_id} ecardid={selectedshortage.ecard_id} status={selectedshortage.discrepancy_status} onsubmitchange={handlepartshortageactions}></c-status-operations-component> 
+    <!-- prodlist={selectedshortage.assignedprod} qclist={selectedshortage.assigend_qc_id} -->
   </footer>
 </div>
 </section>

@@ -38,7 +38,6 @@ public class ecardOperationsController {
     @AuraEnabled
     public static EcardOperationsWrapper getDepartmentOperations(string ecardiddeptid){
         System.debug('ecardiddeptid'+ecardiddeptid);
-        // string e = '{"ecard_id":"2","dept_id":"110"}';
         EcardOperationsWrapper ecardoperations = new EcardOperationsWrapper();
         AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
         string endpoint = System.Label.EcardAppendpoint+'api/buildstationmappingdetails/';
@@ -118,7 +117,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -151,7 +149,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -184,7 +181,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -217,7 +213,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -250,7 +245,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -285,7 +279,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -318,7 +311,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -383,7 +375,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -416,7 +407,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -449,7 +439,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -482,7 +471,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -515,7 +503,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -548,7 +535,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -581,7 +567,6 @@ public class ecardOperationsController {
             }
             else{
                wrapobj.responsebody = response.responseBody;
-                // wrapobj.errorMessage = response;
             }
             return wrapobj;
         }
@@ -792,31 +777,6 @@ public class ecardOperationsController {
         }
     }
 
-
-    
-    /*@AuraEnabled(cacheable=true)
-    public static DataWrapperEcard.data getDefectCodes(){
-        DataWrapperEcard.data defectlist = new DataWrapperEcard.data();
-        AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
-        string endpoint = System.Label.EcardAppendpoint+'api/defectcode';
-        userAuthentication.ResponseWrapper defectdetails = userAuthentication.getData(endpoint, 'GET', tokendata.access_token, tokendata.refresh_token);
-        if(defectdetails.isError){
-            if(defectdetails.statusCode == '401'){
-                // Some error has happened
-            }
-            else{
-                // Serious authentication error
-            }
-        }
-        else{
-            DataWrapperEcard wrap = (DataWrapperEcard) System.JSON.deserialize(defectdetails.responseBody, DataWrapperEcard.class);
-            defectlist = wrap.data;
-            
-        }
-        return defectlist;
-        
-    } */
-
     @AuraEnabled
     public static  EcardOperationlog getDiscrepancylist(string ecardiddeptid){
         EcardOperationlog wrapobj = new EcardOperationlog();
@@ -1020,81 +980,6 @@ public class ecardOperationsController {
         return log;
     }
     
-   /* @AuraEnabled
-    public static EcardOperationlog setStatustoResolve(string requestbody){
-        EcardOperationlog log = new EcardOperationlog();
-        AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
-          string endpoint = System.Label.EcardAppendpoint+'api/ecardoperationlog';
-        userAuthentication.ResponseWrapper statusresponse = userAuthentication.postData(endpoint, 'POST', requestbody, tokendata.access_token, tokendata.refresh_token);
-        if(statusresponse.isError){
-            log.isError = statusresponse.isError;
-            if(statusresponse.statusCode == '401'){
-                // Some error has happened
-            }
-            else{
-                // Serious authentication error
-            }
-        }
-        else{
-            log.isError = statusresponse.isError;
-            log.operationlogresponse = statusresponse.responseBody;
-            log.responsebody = statusresponse.responseBody;
-        }
-         
-        System.debug('operationlogresponse ->'+log.operationlogresponse);
-        return log;
-    }
-    
-     @AuraEnabled
-    public static EcardOperationlog setStatustoVerify(string requestbody){
-        EcardOperationlog log = new EcardOperationlog();
-        AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
-          string endpoint = System.Label.EcardAppendpoint+'api/ecardoperationlog';
-        userAuthentication.ResponseWrapper statusresponse = userAuthentication.postData(endpoint, 'PUT', requestbody, tokendata.access_token, tokendata.refresh_token);
-        if(statusresponse.isError){
-            log.isError = statusresponse.isError;
-            if(statusresponse.statusCode == '401'){
-                // Some error has happened
-            }
-            else{
-                // Serious authentication error
-            }
-        }
-        else{
-            log.isError = statusresponse.isError;
-            log.operationlogresponse = statusresponse.responseBody;
-            log.responsebody = statusresponse.responseBody;
-        }
-         
-        System.debug('operationlogresponse ->'+log.operationlogresponse);
-        return log;
-    }
-    
-    @AuraEnabled
-    public static EcardOperationlog setStatustoReject(string requestbody){
-        EcardOperationlog log = new EcardOperationlog();
-        AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
-        string endpoint = System.Label.EcardAppendpoint+'api/rejectecardoperationlog';
-        userAuthentication.ResponseWrapper statusresponse = userAuthentication.postData(endpoint, 'POST', requestbody, tokendata.access_token, tokendata.refresh_token);
-        if(statusresponse.isError){
-            log.isError = statusresponse.isError;
-            if(statusresponse.statusCode == '401'){
-                // Some error has happened
-            }
-            else{
-                // Serious authentication error
-            }
-        }
-        else{
-            log.isError = statusresponse.isError;
-            log.operationlogresponse = statusresponse.responseBody;
-            log.responsebody = statusresponse.responseBody;
-        }
-         
-        System.debug('operationlogresponse ->'+log.operationlogresponse);
-        return log;
-    }*/
-    
     @AuraEnabled
     public static EcardOperationlog raiseBsDiscrepancy(string requestbody){
         EcardOperationlog log = new EcardOperationlog();
@@ -1146,13 +1031,37 @@ public class ecardOperationsController {
         System.debug('operationlogresponse ->'+log.operationlogresponse);
         return log;
     }
+    @AuraEnabled
+    public static EcardOperationlog raisenewMultipleShortage(string requestbody){
+        EcardOperationlog log = new EcardOperationlog();
+        AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
+        string endpoint = System.Label.EcardAppendpoint+'api/ecardgrouppartshortagediscrepancy';
+        userAuthentication.ResponseWrapper statusresponse = userAuthentication.postData(endpoint, 'POST', requestbody, tokendata.access_token, tokendata.refresh_token);
+        if(statusresponse.isError){
+            log.isError = statusresponse.isError;
+            log.responsebody = statusresponse.statusCode + statusresponse.responseBody;
+            if(statusresponse.statusCode == '401'){
+                // Some error has happened
+            }
+            else{
+                // Serious authentication error
+            }
+        }
+        else{
+            log.isError = statusresponse.isError;
+            log.operationlogresponse = statusresponse.responseBody;
+            log.responsebody = statusresponse.responseBody;
+        }
+         
+        System.debug('operationlogresponse ->'+log.operationlogresponse);
+        return log;
+    }
     
    @AuraEnabled
     public static EcardOperationlog raiseDepartmentDiscrepancy(string requestbody){
         EcardOperationlog log = new EcardOperationlog();
         AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
         string endpoint = System.Label.EcardAppendpoint+'api/ecarddepartmentdiscrepancy';
-        //string endpoint = 'https://demoapp-dev1.herokuapp.com/api/ecarddepartmentdiscrepancy';
         userAuthentication.ResponseWrapper statusresponse = userAuthentication.postData(endpoint, 'POST', requestbody, tokendata.access_token, tokendata.refresh_token);
         if(statusresponse.isError){
             log.isError = statusresponse.isError;
@@ -1541,7 +1450,6 @@ public class ecardOperationsController {
         try{
             AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
             string endpoint = System.Label.EcardAppendpoint+'api/ecardrejectlogattachment/';
-            //System.debug(endpoint+jsonstrg);
             userAuthentication.ResponseWrapper response = userAuthentication.getData(endpoint+jsonstrg, 'GET', tokendata.access_token, tokendata.refresh_token);
             wrapobj.isError = response.isError;
             if(response.isError){
@@ -1575,7 +1483,6 @@ public class ecardOperationsController {
         try{
             AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
             string endpoint = System.Label.EcardAppendpoint+'api/ecardreworklogattachment/';
-            //System.debug(endpoint+jsonstrg);
             userAuthentication.ResponseWrapper response = userAuthentication.getData(endpoint+jsonstrg, 'GET', tokendata.access_token, tokendata.refresh_token);
             wrapobj.isError = response.isError;
             if(response.isError){
@@ -1711,7 +1618,6 @@ public class ecardOperationsController {
         try{
             AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
             string endpoint = System.Label.EcardAppendpoint+'api/ecardattachment/';
-            //System.debug('gethelpdocument'+endpoint+ecardiddeptid);
             userAuthentication.ResponseWrapper response = userAuthentication.getData(endpoint+ecardid, 'GET', tokendata.access_token, tokendata.refresh_token);
             wrapobj.isError = response.isError;
             if(response.isError){

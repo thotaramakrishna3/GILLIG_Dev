@@ -77,10 +77,6 @@ export default class OpertaionChecksComponent extends LightningElement {
     return this.permissionset.dept_discrepancy_new.write;
   }
 
-  //   get disablerequired(){
-  //     return !this.permissionset.atp.write;
-  // }vishwas
-
   get disablerequired() {
     return !this.permissionset.operation_check.write;
   }
@@ -98,42 +94,6 @@ export default class OpertaionChecksComponent extends LightningElement {
     pubsub.fire('applyfilters', undefined);
     this.getopcheckdeatils();
   }
-
-  /*async handleloadopcheck(messageFromEvt){
-    var valueforfilters = JSON.parse(messageFromEvt);
-    this.filterlocal=valueforfilters.filterstatus;
-    this.departmentId=valueforfilters.departmentid;
-    await this.getopcheckdeatils();
-    if(this.filter!=undefined){
-      var status=this.filter=='approve'?true:false;
-      this.opckdetails=this.filterrecords(status,this.tmpopckdetails);
-    }else{
-      this.opckdetails=this.tmpopckdetails;
-    } 
-  }*/
-  //opckdetails=[]; //Vishwas Commented
-  /*connectedCallback(){
-      console.log('Inside Operation Checks');
-      if(this.check){
-        this.register();
-        this.check=false;
-      }  
-      if(this.firsttime){
-        let message = {
-          "departmentid" : this.departmentId,
-          "filterstatus" : this.filter
-        };
-        this.source='connected';
-        //this.handleloadopcheck(JSON.stringify(message));
-        this.firsttime=false;
-      }
-      if(this.filter!=undefined){
-        var status=this.filter=='approve'?true:false;
-        this.opckdetails=this.filterrecords(status,this.tmpopckdetails);
-      }else{
-        this.opckdetails=this.tmpopckdetails;
-      } 
-  }*/
   updateopckitem(event) {
     this.selectedopcheckid = event.target.title;
     for (var i in this.opckdetails) {
@@ -358,11 +318,6 @@ export default class OpertaionChecksComponent extends LightningElement {
 
     return extensionToIconMap[extension] || 'doctype:link'; // Default to 'file' icon
   }
-  /*register(){
-    console.log('Dept Change event registered ');
-    pubsub.register('opckdeptchanged', this.handleloadopcheck.bind(this));
-  }*/
-
   @track selectedopchek = [];
   @track selectedopcheckid;
   existingrowstatuschange(event) {
@@ -373,9 +328,8 @@ export default class OpertaionChecksComponent extends LightningElement {
           this.selectedopchek = this.opckdetails[i].op_check[j];
           if (event.target.type != "checkbox") {
             this.selectedopchek.op_check_status = event.detail.status;
-          } else {
-            this.selectedopchek.is_required = event.target.checked;
-          }
+            this.selectedopchek.is_required = event.detail.is_required;
+           }
         }
       }
     }
@@ -394,28 +348,6 @@ export default class OpertaionChecksComponent extends LightningElement {
     } else {
       this.uploadopchecktoserver(this.selectedopchek);
     }
-    // this.selectedopcheckid = event.detail.uniqueid;
-    // for(var i in this.opckdetails){
-    //   for(var j in this.opckdetails[i].op_check)
-    //     if(this.opckdetails[i].op_check[j].operation_check_id==this.selectedopcheckid){
-    //         this.selectedopchek=this.opckdetails[i].op_check[j];
-    //         this.selectedopchek.op_check_status=event.detail.status;
-    //     }
-    // }
-    // if(this.selectedopchek.value_required && 
-    //    (this.selectedopchek.op_check_value==null || this.selectedopchek.op_check_value=="") &&
-    //    this.selectedopchek.op_check_status){
-    //     const alertmessage = new ShowToastEvent({
-    //     title : 'Value Required.',
-    //     message : 'Value required to update status, Please enter a value',
-    //     variant : 'warning'
-    //     });
-    //     this.dispatchEvent(alertmessage);
-    //     this.getopcheckdeatils(this.ecardid,this.departmentId,this.filterlocal);
-
-    // }else{
-    //     this.uploadopchecktoserver(this.selectedopchek);
-    // }
   }
 
   uploadopchecktoserver(opck) {
@@ -427,7 +359,6 @@ export default class OpertaionChecksComponent extends LightningElement {
       "op_check_status": opck.op_check_status,
       "is_required": opck.is_required
     };
-    //alert(JSON.stringify(opcheckrecord));
     this.showSpinner = true;
     updateopchecks({ requestbody: JSON.stringify(opcheckrecord) })
       .then(data => {
@@ -454,14 +385,7 @@ export default class OpertaionChecksComponent extends LightningElement {
         }
 
       }).catch(error => {
-        this.error = error;/*
-               const alertmessage = new ShowToastEvent({
-                    title : 'Sorry we could not complete the operation.',
-                    message : 'Something unexpected occured. Please contact your Administrator',
-                   variant : 'error'
-              });
-              this.dispatchEvent(alertmessage);
-              this.showSpinner = false;*/
+        this.error = error;
       });
   }
   filterrecords(opckstatus, opcklist, opcknotreq) {
@@ -546,7 +470,6 @@ export default class OpertaionChecksComponent extends LightningElement {
     this.finalJobTypeList = this.allJobTypeValues.map(str => encodeURIComponent(str));
     console.log('Called get opck 5th');
     this.getopcheckdeatils();
-    //  this.checkFilter();
   }
 
   @track jobTitle = 'STANDARD AND CUSTOMER JOBS';

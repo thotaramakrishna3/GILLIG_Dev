@@ -601,7 +601,7 @@
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small slds-border_bottom">                        
-                        <div class="slds-col slds-size_1-of-2">
+                        <!-- <div class="slds-col slds-size_1-of-2">
                             <c-re-usable-multi-select-lookup disablecomponent="true" limittoone={returntrue}
                                 selectedrecords={selectedshortage.assigend_qc_id} label="QC" -icon-name="standard:user"
                                 placeholdertext="" onitemselected={updateuserpartshortage}
@@ -613,6 +613,12 @@
                                 placeholdertext="Search for PROD users" onitemselected={updateuserpartshortage}
                                 listtosearch={selectedshortage.allprodlist}>
                             </c-re-usable-multi-select-lookup>
+                        </div> -->
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                            <lightning-input type="text" label="Resolved By" value={selectedshortage.resolved_updatedby_id} disabled></lightning-input>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
+                            <lightning-input type="text" label="Verified By" value={selectedshortage.verified_updatedby_id} disabled></lightning-input>
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-gutters">

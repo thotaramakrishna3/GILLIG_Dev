@@ -42,8 +42,8 @@ export default class StatusOperationsComponent extends LightningElement {
    }
     
     @track statuswithin;
-    @track prodlistlocal;
-    @track qclistlocal;
+    //@track prodlistlocal;
+    //@track qclistlocal;
     @track buildstationdatalocal;
     @track hasdiscrepancyorshortage;
     showcomponent = false;
@@ -75,30 +75,30 @@ export default class StatusOperationsComponent extends LightningElement {
         this.statuswithin = value;
     }
 
-    @api
-    get qclist() {
-        return this.qclistlocal;
-    }
-    set qclist(value){
-        this.qclistlocal = value;
-    }
+    // @api
+    // get qclist() {
+    //     return this.qclistlocal;
+    // }
+    // set qclist(value){
+    //     this.qclistlocal = value;
+    // }
 
-    @api
-    get prodlist() {
-        return this.prodlistlocal;
-    }
-    set prodlist(value){
-        this.prodlistlocal = value;
-    }
+    // @api
+    // get prodlist() {
+    //     return this.prodlistlocal;
+    // }
+    // set prodlist(value){
+    //     this.prodlistlocal = value;
+    // }
 
-    get isprodlistblank(){
-        return this.prodlistlocal.length == 0;
-    }
+    // get isprodlistblank(){
+    //     return this.prodlistlocal.length == 0;
+    // }
 
     get disablemarkasdone(){
         var ispicturevalidationrequired = false;
         var isopcheckrequired=false;
-        var prodlistempty = false;
+        //var prodlistempty = false;
      
         if(this.isoperation){
             ispicturevalidationrequired = false;
@@ -116,25 +116,25 @@ export default class StatusOperationsComponent extends LightningElement {
             isopcheckrequired=false;
         }
 
-        prodlistempty = false;
-        if(this.prodlistlocal.length == 0){
-            prodlistempty = true;
-        }
+        // prodlistempty = false;
+        // if(this.prodlistlocal.length == 0){
+        //     prodlistempty = true;
+        // }
         }
         else{
             ispicturevalidationrequired = false;
-        if(this.prodlistlocal.length == 0){
-            prodlistempty = true;
-        }
+        // if(this.prodlistlocal.length == 0){
+        //     prodlistempty = true;
+        // }
         }
 
-        return prodlistempty || ispicturevalidationrequired || isopcheckrequired; 
+        return ispicturevalidationrequired || isopcheckrequired;//prodlistempty ||  
         
     }
 
-    get isqclistblank(){
-        return this.qclistlocal.length == 0;
-    }
+    // get isqclistblank(){
+    //     return this.qclistlocal.length == 0;
+    // }
 
     get isDiscOpen(){
         return (this.statuswithin == 'open' && this.type!='operations');  
@@ -166,7 +166,7 @@ export default class StatusOperationsComponent extends LightningElement {
             if(this.permissionset.operation_open.write){
                 var ispicturevalidationrequired = false;
                 var isopcheckrequired=false;
-                var prodlistempty = false;
+                //var prodlistempty = false;
                 if(this.isoperation){
                    ispicturevalidationrequired = false;
                 if(this.buildstationdatalocal.picture_validation_target_image_id != undefined){
@@ -184,20 +184,20 @@ export default class StatusOperationsComponent extends LightningElement {
                 }
 
 
-                prodlistempty = false;
-                if(this.prodlistlocal.length == 0){
-                    prodlistempty = true;
-                }
+                // prodlistempty = false;
+                // if(this.prodlistlocal.length == 0){
+                //     prodlistempty = true;
+                // }
                 }
                 else{
                     ispicturevalidationrequired = false;
-                if(this.prodlistlocal.length == 0){
-                    prodlistempty = true;
-                }
+                // if(this.prodlistlocal.length == 0){
+                //     prodlistempty = true;
+                // }
                 }
 
                 //this.setmarkasdonepermissions = (prodlistempty || ispicturevalidationrequired);
-                return prodlistempty || ispicturevalidationrequired || isopcheckrequired || this.hasdiscrepancyorshortage; 
+                return ispicturevalidationrequired || isopcheckrequired || this.hasdiscrepancyorshortage; //prodlistempty || 
             } 
             else{
                 //this.setmarkasdonepermissions = true;
@@ -206,14 +206,14 @@ export default class StatusOperationsComponent extends LightningElement {
         }
         else if(this.type == 'shortage'){
             if(this.permissionset.shortage_open.write){
-                if(this.prodlistlocal.length == 0){
+                //if(this.prodlistlocal.length == 0){
                     //this.setmarkasdonepermissions = true;
-                    return true;
-                }
-                else{
+                    //return true;
+                //}
+                //else{
                     //this.setmarkasdonepermissions =  false;
                     return false;
-                }
+                //}
             }
             else{
                 return !this.permissionset.shortage_open.write;
@@ -223,12 +223,12 @@ export default class StatusOperationsComponent extends LightningElement {
         else if(this.type == 'discrepancy'){
             if(this.discrepancytype == 'Department'){
                 if(this.permissionset.dept_discrepancy_open.write){
-                    if(this.prodlistlocal.length == 0){
-                        return true;
-                    }
-                    else{
+                    // if(this.prodlistlocal.length == 0){
+                    //     return true;
+                    // }
+                    // else{
                         return false;
-                    }
+                    //}
                 }
                 else{
                     return !this.permissionset.dept_discrepancy_open.write;
@@ -236,12 +236,12 @@ export default class StatusOperationsComponent extends LightningElement {
             }
             else{
                 if(this.permissionset.discrepancy_open.write){
-                    if(this.prodlistlocal.length == 0){
-                        return true;
-                    }
-                    else{
+                    // if(this.prodlistlocal.length == 0){
+                    //     return true;
+                    // }
+                    // else{
                         return false;
-                    }
+                    //}
                 }
                 else{
                     return !this.permissionset.discrepancy_open.write;

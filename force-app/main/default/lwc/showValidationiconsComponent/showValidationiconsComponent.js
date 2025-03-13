@@ -881,9 +881,8 @@ processInstructionsWithIcons() {
                 this.selectedopchek = this.opckdetails[i];
                 if (event.target.type != "checkbox") {
                     this.selectedopchek.op_check_status = event.detail.status;
-                } else {
-                    this.selectedopchek.is_required = event.target.checked;
-                }
+                    this.selectedopchek.is_required = event.detail.is_required;
+                 }
             }
         }
         if(this.selectedopchek.value_required && 
