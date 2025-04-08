@@ -6,8 +6,6 @@
         <template if:true={isoperation}>
             <lightning-button-group class={buttongroupwidth}>
 <lightning-button class={setwidthclass} label="Verify" title="Verify" onclick={handlestatuschange} disabled={resolvepermissions}></lightning-button>
-                <!--<lightning-button class={setwidthclass} label="Reject" title="Reject" variant="destructive-text" onclick={handlestatuschange} disabled={isqclistblank}></lightning-button>-->
-                <!--lightning-button-icon icon-name="utility:close" title="Cancel" variant="border-filled" alternative-text="Cancel" onclick={handlestatuschange} disabled={markasdonepermissions}></lightning-button-icon-->
             </lightning-button-group>
         </template>
         <template if:false={isoperation}>
@@ -25,7 +23,7 @@
             <lightning-button-icon icon-name="utility:close" title="Cancel Verified" variant="border-filled" alternative-text="Cancel Verified" onclick={handlestatuschange} disabled={resolvepermissions} if:false={resolvepermissions}></lightning-button-icon>
         </lightning-button-group>
     </template> 
-    <template if:true={isrejected}> <!-- {hasdiscrepancy}-->
+    <template if:true={isrejected}>
         <template if:true={isoperation}>
             <template if:true={buildstationdatalocal.has_discrepancy_logged}>
                 <lightning-button variant="destructive" label="Issue" title="Issue"  class={setwidthclass} ></lightning-button>

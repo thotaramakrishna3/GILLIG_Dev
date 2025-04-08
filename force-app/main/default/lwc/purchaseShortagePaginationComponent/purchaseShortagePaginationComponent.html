@@ -86,7 +86,7 @@
                 <div class="slds-grid slds-gutters slds-m-top_x-small">
                     <div class="slds-col slds-size_1-of-1">
                         <div class="slds-float_left">
-                            <div if:true={checkSelectId}> <!--if:true={checkSelectId}-->
+                            <div if:true={checkSelectId}>
                                 <lightning-button variant="brand" label="Group Update" title="Group Update" onclick={onclickGroupupdate} class="slds-m-left_x-small"></lightning-button>
                             </div>
                         </div>
@@ -210,7 +210,6 @@
                             <td>
                                 <label class="slds-checkbox">
                                     <input type="checkbox" data-id={shortg.ecard_discrepancy_log_id} onchange={handleCheckboxChange}/>
-                                        <!-- checked={isCheckboxChecked} /> -->
                                     <span class="slds-checkbox_faux"></span>
                                     <span class="slds-assistive-text">Select All</span>
                                 </label>
@@ -493,8 +492,6 @@
                                 value={selectedshortage.discrepancy_statusdisplay} readonly></lightning-input>
                         </div>
                         <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
-                            <!-- <lightning-input type="text" label="Buyer / Planner Code" name="buyer_code"
-                                                        value={selectedshortage.buyer_code} readonly></lightning-input> -->
                             <c-custom-search-component showicon={returntrue} showlabel={returntrue}
                                 placeholdertext="Select Buyer" -icon-name="custom:custom98" listto-search={uniqueBuyerNames}
                                 label="Buyer" selectedcustomer={selectedshortage.buyer_code} onselect={handlebuyerselect}
@@ -538,7 +535,7 @@
                                 -icon-name="custom:custom111" listto-search={vendornamelist}
                                 selectedcustomer={selectedshortage.vendor_name} label="Vendor" 
                                 onselect={onvendorselection} onclear={onclearvendor}>
-                            </c-custom-search-lookup-component> <!-- isrequired=true --> 
+                            </c-custom-search-lookup-component>
                         </div>
                         <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
                             <lightning-combobox name="carrier_text" label="Carrier" placeholder="Select Carrier"
@@ -555,7 +552,7 @@
                             <lightning-combobox label="Cause" name="shortage_cause_id"
                                 value={selectedshortage.shortage_cause_id} options={shortgecauselist}
                                 onchange={updateselectedshortage} disabled={disablepurchfieldedit}>
-                            </lightning-combobox> <!-- required class="shipshortvalid" -->
+                            </lightning-combobox>
                         </div>
                         <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
                             <lightning-input type="text" name="tracking" label="Tracking #"
@@ -581,7 +578,7 @@
                                     <label class="slds-form-element__label" for="is_ship_short">Ship Short?</label>
                                     <lightning-input type="checkbox" name="is_ship_short"
                                         checked={selectedshortage.is_ship_short} onchange={updateselectedshortage}
-                                        ></lightning-input> <!-- disabled={disableshipshortedit} modified by sathish-->
+                                        ></lightning-input>
                                 </div>
                             </div>
                             <div class="slds-size_1-of-3 slds-form slds-form_stacked">
@@ -601,19 +598,6 @@
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small slds-border_bottom">                        
-                        <!-- <div class="slds-col slds-size_1-of-2">
-                            <c-re-usable-multi-select-lookup disablecomponent="true" limittoone={returntrue}
-                                selectedrecords={selectedshortage.assigend_qc_id} label="QC" -icon-name="standard:user"
-                                placeholdertext="" onitemselected={updateuserpartshortage}
-                                listtosearch={selectedshortage.allqclist}></c-re-usable-multi-select-lookup>
-                        </div>
-                        <div class="slds-col slds-size_1-of-2">
-                            <c-re-usable-multi-select-lookup disablecomponent="true" limittoone={returnfalse}
-                                selectedrecords={selectedshortage.assignedprod} label="PROD" -icon-name="standard:user"
-                                placeholdertext="Search for PROD users" onitemselected={updateuserpartshortage}
-                                listtosearch={selectedshortage.allprodlist}>
-                            </c-re-usable-multi-select-lookup>
-                        </div> -->
                         <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
                             <lightning-input type="text" label="Resolved By" value={selectedshortage.resolved_updatedby_id} disabled></lightning-input>
                         </div>

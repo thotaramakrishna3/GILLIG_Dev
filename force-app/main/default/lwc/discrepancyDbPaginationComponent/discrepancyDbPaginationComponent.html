@@ -26,7 +26,7 @@
                                 <c-custom-search-component showicon={returntrue} showlabel={returnfalse}
                                     placeholdertext="Search Created User" -icon-name="standard:user"
                                     listto-search={usersnamelist} label="Created By" onselect={oncreatedbyselect}
-                                    onclear={onclearcreatedby}></c-custom-search-component><!--listto-search={createdbyuserslist}-->
+                                    onclear={onclearcreatedby}></c-custom-search-component>
                             </div>
                             <div class="slds-col slds-size_5-of-24 slds-p-horizontal_small">
                                 <c-new-discrepancy-component buttonlabel="New Issue"
@@ -43,12 +43,12 @@
                         <c-custom-search-component showicon={returntrue} showlabel={returnfalse}
                             placeholdertext="Search Customer, Chassis Number" -icon-name="custom:custom98"
                             listto-search={searchnamelists} label="Customer" onselect={oncustomerselection}
-                            onclear={onclearcustomer}></c-custom-search-component><!--listto-search={customernamechasislist}-->
+                            onclear={onclearcustomer}></c-custom-search-component>
                     </div>
                     <div class="slds-col slds-size_2-of-12">
                         <lightning-combobox onfocus={loadpicklistvalues} variant="label-hidden" name="departments"
                             value={selecteddepartement} placeholder="Departments" options={departmentlist}
-                            onchange={handledepartmentchange}></lightning-combobox><!--{departmentlist}-->
+                            onchange={handledepartmentchange}></lightning-combobox>
                     </div>
                     
                     <div class="slds-col slds-size_2-of-12">
@@ -130,7 +130,6 @@
 
                             <td data-id={disc.ecard_discrepancy_log_id} onclick={showdetails} title={disc.description}
                                 class="slds-truncate">
-                                <!--setdescriptionwidth-->
                                 <div class="slds-grid">
                                     <div class="allignbadge">
                                         <span if:true={disc.isdepartmentdiscrepancy} class="deptbadge">DEPT</span>
@@ -192,7 +191,6 @@
                             </td>
                         </tr>
                     </template>
-                    <!-- </template> -->
                 </tbody>
             </table>
 
@@ -358,13 +356,11 @@
                             <lightning-input type="text" label="Defect Code" name="defect_codename"
                                 value={selecteddiscrepancy.defect_codename} readonly></lightning-input>
                         </div>
-                        <!-- Added by Poulose to change Defect code start-->
                         <div if:true={enabledefectcodeedit} class="slds-col slds-size_1-of-4"> 
                             <lightning-combobox class="deptchangevalidation" required label="Defect Code" name="defect_codename"
                               onchange={modifyselecteddiscrepancy} value={defectcodename}
                               placeholder="Enter a Defect Code" options={defectoptions}></lightning-combobox>
                           </div>
-                          <!-- Added by Poulose end -->
                         <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium"
                             title={selecteddiscrepancy.discrepancy_priority}>
                             <lightning-input type="text" label="Priority" name="discrepancy_priority"
@@ -376,7 +372,6 @@
                                 value={selecteddiscrepancy.discrepancy_statusdisplay}
                                 onchange={updateselecteddiscrepancy} readonly></lightning-input>
                         </div>
-                        <!--Added by Poulose Start-->
                         
                             <template if:true={showupdateby}>
                         <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
@@ -397,7 +392,6 @@
                             </lightning-combobox>
                         </div>
                     </template>
-                                            <!--Added by Poulose End-->
 
                     </div>
                     <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small">
@@ -429,13 +423,6 @@
                         <div class="slds-col slds-size_1-of-2">
                             <lightning-input value={selecteddiscrepancy.verified_updatedby_id} label="Verified by" name="verifiedby" disabled></lightning-input>
                         </div>
-                        <!-- <div class="slds-col slds-size_1-of-2">
-                            <c-re-usable-multi-select-lookup disablecomponent={disableprodforupdate}
-                                limittoone={returnfalse} selectedrecords={selecteddiscrepancy.selectedprodlist}
-                                label="PROD" -icon-name="standard:user" placeholdertext="Search for PROD users"
-                                onitemselected={updateuserselection} listtosearch={selecteddiscrepancy.allprodlist}>
-                            </c-re-usable-multi-select-lookup>
-                        </div> -->
                     </div>
                     <div class="slds-grid slds-wrap slds-gutters">
                         <div class="slds-col slds-size_1-of-1">
@@ -467,8 +454,6 @@
                         buildstationid={selecteddiscrepancy.ecard_discrepancy_log_id}
                         ecardid={selecteddiscrepancy.ecard_id} status={selecteddiscrepancy.discrepancy_status}
                         onsubmitchange={handlediscrepancyactions}></c-status-operations-component>
-                    <!--onsubmitchange={discrepancyactionshandler}
-                    prodlist={selecteddiscrepancy.selectedprodlist} qclist={selecteddiscrepancy.assigend_qc_id} -->
                 </footer>
             </div>
         </section>
@@ -506,7 +491,6 @@
                     <template if:true={previewimageexist}>
                         <div class="slds-align_absolute-center">
                             <div class="referenceimage" style="max-height:380px;max-width:1200px;">
-                                <!--style={parentdivdimensions}-->
                                 <img src={discrepancyimage} style={parentdivdimensions} alt="Discrepancy Image" />
                                 <!--take care of historical Discrepancy point as object - can be removed from next release START-->   
                                 <span if:false={isbusareaarray} style={setdiscrepancypoint} class="discrepancypoint">

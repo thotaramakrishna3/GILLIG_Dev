@@ -87,8 +87,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
     @track detailsmodal = false;
     @track selecteddiscrepancy;
     @track selecteddiscrepancycomments = [];
-    // @track qccapturerole = false;
-    // @track qccaptureaction = false;
     @track isdelenabled = false;
     @track busstatuslist = [{ label: 'All Bus Status', value: 'All Bus Status' }];
     @track selectedBusStatus = 'All Bus Status';
@@ -150,18 +148,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
     get isdepartmentdisclistempty() {
         return this.filtereddepartmentdiscrepancy.length == 0;
     }
-
-    // get disableprodforupdate() {
-    //     return !this.permissionset.shortage_update_prod.write || this.selectedshortage.discrepancy_status.toLowerCase() != "open";//added
-    // }
-
-    // get disableqcforupdate() {
-    //     if (this.selecteddiscrepancy.discrepancy_status.toLowerCase() == "approve") {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
 
     get departmentnotselected() {
         if (this.newdiscrepancy.departmentid == undefined) {
@@ -245,11 +231,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
         EcardLogin()
             .then((result) => {
                 this.loggedinuser = result.data.user;
-                // if (this.loggedinuser.approle_id == 1 || this.loggedinuser.approle_id == 4) {
-                //     this.qccapturerole = true;
-                // } else {
-                //     this.qccapturerole = false;
-                // }
                 this.currentuserempid = this.loggedinuser.employee_id;
             })
             .catch((error) => {
@@ -303,7 +284,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
                     }
                     var bsavailable = shortageobj.buildstation_code == '9999' ? false : true;
                     var currentlocationavailable = (shortageobj.current_line_location != '9999' && shortageobj.current_line_location != null) ? true : false;
-                    //var qc_avilable = shortageobj.assigend_qc_id != null ? true : false;
                     var customernamewithseq = shortageobj.customer_name;
                     if (shortageobj.bus_relative_seq != null) {
                         customernamewithseq = `${shortageobj.customer_name} (${shortageobj.bus_relative_seq})`;
@@ -320,7 +300,7 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
                         disc_bsavailable: bsavailable,
                         part_shortage_id: shortageobj.part_shortage_id,
                         buspart_id: shortageobj.buspart_id,
-                        buspart_name: partname, //shortageobj.buspart_name,
+                        buspart_name: partname,
                         custom_part_name: shortageobj.custom_part_name,
                         buspart_no: shortageobj.buspart_no,
                         busstatus_id: shortageobj.busstatus_id,
@@ -352,17 +332,12 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
                         first_name: shortageobj.first_name,
                         last_name: shortageobj.last_name,
                         customername: `${shortageobj.customer_name}`,
-                        customernamewithseq: customernamewithseq,//appending seq with customername
+                        customernamewithseq: customernamewithseq,
                         has_part_shortage: shortageobj.has_part_shortage,
-                        //assignedprod: getselectedformandetails(shortageobj),
                         part_avilable: shortageobj.part_avilable,
                         buyer_code_avilable: (shortageobj.buyer == null || shortageobj.planner_code == null) ? false : true,
                         po_no: shortageobj.po_no,
-                        // allprodlist: modifieduserlist(shortageobj.prod),
-                        // allqclist: modifieduserlist(shortageobj.qc),
                         quantity: shortageobj.quantity,
-                        //assigend_qc_id: modifieduserlist([shortageobj.assigend_qc_id]),
-                        //qcavailable: qc_avilable,
                         raised_date: shortageobj.raised_date,
                         raised_date_display: getmoddeddate(shortageobj.raised_date),
                         raised_status_updated_date: shortageobj.raised_status_updated_date,
@@ -492,31 +467,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
         }
     }
 
-    // Update PROD list with users not in scheduled
-    // updateprodlistwithall(selectedprod, allprod) {
-    //     function checkifexisting(element, searcharray) {
-    //         var elementexisting = true;
-    //         for (var i in searcharray) {
-    //             if (searcharray[i].Id == element) {
-    //                 elementexisting = false;
-    //             }
-    //         }
-    //         return elementexisting;
-    //     }
-    //     var updatedprodlist = [];
-    //     if (allprod != undefined && allprod.length != 0) {
-    //         updatedprodlist = JSON.parse(JSON.stringify(allprod));
-    //     }
-    //     if (selectedprod != undefined && selectedprod.length != 0) {
-    //         for (var i in selectedprod) {
-    //             if (checkifexisting(selectedprod[i].Id, updatedprodlist)) {
-    //                 updatedprodlist.push(selectedprod[i]);
-    //             }
-    //         }
-    //     }
-    //     return updatedprodlist;
-    // }
-
     // Capitalize string passe
     capitalize(text) {
         if (typeof text !== "string") return "";
@@ -597,58 +547,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
         }
         return newuserlist;
     }
-
-    // To get the forman details in a list format from API structure.
-    // getselectedformandetails(discrepancyobj) {
-    //     var users = [];
-    //     for (var i = 0; i < 5; i++) {
-    //         if (discrepancyobj[`forman${i + 1}_id`] != undefined) {
-    //             users.push(discrepancyobj[`forman${i + 1}_id`]);
-    //         }
-    //     }
-    //     return this.modifyuserlistfordisplay(users);
-    // }
-
-    // To sort Normal Discrepancy Table
-    // sortdiscrepancytable(event) {
-    //     var previousSorted = this.previousColumn;
-    //     if (previousSorted != undefined) {
-    //         if (event.currentTarget.dataset.id != previousSorted) {
-    //             const element = this.template.querySelector(
-    //                 '[data-id="' + previousSorted + '"]'
-    //             );
-    //             element.iconName = "";
-    //             this.previousColumn = event.currentTarget.dataset.id;
-    //         } else {
-    //             this.previousColumn = event.currentTarget.dataset.id;
-    //         }
-    //     } else {
-    //         this.previousColumn = event.currentTarget.dataset.id;
-    //     }
-
-    //     if (this.sortedColumn === event.currentTarget.dataset.id) {
-    //         this.sortedDirection = this.sortedDirection === "asc" ? "desc" : "asc";
-    //     } else {
-    //         this.sortedDirection = "asc";
-    //     }
-    //     var reverse = this.sortedDirection === "asc" ? 1 : -1;
-    //     let table = JSON.parse(JSON.stringify(this.modifiedshortageslist));
-    //     table.sort((a, b) => {
-    //         return a[event.currentTarget.dataset.id] >
-    //             b[event.currentTarget.dataset.id]
-    //             ? 1 * reverse
-    //             : -1 * reverse;
-    //     });
-    //     this.modifiedshortageslist = table;
-    //     this.sortedColumn = event.currentTarget.dataset.id;
-
-    //     if (this.sortedDirection === "asc") {
-    //         event.target.iconName = "utility:chevronup";
-    //     }
-    //     if (this.sortedDirection === "desc") {
-    //         event.target.iconName = "utility:chevrondown";
-    //     }
-    // }
 
     sortdiscrepancytable(event, source) {
         var previousSorted = this.previousColumn;
@@ -775,8 +673,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
             this.finalBuyerList = this.listOfBuyers.map(str => encodeURIComponent(str));
             this.latestBuyerValue = this.allbuyervalues[this.allbuyervalues.length - 1];
             this.applyfilter();
-
-          //  this.convertEmptyToUnknownBuyer();
           }
           
     handlebuyerremove(event){
@@ -789,18 +685,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
         this.finalBuyerList = this.allbuyervalues.map(str => encodeURIComponent(str));
         this.applyfilter();
     }
-
-// Buyer list for pills 
-// @track allbuyervalues1;
-//     convertEmptyToUnknownBuyer() {
-//         this.allbuyervalues1 = this.allbuyervalues.map(value => {
-//             if (value.trim() == 'empty') {
-//                 return 'Unknown buyer';
-//             } else {
-//                 return value;
-//             }
-//         });
-//     }
     // On Customer Name/Chasis Number selection
     oncustomerselection(event) {
         if (event.detail.labelvalue == "Customer") {
@@ -868,22 +752,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
             });
     }
 
-    // To Update the responsebody with selected formanIds from List Views.
-    // updateformans(responsebody, formanlist) {
-    //     var newresponse = JSON.parse(responsebody);
-    //     var newformanlist;
-    //     if (formanlist.length > 5) {
-    //         newformanlist = formanlist.slice(0, 5);
-    //     } else {
-    //         newformanlist = formanlist;
-    //     }
-    //     for (var i = 0; i < newformanlist.length; i++) {
-    //         newresponse[`forman${i + 1}_id`] = newformanlist[i].userid;
-    //     }
-
-    //     return newresponse;
-    // }
-
     getmodifiediserlist(userlist) {
         var newuserlist = [];
         if (userlist.length != 0) {
@@ -933,12 +801,7 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
     // For getting Buildstation Details on department/ecardId change for new Discrepancy.
     getcompleteBuilstationlist(data) {
         let workstationdata = data.builstationMapWrapper.workcenter;
-        // var prod_supervisor = this.modifyuserlistfordisplay(
-        //     data.builstationMapWrapper.prod_supervisor
-        // );
-        // this.deptsupervisorforselecteddept = prod_supervisor;
         let modifiedworkstationdata = [];
-        //var QC = this.modifyuserlistfordisplay(data.builstationMapWrapper.qc);
         if (workstationdata.length != 0) {
             for (var wc in workstationdata) {
                 let workcentre = workstationdata[wc];
@@ -946,11 +809,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
                 let workcentername = workcentre.workcentername;
                 for (var bs in workcentre.buildstation) {
                     var buildstation = workcentre.buildstation[bs];
-                    //var PROD = this.modifyuserlistfordisplay(buildstation.prod);
-                    //var selectedprod = this.getselectedformandetails(buildstation);
-                    // var selectedqc = this.modifyuserlistfordisplay([
-                    //     buildstation.qc_approvedby_id
-                    // ]);
                     var modifiedwsdata = {
                         workcenter_id: workcenter_id,
                         ecard_operation_log_id: buildstation.ecard_operation_log_id,
@@ -962,10 +820,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
                                 : false,
                         buildstation_id: buildstation.buildstation_id,
                         buildstation_code: buildstation.buildstation_code
-                        // selectedprod: selectedprod,
-                        // selectedqc: selectedqc,
-                        // PRODlist: PROD,
-                        // QClist: QC
                     };
                     modifiedworkstationdata.push(modifiedwsdata);
                 }
@@ -995,27 +849,17 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
             if (this.modifiedshortageslist[i].ecard_discrepancy_log_id == selectepartshortagelogid) {
                 this.selectedshortage = Object.assign({}, this.modifiedshortageslist[i]);
                 if(this.modifiedshortageslist[i].resolved_status_updatedby_id !=null && (this.modifiedshortageslist[i].discrepancy_status == 'resolve' || this.modifiedshortageslist[i].discrepancy_status == 'approve')){
-                    this.selectedshortage.resolved_updatedby_id = this.modifiedshortageslist[i].resolved_status_updatedby_id[0].fullname;//+' '+this.modifiedshortageslist[i].resolved_status_updatedby_id.last_name;
+                    this.selectedshortage.resolved_updatedby_id = this.modifiedshortageslist[i].resolved_status_updatedby_id[0].fullname;
                 }else{
                     this.selectedshortage.resolved_updatedby_id = '';
                 }
                 if(this.modifiedshortageslist[i].verifiedby_id !=null && this.modifiedshortageslist[i].discrepancy_status == 'approve'){
-                    this.selectedshortage.verified_updatedby_id = this.modifiedshortageslist[i].verifiedby_id[0].fullname;//+' '+this.modifiedshortageslist[i].verifiedby_id.last_name;
+                    this.selectedshortage.verified_updatedby_id = this.modifiedshortageslist[i].verifiedby_id[0].fullname;
                 }else{
                     this.selectedshortage.verified_updatedby_id = '';
                 }
             }
         }
-        // if (this.selectedshortage.allprodlist.length == 0) {
-        //     var userdetails = [];
-        //     await getcrewingsuserslist({ deptid: this.selectedshortage.departmentid })
-        //         .then((result) => {
-        //             userdetails = JSON.parse(result.responsebody).data.user;
-        //             this.selectedshortage.allprodlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
-        //         })
-        //         .catch((error) => {
-        //         });
-        // }
         this.getselecteddiscrepancycomments(selectepartshortagelogid);
         this.getVendorlistforparts(this.selectedshortage.buspart_no);
         if (this.selectedshortage.buyer != null && this.selectedshortage.planner_code != null) {
@@ -1058,16 +902,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
         this.selectedshortage[targetname] = targetvalue;
         this.updatedisable = false;
     }
-    // updateuserpartshortage(event) {
-    //     var detail = event.detail;
-    //     if (detail.type == 'QC') {
-    //         this.selectedshortage.assigend_qc_id = detail.userlist;
-    //     }
-    //     if (detail.type == 'PROD') {
-    //         this.selectedshortage.assignedprod = detail.userlist;
-    //     }
-    //     this.updatepartshortagetoserver();
-    // }
 
     // To update the Part Shortage changes to server.
     updatepartshortagetoserver(event) {
@@ -1097,12 +931,18 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
                 }
             }
             var discrepancytobeupdated = this.selectedshortage;
+            var oldselectedshortage;
+            for (var i in this.modifiedshortageslist) {
+                if (this.modifiedshortageslist[i].ecard_discrepancy_log_id == discrepancytobeupdated.ecard_discrepancy_log_id) {
+                    oldselectedshortage = Object.assign({}, this.modifiedshortageslist[i]);
+                }
+            }
             var part_shortage;
             // newly added by sathish for the auto resolve func
             if(discrepancytobeupdated.date_received != null && discrepancytobeupdated.is_ship_short == true && discrepancytobeupdated.discrepancy_status != 'resolve'){ 
                 discrepancytobeupdated.discrepancy_status = 'resolve';
                 this.statusascomment = true; 
-            }else if (discrepancytobeupdated.date_received == null && discrepancytobeupdated.is_ship_short == false && discrepancytobeupdated.discrepancy_status != 'open'){ 
+            }else if (discrepancytobeupdated.date_received == null && oldselectedshortage.is_ship_short == true && discrepancytobeupdated.is_ship_short == false && discrepancytobeupdated.discrepancy_status != 'open'){ 
                 discrepancytobeupdated.discrepancy_status = 'open'; 
                 this.statusascomment = true; 
             }
@@ -1168,10 +1008,6 @@ export default class PurchaseShortagePaginationComponent extends LightningElemen
                 "buildstation_id": discrepancytobeupdated.buildstation_id
 
             };
-            // if (discrepancytobeupdated.assigend_qc_id != null && discrepancytobeupdated.assigend_qc_id.length != 0) {
-            //     responsebody["assigend_qc_id"] = discrepancytobeupdated.assigend_qc_id[0].Id;
-            // }
-            //var requestwithforman = this.updateformans(JSON.stringify(responsebody), discrepancytobeupdated.assignedprod);
             var requestwithforman = responsebody;
             updatePartshortage({ requestbody: JSON.stringify(requestwithforman) })
                 .then(data => {

@@ -55,8 +55,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
     @track showpreviewimage = false;
     @track setdiscrepancypoint;
     @track loggedinuser;
-    // @track qccapturerole=false;
-    // @track qccaptureaction=false;
     @track isbusareaarray = false;
     @track statusascomment = false;
     @track statuscommentmap = {
@@ -82,40 +80,10 @@ export default class OpreationActionPaintComponent extends LightningElement {
         return true;
     }
 
-    // Disable/Enable Production User For Selected Discrepancy
-    // get disableprodforselecteddiscrepancy() {
-        // if(this.selecteddiscrepancy.discrepancy_status.toLowerCase() != 'open'){
-        //     return true;
-        // }
-        // else{
-        //     return false;
-        // }
-    //     var updatepermission = false;
-    //     if (this.selecteddiscrepancy.discrepancy_type == 'department') {
-    //         updatepermission = this.permissionset.dept_discrepancy_update_prod.write;
-    //     } else if (this.selecteddiscrepancy.discrepancy_type == 'busarea') {
-    //         updatepermission = this.permissionset.busarea_discrepancy_update_prod.write;
-    //     } else {
-    //         updatepermission = this.permissionset.discrepancy_update_prod.write;
-    //     }
-    //     return this.selecteddiscrepancy.discrepancy_status.toLowerCase() != "open" || !updatepermission;
-    // }
-
-    // Disable/Enable QC User For Selected Discrepancy
-    // get disableqcforselecteddiscrepancy(){
-    //     if(this.selecteddiscrepancy.discrepancy_status.toLowerCase() == 'approve'){
-    //         return true;
-    //     }
-    //     else{
-    //         return false;
-    //     }
-    // }
-
     connectedCallback(){
         this.departmentid = this.selecteddepartmentId;
         this.getloggedinuser();
         this.loadDiscrepancydata();
-        //alert('Fresh Load');
         pubsub.register('operationrefresh', this.refreshoperation.bind(this));
     }
 
@@ -123,11 +91,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
         EcardLogin()
         .then((result) => {
             this.loggedinuser=result.data.user;
-            // if(this.loggedinuser.approle_id==1 || this.loggedinuser.approle_id==4){
-            //     this.qccapturerole=true;
-            // }else{
-            //     this.qccapturerole=false;
-            // }
         })
         .catch((error) => {
         });//sajith
@@ -166,22 +129,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
         return newuserlist;
     }
 
-    // To refine selected userlist from API to show in userlistIconCompoent
-    // Inputs required include Complete user List valid for selection and List of selected user ids.
-    // getselectedmodifieduserlist(allproduserlist, selecteduserids){
-    //     var selecteduserlist = [];
-    //     if(selecteduserids.length != 0){
-    //         if(allproduserlist.length != 0){
-    //             for(var i in allproduserlist){
-    //                 if(selecteduserids.includes(allproduserlist[i].employee_id)){
-    //                     selecteduserlist.push(allproduserlist[i]);
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     return this.getmodifiediserlist(selecteduserlist);
-    // }
-
     // Get stringified modded date
     getmoddeddate(date){
         var formatteddate = undefined;
@@ -199,33 +146,13 @@ export default class OpreationActionPaintComponent extends LightningElement {
         return formatteddate;
     }
 
-    // To get the forman details in a list format from API structure.
-    // getselectedformandetails(obj){
-    //     var users = [];
-    //     for(var i=0; i<5;i++){
-    //         if(obj[`forman${i+1}_id`] != undefined){
-    //             users.push(obj[`forman${i+1}_id`]);
-    //         }
-    //      }
-    //     return this.getmodifiediserlist(users);
-    // }
-
      // To modify the Department Discrepancy data for Ecard App and related components.
      getmodifieddiscrepancylist(departmentdata){
         var departmentid = departmentdata.department_id;
-       // var departmentqc = this.getmodifiediserlist(departmentdata.qc);
         var discrepancylogs = departmentdata.discrepancylog;
         var modifieddiscrepancyList = [];
-        // var prod_supervisor = this.getmodifiediserlist(departmentdata.prod_supervisor);
-        // this.deptsupervisor = prod_supervisor;
         for(var disc in discrepancylogs){
             var index = Number(disc)+1;
-            // var moddedprod = this.getmodifiediserlist(discrepancylogs[disc].prod);
-            // var assignedprod = this.getselectedformandetails(discrepancylogs[disc]);
-            // var assigend_qc_id = this.getmodifiediserlist([discrepancylogs[disc].assigend_qc_id]);
-
-            // var qc_avilable = assigend_qc_id.length!=0?true:false;
-
             var verifiedby = this.getmodifiediserlist([discrepancylogs[disc].verifiedby_id]);
             var resolved_status_updatedby_id = this.getmodifiediserlist([discrepancylogs[disc].resolved_status_updatedby_id]);
             var created_by = this.getmodifiediserlist([discrepancylogs[disc].createdby_id]);
@@ -248,8 +175,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
             }
             var isdepartmentdiscrepancy = false;
             if(discrepancylogs[disc].discrepancy_type == 'department'){
-                // assignedprod = prod_supervisor;
-                //moddedprod = prod_supervisor;
                 isdepartmentdiscrepancy = true;
             }
             var isdownstreamdiscrepancy = false;
@@ -260,7 +185,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
             if (discrepancylogs[disc].discrepancy_type == "short") {
                 isshortdiscrepancy = true;
             }
-            //moddedprod = this.updateprodlistwithforeman(assignedprod,moddedprod);
             var bsavailable=discrepancylogs[disc].buildstation_code=='9999'?false:true;
             var hasbusareapicture = false;
             if(discrepancylogs[disc].bus_area_picture_id != undefined){
@@ -278,13 +202,10 @@ export default class OpreationActionPaintComponent extends LightningElement {
                 else if (discrepancylogs[disc].discrepancy_type == 'buildstation') {
                     discrepancytype = 'Job';
                 }
-
-            // var qc_avilable=assigend_qc_id.length!=0?true:false;
             var moddeddiscrepancy = {
                 index: index,
                 hasbusareapicture : hasbusareapicture,
                 departmentid : departmentid,
-                //departmentcode : this.getdepartmentcode(departmentid),
                 modified_date : discrepancylogs[disc].modified_date,
                 bus_area : discrepancylogs[disc].bus_area,
                 bus_area_picture_id : discrepancylogs[disc].bus_area_picture_id,
@@ -301,13 +222,12 @@ export default class OpreationActionPaintComponent extends LightningElement {
                 first_name : discrepancylogs[disc].first_name,
                 last_name : discrepancylogs[disc].last_name,
                 ecard_id : discrepancylogs[disc].ecard_id,
-                customername : `${discrepancylogs[disc].customer_name}`,//`${discrepancylogs[disc].first_name} ${discrepancylogs[disc].last_name}`,
+                customername : `${discrepancylogs[disc].customer_name}`,
                 chassis_no : discrepancylogs[disc].chassis_no,
                 department_name : discrepancylogs[disc].department_name,
                 department_id : discrepancylogs[disc].department_id,
                 busstatus_name : discrepancylogs[disc].busstatus_name, 
                 workcenter_name : discrepancylogs[disc].workcenter_name,
-                //assigend_qc_id : discrepancylogs[disc].assigend_qc_id,
                 buildstation_code: discrepancylogs[disc].buildstation_code,
                 buildstation_id: discrepancylogs[disc].buildstation_id,
                 disc_bsavailable:bsavailable,
@@ -330,11 +250,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
                 resolved_status_updatedby_id : resolved_status_updatedby_id,
                 ecard_discrepancy_log_number:discrepancylogs[disc].discrepancy_log_number,
                 verifiedby : verifiedby
-                // prod : moddedprod,
-                // qc : departmentqc,
-                // assignedprod : assignedprod,
-                // qcavailable:qc_avilable,
-                // assigend_qc_id : assigend_qc_id
 
             };
             if(discrepancylogs[disc].resolved_status_updatedby_id !=null && (discrepancylogs[disc].discrepancy_status == 'Resolve' || discrepancylogs[disc].discrepancy_status == 'Approve')){
@@ -351,31 +266,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
         }
         return modifieddiscrepancyList;
 }
-
-    // Update PROD list with foreman users who are not listed
-    // updateprodlistwithforeman(selectedprod, allprod) {
-    //     function checkifexisting(element, searcharray) {
-    //         var elementexisting = true;
-    //         for (var i in searcharray) {
-    //             if (searcharray[i].Id == element) {
-    //                 elementexisting = false;
-    //             }
-    //         }
-    //         return elementexisting;
-    //     }
-    //     var updatedprodlist = [];
-    //     if (allprod != undefined && allprod.length != 0) {
-    //         updatedprodlist = JSON.parse(JSON.stringify(allprod));
-    //     }
-    //     if (selectedprod != undefined && selectedprod.length != 0) {
-    //         for (var i in selectedprod) {
-    //             if (checkifexisting(selectedprod[i].Id, updatedprodlist)) {
-    //                 updatedprodlist.push(selectedprod[i]);
-    //             }
-    //         }
-    //     }
-    //     return updatedprodlist;
-    // }
 
  // Load Discrepancy tab data and formatting based on the Ecard and Department selected from API.
  loadDiscrepancydata(event){
@@ -404,7 +294,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
         this.dispatchEvent(alertmessage);
         
     }); 
-     //this.showSpinner = false;
 }
 
    
@@ -452,12 +341,10 @@ export default class OpreationActionPaintComponent extends LightningElement {
             if (action == "Reject") {
                 this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('open'); // reject
                 this.selecteddiscrepancy.discrepancy_status ='open'; //reject
-                //this.qccaptureaction=true;
             }
             if(action == 'Verify'){
                 this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('approve');
                 this.selecteddiscrepancy.discrepancy_status ='approve';
-                //this.qccaptureaction=true;
             }
             if(action == 'Cancel'){
                 this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('open');
@@ -466,12 +353,10 @@ export default class OpreationActionPaintComponent extends LightningElement {
             if(action == 'Cancel Verified'){
                 this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('resolve');
                 this.selecteddiscrepancy.discrepancy_status ='resolve';
-                //this.qccaptureaction=true;
             }
             if(action == 'Cancel Rejected'){
                 this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('resolve');
                 this.selecteddiscrepancy.discrepancy_status ='resolve';
-                //this.qccaptureaction=true;
             }
             this.updatediscrepancytoserver();
         }
@@ -488,17 +373,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
                 this.selecteddiscrepancy = this.modifieddiscrepancyList[i];
             }
         }
-        // if (this.selecteddiscrepancy.prod.length == 0) {
-        //     var userdetails = [];
-        //     await getcrewingsuserslist({ deptid: this.selecteddiscrepancy.departmentid })
-        //         .then((result) => {
-        //             userdetails = JSON.parse(result.responsebody).data.user;
-        //             userdetails = this.removeDuplicates(userdetails);//todo
-        //             this.selecteddiscrepancy.prod = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
-        //         })
-        //         .catch((error) => {
-        //         });
-        // }
         this.getselecteddiscrepancycomments(selecteddiscrepancylogid);
         this.isdelenabled=false;
         if(this.selecteddiscrepancy.isdeletable || (this.permissionset.discrepancy_delete.write && this.selecteddiscrepancy.discrepancy_status.toLowerCase() =='open')){
@@ -517,11 +391,9 @@ export default class OpreationActionPaintComponent extends LightningElement {
      addnewdiscrepancycomment(event){
         var ecarddiscrepancylogid = event.detail.uniqueId;
         var newcommentbody = {
-            "ecard_discrepancy_log_id"  : event.detail.uniqueId,             
-            /*"commentedby_id": event.detail.loggedinuserid,*/               
+            "ecard_discrepancy_log_id"  : event.detail.uniqueId,              
             "discrepancy_comments": event.detail.commenttext
         };
-        //alert(JSON.stringify(newcommentbody)); 
         addnewComment({requestbody:JSON.stringify(newcommentbody)})
         .then(data => {
             if(data.isError){
@@ -626,20 +498,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
                 this.showmessage('Failed to add Comments.', 'Something unexpected occured. Please contact your Administrator.', 'error');
             });
     }
-    
-    // Update user selection of selected discrepancy
-    // updateuserselection(event){
-    //     var detail = event.detail;
-    //     // alert(JSON.stringify(detail.userlist));
-    //     //alert(JSON.stringify(detail));
-    //     if(detail.type == 'QC'){
-    //         this.selecteddiscrepancy.assigend_qc_id = detail.userlist;
-    //     }
-    //     if(detail.type == 'PROD'){
-    //         this.selecteddiscrepancy.assignedprod = detail.userlist;
-    //     }
-    //     this.updatediscrepancytoserver();
-    // }
 
     get disablecomponentdates(){
         return this.selecteddiscrepancy.discrepancy_status.toLowerCase() != "open" || !this.permissionset.dept_discrepancy_update.write;//vishwas
@@ -650,17 +508,14 @@ export default class OpreationActionPaintComponent extends LightningElement {
         var action = event.detail.action;
         var passedallvalidation = true;
         if (action == "Reject") {
-            //this.qccaptureaction=true;
             this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('open'); // reject
             this.selecteddiscrepancy.discrepancy_status ='open'; //reject
         }
         if(action == 'Verify'){
-            //this.qccaptureaction=true;
             this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('approve');
             this.selecteddiscrepancy.discrepancy_status ='approve';
         }
         if(action == 'Mark as done'){
-            //this.qccaptureaction=false;
             // Check Validations
             if(this.selecteddiscrepancy.defect_type == 'Department'){
                 const allValid = [...this.template.querySelectorAll('.checkvalid')].reduce((validSoFar, inputCmp) => {
@@ -690,17 +545,14 @@ export default class OpreationActionPaintComponent extends LightningElement {
             
         }
         if(action == 'Cancel'){
-            //this.qccaptureaction=false;
             this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('open');
             this.selecteddiscrepancy.discrepancy_status ='open';
         }
         if(action == 'Cancel Verified'){
-            //this.qccaptureaction=true;
             this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('resolve');
             this.selecteddiscrepancy.discrepancy_status ='resolve';
         }
         if(action == 'Cancel Rejected'){
-           //this.qccaptureaction=true;
             this.selecteddiscrepancy.discrepancy_statusdisplay = setstatusfordisplay('resolve');
             this.selecteddiscrepancy.discrepancy_status ='resolve';
         }
@@ -717,23 +569,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
         this.selecteddiscrepancy[targetname] = targetvalue;
     }
 
-     // To Update the responsebody with selected formanIds from List Views.
-    //  updateformans(responsebody, formanlist){
-    //     var newresponse = JSON.parse(responsebody);
-    //     var newformanlist;
-    //     if(formanlist.length > 5){
-    //         newformanlist = formanlist.slice(0, 5);
-    //     }
-    //     else{
-    //         newformanlist = formanlist;
-    //     }
-    //     for(var i=0;i<newformanlist.length;i++){
-    //         newresponse[`forman${i+1}_id`] = newformanlist[i].userid;
-    //         }
-        
-    //     return newresponse;
-    //  }
-
      // Generic function to Show alert toasts.
     showmessage(title, message, variant){
         const alertmessage = new ShowToastEvent({
@@ -746,7 +581,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
 
     // To update the discrepancy changes to server.
     updatediscrepancytoserver(event){
-        //alert(JSON.stringify(this.selecteddiscrepancy));
         var discrepancytobeupdated = this.selecteddiscrepancy;
         var responsebody = {
             "ecard_discrepancy_log_id": discrepancytobeupdated.ecard_discrepancy_log_id,
@@ -762,11 +596,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
             "buildstation_id": discrepancytobeupdated.buildstation_id,
             "dat_defect_code_id":discrepancytobeupdated.dat_defect_code_id
         };
-        // if(this.qccaptureaction && this.qccapturerole){
-        //     responsebody["assigend_qc_id"] =  this.loggedinuser.employee_id;
-        //     this.qccaptureaction = false;
-        // }
-        //var requestwithforman = this.updateformans(JSON.stringify(responsebody),discrepancytobeupdated.assignedprod);
         var requestwithforman = responsebody;
         updateDiscrepancy({requestbody:JSON.stringify(requestwithforman)})
               .then(data => {
@@ -855,17 +684,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
                 this.discrepancyimage = imagedata.bus_area_picture.s3_image_uri;
                 var imagedimensions = this.getImagesize(this.discrepancyimage);
                 this.showspinnerwithmodal = true;
-                /*debugger
-                var discrepancycolor = '#ff3b30';
-                if(this.selecteddiscrepancy.discrepancy_status == 'resolve'){
-                    discrepancycolor = '#e8bb07';
-                }
-                if(this.selecteddiscrepancy.discrepancy_status == 'approve'){
-                    discrepancycolor = '#34c759';
-                }
-                var bus_area = this.selecteddiscrepancy.bus_area;
-                this.setdiscrepancypoint =`top: ${bus_area.y}px;left: ${bus_area.x}px;background: ${discrepancycolor};`;
-                this.previewimageexist = true; */
                 this.showpreviewimage = true; 
             }
            
@@ -881,7 +699,6 @@ export default class OpreationActionPaintComponent extends LightningElement {
     
         }
         else{
-            //this.setdiscrepancypoint =`display:none;`;
             this.previewimageexist = false;
             this.showpreviewimage = true;
         }

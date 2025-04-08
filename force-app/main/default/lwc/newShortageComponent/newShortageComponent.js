@@ -107,10 +107,6 @@ export default class NewShortageComponent extends LightningElement {
         }
         var departmentId = this.departmentid;
         var ecardiddeptid = { ecard_id: ecardid, dept_id: departmentId };
-        // var allPRODlist = [];
-        // var allQClist = [];
-        // var PRODlist = [];
-        // var QClist = [];
         var emptylist = [];
         var bs = { label: "Unknown", value: "Unknown", workcentreId: 0, workcentreName: "0000" }
         var newpartshortage = {}; 
@@ -138,22 +134,15 @@ export default class NewShortageComponent extends LightningElement {
                 'is_long_term': false,
                 'is_ship_short': false,
                 'remarks': undefined
-                // 'qclist': [],
-                // 'allQClist': [],
-                // 'prodlist': [],
-                // 'allPRODlist': []
             };
             this.newpartshortage = newpartshortage;
         }
         else {
             await getDepartmentOperations({ ecardiddeptid: JSON.stringify(ecardiddeptid) })
                 .then(data => {
-                    // var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
-                    // this.deptsupervisorforselecteddept = prod_supervisor;
                     this.buildstationoptions = data.buildstationList;
                     this.buildstationoptions.push(bs);
                     this.thisdepartmentbuildstations = this.getcompleteBuilstationlist(data);
-                    //PRODlist = this.deptsupervisorforselecteddept;
                     var todaydate = new Date();  
                     var partno = undefined;
                     var buildstation = undefined;
@@ -165,7 +154,6 @@ export default class NewShortageComponent extends LightningElement {
                     buildstationid = this.bstationid != undefined ? this.bstationid.toString() : this.bstationid;
                     partname = this.partname;
                     partid = this.partid;
-                    //Start - prod listing for BS
                     var buildstationdetails = this.thisdepartmentbuildstations;
                     var selectedbsstation;
                     if (buildstationid != undefined) {
@@ -175,9 +163,6 @@ export default class NewShortageComponent extends LightningElement {
                             }
                         }
                     }
-                    // if (buildstationid != undefined && selectedbsstation.PRODlist != null) {
-                    //     PRODlist = selectedbsstation.PRODlist;
-                    // }
                     newpartshortage = {
                         'buspart_id': partid,
                         'buspart_no': partno,
@@ -196,26 +181,12 @@ export default class NewShortageComponent extends LightningElement {
                         'is_b_whs_kit': false,
                         'is_long_term': false,
                         'is_ship_short': false
-                        // 'qclist': [],
-                        // 'allQClist': allQClist,
-                        // 'prodlist': [],
-                        // 'allPRODlist': PRODlist
                     };
                     this.newpartshortage = newpartshortage;
                 }).catch(error => {
                     this.error = error;
                     this.showmessage('Data fetch failed.', 'Something unexpected occured. Please contact your Administrator.', 'error','dismissible');
                 });
-            // if (this.newpartshortage.allPRODlist.length == 0) {
-            //     var userdetails = [];
-            //     await getcrewingsuserslist({ deptid: this.departmentid })
-            //         .then((result) => {
-            //             userdetails = JSON.parse(result.responsebody).data.user;
-            //             this.newpartshortage.allPRODlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
-            //         })
-            //         .catch((error) => {
-            //         });
-            // }
         }
         this.partshortageaddmodal = true;
     }
@@ -274,19 +245,12 @@ export default class NewShortageComponent extends LightningElement {
         this.newpartshortage.department_id = undefined;
         this.newpartshortage.buildstation_id = undefined;
         this.newpartshortage.buschasisnumber = undefined;
-        // this.newpartshortage.qclist = emptylist;
-        // this.newpartshortage.prodlist = emptylist;
-        // this.newpartshortage.allQClist = emptylist;
-        // this.newpartshortage.allPRODlist = emptylist;
     }
 
     // For getting Buildstation Details on department change for Department Discrepancy.
     getcompleteBuilstationlist(data){
-        let workstationdata = data.builstationMapWrapper.workcenter; 
-        // var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
-        // this.deptsupervisorforselecteddept = prod_supervisor;
+        let workstationdata = data.builstationMapWrapper.workcenter;
         let modifiedworkstationdata = [];
-        //var QC  = modifieduserlist(data.builstationMapWrapper.qc);
         if(workstationdata.length != 0){
             for(var wc in workstationdata){
                 let workcentre = workstationdata[wc];
@@ -295,9 +259,6 @@ export default class NewShortageComponent extends LightningElement {
                 for(var bs in workcentre.buildstation){
                     var buildstation = workcentre.buildstation[bs];
                     var modifiedvalidationlist = this.getmodifiedvalidationlist(buildstation);
-                    // var PROD = modifieduserlist(buildstation.prod);
-                    // var selectedprod = getselectedformandetails(buildstation);
-                    // var selectedqc = modifieduserlist([buildstation.qc_approvedby_id]);
                     var bsstatus;
                     if(buildstation.status == null){
                         bsstatus = 'open';
@@ -324,10 +285,6 @@ export default class NewShortageComponent extends LightningElement {
                         buildstation_id : buildstation.buildstation_id,
                         buildstation_code : bscode,
                         validationlist : modifiedvalidationlist
-                        // selectedprod : selectedprod,
-                        // selectedqc : selectedqc,
-                        // PRODlist : PROD,
-                        // QClist : QC
                     };
                     modifiedworkstationdata.push(modifiedwsdata);
                 }
@@ -381,27 +338,16 @@ export default class NewShortageComponent extends LightningElement {
             var ecardid = this.newpartshortage.ecard_id;
             var departmentId = targetvalue;
             this.newpartshortage.department_id = departmentId;
-            //this.newpartshortage.allPRODlist = [];
             var bs = { label: "Unknown", value: "Unknown", workcentreId: 0, workcentreName: "0000" };
             var ecardiddeptid = {ecard_id:ecardid ,dept_id:departmentId};
             await getDepartmentOperations({ecardiddeptid:JSON.stringify(ecardiddeptid)})
             .then(data => {
-                // var prod_supervisor = modifieduserlist(data.builstationMapWrapper.prod_supervisor);
-                // this.deptsupervisorforselecteddept = prod_supervisor;
                 this.buildstationoptions =  data.buildstationList;
                 this.buildstationoptions.push(bs);
                 this.thisdepartmentbuildstations = this.getcompleteBuilstationlist(data);
                 var selectedbuildstation = this.thisdepartmentbuildstations[0];
                 this.newpartshortage.buildstation_id = undefined;
                 this.newpartshortage.buspart_name = undefined;
-                
-                // if(selectedbuildstation.QClist!=null && selectedbuildstation.QClist.length != 0){
-                //     this.newpartshortage.allQClist = selectedbuildstation.QClist;
-                // }
-                // if(this.deptsupervisorforselecteddept.length != 0){
-                //     this.newpartshortage.allPRODlist = this.deptsupervisorforselecteddept;
-                // }
-                // this.newpartshortage.qclist = [];
                 
             }).catch(error => {
                 this.error = error;
@@ -441,46 +387,7 @@ export default class NewShortageComponent extends LightningElement {
                 this.partnumberlist = partnumberlist;
                 this.onpartnumberselection(event);
             }
-            // Set Prod and QC also    
-            // var allPRODlist = [];
-            // var allQClist = [];
-            // var PRODlist = [];
-            // if(buildstationId!='Unknown' && selectedbuildstation.QClist!=null && selectedbuildstation.QClist.length != 0){
-            //     allQClist = selectedbuildstation.QClist;
-            // }
-                
-            // if(buildstationId!='Unknown' && selectedbuildstation.PRODlist!=null && selectedbuildstation.PRODlist.length != 0){
-            //     allPRODlist = selectedbuildstation.PRODlist;
-            // }
-            // PRODlist = buildstationId!='Unknown'?selectedbuildstation.selectedprod:[];
-               
-        //     var QClist = buildstationId!='Unknown'?selectedbuildstation.selectedqc:[];
-        //     this.newpartshortage.qclist = QClist;
-        //     this.newpartshortage.prodlist = PRODlist;
-        //     this.newpartshortage.allPRODlist = allPRODlist;
-        //     this.newpartshortage.allQClist = allQClist;
          }
-        // if (this.newpartshortage.allPRODlist.length == 0) {
-        //     var userdetails = [];
-        //     await getcrewingsuserslist({ deptid: this.newpartshortage.department_id })
-        //         .then((result) => {
-        //             userdetails = JSON.parse(result.responsebody).data.user;
-        //             this.newpartshortage.allPRODlist = userdetails.length > 0 ? modifieduserlist(userdetails) : userdetails;
-        //         })
-        //         .catch((error) => {
-        //         });
-        // }
-    }
-    
-    // Update user selection on new Part Shortage
-    updateuserselectonnewpartshortage(event){
-        var detail = event.detail;
-        // if(detail.type == 'QC'){
-        //     this.newpartshortage.qclist = detail.userlist;
-        // }
-        // if(detail.type == 'PROD'){
-        //     this.newpartshortage.prodlist = detail.userlist;
-        // }
     }
     
     // To hide Report shortage addition Modal
@@ -608,17 +515,12 @@ const fleetValid = !this.ismultipleshortage || this.selectedFleet.length > 0;
             }else{
                 newpartshortagebody["ecard_id"] = partshortageaddmodalvalues.ecard_id;
             }
-            // if(partshortageaddmodalvalues.qclist.length != 0){
-            //     newpartshortagebody["assigend_qc_id"] =  partshortageaddmodalvalues.qclist[0].Id;
-            // }
             if(this.s3tempurlfornewdiscrepancy.length != 0){
                 newpartshortagebody["s3_file_paths"] = JSON.stringify(this.s3tempurlfornewdiscrepancy);
             }
             else{
                 newpartshortagebody["s3_file_paths"] = null;
             }
-            
-           // var withforemans = this.updateformans(JSON.stringify(newpartshortagebody),partshortageaddmodalvalues.prodlist);
            var withforemans =newpartshortagebody;
            if(this.ismultipleshortage != true){
             raisenewShortage({requestbody:JSON.stringify(withforemans)})
@@ -732,22 +634,6 @@ var failedmsg = matchingChassisNumber.join("\n");
         
         }
     }
-    // To Update the responsebody with selected formanIds from List Views.
-    // updateformans(responsebody, formanlist){
-    //     var newresponse = JSON.parse(responsebody);
-    //     var newformanlist;
-    //     if(formanlist.length > 5){
-    //         newformanlist = formanlist.slice(0, 5);
-    //     }
-    //     else{
-    //         newformanlist = formanlist;
-    //     }
-    //     for(var i=0;i<newformanlist.length;i++){
-    //         newresponse[`forman${i+1}_id`] = newformanlist[i].userid;
-    //         }
-        
-    //     return newresponse;
-    // }
     // Update new shortage checkbox values
     updatenewpartshortagecheckbox(event) {
         var targetvalue = event.target.checked;

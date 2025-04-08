@@ -924,8 +924,8 @@ processInstructionsWithIcons() {
                   }
                   else{
                       const alertmessage = new ShowToastEvent({
-                          title : 'Upload successful',
-                          message : 'JOB uploaded successfully.',
+                          title : 'Successfully updated',
+                          message : 'JOB successfully updated.',
                          variant : 'success'
                     });
                     this.dispatchEvent(alertmessage);

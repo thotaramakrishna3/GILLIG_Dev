@@ -448,19 +448,10 @@
                                 value={selectedshortage.cut_off_date} readonly></lightning-input>
                         </div>
                         <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
-                            <!-- <c-custom-search-lookup-component showicon={returntrue} showlabel={returntrue}
-                                                            disablecomponent={disableeditshortage} placeholdertext="Add Custom Vendor"
-                                                            -icon-name="custom:custom111" listto-search={vendornamelist}
-                                                            selectedcustomer={selectedshortage.vendor_name} label="Vendor"
-                                                            onselect={onvendorselection} onclear={onclearvendor}>
-                                                        </c-custom-search-lookup-component> -->
                             <lightning-input type="text" label="Vendor" name="vendor" value={selectedshortage.vendor_name} read-only="">
                             </lightning-input>
                         </div>
                         <div class="slds-col slds-size_1-of-4 slds-m-bottom_medium">
-                            <!-- <lightning-combobox name="carrier_text" label="Carrier" placeholder="Select Carrier"
-                                                        value={selectedshortage.carrier_text} options={carrieroptions}
-                                                        onchange={updateselectedshortage} readonly></lightning-combobox>  -->
                             <lightning-input class="readonlycbclass" type="text" label="Carrier" name="carrier"
                                 value={selectedshortage.carrier_text} read-only>
                             </lightning-input>
@@ -516,20 +507,6 @@
                         </div>
                     </div>
                     <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_small slds-border_bottom">
-                       
-                        <!--<div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
-                            <c-re-usable-multi-select-lookup disablecomponent="true" limittoone={returntrue}
-                                selectedrecords={selectedshortage.assigend_qc_id} label="QC" -icon-name="standard:user"
-                                placeholdertext="" onitemselected={updateuserpartshortage}
-                                listtosearch={selectedshortage.allqclist}></c-re-usable-multi-select-lookup>
-                        </div>
-                         <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
-                            <c-re-usable-multi-select-lookup disablecomponent={disableprodforupdate}
-                                limittoone={returnfalse} selectedrecords={selectedshortage.assignedprod} label="PROD"
-                                -icon-name="standard:user" placeholdertext="Search for PROD users"
-                                onitemselected={updateuserpartshortage} listtosearch={selectedshortage.allprodlist}>
-                            </c-re-usable-multi-select-lookup>
-                        </div> -->
                         <div class="slds-col slds-size_1-of-2 slds-m-bottom_medium">
                             <lightning-input type="text" label="Resolved By" value={selectedshortage.resolved_updatedby_id} disabled></lightning-input>
                         </div>
@@ -566,7 +543,6 @@
                         buildstationid={selectedshortage.ecard_discrepancy_log_id} ecardid={selectedshortage.ecard_id}
                         status={selectedshortage.discrepancy_status} onsubmitchange={handlepartshortageactions}>
                     </c-status-operations-component>
-                    <!-- prodlist={selectedshortage.assignedprod} qclist={selectedshortage.assigend_qc_id} -->
                 </footer>
             </div>
         </section>

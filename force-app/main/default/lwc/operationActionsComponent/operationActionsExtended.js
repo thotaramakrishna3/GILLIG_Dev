@@ -3,16 +3,10 @@ import getcrewingsuserslist from "@salesforce/apex/CrewingScheduleController.get
   // To modify the Department Discrepancy data for Ecard App and related components.
 export function getmodifieddiscrepancylist(departmentdata,busname,buschasisnumber,departmentIdMap,empid){
     var departmentid = departmentdata.department_id;
-    //var departmentqc = modifieduserlist(departmentdata.qc);
     var discrepancylogs = departmentdata.discrepancylog;
     var modifieddiscrepancyList = [];
-    //var prod_supervisor = modifieduserlist(departmentdata.prod_supervisor);
     for(var disc in discrepancylogs){
         var index = Number(disc)+1;
-        //var moddedprod = modifieduserlist(discrepancylogs[disc].prod);
-       // var assignedprod = getselectedformandetails(discrepancylogs[disc]);
-        //var assigend_qc_id = modifieduserlist([discrepancylogs[disc].assigend_qc_id]);
-        //var qc_avilable=assigend_qc_id.length!=0?true:false;
         var verifiedby = modifieduserlist([discrepancylogs[disc].verifiedby_id]);
         var resolved_status_updatedby_id = modifieduserlist([discrepancylogs[disc].resolved_status_updatedby_id]);
         var created_by = modifieduserlist([discrepancylogs[disc].createdby_id]);
@@ -22,7 +16,6 @@ export function getmodifieddiscrepancylist(departmentdata,busname,buschasisnumbe
         var displaycreatedbyname;
         var is_deletable=false;
         var customernamewithchasis = `${busname}, ${buschasisnumber}`;
-        //var department_name = this.selecteddepartment;
         if(created_by != undefined && created_by.length != 0){
              if(created_by[0]!=undefined){
                  displaycreatedbyname = `${created_by[0].name} (${created_by[0].userid}) on ${raised_date}`;
@@ -36,8 +29,6 @@ export function getmodifieddiscrepancylist(departmentdata,busname,buschasisnumbe
         }
         var isdepartmentdiscrepancy = false;
         if(discrepancylogs[disc].discrepancy_type == 'department'){
-            // assignedprod = prod_supervisor;
-            //moddedprod = prod_supervisor;
             isdepartmentdiscrepancy = true;
         }
         var isdownstreamdiscrepancy = false;
@@ -49,7 +40,6 @@ export function getmodifieddiscrepancylist(departmentdata,busname,buschasisnumbe
         if (discrepancylogs[disc].discrepancy_type == "short") {
             isshortdiscrepancy = true;
         }
-        //moddedprod = updateprodlistwithforeman(assignedprod,moddedprod);
         var bsavailable=discrepancylogs[disc].buildstation_code=='9999'?false:true;
         let dept_updatedby_fullname;
                         var dept_updatedbyuser = discrepancylogs[disc].dept_updatedby_id;
@@ -78,14 +68,12 @@ export function getmodifieddiscrepancylist(departmentdata,busname,buschasisnumbe
             first_name : discrepancylogs[disc].first_name,
             last_name : discrepancylogs[disc].last_name,
             ecard_id : discrepancylogs[disc].ecard_id,
-            customername : `${discrepancylogs[disc].customer_name}`,//`${discrepancylogs[disc].first_name} ${discrepancylogs[disc].last_name}`,
+            customername : `${discrepancylogs[disc].customer_name}`,
             chassis_no : discrepancylogs[disc].chassis_no,
             department_name : discrepancylogs[disc].department_name,
             department_id : discrepancylogs[disc].department_id,
             busstatus_name : discrepancylogs[disc].busstatus_name, 
             workcenter_name : discrepancylogs[disc].workcenter_name,
-            //assigend_qc_id : discrepancylogs[disc].assigend_qc_id,
-            //qcavailable:qc_avilable,
             buildstation_code: discrepancylogs[disc].buildstation_code,
             buildstation_id: discrepancylogs[disc].buildstation_id,
             disc_bsavailable:bsavailable,
@@ -109,10 +97,6 @@ export function getmodifieddiscrepancylist(departmentdata,busname,buschasisnumbe
             resolved_status_updatedby_id: discrepancylogs[disc].resolved_status_updatedby_id,
             verifiedby : verifiedby,
             verifiedby_id: discrepancylogs[disc].verifiedby_id,
-            //prod : moddedprod,
-            //qc : departmentqc,
-           // assignedprod : assignedprod,
-            //assigend_qc_id : assigend_qc_id,
             dept_reason_code_name:discrepancylogs[disc].reason_name,
             dept_updatedby:dept_updatedby_fullname,
             dept_updated_date:getmoddeddate(discrepancylogs[disc].dept_updated_date)
@@ -122,39 +106,11 @@ export function getmodifieddiscrepancylist(departmentdata,busname,buschasisnumbe
     return modifieddiscrepancyList;
 }
 
-// Update PROD list with foreman users who are not listed 
-// export function updateprodlistwithforeman(selectedprod, allprod){
-//     function checkifexisting(element, searcharray) {
-//         var elementexisting = true;
-//         for (var i in searcharray) {
-//             if (searcharray[i].Id == element) {
-//                 elementexisting = false;
-//             }
-//         }
-//         return elementexisting;
-//     }
-//     var updatedprodlist = [];
-//     if (allprod != undefined && allprod.length != 0) {
-//         updatedprodlist = JSON.parse(JSON.stringify(allprod));
-//     }
-//     if (selectedprod != undefined && selectedprod.length != 0) {
-//         for (var i in selectedprod) {
-//             if (checkifexisting(selectedprod[i].Id, updatedprodlist)) {
-//                 updatedprodlist.push(selectedprod[i]);
-//             }
-//         }
-//     }
-//     return updatedprodlist;
-// }
-
 // To modify the Department Shortages data for Ecard App and related components.
 export function getmodifiedshortageslist(departmentdata,departmentIdMap,empid){
-    //var departmentqc = modifieduserlist(departmentdata.qc);
         var departmentid = departmentdata.department_id;
         var shortagelogs = departmentdata.discrepancylog;
         var modifiedshortagesList = [];
-        //var prod_supervisor = modifieduserlist(departmentdata.prod_supervisor);
-        //this.deptsupervisor = prod_supervisor;
         for(var disc in shortagelogs){
             var index = Number(disc)+1;
             var shortageobj = shortagelogs[disc];
@@ -182,7 +138,6 @@ export function getmodifiedshortageslist(departmentdata,departmentIdMap,empid){
                 partname = shortageobj.custom_part_name;
             }
             var bsavailable=shortageobj.buildstation_code=='9999'?false:true;
-            //var qc_avilable=shortageobj.assigend_qc_id!=null?true:false;
             var moddedshortage = {
                 index: index,
                 departmentid : departmentid,
@@ -195,7 +150,7 @@ export function getmodifiedshortageslist(departmentdata,departmentIdMap,empid){
                 disc_bsavailable : bsavailable,
                 part_shortage_id : shortageobj.part_shortage_id,
                 buspart_id : shortageobj.buspart_id,
-                buspart_name : partname, //shortageobj.buspart_name,
+                buspart_name : partname, 
                 custom_part_name : shortageobj.custom_part_name,
                 buspart_no : shortageobj.buspart_no,
                 busstatus_id : shortageobj.busstatus_id,
@@ -225,16 +180,11 @@ export function getmodifiedshortageslist(departmentdata,departmentIdMap,empid){
                 ecard_operation_log_id : shortageobj.ecard_operation_log_id,
                 first_name : shortageobj.first_name,
                 last_name :  shortageobj.last_name,
-                customername : `${shortageobj.customer_name}`,//`${shortageobj.first_name} ${shortageobj.last_name}`,
+                customername : `${shortageobj.customer_name}`,
                 has_part_shortage : shortageobj.has_part_shortage,
-                //assignedprod : getselectedformandetails(shortageobj),
                 part_avilable : shortageobj.part_avilable,
                 po_no : shortageobj.po_no,
-                //allprodlist : modifieduserlist(shortageobj.prod),
-                //allqclist : modifieduserlist(shortageobj.qc),
                 quantity : shortageobj.quantity,
-                //assigend_qc_id : modifieduserlist([shortageobj.assigend_qc_id]),
-                //qcavailable:qc_avilable,
                 raised_date : shortageobj.raised_date,
                 raised_date_display : getmoddeddate(shortageobj.raised_date),
                 raised_status_updated_date : shortageobj.raised_status_updated_date,
@@ -269,7 +219,6 @@ export function getmodifiedshortageslist(departmentdata,departmentIdMap,empid){
 
 // Get Department Code Shortened
 export function getdepartmentcode(departmentid, departmentIdMap) {
-    //var departmentcode = '-';
     var departmentcode = '';
     if (departmentid != null) {
         for (var i in departmentIdMap) {
@@ -311,7 +260,6 @@ export function getmodifiedvalidationlist(buidstationdata){
 export function getmodifiedbuildstationlist(departmentdata,ecardid,departmentIdMap){
     var departmentid = departmentdata.department_id;
     var has_discrepancy = departmentdata.has_discrepancy;
-    //var QC = modifieduserlist(departmentdata.qc);
     var workstationdata = departmentdata.workcenter;
     let modifiedworkstationdata = [];
     for(var wc in workstationdata){
@@ -321,17 +269,6 @@ export function getmodifiedbuildstationlist(departmentdata,ecardid,departmentIdM
         for(var bs in workcentre.buildstation){
             var buildstation = workcentre.buildstation[bs];
             var modifiedvalidationlist = getmodifiedvalidationlist(buildstation);
-            //var PROD = modifieduserlist(buildstation.prod);
-            //var selectedprod = getselectedformandetails(buildstation);
-           // var selectedqc = modifieduserlist([buildstation.qc_approvedby_id]);
-           // var qcavailable=selectedqc.length == 0?false:true;
-            // if(selectedprod.length == 0){
-            //     selectedprod = preassignforeman(PROD);
-            // }
-            /*if(selectedqc.length == 0){
-                qcavailable=false;
-                //selectedqc = preassignqc(QC);
-            }*/
             var bsstatus;
             if(buildstation.status == null){
                 bsstatus = 'open';
@@ -396,11 +333,6 @@ export function getmodifiedbuildstationlist(departmentdata,ecardid,departmentIdM
                 buildstation_code : bscode,
                 buidstationdata : buildstationdata,
                 validationlist : modifiedvalidationlist
-                // selectedprod : selectedprod,
-                // selectedqc : selectedqc,
-                // qcavailable : qcavailable,
-                // PRODlist : PROD,
-                // QClist : QC
             };
             if(modifiedwsdata.has_discrepancy_logged || modifiedwsdata.has_shortage_logged){
                 modifiedwsdata["hasdescrepancy"] = true;
@@ -443,13 +375,6 @@ export function getmodifiedpaginateddiscrepancylist(completediscrepancydata, emp
         if (discrepancy.discrepancy_type == "short") {
             isshortdiscrepancy = true;
         }
-        // alert(isdepartmentdiscrepancy);
-        //var selectedprodlist = getselectedformandetails(discrepancy);
-        // var allprodlist = modifieduserlist(discrepancy.prod);
-        // var allqclist = modifieduserlist(discrepancy.qc);
-        // var assigend_qc_id = modifieduserlist([
-        //     discrepancy.assigend_qc_id
-        // ]);
         var created_by = modifieduserlist([
             discrepancy.createdby_id
         ]);
@@ -465,26 +390,14 @@ export function getmodifiedpaginateddiscrepancylist(completediscrepancydata, emp
             }
         }
 
-        // allprodlist = updateprodlistwithall(
-        //     selectedprodlist,
-        //     allprodlist
-        // );
-
         var raisedby_name;
         var displayraisebyname;
-        // if (assigend_qc_id != undefined && assigend_qc_id.length != 0) {
-        //     if (assigend_qc_id[0] != undefined) {
-        //         displayraisebyname = `${assigend_qc_id[0].name} (${assigend_qc_id[0].userid})`;
-        //         raisedby_name = `${assigend_qc_id[0].name} (${assigend_qc_id[0].userid})`;
-        //     }
-        // }
         var resolved_status_updatedby = modifieduserlist([
             discrepancy.resolved_status_updatedby_id
         ]);
         var verifiedby = modifieduserlist([
             discrepancy.verifiedby_id
         ]);
-        //var assigneduser = selectedprodlist;
         var hasbusareapicture = false;
         if (discrepancy.bus_area_picture_id != undefined) {
             hasbusareapicture = true;
@@ -502,8 +415,7 @@ export function getmodifiedpaginateddiscrepancylist(completediscrepancydata, emp
             discrepancytype = 'Job';
         }
 
-        var bsavailable = discrepancy.buildstation_code == '9999' ? false : true;
-        //alert(discrepancy.modified_date);    
+        var bsavailable = discrepancy.buildstation_code == '9999' ? false : true;    
         var is_deletable = false;
         if ((createdbyempid == empid) && (discrepancy.discrepancy_status.toLowerCase() == "open")) {
             is_deletable = true;
@@ -542,7 +454,6 @@ export function getmodifiedpaginateddiscrepancylist(completediscrepancydata, emp
             departmentid: discrepancy.department_id,
             departmentcode: getdepartmentcode(discrepancy.department_id, departmentIdMap),
             department_name: discrepancy.department_name,
-            //description: discrepancy.discrepancy,
             discrepancy: discrepancy.discrepancy,
             discrepancy_priority: capitalize(
                 discrepancy.discrepancy_priority
@@ -574,18 +485,8 @@ export function getmodifiedpaginateddiscrepancylist(completediscrepancydata, emp
             verified_date: discrepancy.verified_date,
             verified_status_updated_date:
                 discrepancy.verified_status_updated_date,
-            //selectedprodlist: selectedprodlist,
-            //allprodlist: allprodlist,
-            //prod: allprodlist,
-            //allqclist: allqclist,
-            //qc: allqclist,
-            // assigend_qc_id: assigend_qc_id,
-            // qcavailable: assigend_qc_id.length != 0 ? true : false,
-            // resolved_status_updatedby: resolved_status_updatedby,
             resolved_status_updatedby_id: resolved_status_updatedby,
             verifiedby: verifiedby,
-            //assigneduser: assigneduser,
-           // assignedprod: assigneduser,
             created_by: created_by,
             createdbyname: createdbyname,
             displaycreatedbyname: displaycreatedbyname,
@@ -599,30 +500,6 @@ export function getmodifiedpaginateddiscrepancylist(completediscrepancydata, emp
 
     return moddeddiscrepancydata;
 }
-
-// export function updateprodlistwithall(selectedprod, allprod) {
-//     function checkifexisting(element, searcharray) {
-//         var elementexisting = true;
-//         for (var i in searcharray) {
-//             if (searcharray[i].Id == element) {
-//                 elementexisting = false;
-//             }
-//         }
-//         return elementexisting;
-//     }
-//     var updatedprodlist = [];
-//     if (allprod != undefined && allprod.length != 0) {
-//         updatedprodlist = JSON.parse(JSON.stringify(allprod));
-//     }
-//     if (selectedprod != undefined && selectedprod.length != 0) {
-//         for (var i in selectedprod) {
-//             if (checkifexisting(selectedprod[i].Id, updatedprodlist)) {
-//                 updatedprodlist.push(selectedprod[i]);
-//             }
-//         }
-//     }
-//     return updatedprodlist;
-// }
 
 export function sortdiscrepancytable(discrepancyList){
       var reverse = 1;
