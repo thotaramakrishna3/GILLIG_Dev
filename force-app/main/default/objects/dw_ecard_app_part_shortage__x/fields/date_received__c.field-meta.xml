@@ -3,7 +3,6 @@
     <fullName>date_received__c</fullName>
     <description>date_received</description>
     <externalDeveloperName>date_received</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

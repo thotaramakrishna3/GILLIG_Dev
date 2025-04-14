@@ -5,6 +5,8 @@
     <columns>Bus_Mode__c</columns>
     <columns>Transmission__c</columns>
     <columns>Value_Description__c</columns>
+    <columns>Customer_Name__c</columns>
+    <columns>CREATED_DATE</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

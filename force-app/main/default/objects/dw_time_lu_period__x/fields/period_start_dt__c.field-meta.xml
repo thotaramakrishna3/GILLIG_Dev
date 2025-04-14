@@ -3,7 +3,6 @@
     <fullName>period_start_dt__c</fullName>
     <description>period_start_dt</description>
     <externalDeveloperName>period_start_dt</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>engine_type__c</fullName>
     <description>engine_type</description>
     <externalDeveloperName>engine_type</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

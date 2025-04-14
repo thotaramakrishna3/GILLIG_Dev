@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Delivery_Commitment_Firm__c</fullName>
-    <externalId>false</externalId>
     <formula>if( isblank(PO_Date__c ),null, 
 if( 
 ISPICKVAL( Quoted_Delivery_Picklist__c ,&quot;X Months After Receipt of Order&quot;), PO_Date__c + (365* (Quoted_Delivery_Variable__c /12)), 

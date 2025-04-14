@@ -3,7 +3,6 @@
     <fullName>vend_order__c</fullName>
     <description>vend_order</description>
     <externalDeveloperName>vend_order</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

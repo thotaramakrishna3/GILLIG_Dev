@@ -3,7 +3,6 @@
     <fullName>cust_bank__c</fullName>
     <description>cust_bank</description>
     <externalDeveloperName>cust_bank</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>carrier_acct__c</fullName>
     <description>carrier_acct</description>
     <externalDeveloperName>carrier_acct</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Incumbent_OEM_29_40__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>Blank if GILLIG</inlineHelpText>
     <label>Incumbent OEM (29-40)</label>
     <referenceTo>Competitor__c</referenceTo>

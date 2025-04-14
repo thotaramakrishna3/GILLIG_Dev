@@ -7,11 +7,7 @@
     <columns>Style__c</columns>
     <columns>CREATED_DATE</columns>
     <columns>Status__c</columns>
+    <columns>Build_Date__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>Status__c</field>
-        <operation>equals</operation>
-        <value>WIP</value>
-    </filters>
     <label>All</label>
 </ListView>

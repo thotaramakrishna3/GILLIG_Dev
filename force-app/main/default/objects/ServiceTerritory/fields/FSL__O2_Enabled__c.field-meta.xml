@@ -4,7 +4,6 @@
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
     <description>Determines if enhanced scheduling and optimization engine is used</description>
-    <externalId>false</externalId>
     <label>Use enhanced scheduling and optimization</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

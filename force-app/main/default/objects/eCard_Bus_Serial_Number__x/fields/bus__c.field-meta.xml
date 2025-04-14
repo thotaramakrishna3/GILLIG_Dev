@@ -4,7 +4,6 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <description>bus</description>
     <externalDeveloperName>bus</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

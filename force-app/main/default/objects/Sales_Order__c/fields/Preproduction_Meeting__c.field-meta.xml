@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Preproduction_Meeting__c</fullName>
     <description>Date of Preproduction Meeting</description>
-    <externalId>false</externalId>
     <label>Preproduction Meeting</label>
     <required>false</required>
     <trackFeedHistory>true</trackFeedHistory>

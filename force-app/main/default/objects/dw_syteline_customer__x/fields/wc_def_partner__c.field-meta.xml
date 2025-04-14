@@ -3,7 +3,6 @@
     <fullName>wc_def_partner__c</fullName>
     <description>wc_def_partner</description>
     <externalDeveloperName>wc_def_partner</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

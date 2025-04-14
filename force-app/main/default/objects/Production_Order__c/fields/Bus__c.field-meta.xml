@@ -3,7 +3,6 @@
     <fullName>Bus__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Hidden Bus Lookup field to get the start date of the first bus in the current schedule date field</description>
-    <externalId>false</externalId>
     <label>Bus</label>
     <referenceTo>Bus__c</referenceTo>
     <relationshipLabel>Production Orders</relationshipLabel>

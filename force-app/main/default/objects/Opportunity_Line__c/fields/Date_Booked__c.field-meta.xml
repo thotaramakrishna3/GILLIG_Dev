@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Date_Booked__c</fullName>
     <description>Date bus booked into backlog</description>
-    <externalId>false</externalId>
     <inlineHelpText>When this field is completed, the bus is added to the production backlog and the Sales Order is Generated.</inlineHelpText>
     <label>Date Booked</label>
     <required>false</required>

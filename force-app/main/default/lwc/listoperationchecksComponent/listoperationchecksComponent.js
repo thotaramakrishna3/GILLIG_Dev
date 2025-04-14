@@ -13,6 +13,8 @@ import IS_ACTIVE from '@salesforce/schema/Operation_Check_Master_Data__c.isActiv
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
 import BUSMODE_FIELD from '@salesforce/schema/Operation_Check_Master_Data__c.Bus_Mode__c';
 import TRANSMISSION_FIELD from '@salesforce/schema/Operation_Check_Master_Data__c.Transmission__c';
+import BUSTYPE_FIELD from '@salesforce/schema/Operation_Check_Master_Data__c.Bus_Type__c';
+import BUSLENGTH_FIELD from '@salesforce/schema/Operation_Check_Master_Data__c.Bus_Length__c';
 import VALUE_REQUIRED_INDICATOR from '@salesforce/schema/Operation_Check_Master_Data__c.Value_Required_Indicator__c';
 import VALUE_DESCREPTION from '@salesforce/schema/Operation_Check_Master_Data__c.Value_Description__c';
 import CUSTOMER_FIELD from '@salesforce/schema/Operation_Check_Master_Data__c.Account__c';
@@ -638,6 +640,8 @@ this.selectedWorkInstructionIds = [];
                 'isActive__c': this.newopckvalue.is_active,
                 'Bus_Mode__c': this.newopckvalue.busmodule_id == 'None' ? undefined : this.newopckvalue.busmodule_id,
                 'Transmission__c': this.newopckvalue.transmission_id,
+                'Bus_Type__c': this.newopckvalue.bustype_id,
+                'Bus_Length__c': this.newopckvalue.buslength_id,
                 'Value_Required_Indicator__c': this.newopckvalue.is_value_required,
                 'Value_Description__c': this.newopckvalue.value_description,
                 'Account__c': this.newopckvalue.customer_id,
@@ -802,6 +806,37 @@ this.selectedWorkInstructionIds = [];
         fieldApiName: TRANSMISSION_FIELD
     })
     trasmissionlistValues;
+        // Fetching Bus Type picklist
+        @wire(getPicklistValues, {
+            recordTypeId: '012000000000000AAA',
+            fieldApiName: BUSTYPE_FIELD
+        })
+        bustypelistValues;
+            // Fetching Bus Length picklist
+    // @wire(getPicklistValues, {
+    //     recordTypeId: '012000000000000AAA',
+    //     fieldApiName: BUSLENGTH_FIELD
+    // })
+    // buslengthlistValues;
+
+    buslengthlistValues = [];
+@track isbuslengthlistValues  = false;
+    @wire(getPicklistValues, {
+        recordTypeId: '012000000000000AAA',
+        fieldApiName: BUSLENGTH_FIELD
+    })
+    wiredBusTypes({ data, error }) {
+        if (data) {
+            const allowedValues = ['29', '35', '40'];
+            this.buslengthlistValues = data.values.filter(item =>
+                allowedValues.includes(item.value)
+            );
+            this.isbuslengthlistValues = true;
+        } else if (error) {
+            console.error('Error loading Bus Type picklist: ', error);
+            this.isbuslengthlistValues = false;
+        }
+    }
 
     // Fetching Busmode picklist
     @track bmpicklistvalue = [];

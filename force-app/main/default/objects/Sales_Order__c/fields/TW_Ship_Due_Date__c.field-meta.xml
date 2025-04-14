@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>TW_Ship_Due_Date__c</fullName>
     <description>Non-Parts manuals due date based on actual first ship bus of the sales order.</description>
-    <externalId>false</externalId>
     <label>Manuals Due Non-Parts</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

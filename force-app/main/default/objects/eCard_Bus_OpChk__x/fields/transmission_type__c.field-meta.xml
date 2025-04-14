@@ -3,7 +3,6 @@
     <fullName>transmission_type__c</fullName>
     <description>transmission_type</description>
     <externalDeveloperName>transmission_type</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

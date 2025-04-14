@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Operation_Description__c</fullName>
     <description>Converted text to rich text</description>
-    <externalId>false</externalId>
     <label>Operation Description</label>
     <length>131072</length>
     <trackHistory>false</trackHistory>

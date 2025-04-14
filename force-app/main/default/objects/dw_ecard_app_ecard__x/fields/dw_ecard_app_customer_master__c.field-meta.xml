@@ -3,7 +3,6 @@
     <fullName>dw_ecard_app_customer_master__c</fullName>
     <description>eCard Customer</description>
     <externalDeveloperName>customer_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

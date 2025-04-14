@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Bus__c</fullName>
     <description>Serial Number of the bus impacted</description>
-    <externalId>false</externalId>
     <label>Bus</label>
     <referenceTo>Bus__c</referenceTo>
     <relationshipLabel>Breakdown Reports</relationshipLabel>

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Approver__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>Select the appropriate individual to review your test request details</inlineHelpText>
     <label>Approver</label>
     <referenceTo>User</referenceTo>

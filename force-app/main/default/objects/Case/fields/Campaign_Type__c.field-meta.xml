@@ -5,7 +5,6 @@
 SRC -Manufacturer or NHTSA determines that a vehicle creates an unreasonable safety risk or fails to meet minimum safety standards
 FSC-Product improvement update impacting multiple customers
 CSC -Product improvement update impacting single customer</description>
-    <externalId>false</externalId>
     <label>Campaign Type</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

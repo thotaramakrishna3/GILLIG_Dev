@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Demo_Customer__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>Select the Customer for who the Demo is being performed. If a conference, list in the address details.</inlineHelpText>
     <label>Demo Customer</label>
     <referenceTo>Account</referenceTo>

@@ -3,7 +3,6 @@
     <fullName>dw_ecard_app_ecard__c</fullName>
     <description>eCard</description>
     <externalDeveloperName>ecard_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

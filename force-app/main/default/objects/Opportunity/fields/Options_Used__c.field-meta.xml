@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Options_Used__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Options Used</label>
     <referenceTo>Contract_Option__c</referenceTo>
     <relationshipLabel>Opportunities</relationshipLabel>

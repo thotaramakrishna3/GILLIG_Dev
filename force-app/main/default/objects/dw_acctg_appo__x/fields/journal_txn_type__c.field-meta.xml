@@ -3,7 +3,6 @@
     <fullName>journal_txn_type__c</fullName>
     <description>journal_txn_type</description>
     <externalDeveloperName>journal_txn_type</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>Photo_Approval__c</fullName>
     <defaultValue>false</defaultValue>
     <description>A checked box indicates that we have received the customer&apos;s approval to utilize images of their bus in marketing materials</description>
-    <externalId>false</externalId>
     <label>Photo Approval</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Service_RequestLU__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Service Request</label>
     <referenceTo>Bus_Work_Order__c</referenceTo>
     <relationshipLabel>Work Order Line Items</relationshipLabel>

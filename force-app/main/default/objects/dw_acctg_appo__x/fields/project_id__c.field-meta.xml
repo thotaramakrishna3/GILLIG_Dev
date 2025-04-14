@@ -3,7 +3,6 @@
     <fullName>project_id__c</fullName>
     <description>project_id</description>
     <externalDeveloperName>project_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

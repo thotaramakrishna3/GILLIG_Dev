@@ -3,7 +3,6 @@
     <fullName>country__c</fullName>
     <description>country</description>
     <externalDeveloperName>country</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

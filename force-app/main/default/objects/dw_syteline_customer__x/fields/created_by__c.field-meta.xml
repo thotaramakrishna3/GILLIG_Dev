@@ -3,7 +3,6 @@
     <fullName>created_by__c</fullName>
     <description>created_by</description>
     <externalDeveloperName>created_by</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

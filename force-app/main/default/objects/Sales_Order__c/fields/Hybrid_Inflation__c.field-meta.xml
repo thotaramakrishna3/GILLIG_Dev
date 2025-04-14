@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Hybrid_Inflation__c</fullName>
-    <externalId>false</externalId>
     <label>Hybrid Inflation</label>
     <summarizedField>Sales_Order_Inflation__c.Hybrid_Inflation__c</summarizedField>
     <summaryForeignKey>Sales_Order_Inflation__c.Sales_Order__c</summaryForeignKey>

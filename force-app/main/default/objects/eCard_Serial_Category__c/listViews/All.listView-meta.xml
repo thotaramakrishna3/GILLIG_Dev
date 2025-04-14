@@ -5,6 +5,10 @@
     <columns>NAME</columns>
     <columns>item_desc__c</columns>
     <columns>uf_serial_category__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>IsActive__c</columns>
+    <columns>Active_Date__c</columns>
+    <columns>InActive_Date__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

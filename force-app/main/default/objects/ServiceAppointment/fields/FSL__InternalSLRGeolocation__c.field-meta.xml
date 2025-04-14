@@ -3,7 +3,6 @@
     <fullName>FSL__InternalSLRGeolocation__c</fullName>
     <deprecated>false</deprecated>
     <displayLocationInDecimal>true</displayLocationInDecimal>
-    <externalId>false</externalId>
     <label>Internal SLR Geolocation</label>
     <required>false</required>
     <scale>6</scale>

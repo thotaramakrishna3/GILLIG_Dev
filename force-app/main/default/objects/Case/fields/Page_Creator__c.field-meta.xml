@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Page_Creator__c</fullName>
     <description>The person who created the original page.</description>
-    <externalId>false</externalId>
     <label>Page Creator</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

@@ -3,7 +3,6 @@
     <fullName>scheduled_delivery_date__c</fullName>
     <description>scheduled_delivery_date</description>
     <externalDeveloperName>scheduled_delivery_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

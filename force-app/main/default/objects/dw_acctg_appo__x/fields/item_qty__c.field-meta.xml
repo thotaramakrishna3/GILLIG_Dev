@@ -3,7 +3,6 @@
     <fullName>item_qty__c</fullName>
     <description>item_qty</description>
     <externalDeveloperName>item_qty</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

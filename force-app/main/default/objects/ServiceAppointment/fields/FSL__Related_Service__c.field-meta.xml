@@ -3,7 +3,6 @@
     <fullName>FSL__Related_Service__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Related Service</label>
     <referenceTo>ServiceAppointment</referenceTo>
     <relationshipLabel>Service Appointments</relationshipLabel>

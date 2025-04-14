@@ -3,7 +3,6 @@
     <fullName>ship_to_email__c</fullName>
     <description>ship_to_email</description>
     <externalDeveloperName>ship_to_email</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

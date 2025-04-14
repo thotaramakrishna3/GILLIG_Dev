@@ -3,7 +3,6 @@
     <fullName>updated_by__c</fullName>
     <description>updated_by</description>
     <externalDeveloperName>updated_by</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

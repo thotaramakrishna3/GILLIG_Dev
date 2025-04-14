@@ -3,7 +3,6 @@
     <fullName>pay_partner__c</fullName>
     <description>pay_partner</description>
     <externalDeveloperName>pay_partner</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

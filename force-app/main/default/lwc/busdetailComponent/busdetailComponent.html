@@ -262,6 +262,56 @@
                                </lightning-card>
                             </div>
                             <div class="slds-col slds-size_1-of-1 slds-border_bottom">
+                              <lightning-card  variant="Narrow"  title="CUSTOMER INSPECTOR JOBS" >
+                                  <div class="slds-grid slds-p-bottom_x-small ">
+                                     <div class="slds-col slds-border_right">
+                                        <article data-id="approve" data-label="Operation Checks"  onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                           <div class="slds-media__body">
+                                              <h3 class="slds-tile__title  slds-truncate" title="FILLED"> <span class="verified"></span>OK ITEMS</h3>
+                                              <div class="slds-tile__detail">
+                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.verified}/{overviewdata.op_check_log.total}</span>
+                                              </div>
+                                           </div>
+                                        </article>
+                                     </div>
+                            
+                                     <div class="slds-col slds-border_right">
+                                        <article data-id="notapprove" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                           <div class="slds-media__body">
+                                              <h3 class="slds-tile__title  slds-truncate" title="NOT FILLED"> <span class="rejected"></span>NOT OK ITEMS</h3>
+                                              <div class="slds-tile__detail">
+                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.not_verified}/{overviewdata.op_check_log.total}</span>
+                                              </div>
+                                           </div>
+                                        </article>
+                                     </div>
+
+                                     <div class="slds-col slds-border_right">
+                                       <article data-id="open" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                          <div class="slds-media__body">
+                                             <h3 class="slds-tile__title  slds-truncate" title="OPEN"> <span class="open"></span>OPEN ITEMS</h3>
+                                             <div class="slds-tile__detail">
+                                                <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.open_item}/{overviewdata.op_check_log.total}</span>
+                                             </div>
+                                          </div>
+                                       </article>
+                                    </div>
+
+                                    <div class="slds-col">
+                                       <article data-id="notrequired" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                          <div class="slds-media__body">
+                                             <h3 class="slds-tile__title  slds-truncate" title="NOT REQUIRED"> <span class="notrequired"></span>NOT REQUIRED ITEMS</h3>
+                                             <div class="slds-tile__detail">
+                                                <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.not_required}</span>
+                                             </div>
+                                          </div>
+                                       </article>
+                                    </div>
+                                     
+                                  </div>
+                               </lightning-card>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-border_bottom">
                               <lightning-card  variant="Narrow"  title="QA CHECK" >
                                   <div class="slds-grid slds-p-bottom_x-small ">
                                      <div class="slds-col slds-border_right">

@@ -3,7 +3,6 @@
     <fullName>bill_to_email__c</fullName>
     <description>bill_to_email</description>
     <externalDeveloperName>bill_to_email</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

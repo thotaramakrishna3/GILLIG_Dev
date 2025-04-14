@@ -3,7 +3,6 @@
     <fullName>fax_nbr__c</fullName>
     <description>fax_nbr</description>
     <externalDeveloperName>fax_nbr</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

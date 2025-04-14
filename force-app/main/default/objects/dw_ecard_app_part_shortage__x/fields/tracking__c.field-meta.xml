@@ -3,7 +3,6 @@
     <fullName>tracking__c</fullName>
     <description>tracking</description>
     <externalDeveloperName>tracking</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

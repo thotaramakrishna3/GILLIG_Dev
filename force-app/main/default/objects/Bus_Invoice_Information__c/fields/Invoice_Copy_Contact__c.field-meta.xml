@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Invoice_Copy_Contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Invoice Copy Contact</label>
     <referenceTo>Contact</referenceTo>
     <relationshipName>Invoice_Information</relationshipName>

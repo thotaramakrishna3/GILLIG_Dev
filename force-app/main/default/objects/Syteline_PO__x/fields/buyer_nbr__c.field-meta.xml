@@ -3,7 +3,6 @@
     <fullName>buyer_nbr__c</fullName>
     <description>buyer_nbr</description>
     <externalDeveloperName>buyer_nbr</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

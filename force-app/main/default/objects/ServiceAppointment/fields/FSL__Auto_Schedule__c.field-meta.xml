@@ -3,7 +3,6 @@
     <fullName>FSL__Auto_Schedule__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Auto Schedule</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

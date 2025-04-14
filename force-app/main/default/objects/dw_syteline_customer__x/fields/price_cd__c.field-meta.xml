@@ -3,7 +3,6 @@
     <fullName>price_cd__c</fullName>
     <description>price_cd</description>
     <externalDeveloperName>price_cd</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

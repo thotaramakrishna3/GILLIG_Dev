@@ -3,7 +3,6 @@
     <fullName>Bid_Information_Request__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Detailed information request to summarize for a Bid Response</description>
-    <externalId>false</externalId>
     <label>Bid Information Request</label>
     <referenceTo>Bid_Information_Request__c</referenceTo>
     <relationshipLabel>Detailed Bid Information Requests</relationshipLabel>

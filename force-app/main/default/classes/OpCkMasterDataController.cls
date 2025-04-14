@@ -8,7 +8,7 @@ public with sharing class OpCkMasterDataController {
     // Getting record types from Operation check master data record Object
     @AuraEnabled(cacheable=true)
     public static List<RecordType> getRecordTypes() {
-        return [SELECT Id, Name FROM RecordType WHERE SObjectType = 'Operation_Check_Master_Data__c' ORDER BY Id ASC];
+        return [SELECT Id, Name FROM RecordType WHERE SObjectType = 'Operation_Check_Master_Data__c' AND IsActive = true ORDER BY Id ASC];
     }
 
     @AuraEnabled

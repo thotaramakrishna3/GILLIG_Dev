@@ -4,7 +4,6 @@
     <defaultValue>false</defaultValue>
     <description>Has_Issue_Reopened</description>
     <externalDeveloperName>Has_Issue_Reopened</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

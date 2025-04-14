@@ -3,7 +3,6 @@
     <fullName>Production_Order_Split__c</fullName>
     <defaultValue>false</defaultValue>
     <description>This is checked once the quantity to split is entered in the screen flow is entered</description>
-    <externalId>false</externalId>
     <inlineHelpText>Does this order need to split</inlineHelpText>
     <label>Production Order Split</label>
     <trackHistory>false</trackHistory>

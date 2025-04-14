@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Bus_Work_Order__c</fullName>
     <description>This is to get all necessary information to get the Bus In service form for a completed Bus</description>
-    <externalId>false</externalId>
     <label>Service Request</label>
     <referenceTo>Bus_Work_Order__c</referenceTo>
     <relationshipLabel>Acknowledgment of Bus In-Services</relationshipLabel>

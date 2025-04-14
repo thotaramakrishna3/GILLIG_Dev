@@ -4,7 +4,6 @@
     <defaultValue>false</defaultValue>
     <description>validation_pic_required</description>
     <externalDeveloperName>validation_pic_required</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

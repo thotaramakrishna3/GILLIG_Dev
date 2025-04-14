@@ -3,7 +3,6 @@
     <fullName>FSL__Prevent_Geocoding_For_Chatter_Actions__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Prevent Geocoding For Chatter Actions</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Bid_Information_Request__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Bid Information Request</label>
     <referenceTo>Bid_Information_Request__c</referenceTo>
     <relationshipLabel>BIR-Project Trackers</relationshipLabel>

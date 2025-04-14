@@ -3,7 +3,6 @@
     <fullName>sched_drv__c</fullName>
     <description>sched_drv</description>
     <externalDeveloperName>sched_drv</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>dw_ecard_app_dat_defect_code__c</fullName>
     <description>Defect code</description>
     <externalDeveloperName>dat_defect_code_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>credit_hold_rsn__c</fullName>
     <description>credit_hold_rsn</description>
     <externalDeveloperName>credit_hold_rsn</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

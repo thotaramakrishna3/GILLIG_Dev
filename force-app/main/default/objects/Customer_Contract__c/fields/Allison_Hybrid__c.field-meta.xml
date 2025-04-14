@@ -3,7 +3,6 @@
     <fullName>Allison_Hybrid__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Allison Hybrid option listed</description>
-    <externalId>false</externalId>
     <label>Allison Hybrid</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

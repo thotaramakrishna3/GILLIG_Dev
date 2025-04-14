@@ -3,7 +3,6 @@
     <fullName>acct_desc__c</fullName>
     <description>acct_desc</description>
     <externalDeveloperName>acct_desc</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

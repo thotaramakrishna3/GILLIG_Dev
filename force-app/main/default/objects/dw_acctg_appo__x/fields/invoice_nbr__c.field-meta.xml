@@ -3,7 +3,6 @@
     <fullName>invoice_nbr__c</fullName>
     <description>invoice_nbr</description>
     <externalDeveloperName>invoice_nbr</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

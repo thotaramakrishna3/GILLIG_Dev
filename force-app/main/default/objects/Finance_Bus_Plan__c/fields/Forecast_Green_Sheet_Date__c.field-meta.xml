@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Forecast_Green_Sheet_Date__c</fullName>
-    <externalId>false</externalId>
     <formula>IF(  Mode__c  = &quot;Electric&quot; ,   
 CASE( 
   MOD( Start_Date__c - DATE( 1900, 1, 7 ), 7 ),

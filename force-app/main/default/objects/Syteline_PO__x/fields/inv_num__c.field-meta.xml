@@ -3,7 +3,6 @@
     <fullName>inv_num__c</fullName>
     <description>inv_num</description>
     <externalDeveloperName>inv_num</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

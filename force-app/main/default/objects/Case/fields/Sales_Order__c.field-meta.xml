@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Sales_Order__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>If multiple Sales Orders are affected, please enter the primary Sales Order here and add the additional Sales Orders once the case is created (scroll to bottom of page to find this section).</inlineHelpText>
     <label>Sales Order</label>
     <referenceTo>Sales_Order__c</referenceTo>

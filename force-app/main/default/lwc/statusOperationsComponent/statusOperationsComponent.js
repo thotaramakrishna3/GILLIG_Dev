@@ -200,9 +200,12 @@ export default class StatusOperationsComponent extends LightningElement {
 		else if(this.type == 'discrepancy' && this.discrepancytype == 'Department'){
 			return !this.permissionset.dept_discrepancy_resolved.write;
 		}
-		else if(this.type == 'discrepancy' && this.discrepancytype != 'Department'){
+		else if(this.type == 'discrepancy' && this.discrepancytype != 'Department'){// && this.discrepancytype != 'Customer Inspector'
 			return !this.permissionset.discrepancy_resolved.write;
 		}
+        // else if(this.type == 'discrepancy' && this.discrepancytype != 'Department' && this.discrepancytype == 'Customer Inspector'){
+		// 	return this.permissionset.discrepancy_resolved.write;
+		// }
 		else{
 			return true;
 		}

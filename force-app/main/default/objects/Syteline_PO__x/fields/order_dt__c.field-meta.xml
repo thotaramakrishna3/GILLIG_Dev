@@ -3,7 +3,6 @@
     <fullName>order_dt__c</fullName>
     <description>order_dt</description>
     <externalDeveloperName>order_dt</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

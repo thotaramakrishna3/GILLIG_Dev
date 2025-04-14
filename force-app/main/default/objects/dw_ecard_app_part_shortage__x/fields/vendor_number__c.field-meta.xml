@@ -3,7 +3,6 @@
     <fullName>vendor_number__c</fullName>
     <description>vendor_number</description>
     <externalDeveloperName>vendor_number</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

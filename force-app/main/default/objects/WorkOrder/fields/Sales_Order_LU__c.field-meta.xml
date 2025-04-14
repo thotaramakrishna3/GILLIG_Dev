@@ -3,7 +3,6 @@
     <fullName>Sales_Order_LU__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>important field when work type PDI is selected</description>
-    <externalId>false</externalId>
     <label>Sales Order</label>
     <lookupFilter>
         <active>true</active>

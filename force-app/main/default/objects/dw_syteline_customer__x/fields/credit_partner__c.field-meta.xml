@@ -3,7 +3,6 @@
     <fullName>credit_partner__c</fullName>
     <description>credit_partner</description>
     <externalDeveloperName>credit_partner</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

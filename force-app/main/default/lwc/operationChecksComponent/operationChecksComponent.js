@@ -421,7 +421,7 @@ export default class OpertaionChecksComponent extends LightningElement {
   @track jobtypelist = [
     { label: "Standard Job", value: "Standard Job" },
     { label: "Customer Job", value: "Customer Job" },
-    { label: "QA Check", value: "QA Check" }
+    { label: "QA Check", value: "QA Check" },
   ];
 
   @track allJobTypeValues = ["Standard and Customer Job"];
@@ -493,4 +493,81 @@ export default class OpertaionChecksComponent extends LightningElement {
       this.jobTitle = 'STANDARD AND CUSTOMER JOBS';
     }
   }
+  // @track jobTitle = 'STANDARD AND CUSTOMER JOBS';
+
+  // getJobTitle() {
+  //   const selectedTypes = this.allJobTypeValues;
+  
+  //   if (selectedTypes.length === 4 && selectedTypes.includes("Standard Job") && selectedTypes.includes("Customer Job") && selectedTypes.includes("QA Check") && selectedTypes.includes("Customer Inspector")) {
+  //     this.jobTitle = 'STANDARD, CUSTOMER, QA CHECK AND CUSTOMER INSPECTOR JOBS';
+  //   } else if (selectedTypes.length === 3 && selectedTypes.includes("Standard Job") && selectedTypes.includes("Customer Job") && selectedTypes.includes("QA Check")) {
+  //     this.jobTitle = 'STANDARD, CUSTOMER AND QA CHECK JOBS';
+  //   } else if (selectedTypes.length === 3 && selectedTypes.includes("Standard Job") && selectedTypes.includes("Customer Job") && selectedTypes.includes("Customer Inspector")) {
+  //     this.jobTitle = 'STANDARD, CUSTOMER AND CUSTOMER INSPECTOR JOBS';
+  //   } else if (selectedTypes.length === 3 && selectedTypes.includes("Customer Job") && selectedTypes.includes("QA Check") && selectedTypes.includes("Customer Inspector")) {
+  //     this.jobTitle = 'CUSTOMER, QA CHECK AND CUSTOMER INSPECTOR JOBS';
+  //   } else if (
+  //     selectedTypes.length === 2 &&
+  //     selectedTypes.includes("Standard Job") &&
+  //     selectedTypes.includes("Customer Job")
+  //   ) {
+  //     this.jobTitle = 'STANDARD AND CUSTOMER JOBS';
+  //   } else if (
+  //     selectedTypes.length === 2 &&
+  //     selectedTypes.includes("Standard Job") &&
+  //     selectedTypes.includes("QA Check")
+  //   ) {
+  //     this.jobTitle = 'STANDARD AND QA CHECK JOBS';
+  //   } else if (
+  //     selectedTypes.length === 2 &&
+  //     selectedTypes.includes("Customer Job") &&
+  //     selectedTypes.includes("QA Check")
+  //   ) {
+  //     this.jobTitle = 'CUSTOMER AND QA CHECK JOBS';
+  //   } else if (
+  //     selectedTypes.length === 2 &&
+  //     selectedTypes.includes("Customer Job") &&
+  //     selectedTypes.includes("Customer Inspector")
+  //   ) {
+  //     this.jobTitle = 'CUSTOMER AND CUSTOMER INSPECTOR JOBS';
+  //   } else if (
+  //     selectedTypes.length === 2 &&
+  //     selectedTypes.includes("QA Check") &&
+  //     selectedTypes.includes("Customer Inspector")
+  //   ) {
+  //     this.jobTitle = 'QA CHECK AND CUSTOMER INSPECTOR JOBS';
+  //   } else if (
+  //     selectedTypes.length === 2 &&
+  //     selectedTypes.includes("Standard Job") &&
+  //     selectedTypes.includes("Customer Inspector")
+  //   ) {
+  //     this.jobTitle = 'STANDARD AND CUSTOMER INSPECTOR JOBS';
+  //   } else if (
+  //     selectedTypes.length === 1 &&
+  //     selectedTypes.includes("Standard Job")
+  //   ) {
+  //     this.jobTitle = 'STANDARD JOBS';
+  //   } else if (
+  //     selectedTypes.length === 1 &&
+  //     selectedTypes.includes("Customer Job")
+  //   ) {
+  //     this.jobTitle = 'CUSTOMER JOBS';
+  //   } else if (
+  //     selectedTypes.length === 1 &&
+  //     selectedTypes.includes("QA Check")
+  //   ) {
+  //     this.jobTitle = 'QA CHECK JOBS';
+  //   } else if (
+  //     selectedTypes.length === 1 &&
+  //     selectedTypes.includes("Customer Inspector")
+  //   ) {
+  //     this.jobTitle = 'CUSTOMER INSPECTOR JOBS';
+  //   } else if (
+  //     selectedTypes.length === 1 &&
+  //     selectedTypes.includes("Standard and Customer Job")
+  //   ) {
+  //     this.jobTitle = 'STANDARD AND CUSTOMER JOBS';
+  //   }
+  // }  
+
 }

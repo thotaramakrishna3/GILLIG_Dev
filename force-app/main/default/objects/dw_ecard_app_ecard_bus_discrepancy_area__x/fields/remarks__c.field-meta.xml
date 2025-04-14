@@ -3,7 +3,6 @@
     <fullName>remarks__c</fullName>
     <description>remarks</description>
     <externalDeveloperName>remarks</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

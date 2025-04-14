@@ -3,7 +3,6 @@
     <fullName>verified_status_updated_date__c</fullName>
     <description>verified_status_updated_date</description>
     <externalDeveloperName>verified_status_updated_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

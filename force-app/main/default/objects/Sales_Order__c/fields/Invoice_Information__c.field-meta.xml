@@ -3,7 +3,6 @@
     <fullName>Invoice_Information__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Information for Invoicing the selected order</description>
-    <externalId>false</externalId>
     <label>Invoice Information</label>
     <referenceTo>Bus_Invoice_Information__c</referenceTo>
     <relationshipLabel>Sales Orders</relationshipLabel>

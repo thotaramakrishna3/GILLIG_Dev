@@ -3,7 +3,6 @@
     <fullName>last_update_ts__c</fullName>
     <description>last_update_ts</description>
     <externalDeveloperName>last_update_ts</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

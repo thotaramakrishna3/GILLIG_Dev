@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Description_of_Issue__c</fullName>
     <description>Description of the issue provided by Driver</description>
-    <externalId>false</externalId>
     <label>Description of Issue</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

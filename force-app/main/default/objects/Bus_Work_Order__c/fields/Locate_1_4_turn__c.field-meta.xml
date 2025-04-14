@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Locate_1_4_turn__c</fullName>
     <defaultValue>false</defaultValue>
-    <externalId>false</externalId>
     <label>Locate 1/4 turn valve on rear curbside a</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

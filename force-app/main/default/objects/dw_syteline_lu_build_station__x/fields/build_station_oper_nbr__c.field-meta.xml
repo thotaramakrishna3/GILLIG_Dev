@@ -3,7 +3,6 @@
     <fullName>build_station_oper_nbr__c</fullName>
     <description>build_station_oper_nbr</description>
     <externalDeveloperName>build_station_oper_nbr</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

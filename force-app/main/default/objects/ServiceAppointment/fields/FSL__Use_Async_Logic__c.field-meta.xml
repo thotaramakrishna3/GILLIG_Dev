@@ -3,7 +3,6 @@
     <fullName>FSL__Use_Async_Logic__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Use Async Logic</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

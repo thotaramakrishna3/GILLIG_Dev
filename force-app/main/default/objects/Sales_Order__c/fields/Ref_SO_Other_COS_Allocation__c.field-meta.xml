@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Ref_SO_Other_COS_Allocation__c</fullName>
-    <externalId>false</externalId>
     <formula>Margin_Reference_Sales_Order__r.Margin_Actual_Other_COS_Allocation__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Ref SO Other COS Allocation</label>

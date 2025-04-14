@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>End_of_Firm_Offer_Period__c</fullName>
-    <externalId>false</externalId>
     <formula>if(isblank( BAFO_Date__c ),
 
 	if(isblank (Bid_Date__c ),

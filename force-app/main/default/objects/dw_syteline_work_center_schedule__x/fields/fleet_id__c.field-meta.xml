@@ -3,7 +3,6 @@
     <fullName>fleet_id__c</fullName>
     <description>fleet_id</description>
     <externalDeveloperName>fleet_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

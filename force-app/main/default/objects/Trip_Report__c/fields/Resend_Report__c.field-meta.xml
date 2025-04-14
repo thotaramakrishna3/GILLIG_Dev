@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Resend_Report__c</fullName>
     <defaultValue>false</defaultValue>
-    <externalId>false</externalId>
     <label>Resend Report</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackTrending>false</trackTrending>

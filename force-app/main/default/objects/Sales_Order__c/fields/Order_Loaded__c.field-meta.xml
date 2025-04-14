@@ -3,7 +3,6 @@
     <fullName>Order_Loaded__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Checkbox to indicate whether the PSM has loaded the order in Buy Design</description>
-    <externalId>false</externalId>
     <label>Order Loaded</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>true</trackHistory>

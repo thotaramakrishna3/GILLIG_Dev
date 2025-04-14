@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Bus_Number__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Bus Number</label>
     <referenceTo>Bus__c</referenceTo>
     <relationshipLabel>Cases</relationshipLabel>

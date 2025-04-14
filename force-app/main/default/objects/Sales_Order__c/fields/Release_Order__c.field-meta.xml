@@ -3,7 +3,6 @@
     <fullName>Release_Order__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Checkbox that when clicked sends notification email, logs date and then un-checks checkbox</description>
-    <externalId>false</externalId>
     <label>Release Order</label>
     <trackFeedHistory>true</trackFeedHistory>
     <trackHistory>true</trackHistory>

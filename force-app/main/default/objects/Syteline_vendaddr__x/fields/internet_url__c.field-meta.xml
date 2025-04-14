@@ -3,7 +3,6 @@
     <fullName>internet_url__c</fullName>
     <description>internet_url</description>
     <externalDeveloperName>internet_url</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

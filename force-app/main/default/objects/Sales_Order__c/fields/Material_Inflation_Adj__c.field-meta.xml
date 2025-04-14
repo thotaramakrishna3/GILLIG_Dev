@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Material_Inflation_Adj__c</fullName>
-    <externalId>false</externalId>
     <formula>IF(text(Mode__c) = &apos;Diesel&apos;, Diesel_Inflation__c,  
 IF(text(Mode__c) = &apos;CNG&apos;, CNG_Inflation__c,  
 IF(text(Mode__c) = &apos;Electric&apos;, Electric_Inflation__c, Hybrid_Inflation__c) ) )</formula>

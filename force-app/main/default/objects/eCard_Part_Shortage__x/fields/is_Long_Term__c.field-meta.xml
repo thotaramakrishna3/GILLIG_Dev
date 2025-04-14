@@ -4,7 +4,6 @@
     <defaultValue>false</defaultValue>
     <description>is_Long_Term</description>
     <externalDeveloperName>is_Long_Term</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

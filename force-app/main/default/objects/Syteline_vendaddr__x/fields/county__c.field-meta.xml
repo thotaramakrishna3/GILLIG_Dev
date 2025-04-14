@@ -3,7 +3,6 @@
     <fullName>county__c</fullName>
     <description>county</description>
     <externalDeveloperName>county</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

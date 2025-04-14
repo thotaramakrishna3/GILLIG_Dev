@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Aftermarket_Parts_History__c</fullName>
-    <externalId>false</externalId>
     <label>Aftermarket Parts History</label>
     <length>32768</length>
     <trackFeedHistory>false</trackFeedHistory>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Fcst_Mode_Adder__c</fullName>
-    <externalId>false</externalId>
     <formula>IF(text(Mode__c) = &apos;Diesel&apos;, Margin_Assumption__r.Diesel_Mode_Adder__c , 
 IF(text(Mode__c) = &apos;CNG&apos;, Margin_Assumption__r.CNG_Mode_Adder__c, 
 IF(text(Mode__c) = &apos;Electric&apos;, Margin_Assumption__r.Electric_Mode_Adder__c, Margin_Assumption__r.Hybrid_Mode_Adder__c) ) )</formula>

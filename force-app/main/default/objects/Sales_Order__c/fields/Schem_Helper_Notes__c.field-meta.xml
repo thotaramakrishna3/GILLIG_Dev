@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Schem_Helper_Notes__c</fullName>
-    <externalId>false</externalId>
     <inlineHelpText>Brief description of task, i.e., &quot;file selection&quot; or &quot;condensing/PDFing&quot;.</inlineHelpText>
     <label>Schem Helper Notes</label>
     <required>false</required>

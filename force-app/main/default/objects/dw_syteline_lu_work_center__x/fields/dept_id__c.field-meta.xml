@@ -3,7 +3,6 @@
     <fullName>dept_id__c</fullName>
     <description>dept_id</description>
     <externalDeveloperName>dept_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

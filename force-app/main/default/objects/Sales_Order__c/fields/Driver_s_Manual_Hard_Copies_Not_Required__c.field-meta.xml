@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Driver_s_Manual_Hard_Copies_Not_Required__c</fullName>
     <defaultValue>false</defaultValue>
-    <externalId>false</externalId>
     <label>Driver&apos;s Manual Hard Copy Not Required</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

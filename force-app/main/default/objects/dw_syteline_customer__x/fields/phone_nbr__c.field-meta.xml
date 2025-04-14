@@ -3,7 +3,6 @@
     <fullName>phone_nbr__c</fullName>
     <description>phone_nbr</description>
     <externalDeveloperName>phone_nbr</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>Project_Sales_Manager__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Project Sales Manager Assigned to the Bid</description>
-    <externalId>false</externalId>
     <label>Project Sales Manager</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Customer_Contracts</relationshipName>

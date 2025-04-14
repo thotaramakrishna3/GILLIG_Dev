@@ -3,7 +3,6 @@
     <fullName>Date_Submitted_to_the_Property__c</fullName>
     <defaultValue>TODAY()</defaultValue>
     <description>Todays Date</description>
-    <externalId>false</externalId>
     <label>Date Submitted to the Property</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

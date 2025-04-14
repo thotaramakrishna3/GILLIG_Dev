@@ -3,7 +3,6 @@
     <fullName>state__c</fullName>
     <description>state</description>
     <externalDeveloperName>state</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>FSL__InJeopardy__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>In Jeopardy</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

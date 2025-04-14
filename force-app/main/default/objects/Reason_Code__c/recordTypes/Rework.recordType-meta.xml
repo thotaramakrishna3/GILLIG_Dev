@@ -18,19 +18,4 @@
             <default>false</default>
         </values>
     </picklistValues>
-    <picklistValues>
-        <picklist>Supply_Chain__c</picklist>
-        <values>
-            <fullName>Leakage</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Mismatch Alignment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Misplacement</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
 </RecordType>

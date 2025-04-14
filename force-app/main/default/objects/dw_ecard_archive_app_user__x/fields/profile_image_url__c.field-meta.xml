@@ -3,7 +3,6 @@
     <fullName>profile_image_url__c</fullName>
     <description>profile_image_url</description>
     <externalDeveloperName>profile_image_url</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

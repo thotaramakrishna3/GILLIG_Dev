@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Schematics_Manual_Identical_To__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>When a VIN is entered in this field, this manual for this SO will be hidden from the Pubs schedule and backlog because it is being combined with another SO. NOTE: applies only to this manual type within this SO. If only other manuals for an SO will be combined, the other &quot;XX Manual Identical To&quot; fields will be used. If all manuals for this SO will be combined with another SO, this field will be blank and &quot;Manuals Identical To&quot; above will be used instead.</inlineHelpText>
     <label>Schematics Manual ID To</label>
     <referenceTo>Sales_Order__c</referenceTo>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Severity__c</fullName>
-    <externalId>false</externalId>
     <inlineHelpText>Impact of this request (i.e., how critically customers need to know). Different from priority, which is Urgency of the request.</inlineHelpText>
     <label>Severity</label>
     <required>false</required>

@@ -3,7 +3,6 @@
     <fullName>external_email_addr__c</fullName>
     <description>external_email_addr</description>
     <externalDeveloperName>external_email_addr</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

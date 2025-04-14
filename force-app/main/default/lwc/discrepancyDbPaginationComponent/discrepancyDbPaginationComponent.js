@@ -180,11 +180,16 @@ export default class discrepancyDBpagination extends LightningElement {
            
             updatepermission = true;
         }
+        if(this.selecteddiscrepancy.discrepancy_status.toLowerCase() == "open" && (this.selecteddiscrepancy.discrepancy_type == 'Custinspector' || this.selecteddiscrepancy.discrepancy_type == 'Customer Inspector') &&
+        (this.loggedinuser.approle_id == 2 || this.loggedinuser.approle_id == 4 || this.loggedinuser.approle_id == 1)){
+            return true;
+        }else{
         return this.selecteddiscrepancy.discrepancy_status.toLowerCase() == "open" && (this.selecteddiscrepancy.department_name != "07 - PAINT" && this.selecteddiscrepancy.department_name != "08A - TRIM - A") && updatepermission;
+        }
     }
     get enabledefectcodeedit() {
         var updatepermission = false;
-        if (this.loggedinuser.approle_id == 2 || this.loggedinuser.approle_id == 1|| this.loggedinuser.approle_id == 4) {
+        if (this.loggedinuser.approle_id == 2 || this.loggedinuser.approle_id == 1|| this.loggedinuser.approle_id == 4 || (this.loggedinuser.approle_id == 8 && this.selecteddiscrepancy.discrepancy_type == 'Custinspector' || this.selecteddiscrepancy.discrepancy_type == 'Customer Inspector')) {
            
             updatepermission = true;
         }
@@ -291,6 +296,10 @@ export default class discrepancyDBpagination extends LightningElement {
                         if (discrepancy.discrepancy_type == "short") {
                             isshortdiscrepancy = true;
                         }
+                        var iscustinspectordiscrepancy = false;
+                        if (discrepancy.discrepancy_type == "custinspector") {
+                            iscustinspectordiscrepancy = true;
+                        }
                         
                         var created_by = this.modifyuserlistfordisplay([
                             discrepancy.createdby_id
@@ -376,6 +385,7 @@ export default class discrepancyDBpagination extends LightningElement {
                             discrepancy_status: discrepancy.discrepancy_status.toLowerCase(),
                             discrepancy_type: this.capitalize(discrepancytype),
                             isdepartmentdiscrepancy: isdepartmentdiscrepancy,
+                            iscustinspectordiscrepancy: iscustinspectordiscrepancy,
                             isdownstreamdiscrepancy: isdownstreamdiscrepancy,
                             isshortdiscrepancy: isshortdiscrepancy,
                             isdeletable: is_deletable,
@@ -451,6 +461,18 @@ export default class discrepancyDBpagination extends LightningElement {
                 });
                 this.dispatchEvent(alertmessage);
             });
+    }
+    handleToggleChange(event){
+        if(event.target.checked){
+            const custInspectorDiscrepancies = this.alldiscrepancy.filter(
+                record =>
+                    record.discrepancy_type === 'Custinspector' ||
+                    record.discrepancy_type === 'Customer Inspector'
+            );
+            this.filtereddiscrepancy = custInspectorDiscrepancies;
+        }else{
+            this.filtereddiscrepancy = this.alldiscrepancy;
+        }
     }
     // Capitalize string passe
     capitalize(text) {
@@ -1162,6 +1184,17 @@ export default class discrepancyDBpagination extends LightningElement {
                 }else{
                     this.alldiscrepancy[i].verified_updatedby_id = '';
                 }
+                if(this.alldiscrepancy[i].discrepancy_type == 'Custinspector'){
+                    this.alldiscrepancy[i].discrepancy_type = 'Customer Inspector';
+                    var options = [];
+            for (var j in this.departmentIdMap) {
+                if (this.departmentIdMap[j].value != 'None' && this.departmentIdMap[j].label != 'ALL DEPARTMENTS' && this.departmentIdMap[j].label != 'All Departments') {
+                        options.push(this.departmentIdMap[j]);
+                }
+            }
+            this.departmentoptions = [];
+            this.departmentoptions = options;
+                }
                 this.selecteddiscrepancy = this.alldiscrepancy[i];
                 this.oldDepartment = this.selecteddiscrepancy.department_id;
                 this.oldbuildstation_code = this.selecteddiscrepancy.buildstation_code;
@@ -1808,6 +1841,9 @@ export default class discrepancyDBpagination extends LightningElement {
             this.discdepartmentchanged = true;
             this.selecteddiscrepancy.dept_reason_code_names = null;
             this.selecteddiscrepancy.department_id = targetvalue;
+            if(targetvalue == '6'){
+                this.selecteddiscrepancy.dat_defect_code_id = null;
+            }
             for (var i in this.departmentIdMap) {
                 if (this.departmentIdMap[i].value == targetvalue) {
                     this.selecteddiscrepancy.department_name = this.departmentIdMap[i].label;

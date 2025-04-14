@@ -3,7 +3,6 @@
     <fullName>bus_id__c</fullName>
     <description>bus_id</description>
     <externalDeveloperName>bus_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

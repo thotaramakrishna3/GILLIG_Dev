@@ -3,7 +3,6 @@
     <fullName>cut_off_date__c</fullName>
     <description>cut_off_date</description>
     <externalDeveloperName>cut_off_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

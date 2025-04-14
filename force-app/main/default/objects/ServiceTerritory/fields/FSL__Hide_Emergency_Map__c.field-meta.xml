@@ -4,7 +4,6 @@
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
     <description>Determines if the map will be shown on the emergency wizard</description>
-    <externalId>false</externalId>
     <label>Hide Emergency Map</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

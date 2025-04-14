@@ -3,7 +3,6 @@
     <fullName>Assigned_Resource__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>To get the assigned resource for this bus work order</description>
-    <externalId>false</externalId>
     <label>Assigned Resource</label>
     <referenceTo>AssignedResource</referenceTo>
     <relationshipName>Bus_Work_Orders</relationshipName>

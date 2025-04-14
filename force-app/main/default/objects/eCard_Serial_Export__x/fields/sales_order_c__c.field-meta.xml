@@ -4,7 +4,6 @@
     <deleteConstraint>SetNull</deleteConstraint>
     <description>sales_order__c</description>
     <externalDeveloperName>sales_order__c</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

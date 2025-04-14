@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Gillig_Contact_at_Demo__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Gillig Contact at Demo</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Bus_Hold_Requests1</relationshipName>

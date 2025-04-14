@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Letter_Code__c</fullName>
     <description>The Model or Line letter code used in the VIN</description>
-    <externalId>false</externalId>
     <inlineHelpText>E = Incomplete Vehicle
 G = Low Floor Bus</inlineHelpText>
     <label>Letter Code</label>

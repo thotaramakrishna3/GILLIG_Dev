@@ -3,7 +3,6 @@
     <fullName>FSL__Schedule_over_lower_priority_appointment__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Schedule Over Lower Priority Appointment</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

@@ -3,7 +3,6 @@
     <fullName>corp_cust__c</fullName>
     <description>corp_cust</description>
     <externalDeveloperName>corp_cust</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

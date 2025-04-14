@@ -3,7 +3,6 @@
     <fullName>product_cd__c</fullName>
     <description>product_cd</description>
     <externalDeveloperName>product_cd</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

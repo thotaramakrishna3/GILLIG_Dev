@@ -32,10 +32,10 @@
               <lightning-input type="text" name="date"   label="Date"  value={newdiscrepancy.date} disabled></lightning-input> 
             </div>
             <div if:true={showtypeselection} class="slds-col slds-size_1-of-2">
-              <lightning-combobox required name="type" class="newdiscvalidation" label="Issue Type"  onchange={modifynewdiscrepancyvalues} value={newdiscrepancy.type}  placeholder="Discrepancy Type" options={disctype} ></lightning-combobox>
+              <lightning-combobox required name="type" class="newdiscvalidation" label="Issue Type"  onchange={modifynewdiscrepancyvalues} value={newdiscrepancy.type} disabled={isCustinspector}  placeholder="Discrepancy Type" options={disctype} ></lightning-combobox>
             </div>
             <div class="slds-col slds-size_1-of-2" if:false={discrepancyDB}>
-              <lightning-combobox required name="departmentid" class="newdiscvalidation" label="Department"  onchange={modifynewdiscrepancyvalues} value={newdiscrepancy.departmentid}  placeholder="Select Department" options={departmentoptions} onfocus={getdepartmentPicklist}></lightning-combobox>
+              <lightning-combobox required disabled={isCustinspector} name="departmentid" class="newdiscvalidation" label="Department"  onchange={modifynewdiscrepancyvalues} value={newdiscrepancy.departmentid}  placeholder="Select Department" options={departmentoptions} onfocus={getdepartmentPicklist}></lightning-combobox>
             </div>
             <div class="slds-col slds-size_1-of-2" if:true={discrepancyDB}>
               <lightning-combobox required disabled={ecardnotselected} name="departmentid" class="newdiscvalidation"

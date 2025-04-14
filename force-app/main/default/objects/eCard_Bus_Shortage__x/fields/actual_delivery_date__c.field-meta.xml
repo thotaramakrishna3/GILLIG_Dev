@@ -3,7 +3,6 @@
     <fullName>actual_delivery_date__c</fullName>
     <description>actual_delivery_date</description>
     <externalDeveloperName>actual_delivery_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

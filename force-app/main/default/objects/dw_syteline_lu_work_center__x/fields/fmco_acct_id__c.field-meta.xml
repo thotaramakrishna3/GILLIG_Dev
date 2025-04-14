@@ -3,7 +3,6 @@
     <fullName>fmco_acct_id__c</fullName>
     <description>fmco_acct_id</description>
     <externalDeveloperName>fmco_acct_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

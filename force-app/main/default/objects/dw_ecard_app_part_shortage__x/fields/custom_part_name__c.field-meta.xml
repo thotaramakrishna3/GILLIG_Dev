@@ -3,7 +3,6 @@
     <fullName>custom_part_name__c</fullName>
     <description>custom_part_name</description>
     <externalDeveloperName>custom_part_name</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

@@ -3,7 +3,6 @@
     <fullName>FSL__Same_Resource__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Same Resource</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

@@ -3,7 +3,6 @@
     <fullName>Previous_SO_Owner__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Used for reassignment Process Builder</description>
-    <externalId>false</externalId>
     <label>Previous SO Owner</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Sales_Orders1</relationshipName>

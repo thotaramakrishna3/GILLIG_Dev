@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Accounts__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Accounts</label>
     <referenceTo>Account</referenceTo>
     <relationshipName>Opportunily_Line_Project_Trackers</relationshipName>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Week_Beginning__c</fullName>
-    <externalId>false</externalId>
     <formula>Bus__r.Week_Start_Date__c</formula>
     <label>Week Beginning</label>
     <required>false</required>

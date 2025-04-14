@@ -3,7 +3,6 @@
     <fullName>carrier_bill_to_transportation__c</fullName>
     <description>carrier_bill_to_transportation</description>
     <externalDeveloperName>carrier_bill_to_transportation</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

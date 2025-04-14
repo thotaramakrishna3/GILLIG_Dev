@@ -3,7 +3,6 @@
     <fullName>Saved_by__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Holds the user last saved the bus details</description>
-    <externalId>false</externalId>
     <label>Saved by</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Buses</relationshipName>

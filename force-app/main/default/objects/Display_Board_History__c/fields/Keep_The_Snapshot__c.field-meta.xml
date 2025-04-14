@@ -3,7 +3,6 @@
     <fullName>Keep_The_Snapshot__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Does not get deleted automatically</description>
-    <externalId>false</externalId>
     <label>Keep The Snapshot</label>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

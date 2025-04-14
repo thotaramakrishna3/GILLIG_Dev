@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Current_Sales_Price_Excluding_Tax__c</fullName>
     <description>Current Sales Price (ex-Tax, Training, Spares)</description>
-    <externalId>false</externalId>
     <formula>Current_Price__c - Current_Tax__c -  Spare_Tooling_Budget__c -  Training_Revenue_Budget__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Current Sales Price (with Exclusions)</label>

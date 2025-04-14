@@ -3,7 +3,6 @@
     <fullName>CNG__c</fullName>
     <defaultValue>false</defaultValue>
     <description>CNG option listed</description>
-    <externalId>false</externalId>
     <label>CNG</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

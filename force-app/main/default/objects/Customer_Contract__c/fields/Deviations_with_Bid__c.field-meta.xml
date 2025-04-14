@@ -3,7 +3,6 @@
     <fullName>Deviations_with_Bid__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Does the bid allow deviations</description>
-    <externalId>false</externalId>
     <label>Deviations with Bid</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

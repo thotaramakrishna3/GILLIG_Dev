@@ -3,7 +3,6 @@
     <fullName>inv_category__c</fullName>
     <description>inv_category</description>
     <externalDeveloperName>inv_category</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

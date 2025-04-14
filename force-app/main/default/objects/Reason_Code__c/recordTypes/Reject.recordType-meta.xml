@@ -18,19 +18,4 @@
             <default>false</default>
         </values>
     </picklistValues>
-    <picklistValues>
-        <picklist>Supply_Chain__c</picklist>
-        <values>
-            <fullName>Damaged</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Not fitting</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Unknow</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
 </RecordType>

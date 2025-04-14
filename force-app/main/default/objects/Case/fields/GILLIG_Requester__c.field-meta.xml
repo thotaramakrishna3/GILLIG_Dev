@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>GILLIG_Requester__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>Enter only if Requester is different than Case Creator.</inlineHelpText>
     <label>GILLIG Requester</label>
     <referenceTo>User</referenceTo>

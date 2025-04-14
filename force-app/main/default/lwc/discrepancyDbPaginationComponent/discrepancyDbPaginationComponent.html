@@ -22,6 +22,9 @@
                     </div>
                     <div class="slds-col slds-size_4-of-6">
                         <div class="slds-grid slds-grid_align-end">
+                            <lightning-input type="toggle" label="CI Issues" title="Customer Inspector Reported Issues" message-toggle-active="Enabled" message-toggle-inactive="Disabled"
+                             checked={isEnabled} onchange={handleToggleChange}>
+                            </lightning-input>
                             <div class="slds-col slds-size_3-of-12 slds-p-horizontal_small">
                                 <c-custom-search-component showicon={returntrue} showlabel={returnfalse}
                                     placeholdertext="Search Created User" -icon-name="standard:user"
@@ -141,8 +144,13 @@
                                             <span if:true={disc.isshortdiscrepancy} class="shortbadge">
                                                 SHORT
                                             </span>
+                                            <template if:false={disc.iscustinspectordiscrepancy}>
                                             <span if:false={disc.isshortdiscrepancy} class="normalbadge">
                                                 JOB
+                                            </span>
+                                        </template>
+                                            <span if:true={disc.iscustinspectordiscrepancy} class="normalbadge">
+                                                CI
                                             </span>
                                         </template>
                                         </template>

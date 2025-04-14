@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Ref_SO_Labor_Cost__c</fullName>
-    <externalId>false</externalId>
     <formula>Ref_SO_Labor_Hours__c * Ref_SO_Labor_Rate__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Ref SO Labor Cost</label>

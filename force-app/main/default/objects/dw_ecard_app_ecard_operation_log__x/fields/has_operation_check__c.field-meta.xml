@@ -4,7 +4,6 @@
     <defaultValue>false</defaultValue>
     <description>has_operation_check</description>
     <externalDeveloperName>has_operation_check</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

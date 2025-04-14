@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>The_Service_Resource_from_the_Assigned_R__c</fullName>
     <description>The SR assigned for this SA relating to the WO</description>
-    <externalId>false</externalId>
     <label>Service Resource</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

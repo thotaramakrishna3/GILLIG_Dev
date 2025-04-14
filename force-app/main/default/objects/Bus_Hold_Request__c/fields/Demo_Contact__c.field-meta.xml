@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Demo_Contact__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Demo Contact</label>
     <referenceTo>Contact</referenceTo>
     <relationshipLabel>Bus Hold Requests (Demo Contact)</relationshipLabel>

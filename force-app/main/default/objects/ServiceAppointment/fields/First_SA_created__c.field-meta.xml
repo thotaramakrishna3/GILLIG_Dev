@@ -3,7 +3,6 @@
     <fullName>First_SA_created__c</fullName>
     <defaultValue>false</defaultValue>
     <description>To distinguish the first SA created and the rest for assigning the SR to the BWOs</description>
-    <externalId>false</externalId>
     <label>First SA created</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

@@ -9,6 +9,7 @@ import raisenewDiscrepancy from "@salesforce/apex/DiscrepancyDatabaseController.
 import getAllEcarddetailsfromServer from "@salesforce/apex/DiscrepancyDatabaseController.getAllEcarddetails";
 import getDepartmentdata from "@salesforce/apex/masterDataController.getDepartmentdata";
 import pubsub from 'c/pubsub' ;
+import EcardLogin from "@salesforce/apex/userAuthentication.EcardLogin";
 
 export default class NewDiscrepancyComponent extends LightningElement {  
     @api buttonlabel;
@@ -82,16 +83,17 @@ export default class NewDiscrepancyComponent extends LightningElement {
     @track disctype = [];
     // To show Add new discrepancy modal and set the default values.
     async addnewdiscrepancymodal(event){
+        this.isCustinspector = false;
         if(this.type=='department'){
             this.type='buildstation';
             this.buildstationrequired = true;
             this.disctype = [{ 'label': 'Job', 'value': 'buildstation' },
             { 'label': 'Department', 'value': 'department' },
             { 'label': "Out Of Station", 'value': "downstream" },
-            { 'label': "Short", 'value': "short" }];
+            { 'label': "Short", 'value': "short" },
+            { 'label': "Customer Inspector", 'value': "custinspector" }];
             if (!this.enableDeptDiscrepancy) {
                 this.disctype.splice(1, 1);
-
             }
         }
         else{
@@ -100,10 +102,10 @@ export default class NewDiscrepancyComponent extends LightningElement {
             this.disctype = [{ 'label': 'Job', 'value': 'buildstation' },
             { 'label': 'Department', 'value': 'department' },
             { 'label': "Out Of Station", 'value': "downstream" },
-            { 'label': "Short", 'value': "short" }];
+            { 'label': "Short", 'value': "short" },
+            { 'label': "Customer Inspector", 'value': "custinspector" }];
             if (!this.enableDeptDiscrepancy) { 
                 this.disctype.splice(1, 1);
-
             }
         }
         if (this.page == 'discrepancyDB') {
@@ -141,6 +143,19 @@ export default class NewDiscrepancyComponent extends LightningElement {
         else {
             var ecard_id = this.ecardid;
             var departmentid = this.departmentid == undefined ? "21" : this.departmentid.toString();
+            if(this.loggedinuser.approle_id == 8){
+                this.isCustinspector = true;
+                this.type= 'custinspector';
+            const match = this.departmentoptions.find(
+                dept =>
+                  dept.label.toUpperCase().startsWith('CUSTOMER INSPECTOR') ||
+                  dept.label.toUpperCase().endsWith('CUSTOMER INSPECTOR')
+              );
+              
+              if (match) {
+                departmentid = match.value;
+              }
+            }
             this.moddifydefectpickvalues(departmentid);
             var selectedbus = `${this.busname}, ${this.buschasisnumber}`;
             var ecardiddeptid = { ecard_id: ecard_id, dept_id: departmentid };
@@ -177,8 +192,8 @@ export default class NewDiscrepancyComponent extends LightningElement {
                 priority: 'Normal',
                 defectcode: undefined
             };
+            this.currentdept = departmentid;
         }
-        
         this.newdiscrepancy = newdiscrepancy;
         this.newdiscrepancymodal = true;
     }    
@@ -376,7 +391,19 @@ export default class NewDiscrepancyComponent extends LightningElement {
         });
         this.dispatchEvent(alertmessage);
     }
-
+    connectedCallback(){
+        this.getloggedinuser();
+    }
+    getloggedinuser() {
+        EcardLogin()
+            .then((result) => {
+                this.loggedinuser = result.data.user;
+            })
+            .catch((error) => {
+            });
+    }
+@track isCustinspector = false;
+@track currentdept;
     // Update New Discrepancy values.
     async modifynewdiscrepancyvalues(event){
         var targetvalue = event.target.value;
@@ -387,6 +414,24 @@ export default class NewDiscrepancyComponent extends LightningElement {
             var emptylist = [];   
             this.newdiscrepancy.buildstation_id = undefined;
             this.newdiscrepancy.defectcode = undefined;
+            if(targetvalue == 'custinspector'){
+                this.isCustinspector = true;
+              targetname = 'departmentid';
+              const match = this.departmentoptions.find(
+                dept =>
+                  dept.label.toUpperCase().startsWith('CUSTOMER INSPECTOR') ||
+                  dept.label.toUpperCase().endsWith('CUSTOMER INSPECTOR')
+              );
+              
+              if (match) {
+                targetvalue = match.value;
+              }
+            }else{
+                this.isCustinspector = false;
+                this.newdiscrepancy.departmentid = this.currentdept;
+                targetname = 'departmentid';
+                targetvalue = this.currentdept;            
+            }
         }
         if(targetname == 'departmentid'){
             this.newdiscrepancy.departmentid = targetvalue;

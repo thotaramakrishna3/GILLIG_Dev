@@ -106,6 +106,25 @@
                   <lightning-input readonly label="Transmission" >{trasmissionlistValues.error}</lightning-input>
                 </div>
                </template> <br/>
+               
+             <template if:true={bustypelistValues.data}>
+               <div class="slds-col slds-size_1-of-2">
+                  <lightning-combobox class="slds-m-bottom_small updatevalidation" label="Bus Type" name="Bus_Type__c" value={record.Bus_Type__c} disabled placeholder="Select a Bus Type" options={bustypelistValues.data.values} onchange={updateopck}>
+              </lightning-combobox>
+               </div>
+              </template>
+              <template if:true={bustypelistValues.error}>
+               <div class="slds-col slds-size_1-of-2">
+                 <lightning-input readonly label="Bus Type" >{bustypelistValues.error}</lightning-input>
+               </div>
+              </template> <br/>
+              
+             <template if:true={isbuslengthlistValues}>
+               <div class="slds-col slds-size_1-of-2">
+                  <lightning-combobox class="slds-m-bottom_small updatevalidation" label="Bus Length" name="Bus_Length__c" value={record.Bus_Length__c} disabled placeholder="Select a Bus Length" options={buslengthlistValues} onchange={updateopck}>
+              </lightning-combobox>
+               </div>
+              </template> <br/>
                <div class="slds-col slds-size_1-of-2">
                   <lightning-input class="slds-m-bottom_small updatevalidation" label="Active Date" name="Active_Date__c" value={record.Active_Date__c} placeholder="Select Date" onchange={updateopck} type="date"></lightning-input>
 
@@ -203,6 +222,26 @@
               </div>
              </template>
              <br/>
+
+             <template if:true={bustypelistValues.data}>
+               <div class="slds-col slds-size_1-of-2">
+                  <lightning-combobox class="slds-m-bottom_small newopckvalidation" label="Bus Type" name="bustype_id" value={newopckvalue.bustype_id} placeholder="Select a Bus Type" options={bustypelistValues.data.values} onchange={updatenewopck}>
+              </lightning-combobox>
+               </div>
+              </template>
+              <template if:true={bustypelistValues.error}>
+               <div class="slds-col slds-size_1-of-2">
+                 <lightning-input readonly label="Bus Type" >{bustypelistValues.error}</lightning-input>
+               </div>
+              </template> <br/>
+              
+             <template if:true={isbuslengthlistValues}>
+               <div class="slds-col slds-size_1-of-2">
+                  <lightning-combobox class="slds-m-bottom_small newopckvalidation" label="Bus Length" name="buslength_id" value={newopckvalue.buslength_id} placeholder="Select a Bus Length" options={buslengthlistValues} onchange={updatenewopck}>
+              </lightning-combobox>
+               </div>
+              </template> <br/>
+
              <div class="slds-col slds-size_1-of-2">
                <lightning-input class="slds-m-bottom_small newopckvalidation" label="Active Date" name="active_date" value={newopckvalue.active_date} placeholder="Select Date" onchange={updatenewopck} type="date"></lightning-input>
             </div>

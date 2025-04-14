@@ -3,7 +3,6 @@
     <fullName>BAE_Hybrid__c</fullName>
     <defaultValue>false</defaultValue>
     <description>BAE Hybrid option listed</description>
-    <externalId>false</externalId>
     <label>BAE Hybrid</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

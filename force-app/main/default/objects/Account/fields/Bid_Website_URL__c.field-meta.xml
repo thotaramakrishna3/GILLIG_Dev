@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Bid_Website_URL__c</fullName>
     <description>URL for Bid Documents</description>
-    <externalId>false</externalId>
     <label>Bid Website URL</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

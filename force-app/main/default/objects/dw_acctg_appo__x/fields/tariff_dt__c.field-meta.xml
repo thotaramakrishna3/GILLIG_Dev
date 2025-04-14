@@ -3,7 +3,6 @@
     <fullName>tariff_dt__c</fullName>
     <description>tariff_dt</description>
     <externalDeveloperName>tariff_dt</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

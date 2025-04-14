@@ -3,7 +3,6 @@
     <fullName>Field_Service_Report_Uploaded__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Shows if a Field Service File was uploaded to this Case File</description>
-    <externalId>false</externalId>
     <inlineHelpText>Check if a Field Service File was uploaded with this Case File</inlineHelpText>
     <label>Field Service Report Uploaded</label>
     <trackFeedHistory>false</trackFeedHistory>

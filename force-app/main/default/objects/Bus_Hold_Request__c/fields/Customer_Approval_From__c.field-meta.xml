@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Customer_Approval_From__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <inlineHelpText>Select the contact at the customer who approved use of the bus and provide details in Chatter</inlineHelpText>
     <label>Customer Approval From</label>
     <referenceTo>Contact</referenceTo>

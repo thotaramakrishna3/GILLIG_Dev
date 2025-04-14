@@ -3,7 +3,6 @@
     <fullName>end_date__c</fullName>
     <description>end_date</description>
     <externalDeveloperName>end_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

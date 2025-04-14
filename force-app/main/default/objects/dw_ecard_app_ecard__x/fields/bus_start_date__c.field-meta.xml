@@ -3,7 +3,6 @@
     <fullName>bus_start_date__c</fullName>
     <description>bus_start_date</description>
     <externalDeveloperName>bus_start_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

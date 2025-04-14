@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>X2019_Gross_Profit__c</fullName>
-    <externalId>false</externalId>
     <formula>X2019_Margin__c / X2019_Sales__c</formula>
     <label>2019 Gross Profit %</label>
     <precision>18</precision>

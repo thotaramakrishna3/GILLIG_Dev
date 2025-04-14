@@ -3,7 +3,6 @@
     <fullName>city__c</fullName>
     <description>city</description>
     <externalDeveloperName>city</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

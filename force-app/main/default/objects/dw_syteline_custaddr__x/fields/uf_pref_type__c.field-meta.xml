@@ -3,7 +3,6 @@
     <fullName>uf_pref_type__c</fullName>
     <description>uf_pref_type</description>
     <externalDeveloperName>uf_pref_type</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

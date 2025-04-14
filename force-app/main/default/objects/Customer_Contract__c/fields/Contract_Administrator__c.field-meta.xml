@@ -3,7 +3,6 @@
     <fullName>Contract_Administrator__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Contract Administrator assigned to the project</description>
-    <externalId>false</externalId>
     <label>Contract Administrator</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Customer_Contracts1</relationshipName>

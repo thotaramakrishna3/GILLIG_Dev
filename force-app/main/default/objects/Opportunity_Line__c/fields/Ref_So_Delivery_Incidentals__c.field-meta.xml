@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Ref_So_Delivery_Incidentals__c</fullName>
-    <externalId>false</externalId>
     <formula>IF( INCLUDES(Mode__c, &quot;CNG&quot;), 
 (
  IF(INCLUDES(Length__c, &quot;29&quot;), Margin_Reference_Sales_Order__r.Margin_Assumption__r.CNG_29_Delivery_Incidentals__c, 

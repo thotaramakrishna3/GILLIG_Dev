@@ -3,7 +3,6 @@
     <fullName>sf_name__c</fullName>
     <description>sf_name</description>
     <externalDeveloperName>sf_name</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

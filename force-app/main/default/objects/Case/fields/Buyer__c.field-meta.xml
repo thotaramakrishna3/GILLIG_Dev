@@ -3,7 +3,6 @@
     <fullName>Buyer__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Buyer used for RCAR cases.</description>
-    <externalId>false</externalId>
     <label>Buyer</label>
     <lookupFilter>
         <active>true</active>

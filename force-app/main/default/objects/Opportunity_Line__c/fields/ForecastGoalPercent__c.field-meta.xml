@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ForecastGoalPercent__c</fullName>
-    <externalId>false</externalId>
     <formula>if(or((Opportunity_Line__r.IsWon &amp;&amp; Opportunity_Line__r.IsClosed), not(Opportunity_Line__r.IsClosed), not(isblank(Date_Booked__c)) ),  Quantity__c / Opportunity_Line__r.Owner.Goal__c  , 0)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>ForecastGoalPercent</label>

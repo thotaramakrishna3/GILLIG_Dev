@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Aux_Coolant_Heater_Inspection_if_equippe__c</fullName>
     <description>Aux Coolant Heater Inspection if equipped</description>
-    <externalId>false</externalId>
     <inlineHelpText>Aux Coolant Heater Inspection if equipped</inlineHelpText>
     <label>Aux Coolant Heater Inspection</label>
     <required>false</required>

@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>ConcurConnect__AccruedUnApprovedExpenses__c</fullName>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <formula>IF(AND(ConcurConnect__AccruedUnApprovedExpenseTotal__c &gt; 0, Amount &gt; 0), (ConcurConnect__AccruedUnApprovedExpenseTotal__c / Amount), null)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Accruing/Unpaid Expense</label>

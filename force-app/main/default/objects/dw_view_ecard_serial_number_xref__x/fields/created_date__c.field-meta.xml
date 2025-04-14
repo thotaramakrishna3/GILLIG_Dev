@@ -3,7 +3,6 @@
     <fullName>created_date__c</fullName>
     <description>created_date</description>
     <externalDeveloperName>created_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

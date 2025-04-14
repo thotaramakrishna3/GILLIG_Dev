@@ -3,7 +3,6 @@
     <fullName>FSL__Pinned__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Pinned</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

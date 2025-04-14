@@ -3,7 +3,6 @@
     <fullName>calendar_id__c</fullName>
     <description>calendar_id</description>
     <externalDeveloperName>calendar_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

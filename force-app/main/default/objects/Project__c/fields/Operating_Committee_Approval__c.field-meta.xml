@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Operating_Committee_Approval__c</fullName>
-    <externalId>false</externalId>
     <label>Operating Committee Approval</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

@@ -3,7 +3,6 @@
     <fullName>acct_id__c</fullName>
     <description>acct_id</description>
     <externalDeveloperName>acct_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

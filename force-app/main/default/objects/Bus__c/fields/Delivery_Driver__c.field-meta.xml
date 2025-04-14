@@ -3,7 +3,6 @@
     <fullName>Delivery_Driver__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Driver that delivered bus</description>
-    <externalId>false</externalId>
     <label>Delivery Driver</label>
     <lookupFilter>
         <active>true</active>

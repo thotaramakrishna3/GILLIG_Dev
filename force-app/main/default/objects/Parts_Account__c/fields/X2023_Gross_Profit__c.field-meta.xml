@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>X2023_Gross_Profit__c</fullName>
-    <externalId>false</externalId>
     <formula>X2023_Margin__c / X2023_Sales__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>2023 Gross Profit %</label>

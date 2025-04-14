@@ -3,7 +3,6 @@
     <fullName>chassis_image_url__c</fullName>
     <description>chassis_image_url</description>
     <externalDeveloperName>chassis_image_url</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

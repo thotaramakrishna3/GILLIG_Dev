@@ -3,7 +3,6 @@
     <fullName>export_type__c</fullName>
     <description>export_type</description>
     <externalDeveloperName>export_type</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

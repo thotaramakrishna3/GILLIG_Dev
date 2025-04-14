@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Project_Team_Member_3__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>Project Team Member 3</label>
     <referenceTo>User</referenceTo>
     <relationshipName>Projects_Tracker5</relationshipName>

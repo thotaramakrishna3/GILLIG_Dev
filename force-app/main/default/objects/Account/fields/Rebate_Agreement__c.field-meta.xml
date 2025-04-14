@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Rebate_Agreement__c</fullName>
     <defaultValue>false</defaultValue>
-    <externalId>false</externalId>
     <label>Rebate Agreement</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

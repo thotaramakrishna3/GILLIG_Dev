@@ -3,7 +3,6 @@
     <fullName>Diesel__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Diesel option listed</description>
-    <externalId>false</externalId>
     <label>Diesel</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

@@ -3,7 +3,6 @@
     <fullName>uf_email__c</fullName>
     <description>uf_email</description>
     <externalDeveloperName>uf_email</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

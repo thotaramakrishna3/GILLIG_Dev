@@ -3,7 +3,6 @@
     <fullName>FSL__VisitingHours__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Visiting Hours</label>
     <referenceTo>OperatingHours</referenceTo>
     <relationshipLabel>Work Orders</relationshipLabel>

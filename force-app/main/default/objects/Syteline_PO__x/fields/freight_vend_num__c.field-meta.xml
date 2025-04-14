@@ -3,7 +3,6 @@
     <fullName>freight_vend_num__c</fullName>
     <description>freight_vend_num</description>
     <externalDeveloperName>freight_vend_num</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

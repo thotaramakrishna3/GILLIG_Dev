@@ -3,7 +3,6 @@
     <fullName>X35__c</fullName>
     <defaultValue>false</defaultValue>
     <description>35&apos; option listed</description>
-    <externalId>false</externalId>
     <label>35&apos;</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

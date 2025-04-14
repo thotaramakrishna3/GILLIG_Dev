@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>New_Contract_Total_Cost__c</fullName>
-    <externalId>false</externalId>
     <formula>New_Contract_Standard_Materials__c + New_Contract_Overhead__c + New_Contract_Labor_Cost__c + New_Contract_Int_Std_Warranty__c + New_Contract_Ext_Pur_Warranty__c +  New_Contract_Total_Delivery_Cost__c  + New_Contract_Other_COS_Allocation__c + New_Contract_Outside_Processes__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>New Contract - Total Cost</label>

@@ -3,7 +3,6 @@
     <fullName>invoice_dt__c</fullName>
     <description>invoice_dt</description>
     <externalDeveloperName>invoice_dt</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

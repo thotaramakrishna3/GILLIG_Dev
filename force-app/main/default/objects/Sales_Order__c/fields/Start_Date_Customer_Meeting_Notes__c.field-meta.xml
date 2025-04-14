@@ -3,7 +3,6 @@
     <fullName>Start_Date_Customer_Meeting_Notes__c</fullName>
     <businessOwnerUser>dan.troye@gillig.com.dev0406</businessOwnerUser>
     <description>Capturing the data when the Project Sales manager starts working on meeting to measure the order processing lead time.</description>
-    <externalId>false</externalId>
     <label>Start Date Customer Meeting Notes</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>

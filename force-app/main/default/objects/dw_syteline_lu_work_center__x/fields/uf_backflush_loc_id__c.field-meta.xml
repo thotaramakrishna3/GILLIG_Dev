@@ -3,7 +3,6 @@
     <fullName>uf_backflush_loc_id__c</fullName>
     <description>uf_backflush_loc_id</description>
     <externalDeveloperName>uf_backflush_loc_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

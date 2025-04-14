@@ -3,7 +3,6 @@
     <fullName>FSL__Approved__c</fullName>
     <defaultValue>false</defaultValue>
     <deprecated>false</deprecated>
-    <externalId>false</externalId>
     <label>Approved</label>
     <trackHistory>false</trackHistory>
     <type>Checkbox</type>

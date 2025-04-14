@@ -3,7 +3,6 @@
     <fullName>inv_date__c</fullName>
     <description>inv_date</description>
     <externalDeveloperName>inv_date</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

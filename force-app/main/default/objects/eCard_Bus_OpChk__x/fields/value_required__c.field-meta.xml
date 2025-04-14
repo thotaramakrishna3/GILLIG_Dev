@@ -4,7 +4,6 @@
     <defaultValue>false</defaultValue>
     <description>value_required</description>
     <externalDeveloperName>value_required</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

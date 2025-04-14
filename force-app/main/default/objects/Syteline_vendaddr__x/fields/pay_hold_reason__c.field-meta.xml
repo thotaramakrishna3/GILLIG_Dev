@@ -3,7 +3,6 @@
     <fullName>pay_hold_reason__c</fullName>
     <description>pay_hold_reason</description>
     <externalDeveloperName>pay_hold_reason</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

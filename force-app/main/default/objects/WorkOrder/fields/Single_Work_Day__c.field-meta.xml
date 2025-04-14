@@ -3,7 +3,6 @@
     <fullName>Single_Work_Day__c</fullName>
     <defaultValue>false</defaultValue>
     <description>will auto populate the multi day checkbox field in Service Appointment if unchecked</description>
-    <externalId>false</externalId>
     <label>Single Work Day</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

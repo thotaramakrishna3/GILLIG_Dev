@@ -3,7 +3,6 @@
     <fullName>Generate_Inspection_Record__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Check this box if the eCard Inspection needs to be re-created</description>
-    <externalId>false</externalId>
     <label>Generate Inspection Record</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

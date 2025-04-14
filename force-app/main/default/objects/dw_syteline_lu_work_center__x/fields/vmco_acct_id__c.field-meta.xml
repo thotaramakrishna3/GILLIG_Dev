@@ -3,7 +3,6 @@
     <fullName>vmco_acct_id__c</fullName>
     <description>vmco_acct_id</description>
     <externalDeveloperName>vmco_acct_id</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

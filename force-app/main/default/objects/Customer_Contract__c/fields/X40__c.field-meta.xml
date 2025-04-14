@@ -3,7 +3,6 @@
     <fullName>X40__c</fullName>
     <defaultValue>false</defaultValue>
     <description>40&apos; option listed</description>
-    <externalId>false</externalId>
     <label>40&apos;</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

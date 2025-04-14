@@ -138,6 +138,22 @@
         <customTabListAdditionalFields>ExpenseEndDate</customTabListAdditionalFields>
         <customTabListAdditionalFields>WorkOrder</customTabListAdditionalFields>
         <customTabListAdditionalFields>Account</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>ExpenseType</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Amount</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TransactionDate</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Description</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ExpenseStartDate</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ExpenseEndDate</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>WorkOrder</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Account</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ExpenseType</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Amount</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TransactionDate</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Description</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ExpenseStartDate</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ExpenseEndDate</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>WorkOrder</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>ExpenseType</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Amount</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>TransactionDate</searchResultsAdditionalFields>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Manual_FTP_Link__c</fullName>
-    <externalId>false</externalId>
     <inlineHelpText>Link to top-level customer folder, in which sit the VIN folders with manuals.</inlineHelpText>
     <label>Manuals FTP</label>
     <required>false</required>

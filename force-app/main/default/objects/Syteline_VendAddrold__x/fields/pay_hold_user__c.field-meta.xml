@@ -3,7 +3,6 @@
     <fullName>pay_hold_user__c</fullName>
     <description>pay_hold_user</description>
     <externalDeveloperName>pay_hold_user</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

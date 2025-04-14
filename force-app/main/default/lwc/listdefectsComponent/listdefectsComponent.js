@@ -52,8 +52,7 @@ export default class ListdefectsComponent extends LightningElement {
 
       newdefect;
 
-      defecttypeoperations = [{'label':'Other Department', 'value':'department'}, {'label':'Paint Department', 'value':'paint'}
-        ,{'label':'Customer Inspector', 'value':'custinspector'}];
+      defecttypeoperations = [{'label':'Other Department', 'value':'department'}, {'label':'Paint Department', 'value':'paint'}];
       
       connectedCallback(){
           this.loaddata();
@@ -70,10 +69,7 @@ export default class ListdefectsComponent extends LightningElement {
               var defect = alldefects[i];
               if(defect['defect_type'] == 'paint'){
                 defect['defect_type_department'] = 'Paint Department';
-              }else if(defect['defect_type'] == 'custinspector'){
-                defect['defect_type_department'] = 'Customer Inspector';
-              }
-              else{
+              }else{
                 defect['defect_type_department'] = 'Other Department';
               }
               modifieddefectdata.push(defect);

@@ -3,7 +3,6 @@
     <fullName>Approved_Equals__c</fullName>
     <defaultValue>false</defaultValue>
     <description>Does the bid include approved equals</description>
-    <externalId>false</externalId>
     <label>Approved Equals</label>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>

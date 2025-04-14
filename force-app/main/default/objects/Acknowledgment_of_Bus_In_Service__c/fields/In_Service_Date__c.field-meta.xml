@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>In_Service_Date__c</fullName>
     <description>The customer accepts bus for In-service start date</description>
-    <externalId>false</externalId>
     <inlineHelpText>In Service Date</inlineHelpText>
     <label>Date Bus is placed into Service</label>
     <required>false</required>

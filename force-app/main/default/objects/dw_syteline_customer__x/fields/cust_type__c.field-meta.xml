@@ -3,7 +3,6 @@
     <fullName>cust_type__c</fullName>
     <description>cust_type</description>
     <externalDeveloperName>cust_type</externalDeveloperName>
-    <externalId>false</externalId>
     <isFilteringDisabled>false</isFilteringDisabled>
     <isNameField>false</isNameField>
     <isSortingDisabled>false</isSortingDisabled>

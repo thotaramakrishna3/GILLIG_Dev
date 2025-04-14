@@ -3,7 +3,6 @@
     <fullName>FSL__Internal_SLR_HomeAddress_Geolocation__c</fullName>
     <deprecated>false</deprecated>
     <displayLocationInDecimal>true</displayLocationInDecimal>
-    <externalId>false</externalId>
     <label>Internal SLR HomeAddress Geolocation</label>
     <required>false</required>
     <scale>6</scale>
