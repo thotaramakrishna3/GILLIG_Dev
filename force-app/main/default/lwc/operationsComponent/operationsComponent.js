@@ -68,6 +68,8 @@ export default class OperationsComponent extends LightningElement {
     applyfilters(messageFromEvt){
       //  debugger
        var valueforfilters = JSON.parse(messageFromEvt);
+       console.log('valueforfilters:::'+valueforfilters);
+      
        this.selectedoperation = valueforfilters.view;
        this.selecteddepartmentid = '0';
        this.departmentchanged(event);

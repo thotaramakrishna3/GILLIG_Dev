@@ -172,6 +172,7 @@ export default class OpertaionChecksComponent extends LightningElement {
               is_required = false;
             }
             this.opckdetails = this.filterrecords(status, this.tmpopckdetails, is_required);
+            console.log('opckdetails:::' , Json.stringify(opckdetails));
             if (this.opckdetails != 0) {
               this.opckdetails.forEach(dep => {
                 dep.op_check.forEach(opck => {
@@ -190,15 +191,19 @@ export default class OpertaionChecksComponent extends LightningElement {
 
             this.opckdetails.forEach(dep => {
               dep.op_check.forEach(opck => {
-                if (opck.job_type != null && opck.job_type == "Standard Job") {
+                if (opck.job_type != null && opck.job_type == "Standard Job" && !dep.department_name.includes('100')) {
                   const stanjob = true;
                   opck.stanjob = stanjob;
-                } else if (opck.job_type != null && opck.job_type == "Customer Job") {
+                } else if (opck.job_type != null && opck.job_type == "Customer Job" && !dep.department_name.includes('100')) {
                   const custjob = true;
                   opck.custjob = custjob;
-                } else if (opck.job_type != null && opck.job_type == "QA Check") {
+                } else if (opck.job_type != null && opck.job_type == "QA Check" && !dep.department_name.includes('100')) {
                   const qacheckjob = true;
                   opck.qacheckjob = qacheckjob;
+                }
+                else if(opck.job_type != null && dep.department_name.includes('100')){
+                  const ciJobs = true;
+                  opck.ciJobs = ciJobs;               
                 }
 
               }
@@ -208,6 +213,7 @@ export default class OpertaionChecksComponent extends LightningElement {
             // end
           }
           else {
+            console.log('else::');
             this.opckdetails = this.tmpopckdetails;
             if (this.opckdetails != 0) {
               this.opckdetails.forEach(dept => {
@@ -225,18 +231,22 @@ export default class OpertaionChecksComponent extends LightningElement {
             // newly added
             this.opckdetails.forEach(dep => {
               dep.op_check.forEach(opck => {
-                if (opck.job_type != null && opck.job_type == "Standard Job") {
+                if (opck.job_type != null && opck.job_type == "Standard Job" && !dep.department_name.includes('100')) {
                   const stanjob = true;
                   opck.stanjob = stanjob;
-                } else if (opck.job_type != null && opck.job_type == "Customer Job") {
+                } else if (opck.job_type != null && opck.job_type == "Customer Job" && !dep.department_name.includes('100')) {
                   const custjob = true;
                   opck.custjob = custjob;
-                } else if (opck.job_type != null && opck.job_type == "QA Check") {
+                } else if (opck.job_type != null && opck.job_type == "QA Check" && !dep.department_name.includes('100')) {
                   const qacheckjob = true;
                   opck.qacheckjob = qacheckjob;
                 }
+                else if(opck.job_type != null && dep.department_name.includes('100')){
+                  const ciJobs = true;
+                  opck.ciJobs = ciJobs;               
+                }
 
-              }
+               }
               );
             });
             // end

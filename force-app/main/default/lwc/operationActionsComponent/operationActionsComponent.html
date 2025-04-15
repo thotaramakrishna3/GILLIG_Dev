@@ -138,10 +138,25 @@
                         </template>
                     </div>
                 </div>
-                <div class="slds-col">
-                  
+                
+                <div class="slds-col slds-float_none slds-p-around_x-small">
+
+                </div>
+                <div class="slds-col slds-float_none slds-p-around_x-small">
+                </div>
+                <div class="slds-col slds-float_none slds-p-around_x-small">
+                </div>
+                <div class="slds-col slds-float_none slds-p-around_x-small">
+                </div>
+                <div class="slds-col slds-float_none slds-p-around_x-small">
+                </div>
+                <div class="slds-col slds-float_none slds-p-around_x-small">
+                </div>
+                <div class="slds-col slds-float_none slds-p-around_x-small alligntoggle">
+                  <lightning-input type="toggle" label="CI Issues" data-id="CiIssues" message-toggle-active = '' message-toggle-inactive	= '' checked={isCIChoosen} onchange={changeCiToggle}></lightning-input>
                 </div>
                 <div class="slds-col alignbutton">
+                  <lightning-input type="toggle" label="CI Issues" data-id="CiIssues" message-toggle-active = '' message-toggle-inactive	= '' checked={isCIChoosen} onchange={changeCiToggle}></lightning-input>
                   <c-new-shortage-component buttonlabel="Unknown Part Shortage" modalheading="New Shortage" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} permissionset={permissionset}></c-new-shortage-component>
                   <c-new-discrepancy-component buttonlabel="Report Issue" modalheading="New Issue" type="buildstation" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} onoperationrefresh={refreshoperation} permissionset={permissionset}></c-new-discrepancy-component>
                   <c-qc-check-list  departmentoptions={departmentoptions} ecardid={ecardid} departmentid={departmentId}></c-qc-check-list>
@@ -193,19 +208,28 @@
                             <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails} title={discrepancy.discrepancy} class="slds-truncate">
                               <div class="slds-grid">
                                 <div class="allignbadge">
-                                  <span if:true={discrepancy.isdepartmentdiscrepancy} class="deptbadge">DEPT</span>
+                                <template if:false={discrepancy.isCustInspector}>
+                                  <span if:true={discrepancy.isdepartmentdiscrepancy} class="deptbadge">
+                                     DEPT
+                                  </span>
                                   <template if:false={discrepancy.isdepartmentdiscrepancy}>
                                     <span if:true={discrepancy.isdownstreamdiscrepancy} class="normalbadge">
-                                        OUT-S
+                                      OUT-S
                                     </span>
                                     <template if:false={discrepancy.isdownstreamdiscrepancy}>
-                                    <span if:true={discrepancy.isshortdiscrepancy} class="shortbadge">
+                                      <span if:true={discrepancy.isshortdiscrepancy} class="shortbadge">
                                         SHORT
-                                    </span>
-                                    <span if:false={discrepancy.isshortdiscrepancy} class="normalbadge">
+                                      </span>
+                                      <span if:false={discrepancy.isshortdiscrepancy} class="normalbadge">
                                         JOB
-                                    </span>
+                                      </span>
+                                    </template>
+                                 </template>
                                 </template>
+                                <template if:true={discrepancy.isCustInspector}>
+                                  <span class="customerinspectorbadge">
+                                    CI
+                                  </span>
                                 </template>
                                 </div>
                                 <div class="slds-col">

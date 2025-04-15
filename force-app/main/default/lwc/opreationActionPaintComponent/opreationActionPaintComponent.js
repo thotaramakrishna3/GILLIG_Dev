@@ -145,9 +145,16 @@ export default class OpreationActionPaintComponent extends LightningElement {
         }
         return formatteddate;
     }
+    @track isCIChoosen;
+    changeCiToggle(event){
+        this.isCIChoosen =  !this.isCIChoosen;
+        console.log('isCIChoosen:::' + this.isCIChoosen);
+        this.loadDiscrepancydata();
+    }
 
      // To modify the Department Discrepancy data for Ecard App and related components.
      getmodifieddiscrepancylist(departmentdata){
+        console.log('Paintgetmodifieddiscrepancylist:::');
         var departmentid = departmentdata.department_id;
         var discrepancylogs = departmentdata.discrepancylog;
         var modifieddiscrepancyList = [];
@@ -190,18 +197,28 @@ export default class OpreationActionPaintComponent extends LightningElement {
             if(discrepancylogs[disc].bus_area_picture_id != undefined){
                 hasbusareapicture = true;
             }
-            var discrepancytype = discrepancylogs[disc].discrepancy_type;
-                if(discrepancylogs[disc].discrepancy_type == 'busarea' ){
-                    discrepancytype = 'Bus Area';
-                }
+            // for Customer Inspector
+            var isCustomerInspector = false;
+            if(discrepancylogs[disc].discrepancy_type == 'custinspector'){
+                isCustomerInspector = true;
+             }
 
-                //newly added
-                else if (discrepancylogs[disc].discrepancy_type == 'downstream') {
-                    discrepancytype = 'Out Of Station';
-                }
-                else if (discrepancylogs[disc].discrepancy_type == 'buildstation') {
-                    discrepancytype = 'Job';
-                }
+            var discrepancytype = discrepancylogs[disc].discrepancy_type;
+            if(discrepancylogs[disc].discrepancy_type == 'busarea' ){
+                discrepancytype = 'Bus Area';
+             }
+
+            //newly added
+            else if (discrepancylogs[disc].discrepancy_type == 'downstream') {
+                discrepancytype = 'Out Of Station';
+            }
+            else if (discrepancylogs[disc].discrepancy_type == 'buildstation') {
+                discrepancytype = 'Job';
+            }
+            else if(discrepancylogs[disc].discrepancy_type == 'custinspector'){
+                discrepancytype = 'Customer Inspector';
+            }
+            console.log('discrepancytype::',discrepancytype);
             var moddeddiscrepancy = {
                 index: index,
                 hasbusareapicture : hasbusareapicture,
@@ -213,6 +230,7 @@ export default class OpreationActionPaintComponent extends LightningElement {
                 isdepartmentdiscrepancy : isdepartmentdiscrepancy,
                 isdownstreamdiscrepancy: isdownstreamdiscrepancy,
                 isshortdiscrepancy: isshortdiscrepancy,
+                isCustomerInspector: isCustomerInspector,
                 isdeletable:is_deletable,
                 created_by : created_by,
                 createdbyname : createdbyname,
@@ -264,7 +282,25 @@ export default class OpreationActionPaintComponent extends LightningElement {
             }
             modifieddiscrepancyList.push(moddeddiscrepancy);
         }
-        return modifieddiscrepancyList;
+        console.log('List::',modifieddiscrepancyList);
+        if(!this.isCIChoosen){
+            return modifieddiscrepancyList;
+        }
+        else {
+            modifieddiscrepancyList = this.getCustomerInspectorList(modifieddiscrepancyList);
+            return modifieddiscrepancyList;
+        }
+}
+
+getCustomerInspectorList(modifieddiscrepancyList){
+    let modifieddiscrepancyListCI = [];
+    modifieddiscrepancyList.forEach(item => { 
+        console.log('type::',item.discrepancy_type);       
+        if (item.discrepancy_type === 'Customer Inspector') {
+            modifieddiscrepancyListCI.push(item);
+        }
+    });
+    return modifieddiscrepancyListCI;
 }
 
  // Load Discrepancy tab data and formatting based on the Ecard and Department selected from API.

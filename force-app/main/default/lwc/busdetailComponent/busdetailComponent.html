@@ -115,6 +115,46 @@
                                     </div>
                                  </lightning-card>
                             </div> 
+                           
+                            <div class="slds-col slds-size_1-of-1 slds-border_bottom">
+                              <lightning-card  variant="Narrow"  title="CUSTOMER INSPECTOR ISSUES" >
+                                  <div class="slds-grid slds-p-bottom_x-small">
+                                     <div class="slds-col slds-border_right">                                       
+                                        <article data-id="CI_Open" data-label="Issues" onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                           <div class="slds-media__body">
+                                              <h3 class="slds-tile__title  slds-truncate" title="Open"> <span class="open"></span>OPEN </h3>
+                                              <div class="slds-tile__detail">
+                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.cust_inspector_issue_log.Open}/{overviewdata.cust_inspector_issue_log.Total}</span>
+                                              </div>
+                                           </div>                                    
+                                        </article>
+                                     </div>
+                            
+                                     <div class="slds-col slds-border_right">                                         
+                                        <article data-id="CI_Resolve" data-label="Issues"  onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                           <div class="slds-media__body">
+                                              <h3 class="slds-tile__title  slds-truncate" title="RESOLVED"> <span class="resolve"></span>RESOLVED </h3>
+                                              <div class="slds-tile__detail">
+                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.cust_inspector_issue_log.Resolve}/{overviewdata.cust_inspector_issue_log.Total}</span>
+                                              </div>
+                                           </div>                                          
+                                        </article>
+                                     </div>
+                                     <div class="slds-col">                                   
+                                        <article data-id="CI_Approve" data-label="Issues"  onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                           <div class="slds-media__body">
+                                              <h3 class="slds-tile__title  slds-truncate" title="VERIFIED"> <span class="verified"></span>VERIFIED </h3>
+                                              <div class="slds-tile__detail">
+                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.cust_inspector_issue_log.Approve}/{overviewdata.cust_inspector_issue_log.Total}</span>
+                                              </div>
+                                           </div>                                          
+                                        </article>
+                                     </div>
+                                     
+                                  </div>
+                               </lightning-card>
+                          </div> 
+
                             <div class="slds-col slds-size_1-of-1  slds-border_bottom">
                                 <lightning-card  variant="Narrow"  title="SHORTAGES" >
                                     <div class="slds-grid slds-p-bottom_x-small ">
@@ -265,44 +305,44 @@
                               <lightning-card  variant="Narrow"  title="CUSTOMER INSPECTOR JOBS" >
                                   <div class="slds-grid slds-p-bottom_x-small ">
                                      <div class="slds-col slds-border_right">
-                                        <article data-id="approve" data-label="Operation Checks"  onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                        <article data-id="CI_approve" data-label="Operation Checks"  onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
                                            <div class="slds-media__body">
                                               <h3 class="slds-tile__title  slds-truncate" title="FILLED"> <span class="verified"></span>OK ITEMS</h3>
                                               <div class="slds-tile__detail">
-                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.verified}/{overviewdata.op_check_log.total}</span>
+                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.cust_inspector_jobs.verified}/{overviewdata.cust_inspector_jobs.total}</span>
                                               </div>
                                            </div>
                                         </article>
                                      </div>
                             
                                      <div class="slds-col slds-border_right">
-                                        <article data-id="notapprove" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                        <article data-id="CI_notapprove" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
                                            <div class="slds-media__body">
                                               <h3 class="slds-tile__title  slds-truncate" title="NOT FILLED"> <span class="rejected"></span>NOT OK ITEMS</h3>
                                               <div class="slds-tile__detail">
-                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.not_verified}/{overviewdata.op_check_log.total}</span>
+                                                 <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.cust_inspector_jobs.not_verified}/{overviewdata.cust_inspector_jobs.total}</span>
                                               </div>
                                            </div>
                                         </article>
                                      </div>
 
                                      <div class="slds-col slds-border_right">
-                                       <article data-id="open" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                       <article data-id="CI_open" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
                                           <div class="slds-media__body">
                                              <h3 class="slds-tile__title  slds-truncate" title="OPEN"> <span class="open"></span>OPEN ITEMS</h3>
                                              <div class="slds-tile__detail">
-                                                <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.open_item}/{overviewdata.op_check_log.total}</span>
+                                                <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.cust_inspector_jobs.open_item}/{overviewdata.cust_inspector_jobs.total}</span>
                                              </div>
                                           </div>
                                        </article>
                                     </div>
 
                                     <div class="slds-col">
-                                       <article data-id="notrequired" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
+                                       <article data-id="CI_notrequired" data-label="Operation Checks"   onclick={showfiltereddata} class="busstatus slds-tile slds-media slds-p-horizontal_small">
                                           <div class="slds-media__body">
                                              <h3 class="slds-tile__title  slds-truncate" title="NOT REQUIRED"> <span class="notrequired"></span>NOT REQUIRED ITEMS</h3>
                                              <div class="slds-tile__detail">
-                                                <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.op_check_log.not_required}</span>
+                                                <span if:true={isoverviewdatapresent} class=" slds-truncate mediumheading">{overviewdata.cust_inspector_jobs.not_required}</span>
                                              </div>
                                           </div>
                                        </article>
@@ -433,6 +473,9 @@
                             </div>
                             <div class="slds-col slds-size_1-of-3 slds-m-bottom_medium">
                               <lightning-input type="text" label="MODEL ID" name="model_id" value={ecarddetails.model_id} readonly></lightning-input>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3 slds-m-bottom_medium">
+                              <lightning-input type="text" label="BUS LENGTH" name="length_id" value={ecarddetails.bus_length} readonly></lightning-input>
                             </div>
                            
                         </div>

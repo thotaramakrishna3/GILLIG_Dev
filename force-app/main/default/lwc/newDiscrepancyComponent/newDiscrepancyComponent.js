@@ -75,7 +75,11 @@ export default class NewDiscrepancyComponent extends LightningElement {
     //used to enable disable the discrepancy button
     get disablebutton() {
         if (this.permissionset != undefined) {
+             if(this.permissionset?.discrepancy_ci_new?.write === true){
+                return !this.permissionset.discrepancy_ci_new.write;
+             }else{
             return !this.permissionset.discrepancy_new.write;
+            }
         } else
             return false;
     }

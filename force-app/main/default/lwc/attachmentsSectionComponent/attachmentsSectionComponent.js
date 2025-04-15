@@ -44,7 +44,11 @@ export default class AttachmentsSectionComponent extends LightningElement {
     }
     //enable/disable attachment btn based on role acess
     get disableattachment() {
+        if(this.permissionset.discrepancy_update_attachments && this.permissionset.discrepancy_update_attachments.write){
+            return !this.permissionset.discrepancy_update_attachments.write;
+        }else{
         return !this.permissionset.ecard_attachments.write;
+    }
     }
 
     @track uniqueidlocal;

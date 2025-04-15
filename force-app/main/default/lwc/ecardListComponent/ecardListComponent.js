@@ -15,6 +15,7 @@ import docraptorkey from '@salesforce/label/c.EcardDocraptorkey';
 import {permissions}  from 'c/userPermissionsComponent';
 import getPermissions from "@salesforce/apex/userAuthentication.getPermissions";
 import { NavigationMixin } from 'lightning/navigation';
+import EcardLogin from "@salesforce/apex/userAuthentication.EcardLogin";
 
 export default class EcardListComponent extends NavigationMixin(LightningElement) { //implemented navigation
   busImage = BusImage;
@@ -158,6 +159,9 @@ handleSwap(btnvalue){
         .then((data) => {
           this.wiredPermissions = JSON.parse(data.responsebody);
           this.permissionset = permissions(this.wiredPermissions);
+          if (this.loggedinuser.approle_id == 8){
+            this.permissionset["discrepancy_ci_new"] = { read: true, write: true };
+        }
           this.error = undefined;
         })
         .catch((error) => {
@@ -168,11 +172,22 @@ handleSwap(btnvalue){
 
   // Loads the default data for intial view of the component.  
   connectedCallback(){
-    
+    this.getloggedinuser();
     loadStyle(this, HideLightningHeader);
     this.register();
     //this.getPermissionsfromserver();
     this.decideview(event);
+    }
+    @track IsFirstTimeRunning  = false;
+    @track loggedinuser;
+    getloggedinuser() {
+        this.IsFirstTimeRunning = true;
+        EcardLogin()
+            .then((result) => {
+                this.loggedinuser = result.data.user;
+            })
+            .catch((error) => {
+            });
     }
 
   // To decide the view between Ecard list or detail of the selected Ecard.  

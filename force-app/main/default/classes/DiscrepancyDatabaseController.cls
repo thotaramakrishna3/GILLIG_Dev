@@ -242,8 +242,11 @@ public class DiscrepancyDatabaseController {
         AuthorisationData.Token tokendata = userAuthentication.getAccesstoken();
         //string endpoint = System.Label.EcardAppendpoint+'api/ecarddepartmentdiscrepancy';
         string endpoint;
-        if(discrepancytype == 'department'){
+        String type = discrepancytype != null ? discrepancytype.toLowerCase() : '';
+        if(type == 'department'){
              endpoint = System.Label.EcardAppendpoint+'api/ecarddepartmentdiscrepancy';
+        }else if(type == 'custinspector' || type == 'customer inspector'){
+            endpoint = System.Label.EcardAppendpoint+'api/ecardcustinspectorissue';
         }
         else{
             endpoint = System.Label.EcardAppendpoint+'api/ecardbuildstationdiscrepancy';

@@ -13,7 +13,7 @@
      <!--Show spinner end-->
         <section class="actionhead">
             <div class="slds-grid slds-grid_align-spread slds-m-top_small slds-m-bottom_small">
-                <div class="slds-col">
+                <div class="slds-col ">
                     <div class="slds-float_none slds-p-around_x-small">
                         <span class="slds-text-heading_small headstylepaint">{department} - {operation}</span>
                     </div>
@@ -21,6 +21,10 @@
                 <div class="slds-col">
                   
                 </div>
+                <div class="slds-col slds-p-left_large toggleallign">
+                  <lightning-input type="toggle" label="CI Issues" data-id="CiIssues" message-toggle-active = '' message-toggle-inactive	= '' checked={isCIChoosen} onchange={changeCiToggle}></lightning-input>
+                </div>
+
                 <div class="slds-col alignbutton">
                   <c-new-shortage-component buttonlabel="Add Shortage" modalheading="New Shortage" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} permissionset={permissionset}></c-new-shortage-component>
                   <c-new-discrepancy-component buttonlabel="Report Issue" modalheading="New Issue" type="buildstation" ecardid={ecardid} busname={busname} buschasisnumber={buschasisnumber} department={department} departmentid={selecteddepartmentId} buildstationrequired="true" department-id-map={departmentIdMap} onoperationrefresh={refreshoperation} permissionset={permissionset}></c-new-discrepancy-component>
@@ -78,20 +82,26 @@
                                     <td data-id={discrepancy.ecard_discrepancy_log_id} onclick={showdiscdetails} title={discrepancy.discrepancy} class="slds-truncate">
                                       <div class="slds-grid">
                                         <div class="allignbadge">
+                                          <span if:true={discrepancy.isCustomerInspector} class="customerinspectorbadge">
+                                            CI
+                                          </span>
+                                        <template if:false={discrepancy.isCustomerInspector}>
                                           <span if:true={discrepancy.isdepartmentdiscrepancy} class="deptbadge">DEPT</span>
-                                          <template if:false={discrepancy.isdepartmentdiscrepancy}>
-                                            <span if:true={discrepancy.isdownstreamdiscrepancy} class="normalbadge">
+                                            <template if:false={discrepancy.isdepartmentdiscrepancy}>
+                                              <span if:true={discrepancy.isdownstreamdiscrepancy} class="normalbadge">
                                                 OUT-S
-                                            </span>
-                                            <template if:false={discrepancy.isdownstreamdiscrepancy}>
-                                            <span if:true={discrepancy.isshortdiscrepancy} class="shortbadge">
+                                              </span>
+                                              <template if:false={discrepancy.isdownstreamdiscrepancy}>
+                                              <span if:true={discrepancy.isshortdiscrepancy} class="shortbadge">
                                                 SHORT
-                                            </span>
-                                            <span if:false={discrepancy.isshortdiscrepancy} class="normalbadge">
+                                              </span>
+                                              <span if:false={discrepancy.isshortdiscrepancy} class="normalbadge">
                                                 JOB
-                                            </span>
+                                              </span>
+                                            </template>
+                                          </template>
                                         </template>
-                                        </template>
+                                        
                                         </div>
                                         <div class="slds-col">
                                           <div  style="font-weight:600;width: 250px; overflow: hidden;text-overflow: ellipsis;"> {discrepancy.discrepancy} </div>

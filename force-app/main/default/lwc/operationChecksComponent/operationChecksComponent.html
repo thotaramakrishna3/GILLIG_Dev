@@ -97,6 +97,8 @@
                                   <template if:true={opck.stanjob}><div class="blue-dot" style="vertical-align: middle;"></div></template>
                                   <template if:true={opck.custjob}><div class="green-dot" style="vertical-align: middle;"></div></template>
                                   <template if:true={opck.qacheckjob}><div class="orange-dot" style="vertical-align: middle;"></div></template>
+                                  <template if:true={opck.ciJobs}><div class="purple-dot" style="vertical-align: middle;"></div></template>
+
                                   <div class="slds-truncate setdescriptionwidth" style="display: inline-block; vertical-align: middle;">
                                       <lightning-formatted-rich-text value={opck.operation_check_description}></lightning-formatted-rich-text>
                                       <template for:each={opck.workinstructions} for:item="instruction">

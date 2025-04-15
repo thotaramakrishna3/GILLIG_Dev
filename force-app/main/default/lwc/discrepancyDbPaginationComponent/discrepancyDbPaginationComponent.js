@@ -220,6 +220,9 @@ export default class discrepancyDBpagination extends LightningElement {
             .then((data) => {
                 this.wiredPermissions = JSON.parse(data.responsebody);
                 this.permissionset = permissions(this.wiredPermissions);
+                if (this.loggedinuser.approle_id == 8){
+                    this.permissionset["discrepancy_ci_new"] = { read: true, write: true };
+                }
                 this.error = undefined;
             })
             .catch((error) => {
@@ -1186,6 +1189,7 @@ export default class discrepancyDBpagination extends LightningElement {
                 }
                 if(this.alldiscrepancy[i].discrepancy_type == 'Custinspector'){
                     this.alldiscrepancy[i].discrepancy_type = 'Customer Inspector';
+                    this.permissionset["discrepancy_update_attachments"] = { read: true, write: true };
                     var options = [];
             for (var j in this.departmentIdMap) {
                 if (this.departmentIdMap[j].value != 'None' && this.departmentIdMap[j].label != 'ALL DEPARTMENTS' && this.departmentIdMap[j].label != 'All Departments') {
@@ -1194,13 +1198,15 @@ export default class discrepancyDBpagination extends LightningElement {
             }
             this.departmentoptions = [];
             this.departmentoptions = options;
+                }else{
+
+                    this.permissionset["discrepancy_update_attachments"] = { read: true, write: false };
                 }
                 this.selecteddiscrepancy = this.alldiscrepancy[i];
                 this.oldDepartment = this.selecteddiscrepancy.department_id;
                 this.oldbuildstation_code = this.selecteddiscrepancy.buildstation_code;
                 this.oldworkcentername = this.selecteddiscrepancy.workcenter_name;
-                this.oldDefectCode = this.selecteddiscrepancy.dat_defect_code_id;
-                           
+                this.oldDefectCode = this.selecteddiscrepancy.dat_defect_code_id;                          
             }
         }
         this.getselecteddiscrepancycomments(selecteddiscrepancylogid);

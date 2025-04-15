@@ -357,6 +357,9 @@ applyfilters(messageFromEvt){
     var valueforfilters = JSON.parse(messageFromEvt);
     this.previousfilter = this.filter;
     this.filter = valueforfilters.filterstatus;
+    this.isCIChoosen = false;
+    console.log('filter:::'+valueforfilters.filterstatus);
+    console.log('this.filter:::'+this.filter);
     var labeltodisplay;
     if(this.filter == 'approve'){
         labeltodisplay = `Verified Items`;
@@ -376,6 +379,22 @@ applyfilters(messageFromEvt){
     else if (this.filter == 'notapprove'){
         labeltodisplay = 'NOT OK ITEMS';
     }
+    else if(this.filter === 'CI_Open'){
+        console.log('InIf:::')
+        labeltodisplay = 'OPEN ITEMS';
+        this.filter = 'open'
+        this.isCIChoosen = true;
+    }
+    else if(this.filter == 'CI_Resolve'){
+        labeltodisplay = 'RESOLVED ITEMS';
+        this.filter = 'resolve';
+        this.isCIChoosen = true;
+    }
+    else if(this.filter == 'CI_Approve'){
+        labeltodisplay = 'RESOLVED ITEMS';
+        this.filter = 'approve'
+        this.isCIChoosen = true;
+    }
     else{
         labeltodisplay = `${this.filter} Items`;     
     }
@@ -385,6 +404,7 @@ applyfilters(messageFromEvt){
 
     // When clearing the Bus Overview filter making filter as undefined.
     clearfilter(event){
+    this.isCIChoosen = false;
     this.filter = undefined;
     this.filterapplied = false;
     this.messageFromEvt = undefined;
@@ -591,6 +611,12 @@ loadOperationsdata(event){
     });
 }
 
+@track isCIChoosen;
+changeCiToggle(event){
+    this.isCIChoosen =  !this.isCIChoosen;
+    console.log('isCIChoosen:::' + this.isCIChoosen);
+    this.loadDiscrepancydata();
+}
 // Load Discrepancy tab data and formatting based on the Ecard and Department selected from API.
 loadDiscrepancydata(event){   
     var ecardid = this.ecardid;
@@ -611,7 +637,7 @@ loadDiscrepancydata(event){
 
         var discrepancylist = [];
         if(this.departmentName == 'ALL DEPARTMENTS'){
-
+            console.log('All');
             var departmentlist = JSON.parse(data.responsebody).data.department;
 
             for(var dept in departmentlist){
@@ -620,20 +646,43 @@ loadDiscrepancydata(event){
             }
         }
         else{
-
+            console.log('Not All');
             var departmentdata = JSON.parse(data.responsebody).data;
             
             var thisdeptdiscrepancy = getmodifieddiscrepancylist(departmentdata,this.busname,this.buschasisnumber,this.departmentIdMap,this.currentuserempid);
-            discrepancylist.push(...thisdeptdiscrepancy)
+            //discrepancylist.push(...thisdeptdiscrepancy)
             
-        }
+            thisdeptdiscrepancy.forEach(item => {
+                if(this.isCIChoosen){
+                    if (item.discrepancy_type === 'Custinspector') {
+                         discrepancylist.push({
+                                ...item,
+                                isCustInspector: true
+                            });
+                        } 
+                    } 
+                else{
+                    if (item.discrepancy_type === 'Custinspector') {
+                        discrepancylist.push({
+                               ...item,
+                               isCustInspector: true
+                           });
+                    } 
+                    else {
+                        discrepancylist.push({
+                            ...item,
+                            isCustInspector: false
+                        });
+                    }
+                }  
+            });
+        } 
         
         var modifieddiscrepancyList=[];
             for(var i in discrepancylist){     
                 if(this.filter != undefined){
                     if(this.filter == discrepancylist[i].discrepancy_status.toLowerCase()){
                         modifieddiscrepancyList.push(discrepancylist[i]);
-
                     }
                 }
                 else{
@@ -661,12 +710,13 @@ loadDiscrepancydata(event){
     })
     .catch(error => {
         this.error = error;
+        console.lof('error::', error);
         this.showmessage('Data fetch failed.','Something unexpected occured. Please try again or contact your Administrator.','error','dismissible');
     }); 
 
     }
     else {
-
+        console.log('WorkAround Starts');
         //workaround ends
         var discrepancy_status = [];
         if (this.filter != undefined) {
@@ -701,24 +751,57 @@ loadDiscrepancydata(event){
                 var modifieddiscrepancyList = [];
                 for(var i in this.modifieddiscrepancyList){
                     let discrepancy={ ...this.modifieddiscrepancyList[i] };
-                if(this.modifieddiscrepancyList[i].resolved_status_updatedby_id !=null && (this.modifieddiscrepancyList[i].discrepancy_status == 'resolve' || this.modifieddiscrepancyList[i].discrepancy_status == 'approve')){
-                    discrepancy.resolved_updatedby_id = this.modifieddiscrepancyList[i].resolved_status_updatedby_id[0].fullname;
-                }else{
-                    discrepancy.resolved_updatedby_id = '';
-                }
-                if(this.modifieddiscrepancyList[i].verifiedby !=null && this.modifieddiscrepancyList[i].discrepancy_status == 'approve'){
-                    discrepancy.verified_updatedby_id = this.modifieddiscrepancyList[i].verifiedby[0].fullname;
-                }else{
-                    discrepancy.verified_updatedby_id = '';
-                }
-                modifieddiscrepancyList.push(discrepancy);
-            }
+                    if(!this.isCIChoosen){
+                        console.log('not Ci Chosen:::');
+                        if(this.modifieddiscrepancyList[i].discrepancy_type === 'Custinspector'){
+                            discrepancy.isCustInspector = true;
+                        }
+                        else{
+                            discrepancy.isCustInspector = false; 
+                        }
+                        if(this.modifieddiscrepancyList[i].resolved_status_updatedby_id !=null && Array.isArray(this.modifieddiscrepancyList[i].resolved_status_updatedby_id) &&
+                        this.modifieddiscrepancyList[i].resolved_status_updatedby_id.length > 0  && (this.modifieddiscrepancyList[i].discrepancy_status == 'resolve' || this.modifieddiscrepancyList[i].discrepancy_status == 'approve')){
+                            discrepancy.resolved_updatedby_id = this.modifieddiscrepancyList[i].resolved_status_updatedby_id[0].fullname;
+                        }else{
+                            discrepancy.resolved_updatedby_id = '';
+                        }
+                        if(this.modifieddiscrepancyList[i].verifiedby !=null && Array.isArray(this.modifieddiscrepancyList[i].verifiedby) &&
+                        this.modifieddiscrepancyList[i].verifiedby.length > 0 && this.modifieddiscrepancyList[i].discrepancy_status == 'approve'){
+                             discrepancy.verified_updatedby_id = this.modifieddiscrepancyList[i].verifiedby[0].fullname;                            
+                        }else{
+                            discrepancy.verified_updatedby_id = '';
+                        }
+                        modifieddiscrepancyList.push(discrepancy);
+                    }
+                    else{
+                        console.log('type::',this.modifieddiscrepancyList[i].discrepancy_type);
+                       if(this.modifieddiscrepancyList[i].discrepancy_type === 'Custinspector'){
+                            discrepancy.isCustInspector = true;
+                            if(this.modifieddiscrepancyList[i].resolved_status_updatedby_id !=null && Array.isArray(this.modifieddiscrepancyList[i].resolved_status_updatedby_id) &&
+                            this.modifieddiscrepancyList[i].resolved_status_updatedby_id.length > 0  && (this.modifieddiscrepancyList[i].discrepancy_status == 'resolve' || this.modifieddiscrepancyList[i].discrepancy_status == 'approve')){
+                                discrepancy.resolved_updatedby_id = this.modifieddiscrepancyList[i].resolved_status_updatedby_id[0].fullname;
+                            }else{
+                                discrepancy.resolved_updatedby_id = '';
+                            }
+                            if(this.modifieddiscrepancyList[i].verifiedby !=null && Array.isArray(this.modifieddiscrepancyList[i].verifiedby) &&
+                            this.modifieddiscrepancyList[i].verifiedby.length > 0 && this.modifieddiscrepancyList[i].discrepancy_status == 'approve'){
+                                discrepancy.verified_updatedby_id = this.modifieddiscrepancyList[i].verifiedby[0].fullname;
+                            }else{
+                                discrepancy.verified_updatedby_id = '';
+                            }
+                            modifieddiscrepancyList.push(discrepancy);
+                       }
+
+                    }
+                   
+               }
             this.modifieddiscrepancyList = modifieddiscrepancyList;
                 this.showSpinner = false;
                 this.error = undefined;
             })
             .catch(error => {
                 this.error = error;
+                console.log('error:::',error);
                 this.showmessage('Data fetch failed.', 'Something unexpected occured. Please try again or contact your Administrator.', 'error','dismissible');
             })
 
@@ -1399,6 +1482,9 @@ async showdiscdetails(event){
     }
     else if (this.selecteddiscrepancy.discrepancy_type == 'Short') {
         this.selecteddiscrepancy.discrepancy_type = 'Short';
+    }
+    else if (this.selecteddiscrepancy.discrepancy_type == 'Custinspector') {
+        this.selecteddiscrepancy.discrepancy_type = 'Customer Inspector';
     }
     this.discdetailsmodal = true;
 }

@@ -521,6 +521,7 @@ export default class BusdetailComponent extends LightningElement {
           this.dispatchEvent(alertmessage);
         } else {
           var overviewdata = JSON.parse(data.responsebody).data;
+          console.log('overviewdata::',overviewdata);
           for(var type in overviewdata){
             var obj = overviewdata[type];
             Object.keys(obj).forEach(function(key) {

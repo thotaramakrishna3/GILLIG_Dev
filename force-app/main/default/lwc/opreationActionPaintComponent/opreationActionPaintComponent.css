@@ -88,6 +88,21 @@
     height: fit-content;
     white-space: pre-line;
 }
+.customerinspectorbadge{
+  color: rgb(37, 79, 158);
+  /*background-color: rgb(225, 230, 225);*/
+  border : 1px solid rgb(37, 79, 158); 
+  padding: 0.25rem 1.0rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  width: 48px;
+}
 .tblborder{
   border: 1px solid rgb(221, 219, 218);
 }
@@ -111,6 +126,10 @@
   width: 1.8rem;
   height: 1.8rem;
   position: absolute;
+}
+.toggleallign{
+  padding-left: 46rem;
+  padding-top: 0.3rem;
 }
 
 .pageheader{
